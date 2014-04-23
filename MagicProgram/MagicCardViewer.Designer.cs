@@ -169,6 +169,7 @@
             this.buttonAttack.TabIndex = 10;
             this.buttonAttack.Text = "Attack";
             this.buttonAttack.UseVisualStyleBackColor = true;
+            this.buttonAttack.Visible = false;
             this.buttonAttack.Click += new System.EventHandler(this.buttonAttack_Click);
             // 
             // MagicCardViewer
