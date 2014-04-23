@@ -1,0 +1,1134 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Akoum Refuge</Name>
+    <Edition>ZEN</Edition>
+    <Rarity>U</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>Akoum Refuge enters the battlefield tapped.;
+When Akoum Refuge enters the battlefield, you gain 1 life.;
+%T: Add %B or %R to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Command Tower</Name>
+    <Edition>CM1</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>%T: Add to your mana pool one mana of any color in your commander�s color identity.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Evolving Wilds</Name>
+    <Edition>ROE</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>%T, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <quantity>7</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Golgari Guildgate</Name>
+    <Edition>RTR</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Golgari Guildgate enters the battlefield tapped.;
+%T: Add %B or %G to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Golgari Rot Farm</Name>
+    <Edition>RAV</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>Golgari Rot Farm enters the battlefield tapped.;
+When Golgari Rot Farm enters the battlefield, return a land you control to its owner�s hand.;
+%T: Add %B%G to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Grim Backwoods</Name>
+    <Edition>DKA</Edition>
+    <Rarity>R</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>%T: Add %1 to your mana pool.;
+%2%B%G, %T, Sacrifice a creature: Draw a card.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gruul Guildgate</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Gruul Guildgate enters the battlefield tapped. %T: Add %R or %G to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Jund Panorama</Name>
+    <Edition>ALA</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>%T: Add %1 to your mana pool.;
+%1, %T, Sacrifice Jund Panorama: Search your library for a basic Swamp, Mountain, or Forest card and put it onto the battlefield tapped. Then shuffle your library.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Kazandu Refuge</Name>
+    <Edition>ZEN</Edition>
+    <Rarity>U</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>Kazandu Refuge enters the battlefield tapped.;
+When Kazandu Refuge enters the battlefield, you gain 1 life.;
+%T: Add %R or %G to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Khalni Garden</Name>
+    <Edition>WWK</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>Khalni Garden enters the battlefield tapped.;
+When Khalni Garden enters the battlefield, put a 0/1 green Plant creature token onto the battlefield.;
+%T: Add %G to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Kher Keep</Name>
+    <Edition>TSP</Edition>
+    <Rarity>R</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Legendary Land</Type>
+    <Text>%T: Add %1 to your mana pool.;
+%1%R, %T: Put a 0/1 red Kobold creature token named Kobolds of Kher Keep onto the battlefield.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Llanowar Reborn</Name>
+    <Edition>FUT</Edition>
+    <Rarity>U</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>Llanowar Reborn enters the battlefield tapped.;
+%T: Add %G to your mana pool.;
+Graft 1 #(This land enters the battlefield with a +1/+1 counter on it. Whenever a creature enters the battlefield, you may move a +1/+1 counter from this land onto it.)#</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mountain</Name>
+    <Edition>AN</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Mountain</Type>
+    <Text />
+    <Flavor />
+    <quantity>7</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Opal Palace</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Rakdos Guildgate</Name>
+    <Edition>RTR</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Rakdos Guildgate enters the battlefield tapped.;
+%T: Add %B or %R to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Rupture Spire</Name>
+    <Edition>CFX</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>Rupture Spire enters the battlefield tapped.;
+When Rupture Spire enters the battlefield, sacrifice it unless you pay %1.;
+%T: Add one mana of any color to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Savage Lands</Name>
+    <Edition>ALA</Edition>
+    <Rarity>U</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>Savage Lands enters the battlefield tapped.;
+%T: Add %B, %R, or %G to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Swamp</Name>
+    <Edition>UNH</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Swamp</Type>
+    <Text />
+    <Flavor />
+    <quantity>6</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Temple of the False God</Name>
+    <Edition>SC</Edition>
+    <Rarity>U</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>%T: Add %2 to your mana pool. Activate this ability only if you control five or more lands.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Terramorphic Expanse</Name>
+    <Edition>10E</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>%T, Sacrifice Terramorphic Expanse: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Vivid Grove</Name>
+    <Edition>LRW</Edition>
+    <Rarity>U</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>Vivid Grove enters the battlefield tapped with two charge counters on it.;
+%T: Add %G to your mana pool.;
+%T, Remove a charge counter from Vivid Grove: Add one mana of any color to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name />
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>2</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Brooding Saurian</Name>
+    <Edition>CS</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>2GG</Cost>
+    <PT>4/4</PT>
+    <Type>Creature - Lizard</Type>
+    <Text>At the beginning of each end step, each player gains control of all nontoken permanents he or she owns.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Capricious Efreet</Name>
+    <Edition>M10</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>4RR</Cost>
+    <PT>6/4</PT>
+    <Type>Creature - Efreet</Type>
+    <Text>At the beginning of your upkeep, choose target nonland permanent you control and up to two target nonland permanents you don�t control. Destroy one of them at random.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Charnelhoard Wurm</Name>
+    <Edition>CFX</Edition>
+    <Rarity>R</Rarity>
+    <Color>Gld</Color>
+    <Cost>4BRG</Cost>
+    <PT>6/6</PT>
+    <Type>Creature - Wurm</Type>
+    <Text>Trample;
+Whenever Charnelhoard Wurm deals damage to an opponent, you may return target card from your graveyard to your hand.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Deathbringer Thoctar</Name>
+    <Edition>ARB</Edition>
+    <Rarity>R</Rarity>
+    <Color>Gld</Color>
+    <Cost>4BR</Cost>
+    <PT>3/3</PT>
+    <Type>Creature - Zombie Beast</Type>
+    <Text>Whenever another creature dies, you may put a +1/+1 counter on Deathbringer Thoctar.;
+Remove a +1/+1 counter from Deathbringer Thoctar: Deathbringer Thoctar deals 1 damage to target creature or player.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Deepfire Elemental</Name>
+    <Edition>CS</Edition>
+    <Rarity>U</Rarity>
+    <Color>Gld</Color>
+    <Cost>4BR</Cost>
+    <PT>4/4</PT>
+    <Type>Creature - Elemental</Type>
+    <Text>%X%X%1: Destroy target artifact or creature with converted mana cost X.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Elvish Skysweeper</Name>
+    <Edition>RAV</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Elf Warrior</Type>
+    <Text>%4%G, Sacrifice a creature: Destroy target creature with flying.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Endless Cockroaches</Name>
+    <Edition>PT</Edition>
+    <Rarity>R</Rarity>
+    <Color>B</Color>
+    <Cost>1BB</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Insect</Type>
+    <Text>When Endless Cockroaches dies, return it to its owner�s hand.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Endrek Sahr, Master Breeder</Name>
+    <Edition>TSP</Edition>
+    <Rarity>R</Rarity>
+    <Color>B</Color>
+    <Cost>4B</Cost>
+    <PT>2/2</PT>
+    <Type>Legendary Creature - Human Wizard</Type>
+    <Text>Whenever you cast a creature spell, put X 1/1 black Thrull creature tokens onto the battlefield, where X is that spell�s converted mana cost.;
+When you control seven or more Thrulls, sacrifice Endrek Sahr, Master Breeder.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fell Shepherd</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Goblin Sharpshooter</Name>
+    <Edition>ON</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>2R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Goblin</Type>
+    <Text>Goblin Sharpshooter doesn�t untap during your untap step.;
+Whenever a creature dies, untap Goblin Sharpshooter.;
+%T: Goblin Sharpshooter deals 1 damage to target creature or player.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Golgari Guildmage</Name>
+    <Edition>RAV</Edition>
+    <Rarity>U</Rarity>
+    <Color>Gld</Color>
+    <Cost>%Q%Q</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Elf Shaman</Type>
+    <Text>%4%B, Sacrifice a creature: Return target creature card from your graveyard to your hand.;
+%4%G: Put a +1/+1 counter on target creature.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Hooded Horror</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Hua Tuo, Honored Physician</Name>
+    <Edition>P3</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>1GG</Cost>
+    <PT>1/2</PT>
+    <Type>Legendary Creature - Human</Type>
+    <Text>%T: Put target creature card from your graveyard on top of your library. Activate this ability only during your turn, before attackers are declared.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Hunted Troll</Name>
+    <Edition>RAV</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>2GG</Cost>
+    <PT>8/4</PT>
+    <Type>Creature - Troll Warrior</Type>
+    <Text>When Hunted Troll enters the battlefield, target opponent puts four 1/1 blue Faerie creature tokens with flying onto the battlefield.;
+%G: Regenerate Hunted Troll.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Inferno Titan</Name>
+    <Edition>M12</Edition>
+    <Rarity>M</Rarity>
+    <Color>R</Color>
+    <Cost>4RR</Cost>
+    <PT>6/6</PT>
+    <Type>Creature - Giant</Type>
+    <Text>%R: Inferno Titan gets +1/+0 until end of turn.;
+Whenever Inferno Titan enters the battlefield or attacks, it deals 3 damage divided as you choose among one, two, or three target creatures and/or players.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Jade Mage</Name>
+    <Edition>DDH</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>2/1</PT>
+    <Type>Creature - Human Shaman</Type>
+    <Text>%2%G: Put a 1/1 green Saproling creature token onto the battlefield.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ophiomancer</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Prossh, Skyraider of Kher</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Quagmire Druid</Name>
+    <Edition>AP</Edition>
+    <Rarity>C</Rarity>
+    <Color>B</Color>
+    <Cost>2B</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Zombie Druid</Type>
+    <Text>%G, %T, Sacrifice a creature: Destroy target enchantment.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sakura-Tribe Elder</Name>
+    <Edition>CHK</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Snake Shaman</Type>
+    <Text>Sacrifice Sakura-Tribe Elder: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle your library.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Scarland Thrinax</Name>
+    <Edition>CFX</Edition>
+    <Rarity>U</Rarity>
+    <Color>Gld</Color>
+    <Cost>BRG</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Lizard</Type>
+    <Text>Sacrifice a creature: Put a +1/+1 counter on Scarland Thrinax.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sek'Kuar, Deathkeeper</Name>
+    <Edition>CS</Edition>
+    <Rarity>R</Rarity>
+    <Color>Gld</Color>
+    <Cost>2BRG</Cost>
+    <PT>4/3</PT>
+    <Type>Legendary Creature - Orc Shaman</Type>
+    <Text>Whenever another nontoken creature you control dies, put a 3/1 black and red Graveborn creature token with haste onto the battlefield.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Shattergang Brothers</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Silklash Spider</Name>
+    <Edition>9E</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>3GG</Cost>
+    <PT>2/7</PT>
+    <Type>Creature - Spider</Type>
+    <Text>Reach #(This creature can block creatures with flying.)#;
+%X%G%G: Silklash Spider deals X damage to each creature with flying.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sprouting Thrinax</Name>
+    <Edition>ALA</Edition>
+    <Rarity>U</Rarity>
+    <Color>Gld</Color>
+    <Cost>BRG</Cost>
+    <PT>3/3</PT>
+    <Type>Creature - Lizard</Type>
+    <Text>When Sprouting Thrinax dies, put three 1/1 green Saproling creature tokens onto the battlefield.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Stalking Vengeance</Name>
+    <Edition>DIS</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>5RR</Cost>
+    <PT>5/5</PT>
+    <Type>Creature - Avatar</Type>
+    <Text>Haste;
+Whenever another creature you control dies, it deals damage equal to its power to target player.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Stronghold Assassin</Name>
+    <Edition>SH</Edition>
+    <Rarity>R</Rarity>
+    <Color>B</Color>
+    <Cost>1BB</Cost>
+    <PT>2/1</PT>
+    <Type>Creature - Zombie Assassin</Type>
+    <Text>%T, Sacrifice a creature: Destroy target nonblack creature.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Terra Ravager</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Viscera Seer</Name>
+    <Edition>M11</Edition>
+    <Rarity>C</Rarity>
+    <Color>B</Color>
+    <Cost>B</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Vampire Wizard</Type>
+    <Text>Sacrifice a creature: Scry 1. #(To scry 1, look at the top card of your library, then you may put that card on the bottom of your library.)#</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Walker of the Grove</Name>
+    <Edition>MOR</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>6GG</Cost>
+    <PT>7/7</PT>
+    <Type>Creature - Elemental</Type>
+    <Text>When Walker of the Grove leaves the battlefield, put a 4/4 green Elemental creature token onto the battlefield.;
+Evoke %4%G #(You may cast this spell for its evoke cost. If you do, it�s sacrificed when it enters the battlefield.)#</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wight of Precinct Six</Name>
+    <Edition>GTC</Edition>
+    <Rarity>U</Rarity>
+    <Color>B</Color>
+    <Cost>1B</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Zombie</Type>
+    <Text>Wight of Precinct Six gets +1/+1 for each creature card in your opponents� graveyards.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Armillary Sphere</Name>
+    <Edition>CFX</Edition>
+    <Rarity>C</Rarity>
+    <Color>Art</Color>
+    <Cost>2</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>%2, %T, Sacrifice Armillary Sphere: Search your library for up to two basic land cards, reveal them, and put them into your hand. Then shuffle your library.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Blood Rites</Name>
+    <Edition>CHK</Edition>
+    <Rarity>U</Rarity>
+    <Color>R</Color>
+    <Cost>3RR</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>%1%R, Sacrifice a creature: Blood Rites deals 2 damage to target creature or player.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Carnage Altar</Name>
+    <Edition>ZEN</Edition>
+    <Rarity>U</Rarity>
+    <Color>Art</Color>
+    <Cost>2</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>%3, Sacrifice a creature: Draw a card.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Curse of Chaos</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Curse of Predation</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Curse of Shallow Graves</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dirge of Dread</Name>
+    <Edition>ON</Edition>
+    <Rarity>C</Rarity>
+    <Color>B</Color>
+    <Cost>2B</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>All creatures gain fear until end of turn. #(They can�t be blocked except by artifact creatures and/or black creatures.)#;
+Cycling %1%B #(%1%B, Discard this card: Draw a card.)#;
+When you cycle Dirge of Dread, you may have target creature gain fear until end of turn.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fecundity</Name>
+    <Edition>8E</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>2G</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Whenever a creature dies, that creature�s controller may draw a card.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Foster</Name>
+    <Edition>MM</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>2GG</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Whenever a creature you control dies, you may pay %1. If you do, reveal cards from the top of your library until you reveal a creature card. Put that card into your hand and the rest into your graveyard.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Furnace Celebration</Name>
+    <Edition>SOM</Edition>
+    <Rarity>U</Rarity>
+    <Color>R</Color>
+    <Cost>1RR</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Whenever you sacrifice another permanent, you may pay %2. If you do, Furnace Celebration deals 2 damage to target creature or player.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Goblin Bombardment</Name>
+    <Edition>TE</Edition>
+    <Rarity>U</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Sacrifice a creature: Goblin Bombardment deals 1 damage to target creature or player.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Jar of Eyeballs</Name>
+    <Edition>DKA</Edition>
+    <Rarity>R</Rarity>
+    <Color>Art</Color>
+    <Cost>3</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>Whenever a creature you control dies, put two eyeball counters on Jar of Eyeballs.;
+%3, %T, Remove all eyeball counters from Jar of Eyeballs: Look at the top X cards of your library, where X is the number of eyeball counters removed this way. Put one of them into your hand and the rest on the bottom of your library in any order.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Jund Charm</Name>
+    <Edition>ALA</Edition>
+    <Rarity>U</Rarity>
+    <Color>Gld</Color>
+    <Cost>BRG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Choose one � Exile all cards from target player�s graveyard; or Jund Charm deals 2 damage to each creature; or put two +1/+1 counters on target creature.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mass Mutiny</Name>
+    <Edition>PC2</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>3RR</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>For each opponent, gain control of target creature that player controls until end of turn. Untap those creatures. They gain haste until end of turn.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Night Soil</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Obelisk of Jund</Name>
+    <Edition>ALA</Edition>
+    <Rarity>C</Rarity>
+    <Color>Art</Color>
+    <Cost>3</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>%T: Add %B, %R, or %G to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Plague Boiler</Name>
+    <Edition>RAV</Edition>
+    <Rarity>R</Rarity>
+    <Color>Art</Color>
+    <Cost>3</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>At the beginning of your upkeep, put a plague counter on Plague Boiler.;
+%1%B%G: Put a plague counter on Plague Boiler or remove a plague counter from it.;
+When Plague Boiler has three or more plague counters on it, sacrifice it. If you do, destroy all nonland permanents.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Primal Vigor</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Reincarnation</Name>
+    <Edition>LG</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1GG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Choose target creature. When that creature dies this turn, return a creature card from its owner�s graveyard to the battlefield under the control of that creature�s owner.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Restore</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Rough &amp; Tumble</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sol Ring</Name>
+    <Edition>JGC</Edition>
+    <Rarity />
+    <Color>Art</Color>
+    <Cost>1</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>%T: Add %2 to your mana pool.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Spine of Ish Sah</Name>
+    <Edition>MBS</Edition>
+    <Rarity>R</Rarity>
+    <Color>Art</Color>
+    <Cost>7</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>When Spine of Ish Sah enters the battlefield, destroy target permanent.;
+When Spine of Ish Sah is put into a graveyard from the battlefield, return Spine of Ish Sah to its owner�s hand.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Spoils of Victory</Name>
+    <Edition>P3</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>2G</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Search your library for a Plains, Island, Swamp, Mountain, or Forest card and put that card onto the battlefield. Then shuffle your library.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sudden Demise</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Swiftfoot Boots</Name>
+    <Edition>M12</Edition>
+    <Rarity>U</Rarity>
+    <Color>Art</Color>
+    <Cost>2</Cost>
+    <PT />
+    <Type>Artifact - Equipment</Type>
+    <Text>Equipped creature has hexproof and haste. #(It can�t be the target of spells or abilities your opponents control, and it can attack and %T as soon as it comes under your control.)#;
+Equip %1 #(%1: Attach to target creature you control. Equip only as a sorcery.)#</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Tempt with Vengeance</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Tooth and Claw</Name>
+    <Edition>TE</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>3R</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Sacrifice two creatures: Put a 3/1 red Beast creature token named Carnivore onto the battlefield.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Vile Requiem</Name>
+    <Edition>US</Edition>
+    <Rarity>U</Rarity>
+    <Color>B</Color>
+    <Cost>2BB</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>At the beginning of your upkeep, you may put a verse counter on Vile Requiem.;
+%1%B, Sacrifice Vile Requiem: Destroy up to X target nonblack creatures, where X is the number of verse counters on Vile Requiem. They can�t be regenerated.</Text>
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Widespread Panic</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <quantity>1</quantity>
+    <counters>0</counters>
+  </Card>
+</Collection>

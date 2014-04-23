@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <_Tapped>false</_Tapped>
+    <Sick>true</Sick>
+    <quantity>12</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>
