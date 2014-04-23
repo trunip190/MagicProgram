@@ -37,13 +37,8 @@ namespace MagicProgram
         # endregion
 
         # region events
-
         public event Phase SpellRes;
-        public event Phase OppTurnStart;
-        public event Phase OppMainPreEnd;
-        public event Phase OppCombEnd;
-        public event Phase OppMainPostEnd;
-        public event Phase OppTurnEnd;
+        public event Phase PhaseChanged;
         public string phaseName = "Upkeep";
 
         public event CardUse CreaCast;
@@ -79,6 +74,17 @@ namespace MagicProgram
             if (handler != null)
             {
                 handler(mc);
+            }
+        }
+
+        private void callPhaseChanged()
+        {
+            Phase handler = PhaseChanged;
+            Text = "Deck Text (" + phaseName + ")";
+
+            if (handler != null)
+            {
+                handler();
             }
         }
         # endregion
@@ -163,10 +169,10 @@ namespace MagicProgram
         }
 
         # region phase order
-        void DeckTest_PlTurnStart(object sender, EventArgs e)
+        void DeckTest_PlTurnStart()
         {
-            timer2.Tick -= DeckTest_PlTurnStart;
-            timer2.Tick += new EventHandler(DeckTest_PlMainOneStart);
+            PhaseChanged -= DeckTest_PlTurnStart;
+            PhaseChanged += new Phase(DeckTest_PlMainOneStart);
 
             phaseName = "Player - Main Step 1";
 
@@ -185,17 +191,17 @@ namespace MagicProgram
 
             update_listViewPlay();
 
-            buttonDraw_Click(sender, e);
+            buttonDraw_Click(timer2, EventArgs.Empty);
 
             updateText();
 
             panelPlayerSide.Enabled = true;
         }
 
-        void DeckTest_PlMainOneStart(object sender, EventArgs e)
+        void DeckTest_PlMainOneStart()
         {
-            timer2.Tick -= (DeckTest_PlMainOneStart);
-            timer2.Tick += new EventHandler(DeckTest_PlMainOneEnd);
+            PhaseChanged -= (DeckTest_PlMainOneStart);
+            PhaseChanged += new Phase(DeckTest_PlMainOneEnd);
 
             if (CheckValidCards())
             {
@@ -205,57 +211,52 @@ namespace MagicProgram
             phaseName = "Player - Main Step 1";
         }
 
-        private static bool CheckValidCards()
+        void DeckTest_PlMainOneEnd()
         {
-            return true;
-        }
-
-        void DeckTest_PlMainOneEnd(object sender, EventArgs e)
-        {
-            timer2.Tick -= DeckTest_PlMainOneEnd;
-            timer2.Tick += new EventHandler(DeckTest_PlCombatStart);
+            PhaseChanged -= DeckTest_PlMainOneEnd;
+            PhaseChanged += new Phase(DeckTest_PlCombatStart);
 
             phaseName = "Player - Combat";
         }
 
-        void DeckTest_PlCombatStart(object sender, EventArgs e)
+        void DeckTest_PlCombatStart()
         {
-            timer2.Tick -= DeckTest_PlCombatStart;
-            timer2.Tick += new EventHandler(DeckTest_PlCombatEnd);
+            PhaseChanged -= DeckTest_PlCombatStart;
+            PhaseChanged += new Phase(DeckTest_PlCombatEnd);
             cardAreaPlay.SetCombat(true);
 
             phaseName = "Player - Combat";
         }
 
-        void DeckTest_PlCombatEnd(object sender, EventArgs e)
+        void DeckTest_PlCombatEnd()
         {
-            timer2.Tick -= DeckTest_PlCombatEnd;
-            timer2.Tick += new EventHandler(DeckTest_PlMainTwoStart);
+            PhaseChanged -= DeckTest_PlCombatEnd;
+            PhaseChanged += new Phase(DeckTest_PlMainTwoStart);
             cardAreaPlay.SetCombat(false);
 
             phaseName = "Player - Main Step 2";
         }
 
-        void DeckTest_PlMainTwoStart(object sender, EventArgs e)
+        void DeckTest_PlMainTwoStart()
         {
-            timer2.Tick -= DeckTest_PlMainTwoStart;
-            timer2.Tick += new EventHandler(DeckTest_PlMainTwoEnd);
+            PhaseChanged -= DeckTest_PlMainTwoStart;
+            PhaseChanged += new Phase(DeckTest_PlMainTwoEnd);
 
             phaseName = "Player - Main Step 2";
         }
 
-        void DeckTest_PlMainTwoEnd(object sender, EventArgs e)
+        void DeckTest_PlMainTwoEnd()
         {
-            timer2.Tick -= DeckTest_PlMainTwoEnd;
-            timer2.Tick += new EventHandler(DeckTest_PlEndStep);
+            PhaseChanged -= DeckTest_PlMainTwoEnd;
+            PhaseChanged += new Phase(DeckTest_PlEndStep);
 
             phaseName = "Player - End Step";
         }
 
-        void DeckTest_PlEndStep(object sender, EventArgs e)
+        void DeckTest_PlEndStep()
         {
-            timer2.Tick -= DeckTest_PlEndStep;
-            timer2.Tick += new EventHandler(DeckTest_OppStart);
+            PhaseChanged -= DeckTest_PlEndStep;
+            PhaseChanged += new Phase(DeckTest_OppStart);
 
             PlArea.EndStep();
 
@@ -264,53 +265,53 @@ namespace MagicProgram
             phaseName = "Opponents Turn";
         }
 
-        void DeckTest_OppStart(object sender, EventArgs e)
+        void DeckTest_OppStart()
         {
             OppArea.Upkeep();
-            timer2.Tick -= DeckTest_OppStart;
-            timer2.Tick += new EventHandler(DeckTest_OppUpkeepEnd);
+            PhaseChanged -= DeckTest_OppStart;
+            PhaseChanged += new Phase(DeckTest_OppUpkeepEnd);
             phaseName = "Foe - Upkeep";
 
             OppArea.drawCards(1);
         }
 
-        void DeckTest_OppUpkeepEnd(object sender, EventArgs e)
+        void DeckTest_OppUpkeepEnd()
         {
             OppPlayHand();
 
-            timer2.Tick -= DeckTest_OppUpkeepEnd;
-            timer2.Tick += new EventHandler(DeckTest_OppMainPreEnd);
+            PhaseChanged -= DeckTest_OppUpkeepEnd;
+            PhaseChanged += new Phase(DeckTest_OppMainPreEnd);
             phaseName = "Foe - Main Phase";
         }
 
-        void DeckTest_OppMainPreEnd(object sender, EventArgs e)
+        void DeckTest_OppMainPreEnd()
         {
-            timer2.Tick -= DeckTest_OppMainPreEnd;
-            timer2.Tick += new EventHandler(DeckTest_OppCombEnd);
+            PhaseChanged -= DeckTest_OppMainPreEnd;
+            PhaseChanged += new Phase(DeckTest_OppCombEnd);
             phaseName = "Foe - Combat";
         }
 
-        void DeckTest_OppCombEnd(object sender, EventArgs e)
+        void DeckTest_OppCombEnd()
         {
-            timer2.Tick -= DeckTest_OppCombEnd;
-            timer2.Tick += new EventHandler(DeckTest_OppMainPostEnd);
+            PhaseChanged -= DeckTest_OppCombEnd;
+            PhaseChanged += new Phase(DeckTest_OppMainPostEnd);
             phaseName = "Foe - Main Phase";
         }
 
-        void DeckTest_OppMainPostEnd(object sender, EventArgs e)
+        void DeckTest_OppMainPostEnd()
         {
-            timer2.Tick -= DeckTest_OppMainPostEnd;
-            timer2.Tick += new EventHandler(DeckTest_OppTurnEnd);
+            PhaseChanged -= DeckTest_OppMainPostEnd;
+            PhaseChanged += new Phase(DeckTest_OppTurnEnd);
             phaseName = "Foe - End Step";
         }
 
-        void DeckTest_OppTurnEnd(object sender, EventArgs e)
+        void DeckTest_OppTurnEnd()
         {
             PlArea.mana.Clear();
             OppArea.mana.Clear();
 
-            timer2.Tick -= DeckTest_OppTurnEnd;
-            timer2.Tick += new EventHandler(DeckTest_PlTurnStart);
+            PhaseChanged -= DeckTest_OppTurnEnd;
+            PhaseChanged += new Phase(DeckTest_PlTurnStart);
             phaseName = "Player's Turn";
 
         }
@@ -816,7 +817,7 @@ namespace MagicProgram
             panelPlayerSide.Enabled = false;
 
             phaseName = "EndStep";
-            timer2.Tick += new EventHandler(DeckTest_PlCombatStart);
+            PhaseChanged += new Phase(DeckTest_PlCombatStart);
             TimersStart();
         }
 
@@ -1466,10 +1467,8 @@ namespace MagicProgram
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            Debug.WriteLine("progressBar1: {0}", progressBar1.Value);
-            progressBar1.Value = 0;
-            //timer2.Stop();
-            Text = "Deck Text (" + phaseName + ")";
+            //now redundant
+            //replaced by phasechanged
         }
         # endregion
 
@@ -1603,6 +1602,11 @@ namespace MagicProgram
             cPanelControls.Visible = false;
         }
 
+        private static bool CheckValidCards()
+        {
+            return true;
+        }
+
         # region comboCardPicker
         private void comboCardPicker_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -1689,11 +1693,11 @@ namespace MagicProgram
             progressBar1.Step = (timer1.Interval * 100) / timer2.Interval;
             progressBar1.PerformStep();
 
-            //if (progressBar1.Value == progressBar1.Maximum)
-            //{
-            //    timer2.Start();
-            //    timer2.Interval = 10;
-            //}
+            if (progressBar1.Value == progressBar1.Maximum)
+            {
+                callPhaseChanged();
+                progressBar1.Value = 0;
+            }
         }
     }
 
