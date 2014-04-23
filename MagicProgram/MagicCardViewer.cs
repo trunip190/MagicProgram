@@ -90,6 +90,8 @@ namespace MagicProgram
         }
         # endregion
 
+        # region button visibility
+        # region Choosing
         private bool _choosing = false;
         public bool Choosing
         {
@@ -100,6 +102,37 @@ namespace MagicProgram
                 buttonChoose.Visible = _choosing;
             }
         }
+        # endregion
+
+        # region Attack
+        private bool _attack = false;
+        public bool Attack
+        {
+            get
+            {
+                return _attack;
+            }
+            set
+            {
+                _attack = value;
+                buttonAttack.Visible = _attack;
+            }
+        }
+        # endregion
+
+        # region Tap
+        private bool _tap = false;
+        public bool Tap
+        {
+            get { return _tap; }
+            set
+            {
+                _tap = value;
+                buttonTap.Visible = _tap;
+            }
+        }
+        # endregion
+        # endregion
 
         private bool _border = false;
         public bool Border
@@ -133,6 +166,7 @@ namespace MagicProgram
         # region delegates/events/handlers
         public delegate void MagicCardViewerEvent(MagicCardViewer mcv);
         public event MagicCardViewerEvent CardChanged;
+        public event MagicCardViewerEvent CardDeleted;
         public event CardUse CardChosen;
 
         protected void onCardChanged()
@@ -150,6 +184,15 @@ namespace MagicProgram
             if (handler != null)
             {
                 handler(cards[0]);
+            }
+        }
+
+        protected void callCardDeleted()
+        {
+            MagicCardViewerEvent handler = CardDeleted;
+            if (handler != null)
+            {
+                handler(this);
             }
         }
         # endregion
@@ -198,8 +241,19 @@ namespace MagicProgram
             card.TapChanged -= mc_TapChanged;
             card.TapChanged += new CardUse(mc_TapChanged);
 
+            card.Destroyed -= card_Destroyed;
+            card.Destroyed += new CardUse(card_Destroyed);
+
             cards.Add(card);
             mc = card;
+        }
+
+        void card_Destroyed(MagicCard mc)
+        {
+            if (cards.Count < 1)
+            {
+                callCardDeleted();
+            }
         }
 
         public void RemoveCard(MagicCard mc)
@@ -537,6 +591,11 @@ namespace MagicProgram
             {
                 numericUpDown1.Value = 0;
             }
+        }
+
+        private void buttonAttack_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -38,6 +38,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.buttonAttack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,20 +51,21 @@
             this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.buttonDiscard);
             this.panel1.Controls.Add(this.buttonActivate);
-            this.panel1.Controls.Add(this.buttonTap);
             this.panel1.Controls.Add(this.buttonChoose);
+            this.panel1.Controls.Add(this.buttonAttack);
+            this.panel1.Controls.Add(this.buttonTap);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.MinimumSize = new System.Drawing.Size(70, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(212, 112);
+            this.panel1.Size = new System.Drawing.Size(212, 135);
             this.panel1.TabIndex = 5;
             this.panel1.Visible = false;
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.numericUpDown1.Location = new System.Drawing.Point(0, 92);
+            this.numericUpDown1.Location = new System.Drawing.Point(0, 115);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(212, 20);
             this.numericUpDown1.TabIndex = 9;
@@ -75,7 +77,7 @@
             // 
             this.buttonDiscard.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonDiscard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDiscard.Location = new System.Drawing.Point(0, 69);
+            this.buttonDiscard.Location = new System.Drawing.Point(0, 92);
             this.buttonDiscard.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDiscard.Name = "buttonDiscard";
             this.buttonDiscard.Size = new System.Drawing.Size(212, 23);
@@ -88,7 +90,7 @@
             // 
             this.buttonActivate.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonActivate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonActivate.Location = new System.Drawing.Point(0, 46);
+            this.buttonActivate.Location = new System.Drawing.Point(0, 69);
             this.buttonActivate.Margin = new System.Windows.Forms.Padding(0);
             this.buttonActivate.Name = "buttonActivate";
             this.buttonActivate.Size = new System.Drawing.Size(212, 23);
@@ -101,7 +103,7 @@
             // 
             this.buttonTap.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonTap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTap.Location = new System.Drawing.Point(0, 23);
+            this.buttonTap.Location = new System.Drawing.Point(0, 0);
             this.buttonTap.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTap.Name = "buttonTap";
             this.buttonTap.Size = new System.Drawing.Size(212, 23);
@@ -114,7 +116,7 @@
             // 
             this.buttonChoose.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonChoose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChoose.Location = new System.Drawing.Point(0, 0);
+            this.buttonChoose.Location = new System.Drawing.Point(0, 46);
             this.buttonChoose.Margin = new System.Windows.Forms.Padding(0);
             this.buttonChoose.Name = "buttonChoose";
             this.buttonChoose.Size = new System.Drawing.Size(212, 23);
@@ -156,6 +158,19 @@
             this.timer1.Interval = 400;
             this.timer1.Tick += new System.EventHandler(this.timer1_TickOn);
             // 
+            // buttonAttack
+            // 
+            this.buttonAttack.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAttack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAttack.Location = new System.Drawing.Point(0, 23);
+            this.buttonAttack.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonAttack.Name = "buttonAttack";
+            this.buttonAttack.Size = new System.Drawing.Size(212, 23);
+            this.buttonAttack.TabIndex = 10;
+            this.buttonAttack.Text = "Attack";
+            this.buttonAttack.UseVisualStyleBackColor = true;
+            this.buttonAttack.Click += new System.EventHandler(this.buttonAttack_Click);
+            // 
             // MagicCardViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,5 +201,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button buttonAttack;
     }
 }

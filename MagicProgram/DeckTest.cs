@@ -166,9 +166,13 @@ namespace MagicProgram
         void DeckTest_PlTurnStart(object sender, EventArgs e)
         {
             timer2.Tick -= DeckTest_PlTurnStart;
-            phaseName = "Opponent's Turn";
+            timer2.Tick += new EventHandler(DeckTest_PlMainOneStart);
 
-            timer2.Stop();
+            phaseName = "Player - Main Step 1";
+
+            timer2.Interval = 5000;
+            progressBar1.Maximum = 5000;
+            //TimerStop();
 
             turns++;
 
@@ -188,12 +192,75 @@ namespace MagicProgram
             panelPlayerSide.Enabled = true;
         }
 
+        void DeckTest_PlMainOneStart(object sender, EventArgs e)
+        {
+            timer2.Tick -= (DeckTest_PlMainOneStart);
+            timer2.Tick += new EventHandler(DeckTest_PlMainOneEnd);
+
+            if (CheckValidCards())
+            {
+                TimerStop();
+            }
+
+            phaseName = "Player - Main Step 1";
+        }
+
+        private static bool CheckValidCards()
+        {
+            return true;
+        }
+
+        void DeckTest_PlMainOneEnd(object sender, EventArgs e)
+        {
+            timer2.Tick -= DeckTest_PlMainOneEnd;
+            timer2.Tick += new EventHandler(DeckTest_PlCombatStart);
+
+            phaseName = "Player - Combat";
+        }
+
+        void DeckTest_PlCombatStart(object sender, EventArgs e)
+        {
+            timer2.Tick -= DeckTest_PlCombatStart;
+            timer2.Tick += new EventHandler(DeckTest_PlCombatEnd);
+            cardAreaPlay.SetCombat(true);
+
+            phaseName = "Player - Combat";
+        }
+
+        void DeckTest_PlCombatEnd(object sender, EventArgs e)
+        {
+            timer2.Tick -= DeckTest_PlCombatEnd;
+            timer2.Tick += new EventHandler(DeckTest_PlMainTwoStart);
+            cardAreaPlay.SetCombat(false);
+
+            phaseName = "Player - Main Step 2";
+        }
+
+        void DeckTest_PlMainTwoStart(object sender, EventArgs e)
+        {
+            timer2.Tick -= DeckTest_PlMainTwoStart;
+            timer2.Tick += new EventHandler(DeckTest_PlMainTwoEnd);
+
+            phaseName = "Player - Main Step 2";
+        }
+
+        void DeckTest_PlMainTwoEnd(object sender, EventArgs e)
+        {
+            timer2.Tick -= DeckTest_PlMainTwoEnd;
+            timer2.Tick += new EventHandler(DeckTest_PlEndStep);
+
+            phaseName = "Player - End Step";
+        }
+
         void DeckTest_PlEndStep(object sender, EventArgs e)
         {
-            PlArea.EndStep();
-
             timer2.Tick -= DeckTest_PlEndStep;
             timer2.Tick += new EventHandler(DeckTest_OppStart);
+
+            PlArea.EndStep();
+
+            timer2.Interval = 1000;
+            progressBar1.Maximum = 1000;
             phaseName = "Opponents Turn";
         }
 
@@ -202,7 +269,7 @@ namespace MagicProgram
             OppArea.Upkeep();
             timer2.Tick -= DeckTest_OppStart;
             timer2.Tick += new EventHandler(DeckTest_OppUpkeepEnd);
-            phaseName = "Upkeep";
+            phaseName = "Foe - Upkeep";
 
             OppArea.drawCards(1);
         }
@@ -213,28 +280,28 @@ namespace MagicProgram
 
             timer2.Tick -= DeckTest_OppUpkeepEnd;
             timer2.Tick += new EventHandler(DeckTest_OppMainPreEnd);
-            phaseName = "Main Phase";
+            phaseName = "Foe - Main Phase";
         }
 
         void DeckTest_OppMainPreEnd(object sender, EventArgs e)
         {
             timer2.Tick -= DeckTest_OppMainPreEnd;
             timer2.Tick += new EventHandler(DeckTest_OppCombEnd);
-            phaseName = "Combat";
+            phaseName = "Foe - Combat";
         }
 
         void DeckTest_OppCombEnd(object sender, EventArgs e)
         {
             timer2.Tick -= DeckTest_OppCombEnd;
             timer2.Tick += new EventHandler(DeckTest_OppMainPostEnd);
-            phaseName = "Main Phase";
+            phaseName = "Foe - Main Phase";
         }
 
         void DeckTest_OppMainPostEnd(object sender, EventArgs e)
         {
             timer2.Tick -= DeckTest_OppMainPostEnd;
             timer2.Tick += new EventHandler(DeckTest_OppTurnEnd);
-            phaseName = "End Step";
+            phaseName = "Foe - End Step";
         }
 
         void DeckTest_OppTurnEnd(object sender, EventArgs e)
@@ -678,6 +745,7 @@ namespace MagicProgram
             tempCard.checkPT();
             tempCard = null;
             PlArea._hand.Remove(mc);
+            cardAreaHand.RemoveCard(mc);
             cardAreaHand.CardClicked -= cardAreaHand_CardClickedCipher;
         }
 
@@ -748,8 +816,14 @@ namespace MagicProgram
             panelPlayerSide.Enabled = false;
 
             phaseName = "EndStep";
-            timer2.Tick += new EventHandler(DeckTest_PlEndStep);
+            timer2.Tick += new EventHandler(DeckTest_PlCombatStart);
+            TimersStart();
+        }
+
+        private void TimersStart()
+        {
             timer2.Start();
+            timer1.Start();
         }
 
         private void OppPlayHand()
@@ -987,19 +1061,19 @@ namespace MagicProgram
 
         private void update_listViewPlay()
         {
-            cardAreaPlay.Lands = PlArea._play;
+            cardAreaPlay.Cards = PlArea._play;
             cardAreaPlay.DrawAllCards();
         }
 
         private void update_listViewLand()
         {
-            cardAreaLand.Lands = PlArea._lands;
+            cardAreaLand.Cards = PlArea._lands;
             cardAreaLand.DrawAllCards();   //cardviewer version
         }
 
         private void update_listViewHand()
         {
-            cardAreaHand.Lands = PlArea._hand;
+            cardAreaHand.Cards = PlArea._hand;
             cardAreaHand.DrawAllCards();
         }
         # endregion
@@ -1355,9 +1429,31 @@ namespace MagicProgram
 
                 case 'm':
                     Mulligan();
+                    e.Handled = true;
+                    break;
+
+                case ' ':
+                    if (timer2.Enabled)
+                    {
+                        TimerStop();
+                        Text = "Deck Text (" + phaseName + ") Paused";
+                        panelPlayerSide.Enabled = true;
+                    }
+                    else
+                    {
+                        TimersStart();
+                        Text = "Deck Text (" + phaseName + ") Running";
+                        panelPlayerSide.Enabled = false;
+                    }
                     break;
             }
 
+        }
+
+        private void TimerStop()
+        {
+            timer2.Stop();
+            timer1.Stop();
         }
 
         # region timer ticking
@@ -1370,6 +1466,9 @@ namespace MagicProgram
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            Debug.WriteLine("progressBar1: {0}", progressBar1.Value);
+            progressBar1.Value = 0;
+            //timer2.Stop();
             Text = "Deck Text (" + phaseName + ")";
         }
         # endregion
@@ -1582,6 +1681,19 @@ namespace MagicProgram
             {
                 ct.Dispose();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Maximum = 100;
+            progressBar1.Step = (timer1.Interval * 100) / timer2.Interval;
+            progressBar1.PerformStep();
+
+            //if (progressBar1.Value == progressBar1.Maximum)
+            //{
+            //    timer2.Start();
+            //    timer2.Interval = 10;
+            //}
         }
     }
 

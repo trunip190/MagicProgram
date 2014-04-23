@@ -109,6 +109,7 @@
             this.listViewOppEnch = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.cPanelControls.WorkingArea.SuspendLayout();
@@ -331,7 +332,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 400;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
             // 
@@ -997,11 +998,20 @@
             // 
             this.columnHeader8.Text = "Quantity";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(410, 1);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.Step = 100;
+            this.progressBar1.TabIndex = 13;
+            // 
             // DeckTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 758);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.cPanelControls);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cPanelAll);
@@ -1130,5 +1140,6 @@
         private System.Windows.Forms.Panel panel9;
         private CardArea cardAreaHand;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

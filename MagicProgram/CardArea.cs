@@ -126,7 +126,7 @@ namespace MagicProgram
         public bool Paused = false;
         public MagicCard CurrentCard;
 
-        public CardCollection Lands = new CardCollection();
+        public CardCollection Cards = new CardCollection();
         # endregion
 
         # region private attributes
@@ -208,7 +208,7 @@ namespace MagicProgram
                 imgLoc = "~\\Downloads\\Magic Cards\\M13\\Arbor Elf.jpg",
                 Tapped = false
             };
-            Lands.cards.Add(mc);
+            Cards.cards.Add(mc);
 
             DrawAllCards();
         }
@@ -222,16 +222,16 @@ namespace MagicProgram
             }
 
             # region preparation
-            Lands.cards = CardMethods.SplitCardList(Lands.cards);
+            Cards.cards = CardMethods.SplitCardList(Cards.cards);
 
             CardDict.Clear();
             ClearViewers();
 
-            Lands.index();
+            Cards.index();
 
-            Lands.cards = Lands.cards.OrderBy(o => o.Type).ToList();
-            Lands.cards = Lands.cards.OrderBy(o => o.Name).ToList();
-            Lands.cards = Lands.cards.OrderBy(o => o.Tapped).ToList();
+            Cards.cards = Cards.cards.OrderBy(o => o.Type).ToList();
+            Cards.cards = Cards.cards.OrderBy(o => o.Name).ToList();
+            Cards.cards = Cards.cards.OrderBy(o => o.Tapped).ToList();
 
             int position = -1;
             string PName = "";
@@ -242,9 +242,9 @@ namespace MagicProgram
 
             int count = 1;
             # region cycle through cards
-            for (int i = 0; i < Lands.cards.Count; i++)
+            for (int i = 0; i < Cards.cards.Count; i++)
             {
-                MagicCard mc = Lands.cards[i];
+                MagicCard mc = Cards.cards[i];
 
                 # region set position
                 //set depth down one
@@ -294,7 +294,14 @@ namespace MagicProgram
             foreach (MagicCardViewer mcv in mControls)
             {
                 mcv.DrawQuantity();
+                mcv.CardDeleted -= mcv_CardDeleted;
+                mcv.CardDeleted += new MagicCardViewer.MagicCardViewerEvent(mcv_CardDeleted);
             }
+        }
+
+        void mcv_CardDeleted(MagicCardViewer mcv)
+        {
+
         }
 
         public void AddCard(MagicCard card)
@@ -375,7 +382,7 @@ namespace MagicProgram
 
             int mIndex = -1;
 
-            foreach (MagicCard mc in Lands.cards)
+            foreach (MagicCard mc in Cards.cards)
             {
                 if (Name == mc.Name && tapped == mc.Tapped && attached == mc.attachedCards)
                 {
@@ -667,6 +674,16 @@ namespace MagicProgram
             }
 
             Debug.WriteLine("CardArea_KeyUp: Should cards be updated?");
+        }
+        # endregion
+
+        # region game stages
+        public void SetCombat(bool combat)
+        {
+            foreach (MagicCardViewer mcv in mControls)
+            {
+                mcv.Attack = combat;
+            }
         }
         # endregion
 
