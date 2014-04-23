@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <_Tapped>false</_Tapped>
+    <Sick>true</Sick>
+    <quantity>23</quantity>
+    <Tapped>false</Tapped>
+  </Card>
+  <Card>
+    <Name>Primordial Hydra</Name>
+    <Edition>M13</Edition>
+    <Rarity>M</Rarity>
+    <Color>G</Color>
+    <Cost>XGG</Cost>
+    <PT>0/0</PT>
+    <Type>Creature - Hydra</Type>
+    <Text>Primordial Hydra enters the battlefield with X +1/+1 counters on it.;
+At the beginning of your upkeep, double the number of +1/+1 counters on Primordial Hydra.;
+Primordial Hydra has trample as long as it has ten or more +1/+1 counters on it.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <_Tapped>false</_Tapped>
+    <Sick>true</Sick>
+    <quantity>4</quantity>
+    <Tapped>false</Tapped>
+  </Card>
+  <Card>
+    <Name>Protean Hydra</Name>
+    <Edition>M10</Edition>
+    <Rarity>M</Rarity>
+    <Color>G</Color>
+    <Cost>XG</Cost>
+    <PT>0/0</PT>
+    <Type>Creature - Hydra</Type>
+    <Text>Protean Hydra enters the battlefield with X +1/+1 counters on it.;
+If damage would be dealt to Protean Hydra, prevent that damage and remove that many +1/+1 counters from it.;
+Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters on it at the beginning of the next end step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <_Tapped>false</_Tapped>
+    <Sick>true</Sick>
+    <quantity>4</quantity>
+    <Tapped>false</Tapped>
+  </Card>
+  <Card>
+    <Name>Vastwood Hydra</Name>
+    <Edition>M14</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>XGG</Cost>
+    <PT>0/0</PT>
+    <Type>Creature - Hydra</Type>
+    <Text>Vastwood Hydra enters the battlefield with X +1/+1 counters on it.;
+When Vastwood Hydra dies, you may distribute a number of +1/+1 counters equal to the number of +1/+1 counters on Vastwood Hydra among any number of creatures you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <_Tapped>false</_Tapped>
+    <Sick>true</Sick>
+    <quantity>4</quantity>
+    <Tapped>false</Tapped>
+  </Card>
+  <Card>
+    <Name>Nature's Lore</Name>
+    <Edition>P2</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Search your library for a Forest card and put that card onto the battlefield. Then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <_Tapped>false</_Tapped>
+    <Sick>true</Sick>
+    <quantity>4</quantity>
+    <Tapped>false</Tapped>
+  </Card>
+</Collection>
