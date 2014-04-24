@@ -80,6 +80,7 @@
             this.mru5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mru6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportDeckListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.largeIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,7 +95,7 @@
             this.testDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.exportDeckListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCount)).BeginInit();
@@ -420,6 +421,7 @@
             // 
             this.saveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveDeckToolStripMenuItem,
+            this.saveAsDeckToolStripMenuItem,
             this.saveLibraryToolStripMenuItem,
             this.saveDatabaseToolStripMenuItem});
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
@@ -543,6 +545,13 @@
             this.importToolStripMenuItem.Text = "Import...";
             this.importToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
+            // exportDeckListToolStripMenuItem
+            // 
+            this.exportDeckListToolStripMenuItem.Name = "exportDeckListToolStripMenuItem";
+            this.exportDeckListToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.exportDeckListToolStripMenuItem.Text = "Export deck list";
+            this.exportDeckListToolStripMenuItem.Click += new System.EventHandler(this.exportDeckListToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -651,12 +660,12 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // exportDeckListToolStripMenuItem
+            // saveAsDeckToolStripMenuItem
             // 
-            this.exportDeckListToolStripMenuItem.Name = "exportDeckListToolStripMenuItem";
-            this.exportDeckListToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.exportDeckListToolStripMenuItem.Text = "Export deck list";
-            this.exportDeckListToolStripMenuItem.Click += new System.EventHandler(this.exportDeckListToolStripMenuItem_Click);
+            this.saveAsDeckToolStripMenuItem.Name = "saveAsDeckToolStripMenuItem";
+            this.saveAsDeckToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.saveAsDeckToolStripMenuItem.Text = "Save As Deck ";
+            this.saveAsDeckToolStripMenuItem.Click += new System.EventHandler(this.saveAsDeckToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -748,6 +757,7 @@
         private System.Windows.Forms.ToolStripMenuItem viewStatsToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem exportDeckListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsDeckToolStripMenuItem;
     }
 }
 

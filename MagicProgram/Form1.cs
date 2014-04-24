@@ -93,12 +93,12 @@ namespace MagicProgram
 
         private void saveDeckToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd";
             string filename = Deck.Filename;
 
             if (!File.Exists(filename))
             {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd";
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     filename = sfd.FileName;
@@ -110,6 +110,24 @@ namespace MagicProgram
             }
 
             using (Stream stream = File.Create(filename))
+            {
+                XmlSerializer serial = new XmlSerializer(typeof(CardCollection));
+
+                serial.Serialize(stream, Deck);
+            }
+        }
+
+        private void saveAsDeckToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd";
+
+            if (sfd.ShowDialog() != DialogResult.OK)
+            {
+                return;
+            }
+
+            using (Stream stream = File.Create(sfd.FileName))
             {
                 XmlSerializer serial = new XmlSerializer(typeof(CardCollection));
 
