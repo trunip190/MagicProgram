@@ -89,39 +89,60 @@ namespace MagicProgram
         # endregion
 
         # region limit card options to Choose
-        [Browsable(true), DefaultValue("false"), Category("Custom")]
         private bool _singleChoice = false;
+        [Browsable(true), DefaultValue("false"), Category("Custom")]
         public bool SingleChoice
         {
             get { return _singleChoice; }
             set { _singleChoice = value; }
         }
-        # endregion
 
-        # region "Choose Card" text
-        private string _chooseCardString = "Choose";
-        public string ChooseCardString
+        private bool _tappable = false;
+        [Browsable(true), DefaultValue("true"), Category("Custom")]
+        public bool Tappable
         {
-            get { return _chooseCardString; }
-            set { _chooseCardString = value; }
+            get { return _tappable; }
+            set { _tappable = value; }
         }
-        # endregion
-        # endregion
 
-        # region public attributes
+        private bool _discard = false;
+        [Browsable(true), DefaultValue("false"), Category("Custom")]
+        public bool Discard
+        {
+            get { return _discard; }
+            set { _discard = value; }
+        }
+
+        private bool _activate = false;
+        [Browsable(true), DefaultValue("false"), Category("Custom")]
+        public bool Activate
+        {
+            get { return _activate; }
+            set { _activate = value; }
+        }
+
         private bool _chooseCard = false;
+        [Browsable(true), DefaultValue("false"), Category("Custom")]
         public bool ChooseCard
         {
             get { return _chooseCard; }
             set
             {
                 _chooseCard = value;
-                foreach (MagicCardViewer mcv in mControls)
-                {
-                    mcv.Choosing = _chooseCard;
-                }
+                setActions();
             }
         }
+        # endregion
+
+        # region "Choose Card" text
+        private string _chooseCardString = "Choose";
+        [Browsable(true), DefaultValue("Choose"), Category("Custom")]
+        public string ChooseCardString
+        {
+            get { return _chooseCardString; }
+            set { _chooseCardString = value; }
+        }
+        # endregion
 
         public bool Paused = false;
         public MagicCard CurrentCard;
@@ -296,6 +317,8 @@ namespace MagicProgram
                 mcv.DrawQuantity();
                 mcv.CardDeleted -= mcv_CardDeleted;
                 mcv.CardDeleted += new MagicCardViewer.MagicCardViewerEvent(mcv_CardDeleted);
+
+                SetIndAction(mcv);
             }
         }
 
@@ -446,12 +469,15 @@ namespace MagicProgram
             if (SingleChoice)
             {
                 mcv = new MagicCardViewer(false, false, false, true);
-                mcv.SetChooseString(ChooseCardString);
             }
             else
             {
-                mcv = new MagicCardViewer(true, false, false, false);
+                mcv = new MagicCardViewer(Tappable, Activate, Discard, ChooseCard);
             }
+
+            SetIndAction(mcv);
+
+            mcv.SetChooseString(ChooseCardString);
 
             mcv.ViewerSize = CardSize;
             mcv.TextVisible = TextSpoiler;
@@ -512,6 +538,30 @@ namespace MagicProgram
             }
 
             this.Height = result.Height;
+        }
+
+        private void setActions()
+        {
+            foreach (MagicCardViewer mcv in mControls)
+            {
+                SetIndAction(mcv);
+            }
+        }
+
+        private void SetIndAction(MagicCardViewer mcv)
+        {
+            mcv.Tap = Tappable;
+            mcv.Discard = Discard;
+            mcv.Choosing = _chooseCard;
+
+            if (mcv.cards.Count < 0 && mcv.cards[0].Abilities.Count > 0)
+            {
+                mcv.Activate = Activate;
+            }
+            else
+            {
+                mcv.Activate = false;
+            }
         }
 
         # region events
@@ -680,9 +730,31 @@ namespace MagicProgram
         # region game stages
         public void SetCombat(bool combat)
         {
+            //foreach (MagicCardViewer mcv in mControls)
+            //{
+            //    mcv.Attack = combat;
+            //}
+        }
+
+        public int countAttackers()
+        {
+            int result = 0;
             foreach (MagicCardViewer mcv in mControls)
             {
-                mcv.Attack = combat;
+                if (!mcv.cards[0].Sick && !mcv.cards[0].Tapped)
+                {
+                    mcv.Attack = true;
+                    result++;
+                }
+            }
+            return result;
+        }
+
+        public void resetAttackers()
+        {
+            foreach (MagicCardViewer mcv in mControls)
+            {
+                mcv.Attack = false;
             }
         }
         # endregion

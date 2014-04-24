@@ -59,6 +59,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.cPanelControls = new MagicProgram.CollapsiblePanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -109,7 +110,6 @@
             this.listViewOppEnch = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.cPanelControls.WorkingArea.SuspendLayout();
@@ -338,6 +338,15 @@
             // 
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(410, 1);
+            this.progressBar1.Maximum = 5000;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.Step = 100;
+            this.progressBar1.TabIndex = 13;
             // 
             // cPanelControls
             // 
@@ -597,12 +606,13 @@
             // 
             // cardAreaPlay
             // 
+            this.cardAreaPlay.Activate = true;
             this.cardAreaPlay.AutoScroll = true;
             this.cardAreaPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cardAreaPlay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cardAreaPlay.CardSize = MagicProgram.CSize.Small;
             this.cardAreaPlay.ChooseCard = true;
-            this.cardAreaPlay.ChooseCardString = "Choose";
+            this.cardAreaPlay.Discard = false;
             this.cardAreaPlay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cardAreaPlay.IndividualCard = true;
             this.cardAreaPlay.Location = new System.Drawing.Point(0, 0);
@@ -611,6 +621,7 @@
             this.cardAreaPlay.SingleChoice = false;
             this.cardAreaPlay.Size = new System.Drawing.Size(952, 169);
             this.cardAreaPlay.TabIndex = 19;
+            this.cardAreaPlay.Tappable = false;
             this.cardAreaPlay.TextSpoiler = true;
             this.cardAreaPlay.CardClicked += new MagicProgram.CardArea.CardChosen(this.landArea1_CardClicked);
             this.cardAreaPlay.KeyUp += new System.Windows.Forms.KeyEventHandler(this.landAreaPlay_KeyUp);
@@ -629,12 +640,13 @@
             // 
             // cardAreaLand
             // 
+            this.cardAreaLand.Activate = false;
             this.cardAreaLand.AutoScroll = true;
             this.cardAreaLand.BackColor = System.Drawing.Color.White;
             this.cardAreaLand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cardAreaLand.CardSize = MagicProgram.CSize.vSmall;
             this.cardAreaLand.ChooseCard = false;
-            this.cardAreaLand.ChooseCardString = "Choose";
+            this.cardAreaLand.Discard = false;
             this.cardAreaLand.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cardAreaLand.IndividualCard = false;
             this.cardAreaLand.Location = new System.Drawing.Point(0, -2);
@@ -643,6 +655,7 @@
             this.cardAreaLand.SingleChoice = false;
             this.cardAreaLand.Size = new System.Drawing.Size(780, 113);
             this.cardAreaLand.TabIndex = 6;
+            this.cardAreaLand.Tappable = true;
             this.cardAreaLand.TextSpoiler = false;
             this.cardAreaLand.CardClicked += new MagicProgram.CardArea.CardChosen(this.landArea1_CardClicked);
             // 
@@ -727,12 +740,14 @@
             // 
             // cardAreaHand
             // 
+            this.cardAreaHand.Activate = false;
             this.cardAreaHand.AutoScroll = true;
             this.cardAreaHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cardAreaHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cardAreaHand.CardSize = MagicProgram.CSize.Small;
             this.cardAreaHand.ChooseCard = true;
             this.cardAreaHand.ChooseCardString = "Play";
+            this.cardAreaHand.Discard = true;
             this.cardAreaHand.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cardAreaHand.IndividualCard = true;
             this.cardAreaHand.Location = new System.Drawing.Point(0, 0);
@@ -740,6 +755,7 @@
             this.cardAreaHand.SingleChoice = true;
             this.cardAreaHand.Size = new System.Drawing.Size(952, 148);
             this.cardAreaHand.TabIndex = 5;
+            this.cardAreaHand.Tappable = false;
             this.cardAreaHand.TextSpoiler = false;
             this.cardAreaHand.CardClicked += new MagicProgram.CardArea.CardChosen(this.cardAreaHand_CardClicked);
             this.cardAreaHand.CardDoubleClicked += new MagicProgram.CardArea.CardChosen(this.cardAreaHand_CardDoubleClicked);
@@ -997,15 +1013,6 @@
             // columnHeader8
             // 
             this.columnHeader8.Text = "Quantity";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(410, 1);
-            this.progressBar1.Maximum = 5000;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
-            this.progressBar1.Step = 100;
-            this.progressBar1.TabIndex = 13;
             // 
             // DeckTest
             // 

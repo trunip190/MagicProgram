@@ -1412,7 +1412,7 @@ namespace MagicProgram
 
             cardAreaPlay.SetCombat(true);
 
-            if (PlArea._play.cards.Count(o => o.Sick == false && o.Tapped == false) > 0)   //replace with method that checks for valid attacking creatures
+            if (cardAreaPlay.countAttackers() > 0)
             {
                 TimerStop();
             }
@@ -1423,6 +1423,8 @@ namespace MagicProgram
             PhaseChanged -= DeckTest_PlCombatEnd;
             PhaseChanged += new Phase(DeckTest_PlMainTwoStart);
             PhaseName = "Player - Combat End";
+
+
 
             cardAreaPlay.SetCombat(false);
         }
@@ -1492,12 +1494,21 @@ namespace MagicProgram
             PhaseName = "Foe - Combat Start";
 
             //Pause for combat
+            if (OppArea.countAttackers() > 0)
+            {
+                TimerStop();
 
-            TimerStop();
+                cardAreaPlay.Discard = true;
+                cardAreaPlay.ChooseCard = true;
+                cardAreaPlay.ChooseCardString = "Block";
+            }
         }
 
         void DeckTest_OppMainPostEnd()
         {
+            cardAreaPlay.Discard = false;
+            cardAreaPlay.ChooseCard = false;
+
             PhaseChanged -= DeckTest_OppMainPostEnd;
             PhaseChanged += new Phase(DeckTest_OppTurnEnd);
             PhaseName = "Foe - Main Step 2 Start";
@@ -2250,6 +2261,21 @@ namespace MagicProgram
 
                 result.Add(mc);
                 onCardDrawn(mc);
+            }
+
+            return result;
+        }
+
+        public int countAttackers()
+        {
+            int result = 0;
+
+            foreach (MagicCard mc in _play.cards)
+            {
+                if (!mc.Tapped && !mc.Sick) //And not defender
+                {
+                    result++;
+                }
             }
 
             return result;

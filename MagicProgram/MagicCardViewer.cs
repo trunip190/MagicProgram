@@ -92,44 +92,42 @@ namespace MagicProgram
 
         # region button visibility
         # region Choosing
-        private bool _choosing = false;
         public bool Choosing
         {
-            get { return _choosing; }
-            set
-            {
-                _choosing = value;
-                buttonChoose.Visible = _choosing;
-            }
+            get { return buttonChoose.Visible; }
+            set { buttonChoose.Visible = value; }
         }
         # endregion
 
         # region Attack
-        private bool _attack = false;
         public bool Attack
         {
-            get
-            {
-                return _attack;
-            }
-            set
-            {
-                _attack = value;
-                buttonAttack.Visible = _attack;
-            }
+            get { return buttonAttack.Visible; }
+            set { buttonAttack.Visible = value; }
         }
         # endregion
 
         # region Tap
-        private bool _tap = false;
         public bool Tap
         {
-            get { return _tap; }
-            set
-            {
-                _tap = value;
-                buttonTap.Visible = _tap;
-            }
+            get { return buttonTap.Visible; }
+            set { buttonTap.Visible = value; }
+        }
+        # endregion
+
+        # region Activate
+        public bool Activate
+        {
+            get { return buttonActivate.Visible; }
+            set { buttonActivate.Visible = value; }
+        }
+        # endregion
+
+        # region Discard
+        public bool Discard
+        {
+            get { return buttonDiscard.Visible; }
+            set { buttonDiscard.Visible = value; }
         }
         # endregion
         # endregion
@@ -486,26 +484,17 @@ namespace MagicProgram
 
         private void MagicCardViewer_MouseEnter(object sender, EventArgs e)
         {
-            //timer1.Start();
-            //timer1.Interval = 200;
-            //timer1.Tick -= timer1_TickOff
-            //timer1.Tick += new EventHandler(timer1_TickOn);
             showPanel1();
         }
 
         public void showPanel1()
         {
-            //show necessary controls
-            buttonDiscard.Show();
-
-            //show panel1
             panel1.Visible = true;
         }
 
         public void hidePanel1()
         {
             panel1.Visible = false;
-            //hide controls
         }
         # endregion
 
@@ -536,6 +525,11 @@ namespace MagicProgram
         private void buttonDiscard_Click(object sender, EventArgs e)
         {
             cards[0].callDiscard();
+        }
+
+        private void buttonAttack_Click(object sender, EventArgs e)
+        {
+            cards[0].ChangeTap();
         }
         # endregion
 
@@ -591,12 +585,6 @@ namespace MagicProgram
             {
                 numericUpDown1.Value = 0;
             }
-        }
-
-        private void buttonAttack_Click(object sender, EventArgs e)
-        {
-            //throw attacking event
-            cards[0].Tap(true, false);
         }
     }
 }
