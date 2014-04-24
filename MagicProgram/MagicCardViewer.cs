@@ -595,7 +595,8 @@ namespace MagicProgram
 
         private void buttonAttack_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw attacking event
+            cards[0].Tap(true, false);
         }
     }
 }

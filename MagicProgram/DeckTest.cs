@@ -39,7 +39,21 @@ namespace MagicProgram
         # region events
         public event Phase SpellRes;
         public event Phase PhaseChanged;
-        public string phaseName = "Upkeep";
+
+
+        private string _phaseName = "Upkeep";
+        public string PhaseName
+        {
+            get
+            {
+                return _phaseName;
+            }
+            set
+            {
+                _phaseName = value;
+                Text = "Deck Text (" + _phaseName + ")";
+            }
+        }
 
         public event CardUse CreaCast;
         public event CardUse CardChosen;
@@ -80,7 +94,7 @@ namespace MagicProgram
         private void callPhaseChanged()
         {
             Phase handler = PhaseChanged;
-            Text = "Deck Text (" + phaseName + ")";
+            //Debug.WriteLine(Text);
 
             if (handler != null)
             {
@@ -124,6 +138,8 @@ namespace MagicProgram
             cardAreaHand.Paused = true;
             DrawCard(7);
             cardAreaHand.Paused = false;
+
+            PhaseChanged += new Phase(DeckTest_PlMainOneEnd);
 
             updateAll();
         }
@@ -661,17 +677,14 @@ namespace MagicProgram
         }
 
         # region
-
         private void endTurn()
         {
-            PlArea.mana.Clear();
-            OppArea.mana.Clear();
 
-            panelPlayerSide.Enabled = false;
 
-            phaseName = "Player - Combat Start";
-            PhaseChanged += new Phase(DeckTest_PlCombatStart);
-            progressBar1.Maximum = 5000;
+            //panelPlayerSide.Enabled = false;
+
+            PhaseName = "Player - Combat Start";
+            //PhaseChanged += new Phase(DeckTest_PlCombatStart);
             TimersStart();
         }
 
@@ -1291,13 +1304,13 @@ namespace MagicProgram
                     if (timer2.Enabled)
                     {
                         TimerStop();
-                        Text = "Deck Text (" + phaseName + ") Paused";
+                        Text = "Deck Text (" + PhaseName + ") Paused";
                         panelPlayerSide.Enabled = true;
                     }
                     else
                     {
                         TimersStart();
-                        Text = "Deck Text (" + phaseName + ") Running";
+                        Text = "Deck Text (" + PhaseName + ") Running";
                         panelPlayerSide.Enabled = false;
                     }
                     break;
@@ -1344,12 +1357,10 @@ namespace MagicProgram
         {
             PhaseChanged -= DeckTest_PlTurnStart;
             PhaseChanged += new Phase(DeckTest_PlMainOneStart);
+            PhaseName = "Player - Turn Start";
 
-            phaseName = "Player - Main Step 1 Start";
-
-            timer2.Interval = 5000;
-            progressBar1.Maximum = 5000;
-            //TimerStop();
+            timer2.Interval = 2000; //TODO is this necessary?
+            progressBar1.Maximum = 2000;
 
             turns++;
 
@@ -1373,122 +1384,133 @@ namespace MagicProgram
         {
             PhaseChanged -= (DeckTest_PlMainOneStart);
             PhaseChanged += new Phase(DeckTest_PlMainOneEnd);
+            PhaseName = "Player - Main Step 1 Start";
+
+            progressBar1.Maximum = 5000;
 
             if (CheckValidCards())
             {
                 TimerStop();
             }
-
-            phaseName = "Player - Main Step 1 End";
         }
 
         void DeckTest_PlMainOneEnd()
         {
             PhaseChanged -= DeckTest_PlMainOneEnd;
             PhaseChanged += new Phase(DeckTest_PlCombatStart);
+            PhaseName = "Player - Main Step 1 End";
 
-            phaseName = "Player - Combat Start";
+            TimersStart();
+            callPhaseChanged();
         }
 
         void DeckTest_PlCombatStart()
         {
             PhaseChanged -= DeckTest_PlCombatStart;
             PhaseChanged += new Phase(DeckTest_PlCombatEnd);
+            PhaseName = "Player - Combat Start";
+
             cardAreaPlay.SetCombat(true);
 
-            if (PlArea._play.cards.Count > 0)   //replace with method that checks for valid attacking creatures
+            if (PlArea._play.cards.Count(o => o.Sick == false && o.Tapped == false) > 0)   //replace with method that checks for valid attacking creatures
             {
                 TimerStop();
             }
-
-            phaseName = "Player - Combat End";
         }
 
         void DeckTest_PlCombatEnd()
         {
             PhaseChanged -= DeckTest_PlCombatEnd;
             PhaseChanged += new Phase(DeckTest_PlMainTwoStart);
-            cardAreaPlay.SetCombat(false);
+            PhaseName = "Player - Combat End";
 
-            phaseName = "Player - Main Step 2 Start";
+            cardAreaPlay.SetCombat(false);
         }
 
         void DeckTest_PlMainTwoStart()
         {
             PhaseChanged -= DeckTest_PlMainTwoStart;
             PhaseChanged += new Phase(DeckTest_PlMainTwoEnd);
-
-            phaseName = "Player - Main Step 2 End";
+            PhaseName = "Player - Main Step 2 Start";
         }
 
         void DeckTest_PlMainTwoEnd()
         {
             PhaseChanged -= DeckTest_PlMainTwoEnd;
             PhaseChanged += new Phase(DeckTest_PlEndStep);
+            PhaseName = "Player - Main Step 2 End";
 
-            phaseName = "Player - End Step";
+            TimersStart();
+            callPhaseChanged();
         }
 
         void DeckTest_PlEndStep()
         {
             PhaseChanged -= DeckTest_PlEndStep;
             PhaseChanged += new Phase(DeckTest_OppStart);
+            PhaseName = "Player - End Step";
 
             PlArea.EndStep();
 
+            PlArea.mana.Clear();
+            OppArea.mana.Clear();
+
             timer2.Interval = 1000;
             progressBar1.Maximum = 1000;
-            phaseName = "Foe - Turn Start";
         }
 
         void DeckTest_OppStart()
         {
-            OppArea.Upkeep();
             PhaseChanged -= DeckTest_OppStart;
             PhaseChanged += new Phase(DeckTest_OppUpkeepEnd);
-            phaseName = "Foe - Upkeep Start";
+            PhaseName = "Foe - Turn Start";
 
+            OppArea.Upkeep();
             OppArea.drawCards(1);
         }
 
         void DeckTest_OppUpkeepEnd()
         {
-            OppPlayHand();
-
             PhaseChanged -= DeckTest_OppUpkeepEnd;
             PhaseChanged += new Phase(DeckTest_OppMainPreEnd);
-            phaseName = "Foe - Main Step 1 Start";
+            PhaseName = "Foe - Upkeep Start";
+
+            OppPlayHand();
         }
 
         void DeckTest_OppMainPreEnd()
         {
             PhaseChanged -= DeckTest_OppMainPreEnd;
             PhaseChanged += new Phase(DeckTest_OppCombEnd);
-            phaseName = "Foe - Combat Start";
+            PhaseName = "Foe - Main Step 1 Start";
         }
 
         void DeckTest_OppCombEnd()
         {
             PhaseChanged -= DeckTest_OppCombEnd;
             PhaseChanged += new Phase(DeckTest_OppMainPostEnd);
-            phaseName = "Foe - Main Step 2 Start";
+            PhaseName = "Foe - Combat Start";
+
+            //Pause for combat
+
+            TimerStop();
         }
 
         void DeckTest_OppMainPostEnd()
         {
             PhaseChanged -= DeckTest_OppMainPostEnd;
             PhaseChanged += new Phase(DeckTest_OppTurnEnd);
-            phaseName = "Foe - End Step";
+            PhaseName = "Foe - Main Step 2 Start";
         }
 
         void DeckTest_OppTurnEnd()
         {
-            PlArea.mana.Clear();
-            OppArea.mana.Clear();
-
             PhaseChanged -= DeckTest_OppTurnEnd;
             PhaseChanged += new Phase(DeckTest_PlTurnStart);
-            phaseName = "Player - Turn Start";
+            PhaseName = "Foe - End Step";
+
+            PlArea.mana.Clear();
+            OppArea.mana.Clear();
 
         }
         # endregion
