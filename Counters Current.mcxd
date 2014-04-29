@@ -174,6 +174,36 @@ Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters o
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Counterspell</Name>
+    <Edition>5E</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>UU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Counter target spell.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Bioshift</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>Gld</Color>
+    <Cost>%S</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Move any number of +1/+1 counters from target creature onto another target creature with the same controller.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Renegade Krasis</Name>
     <Edition>DGM</Edition>
     <Rarity>R</Rarity>
@@ -202,7 +232,7 @@ When Verdant Haven enters the battlefield, you gain 2 life.;
 Whenever enchanted land is tapped for mana, its controller adds one mana of any color to his or her mana pool #(in addition to the mana the land produces)#.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>2</quantity>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>

@@ -313,6 +313,7 @@ namespace MagicProgram
         public event Ability Evolving;
         public event Ability Activate;
         public event Ability Activating;
+		public event Ability OnAttack;
         public event Action CountersChanged;
         public event Phase Upkeep;
         public event Phase EndPhase;
@@ -362,6 +363,15 @@ namespace MagicProgram
             }
         }
 
+		public void callOnAttack()
+		{
+			Ability handler = OnAttack;
+			if ( handler != null)
+			{
+				handler(this);
+			}
+		}
+		
         public void callTapChanged()
         {
             CardUse handler = TapChanged;
@@ -665,6 +675,11 @@ namespace MagicProgram
             }
         }
 
+		public virtual void Attack()
+		{
+			callOnAttack();
+		}
+		
         /// <summary>
         /// Returns a List<string> of all the enchancements that the card provides when attached
         /// </summary>

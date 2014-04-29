@@ -2281,6 +2281,22 @@ namespace MagicProgram
             return result;
         }
 
+		public void ProcAttack()
+		{
+			foreach ( magiccard mc in _play.cards)
+			{
+				
+				if ( mc.Attacking)
+				{
+					if ( mc.Name == "Predator Ooze")
+					{
+						mc.counters++;
+					}
+					mc.Attack();
+				}
+			}
+		}
+		
         public void Upkeep()
         {
             foreach (MagicCard mc in _play.cards)
