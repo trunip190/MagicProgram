@@ -56,7 +56,6 @@
             this.drawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.turnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.t1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -89,16 +88,11 @@
             this.listViewPlay = new System.Windows.Forms.ListView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cardAreaHand = new MagicProgram.CardArea();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboOppHand = new System.Windows.Forms.ComboBox();
             this.textTurn = new System.Windows.Forms.TextBox();
-            this.comboOppGrave = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.numPlaHP = new System.Windows.Forms.NumericUpDown();
             this.numOppHP = new System.Windows.Forms.NumericUpDown();
-            this.comboGrave = new System.Windows.Forms.ComboBox();
-            this.comboDeck = new System.Windows.Forms.ComboBox();
             this.panelOppPlay = new System.Windows.Forms.Panel();
             this.panelOppEnch = new System.Windows.Forms.Panel();
             this.cPanelOppPlay = new MagicProgram.CollapsiblePanel();
@@ -129,7 +123,6 @@
             this.cPanelArtEnch.WorkingArea.SuspendLayout();
             this.cPanelArtEnch.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).BeginInit();
@@ -320,16 +313,6 @@
             this.t1.Interval = 300;
             this.t1.Tick += new System.EventHandler(this.t1_Tick);
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(798, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "0_ / 0R / 0G / 0U / 0W / 0B";
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -341,7 +324,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(410, 1);
+            this.progressBar1.Location = new System.Drawing.Point(251, 0);
             this.progressBar1.Maximum = 5000;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(100, 23);
@@ -548,7 +531,7 @@
             this.cPanelAll.Location = new System.Drawing.Point(0, 24);
             this.cPanelAll.MinimumSize = new System.Drawing.Size(23, 23);
             this.cPanelAll.Name = "cPanelAll";
-            this.cPanelAll.Size = new System.Drawing.Size(956, 734);
+            this.cPanelAll.Size = new System.Drawing.Size(956, 715);
             this.cPanelAll.TabIndex = 0;
             // 
             // cPanelAll.Working Area
@@ -559,19 +542,18 @@
             this.cPanelAll.WorkingArea.Location = new System.Drawing.Point(0, 0);
             this.cPanelAll.WorkingArea.Margin = new System.Windows.Forms.Padding(0);
             this.cPanelAll.WorkingArea.Name = "Working Area";
-            this.cPanelAll.WorkingArea.Size = new System.Drawing.Size(954, 732);
+            this.cPanelAll.WorkingArea.Size = new System.Drawing.Size(954, 713);
             this.cPanelAll.WorkingArea.TabIndex = 4;
             // 
             // panelAll
             // 
             this.panelAll.BackColor = System.Drawing.Color.Transparent;
             this.panelAll.Controls.Add(this.panelPlayerSide);
-            this.panelAll.Controls.Add(this.panel2);
             this.panelAll.Controls.Add(this.panelOppPlay);
             this.panelAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAll.Location = new System.Drawing.Point(0, 0);
             this.panelAll.Name = "panelAll";
-            this.panelAll.Size = new System.Drawing.Size(952, 730);
+            this.panelAll.Size = new System.Drawing.Size(952, 711);
             this.panelAll.TabIndex = 15;
             // 
             // panelPlayerSide
@@ -579,9 +561,9 @@
             this.panelPlayerSide.Controls.Add(this.panelPlayViewLand);
             this.panelPlayerSide.Controls.Add(this.panel3);
             this.panelPlayerSide.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPlayerSide.Location = new System.Drawing.Point(0, 300);
+            this.panelPlayerSide.Location = new System.Drawing.Point(0, 277);
             this.panelPlayerSide.Name = "panelPlayerSide";
-            this.panelPlayerSide.Size = new System.Drawing.Size(952, 430);
+            this.panelPlayerSide.Size = new System.Drawing.Size(952, 434);
             this.panelPlayerSide.TabIndex = 18;
             // 
             // panelPlayViewLand
@@ -590,7 +572,7 @@
             this.panelPlayViewLand.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPlayViewLand.Location = new System.Drawing.Point(0, 0);
             this.panelPlayViewLand.Name = "panelPlayViewLand";
-            this.panelPlayViewLand.Size = new System.Drawing.Size(952, 282);
+            this.panelPlayViewLand.Size = new System.Drawing.Size(952, 286);
             this.panelPlayViewLand.TabIndex = 15;
             // 
             // panelPlCreaLand
@@ -601,7 +583,7 @@
             this.panelPlCreaLand.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPlCreaLand.Location = new System.Drawing.Point(0, 0);
             this.panelPlCreaLand.Name = "panelPlCreaLand";
-            this.panelPlCreaLand.Size = new System.Drawing.Size(952, 282);
+            this.panelPlCreaLand.Size = new System.Drawing.Size(952, 286);
             this.panelPlCreaLand.TabIndex = 4;
             // 
             // cardAreaPlay
@@ -619,7 +601,7 @@
             this.cardAreaPlay.Margin = new System.Windows.Forms.Padding(0);
             this.cardAreaPlay.Name = "cardAreaPlay";
             this.cardAreaPlay.SingleChoice = false;
-            this.cardAreaPlay.Size = new System.Drawing.Size(952, 169);
+            this.cardAreaPlay.Size = new System.Drawing.Size(952, 173);
             this.cardAreaPlay.TabIndex = 19;
             this.cardAreaPlay.Tappable = false;
             this.cardAreaPlay.TextSpoiler = true;
@@ -632,7 +614,7 @@
             this.panelLandArtEnch.Controls.Add(this.cardAreaLand);
             this.panelLandArtEnch.Controls.Add(this.cPanelArtEnch);
             this.panelLandArtEnch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelLandArtEnch.Location = new System.Drawing.Point(0, 169);
+            this.panelLandArtEnch.Location = new System.Drawing.Point(0, 173);
             this.panelLandArtEnch.Margin = new System.Windows.Forms.Padding(0);
             this.panelLandArtEnch.Name = "panelLandArtEnch";
             this.panelLandArtEnch.Size = new System.Drawing.Size(952, 113);
@@ -733,7 +715,7 @@
             // 
             this.panel3.Controls.Add(this.cardAreaHand);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 282);
+            this.panel3.Location = new System.Drawing.Point(0, 286);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(952, 148);
             this.panel3.TabIndex = 16;
@@ -761,64 +743,30 @@
             this.cardAreaHand.CardDoubleClicked += new MagicProgram.CardArea.CardChosen(this.cardAreaHand_CardDoubleClicked);
             this.cardAreaHand.ChoseCard += new MagicProgram.CardUse(this.cardAreaHand_ChoseCard);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.comboOppHand);
-            this.panel2.Controls.Add(this.textTurn);
-            this.panel2.Controls.Add(this.comboOppGrave);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.comboGrave);
-            this.panel2.Controls.Add(this.comboDeck);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 277);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(952, 23);
-            this.panel2.TabIndex = 8;
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(549, 5);
+            this.label2.Location = new System.Drawing.Point(806, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 13);
             this.label2.TabIndex = 17;
             this.label2.Text = "0_ / 0R / 0G / 0U / 0W / 0B";
             // 
-            // comboOppHand
-            // 
-            this.comboOppHand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboOppHand.FormattingEnabled = true;
-            this.comboOppHand.Location = new System.Drawing.Point(701, 1);
-            this.comboOppHand.Name = "comboOppHand";
-            this.comboOppHand.Size = new System.Drawing.Size(121, 21);
-            this.comboOppHand.TabIndex = 11;
-            // 
             // textTurn
             // 
-            this.textTurn.Location = new System.Drawing.Point(457, 2);
+            this.textTurn.Location = new System.Drawing.Point(450, 2);
             this.textTurn.Name = "textTurn";
             this.textTurn.ReadOnly = true;
             this.textTurn.Size = new System.Drawing.Size(51, 20);
             this.textTurn.TabIndex = 10;
             this.textTurn.Text = "Turn 1";
             // 
-            // comboOppGrave
-            // 
-            this.comboOppGrave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboOppGrave.FormattingEnabled = true;
-            this.comboOppGrave.Location = new System.Drawing.Point(828, 1);
-            this.comboOppGrave.Name = "comboOppGrave";
-            this.comboOppGrave.Size = new System.Drawing.Size(121, 21);
-            this.comboOppGrave.TabIndex = 9;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.numPlaHP);
             this.panel4.Controls.Add(this.numOppHP);
-            this.panel4.Location = new System.Drawing.Point(364, 0);
+            this.panel4.Location = new System.Drawing.Point(357, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(86, 23);
             this.panel4.TabIndex = 8;
@@ -852,24 +800,6 @@
             this.numOppHP.Size = new System.Drawing.Size(40, 20);
             this.numOppHP.TabIndex = 4;
             this.numOppHP.ValueChanged += new System.EventHandler(this.numFoeHP_ValueChanged);
-            // 
-            // comboGrave
-            // 
-            this.comboGrave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboGrave.FormattingEnabled = true;
-            this.comboGrave.Location = new System.Drawing.Point(184, 2);
-            this.comboGrave.Name = "comboGrave";
-            this.comboGrave.Size = new System.Drawing.Size(121, 21);
-            this.comboGrave.TabIndex = 6;
-            // 
-            // comboDeck
-            // 
-            this.comboDeck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboDeck.FormattingEnabled = true;
-            this.comboDeck.Location = new System.Drawing.Point(57, 2);
-            this.comboDeck.Name = "comboDeck";
-            this.comboDeck.Size = new System.Drawing.Size(121, 21);
-            this.comboDeck.TabIndex = 5;
             // 
             // panelOppPlay
             // 
@@ -1018,11 +948,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 758);
+            this.ClientSize = new System.Drawing.Size(956, 739);
             this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cPanelControls);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textTurn);
             this.Controls.Add(this.cPanelAll);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(685, 570);
@@ -1053,8 +985,6 @@
             this.cPanelArtEnch.WorkingArea.ResumeLayout(false);
             this.cPanelArtEnch.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).EndInit();
@@ -1095,7 +1025,6 @@
         private System.Windows.Forms.ListView listViewArtEnch;
         private System.Windows.Forms.NumericUpDown numOppHP;
         private System.Windows.Forms.Timer t1;
-        private System.Windows.Forms.ComboBox comboDeck;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem changeStyleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem largeImageToolStripMenuItem;
@@ -1106,8 +1035,6 @@
         private System.Windows.Forms.Panel panelPlCreaLand;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ComboBox comboGrave;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelOppPlay;
         private System.Windows.Forms.ListView listViewOppCrea;
         private System.Windows.Forms.ListView listViewOppLand;
@@ -1118,13 +1045,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.NumericUpDown numPlaHP;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboOppGrave;
         private System.Windows.Forms.TextBox textTurn;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.ComboBox comboOppHand;
         private CardArea cardAreaLand;
         private System.Windows.Forms.Label label2;
         public CollapsiblePanel cPanelArtEnch;

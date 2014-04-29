@@ -33,12 +33,12 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.buttonDiscard = new System.Windows.Forms.Button();
             this.buttonActivate = new System.Windows.Forms.Button();
-            this.buttonTap = new System.Windows.Forms.Button();
             this.buttonChoose = new System.Windows.Forms.Button();
+            this.buttonAttack = new System.Windows.Forms.Button();
+            this.buttonTap = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.buttonAttack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,19 +99,6 @@
             this.buttonActivate.UseVisualStyleBackColor = true;
             this.buttonActivate.Click += new System.EventHandler(this.buttonActivate_Click);
             // 
-            // buttonTap
-            // 
-            this.buttonTap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonTap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTap.Location = new System.Drawing.Point(0, 0);
-            this.buttonTap.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonTap.Name = "buttonTap";
-            this.buttonTap.Size = new System.Drawing.Size(212, 23);
-            this.buttonTap.TabIndex = 0;
-            this.buttonTap.Text = "Tap";
-            this.buttonTap.UseVisualStyleBackColor = true;
-            this.buttonTap.Click += new System.EventHandler(this.buttonTap_Click);
-            // 
             // buttonChoose
             // 
             this.buttonChoose.Dock = System.Windows.Forms.DockStyle.Top;
@@ -125,6 +112,33 @@
             this.buttonChoose.UseVisualStyleBackColor = true;
             this.buttonChoose.Click += new System.EventHandler(this.buttonChoose_Click);
             // 
+            // buttonAttack
+            // 
+            this.buttonAttack.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAttack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAttack.Location = new System.Drawing.Point(0, 23);
+            this.buttonAttack.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonAttack.Name = "buttonAttack";
+            this.buttonAttack.Size = new System.Drawing.Size(212, 23);
+            this.buttonAttack.TabIndex = 10;
+            this.buttonAttack.Text = "Attack";
+            this.buttonAttack.UseVisualStyleBackColor = true;
+            this.buttonAttack.Visible = false;
+            this.buttonAttack.Click += new System.EventHandler(this.buttonAttack_Click);
+            // 
+            // buttonTap
+            // 
+            this.buttonTap.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonTap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTap.Location = new System.Drawing.Point(0, 0);
+            this.buttonTap.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonTap.Name = "buttonTap";
+            this.buttonTap.Size = new System.Drawing.Size(212, 23);
+            this.buttonTap.TabIndex = 0;
+            this.buttonTap.Text = "Tap";
+            this.buttonTap.UseVisualStyleBackColor = true;
+            this.buttonTap.Click += new System.EventHandler(this.buttonTap_Click);
+            // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -133,7 +147,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(212, 20);
             this.textBox1.TabIndex = 7;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // pictureBox1
             // 
@@ -157,20 +170,6 @@
             // 
             this.timer1.Interval = 400;
             this.timer1.Tick += new System.EventHandler(this.timer1_TickOn);
-            // 
-            // buttonAttack
-            // 
-            this.buttonAttack.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAttack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAttack.Location = new System.Drawing.Point(0, 23);
-            this.buttonAttack.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonAttack.Name = "buttonAttack";
-            this.buttonAttack.Size = new System.Drawing.Size(212, 23);
-            this.buttonAttack.TabIndex = 10;
-            this.buttonAttack.Text = "Attack";
-            this.buttonAttack.UseVisualStyleBackColor = true;
-            this.buttonAttack.Visible = false;
-            this.buttonAttack.Click += new System.EventHandler(this.buttonAttack_Click);
             // 
             // MagicCardViewer
             // 

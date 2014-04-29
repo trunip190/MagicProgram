@@ -25,6 +25,7 @@ namespace MagicProgram
         int turns = 0;
         int mulligans = 0;
         Random rand = new Random();
+        int games = 0;
 
         bool playerTurn = true;
 
@@ -163,7 +164,6 @@ namespace MagicProgram
         void OppArea_CardDrawn(MagicCard mc)
         {
             //updateImageLists();
-            comboOppHand.Items.Add(mc);
         }
 
         void PlArea_CardDrawn(MagicCard mc)
@@ -316,7 +316,6 @@ namespace MagicProgram
                 {
                     area.PlayCard(mc);
                 }
-                updateComboGraveyard();
             }
             # endregion
             # region artifacts and enchantments
@@ -782,11 +781,14 @@ namespace MagicProgram
             cardAreaHand.Paused = true;
             DrawCard(cards);
             cardAreaHand.Paused = false;
+
+            update_listViewHand();
         }
 
         private void ResetGame()
         {
             clearAll();
+            games++;
 
             PlArea.initialise();
 
@@ -810,8 +812,6 @@ namespace MagicProgram
 
             updateManaLabel();
             updateText();
-            updateComboDeck();
-            updateComboGraveyard();
 
             update_listViewArtEnch();
             update_listViewHand();
@@ -884,31 +884,8 @@ namespace MagicProgram
             update_listViewHand();
             update_listViewLand();
             update_listViewPlay();
-
-            updateComboDeck();
-            updateComboGraveyard();
         }
-
-        private void updateComboDeck()
-        {
-            comboDeck.Items.Clear();
-
-            foreach (MagicCard mc in PlArea._stack.cards)
-            {
-                comboDeck.Items.Add(mc.Name);
-            }
-        }
-
-        private void updateComboGraveyard()
-        {
-            comboGrave.Items.Clear();
-
-            foreach (MagicCard mc in PlArea._graveyard.cards)
-            {
-                comboGrave.Items.Add(mc.Name);
-            }
-        }
-
+        
         # region listviews
         //private void updateListViews()
         //{
@@ -960,13 +937,7 @@ namespace MagicProgram
             }
 
             listViewOppLand.OwnerDraw = false;
-
-            comboOppHand.Items.Clear();
-            foreach (MagicCard mc in OppArea._hand.cards)
-            {
-                comboOppHand.Items.Add(mc.Name);
-            }
-
+            
             listViewOppCrea.OwnerDraw = true;
             listViewOppCrea.Items.Clear();
             foreach (MagicCard mc in OppArea._play.cards)
@@ -980,13 +951,6 @@ namespace MagicProgram
 
         private void updateManaLabel()
         {
-            label1.Text = OppArea.mana.colourless.ToString() + "_ / ";
-            label1.Text += OppArea.mana.green.ToString() + "G / ";
-            label1.Text += OppArea.mana.red.ToString() + "R / ";
-            label1.Text += OppArea.mana.blue.ToString() + "U / ";
-            label1.Text += OppArea.mana.white.ToString() + "W / ";
-            label1.Text += OppArea.mana.black.ToString() + "K";
-
             label2.Text = PlArea.mana.colourless.ToString() + "_ / ";
             label2.Text += PlArea.mana.green.ToString() + "G / ";
             label2.Text += PlArea.mana.red.ToString() + "R / ";
@@ -1424,7 +1388,7 @@ namespace MagicProgram
             PhaseChanged += new Phase(DeckTest_PlMainTwoStart);
             PhaseName = "Player - Combat End";
 
-
+            PlArea.ProcAttack();
 
             cardAreaPlay.SetCombat(false);
         }
@@ -1523,6 +1487,8 @@ namespace MagicProgram
             PlArea.mana.Clear();
             OppArea.mana.Clear();
 
+            PlArea.EndStep();
+            OppArea.EndStep();
         }
         # endregion
 
@@ -1688,7 +1654,6 @@ namespace MagicProgram
         private void landAreaPlay_KeyUp(object sender, KeyEventArgs e)
         {
             update_listViewPlay();
-            updateComboGraveyard();
         }
 
         private void ViewCard(MagicCard mc)
@@ -1780,6 +1745,7 @@ namespace MagicProgram
         # endregion
 
         public int MaxHand = 7;
+        int shuffles = 0;
 
         public int seed = 0;
 
@@ -2281,22 +2247,22 @@ namespace MagicProgram
             return result;
         }
 
-		public void ProcAttack()
-		{
-			foreach ( magiccard mc in _play.cards)
-			{
-				
-				if ( mc.Attacking)
-				{
-					if ( mc.Name == "Predator Ooze")
-					{
-						mc.counters++;
-					}
-					mc.Attack();
-				}
-			}
-		}
-		
+        public void ProcAttack()
+        {
+            foreach (MagicCard mc in _play.cards)
+            {
+
+                if (mc.Attacking)
+                {
+                    if (mc.Name == "Predator Ooze")
+                    {
+                        mc.counters++;
+                    }
+                    mc.Attack();
+                }
+            }
+        }
+
         public void Upkeep()
         {
             foreach (MagicCard mc in _play.cards)
@@ -2333,7 +2299,7 @@ namespace MagicProgram
             if (standard)
             {
                 # region randomise
-                int s = seed + DateTime.Now.Second;
+                int s = seed + DateTime.Now.Second + shuffles;
                 Random rng = new Random(s);
 
                 while (source.Count > 0)
@@ -2381,6 +2347,7 @@ namespace MagicProgram
                 # endregion
             }
 
+            shuffles++;
             return result;
         }
     }

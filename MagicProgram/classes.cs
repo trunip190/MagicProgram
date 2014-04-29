@@ -247,6 +247,9 @@ namespace MagicProgram
         public int Xvalue = 0;
 
         [XmlIgnore]
+        public bool Attacking = false;
+
+        [XmlIgnore]
         public int CMC
         {
             get
@@ -626,6 +629,7 @@ namespace MagicProgram
             if (Name == "Protean Hydra")
             {
                 counters += countersTurn * 2;
+                countersTurn = 0;
             }
         }
 

@@ -207,21 +207,6 @@ Whenever enchanted land is tapped for mana, its controller adds one mana of any 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Hindervines</Name>
-    <Edition>GTC</Edition>
-    <Rarity>U</Rarity>
-    <Color>G</Color>
-    <Cost>2G</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Prevent all combat damage that would be dealt this turn by creatures with no +1/+1 counters on them.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Predator Ooze</Name>
     <Edition>DKA</Edition>
     <Rarity>R</Rarity>
@@ -375,6 +360,21 @@ Each creature you control with a +1/+1 counter on it has flying.</Text>
 Remove all +1/+1 counters from target creature you control. Draw that many cards.;
 //;
 Fuse #(You may cast one or both halves of this card from your hand.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Counterspell</Name>
+    <Edition>5E</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>UU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Counter target spell.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>1</quantity>

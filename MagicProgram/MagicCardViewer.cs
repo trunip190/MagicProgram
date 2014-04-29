@@ -530,6 +530,7 @@ namespace MagicProgram
         private void buttonAttack_Click(object sender, EventArgs e)
         {
             cards[0].ChangeTap();
+            cards[0].Attacking = cards[0].Tapped;
         }
         # endregion
 
