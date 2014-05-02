@@ -109,6 +109,8 @@ namespace MagicProgram
                 }
             }
 
+            Deck.Filename = filename;
+
             using (Stream stream = File.Create(filename))
             {
                 XmlSerializer serial = new XmlSerializer(typeof(CardCollection));
@@ -126,6 +128,8 @@ namespace MagicProgram
             {
                 return;
             }
+
+            Deck.Filename = sfd.FileName;
 
             using (Stream stream = File.Create(sfd.FileName))
             {

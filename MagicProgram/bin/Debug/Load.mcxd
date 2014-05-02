@@ -91,7 +91,7 @@ When Rancor is put into a graveyard from the battlefield, return Rancor to its o
 Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>2</quantity>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
@@ -174,6 +174,21 @@ Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters o
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Counterspell</Name>
+    <Edition>5E</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>UU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Counter target spell.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Renegade Krasis</Name>
     <Edition>DGM</Edition>
     <Rarity>R</Rarity>
@@ -203,21 +218,6 @@ Whenever enchanted land is tapped for mana, its controller adds one mana of any 
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Hindervines</Name>
-    <Edition>GTC</Edition>
-    <Rarity>U</Rarity>
-    <Color>G</Color>
-    <Cost>2G</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Prevent all combat damage that would be dealt this turn by creatures with no +1/+1 counters on them.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
@@ -378,6 +378,21 @@ Fuse #(You may cast one or both halves of this card from your hand.)#</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>1</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Bond Beetle</Name>
+    <Edition>M13</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>0/1</PT>
+    <Type>Creature - Insect</Type>
+    <Text>When Bond Beetle enters the battlefield, put a +1/+1 counter on target creature.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>

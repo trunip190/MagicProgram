@@ -88,11 +88,6 @@
             this.listViewPlay = new System.Windows.Forms.ListView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cardAreaHand = new MagicProgram.CardArea();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textTurn = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.numPlaHP = new System.Windows.Forms.NumericUpDown();
-            this.numOppHP = new System.Windows.Forms.NumericUpDown();
             this.panelOppPlay = new System.Windows.Forms.Panel();
             this.panelOppEnch = new System.Windows.Forms.Panel();
             this.cPanelOppPlay = new MagicProgram.CollapsiblePanel();
@@ -104,6 +99,11 @@
             this.listViewOppEnch = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label2 = new System.Windows.Forms.Label();
+            this.textTurn = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.numPlaHP = new System.Windows.Forms.NumericUpDown();
+            this.numOppHP = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.cPanelControls.WorkingArea.SuspendLayout();
@@ -123,15 +123,15 @@
             this.cPanelArtEnch.WorkingArea.SuspendLayout();
             this.cPanelArtEnch.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).BeginInit();
             this.panelOppPlay.SuspendLayout();
             this.panelOppEnch.SuspendLayout();
             this.cPanelOppPlay.WorkingArea.SuspendLayout();
             this.cPanelOppPlay.SuspendLayout();
             this.cPanelOppLand.WorkingArea.SuspendLayout();
             this.cPanelOppLand.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).BeginInit();
             this.SuspendLayout();
             // 
             // imageListHand
@@ -743,64 +743,6 @@
             this.cardAreaHand.CardDoubleClicked += new MagicProgram.CardArea.CardChosen(this.cardAreaHand_CardDoubleClicked);
             this.cardAreaHand.ChoseCard += new MagicProgram.CardUse(this.cardAreaHand_ChoseCard);
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(806, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "0_ / 0R / 0G / 0U / 0W / 0B";
-            // 
-            // textTurn
-            // 
-            this.textTurn.Location = new System.Drawing.Point(450, 2);
-            this.textTurn.Name = "textTurn";
-            this.textTurn.ReadOnly = true;
-            this.textTurn.Size = new System.Drawing.Size(51, 20);
-            this.textTurn.TabIndex = 10;
-            this.textTurn.Text = "Turn 1";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.numPlaHP);
-            this.panel4.Controls.Add(this.numOppHP);
-            this.panel4.Location = new System.Drawing.Point(357, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(86, 23);
-            this.panel4.TabIndex = 8;
-            // 
-            // numPlaHP
-            // 
-            this.numPlaHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.numPlaHP.Location = new System.Drawing.Point(2, 2);
-            this.numPlaHP.Margin = new System.Windows.Forms.Padding(2);
-            this.numPlaHP.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numPlaHP.Name = "numPlaHP";
-            this.numPlaHP.Size = new System.Drawing.Size(40, 20);
-            this.numPlaHP.TabIndex = 7;
-            this.numPlaHP.ValueChanged += new System.EventHandler(this.numPlaHP_ValueChanged);
-            // 
-            // numOppHP
-            // 
-            this.numOppHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.numOppHP.Location = new System.Drawing.Point(44, 2);
-            this.numOppHP.Margin = new System.Windows.Forms.Padding(2);
-            this.numOppHP.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numOppHP.Name = "numOppHP";
-            this.numOppHP.Size = new System.Drawing.Size(40, 20);
-            this.numOppHP.TabIndex = 4;
-            this.numOppHP.ValueChanged += new System.EventHandler(this.numFoeHP_ValueChanged);
-            // 
             // panelOppPlay
             // 
             this.panelOppPlay.AutoSize = true;
@@ -944,6 +886,64 @@
             // 
             this.columnHeader8.Text = "Quantity";
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(806, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "0_ / 0R / 0G / 0U / 0W / 0B";
+            // 
+            // textTurn
+            // 
+            this.textTurn.Location = new System.Drawing.Point(450, 2);
+            this.textTurn.Name = "textTurn";
+            this.textTurn.ReadOnly = true;
+            this.textTurn.Size = new System.Drawing.Size(51, 20);
+            this.textTurn.TabIndex = 10;
+            this.textTurn.Text = "Turn 1";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.numPlaHP);
+            this.panel4.Controls.Add(this.numOppHP);
+            this.panel4.Location = new System.Drawing.Point(357, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(86, 23);
+            this.panel4.TabIndex = 8;
+            // 
+            // numPlaHP
+            // 
+            this.numPlaHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.numPlaHP.Location = new System.Drawing.Point(2, 2);
+            this.numPlaHP.Margin = new System.Windows.Forms.Padding(2);
+            this.numPlaHP.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numPlaHP.Name = "numPlaHP";
+            this.numPlaHP.Size = new System.Drawing.Size(40, 20);
+            this.numPlaHP.TabIndex = 7;
+            this.numPlaHP.ValueChanged += new System.EventHandler(this.numPlaHP_ValueChanged);
+            // 
+            // numOppHP
+            // 
+            this.numOppHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.numOppHP.Location = new System.Drawing.Point(44, 2);
+            this.numOppHP.Margin = new System.Windows.Forms.Padding(2);
+            this.numOppHP.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numOppHP.Name = "numOppHP";
+            this.numOppHP.Size = new System.Drawing.Size(40, 20);
+            this.numOppHP.TabIndex = 4;
+            this.numOppHP.ValueChanged += new System.EventHandler(this.numFoeHP_ValueChanged);
+            // 
             // DeckTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -985,9 +985,6 @@
             this.cPanelArtEnch.WorkingArea.ResumeLayout(false);
             this.cPanelArtEnch.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).EndInit();
             this.panelOppPlay.ResumeLayout(false);
             this.panelOppPlay.PerformLayout();
             this.panelOppEnch.ResumeLayout(false);
@@ -995,6 +992,9 @@
             this.cPanelOppPlay.ResumeLayout(false);
             this.cPanelOppLand.WorkingArea.ResumeLayout(false);
             this.cPanelOppLand.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

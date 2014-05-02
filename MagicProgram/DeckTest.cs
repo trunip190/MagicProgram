@@ -27,6 +27,8 @@ namespace MagicProgram
         Random rand = new Random();
         int games = 0;
 
+        int targets = 0;
+
         bool playerTurn = true;
 
         # region cards/controls held in temp
@@ -289,6 +291,11 @@ namespace MagicProgram
                         comboCardPicker_Fill(cards);
                         CardChosen += new CardUse(CardChosen_NaturesLore);
                         break;
+
+                    case "Triton Tactics":
+                        targets += 2;
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(CardChosen_TritonTactics);
+                        break;
                 }
 
                 if (mc.Text.Contains("Cipher"))
@@ -369,7 +376,7 @@ namespace MagicProgram
                             if (dr == DialogResult.Yes)
                             {
                                 tempCard = mc;
-                                cardAreaHand.CardClicked += new CardArea.CardChosen(cardAreaHand_CardClickedCipher);
+                                cardAreaHand.CardClicked += new CardArea.CardChosen(cardAreaHand_CardClickedEliteArcanist);
                             }
                         }
                         break;
@@ -400,23 +407,6 @@ namespace MagicProgram
             return true;
         }
 
-        void Activate_OozeFlux(MagicCard mc)
-        {
-            int c = 0;  //number of counters on creatures
-            foreach (MagicCard mcs in PlArea._play.cards)
-            {
-                if (mcs.counters > 0)
-                {
-                    c += mcs.counters;
-                }
-            }
-
-            cPanelControls.Hide();
-
-            cardAreaPlay.PickCounters();
-            cardAreaPlay.CountersPicked += new CardArea.CountersChosen(cardAreaPlay_CountersPicked);
-        }
-
         void cardAreaPlay_CountersPicked(int value, Dictionary<MagicCard, int> sources)
         {
             MagicCard mc = new MagicCard
@@ -438,18 +428,6 @@ namespace MagicProgram
             cardAreaPlay.DrawAllCards();
 
             cardAreaPlay.CountersPicked -= cardAreaPlay_CountersPicked;
-        }
-
-        void CardClick_BondBeetle(MagicCard mc, MouseEventArgs e)
-        {
-            mc.counters++;
-            cardAreaPlay.CardClicked -= CardClick_BondBeetle;
-        }
-
-        void CardChosen_NaturesLore(MagicCard mc)
-        {
-            useCard(mc);
-            CardChosen -= CardChosen_NaturesLore;
         }
 
         public void PrePlay(MagicCard mc)
@@ -523,73 +501,6 @@ namespace MagicProgram
             }
         }
 
-        # region card events
-        void mc_TapVerdantHaven(MagicCard mc)
-        {
-            if (!mc.Tapped) { return; }
-
-            ColourCost c = new ColourCost
-            {
-                blue = 1,
-                black = 1,
-                red = 1,
-                green = 1,
-                white = 1,
-                grey = 1
-            };
-
-            PlArea.mw.ShowWheel(c);
-        }
-
-        void mc_ActivateCard(MagicCard mc)
-        {
-            switch (mc.Name)
-            {
-                case "Voyaging Satyr":
-                    cardAreaLand.CardClicked += new CardArea.CardChosen(VoyagingSatyrLand);
-                    break;
-
-                case "Vorel of the Hull Clade":
-                    cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_VorelHullClade);
-                    break;
-            }
-        }
-
-        void CardClicked_VorelHullClade(MagicCard mc, EventArgs e)
-        {
-            cardAreaPlay.CardClicked -= CardClicked_VorelHullClade;
-            mc.counters *= 2;
-            //update_listViewPlay();
-        }
-
-        void VoyagingSatyrLand(MagicCard mc, MouseEventArgs e)
-        {
-            if (!mc.Tapped)
-            {
-                return;
-            }
-            else
-            {
-                cardAreaLand.CardClicked -= VoyagingSatyrLand;
-
-                mc.Tap(false, false);
-            }
-        }
-
-        void CardEvent_Populate(MagicCard mc, MouseEventArgs e)
-        {
-            if (!mc.Token)
-            {
-                return;
-            }
-            else
-            {
-                MagicCard mct = new MagicCard(mc);
-                PlArea.PlayCard(mct);
-            }
-        }
-        # endregion
-
         # region choose where to add card
         void listViewArtEnch_MouseClick(object sender, MouseEventArgs e)
         {
@@ -608,14 +519,35 @@ namespace MagicProgram
             cardAreaPlay.CardClicked -= cardAreaPlay_CardClicked;
         }
 
+        void cardAreaHand_CardClickedEliteArcanist(MagicCard mc, MouseEventArgs e)
+        {
+            mc.Activate += new MagicCard.Ability(mc_ActivateEliteArcanist);
+
+            tempCard.attachedCards.Add(mc);
+            cardAreaHand.RemoveCard(mc);
+
+            tempCard.checkPT();
+            tempCard = null;
+            cardAreaHand.CardClicked -= cardAreaHand_CardClickedEliteArcanist;
+        }
+
         void cardAreaHand_CardClickedCipher(MagicCard mc, MouseEventArgs e)
         {
             tempCard.attachedCards.Add(mc);
             tempCard.checkPT();
             tempCard = null;
+
             PlArea._hand.Remove(mc);
             cardAreaHand.RemoveCard(mc);
             cardAreaHand.CardClicked -= cardAreaHand_CardClickedCipher;
+
+            mc.Activate += new MagicCard.Ability(mc_ActivateEliteArcanist);
+
+        }
+
+        void mc_ActivateEliteArcanist(MagicCard mc)
+        {
+            PrePlay(mc);
         }
 
         void cardArea1_CardClicked1(MagicCard mc, MouseEventArgs e)
@@ -885,7 +817,7 @@ namespace MagicProgram
             update_listViewLand();
             update_listViewPlay();
         }
-        
+
         # region listviews
         //private void updateListViews()
         //{
@@ -937,7 +869,7 @@ namespace MagicProgram
             }
 
             listViewOppLand.OwnerDraw = false;
-            
+
             listViewOppCrea.OwnerDraw = true;
             listViewOppCrea.Items.Clear();
             foreach (MagicCard mc in OppArea._play.cards)
@@ -1314,6 +1246,118 @@ namespace MagicProgram
             PlArea.HP = (int)numPlaHP.Value;
         }
         # endregion
+        # endregion
+
+        # region card events
+        void mc_TapVerdantHaven(MagicCard mc)
+        {
+            if (!mc.Tapped) { return; }
+
+            ColourCost c = new ColourCost
+            {
+                blue = 1,
+                black = 1,
+                red = 1,
+                green = 1,
+                white = 1,
+                grey = 1
+            };
+
+            PlArea.mw.ShowWheel(c);
+        }
+
+        void mc_ActivateCard(MagicCard mc)
+        {
+            switch (mc.Name)
+            {
+                case "Voyaging Satyr":
+                    cardAreaLand.CardClicked += new CardArea.CardChosen(VoyagingSatyrLand);
+                    break;
+
+                case "Vorel of the Hull Clade":
+                    cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_VorelHullClade);
+                    break;
+            }
+        }
+
+        void CardClicked_VorelHullClade(MagicCard mc, EventArgs e)
+        {
+            cardAreaPlay.CardClicked -= CardClicked_VorelHullClade;
+            mc.counters *= 2;
+            //update_listViewPlay();
+        }
+
+        void VoyagingSatyrLand(MagicCard mc, MouseEventArgs e)
+        {
+            if (!mc.Tapped)
+            {
+                return;
+            }
+            else
+            {
+                cardAreaLand.CardClicked -= VoyagingSatyrLand;
+
+                mc.Tap(false, false);
+            }
+        }
+
+        void CardEvent_Populate(MagicCard mc, MouseEventArgs e)
+        {
+            if (!mc.Token)
+            {
+                return;
+            }
+            else
+            {
+                MagicCard mct = new MagicCard(mc);
+                PlArea.PlayCard(mct);
+            }
+        }
+
+        void CardChosen_TritonTactics(MagicCard mc, EventArgs e)
+        {
+            if (PlArea._play.cards.Contains(mc))
+            {
+                mc.Tap(false, false);
+                mc.TBonus += 3;
+                mc.checkPT();
+            }
+
+            targets--;
+            if (targets < 1)
+            {
+                cardAreaPlay.CardClicked -= CardChosen_TritonTactics;
+            }
+        }
+
+        void Activate_OozeFlux(MagicCard mc)
+        {
+            int c = 0;  //number of counters on creatures
+            foreach (MagicCard mcs in PlArea._play.cards)
+            {
+                if (mcs.counters > 0)
+                {
+                    c += mcs.counters;
+                }
+            }
+
+            cPanelControls.Hide();
+
+            cardAreaPlay.PickCounters();
+            cardAreaPlay.CountersPicked += new CardArea.CountersChosen(cardAreaPlay_CountersPicked);
+        }
+
+        void CardClick_BondBeetle(MagicCard mc, MouseEventArgs e)
+        {
+            mc.counters++;
+            cardAreaPlay.CardClicked -= CardClick_BondBeetle;
+        }
+
+        void CardChosen_NaturesLore(MagicCard mc)
+        {
+            useCard(mc);
+            CardChosen -= CardChosen_NaturesLore;
+        }
         # endregion
 
         # region phase order
@@ -1881,6 +1925,10 @@ namespace MagicProgram
             {
                 switch (mc.Name)
                 {
+                    case "Triton Tactics":
+                        mc.Activating += new MagicCard.Ability(ActivatingTritonTactics);
+                        break;
+
                     default:
                         break;
                 }
@@ -2158,6 +2206,11 @@ namespace MagicProgram
             }
 
             mc.Tap(true, false);
+        }
+
+        void ActivatingTritonTactics(MagicCard mc)
+        {
+            Debug.WriteLine("Boo");
         }
 
         void Tap_Gate(MagicCard mc)

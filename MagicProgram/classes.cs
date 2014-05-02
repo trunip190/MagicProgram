@@ -282,6 +282,11 @@ namespace MagicProgram
         [XmlIgnore]
         public string imgLoc = "";
 
+        [XmlIgnore]
+        public int PBonus = 0;  //temp bonus
+        [XmlIgnore]
+        public int TBonus = 0;  //temp bonus
+
         private int countersTurn = 0;
         [XmlIgnore]
         private int _counters = 0;
@@ -516,6 +521,9 @@ namespace MagicProgram
             Power += counters;
             Toughness += counters;
 
+            Power += PBonus;
+            Toughness += TBonus;
+
             if (pOri != Power || tOri != Toughness)
             {
                 callCountersChanged();
@@ -631,6 +639,9 @@ namespace MagicProgram
                 counters += countersTurn * 2;
                 countersTurn = 0;
             }
+
+            PBonus = 0;
+            TBonus = 0;
         }
 
         public void ChangeTap()
@@ -640,13 +651,16 @@ namespace MagicProgram
 
         public void Tap(bool value, bool silent)
         {
-            if (silent)
+            if (Tapped != value)
             {
-                _Tapped = value;
-            }
-            else
-            {
-                Tapped = value;
+                if (silent)
+                {
+                    _Tapped = value;
+                }
+                else
+                {
+                    Tapped = value;
+                }
             }
         }
 
