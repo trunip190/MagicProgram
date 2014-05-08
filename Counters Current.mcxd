@@ -362,22 +362,6 @@ Whenever enchanted land is tapped for mana, its controller adds one mana of any 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Sapphire Drake</Name>
-    <Edition>GTC</Edition>
-    <Rarity>U</Rarity>
-    <Color>U</Color>
-    <Cost>5U</Cost>
-    <PT>4/4</PT>
-    <Type>Creature - Drake</Type>
-    <Text>Flying;
-Each creature you control with a +1/+1 counter on it has flying.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Give/Take</Name>
     <Edition>DGM</Edition>
     <Rarity>U</Rarity>
@@ -390,6 +374,22 @@ Each creature you control with a +1/+1 counter on it has flying.</Text>
 Remove all +1/+1 counters from target creature you control. Draw that many cards.;
 //;
 Fuse #(You may cast one or both halves of this card from your hand.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Crowned Ceratok</Name>
+    <Edition>GTC</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>3G</Cost>
+    <PT>4/3</PT>
+    <Type>Creature - Rhino</Type>
+    <Text>Trample;
+Each creature you control with a +1/+1 counter on it has trample.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>1</quantity>
