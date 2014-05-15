@@ -521,10 +521,17 @@ namespace MagicProgram
 
         void cardAreaHand_CardClickedEliteArcanist(MagicCard mc, MouseEventArgs e)
         {
-            mc.Activate += new MagicCard.Ability(mc_ActivateEliteArcanist);
+            //mc.Activate += new MagicCard.Ability(mc_ActivateEliteArcanist);
+            mc.Activating += new MagicCard.Ability(mc_ActivateEliteArcanist);
+
+            MagicCard mcvt = tempCard;
 
             tempCard.attachedCards.Add(mc);
             cardAreaHand.RemoveCard(mc);
+
+            int cost = mc.manaCost.colourless;
+            mc.manaCost.Clear();
+            mc.Cost = cost.ToString();
 
             tempCard.checkPT();
             tempCard = null;
@@ -1925,10 +1932,6 @@ namespace MagicProgram
             {
                 switch (mc.Name)
                 {
-                    case "Triton Tactics":
-                        mc.Activating += new MagicCard.Ability(ActivatingTritonTactics);
-                        break;
-
                     default:
                         break;
                 }
@@ -2008,6 +2011,10 @@ namespace MagicProgram
 
                     case "Primordial Hydra":
                         mc.counters += mc.Xvalue;
+                        break;
+
+                    case "Elite Arcanist":
+                        mc.Activating += new MagicCard.Ability(Activating_EliteArcanist);
                         break;
                 }
                 # endregion
@@ -2208,9 +2215,21 @@ namespace MagicProgram
             mc.Tap(true, false);
         }
 
-        void ActivatingTritonTactics(MagicCard mc)
+        void Activating_EliteArcanist(MagicCard mc)
         {
-            Debug.WriteLine("Boo");
+            if (mc.attachedCards.Count > 0)
+            {
+                if (mana.colourless >= mc.attachedCards[0].manaCost.colourless)
+                {
+                    mc.attachedCards[0].TryActivate(0);
+                    mc.Tap(true, false);
+                }
+                else
+                {
+                    string s = "Elite Arcanist: Not enough mana to activate ability (" + mana.colourless + "/" + mc.attachedCards[0].manaCost.colourless + ")";
+                    MessageBox.Show(s);
+                }
+            }
         }
 
         void Tap_Gate(MagicCard mc)

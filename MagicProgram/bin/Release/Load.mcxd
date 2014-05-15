@@ -176,7 +176,6 @@ Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters o
   <Card>
     <Name>Counterspell</Name>
     <Edition>5E</Edition>
-<<<<<<< HEAD
     <Rarity>C</Rarity>
     <Color>U</Color>
     <Cost>UU</Cost>
@@ -201,32 +200,11 @@ Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters o
 Whenever Renegade Krasis evolves, put a +1/+1 counter on each other creature you control with a +1/+1 counter on it.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Verdant Haven</Name>
-    <Edition>GTC</Edition>
-=======
->>>>>>> fc90aa43888e28be3975d6fec6142b62335b7c03
-    <Rarity>C</Rarity>
-    <Color>U</Color>
-    <Cost>UU</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Counter target spell.</Text>
-    <Flavor />
-    <Token>false</Token>
     <quantity>1</quantity>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-<<<<<<< HEAD
-    <Name>Predator Ooze</Name>
-    <Edition>DKA</Edition>
-=======
     <Name>Bioshift</Name>
     <Edition>GTC</Edition>
     <Rarity>C</Rarity>
@@ -244,7 +222,6 @@ Whenever Renegade Krasis evolves, put a +1/+1 counter on each other creature you
   <Card>
     <Name>Renegade Krasis</Name>
     <Edition>DGM</Edition>
->>>>>>> fc90aa43888e28be3975d6fec6142b62335b7c03
     <Rarity>R</Rarity>
     <Color>G</Color>
     <Cost>1GG</Cost>
