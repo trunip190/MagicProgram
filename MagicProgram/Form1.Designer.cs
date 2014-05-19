@@ -66,6 +66,7 @@
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,7 +96,6 @@
             this.testDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.saveAsDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCount)).BeginInit();
@@ -435,6 +435,13 @@
             this.saveDeckToolStripMenuItem.Text = "Save Deck";
             this.saveDeckToolStripMenuItem.Click += new System.EventHandler(this.saveDeckToolStripMenuItem_Click);
             // 
+            // saveAsDeckToolStripMenuItem
+            // 
+            this.saveAsDeckToolStripMenuItem.Name = "saveAsDeckToolStripMenuItem";
+            this.saveAsDeckToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.saveAsDeckToolStripMenuItem.Text = "Save As Deck ";
+            this.saveAsDeckToolStripMenuItem.Click += new System.EventHandler(this.saveAsDeckToolStripMenuItem_Click);
+            // 
             // saveLibraryToolStripMenuItem
             // 
             this.saveLibraryToolStripMenuItem.Name = "saveLibraryToolStripMenuItem";
@@ -660,13 +667,6 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // saveAsDeckToolStripMenuItem
-            // 
-            this.saveAsDeckToolStripMenuItem.Name = "saveAsDeckToolStripMenuItem";
-            this.saveAsDeckToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.saveAsDeckToolStripMenuItem.Text = "Save As Deck ";
-            this.saveAsDeckToolStripMenuItem.Click += new System.EventHandler(this.saveAsDeckToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,6 +674,7 @@
             this.ClientSize = new System.Drawing.Size(573, 473);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Magic Viewer";

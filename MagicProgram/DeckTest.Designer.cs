@@ -956,6 +956,7 @@
             this.Controls.Add(this.cPanelAll);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(685, 570);
             this.Name = "DeckTest";

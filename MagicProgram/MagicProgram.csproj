@@ -51,7 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>67FC35440A6A6608F8A4D334267F807A9FFBB8F3</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>2E1086A3A43DF3B4BE98CA7514C9A25137AEC8BF</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>MagicProgram_TemporaryKey.pfx</ManifestKeyFile>
@@ -61,6 +61,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -246,6 +249,8 @@
     <Content Include="Debug.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Icon.ico" />
+    <None Include="Resources\Icon.png" />
     <None Include="Resources\CounterPlus.png" />
     <None Include="Resources\CounterMinus.png" />
     <None Include="Resources\Counter-.png" />

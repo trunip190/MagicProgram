@@ -150,6 +150,9 @@ namespace MagicProgram
         # region custom handlers
         private void addHandlers()
         {
+            PlArea.HPChanged += new Action(PlaHP_ValueChanged);
+            OppArea.HPChanged += new Action(FoeHP_ValueChanged);
+
             PlArea.CardUsed += new CardUse(PlArea_CardUsed);
             OppArea.CardUsed += new CardUse(OppArea_CardUsed);
 
@@ -215,7 +218,6 @@ namespace MagicProgram
 
             updateOppSide();
         }
-
         # endregion
 
         # region methods
@@ -1248,9 +1250,19 @@ namespace MagicProgram
             OppArea.HP = (int)numOppHP.Value;
         }
 
+        private void FoeHP_ValueChanged()
+        {
+            numOppHP.Value = OppArea.HP;
+        }
+
         private void numPlaHP_ValueChanged(object sender, EventArgs e)
         {
             PlArea.HP = (int)numPlaHP.Value;
+        }
+
+        private void PlaHP_ValueChanged()
+        {
+            numPlaHP.Value = PlArea.HP;
         }
         # endregion
         # endregion
@@ -1772,7 +1784,7 @@ namespace MagicProgram
         # endregion
 
         # region hp
-        event Action HPChanged;
+        public event Action HPChanged;
 
         private void onHPChanged()
         {
