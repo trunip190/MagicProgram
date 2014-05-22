@@ -233,7 +233,6 @@ namespace MagicProgram
 
         private bool useCard(MagicCard mc)
         {
-
             # region work out if there is enough mana
             bool mana = true;
 
@@ -355,9 +354,15 @@ namespace MagicProgram
                     //listViewArtEnch.MouseUp += new MouseEventHandler(listViewArtEnch_MouseClick);
                 }
 
-                if (mc.Name == "Ooze Flux")
+                switch (mc.Name)
                 {
-                    mc.Activate += new MagicCard.Ability(Activate_OozeFlux);
+                    case "Verdant Haven":
+                        area.HP += 2;
+                        break;
+
+                    case "Ooze Flux":
+                        mc.Activate += new MagicCard.Ability(Activate_OozeFlux);
+                        break;
                 }
 
                 tempCard = mc;
@@ -614,6 +619,19 @@ namespace MagicProgram
             }
 
             updateAll();
+        }
+
+        private void ProcStack()
+        {
+            for (int i = CardStack.Count - 1; i >= 0; i--)
+            {
+                //need to replace callActivate() with a proc method
+                //or work out how to add abilities to the stack,
+                //maybe with onResolve event.
+                CardStack[i].callActivate();
+
+                CardStack.RemoveAt(i);
+            }
         }
 
         # region
@@ -1955,11 +1973,6 @@ namespace MagicProgram
             # region artifacts and enchantments
             else if (mc.Type.Contains("Artifact") || mc.Type.Contains("Enchantment"))
             {
-                if (mc.Name == "Verdant Haven")
-                {
-                    HP += 2;
-                }
-
                 _artEnch.Add(mc);
                 _artEnch.index();
             }

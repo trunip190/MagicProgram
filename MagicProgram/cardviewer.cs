@@ -38,7 +38,7 @@ namespace MagicProgram
         public void LoadCard(MagicCard mc)
         {
             nMC = mc;
-            
+
             //is getting assigned multiple times.
             nMC.TapChanged -= LoadCard;
             nMC.TapChanged += new CardUse(LoadCard);
@@ -84,6 +84,14 @@ namespace MagicProgram
 
             textBoxName.Text = nMC.Name;
             textBoxType.Text = nMC.Type;
+
+            # region abilities
+            comboBox1.Items.Clear();
+            foreach (CardAbility cb in nMC.Abilities)
+            {
+                comboBox1.Items.Add(cb.Text);
+            }
+            # endregion
 
             # region CMC
             pictureBoxCMC.BackgroundImage = MagicImage.FromString(nMC.Cost);

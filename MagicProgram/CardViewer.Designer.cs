@@ -40,10 +40,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.counters1 = new MagicProgram.Counters();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCMC)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.counters1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -86,6 +88,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(11, 26);
             this.panel1.Name = "panel1";
@@ -155,7 +158,16 @@
             this.counters1.Name = "counters1";
             this.counters1.Size = new System.Drawing.Size(32, 160);
             this.counters1.TabIndex = 5;
+            this.counters1.TabStop = false;
             this.counters1.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(94, 74);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(72, 21);
+            this.comboBox1.TabIndex = 5;
             // 
             // CardViewer
             // 
@@ -177,6 +189,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCMC)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.counters1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,5 +207,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private Counters counters1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
