@@ -294,8 +294,23 @@ namespace MagicProgram
                         break;
 
                     case "Triton Tactics":
-                        targets += 2;
+                        targets = 2;
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(CardChosen_TritonTactics);
+                        break;
+
+                    case "Predator's Rapport":
+                        targets = 1;
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(CardChosen_PredatorsRapport);
+                        break;
+
+                    case "Call to Heel":
+                        targets = 1;
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(CardChosen_CalltoHeel);
+                        break;
+
+                    case "Strength of the Tajuru":
+                        targets = mc.Xvalue;
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_StrengthOfTheTajuru);
                         break;
                 }
 
@@ -361,7 +376,7 @@ namespace MagicProgram
                         break;
 
                     case "Ooze Flux":
-                        mc.Activate += new MagicCard.Ability(Activate_OozeFlux);
+                        mc.Activating += new MagicCard.Ability(Activating_OozeFlux);
                         break;
                 }
 
@@ -394,6 +409,10 @@ namespace MagicProgram
                             cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClick_BondBeetle);
                         }
                         break;
+
+                    case "Fathom Mage":
+                        mc.CountersChanged += new MagicCard.ValueChanged(mc_CountersChangedFathomMage);
+                        break;
                 }
 
                 mc.Activate += new MagicCard.Ability(mc_ActivateCard);
@@ -412,6 +431,14 @@ namespace MagicProgram
 
             //updateAll();
             return true;
+        }
+
+        void mc_CountersChangedFathomMage(int count)
+        {
+            if (count > 0)
+            {
+                DrawCard(count);
+            }
         }
 
         void cardAreaPlay_CountersPicked(int value, Dictionary<MagicCard, int> sources)
@@ -536,7 +563,7 @@ namespace MagicProgram
             tempCard.attachedCards.Add(mc);
             cardAreaHand.RemoveCard(mc);
 
-            int cost = mc.manaCost.colourless;
+            int cost = mc.CMC;
             mc.manaCost.Clear();
             mc.Cost = cost.ToString();
 
@@ -1286,6 +1313,23 @@ namespace MagicProgram
         # endregion
 
         # region card events
+        void Activating_OozeFlux(MagicCard mc)
+        {
+            int c = 0;  //number of counters on creatures
+            foreach (MagicCard mcs in PlArea._play.cards)
+            {
+                if (mcs.counters > 0)
+                {
+                    c += mcs.counters;
+                }
+            }
+
+            cPanelControls.Hide();
+
+            cardAreaPlay.PickCounters();
+            cardAreaPlay.CountersPicked += new CardArea.CountersChosen(cardAreaPlay_CountersPicked);
+        }
+
         void mc_TapVerdantHaven(MagicCard mc)
         {
             if (!mc.Tapped) { return; }
@@ -1313,6 +1357,10 @@ namespace MagicProgram
 
                 case "Vorel of the Hull Clade":
                     cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_VorelHullClade);
+                    break;
+
+                case "Elite Arcanist":
+
                     break;
             }
         }
@@ -1367,21 +1415,36 @@ namespace MagicProgram
             }
         }
 
-        void Activate_OozeFlux(MagicCard mc)
+        void CardChosen_CalltoHeel(MagicCard mc, EventArgs e)
         {
-            int c = 0;  //number of counters on creatures
-            foreach (MagicCard mcs in PlArea._play.cards)
+            PlArea._play.cards.Remove(mc);
+            update_listViewPlay();
+
+            PlArea._hand.Add(mc.Copy());
+            update_listViewHand();
+
+            DrawCard(1);
+
+            targets--;
+            if (targets < 1)
             {
-                if (mcs.counters > 0)
-                {
-                    c += mcs.counters;
-                }
+                cardAreaPlay.CardClicked -= CardChosen_CalltoHeel;
             }
+        }
 
-            cPanelControls.Hide();
+        void CardChosen_PredatorsRapport(MagicCard mc, EventArgs e)
+        {
+            PlArea.HP += mc.Power + mc.Toughness;
 
-            cardAreaPlay.PickCounters();
-            cardAreaPlay.CountersPicked += new CardArea.CountersChosen(cardAreaPlay_CountersPicked);
+            cardAreaPlay.CardClicked -= CardChosen_PredatorsRapport;
+        }
+
+        void CardClicked_StrengthOfTheTajuru(MagicCard mc, MouseEventArgs e)
+        {
+            //using targets as temporary xvalue
+            mc.counters += targets;
+
+            cardAreaPlay.CardClicked -= CardClicked_StrengthOfTheTajuru;
         }
 
         void CardClick_BondBeetle(MagicCard mc, MouseEventArgs e)
@@ -1743,18 +1806,15 @@ namespace MagicProgram
             viewCard = mc;
 
             CardViewer cardViewer1 = new CardViewer();
-            panel1.Controls.Add(cardViewer1);
             cardViewer1.LoadCard(mc);
+
+            panel1.Controls.Add(cardViewer1);
             cPanelControls.Show();
             panel1.Show();
             panel1.BringToFront();
 
             int count = mc.attachedCards.Count;
-
             panel1.Width = 200 * (1 + count);
-
-            Debug.WriteLine("Count: {0}, size: {1}", count, panel1.Width);
-
             for (int i = 0; i < count; i++)
             {
                 CardViewer cv = new CardViewer();
@@ -2094,7 +2154,20 @@ namespace MagicProgram
 
         void Play_Discard(MagicCard mc)
         {
-            _graveyard.cards.Add(mc);
+            bool toHand = false;
+            foreach (MagicCard mca in mc.attachedCards)
+            {
+                if (mc.Name == "Rancor")
+                {
+                    _hand.cards.Add(mc);
+                    toHand = true;
+                }
+            }
+
+            if (!toHand)
+            {
+                _graveyard.cards.Add(mc);
+            }
             _play.cards.Remove(mc);
         }
 
@@ -2110,6 +2183,7 @@ namespace MagicProgram
             {
                 return;
             }
+
             ColourCost c = mc.Abilities[0].Cost;
             bool tap = mc.Abilities[0].RawCost.Contains("%T");
 
@@ -2134,7 +2208,6 @@ namespace MagicProgram
             mana.Subtract(c);
 
             mc.callActivate();
-
         }
 
         private bool CheckLandType(string type, int count)
@@ -2335,7 +2408,7 @@ namespace MagicProgram
 
             foreach (MagicCard mc in _play.cards)
             {
-                if (!mc.Tapped && !mc.Sick) //And not defender
+                if (!mc.Tapped && !mc.Sick && mc.Power > 0) //And not defender
                 {
                     result++;
                 }

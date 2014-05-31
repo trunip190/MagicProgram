@@ -152,6 +152,7 @@ namespace MagicProgram
             bool result = false; //False means not in cards
 
             string st = card.Name.ToUpper().Trim();
+            index();
 
             if (link.ContainsKey(st))
             {
@@ -295,13 +296,14 @@ namespace MagicProgram
             get { return _counters; }
             set
             {
+                int change = value - _counters;
                 if (value < _counters && Name == "Protean Hydra")
                 {
-                    countersTurn += _counters - value;
+                    countersTurn -= change;
                 }
                 _counters = value;
                 checkPT();
-                callCountersChanged();
+                callCountersChanged(change);
             }
         }
         # endregion
@@ -317,12 +319,13 @@ namespace MagicProgram
         # region handlers
         # region delegates/events
         public delegate void Ability(MagicCard mc);
+        public delegate void ValueChanged(int count);
 
         public event Ability Evolving;
         public event Ability Activate;
         public event Ability Activating;
-		public event Ability OnAttack;
-        public event Action CountersChanged;
+        public event Ability OnAttack;
+        public event ValueChanged CountersChanged;
         public event Phase Upkeep;
         public event Phase EndPhase;
         public event CardUse TapChanged;
@@ -343,7 +346,7 @@ namespace MagicProgram
             }
         }
 
-        private void callTryActivate()
+        private void callActivating()
         {
             Ability handler = Activating;
             if (handler != null)
@@ -371,15 +374,15 @@ namespace MagicProgram
             }
         }
 
-		public void callOnAttack()
-		{
-			Ability handler = OnAttack;
-			if ( handler != null)
-			{
-				handler(this);
-			}
-		}
-		
+        public void callOnAttack()
+        {
+            Ability handler = OnAttack;
+            if (handler != null)
+            {
+                handler(this);
+            }
+        }
+
         public void callTapChanged()
         {
             CardUse handler = TapChanged;
@@ -407,12 +410,12 @@ namespace MagicProgram
             }
         }
 
-        public void callCountersChanged()
+        public void callCountersChanged(int count)
         {
-            Action handler = CountersChanged;
+            ValueChanged handler = CountersChanged;
             if (handler != null)
             {
-                handler();
+                handler(count);
             }
         }
 
@@ -526,7 +529,7 @@ namespace MagicProgram
 
             if (pOri != Power || tOri != Toughness)
             {
-                callCountersChanged();
+                callCountersChanged(0);
             }
         }
 
@@ -672,9 +675,15 @@ namespace MagicProgram
         public bool TryActivate(int i)
         {
             ParseText();
-            bool result = true;
 
-            callTryActivate();
+            bool result = false;
+
+            if (Abilities.Count > i)
+            {
+                result = true;
+            }
+
+            callActivating();
 
             return result;
         }
@@ -693,11 +702,11 @@ namespace MagicProgram
             }
         }
 
-		public virtual void Attack()
-		{
-			callOnAttack();
-		}
-		
+        public virtual void Attack()
+        {
+            callOnAttack();
+        }
+
         /// <summary>
         /// Returns a List<string> of all the enchancements that the card provides when attached
         /// </summary>
@@ -1065,6 +1074,7 @@ namespace MagicProgram
         private static Image green = Properties.Resources.G;
         private static Image black = Properties.Resources.B;
 
+        private static Image zero = Properties.Resources._0;
         private static Image one = Properties.Resources._1;
         private static Image two = Properties.Resources._2;
         private static Image three = Properties.Resources._3;
@@ -1165,7 +1175,7 @@ namespace MagicProgram
 
                         # region numbers
                         case '0':
-                            g.DrawImage(null, rect);
+                            g.DrawImage(zero, rect);
                             break;
 
                         case '1':

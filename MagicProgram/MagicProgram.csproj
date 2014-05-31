@@ -250,6 +250,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Icon.ico" />
+    <None Include="Resources\0.gif" />
     <None Include="Resources\Icon.png" />
     <None Include="Resources\CounterPlus.png" />
     <None Include="Resources\CounterMinus.png" />

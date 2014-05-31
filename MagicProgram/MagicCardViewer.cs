@@ -234,7 +234,7 @@ namespace MagicProgram
             }
 
             card.CountersChanged -= mc_CountersChanged;
-            card.CountersChanged += new Action(mc_CountersChanged);
+            card.CountersChanged += new MagicCard.ValueChanged(mc_CountersChanged);
 
             card.TapChanged -= mc_TapChanged;
             card.TapChanged += new CardUse(mc_TapChanged);
@@ -269,7 +269,7 @@ namespace MagicProgram
             }
         }
 
-        private void mc_CountersChanged()
+        private void mc_CountersChanged(int count)
         {
             if (cards.Count < 1)
             {
@@ -285,7 +285,7 @@ namespace MagicProgram
         {
             DrawCardTap();
 
-            mc_CountersChanged();
+            mc_CountersChanged(0);
 
             drawCounters();
             DrawQuantity();

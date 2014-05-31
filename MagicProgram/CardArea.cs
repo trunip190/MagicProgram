@@ -741,7 +741,7 @@ namespace MagicProgram
             int result = 0;
             foreach (MagicCardViewer mcv in mControls)
             {
-                if (!mcv.cards[0].Sick && !mcv.cards[0].Tapped)
+                if (!mcv.cards[0].Sick && !mcv.cards[0].Tapped && mcv.cards[0].Power > 0)
                 {
                     mcv.Attack = true;
                     result++;
