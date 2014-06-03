@@ -263,6 +263,8 @@ namespace MagicProgram
         private void updateImagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             updateCardImages();
+            updateDeckDetails();
+            listView2_refresh();
         }
 
         private void setImageLocToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1249,6 +1251,22 @@ namespace MagicProgram
         private void exportDeckListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExportDeckList();
+        }
+
+        private void updateDeckDetails()
+        {
+            for (int i = 0; i < Deck.cards.Count; i++)
+            {
+                MagicCard mc = Deck.cards[i];
+                int j = Database.getIndex(mc.Name);
+                int c = mc.quantity;
+
+                if (j > -1 && j < Database.cards.Count)
+                {
+                    Deck.cards[i] = Database.cards[j].Copy();
+                    Deck.cards[i].quantity = c;
+                }
+            }
         }
     }
 }

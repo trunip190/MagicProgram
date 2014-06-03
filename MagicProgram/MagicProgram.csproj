@@ -224,7 +224,7 @@
     </None>
     <None Include="app.config" />
     <None Include="Load.mcxd">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="MagicProgram_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">

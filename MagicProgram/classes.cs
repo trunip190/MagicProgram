@@ -283,6 +283,13 @@ namespace MagicProgram
         [XmlIgnore]
         public string imgLoc = "";
 
+        # region Spell variables
+        [XmlIgnore]
+        public int Targets = 0;
+        [XmlIgnore]
+        public int AbilityIndex = 0;
+        # endregion
+
         [XmlIgnore]
         public int PBonus = 0;  //temp bonus
         [XmlIgnore]
@@ -318,13 +325,14 @@ namespace MagicProgram
 
         # region handlers
         # region delegates/events
-        public delegate void Ability(MagicCard mc);
+        public delegate void ActiveAbility(MagicCard mc, int index);  //index of ability being used. 0 based.
+        public delegate void PassiveAbility(MagicCard mc);
         public delegate void ValueChanged(int count);
 
-        public event Ability Evolving;
-        public event Ability Activate;
-        public event Ability Activating;
-        public event Ability OnAttack;
+        public event PassiveAbility Evolving;
+        public event ActiveAbility Activate;
+        public event ActiveAbility Activating;
+        public event PassiveAbility OnAttack;
         public event ValueChanged CountersChanged;
         public event Phase Upkeep;
         public event Phase EndPhase;
@@ -333,31 +341,41 @@ namespace MagicProgram
         public event CardUse Destroyed;
         public event CardUse PrePlay;
         public event CardUse OnPlay;
+        public event CardUse Resolving;
         public event Action StatsChanged;
         # endregion
 
-        # region event trigger emthods
-        public void callActivate()
+        # region event trigger methods
+        public void callResolving()
         {
-            Ability handler = Activate;
+            CardUse handler = Resolving;
             if (handler != null)
             {
                 handler(this);
             }
         }
 
-        private void callActivating()
+        public void callActivate(int index)
         {
-            Ability handler = Activating;
+            ActiveAbility handler = Activate;
             if (handler != null)
             {
-                handler(this);
+                handler(this, index);
+            }
+        }
+
+        private void callActivating(int index)
+        {
+            ActiveAbility handler = Activating;
+            if (handler != null)
+            {
+                handler(this, index);
             }
         }
 
         public void callEvolve()
         {
-            Ability handler = Evolving;
+            PassiveAbility handler = Evolving;
 
             if (handler != null)
             {
@@ -365,18 +383,18 @@ namespace MagicProgram
             }
         }
 
-        public void callAbility()
+        public void callAbility(int index)
         {
-            Ability handler = Activate;
+            ActiveAbility handler = Activate;
             if (handler != null)
             {
-                handler(this);
+                handler(this, index);
             }
         }
 
         public void callOnAttack()
         {
-            Ability handler = OnAttack;
+            PassiveAbility handler = OnAttack;
             if (handler != null)
             {
                 handler(this);
@@ -652,6 +670,11 @@ namespace MagicProgram
             Tapped = !Tapped;
         }
 
+        internal void Resolve()
+        {
+            callResolving();
+        }
+
         public void Tap(bool value, bool silent)
         {
             if (Tapped != value)
@@ -683,7 +706,7 @@ namespace MagicProgram
                 result = true;
             }
 
-            callActivating();
+            callActivating(i);
 
             return result;
         }
@@ -1433,6 +1456,15 @@ namespace MagicProgram
             if (cc.grey > g) { result = false; }
 
             return result;
+        }
+
+        public int CompareInt(ColourCost cc)
+        {
+            ColourCost result = MemberwiseClone() as ColourCost;
+
+            cc.Subtract(cc);
+
+            return result.colourless;
         }
         # endregion
     }

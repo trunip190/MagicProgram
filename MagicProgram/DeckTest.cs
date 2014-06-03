@@ -67,7 +67,9 @@ namespace MagicProgram
 
             foreach (MagicCard mc in CardsProc)
             {
-                mc.callAbility();
+                //TODO rewrite to only activate specified abilities
+                //Ability needs an "activated" or index
+                mc.callAbility(0);
             }
 
             if (handler != null)
@@ -310,6 +312,7 @@ namespace MagicProgram
 
                     case "Strength of the Tajuru":
                         targets = mc.Xvalue;
+                        mc.Resolving += new CardUse(mc_ResolvingStrengthTajuru);
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_StrengthOfTheTajuru);
                         break;
                 }
@@ -376,7 +379,7 @@ namespace MagicProgram
                         break;
 
                     case "Ooze Flux":
-                        mc.Activating += new MagicCard.Ability(Activating_OozeFlux);
+                        mc.Activating += new MagicCard.ActiveAbility(Activating_OozeFlux);
                         break;
                 }
 
@@ -401,6 +404,7 @@ namespace MagicProgram
                                 cardAreaHand.CardClicked += new CardArea.CardChosen(cardAreaHand_CardClickedEliteArcanist);
                             }
                         }
+                        mc.Activating += new MagicCard.ActiveAbility(Activating_EliteArcanist);
                         break;
 
                     case "Bond Beetle":
@@ -413,9 +417,13 @@ namespace MagicProgram
                     case "Fathom Mage":
                         mc.CountersChanged += new MagicCard.ValueChanged(mc_CountersChangedFathomMage);
                         break;
+
+                    case "Zameck Guildmage":
+                        mc.Activating += new MagicCard.ActiveAbility(Activating_ZameckGuildmage);
+                        break;
                 }
 
-                mc.Activate += new MagicCard.Ability(mc_ActivateCard);
+                mc.Activate += new MagicCard.ActiveAbility(mc_ActivateCard);
 
                 mc.checkPT();
 
@@ -429,6 +437,8 @@ namespace MagicProgram
             }
             # endregion
 
+            mc.Resolve();
+
             //updateAll();
             return true;
         }
@@ -437,8 +447,23 @@ namespace MagicProgram
         {
             if (count > 0)
             {
-                DrawCard(count);
+                ColourCost cc = new ColourCost();
+                PickerShow(count, cc);
+                ViewCard(new MagicCard());
+
+                xPicker.ValuePicked += new XManaPicker.IntReturn(xPicker_ValuePickedDrawCards);
             }
+        }
+
+        void xPicker_ValuePickedDrawCards(int value, int count)
+        {
+            DrawCard(count);
+            xPicker.ValuePicked -= xPicker_ValuePickedDrawCards;
+        }
+
+        void mc_ResolvingStrengthTajuru(MagicCard mc)
+        {
+
         }
 
         void cardAreaPlay_CountersPicked(int value, Dictionary<MagicCard, int> sources)
@@ -496,22 +521,44 @@ namespace MagicProgram
                 CardStack.Add(mc);
 
                 mc.Initialise();
-                xPicker.Cost = mc.manaCost;
-                xPicker.Mana = PlArea.mana;
-                xPicker.Value = 0;
-                xPicker.Show(count);
-                xPicker.BringToFront();
+                PickerShow(count, mc.manaCost);
                 ViewCard(mc);
-                //cPanelControls.BringToFront();
+
             }
             else
             {
-                useCard(mc);
+                //useCard(mc);
+                if (mc.Type.ToUpper().Contains("LAND"))
+                {
+                    useCard(mc);
+                }
+                else
+                {
+                    AddToStack(mc);
+                }
             }
+        }
+
+        private void PickerShow(int MaxCount, ColourCost cost)
+        {
+            xPicker.Cost = cost;
+            xPicker.Mana = PlArea.mana;
+            xPicker.Value = 0;
+            xPicker.Show(MaxCount);
+            xPicker.BringToFront();
         }
 
         void picker_ValuePicked(int value, int count)
         {
+            //TODO very messy method
+            //needs simplifying to:
+            /* calculate minimum/current mana cost
+             * check if there is enough mana for minimum
+             * check if there are multiple targets
+             * check if there is a value of X in the spell
+             * show picker for either/both of above
+             */
+
             xPicker.Hide();
 
             if (CardStack.Count < 1)
@@ -521,18 +568,55 @@ namespace MagicProgram
             }
 
             ColourCost cc = CardStack[0].manaCost;
-
             CardStack[0].Xvalue = value;
-            //string edited = CardStack[0].Cost.Replace("X", value.ToString());
-            //CardStack[0].Cost = edited;
 
-            //cc.grey += value * count;
+            CardStack[0].Targets = (int)numTargets.Value;
+
+            # region set targeting and cost
+            //TODO replace with actual cost
+            //consider Strive, kicker && multikicker etc.
+
+            if (CardStack[0].Text.ToUpper().Contains("KICKER"))
+            {
+                cc.grey += (int)numTargets.Value - 1;
+            }
+            # endregion
+
+            if (CardStack[0].Text.ToUpper().Contains("KICKER"))
+            {
+                xPicker.ValuePicked += new XManaPicker.IntReturn(xPicker_ValuePicked_StrengthTajuru);
+                xPicker.ValuePicked -= picker_ValuePicked;
+
+                int c = PlArea.mana.CompareInt(cc);
+
+                PickerShow(c, new ColourCost { grey = 1 });
+            }
+            else
+            {
+                if (PlArea.mana.Compare(cc))
+                {
+                    useCard(CardStack[0]);
+                }
+                CardStack.RemoveAt(0);
+            }
+        }
+
+        void xPicker_ValuePicked_StrengthTajuru(int value, int count)
+        {
+            //TODO potentially redundant
+            CardStack[0].Targets = count;
+            CardStack[0].manaCost.grey += value * count;
+
+            ColourCost cc = CardStack[0].manaCost;
 
             if (PlArea.mana.Compare(cc))
             {
                 useCard(CardStack[0]);
-                CardStack.RemoveAt(0);
             }
+            CardStack.RemoveAt(0);
+
+            xPicker.ValuePicked -= xPicker_ValuePicked_StrengthTajuru;
+            xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
         }
 
         # region choose where to add card
@@ -556,7 +640,7 @@ namespace MagicProgram
         void cardAreaHand_CardClickedEliteArcanist(MagicCard mc, MouseEventArgs e)
         {
             //mc.Activate += new MagicCard.Ability(mc_ActivateEliteArcanist);
-            mc.Activating += new MagicCard.Ability(mc_ActivateEliteArcanist);
+            mc.Activating += new MagicCard.ActiveAbility(mc_ActivateEliteArcanist);
 
             MagicCard mcvt = tempCard;
 
@@ -582,11 +666,11 @@ namespace MagicProgram
             cardAreaHand.RemoveCard(mc);
             cardAreaHand.CardClicked -= cardAreaHand_CardClickedCipher;
 
-            mc.Activate += new MagicCard.Ability(mc_ActivateEliteArcanist);
+            mc.Activate += new MagicCard.ActiveAbility(mc_ActivateEliteArcanist);
 
         }
 
-        void mc_ActivateEliteArcanist(MagicCard mc)
+        void mc_ActivateEliteArcanist(MagicCard mc, int index)
         {
             PrePlay(mc);
         }
@@ -627,40 +711,6 @@ namespace MagicProgram
         # endregion
         # endregion
 
-        private void ToHand(ListView lv)
-        {
-            PlArea._play.index();
-
-            if (lv.SelectedIndices.Count > 0)
-            {
-                # region clicked item
-                int i = lv.SelectedIndices[0];
-
-                if (i > -1)
-                {
-                    PlArea._play.cards[i].counters = 0;
-                    PlArea._hand.cards.Add(PlArea._play.cards[i]);
-                    PlArea._play.cards.RemoveAt(i);
-                }
-                # endregion
-            }
-
-            updateAll();
-        }
-
-        private void ProcStack()
-        {
-            for (int i = CardStack.Count - 1; i >= 0; i--)
-            {
-                //need to replace callActivate() with a proc method
-                //or work out how to add abilities to the stack,
-                //maybe with onResolve event.
-                CardStack[i].callActivate();
-
-                CardStack.RemoveAt(i);
-            }
-        }
-
         # region
         private void endTurn()
         {
@@ -677,6 +727,13 @@ namespace MagicProgram
         {
             timer2.Start();
             timer1.Start();
+        }
+
+        private void TimerStop()
+        {
+            timer2.Stop();
+            timer1.Stop();
+            timerStack.Stop();
         }
 
         private void OppPlayHand()
@@ -960,6 +1017,45 @@ namespace MagicProgram
         # endregion
         # endregion
 
+        # region casting cycle
+        //choose card
+        //remove from hand
+
+        private void CalcCost(MagicCard mc)
+        { }
+
+        private void ChooseTargetCount(MagicCard mc)
+        { }
+
+        private void ChooseX(MagicCard mc)
+        { }
+
+        private void PayCosts(MagicCard mc)
+        { }
+
+        private void AddToStack(MagicCard mc)
+        {
+            CardStack.Add(mc);
+            timerStack.Start();
+        }
+
+        private void timerStack_Tick(object sender, EventArgs e)
+        {
+            ProcStack();
+            timerStack.Stop();
+        }
+
+        private void ProcStack()
+        {
+            for (int i = CardStack.Count - 1; i >= 0; i--)
+            {
+                //CardStack[i].Resolve();   //Final method?
+                useCard(CardStack[i]);  //Temporary?
+                CardStack.RemoveAt(i);
+            }
+        }
+        # endregion
+
         # region events
         # region buttons
         # region card actions
@@ -1011,7 +1107,7 @@ namespace MagicProgram
 
         private void buttonToHand_Click(object sender, EventArgs e)
         {
-            ToHand(listViewPlay);
+            throw new NotImplementedException();
         }
         # endregion
 
@@ -1191,7 +1287,7 @@ namespace MagicProgram
 
         private void listViewArtEnch_DoubleClick(object sender, EventArgs e)
         {
-            ToHand(listViewArtEnch);
+            throw new NotImplementedException();
         }
 
         private void listView_MouseClick(object sender, MouseEventArgs e)
@@ -1268,12 +1364,6 @@ namespace MagicProgram
 
         }
 
-        private void TimerStop()
-        {
-            timer2.Stop();
-            timer1.Stop();
-        }
-
         # region timer ticking
         void t1_Tick(object sender, EventArgs e)
         {
@@ -1313,7 +1403,7 @@ namespace MagicProgram
         # endregion
 
         # region card events
-        void Activating_OozeFlux(MagicCard mc)
+        void Activating_OozeFlux(MagicCard mc, int index)
         {
             int c = 0;  //number of counters on creatures
             foreach (MagicCard mcs in PlArea._play.cards)
@@ -1347,7 +1437,7 @@ namespace MagicProgram
             PlArea.mw.ShowWheel(c);
         }
 
-        void mc_ActivateCard(MagicCard mc)
+        void mc_ActivateCard(MagicCard mc, int index)
         {
             switch (mc.Name)
             {
@@ -1362,6 +1452,67 @@ namespace MagicProgram
                 case "Elite Arcanist":
 
                     break;
+            }
+        }
+
+        void mc_ActivateAxebaneGuardian(MagicCard mc, int index)
+        {
+            int defenders = 0;
+            foreach (MagicCard mcc in PlArea._play.cards)
+            {
+                if (mcc.Text.ToUpper().Contains("DEFENDER"))
+                {
+                    defenders++;
+                }
+            }
+
+            //manapicker for 'defenders' total.
+
+            while (defenders > 0)
+            {
+                PlArea.mw.ShowWheel("UBGRW");
+                defenders--;
+            }
+        }
+
+        void Activating_ZameckGuildmage(MagicCard mc, int index)
+        {
+            if (index == 0)
+            {
+
+            }
+            else if (index == 1)
+            {
+                cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_CardClickedZameckGuildmage);
+            }
+        }
+
+        void cardAreaPlay_CardClickedZameckGuildmage(MagicCard mc, MouseEventArgs e)
+        {
+            if (mc.counters > 0)
+            {
+                mc.counters--;
+                DrawCard(1);
+                cardAreaPlay.CardClicked -= cardAreaPlay_CardClickedZameckGuildmage;
+            }
+        }
+
+        void Activating_EliteArcanist(MagicCard mc, int index)
+        {
+            if (mc.attachedCards.Count > 0)
+            {
+                MagicCard mcn = mc.attachedCards[0];
+                if (PlArea.mana.colourless >= mcn.manaCost.colourless)
+                {
+                    mc.Tap(true, false);
+                    //useCard(mcn);
+                    AddToStack(mcn);
+                }
+                else
+                {
+                    string s = "Elite Arcanist: Not enough mana to activate ability (" + PlArea.mana.colourless + "/" + mcn.manaCost.colourless + ")";
+                    MessageBox.Show(s);
+                }
             }
         }
 
@@ -1420,7 +1571,7 @@ namespace MagicProgram
             PlArea._play.cards.Remove(mc);
             update_listViewPlay();
 
-            PlArea._hand.Add(mc.Copy());
+            PlArea._hand.Add(new MagicCard(mc));
             update_listViewHand();
 
             DrawCard(1);
@@ -1442,9 +1593,13 @@ namespace MagicProgram
         void CardClicked_StrengthOfTheTajuru(MagicCard mc, MouseEventArgs e)
         {
             //using targets as temporary xvalue
-            mc.counters += targets;
+            mc.counters += tempCard.Xvalue;
 
-            cardAreaPlay.CardClicked -= CardClicked_StrengthOfTheTajuru;
+            tempCard.Targets--;
+            if (tempCard.Targets < 1)
+            {
+                cardAreaPlay.CardClicked -= CardClicked_StrengthOfTheTajuru;
+            }
         }
 
         void CardClick_BondBeetle(MagicCard mc, MouseEventArgs e)
@@ -1456,6 +1611,7 @@ namespace MagicProgram
         void CardChosen_NaturesLore(MagicCard mc)
         {
             useCard(mc);
+            AddToStack(mc);
             CardChosen -= CardChosen_NaturesLore;
         }
         # endregion
@@ -1736,7 +1892,10 @@ namespace MagicProgram
         private void xPicker_Cancel()
         {
             xPicker.Hide();
-            CardStack.RemoveAt(0);
+            if (CardStack.Count > 0)
+            {
+                CardStack.RemoveAt(0);
+            }
         }
 
         private void buttonCardChoose_Click(object sender, EventArgs e)
@@ -1901,7 +2060,8 @@ namespace MagicProgram
 
             foreach (MagicCard mc in CardsProc)
             {
-                mc.callAbility();
+                //TODO need to rewrite Ability to take an index or bool for being used on the stack.
+                mc.callAbility(0);
             }
 
             if (handler != null)
@@ -1983,7 +2143,7 @@ namespace MagicProgram
                 if (mc.Type.Contains("Gate"))
                 {
                     mc.TapChanged += new CardUse(Tap_Gate);
-                    mc.Activating += new MagicCard.Ability(mc_Activating);
+                    mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
                 }
 
                 # region named cards
@@ -2057,19 +2217,19 @@ namespace MagicProgram
                 switch (mc.Name)
                 {
                     case "Renegade Krasis":
-                        mc.Evolving += new MagicCard.Ability(RenegadeKrasis_Evolve);
+                        mc.Evolving += new MagicCard.PassiveAbility(RenegadeKrasis_Evolve);
                         break;
 
                     case "Vorel of the Hull Clade":
-                        mc.Activating += new MagicCard.Ability(Activate_VorelHullClade);
+                        mc.Activating += new MagicCard.ActiveAbility(Activate_VorelHullClade);
                         break;
 
                     case "Gyre Sage":
-                        mc.Activate += new MagicCard.Ability(Activate_GyreSage);
+                        mc.Activate += new MagicCard.ActiveAbility(Activate_GyreSage);
                         break;
 
                     case "Voyaging Satyr":
-                        mc.Activate += new MagicCard.Ability(Activate_VoyagingSatyr);
+                        mc.Activate += new MagicCard.ActiveAbility(Activate_VoyagingSatyr);
                         break;
 
                     case "Opal Lake Gatekeepers":
@@ -2099,7 +2259,7 @@ namespace MagicProgram
                         break;
 
                     case "Elite Arcanist":
-                        mc.Activating += new MagicCard.Ability(Activating_EliteArcanist);
+                        //mc.Activating += new MagicCard.Ability(Activating_EliteArcanist);
                         break;
                 }
                 # endregion
@@ -2123,7 +2283,7 @@ namespace MagicProgram
             }
             # endregion
 
-            mc.Activating += new MagicCard.Ability(mc_Activating);
+            mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
             mc.Discard += new CardUse(Play_Discard);
             mc.Destroyed += new CardUse(Play_Destroyed);
         }
@@ -2177,7 +2337,7 @@ namespace MagicProgram
             _hand.cards.Remove(mc);
         }
 
-        void mc_Activating(MagicCard mc)
+        void mc_Activating(MagicCard mc, int index)
         {
             if (mc.Abilities.Count == 0)
             {
@@ -2207,7 +2367,7 @@ namespace MagicProgram
 
             mana.Subtract(c);
 
-            mc.callActivate();
+            mc.callActivate(index);
         }
 
         private bool CheckLandType(string type, int count)
@@ -2233,10 +2393,10 @@ namespace MagicProgram
         void RenegadeKrasis_Evolve(MagicCard mc)
         {
             CardsProc.Add(mc);
-            mc.Activate += new MagicCard.Ability(DeckTest_SpellRes);
+            mc.Activate += new MagicCard.ActiveAbility(DeckTest_SpellRes);
         }
 
-        void DeckTest_SpellRes(MagicCard mc)
+        void DeckTest_SpellRes(MagicCard mc, int index)
         {
             foreach (MagicCard msc in _play.cards)
             {
@@ -2283,7 +2443,7 @@ namespace MagicProgram
 
         }
 
-        void Activate_GyreSage(MagicCard mc)
+        void Activate_GyreSage(MagicCard mc, int index)
         {
             if (mc.counters > 0)
             {
@@ -2292,12 +2452,12 @@ namespace MagicProgram
             }
         }
 
-        void Activate_VorelHullClade(MagicCard mc)
+        void Activate_VorelHullClade(MagicCard mc, int index)
         {
 
         }
 
-        void Activate_VoyagingSatyr(MagicCard mc)
+        void Activate_VoyagingSatyr(MagicCard mc, int index)
         {
             //hook for decktest
             mc.Tap(true, true);
@@ -2311,23 +2471,6 @@ namespace MagicProgram
             }
 
             mc.Tap(true, false);
-        }
-
-        void Activating_EliteArcanist(MagicCard mc)
-        {
-            if (mc.attachedCards.Count > 0)
-            {
-                if (mana.colourless >= mc.attachedCards[0].manaCost.colourless)
-                {
-                    mc.attachedCards[0].TryActivate(0);
-                    mc.Tap(true, false);
-                }
-                else
-                {
-                    string s = "Elite Arcanist: Not enough mana to activate ability (" + mana.colourless + "/" + mc.attachedCards[0].manaCost.colourless + ")";
-                    MessageBox.Show(s);
-                }
-            }
         }
 
         void Tap_Gate(MagicCard mc)

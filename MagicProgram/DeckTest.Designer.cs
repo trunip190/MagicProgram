@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeckTest));
-            MagicProgram.ColourCost colourCost1 = new MagicProgram.ColourCost();
-            MagicProgram.ColourCost colourCost2 = new MagicProgram.ColourCost();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Murmuring Phantasm (0,5) (0)");
+            MagicProgram.ColourCost colourCost3 = new MagicProgram.ColourCost();
+            MagicProgram.ColourCost colourCost4 = new MagicProgram.ColourCost();
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Murmuring Phantasm (0,5) (0)");
             this.imageListHand = new System.Windows.Forms.ImageList(this.components);
             this.imageListPlay = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -59,10 +59,20 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textTurn = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.numPlaHP = new System.Windows.Forms.NumericUpDown();
+            this.numOppHP = new System.Windows.Forms.NumericUpDown();
+            this.timerStack = new System.Windows.Forms.Timer(this.components);
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.cPanelControls = new MagicProgram.CollapsiblePanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panelTargets = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numTargets = new System.Windows.Forms.NumericUpDown();
             this.xPicker = new MagicProgram.XManaPicker();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -99,17 +109,17 @@
             this.listViewOppEnch = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label2 = new System.Windows.Forms.Label();
-            this.textTurn = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.numPlaHP = new System.Windows.Forms.NumericUpDown();
-            this.numOppHP = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).BeginInit();
             this.cPanelControls.WorkingArea.SuspendLayout();
             this.cPanelControls.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panelTargets.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTargets)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -129,9 +139,6 @@
             this.cPanelOppPlay.SuspendLayout();
             this.cPanelOppLand.WorkingArea.SuspendLayout();
             this.cPanelOppLand.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).BeginInit();
             this.SuspendLayout();
             // 
             // imageListHand
@@ -331,6 +338,78 @@
             this.progressBar1.Step = 100;
             this.progressBar1.TabIndex = 13;
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(806, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "0_ / 0R / 0G / 0U / 0W / 0B";
+            // 
+            // textTurn
+            // 
+            this.textTurn.Location = new System.Drawing.Point(450, 2);
+            this.textTurn.Name = "textTurn";
+            this.textTurn.ReadOnly = true;
+            this.textTurn.Size = new System.Drawing.Size(51, 20);
+            this.textTurn.TabIndex = 10;
+            this.textTurn.Text = "Turn 1";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.numPlaHP);
+            this.panel4.Controls.Add(this.numOppHP);
+            this.panel4.Location = new System.Drawing.Point(357, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(86, 23);
+            this.panel4.TabIndex = 8;
+            // 
+            // numPlaHP
+            // 
+            this.numPlaHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.numPlaHP.Location = new System.Drawing.Point(2, 2);
+            this.numPlaHP.Margin = new System.Windows.Forms.Padding(2);
+            this.numPlaHP.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numPlaHP.Name = "numPlaHP";
+            this.numPlaHP.Size = new System.Drawing.Size(40, 20);
+            this.numPlaHP.TabIndex = 7;
+            this.numPlaHP.ValueChanged += new System.EventHandler(this.numPlaHP_ValueChanged);
+            // 
+            // numOppHP
+            // 
+            this.numOppHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.numOppHP.Location = new System.Drawing.Point(44, 2);
+            this.numOppHP.Margin = new System.Windows.Forms.Padding(2);
+            this.numOppHP.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numOppHP.Name = "numOppHP";
+            this.numOppHP.Size = new System.Drawing.Size(40, 20);
+            this.numOppHP.TabIndex = 4;
+            this.numOppHP.ValueChanged += new System.EventHandler(this.numFoeHP_ValueChanged);
+            // 
+            // timerStack
+            // 
+            this.timerStack.Interval = 1000;
+            this.timerStack.Tick += new System.EventHandler(this.timerStack_Tick);
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(525, 0);
+            this.progressBar2.Maximum = 5000;
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(100, 23);
+            this.progressBar2.Step = 100;
+            this.progressBar2.TabIndex = 18;
+            // 
             // cPanelControls
             // 
             this.cPanelControls.AllowDrop = true;
@@ -385,6 +464,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.panelTargets);
             this.panel7.Controls.Add(this.xPicker);
             this.panel7.Controls.Add(this.panel5);
             this.panel7.Controls.Add(this.panel6);
@@ -396,30 +476,71 @@
             this.panel7.Size = new System.Drawing.Size(135, 247);
             this.panel7.TabIndex = 9;
             // 
+            // panelTargets
+            // 
+            this.panelTargets.Controls.Add(this.label1);
+            this.panelTargets.Controls.Add(this.numTargets);
+            this.panelTargets.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTargets.Location = new System.Drawing.Point(0, 209);
+            this.panelTargets.Margin = new System.Windows.Forms.Padding(0);
+            this.panelTargets.MaximumSize = new System.Drawing.Size(135, 38);
+            this.panelTargets.MinimumSize = new System.Drawing.Size(135, 38);
+            this.panelTargets.Name = "panelTargets";
+            this.panelTargets.Size = new System.Drawing.Size(135, 38);
+            this.panelTargets.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Targets?";
+            // 
+            // numTargets
+            // 
+            this.numTargets.Location = new System.Drawing.Point(87, 3);
+            this.numTargets.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numTargets.Name = "numTargets";
+            this.numTargets.Size = new System.Drawing.Size(45, 20);
+            this.numTargets.TabIndex = 0;
+            this.numTargets.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numTargets.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // xPicker
             // 
-            colourCost1.black = 0;
-            colourCost1.blue = 0;
-            colourCost1.green = 0;
-            colourCost1.grey = 0;
-            colourCost1.red = 0;
-            colourCost1.white = 0;
-            this.xPicker.Cost = colourCost1;
+            this.xPicker.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            colourCost3.black = 0;
+            colourCost3.blue = 0;
+            colourCost3.green = 0;
+            colourCost3.grey = 0;
+            colourCost3.red = 0;
+            colourCost3.white = 0;
+            this.xPicker.Cost = colourCost3;
             this.xPicker.Dock = System.Windows.Forms.DockStyle.Top;
             this.xPicker.Location = new System.Drawing.Point(0, 104);
-            colourCost2.black = 0;
-            colourCost2.blue = 0;
-            colourCost2.green = 0;
-            colourCost2.grey = 0;
-            colourCost2.red = 0;
-            colourCost2.white = 0;
-            this.xPicker.Mana = colourCost2;
+            colourCost4.black = 0;
+            colourCost4.blue = 0;
+            colourCost4.green = 0;
+            colourCost4.grey = 0;
+            colourCost4.red = 0;
+            colourCost4.white = 0;
+            this.xPicker.Mana = colourCost4;
             this.xPicker.Margin = new System.Windows.Forms.Padding(0);
             this.xPicker.Max = 0;
-            this.xPicker.MaximumSize = new System.Drawing.Size(133, 154);
-            this.xPicker.MinimumSize = new System.Drawing.Size(133, 154);
+            this.xPicker.MaximumSize = new System.Drawing.Size(135, 105);
+            this.xPicker.MinimumSize = new System.Drawing.Size(135, 105);
             this.xPicker.Name = "xPicker";
-            this.xPicker.Size = new System.Drawing.Size(133, 154);
+            this.xPicker.Size = new System.Drawing.Size(135, 105);
             this.xPicker.TabIndex = 4;
             this.xPicker.Value = 0;
             this.xPicker.Visible = false;
@@ -428,6 +549,7 @@
             // 
             // panel5
             // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.buttonCountDown);
             this.panel5.Controls.Add(this.buttonCountUp);
@@ -471,6 +593,7 @@
             // 
             // panel6
             // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.comboCardPicker);
             this.panel6.Controls.Add(this.buttonCardChoose);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -799,7 +922,7 @@
             this.listViewOppCrea.ContextMenuStrip = this.contextMenuStrip1;
             this.listViewOppCrea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewOppCrea.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listViewOppCrea.LargeImageList = this.imageListPlay;
             this.listViewOppCrea.Location = new System.Drawing.Point(0, 0);
             this.listViewOppCrea.Margin = new System.Windows.Forms.Padding(0);
@@ -886,69 +1009,12 @@
             // 
             this.columnHeader8.Text = "Quantity";
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(806, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "0_ / 0R / 0G / 0U / 0W / 0B";
-            // 
-            // textTurn
-            // 
-            this.textTurn.Location = new System.Drawing.Point(450, 2);
-            this.textTurn.Name = "textTurn";
-            this.textTurn.ReadOnly = true;
-            this.textTurn.Size = new System.Drawing.Size(51, 20);
-            this.textTurn.TabIndex = 10;
-            this.textTurn.Text = "Turn 1";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.numPlaHP);
-            this.panel4.Controls.Add(this.numOppHP);
-            this.panel4.Location = new System.Drawing.Point(357, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(86, 23);
-            this.panel4.TabIndex = 8;
-            // 
-            // numPlaHP
-            // 
-            this.numPlaHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.numPlaHP.Location = new System.Drawing.Point(2, 2);
-            this.numPlaHP.Margin = new System.Windows.Forms.Padding(2);
-            this.numPlaHP.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numPlaHP.Name = "numPlaHP";
-            this.numPlaHP.Size = new System.Drawing.Size(40, 20);
-            this.numPlaHP.TabIndex = 7;
-            this.numPlaHP.ValueChanged += new System.EventHandler(this.numPlaHP_ValueChanged);
-            // 
-            // numOppHP
-            // 
-            this.numOppHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.numOppHP.Location = new System.Drawing.Point(44, 2);
-            this.numOppHP.Margin = new System.Windows.Forms.Padding(2);
-            this.numOppHP.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numOppHP.Name = "numOppHP";
-            this.numOppHP.Size = new System.Drawing.Size(40, 20);
-            this.numOppHP.TabIndex = 4;
-            this.numOppHP.ValueChanged += new System.EventHandler(this.numFoeHP_ValueChanged);
-            // 
             // DeckTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 739);
+            this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cPanelControls);
@@ -965,12 +1031,18 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).EndInit();
             this.cPanelControls.WorkingArea.ResumeLayout(false);
             this.cPanelControls.WorkingArea.PerformLayout();
             this.cPanelControls.ResumeLayout(false);
             this.cPanelControls.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.panelTargets.ResumeLayout(false);
+            this.panelTargets.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTargets)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -993,9 +1065,6 @@
             this.cPanelOppPlay.ResumeLayout(false);
             this.cPanelOppLand.WorkingArea.ResumeLayout(false);
             this.cPanelOppLand.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1074,5 +1143,10 @@
         private CardArea cardAreaHand;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timerStack;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.Panel panelTargets;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numTargets;
     }
 }

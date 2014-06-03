@@ -64,6 +64,7 @@ namespace MagicProgram
 
             this.BackgroundImage = nMC.get();
 
+            # region set tap button text
             if (nMC.Tapped)
             {
                 button1.Text = "Untap";
@@ -72,7 +73,9 @@ namespace MagicProgram
             {
                 button1.Text = "Tap";
             }
+            # endregion
 
+            # region show details or image
             if (File.Exists(SplitString.convertFrom(nMC.imgLoc)))
             {
                 panel2.Hide();
@@ -81,16 +84,29 @@ namespace MagicProgram
             {
                 panel2.Show();
             }
+            # endregion
 
             textBoxName.Text = nMC.Name;
             textBoxType.Text = nMC.Type;
 
             # region abilities
+            nMC.ParseText();
             comboBox1.Items.Clear();
             foreach (CardAbility cb in nMC.Abilities)
             {
                 comboBox1.Items.Add(cb.Text);
             }
+
+            bool abilities = false;
+            if (nMC.Abilities.Count > 0)
+            {
+                abilities = true;
+            }
+            else
+            {
+                abilities = false;
+            }
+            button1.Visible = button2.Visible = comboBox1.Visible = abilities;
             # endregion
 
             # region CMC
@@ -200,8 +216,16 @@ namespace MagicProgram
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //nMC.onActivate();
-            nMC.TryActivate(0);
+            int ind = comboBox1.SelectedIndex;
+
+            if (ind > -1)
+            {
+                nMC.TryActivate(ind);
+            }
+            else
+            {
+                nMC.TryActivate(0);
+            }
         }
     }
 }

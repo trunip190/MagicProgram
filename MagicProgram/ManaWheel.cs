@@ -122,11 +122,44 @@ namespace MagicProgram
 
         public void ShowWheel(string s)
         {
-            ColourCost cc = new ColourCost();
+            ColourCost cc = new ColourCost
+            {
+                black = 1,
+                blue = 1,
+                green = 1,
+                red = 1,
+                white = 1
+            };
 
             //parse string
+            foreach (char c in s)
+            {
+                if (!char.IsNumber(c))
+                {
+                    switch (c)
+                    {
+                        case 'B':
+                            cc.black++;
+                            break;
 
-            
+                        case 'U':
+                            cc.blue++;
+                            break;
+
+                        case 'G':
+                            cc.green++;
+                            break;
+
+                        case 'R':
+                            cc.red++;
+                            break;
+
+                        case 'W':
+                            cc.white++;
+                            break;
+                    }
+                }
+            }
 
             ShowWheel(cc);
         }

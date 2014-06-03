@@ -11,6 +11,7 @@ namespace MagicProgram
 {
     public partial class XManaPicker : UserControl
     {
+        # region declarations
         [Browsable(false)]
         private ColourCost _mana = new ColourCost();
         public ColourCost Mana
@@ -32,7 +33,7 @@ namespace MagicProgram
         {
             get
             {
-                int.TryParse(textBoxVal.Text, out _value);
+                _value = (int)numericUpDown1.Value;
                 return _value;
             }
             set
@@ -40,7 +41,7 @@ namespace MagicProgram
                 if (value <= Max && value >= 0)
                 {
                     _value = value;
-                    textBoxVal.Text = _value.ToString();
+                    numericUpDown1.Value = _value;
                 }
             }
         }
@@ -53,7 +54,9 @@ namespace MagicProgram
         }
 
         public int xCount = 0;
+        # endregion
 
+        # region Delegates
         public delegate void IntReturn(int value, int count);
         public event IntReturn ValuePicked;
         protected void callValuePicked()
@@ -74,6 +77,7 @@ namespace MagicProgram
                 handler();
             }
         }
+        # endregion
 
         public XManaPicker()
         {
@@ -87,7 +91,8 @@ namespace MagicProgram
 
         private void updateMax()
         {
-            textBoxMax.Text = Max.ToString();
+            textBox2.Text = "Max - " + Max.ToString();
+            numericUpDown1.Maximum = Max;
         }
 
         public void Show(int count)
