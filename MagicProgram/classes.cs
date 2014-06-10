@@ -179,6 +179,7 @@ namespace MagicProgram
             }
 
             callCardAdded(card);
+            index();
 
             return result;
         }
@@ -288,6 +289,8 @@ namespace MagicProgram
         public int Targets = 0;
         [XmlIgnore]
         public int AbilityIndex = 0;
+        [XmlIgnore]
+        public int AdditionalCost = 1;
         # endregion
 
         [XmlIgnore]
@@ -319,7 +322,8 @@ namespace MagicProgram
 
         [XmlIgnore]
         public List<MagicCard> attachedCards = new List<MagicCard>();
-        [XmlIgnore]
+
+        //[XmlIgnore]
         public List<CardAbility> Abilities = new List<CardAbility>();
         # endregion
 
@@ -333,9 +337,10 @@ namespace MagicProgram
         public event ActiveAbility Activate;
         public event ActiveAbility Activating;
         public event PassiveAbility OnAttack;
+        public event PassiveAbility OnEquip;
+        public event PassiveAbility onEquipmentAdd;
+        public event PassiveAbility onEquipmentRemoved;
         public event ValueChanged CountersChanged;
-        public event Phase Upkeep;
-        public event Phase EndPhase;
         public event CardUse TapChanged;
         public event CardUse Discard;
         public event CardUse Destroyed;
@@ -389,6 +394,33 @@ namespace MagicProgram
             if (handler != null)
             {
                 handler(this, index);
+            }
+        }
+
+        public void callOnEquipmentAdd()
+        {
+            PassiveAbility handler = onEquipmentAdd;
+            if (handler != null)
+            {
+                handler(this);
+            }
+        }
+
+        private void callOnEquipmentRemoved(MagicCard mc)
+        {
+            PassiveAbility handler = onEquipmentRemoved;
+            if (handler != null)
+            {
+                handler(mc);
+            }
+        }
+
+        public void callOnEquip()
+        {
+            PassiveAbility handler = OnEquip;
+            if (handler != null)
+            {
+                handler(this);
             }
         }
 
@@ -488,7 +520,7 @@ namespace MagicProgram
             imgLoc = mc.imgLoc;
 
             quantity = mc.quantity;
-            counters = mc.counters;
+            //counters = mc.counters;
 
             Xvalue = mc.Xvalue;
         }
@@ -669,6 +701,22 @@ namespace MagicProgram
         {
             Tapped = !Tapped;
         }
+
+        # region equipment
+        public void AddEquipment(MagicCard mc)
+        {
+            attachedCards.Add(mc);
+            callOnEquipmentAdd();
+            mc.OnEquip += new PassiveAbility(RemoveEquipment);
+        }
+
+        public void RemoveEquipment(MagicCard mc)
+        {
+            attachedCards.Remove(mc);
+            callOnEquipmentRemoved(mc);
+            mc.onEquipmentRemoved -= RemoveEquipment;
+        }
+        # endregion
 
         internal void Resolve()
         {
@@ -1272,12 +1320,12 @@ namespace MagicProgram
 
         # region mana
         # region internal values
-        private int _blue = 0;
-        private int _green = 0;
-        private int _black = 0;
-        private int _white = 0;
-        private int _red = 0;
-        private int _grey = 0;
+        public int _blue = 0;
+        public int _green = 0;
+        public int _black = 0;
+        public int _white = 0;
+        public int _red = 0;
+        public int _grey = 0;
         # endregion
 
         # region public values

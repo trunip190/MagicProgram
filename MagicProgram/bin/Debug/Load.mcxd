@@ -1,17 +1,19 @@
 <?xml version="1.0"?>
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Card>
-    <Name>Forest</Name>
-    <Edition>UG</Edition>
-    <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
-    <PT />
-    <Type>Basic Land - Forest</Type>
-    <Text />
+    <Name>Battlefield Thaumaturge</Name>
+    <Edition>Nyx</Edition>
+    <Rarity>R</Rarity>
+    <Color>U</Color>
+    <Cost>1U</Cost>
+    <PT>2/1</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
+Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>10</quantity>
+    <quantity>3</quantity>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
@@ -27,259 +29,45 @@
     <Flavor />
     <Token>false</Token>
     <quantity>10</quantity>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Renegade Krasis</Name>
-    <Edition>DGM</Edition>
-    <Rarity>R</Rarity>
-    <Color>G</Color>
-    <Cost>1GG</Cost>
-    <PT>3/2</PT>
-    <Type>Creature - Beast Mutant</Type>
-    <Text>Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#;
-Whenever Renegade Krasis evolves, put a +1/+1 counter on each other creature you control with a +1/+1 counter on it.</Text>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>10</quantity>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Cloudfin Raptor</Name>
+    <Name>Simic Guildgate</Name>
     <Edition>GTC</Edition>
     <Rarity>C</Rarity>
-    <Color>U</Color>
-    <Cost>U</Cost>
-    <PT>0/1</PT>
-    <Type>Creature - Bird Mutant</Type>
-    <Text>Flying;
-Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Crocanura</Name>
-    <Edition>GTC</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>2G</Cost>
-    <PT>1/3</PT>
-    <Type>Creature - Crocodile Frog</Type>
-    <Text>Reach #(This creature can block creatures with flying.)#;
-Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Gyre Sage</Name>
-    <Edition>GTC</Edition>
-    <Rarity>R</Rarity>
-    <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT>1/2</PT>
-    <Type>Creature - Elf Druid</Type>
-    <Text>Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#;
-%T: Add %G to your mana pool for each +1/+1 counter on Gyre Sage.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Master Biomancer</Name>
-    <Edition>GTC</Edition>
-    <Rarity>M</Rarity>
-    <Color>Gld</Color>
-    <Cost>2GU</Cost>
-    <PT>2/4</PT>
-    <Type>Creature - Elf Wizard</Type>
-    <Text>Each other creature you control enters the battlefield with a number of additional +1/+1 counters on it equal to Master Biomancer�s power and as a Mutant in addition to its other types.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Zameck Guildmage</Name>
-    <Edition>MGD</Edition>
-    <Rarity />
-    <Color>Gld</Color>
-    <Cost>GU</Cost>
-    <PT>2/2</PT>
-    <Type>Creature - Elf Wizard</Type>
-    <Text>%G%U: This turn, each creature you control enters the battlefield with an additional +1/+1 counter on it.;
-%G%U, Remove a +1/+1 counter from a creature you control: Draw a card.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Elusive Krasis</Name>
-    <Edition>GTC</Edition>
-    <Rarity>U</Rarity>
-    <Color>Gld</Color>
-    <Cost>1GU</Cost>
-    <PT>0/4</PT>
-    <Type>Creature - Fish Mutant</Type>
-    <Text>Elusive Krasis can�t be blocked.;
-Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Battlefield Thaumaturge</Name>
-    <Edition>Nyx</Edition>
-    <Rarity>R</Rarity>
-    <Color>U</Color>
-    <Cost>1U</Cost>
-    <PT>2/1</PT>
-    <Type>Creature - Human Wizard</Type>
-    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
-Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Fathom Mage</Name>
-    <Edition>GTC</Edition>
-    <Rarity>R</Rarity>
-    <Color>Gld</Color>
-    <Cost>2GU</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Human Wizard</Type>
-    <Text>Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#;
-Whenever a +1/+1 counter is placed on Fathom Mage, you may draw a card.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Protean Hydra</Name>
-    <Edition>M10</Edition>
-    <Rarity>M</Rarity>
-    <Color>G</Color>
-    <Cost>XG</Cost>
-    <PT>0/0</PT>
-    <Type>Creature - Hydra</Type>
-    <Text>Protean Hydra enters the battlefield with X +1/+1 counters on it.;
-If damage would be dealt to Protean Hydra, prevent that damage and remove that many +1/+1 counters from it.;
-Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters on it at the beginning of the next end step.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Bond Beetle</Name>
-    <Edition>M13</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>G</Cost>
-    <PT>0/1</PT>
-    <Type>Creature - Insect</Type>
-    <Text>When Bond Beetle enters the battlefield, put a +1/+1 counter on target creature.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Call to Heel</Name>
-    <Edition>ALA</Edition>
-    <Rarity>C</Rarity>
-    <Color>U</Color>
-    <Cost>1U</Cost>
+    <Color>Lnd</Color>
+    <Cost />
     <PT />
-    <Type>Instant</Type>
-    <Text>Return target creature to its owner�s hand. Its controller draws a card.</Text>
+    <Type>Land - Gate</Type>
+    <Text>Simic Guildgate enters the battlefield tapped.;
+%T: Add %G or %U to your mana pool.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Dream Fracture</Name>
-    <Edition>EVE</Edition>
-    <Rarity>U</Rarity>
-    <Color>U</Color>
-    <Cost>1UU</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Counter target spell. Its controller draws a card.;
-Draw a card.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Strength of the Tajuru</Name>
-    <Edition>WWK</Edition>
-    <Rarity>R</Rarity>
-    <Color>G</Color>
-    <Cost>XGG</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Multikicker %1 #(You may pay an additional %1 any number of times as you cast this spell.)#;
-Choose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Predator's Rapport</Name>
-    <Edition>GTC</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>2G</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Choose target creature you control. You gain life equal to that creature�s power plus its toughness.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Quicken</Name>
-    <Edition>GP</Edition>
-    <Rarity>R</Rarity>
-    <Color>U</Color>
-    <Cost>U</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>The next sorcery card you cast this turn can be cast as though it had flash. #(It can be cast any time you could cast an instant.)#;
-Draw a card.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>3</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>%T</RawCost>
+        <Text> Add %G or %U to your mana pool.</Text>
+      </CardAbility>
+    </Abilities>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
@@ -296,22 +84,295 @@ As Breeding Pool enters the battlefield, you may pay 2 life. If you don�t, Bre
     <Flavor />
     <Token>false</Token>
     <quantity>1</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>#(%T</RawCost>
+        <Text> Add %G or %U to your mana pool.)#;</Text>
+      </CardAbility>
+    </Abilities>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Simic Guildgate</Name>
+    <Name>Cloudfin Raptor</Name>
     <Edition>GTC</Edition>
     <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT>0/1</PT>
+    <Type>Creature - Bird Mutant</Type>
+    <Text>Flying;
+Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Bond Beetle</Name>
+    <Edition>M13</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>0/1</PT>
+    <Type>Creature - Insect</Type>
+    <Text>When Bond Beetle enters the battlefield, put a +1/+1 counter on target creature.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Triton Tactics</Name>
+    <Edition>THS</Edition>
+    <Rarity>U</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT>0/0</PT>
+    <Type>Instant</Type>
+    <Text>Up to two target creatures each get +0/+3 until end of turn. Untap those creatures. At this turn's next end of combat, tap each creature that was blocked by one of those creatures this turn and it doesn't untap during its controller's next untap step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gyre Sage</Name>
+    <Edition>GTC</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>1/2</PT>
+    <Type>Creature - Elf Druid</Type>
+    <Text>Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#;
+%T: Add %G to your mana pool for each +1/+1 counter on Gyre Sage.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>%T</RawCost>
+        <Text> Add %G to your mana pool for each +1/+1 counter on Gyre Sage.</Text>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Protean Hydra</Name>
+    <Edition>M10</Edition>
+    <Rarity>M</Rarity>
+    <Color>G</Color>
+    <Cost>XG</Cost>
+    <PT>0/0</PT>
+    <Type>Creature - Hydra</Type>
+    <Text>Protean Hydra enters the battlefield with X +1/+1 counters on it.;
+If damage would be dealt to Protean Hydra, prevent that damage and remove that many +1/+1 counters from it.;
+Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters on it at the beginning of the next end step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Renegade Krasis</Name>
+    <Edition>DGM</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>1GG</Cost>
+    <PT>3/2</PT>
+    <Type>Creature - Beast Mutant</Type>
+    <Text>Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#;
+Whenever Renegade Krasis evolves, put a +1/+1 counter on each other creature you control with a +1/+1 counter on it.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Elusive Krasis</Name>
+    <Edition>GTC</Edition>
+    <Rarity>U</Rarity>
+    <Color>Gld</Color>
+    <Cost>1GU</Cost>
+    <PT>0/4</PT>
+    <Type>Creature - Fish Mutant</Type>
+    <Text>Elusive Krasis can�t be blocked.;
+Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dream Fracture</Name>
+    <Edition>EVE</Edition>
+    <Rarity>U</Rarity>
+    <Color>U</Color>
+    <Cost>1UU</Cost>
     <PT />
-    <Type>Land - Gate</Type>
-    <Text>Simic Guildgate enters the battlefield tapped.;
-%T: Add %G or %U to your mana pool.</Text>
+    <Type>Instant</Type>
+    <Text>Counter target spell. Its controller draws a card.;
+Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Strength of the Tajuru</Name>
+    <Edition>WWK</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>XGG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Multikicker %1 #(You may pay an additional %1 any number of times as you cast this spell.)#;
+Choose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Predator's Rapport</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>2G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Choose target creature you control. You gain life equal to that creature�s power plus its toughness.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Master Biomancer</Name>
+    <Edition>GTC</Edition>
+    <Rarity>M</Rarity>
+    <Color>Gld</Color>
+    <Cost>2GU</Cost>
+    <PT>2/4</PT>
+    <Type>Creature - Elf Wizard</Type>
+    <Text>Each other creature you control enters the battlefield with a number of additional +1/+1 counters on it equal to Master Biomancer�s power and as a Mutant in addition to its other types.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Elite Arcanist</Name>
+    <Edition>M14</Edition>
+    <Rarity>R</Rarity>
+    <Color>U</Color>
+    <Cost>3U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>When Elite Arcanist enters the battlefield, you may exile an instant card from your hand.;
+%X, %T: Copy the exiled card. You may cast the copy without paying its mana cost. X is the converted mana cost of the exiled card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>%X, %T</RawCost>
+        <Text> Copy the exiled card. You may cast the copy without paying its mana cost. X is the converted mana cost of the exiled card.</Text>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Quicken</Name>
+    <Edition>GP</Edition>
+    <Rarity>R</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>The next sorcery card you cast this turn can be cast as though it had flash. #(It can be cast any time you could cast an instant.)#;
+Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fathom Mage</Name>
+    <Edition>GTC</Edition>
+    <Rarity>R</Rarity>
+    <Color>Gld</Color>
+    <Cost>2GU</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#;
+Whenever a +1/+1 counter is placed on Fathom Mage, you may draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Explorer's Scope</Name>
+    <Edition>ZEN</Edition>
+    <Rarity>C</Rarity>
+    <Color>Art</Color>
+    <Cost>1</Cost>
+    <PT />
+    <Type>Artifact - Equipment</Type>
+    <Text>Whenever equipped creature attacks, look at the top card of your library. If it's a land card, you may put it onto the battlefield tapped.;
+Equip %1 #(%1: Attach to target creature you control. Equip only as a sorcery.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>%1</RawCost>
+        <Text>Equip %1: #(Attach to target creature you control. Equip only as a sorcery.)#</Text>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Progenitor Mimic</Name>
+    <Edition>DGM</Edition>
+    <Rarity>M</Rarity>
+    <Color>Gld</Color>
+    <Cost>4GU</Cost>
+    <PT>0/0</PT>
+    <Type>Creature - Shapeshifter</Type>
+    <Text>You may have Progenitor Mimic enter the battlefield as a copy of any creature on the battlefield except it gains �At the beginning of your upkeep, if this creature isn�t a token, put a token onto the battlefield that�s a copy of this creature.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
