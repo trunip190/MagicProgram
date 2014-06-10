@@ -322,6 +322,8 @@ namespace MagicProgram
 
         [XmlIgnore]
         public List<MagicCard> attachedCards = new List<MagicCard>();
+        [XmlIgnore]
+        public MagicCard Parent = null;
 
         //[XmlIgnore]
         public List<CardAbility> Abilities = new List<CardAbility>();
@@ -338,6 +340,7 @@ namespace MagicProgram
         public event ActiveAbility Activating;
         public event PassiveAbility OnAttack;
         public event PassiveAbility OnEquip;
+        public event PassiveAbility OnUnequip;
         public event PassiveAbility onEquipmentAdd;
         public event PassiveAbility onEquipmentRemoved;
         public event ValueChanged CountersChanged;
@@ -418,6 +421,15 @@ namespace MagicProgram
         public void callOnEquip()
         {
             PassiveAbility handler = OnEquip;
+            if (handler != null)
+            {
+                handler(this);
+            }
+        }
+
+        public void callOnUnequip()
+        {
+            PassiveAbility handler = OnUnequip;
             if (handler != null)
             {
                 handler(this);
@@ -706,6 +718,7 @@ namespace MagicProgram
         public void AddEquipment(MagicCard mc)
         {
             attachedCards.Add(mc);
+            mc.Parent = this;
             callOnEquipmentAdd();
             mc.OnEquip += new PassiveAbility(RemoveEquipment);
         }
@@ -713,6 +726,13 @@ namespace MagicProgram
         public void RemoveEquipment(MagicCard mc)
         {
             attachedCards.Remove(mc);
+            mc.callOnUnequip();
+
+            if (mc.Parent == this)
+            {
+                mc.Parent = null;
+            }
+
             callOnEquipmentRemoved(mc);
             mc.onEquipmentRemoved -= RemoveEquipment;
         }

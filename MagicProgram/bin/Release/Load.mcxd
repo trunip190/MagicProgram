@@ -1,17 +1,18 @@
 <?xml version="1.0"?>
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Card>
-    <Name>Forest</Name>
-    <Edition>UG</Edition>
-    <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
-    <PT />
-    <Type>Basic Land - Forest</Type>
-    <Text />
+    <Name>Battlefield Thaumaturge</Name>
+    <Edition>Nyx</Edition>
+    <Rarity>R</Rarity>
+    <Color>U</Color>
+    <Cost>1U</Cost>
+    <PT>2/1</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
+Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>10</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -33,24 +34,18 @@
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Breeding Pool</Name>
-    <Edition>GTC</Edition>
-    <Rarity>R</Rarity>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
     <Color>Lnd</Color>
     <Cost />
     <PT />
-    <Type>Land - Forest Island</Type>
-    <Text>#(%T: Add %G or %U to your mana pool.)#;
-As Breeding Pool enters the battlefield, you may pay 2 life. If you don�t, Breeding Pool enters the battlefield tapped.</Text>
+    <Type>Basic Land - Forest</Type>
+    <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities>
-      <CardAbility>
-        <RawCost>#(%T</RawCost>
-        <Text> Add %G or %U to your mana pool.)#;</Text>
-      </CardAbility>
-    </Abilities>
+    <quantity>10</quantity>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
@@ -77,22 +72,22 @@ As Breeding Pool enters the battlefield, you may pay 2 life. If you don�t, Bre
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Explorer's Scope</Name>
-    <Edition>ZEN</Edition>
-    <Rarity>C</Rarity>
-    <Color>Art</Color>
-    <Cost>1</Cost>
+    <Name>Breeding Pool</Name>
+    <Edition>GTC</Edition>
+    <Rarity>R</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
     <PT />
-    <Type>Artifact - Equipment</Type>
-    <Text>Whenever equipped creature attacks, look at the top card of your library. If it's a land card, you may put it onto the battlefield tapped.;
-Equip %1 #(%1: Attach to target creature you control. Equip only as a sorcery.)#</Text>
+    <Type>Land - Forest Island</Type>
+    <Text>#(%T: Add %G or %U to your mana pool.)#;
+As Breeding Pool enters the battlefield, you may pay 2 life. If you don�t, Breeding Pool enters the battlefield tapped.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>1</quantity>
     <Abilities>
       <CardAbility>
-        <RawCost>%1</RawCost>
-        <Text>Equip %1: #(Attach to target creature you control. Equip only as a sorcery.)#</Text>
+        <RawCost>#(%T</RawCost>
+        <Text> Add %G or %U to your mana pool.)#;</Text>
       </CardAbility>
     </Abilities>
     <Tapped>false</Tapped>
@@ -170,32 +165,16 @@ Evolve #(Whenever a creature enters the battlefield under your control, if that 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Battlefield Thaumaturge</Name>
-    <Edition>Nyx</Edition>
-    <Rarity>R</Rarity>
-    <Color>U</Color>
-    <Cost>1U</Cost>
-    <PT>2/1</PT>
-    <Type>Creature - Human Wizard</Type>
-    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
-Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Explore</Name>
-    <Edition>WWK</Edition>
-    <Rarity>C</Rarity>
+    <Name>Protean Hydra</Name>
+    <Edition>M10</Edition>
+    <Rarity>M</Rarity>
     <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT />
-    <Type>Sorcery</Type>
-    <Text>You may play an additional land this turn.;
-Draw a card.</Text>
+    <Cost>XG</Cost>
+    <PT>0/0</PT>
+    <Type>Creature - Hydra</Type>
+    <Text>Protean Hydra enters the battlefield with X +1/+1 counters on it.;
+If damage would be dealt to Protean Hydra, prevent that damage and remove that many +1/+1 counters from it.;
+Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters on it at the beginning of the next end step.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>2</quantity>
@@ -326,6 +305,23 @@ Choose target creature, then choose another target creature for each time Streng
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Quicken</Name>
+    <Edition>GP</Edition>
+    <Rarity>R</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>The next sorcery card you cast this turn can be cast as though it had flash. #(It can be cast any time you could cast an instant.)#;
+Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Fathom Mage</Name>
     <Edition>GTC</Edition>
     <Rarity>R</Rarity>
@@ -339,6 +335,28 @@ Whenever a +1/+1 counter is placed on Fathom Mage, you may draw a card.</Text>
     <Token>false</Token>
     <quantity>2</quantity>
     <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Explorer's Scope</Name>
+    <Edition>ZEN</Edition>
+    <Rarity>C</Rarity>
+    <Color>Art</Color>
+    <Cost>1</Cost>
+    <PT />
+    <Type>Artifact - Equipment</Type>
+    <Text>Whenever equipped creature attacks, look at the top card of your library. If it's a land card, you may put it onto the battlefield tapped.;
+Equip %1 #(%1: Attach to target creature you control. Equip only as a sorcery.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>%1</RawCost>
+        <Text>Equip %1: #(Attach to target creature you control. Equip only as a sorcery.)#</Text>
+      </CardAbility>
+    </Abilities>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>

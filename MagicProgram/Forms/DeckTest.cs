@@ -377,8 +377,19 @@ namespace MagicProgram
                 }
                 else if (mc.Type.Contains("Equipment"))
                 {
-                    mc.Activating += new MagicCard.ActiveAbility(Activating_Equipment);
-                    mc.OnEquip += new MagicCard.PassiveAbility(mc_OnEquip);
+                    switch (mc.Name)
+                    {
+                        case "Explorer's Scope":
+                            mc.OnEquip += new MagicCard.PassiveAbility(OnEquip_ExplorersScope);
+                            mc.OnUnequip += new MagicCard.PassiveAbility(OnUnequip_ExplorersScope);
+                            mc.Activating += new MagicCard.ActiveAbility(Activating_Equipment);
+                            break;
+
+                        default:
+                            mc.Activating += new MagicCard.ActiveAbility(Activating_Equipment);
+                            mc.OnEquip += new MagicCard.PassiveAbility(mc_OnEquip);
+                            break;
+                    }
                     area.PlayCard(mc);
                     update_listViewPlay();
                 }
@@ -397,6 +408,8 @@ namespace MagicProgram
                     case "Ooze Flux":
                         mc.Activating += new MagicCard.ActiveAbility(Activating_OozeFlux);
                         break;
+
+                    
                 }
 
                 tempCard = mc;
@@ -473,8 +486,9 @@ namespace MagicProgram
 
         void cardAreaPlay_CardEquip(MagicCard mc, MouseEventArgs e)
         {
-            mc.AddEquipment(tempCard);
+            tempCard.Parent = mc;
             tempCard.callOnEquip();
+            mc.AddEquipment(tempCard);            
             tempCard = null;
             update_listViewPlay();
             cardAreaPlay.CardClicked -= cardAreaPlay_CardEquip;
@@ -1335,6 +1349,22 @@ namespace MagicProgram
             throw new NotImplementedException();
         }
 
+        private void listViewOppCrea_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Delete:
+                    if (listViewOppCrea.SelectedItems.Count > 0)
+                    {
+                        int ind = listViewOppCrea.SelectedIndices[0];
+                        OppArea._play.cards[ind].callDestroyed();
+                        updateOppSide();
+                        e.Handled = true;
+                    }
+                    break;
+            }
+        }
+
         private void listView_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -1448,6 +1478,36 @@ namespace MagicProgram
         # endregion
 
         # region card events
+        # region Explorer's Scope
+        void OnUnequip_ExplorersScope(MagicCard mc)
+        {
+            //TODO not getting called
+            mc.Parent.OnAttack -= OnAttack_ExplorersScope;
+        }
+
+        void OnEquip_ExplorersScope(MagicCard mc)
+        {
+            if (PlArea._play.cards.Contains(mc))
+            {
+                PlArea._play.cards.Remove(mc);
+            }
+
+            //TODO not getting called
+            mc.Parent.OnAttack += new MagicCard.PassiveAbility(OnAttack_ExplorersScope);
+        }
+
+        void OnAttack_ExplorersScope(MagicCard mc)
+        {
+            //TODO not getting hooked up
+            MagicCard mcl = PlArea._stack.cards[0];
+            if (mcl.Type.Contains("Land"))
+            {
+                AddToStack(mcl);
+                mcl.Tap(true, true);
+            }
+        }
+        # endregion
+
         void Activating_OozeFlux(MagicCard mc, int index)
         {
             int c = 0;  //number of counters on creatures
@@ -1902,22 +1962,6 @@ namespace MagicProgram
             if (!panel1.Visible)
             {
                 panel1.Controls.Clear();
-            }
-        }
-
-        private void listViewOppCrea_KeyUp(object sender, KeyEventArgs e)
-        {
-            switch (e.KeyCode)
-            {
-                case Keys.Delete:
-                    if (listViewOppCrea.SelectedItems.Count > 0)
-                    {
-                        int ind = listViewOppCrea.SelectedIndices[0];
-                        OppArea._play.cards[ind].callDestroyed();
-                        updateOppSide();
-                        e.Handled = true;
-                    }
-                    break;
             }
         }
 
