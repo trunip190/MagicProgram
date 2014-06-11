@@ -235,46 +235,11 @@ namespace MagicProgram
 
         private bool useCard(MagicCard mc)
         {
-            Debug.WriteLine("useCard({0})", mc.Name);
-            # region work out if there is enough mana
-            bool mana = true;
-
-            mc.setMana();
-            if (mc.manaCost.blue > PlArea.mana.blue) { mana = false; }
-            if (mc.manaCost.black > PlArea.mana.black) { mana = false; }
-            if (mc.manaCost.red > PlArea.mana.red) { mana = false; }
-            if (mc.manaCost.green > PlArea.mana.green) { mana = false; }
-            if (mc.manaCost.white > PlArea.mana.white) { mana = false; }
-
-            int g = PlArea.mana.colourless - mc.manaCost.colours;
-
-            if (mc.manaCost.grey > g) { mana = false; }
-
-            if (!mana)
-            {
-                Debug.WriteLine("!mana");
-                bool fal = false;
-                if (fal)
-                {
-                    timerStack.Stop();
-                }
-                //return false;
-                //if (MessageBox.Show("Not enough mana. Play anyway?", "Force card?", MessageBoxButtons.YesNo) != DialogResult.Yes)
-                //{
-                //    return false;
-                //}
-            }
-            else
-            {
-                PlArea.mana.Subtract(mc.manaCost);
-            }
-            # endregion
+            //work out if there is enough mana
+            CheckMana(mc);
 
             mc.callOnPlay();
-
-            # region copy card
-            mc = new MagicCard(mc);
-            # endregion
+            //mc = new MagicCard(mc);   //TODO check that only one copy is being created
 
             # region set side to work with
             PlayArea area = PlArea;
@@ -409,7 +374,7 @@ namespace MagicProgram
                         mc.Activating += new MagicCard.ActiveAbility(Activating_OozeFlux);
                         break;
 
-                    
+
                 }
 
                 tempCard = mc;
@@ -417,56 +382,15 @@ namespace MagicProgram
             }
             # endregion
             # region creatures
+            else if (mc.Type.ToUpper().Contains("CREATURE"))
+            {
+                PlayCreature(mc, area);
+            }
+            # endregion
+            # region New card type
             else
             {
-                onCreaCast(mc);
-
-                # region add card specific event handlers
-                switch (mc.Name)
-                {
-                    case "Elite Arcanist":
-                        if (playerTurn)
-                        {
-                            DialogResult dr = MessageBox.Show("Copy card onto Elite Arcanist?", "Copy card?", MessageBoxButtons.YesNo);
-
-                            Debug.WriteLine("count: {0}", CardStack.Count);
-                            if (dr == DialogResult.Yes)
-                            {
-                                tempCard = mc;
-                                cardAreaHand.CardClicked += new CardArea.CardChosen(cardAreaHand_CardClickedEliteArcanist);
-                            }
-                        }
-                        mc.Activating += new MagicCard.ActiveAbility(Activating_EliteArcanist);
-                        break;
-
-                    case "Bond Beetle":
-                        if (playerTurn)
-                        {
-                            cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClick_BondBeetle);
-                        }
-                        break;
-
-                    case "Fathom Mage":
-                        mc.CountersChanged += new MagicCard.ValueChanged(mc_CountersChangedFathomMage);
-                        break;
-
-                    case "Zameck Guildmage":
-                        mc.Activating += new MagicCard.ActiveAbility(Activating_ZameckGuildmage);
-                        break;
-                }
-                # endregion
-
-                mc.Activate += new MagicCard.ActiveAbility(mc_ActivateCard);
-
-                mc.checkPT();
-
-                //resolve spell
-                //onSpellRes(); //TODO re-enable
-                CardsProc = new List<MagicCard>();
-
-                //final resolution - add card to play.
-                area.PlayCard(mc);
-                update_listViewPlay();
+                throw new NotImplementedException();
             }
             # endregion
 
@@ -474,6 +398,93 @@ namespace MagicProgram
 
             //updateAll();
             return true;
+        }
+
+        private void CheckMana(MagicCard mc)
+        {
+            bool mana = true;
+
+            mc.setMana();
+            if (mc.manaCost.blue > PlArea.mana.blue) { mana = false; }
+            if (mc.manaCost.black > PlArea.mana.black) { mana = false; }
+            if (mc.manaCost.red > PlArea.mana.red) { mana = false; }
+            if (mc.manaCost.green > PlArea.mana.green) { mana = false; }
+            if (mc.manaCost.white > PlArea.mana.white) { mana = false; }
+
+            int g = PlArea.mana.colourless - mc.manaCost.colours;
+
+            if (mc.manaCost.grey > g) { mana = false; }
+
+            if (!mana)
+            {
+                Debug.WriteLine("!mana");
+                bool fal = false;
+                if (fal)
+                {
+                    timerStack.Stop();
+                }
+            }
+            else
+            {
+                PlArea.mana.Subtract(mc.manaCost);
+            }
+        }
+
+        private void PlayCreature(MagicCard mc, PlayArea area)
+        {
+            onCreaCast(mc);
+
+            # region add card specific event handlers
+            switch (mc.Name)
+            {
+                case "Elite Arcanist":
+                    if (playerTurn)
+                    {
+                        DialogResult dr = MessageBox.Show("Copy card onto Elite Arcanist?", "Copy card?", MessageBoxButtons.YesNo);
+
+                        Debug.WriteLine("count: {0}", CardStack.Count);
+                        if (dr == DialogResult.Yes)
+                        {
+                            tempCard = mc;
+                            cardAreaHand.CardClicked += new CardArea.CardChosen(cardAreaHand_CardClickedEliteArcanist);
+                        }
+                    }
+                    mc.Activating += new MagicCard.ActiveAbility(Activating_EliteArcanist);
+                    break;
+
+                case "Bond Beetle":
+                    if (playerTurn)
+                    {
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClick_BondBeetle);
+                    }
+                    break;
+
+                case "Fathom Mage":
+                    mc.CountersChanged += new MagicCard.ValueChanged(mc_CountersChangedFathomMage);
+                    break;
+
+                case "Zameck Guildmage":
+                    mc.Activating += new MagicCard.ActiveAbility(Activating_ZameckGuildmage);
+                    break;
+            }
+            # endregion
+
+            mc.Activate += new MagicCard.ActiveAbility(mc_ActivateCard);
+
+            if (!mc.Token && mc.Text.Contains("At the beginning of your upkeep, if this creature isn't a token, put a token onto the battlefield that's a copy of this creature."))
+            {
+                mc.OnUpkeep += new MagicCard.PassiveAbility(Upkeep_ProgenitorMimic);
+            }
+
+            mc.checkPT();
+
+            //resolve spell
+            //onSpellRes(); //TODO re-enable
+            CardsProc = new List<MagicCard>();
+
+            //final resolution - add card to play.
+            area.PlayCard(mc);
+            update_listViewPlay();
         }
 
         void mc_OnEquip(MagicCard mc)
@@ -488,7 +499,7 @@ namespace MagicProgram
         {
             tempCard.Parent = mc;
             tempCard.callOnEquip();
-            mc.AddEquipment(tempCard);            
+            mc.AddEquipment(tempCard);
             tempCard = null;
             update_listViewPlay();
             cardAreaPlay.CardClicked -= cardAreaPlay_CardEquip;
@@ -544,24 +555,33 @@ namespace MagicProgram
 
         public void PrePlay(MagicCard mc)
         {
-            int x = 0;
-            string cost = mc.Cost.ToUpper();
-            int count = cost.Count(c => c == 'X');
-            ColourCost Cost = new ColourCost();
-            mc.Xvalue = 0;
-            //Debug.WriteLine("X value was {0}", mc.Xvalue);
             mc.setMana();
 
+            //mana check
             if (!PlArea.mana.Compare(mc.manaCost))
             {
-                Debug.WriteLine("Not enough mana to play card");
                 return;
             }
 
             mc.callPrePlay();
 
-            if (cost.Contains("X"))
+            string cost = mc.Cost.ToUpper();
+            # region no x in cost
+            if (!cost.Contains("X"))
             {
+                {
+                    PlayCard(mc);
+                }
+            }
+            # endregion
+            # region x in cost
+            else
+            {
+                int x = 0;
+                int count = cost.Count(c => c == 'X');
+                ColourCost Cost = new ColourCost();
+                mc.Xvalue = 0;
+
                 for (int c = 0; c < cost.Length; c++)
                 {
                     char j = mc.Cost[c];
@@ -571,26 +591,26 @@ namespace MagicProgram
                     }
                 }
 
-                CardStack.Add(mc);
-
                 mc.Initialise();
+                tempCard = mc;
+                xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
                 PickerShow(count, mc.manaCost);
                 ViewCard(mc);
+            }
+            # endregion
+        }
 
+        private void PlayCard(MagicCard mc)
+        {
+            if (mc.Type.ToUpper().Contains("LAND"))
+            {
+                Debug.WriteLine("PrePlay - UseCard");
+                useCard(mc);
             }
             else
             {
-                //useCard(mc);
-                if (mc.Type.ToUpper().Contains("LAND"))
-                {
-                    Debug.WriteLine("PrePlay - UseCard");
-                    useCard(mc);
-                }
-                else
-                {
-                    Debug.WriteLine("PrePlay - AddToStack");
-                    AddToStack(mc);
-                }
+                Debug.WriteLine("PrePlay - AddToStack");
+                AddToStack(mc);
             }
         }
 
@@ -605,53 +625,34 @@ namespace MagicProgram
 
         void picker_ValuePicked(int value, int count)
         {
-            //TODO very messy method
-            //needs simplifying to:
-            /* calculate minimum/current mana cost
-             * check if there is enough mana for minimum
-             * check if there are multiple targets
-             * check if there is a value of X in the spell
-             * show picker for either/both of above
-             */
-
             xPicker.Hide();
+            MagicCard mc = viewCard;
 
-            if (CardStack.Count < 1)
+            if (mc == null)
             {
-                //Debug.WriteLine("No cards on the stack to replace X with.");
                 return;
             }
 
-            ColourCost cc = CardStack[0].manaCost;
-            CardStack[0].Xvalue = value;
+            ColourCost cc = mc.manaCost;
+            mc.Xvalue = value;
 
-            CardStack[0].Targets = (int)numTargets.Value;
+            mc.Targets = (int)numTargets.Value;
 
             # region set targeting and cost
             //TODO replace with actual cost
             //consider Strive, kicker && multikicker etc.
-
-            if (CardStack[0].Text.ToUpper().Contains("KICKER"))
+            if (mc.Text.ToUpper().Contains("KICKER"))
             {
-                cc.grey += ((int)numTargets.Value - 1) * CardStack[0].AdditionalCost;
+                cc.grey += ((int)numTargets.Value - 1) * mc.AdditionalCost;
             }
             # endregion
 
-            //if (CardStack[0].Text.ToUpper().Contains("KICKER"))
-            //{
-            //    int c = PlArea.mana.CompareInt(cc);
-
-            //    PickerShow(c, new ColourCost { grey = 1 });
-            //}
-            //else
-            //{
             if (PlArea.mana.Compare(cc))
             {
-                Debug.WriteLine("Picker_ValuePicked - UseCard");
-                useCard(CardStack[0]);
+                PlayCard(mc);
             }
-            CardStack.RemoveAt(0);
-            //}
+
+            xPicker.ValuePicked -= picker_ValuePicked;
         }
 
         void xPicker_ValuePicked_StrengthTajuru(int value, int count)
@@ -1090,8 +1091,28 @@ namespace MagicProgram
         private void AddToStack(MagicCard mc)
         {
             Debug.WriteLine("AddToStack({0}", mc.Name);
-            CardStack.Add(mc);
+            if (mc.Name == "Progenitor Mimic")
+            {
+                tempCard = mc;
+                PlArea._hand.cards.Remove(mc);
+                cardAreaHand.RemoveCard(mc);
+
+                cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_CardClickedProgenitorMimic);
+            }
+            else
+            {
+                CardStack.Add(mc);
+                timerStack.Start();
+            }
+        }
+
+        void cardAreaPlay_CardClickedProgenitorMimic(MagicCard mc, MouseEventArgs e)
+        {
+            MagicCard mcn = new MagicCard(mc);
+            mcn.Text += "\r\nAt the beginning of your upkeep, if this creature isn't a token, put a token onto the battlefield that's a copy of this creature.";
+            CardStack.Add(mcn);
             timerStack.Start();
+            cardAreaPlay.CardClicked -= cardAreaPlay_CardClickedProgenitorMimic;
         }
 
         private void timerStack_Tick(object sender, EventArgs e)
@@ -1106,6 +1127,10 @@ namespace MagicProgram
             {
                 //CardStack[i].Resolve();   //Final method?
                 MagicCard mc = CardStack[i];
+                if (mc.Name == "Protean Hydra")
+                {
+                    break;
+                }
 
                 Debug.WriteLine("ProcStack - UseCard");
                 CardStack.Remove(mc);
@@ -1357,7 +1382,9 @@ namespace MagicProgram
                     if (listViewOppCrea.SelectedItems.Count > 0)
                     {
                         int ind = listViewOppCrea.SelectedIndices[0];
-                        OppArea._play.cards[ind].callDestroyed();
+                        MagicCard mc = OppArea._play.cards[ind];
+                        mc.callDestroyed();
+                        OppArea._play.cards.Remove(mc);
                         updateOppSide();
                         e.Handled = true;
                     }
@@ -1368,6 +1395,62 @@ namespace MagicProgram
         private void listView_MouseClick(object sender, MouseEventArgs e)
         {
 
+        }
+        # endregion
+
+        # region cPanel
+        private void xPicker_Cancel()
+        {
+            xPicker.Hide();
+            if (CardStack.Count > 0)
+            {
+                CardStack.RemoveAt(0);
+            }
+        }
+
+        private void buttonCPanelHide_Click(object sender, EventArgs e)
+        {
+            viewCard = null;
+            cPanelControls.Hide();
+        }
+
+        private void buttonCardChoose_Click(object sender, EventArgs e)
+        {
+            int i = comboCardPicker.SelectedIndex;
+            if (i >= 0 && i < PickList.Count)
+            {
+                MagicCard mc = PickList[i];
+                onCardChosen(mc);
+            }
+
+            buttonCardChoose.Visible = false;
+            comboCardPicker.Visible = false;
+            cPanelControls.Visible = false;
+        }
+
+        private void ViewCard(MagicCard mc)
+        {
+            panel1.Controls.Clear();
+            viewCard = mc;
+
+            CardViewer cardViewer1 = new CardViewer();
+            cardViewer1.LoadCard(mc);
+
+            panel1.Controls.Add(cardViewer1);
+            cPanelControls.Show();
+            panel1.Show();
+            panel1.BringToFront();
+
+            int count = mc.attachedCards.Count;
+            panel1.Width = 200 * (1 + count);
+            for (int i = 0; i < count; i++)
+            {
+                CardViewer cv = new CardViewer();
+                panel1.Controls.Add(cv);
+                cv.Show();
+                cv.Left = (panel1.Controls.Count - 1) * 200;
+                cv.LoadCard(mc.attachedCards[i]);
+            }
         }
         # endregion
 
@@ -1439,12 +1522,58 @@ namespace MagicProgram
 
         }
 
+        private void panel1_VisibleChanged(object sender, EventArgs e)
+        {
+            if (!panel1.Visible)
+            {
+                panel1.Controls.Clear();
+            }
+        }
+
+        private void panelOppEnch_Click(object sender, EventArgs e)
+        {
+            //Debug.WriteLine(panelOppEnch.Height);
+        }
+
+        private void viewDebugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //richTextBox1.Visible = true;
+            cPanelControls.Show();
+        }
+
+        private void landAreaPlay_KeyUp(object sender, KeyEventArgs e)
+        {
+            update_listViewPlay();
+        }
+
+        void cv_VisibleChanged(object sender, EventArgs e)
+        {
+            Control ct = sender as Control;
+            if (ct.Visible == false)
+            {
+                ct.Dispose();
+            }
+        }
+
         # region timer ticking
         void t1_Tick(object sender, EventArgs e)
         {
             t1.Stop();
 
             //updateListViews();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Maximum = 100;
+            progressBar1.Step = (timer1.Interval * 100) / timer2.Interval;
+            progressBar1.PerformStep();
+
+            if (progressBar1.Value == progressBar1.Maximum)
+            {
+                callPhaseChanged();
+                progressBar1.Value = 0;
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -1499,14 +1628,31 @@ namespace MagicProgram
         void OnAttack_ExplorersScope(MagicCard mc)
         {
             //TODO not getting hooked up
-            MagicCard mcl = PlArea._stack.cards[0];
-            if (mcl.Type.Contains("Land"))
+            MagicCard tempCard = PlArea._stack.cards[0];
+            ViewCard(tempCard);
+
+            if (tempCard.Type.Contains("Land"))
             {
-                AddToStack(mcl);
-                mcl.Tap(true, true);
+                cPanelControls.VisibleChanged += new EventHandler(cPanelControls_VisibleChanged);
             }
         }
+
+        void cPanelControls_VisibleChanged(object sender, EventArgs e)
+        {
+            MagicCard mc = PlArea._stack.cards[0];
+            PlArea._lands.Add(mc);
+            PlArea._stack.cards.Remove(mc);
+            mc._Tapped = true;
+
+            cPanelControls.VisibleChanged -= cPanelControls_VisibleChanged;
+        }
         # endregion
+
+        void Upkeep_ProgenitorMimic(MagicCard mc)
+        {
+            PlayArea area = PlArea;
+            AddToStack(new MagicCard(mc));            
+        }
 
         void Activating_OozeFlux(MagicCard mc, int index)
         {
@@ -1957,14 +2103,6 @@ namespace MagicProgram
         }
         # endregion
 
-        private void panel1_VisibleChanged(object sender, EventArgs e)
-        {
-            if (!panel1.Visible)
-            {
-                panel1.Controls.Clear();
-            }
-        }
-
         # region collapsiblePanels
         private void collapsiblePanel2_CollapsedChanged()
         {
@@ -1990,34 +2128,6 @@ namespace MagicProgram
             }
         }
         # endregion
-
-        private void panelOppEnch_Click(object sender, EventArgs e)
-        {
-            //Debug.WriteLine(panelOppEnch.Height);
-        }
-
-        private void xPicker_Cancel()
-        {
-            xPicker.Hide();
-            if (CardStack.Count > 0)
-            {
-                CardStack.RemoveAt(0);
-            }
-        }
-
-        private void buttonCardChoose_Click(object sender, EventArgs e)
-        {
-            int i = comboCardPicker.SelectedIndex;
-            if (i >= 0 && i < PickList.Count)
-            {
-                MagicCard mc = PickList[i];
-                onCardChosen(mc);
-            }
-
-            buttonCardChoose.Visible = false;
-            comboCardPicker.Visible = false;
-            cPanelControls.Visible = false;
-        }
 
         private static bool CheckValidCards()
         {
@@ -2048,70 +2158,6 @@ namespace MagicProgram
             comboCardPicker.Visible = true;
         }
         # endregion
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            viewCard = null;
-            cPanelControls.Hide();
-        }
-
-        private void viewDebugToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //richTextBox1.Visible = true;
-            cPanelControls.Show();
-        }
-
-        private void landAreaPlay_KeyUp(object sender, KeyEventArgs e)
-        {
-            update_listViewPlay();
-        }
-
-        private void ViewCard(MagicCard mc)
-        {
-            panel1.Controls.Clear();
-            viewCard = mc;
-
-            CardViewer cardViewer1 = new CardViewer();
-            cardViewer1.LoadCard(mc);
-
-            panel1.Controls.Add(cardViewer1);
-            cPanelControls.Show();
-            panel1.Show();
-            panel1.BringToFront();
-
-            int count = mc.attachedCards.Count;
-            panel1.Width = 200 * (1 + count);
-            for (int i = 0; i < count; i++)
-            {
-                CardViewer cv = new CardViewer();
-                panel1.Controls.Add(cv);
-                cv.Show();
-                cv.Left = (panel1.Controls.Count - 1) * 200;
-                cv.LoadCard(mc.attachedCards[i]);
-            }
-        }
-
-        void cv_VisibleChanged(object sender, EventArgs e)
-        {
-            Control ct = sender as Control;
-            if (ct.Visible == false)
-            {
-                ct.Dispose();
-            }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            progressBar1.Maximum = 100;
-            progressBar1.Step = (timer1.Interval * 100) / timer2.Interval;
-            progressBar1.PerformStep();
-
-            if (progressBar1.Value == progressBar1.Maximum)
-            {
-                callPhaseChanged();
-                progressBar1.Value = 0;
-            }
-        }
     }
 
     public class PlayArea

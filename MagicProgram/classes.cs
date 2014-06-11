@@ -338,6 +338,7 @@ namespace MagicProgram
         public event PassiveAbility Evolving;
         public event ActiveAbility Activate;
         public event ActiveAbility Activating;
+        public event PassiveAbility OnUpkeep;
         public event PassiveAbility OnAttack;
         public event PassiveAbility OnEquip;
         public event PassiveAbility OnUnequip;
@@ -357,6 +358,15 @@ namespace MagicProgram
         public void callResolving()
         {
             CardUse handler = Resolving;
+            if (handler != null)
+            {
+                handler(this);
+            }
+        }
+
+        public void callOnUpkeep()
+        {
+            PassiveAbility handler = OnUpkeep;
             if (handler != null)
             {
                 handler(this);
@@ -693,6 +703,7 @@ namespace MagicProgram
         # region card actions
         public void UpkeepCard()
         {
+            callOnUpkeep();
             Sick = false;
             Tapped = false;
         }
