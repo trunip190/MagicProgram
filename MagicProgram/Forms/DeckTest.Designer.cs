@@ -544,7 +544,6 @@
             this.xPicker.TabIndex = 4;
             this.xPicker.Value = 0;
             this.xPicker.Visible = false;
-            this.xPicker.ValuePicked += new MagicProgram.XManaPicker.IntReturn(this.picker_ValuePicked);
             this.xPicker.Cancel += new System.Action(this.xPicker_Cancel);
             // 
             // panel5

@@ -229,7 +229,7 @@ Draw a card.</Text>
 Choose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -300,23 +300,6 @@ Whenever a +1/+1 counter is placed on Fathom Mage, you may draw a card.</Text>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Explore</Name>
-    <Edition>WWK</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT />
-    <Type>Sorcery</Type>
-    <Text>You may play an additional land this turn.;
-Draw a card.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Gaea's Blessing</Name>
     <Edition>WL</Edition>
     <Rarity>U</Rarity>
@@ -329,7 +312,41 @@ Draw a card.;
 When Gaea�s Blessing is put into your graveyard from your library, shuffle your graveyard into your library.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Polymorphous Rush</Name>
+    <Edition>NYX</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Strive — Polymorphous Rush costs {1}{U} more to cast for each target beyond the first.
+Choose a creature on the battlefield. Any number of target creatures you control each become a copy of that creature until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Solidarity of Heroes</Name>
+    <Edition>NYX</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Strive — Solidarity of Heroes costs {1}{G} more to cast for each target beyond the first.
+Choose any number of target creatures. Double the number of +1/+1 counters on each of them.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

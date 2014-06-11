@@ -614,47 +614,6 @@ namespace MagicProgram
             }
         }
 
-        private void PickerShow(int MaxCount, ColourCost cost)
-        {
-            xPicker.Cost = cost;
-            xPicker.Mana = PlArea.mana;
-            xPicker.Value = 0;
-            xPicker.Show(MaxCount);
-            xPicker.BringToFront();
-        }
-
-        void picker_ValuePicked(int value, int count)
-        {
-            xPicker.Hide();
-            MagicCard mc = viewCard;
-
-            if (mc == null)
-            {
-                return;
-            }
-
-            ColourCost cc = mc.manaCost;
-            mc.Xvalue = value;
-
-            mc.Targets = (int)numTargets.Value;
-
-            # region set targeting and cost
-            //TODO replace with actual cost
-            //consider Strive, kicker && multikicker etc.
-            if (mc.Text.ToUpper().Contains("KICKER"))
-            {
-                cc.grey += ((int)numTargets.Value - 1) * mc.AdditionalCost;
-            }
-            # endregion
-
-            if (PlArea.mana.Compare(cc))
-            {
-                PlayCard(mc);
-            }
-
-            xPicker.ValuePicked -= picker_ValuePicked;
-        }
-
         void xPicker_ValuePicked_StrengthTajuru(int value, int count)
         {
             //TODO potentially redundant
@@ -1428,6 +1387,49 @@ namespace MagicProgram
             cPanelControls.Visible = false;
         }
 
+        private void PickerShow(int MaxCount, ColourCost cost)
+        {
+            xPicker.Cost = cost;
+            xPicker.Mana = PlArea.mana;
+            xPicker.Value = 0;
+            xPicker.Show(MaxCount);
+            xPicker.BringToFront();
+        }
+
+        void picker_ValuePicked(int value, int count)
+        {
+            //TODO this was just copied off of git, and may be wrong
+            xPicker.Hide();
+            MagicCard mc = viewCard;
+
+            if (mc == null)
+            {
+                return;
+            }
+
+            ColourCost cc = mc.manaCost;
+            mc.Xvalue = value;
+
+            mc.Targets = (int)numTargets.Value;
+
+            # region set targeting and cost
+            //TODO replace with actual cost
+            //consider Strive, kicker && multikicker etc.
+            if (mc.Text.ToUpper().Contains("KICKER"))
+            {
+                cc.grey += ((int)numTargets.Value - 1) * mc.AdditionalCost;
+            }
+            # endregion
+
+            if (PlArea.mana.Compare(cc))
+            {
+                PlayCard(mc);
+            }
+
+            xPicker.ValuePicked -= picker_ValuePicked;
+
+        }
+
         private void ViewCard(MagicCard mc)
         {
             panel1.Controls.Clear();
@@ -1651,7 +1653,9 @@ namespace MagicProgram
         void Upkeep_ProgenitorMimic(MagicCard mc)
         {
             PlayArea area = PlArea;
-            AddToStack(new MagicCard(mc));            
+            MagicCard mcn = new MagicCard(mc);
+            mcn.Token = true;
+            AddToStack(mcn);            
         }
 
         void Activating_OozeFlux(MagicCard mc, int index)
