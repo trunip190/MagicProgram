@@ -156,9 +156,9 @@ namespace MagicProgram
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                clearAll();
+                //clearAll();
                 filepath = ofd.FileName;
-                LoadFile(filepath);
+                ImportFile(filepath);
             }
         }
 
@@ -206,7 +206,7 @@ namespace MagicProgram
         void mru_Click(object sender, EventArgs e)
         {
             Output.Write("mru_Click({0}, {1})", sender, e);
-            clearAll();
+            //clearAll();
 
             ToolStripItem tsi = sender as ToolStripItem;
 
@@ -222,13 +222,14 @@ namespace MagicProgram
                 Output.Write("Opening {0}.", filepath);
                 if (ext == ".mcxl")
                 {
+                    clearAll();
                     Output.Write("Loading serial.");
                     Serial_Load(filepath);
                 }
                 else if (ext == ".csv" || ext == ".txt")
                 {
                     Output.Write("Loading raw.");
-                    LoadFile(filepath);
+                    ImportFile(filepath);
                 }
             }
         }
@@ -1039,10 +1040,11 @@ namespace MagicProgram
             }
         }
 
-        private void LoadFile(string file)
+        private void ImportFile(string file)
         {
             if (!File.Exists(file))
-                return;
+            { return; }
+            int zero = LibCards.cards.Count;
 
             using (StreamReader reader = new StreamReader(file))
             {

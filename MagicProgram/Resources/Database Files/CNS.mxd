@@ -1,0 +1,3284 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Academy Elite</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>3U</Cost>
+    <PT>0/0</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>Academy Elite enters the battlefield with X +1/+1 counters on it, where X is the number of instant and sorcery cards in all graveyards.
+{2}{U}, Remove a +1/+1 counter from Academy Elite: Draw a card, then discard a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Æther Searcher</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>7</Cost>
+    <PT>6/4</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>Reveal Æther Searcher as you draft it. Reveal the next card you draft and note its name.
+When Æther Searcher enters the battlefield, you may search your hand and/or library for a card with a name noted as you drafted cards named Æther Searcher. You may cast it without paying its mana cost. If you searched your library this way, shuffle it.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Æther Tradewinds</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Return target permanent you control and target permanent you don't control to their owners' hands.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Agent of Acquisitions</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2</Cost>
+    <PT>2/1</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>Draft Agent of Acquisitions face up.
+Instead of drafting a card from a booster pack, you may draft each card in that booster pack, one at a time. If you do, turn Agent of Acquisitions face down and you can't draft cards for the rest of this draft round. (You may look at booster packs passed to you.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Air Servant</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4U</Cost>
+    <PT>4/3</PT>
+    <Type>Creature — Elemental</Type>
+    <Text>Flying
+{2}{U}: Tap target creature with flying.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ajani's Sunstriker</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>WW</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Cat Cleric</Type>
+    <Text>Lifelink (Damage dealt by this creature also causes you to gain that much life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Altar of Dementia</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>Sacrifice a creature: Target player puts a number of cards equal to the sacrificed creature's power from the top of his or her library into his or her graveyard.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Altar's Reap</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1B</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>As an additional cost to cast Altar's Reap, sacrifice a creature.
+Draw two cards.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Apex Hawks</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Bird</Type>
+    <Text>Multikicker {1}{W} (You may pay an additional {1}{W} any number of times as you cast this spell.
+Flying
+Apex Hawks enters the battlefield with a +1/+1 counter on it for each time it was kicked.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Assassinate</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2B</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Destroy target tapped creature.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Barbed Shocker</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3R</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Insect</Type>
+    <Text>Trample, haste
+Whenever Barbed Shocker deals damage to a player, that player discards all the cards in his or her hand, then draws that many cards.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Basandra, Battle Seraph</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>3RW</Cost>
+    <PT>4/4</PT>
+    <Type>Legendary Creature — Angel</Type>
+    <Text>Flying
+Players can't cast spells during combat.
+{R}: Target creature attacks this turn if able.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Bite of the Black Rose</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3B</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Will of the council — Starting with you, each player votes for sickness or psychosis. If sickness gets more votes, creatures your opponents control get -2/-2 until end of turn. If psychosis gets more votes or the vote is tied, each opponent discards two cards.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Boldwyr Intimidator</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>5RR</Cost>
+    <PT>5/5</PT>
+    <Type>Creature — Giant Warrior</Type>
+    <Text>Cowards can't block Warriors.
+{R}: Target creature becomes a Coward until end of turn.
+{2}{R}: Target creature becomes a Warrior until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Brago, King Eternal</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2WU</Cost>
+    <PT>2/4</PT>
+    <Type>Legendary Creature — Spirit</Type>
+    <Text>Flying
+When Brago, King Eternal deals combat damage to a player, exile any number of target nonland permanents you control, then return those cards to the battlefield under their owner's control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Brago's Representative</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT>1/4</PT>
+    <Type>Creature — Human Advisor</Type>
+    <Text>While voting, you get an additional vote. (The votes can be for different choices or for the same choice.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Brainstorm</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Draw three cards, then put two cards from your hand on top of your library in any order.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Breakthrough</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>XU</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Draw four cards, then choose X cards in your hand and discard the rest.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Brimstone Volley</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Brimstone Volley deals 3 damage to target creature or player.
+Morbid — Brimstone Volley deals 5 damage to that creature or player instead if a creature died this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Canal Dredger</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>4</Cost>
+    <PT>1/5</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>Draft Canal Dredger face up.
+Each player passes the last card from each booster pack to a player who drafted a card named Canal Dredger.
+{T}: Put target card from your graveyard on the bottom of your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Charging Rhino</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3GG</Cost>
+    <PT>4/4</PT>
+    <Type>Creature — Rhino</Type>
+    <Text>Charging Rhino can't be blocked by more than one creature.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Chartooth Cougar</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>5R</Cost>
+    <PT>4/4</PT>
+    <Type>Creature — Cat Beast</Type>
+    <Text>{R}: Chartooth Cougar gets +1/+0 until end of turn.
+Mountaincycling {2} ({2}, Discard this card: Search your library for a Mountain card, reveal it, and put it into your hand. Then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cinder Wall</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT>3/3</PT>
+    <Type>Creature — Wall</Type>
+    <Text>Defender
+When Cinder Wall blocks, destroy it at end of combat.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Coercive Portal</Name>
+    <Edition>CNS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>4</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>Will of the council — At the beginning of your upkeep, starting with you, each player votes for carnage or homage. If carnage gets more votes, sacrifice Coercive Portal and destroy all nonland permanents. If homage gets more votes or the vote is tied, draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cogwork Grinder</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>6</Cost>
+    <PT>0/0</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>Draft Cogwork Grinder face up.
+As you draft a card, you may remove it from the draft face down. (Those cards aren't in your card pool.
+Cogwork Grinder enters the battlefield with X +1/+1 counters on it, where X is the number of cards you removed from the draft with cards named Cogwork Grinder.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cogwork Librarian</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>4</Cost>
+    <PT>3/3</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>Draft Cogwork Librarian face up.
+As you draft a card, you may draft an additional card from that booster pack. If you do, put Cogwork Librarian into that booster pack.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cogwork Spy</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3</Cost>
+    <PT>2/1</PT>
+    <Type>Artifact Creature — Bird Construct</Type>
+    <Text>Reveal Cogwork Spy as you draft it. You may look at the next card drafted from this booster pack.
+Flying</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cogwork Tracker</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4</Cost>
+    <PT>4/4</PT>
+    <Type>Artifact Creature — Hound Construct</Type>
+    <Text>Reveal Cogwork Tracker as you draft it and note the player who passed it to you.
+Cogwork Tracker attacks each turn if able.
+Cogwork Tracker attacks a player you noted for cards named Cogwork Tracker each turn if able.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Compulsive Research</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Target player draws three cards. Then that player discards two cards unless he or she discards a land card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Copperhorn Scout</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Elf Scout</Type>
+    <Text>Whenever Copperhorn Scout attacks, untap each other creature you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Council Guardian</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>5W</Cost>
+    <PT>5/5</PT>
+    <Type>Creature — Giant Soldier</Type>
+    <Text>Will of the council — When Council Guardian enters the battlefield, starting with you, each player votes for blue, black, red, or green. Council Guardian gains protection from each color with the most votes or tied for most votes.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Council's Judgment</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1WW</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Will of the council — Starting with you, each player votes for a nonland permanent you don't control. Exile each permanent with the most votes or tied for most votes.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Courier Hawk</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1W</Cost>
+    <PT>1/2</PT>
+    <Type>Creature — Bird</Type>
+    <Text>Flying, vigilance</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Crookclaw Transmuter</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3U</Cost>
+    <PT>3/1</PT>
+    <Type>Creature — Bird Wizard</Type>
+    <Text>Flash (You may cast this spell any time you could cast an instant.
+Flying
+When Crookclaw Transmuter enters the battlefield, switch target creature's power and toughness until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Custodi Soulbinders</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>3W</Cost>
+    <PT>0/0</PT>
+    <Type>Creature — Human Cleric</Type>
+    <Text>Custodi Soulbinders enters the battlefield with X +1/+1 counters on it, where X is the number of other creatures on the battlefield.
+{2}{W}, Remove a +1/+1 counter from Custodi Soulbinders: Put a 1/1 white Spirit creature token with flying onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Custodi Squire</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>4W</Cost>
+    <PT>3/3</PT>
+    <Type>Creature — Spirit Cleric</Type>
+    <Text>Flying
+Will of the council — When Custodi Squire enters the battlefield, starting with you, each player votes for an artifact, creature, or enchantment card in your graveyard. Return each card with the most votes or tied for most votes to your hand.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dack Fayden</Name>
+    <Edition>CNS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>1UR</Cost>
+    <PT />
+    <Type>Planeswalker — Dack</Type>
+    <Text>+1: Target player draws two cards, then discards two cards.
+-2: Gain control of target artifact.
+-6: You get an emblem with "Whenever you cast a spell that targets one or more permanents, gain control of those permanents."</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dack's Duplicate</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2UR</Cost>
+    <PT>0/0</PT>
+    <Type>Creature — Shapeshifter</Type>
+    <Text>You may have Dack's Duplicate enter the battlefield as a copy of any creature on the battlefield except it gains haste and dethrone. (Whenever it attacks the player with the most life or tied for most life, put a +1/+1 counter on it.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Deal Broker</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>3</Cost>
+    <PT>2/3</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>Draft Deal Broker face up.
+Immediately after the draft, you may reveal a card in your card pool. Each other player may offer you one card in his or her card pool in exchange. You may accept any one offer.
+{T}: Draw a card, then discard a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Deathforge Shaman</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4R</Cost>
+    <PT>4/3</PT>
+    <Type>Creature — Ogre Shaman</Type>
+    <Text>Multikicker {R} (You may pay an additional {R} any number of times as you cast this spell.
+When Deathforge Shaman enters the battlefield, it deals damage to target player equal to twice the number of times it was kicked.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Deathreap Ritual</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2BG</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Morbid — At the beginning of each end step, if a creature died this turn, you may draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Deathrender</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>4</Cost>
+    <PT />
+    <Type>Artifact — Equipment</Type>
+    <Text>Equipped creature gets +2/+2.
+Whenever equipped creature dies, you may put a creature card from your hand onto the battlefield and attach Deathrender to it.
+Equip {2}</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Decimate</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2RG</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Destroy target artifact, target creature, target enchantment, and target land.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dimir Doppelganger</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1UB</Cost>
+    <PT>0/2</PT>
+    <Type>Creature — Shapeshifter</Type>
+    <Text>{1}{U}{B}: Exile target creature card from a graveyard. Dimir Doppelganger becomes a copy of that card and gains this ability.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Doomed Traveler</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Soldier</Type>
+    <Text>When Doomed Traveler dies, put a 1/1 white Spirit creature token with flying onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Drakestown Forgotten</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>4B</Cost>
+    <PT>0/0</PT>
+    <Type>Creature — Zombie</Type>
+    <Text>Drakestown Forgotten enters the battlefield with X +1/+1 counters on it, where X is the number of creature cards in all graveyards.
+{2}{B}, Remove a +1/+1 counter from Drakestown Forgotten: Target creature gets -1/-1 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dream Fracture</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1UU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Counter target spell. Its controller draws a card.
+Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Echoing Courage</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Target creature and all other creatures with the same name as that creature get +2/+2 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Edric, Spymaster of Trest</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1GU</Cost>
+    <PT>2/2</PT>
+    <Type>Legendary Creature — Elf Rogue</Type>
+    <Text>Whenever a creature deals combat damage to one of your opponents, its controller may draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Elephant Guide</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2G</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+Enchanted creature gets +3/+3.
+When enchanted creature dies, put a 3/3 green Elephant creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Elvish Aberration</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>5G</Cost>
+    <PT>4/5</PT>
+    <Type>Creature — Elf Mutant</Type>
+    <Text>{T}: Add {G}{G}{G} to your mana pool.
+Forestcycling {2} ({2}, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand. Then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Enclave Elite</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Merfolk Soldier</Type>
+    <Text>Multikicker {1}{U} (You may pay an additional {1}{U} any number of times as you cast this spell.
+Islandwalk
+Enclave Elite enters the battlefield with a +1/+1 counter on it for each time it was kicked.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Enraged Revolutionary</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2R</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Human Warrior</Type>
+    <Text>Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Exploration</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>G</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>You may play an additional land on each of your turns.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Explorer's Scope</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1</Cost>
+    <PT />
+    <Type>Artifact — Equipment</Type>
+    <Text>Whenever equipped creature attacks, look at the top card of your library. If it's a land card, you may put it onto the battlefield tapped.
+Equip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Extract from Darkness</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3UB</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Each player puts the top two cards of his or her library into his or her graveyard. Then put a creature card from a graveyard onto the battlefield under your control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fact or Fiction</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Favorable Winds</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Creatures you control with flying get +1/+1.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fires of Yavimaya</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1RG</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Creatures you control have haste.
+Sacrifice Fires of Yavimaya: Target creature gets +2/+2 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fireshrieker</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3</Cost>
+    <PT />
+    <Type>Artifact — Equipment</Type>
+    <Text>Equipped creature has double strike. (It deals both first-strike and regular combat damage.
+Equip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Flamewright</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>RW</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Artificer</Type>
+    <Text>{1}, {T}: Put a 1/1 colorless Construct artifact creature token with defender onto the battlefield.
+{T}, Sacrifice a creature with defender: Flamewright deals 1 damage to target creature or player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Flaring Flame-Kin</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2R</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Elemental Warrior</Type>
+    <Text>As long as Flaring Flame-Kin is enchanted, it gets +2/+2, has trample, and has "{R}: Flaring Flame-Kin gets +1/+0 until end of turn."</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Flowstone Blade</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+{R}: Enchanted creature gets +1/-1 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Galvanic Juggernaut</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4</Cost>
+    <PT>5/5</PT>
+    <Type>Artifact Creature — Juggernaut</Type>
+    <Text>Galvanic Juggernaut attacks each turn if able.
+Galvanic Juggernaut doesn't untap during your untap step.
+Whenever another creature dies, untap Galvanic Juggernaut.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gamekeeper</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3G</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Elf</Type>
+    <Text>When Gamekeeper dies, you may exile it. If you do, reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield and put all other cards revealed this way into your graveyard.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Glimmerpoint Stag</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2WW</Cost>
+    <PT>3/3</PT>
+    <Type>Creature — Elk</Type>
+    <Text>Vigilance
+When Glimmerpoint Stag enters the battlefield, exile another target permanent. Return that card to the battlefield under its owner's control at the beginning of the next end step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gnarlid Pack</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Beast</Type>
+    <Text>Multikicker {1}{G} (You may pay an additional {1}{G} any number of times as you cast this spell.
+Gnarlid Pack enters the battlefield with a +1/+1 counter on it for each time it was kicked.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Grenzo, Dungeon Warden</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>XBR</Cost>
+    <PT>2/2</PT>
+    <Type>Legendary Creature — Goblin Rogue</Type>
+    <Text>Grenzo, Dungeon Warden enters the battlefield with X +1/+1 counters on it.
+{2}: Put the bottom card of your library into your graveyard. If it's a creature card with power less than or equal to Grenzo's power, put it onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Grenzo's Cutthroat</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Goblin Rogue</Type>
+    <Text>First strike
+Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Grenzo's Rebuttal</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>4RR</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Put a 4/4 red Ogre creature token onto the battlefield. Starting with you, each player chooses an artifact, a creature, and a land from among the permanents controlled by the player to his or her left. Destroy each permanent chosen this way.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Grixis Illusionist</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>{T}: Target land you control becomes the basic land type of your choice until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Grudge Keeper</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1B</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Zombie Wizard</Type>
+    <Text>Whenever players finish voting, each opponent who voted for a choice you didn't vote for loses 2 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Guardian Zendikon</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant land
+Enchanted land is a 2/6 white Wall creature with defender. It's still a land.
+When enchanted land dies, return that card to its owner's hand.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Heartless Hidetsugu</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>3RR</Cost>
+    <PT>4/3</PT>
+    <Type>Legendary Creature — Ogre Shaman</Type>
+    <Text>{T}: Heartless Hidetsugu deals damage to each player equal to half that player's life total, rounded down.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Heckling Fiends</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2R</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Devil</Type>
+    <Text>{2}{R}: Target creature attacks this turn if able.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Howling Wolf</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2GG</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Wolf</Type>
+    <Text>When Howling Wolf enters the battlefield, you may search your library for up to three cards named Howling Wolf, reveal them, and put them into your hand. If you do, shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Hunger of the Howlpack</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Put a +1/+1 counter on target creature.
+Morbid — Put three +1/+1 counters on that creature instead if a creature died this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Hydra Omnivore</Name>
+    <Edition>CNS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>4GG</Cost>
+    <PT>8/8</PT>
+    <Type>Creature — Hydra</Type>
+    <Text>Whenever Hydra Omnivore deals combat damage to an opponent, it deals that much damage to each other opponent.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ignition Team</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>5RR</Cost>
+    <PT>0/0</PT>
+    <Type>Creature — Goblin Warrior</Type>
+    <Text>Ignition Team enters the battlefield with X +1/+1 counters on it, where X is the number of tapped lands on the battlefield.
+{2}{R}, Remove a +1/+1 counter from Ignition Team: Target land becomes a 4/4 red Elemental creature until end of turn. It's still a land.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ill-Gotten Gains</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2BB</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Exile Ill-Gotten Gains. Each player discards his or her hand, then returns up to three cards from his or her graveyard to his or her hand.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Infectious Horror</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3B</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Zombie Horror</Type>
+    <Text>Whenever Infectious Horror attacks, each opponent loses 2 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Intangible Virtue</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1W</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Creature tokens you control get +1/+1 and have vigilance.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Jetting Glasskite</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4UU</Cost>
+    <PT>4/4</PT>
+    <Type>Creature — Spirit</Type>
+    <Text>Flying
+Whenever Jetting Glasskite becomes the target of a spell or ability for the first time in a turn, counter that spell or ability.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Kor Chant</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>All damage that would be dealt this turn to target creature you control by a source of your choice is dealt to another target creature instead.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Lead the Stampede</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2G</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Look at the top five cards of your library. You may reveal any number of creature cards from among them and put the revealed cards into your hand. Put the rest on the bottom of your library in any order.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Liliana's Specter</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1BB</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Specter</Type>
+    <Text>Flying
+When Liliana's Specter enters the battlefield, each opponent discards a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Lizard Warrior</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3R</Cost>
+    <PT>4/2</PT>
+    <Type>Creature — Lizard Warrior</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Lore Seeker</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2</Cost>
+    <PT>2/2</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>Reveal Lore Seeker as you draft it. After you draft Lore Seeker, you may add a booster pack to the draft. (Your next pick is from that booster pack. Pass it to the next player and it's drafted this draft round.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Lurking Automaton</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>5</Cost>
+    <PT>0/0</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>Reveal Lurking Automaton as you draft it and note how many cards you've drafted this draft round, including Lurking Automaton.
+Lurking Automaton enters the battlefield with X +1/+1 counters on it, where X is the highest number you noted for cards named Lurking Automaton.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Magister of Worth</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>4WB</Cost>
+    <PT>4/4</PT>
+    <Type>Creature — Angel</Type>
+    <Text>Flying
+Will of the council — When Magister of Worth enters the battlefield, starting with you, each player votes for grace or condemnation. If grace gets more votes, each player returns each creature card from his or her graveyard to the battlefield. If condemnation gets more votes or the vote is tied, destroy all creatures other than Magister of Worth.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Magus of the Mirror</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>4BB</Cost>
+    <PT>4/2</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>{T}, Sacrifice Magus of the Mirror: Exchange life totals with target opponent. Activate this ability only during your upkeep.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mana Geyser</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3RR</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Add {R} to your mana pool for each tapped land your opponents control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Marchesa, the Black Rose</Name>
+    <Edition>CNS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>1UBR</Cost>
+    <PT>3/3</PT>
+    <Type>Legendary Creature — Human Wizard</Type>
+    <Text>Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.
+Other creatures you control have dethrone.
+Whenever a creature you control with a +1/+1 counter on it dies, return that card to the battlefield under your control at the beginning of the next end step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Marchesa's Emissary</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3U</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Human Rogue</Type>
+    <Text>Hexproof (This creature can't be the target of spells or abilities your opponents control.
+Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Marchesa's Infiltrator</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Rogue</Type>
+    <Text>Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.
+Whenever Marchesa's Infiltrator deals combat damage to a player, draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Marchesa's Smuggler</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>UR</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Rogue</Type>
+    <Text>Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.
+{1}{U}{R}: Target creature you control gains haste until end of turn and can't be blocked this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Minamo Scrollkeeper</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>2/3</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>Defender
+Your maximum hand size is increased by one.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mirari's Wake</Name>
+    <Edition>CNS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>3GW</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Creatures you control get +1/+1.
+Whenever you tap a land for mana, add one mana to your mana pool of any type that land produced.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mirrodin's Core</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>{T}: Add {1} to your mana pool.
+{T}: Put a charge counter on Mirrodin's Core.
+{T}, Remove a charge counter from Mirrodin's Core: Add one mana of any color to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Misdirection</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>3UU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>You may exile a blue card from your hand rather than pay Misdirection's mana cost.
+Change the target of target spell with a single target.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Moment of Heroism</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1W</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Target creature gets +2/+2 and gains lifelink until end of turn. (Damage dealt by the creature also causes its controller to gain that much life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Morkrut Banshee</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3BB</Cost>
+    <PT>4/4</PT>
+    <Type>Creature — Spirit</Type>
+    <Text>Morbid — When Morkrut Banshee enters the battlefield, if a creature died this turn, target creature gets -4/-4 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mortify</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1WB</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Destroy target creature or enchantment.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Muzzio, Visionary Architect</Name>
+    <Edition>CNS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>1UU</Cost>
+    <PT>1/3</PT>
+    <Type>Legendary Creature — Human Artificer</Type>
+    <Text>{3}{U}, {T}: Look at the top X cards of your library, where X is the highest converted mana cost among artifacts you control. You may reveal an artifact card from among them and put it onto the battlefield. Put the rest on the bottom of your library in any order.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Nature's Claim</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Destroy target artifact or enchantment. Its controller gains 4 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Necromantic Thirst</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2BB</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+Whenever enchanted creature deals combat damage to a player, you may return target creature card from your graveyard to your hand.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Noble Templar</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>5W</Cost>
+    <PT>3/6</PT>
+    <Type>Creature — Human Cleric Soldier</Type>
+    <Text>Vigilance
+Plainscycling {2} ({2}, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Orcish Cannonade</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1RR</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Orcish Cannonade deals 2 damage to target creature or player and 3 damage to you.
+Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Paliano, the High City</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Legendary Land</Type>
+    <Text>Reveal Paliano, the High City as you draft it. The player to your right chooses a color, you choose another color, then the player to your left chooses a third color.
+{T}: Add one mana to your mana pool of any color chosen as you drafted cards named Paliano, the High City.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Peace Strider</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4</Cost>
+    <PT>3/3</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>When Peace Strider enters the battlefield, you gain 3 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Pelakka Wurm</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4GGG</Cost>
+    <PT>7/7</PT>
+    <Type>Creature — Wurm</Type>
+    <Text>Trample
+When Pelakka Wurm enters the battlefield, you gain 7 life.
+When Pelakka Wurm dies, draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Pernicious Deed</Name>
+    <Edition>CNS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>1BG</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>{X}, Sacrifice Pernicious Deed: Destroy each artifact, creature, and enchantment with converted mana cost X or less.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Phage the Untouchable</Name>
+    <Edition>CNS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>3BBBB</Cost>
+    <PT>4/4</PT>
+    <Type>Legendary Creature — Avatar Minion</Type>
+    <Text>When Phage the Untouchable enters the battlefield, if you didn't cast it from your hand, you lose the game.
+Whenever Phage deals combat damage to a creature, destroy that creature. It can't be regenerated.
+Whenever Phage deals combat damage to a player, that player loses the game.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Pillarfield Ox</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3W</Cost>
+    <PT>2/4</PT>
+    <Type>Creature — Ox</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Pitchburn Devils</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>4R</Cost>
+    <PT>3/3</PT>
+    <Type>Creature — Devil</Type>
+    <Text>When Pitchburn Devils dies, it deals 3 damage to target creature or player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Plagued Rusalka</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>B</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Spirit</Type>
+    <Text>{B}, Sacrifice a creature: Target creature gets -1/-1 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Plated Seastrider</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>UU</Cost>
+    <PT>1/4</PT>
+    <Type>Creature — Beast</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Plea for Power</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>3U</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Will of the council — Starting with you, each player votes for time or knowledge. If time gets more votes, take an extra turn after this one. If knowledge gets more votes or the vote is tied, draw three cards.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Plummet</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Destroy target creature with flying.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Power of Fire</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+Enchanted creature has "{T}: This creature deals 1 damage to target creature or player."</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Predator's Howl</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Put a 2/2 green Wolf creature token onto the battlefield.
+Morbid — Put three 2/2 green Wolf creature tokens onto the battlefield instead if a creature died this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Pride Guardian</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT>0/3</PT>
+    <Type>Creature — Cat Monk</Type>
+    <Text>Defender
+Whenever Pride Guardian blocks, you gain 3 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Pristine Angel</Name>
+    <Edition>CNS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>4WW</Cost>
+    <PT>4/4</PT>
+    <Type>Creature — Angel</Type>
+    <Text>Flying
+As long as Pristine Angel is untapped, it has protection from artifacts and from all colors.
+Whenever you cast a spell, you may untap Pristine Angel.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Provoke</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Untap target creature you don't control. That creature blocks this turn if able.
+Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Quag Vampires</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>B</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Vampire Rogue</Type>
+    <Text>Multikicker {1}{B} (You may pay an additional {1}{B} any number of times as you cast this spell.
+Swampwalk
+Quag Vampires enters the battlefield with a +1/+1 counter on it for each time it was kicked.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Quicksand</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>{T}: Add {1} to your mana pool.
+{T}, Sacrifice Quicksand: Target attacking creature without flying gets -1/-2 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Realm Seekers</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>4GG</Cost>
+    <PT>0/0</PT>
+    <Type>Creature — Elf Scout</Type>
+    <Text>Realm Seekers enters the battlefield with X +1/+1 counters on it, where X is the total number of cards in all players' hands.
+{2}{G}, Remove a +1/+1 counter from Realm Seekers: Search your library for a land card, reveal it, put it into your hand, then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Reckless Scholar</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>{T}: Target player draws a card, then discards a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Reckless Spite</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1BB</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Destroy two target nonblack creatures. You lose 5 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Reflecting Pool</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>{T}: Add to your mana pool one mana of any type that a land you control could produce.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Reign of the Pit</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>4BB</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Each player sacrifices a creature. Put an X/X black Demon creature token with flying onto the battlefield, where X is the total power of the creatures sacrificed this way.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Reito Lantern</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>{3}: Put target card from a graveyard on the bottom of its owner's library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Relic Crush</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Destroy target artifact or enchantment and up to one other target artifact or enchantment.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Respite</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Prevent all combat damage that would be dealt this turn. You gain 1 life for each attacking creature.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Reya Dawnbringer</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>6WWW</Cost>
+    <PT>4/6</PT>
+    <Type>Legendary Creature — Angel</Type>
+    <Text>Flying
+At the beginning of your upkeep, you may return target creature card from your graveyard to the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Rousing of Souls</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Parley — Each player reveals the top card of his or her library. For each nonland card revealed this way, you put a 1/1 white Spirit creature token with flying onto the battlefield. Then each player draws a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Rout</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>3WW</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>You may cast Rout any time you could cast an instant if you pay {2} more to cast it.
+Destroy all creatures. They can't be regenerated.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Runed Servitor</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2</Cost>
+    <PT>2/2</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>When Runed Servitor dies, each player draws a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sakura-Tribe Elder</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Snake Shaman</Type>
+    <Text>Sacrifice Sakura-Tribe Elder: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Scaled Wurm</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>7G</Cost>
+    <PT>7/6</PT>
+    <Type>Creature — Wurm</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Scourge of the Throne</Name>
+    <Edition>CNS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>4RR</Cost>
+    <PT>5/5</PT>
+    <Type>Creature — Dragon</Type>
+    <Text>Flying
+Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.
+Whenever Scourge of the Throne attacks for the first time each turn, if it's attacking the player with the most life or tied for most life, untap all attacking creatures. After this phase, there is an additional combat phase.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Screaming Seahawk</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>4U</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Bird</Type>
+    <Text>Flying
+When Screaming Seahawk enters the battlefield, you may search your library for a card named Screaming Seahawk, reveal it, and put it into your hand. If you do, shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Selvala, Explorer Returned</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1GW</Cost>
+    <PT>2/4</PT>
+    <Type>Legendary Creature — Elf Scout</Type>
+    <Text>Parley — {T}: Each player reveals the top card of his or her library. For each nonland card revealed this way, add {G} to your mana pool and you gain 1 life. Then each player draws a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Selvala's Charge</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4G</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Parley — Each player reveals the top card of his or her library. For each nonland card revealed this way, you put a 3/3 green Elephant creature token onto the battlefield. Then each player draws a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Selvala's Enforcer</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3G</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Elf Warrior</Type>
+    <Text>Parley — When Selvala's Enforcer enters the battlefield, each player reveals the top card of his or her library. For each nonland card revealed this way, put a +1/+1 counter on Selvala's Enforcer. Then each player draws a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Shoreline Ranger</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>5U</Cost>
+    <PT>3/4</PT>
+    <Type>Creature — Bird Soldier</Type>
+    <Text>Flying
+Islandcycling {2} ({2}, Discard this card: Search your library for an Island card, reveal it, and put it into your hand. Then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Silent Arbiter</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>4</Cost>
+    <PT>1/5</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>No more than one creature can attack each combat.
+No more than one creature can block each combat.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Silverchase Fox</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Fox</Type>
+    <Text>{1}{W}, Sacrifice Silverchase Fox: Exile target enchantment.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Skeletal Scrying</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>XB</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>As an additional cost to cast Skeletal Scrying, exile X cards from your graveyard.
+You draw X cards and you lose X life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Skitter of Lizards</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Lizard</Type>
+    <Text>Multikicker {1}{R} (You may pay an additional {1}{R} any number of times as you cast this spell.
+Haste
+Skitter of Lizards enters the battlefield with a +1/+1 counter on it for each time it was kicked.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sky Spirit</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1WU</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Spirit</Type>
+    <Text>Flying, first strike</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Smallpox</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>BB</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Each player loses 1 life, discards a card, sacrifices a creature, then sacrifices a land.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Soulcatcher</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1W</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Bird Soldier</Type>
+    <Text>Flying
+Whenever a creature with flying dies, put a +1/+1 counter on Soulcatcher.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Spectral Searchlight</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>{T}: Choose a player. That player adds one mana of any color he or she chooses to his or her mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Spiritmonger</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>3BG</Cost>
+    <PT>6/6</PT>
+    <Type>Creature — Beast</Type>
+    <Text>Whenever Spiritmonger deals damage to a creature, put a +1/+1 counter on Spiritmonger.
+{B}: Regenerate Spiritmonger.
+{G}: Spiritmonger becomes the color of your choice until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Split Decision</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Will of the council — Choose target instant or sorcery spell. Starting with you, each player votes for denial or duplication. If denial gets more votes, counter the spell. If duplication gets more votes or the vote is tied, copy the spell. You may choose new targets for the copy.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Spontaneous Combustion</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1BR</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>As an additional cost to cast Spontaneous Combustion, sacrifice a creature.
+Spontaneous Combustion deals 3 damage to each creature.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sporecap Spider</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2G</Cost>
+    <PT>1/5</PT>
+    <Type>Creature — Spider</Type>
+    <Text>Reach (This creature can block creatures with flying.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Squirrel Nest</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1GG</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant land
+Enchanted land has "{T}: Put a 1/1 green Squirrel creature token onto the battlefield."</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Stasis Cell</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>4U</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+Enchanted creature doesn't untap during its controller's untap step.
+{3}{U}: Attach Stasis Cell to target creature.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Stave Off</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Target creature gains protection from the color of your choice until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Stifle</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Counter target activated or triggered ability. (Mana abilities can't be targeted.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Stronghold Discipline</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2BB</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Each player loses 1 life for each creature he or she controls.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sulfuric Vortex</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1RR</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>At the beginning of each player's upkeep, Sulfuric Vortex deals 2 damage to that player.
+If a player would gain life, that player gains no life instead.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Swords to Plowshares</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Exile target creature. Its controller gains life equal to its power.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Syphon Soul</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2B</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Syphon Soul deals 2 damage to each other player. You gain life equal to the damage dealt this way.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Terastodon</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>6GG</Cost>
+    <PT>9/9</PT>
+    <Type>Creature — Elephant</Type>
+    <Text>When Terastodon enters the battlefield, you may destroy up to three target noncreature permanents. For each permanent put into a graveyard this way, its controller puts a 3/3 green Elephant creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Torch Fiend</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1R</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Devil</Type>
+    <Text>{R}, Sacrifice Torch Fiend: Destroy target artifact.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Tragic Slip</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>B</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Target creature gets -1/-1 until end of turn.
+Morbid — That creature gets -13/-13 until end of turn instead if a creature died this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Traveler's Cloak</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+As Traveler's Cloak enters the battlefield, choose a land type.
+When Traveler's Cloak enters the battlefield, draw a card.
+Enchanted creature has landwalk of the chosen type.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Treasonous Ogre</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3R</Cost>
+    <PT>2/3</PT>
+    <Type>Creature — Ogre Shaman</Type>
+    <Text>Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.
+Pay 3 life: Add {R} to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Trumpet Blast</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Attacking creatures get +2/+0 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Turn the Tide</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Creatures your opponents control get -2/-0 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Twisted Abomination</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>5B</Cost>
+    <PT>5/3</PT>
+    <Type>Creature — Zombie Mutant</Type>
+    <Text>{B}: Regenerate Twisted Abomination.
+Swampcycling {2} ({2}, Discard this card: Search your library for a Swamp card, reveal it, and put it into your hand. Then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Typhoid Rats</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>B</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Rat</Type>
+    <Text>Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Tyrant's Choice</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1B</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Will of the council — Starting with you, each player votes for death or torture. If death gets more votes, each opponent sacrifices a creature. If torture gets more votes or the vote is tied, each opponent loses 4 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Uncontrollable Anger</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2RR</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Flash (You may cast this spell any time you could cast an instant.
+Enchant creature
+Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Unhallowed Pact</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2B</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+When enchanted creature dies, return that card to the battlefield under your control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Unquestioned Authority</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+When Unquestioned Authority enters the battlefield, draw a card.
+Enchanted creature has protection from creatures.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Valor Made Real</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Target creature can block any number of creatures this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Vampire Hexmage</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>BB</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Vampire Shaman</Type>
+    <Text>First strike
+Sacrifice Vampire Hexmage: Remove all counters from target permanent.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Vedalken Orrery</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>4</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>You may cast nonland cards as though they had flash.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Vent Sentinel</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3R</Cost>
+    <PT>2/4</PT>
+    <Type>Creature — Elemental</Type>
+    <Text>Defender
+{1}{R}, {T}: Vent Sentinel deals damage to target player equal to the number of creatures with defender you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Victimize</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2B</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Choose two target creature cards in your graveyard. Sacrifice a creature. If you do, return the chosen cards to the battlefield tapped.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Volcanic Fallout</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1RR</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Volcanic Fallout can't be countered.
+Volcanic Fallout deals 2 damage to each creature and each player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Vow of Duty</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+Enchanted creature gets +2/+2, has vigilance, and can't attack you or a planeswalker you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wakedancer</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2B</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Human Shaman</Type>
+    <Text>Morbid — When Wakedancer enters the battlefield, if a creature died this turn, put a 2/2 black Zombie creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wakestone Gargoyle</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>3W</Cost>
+    <PT>3/4</PT>
+    <Type>Creature — Gargoyle</Type>
+    <Text>Defender, flying
+{1}{W}: Creatures you control with defender can attack this turn as though they didn't have defender.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Warmonger's Chariot</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2</Cost>
+    <PT />
+    <Type>Artifact — Equipment</Type>
+    <Text>Equipped creature gets +2/+2.
+As long as equipped creature has defender, it can attack as though it didn't have defender.
+Equip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Whispergear Sneak</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1</Cost>
+    <PT>1/1</PT>
+    <Type>Artifact Creature — Construct</Type>
+    <Text>Draft Whispergear Sneak face up.
+During the draft, you may turn Whispergear Sneak face down. If you do, look at any unopened booster pack in the draft or any booster pack not being looked at by another player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wind Dancer</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Faerie</Type>
+    <Text>Flying
+{T}: Target creature gains flying until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wolfbriar Elemental</Name>
+    <Edition>CNS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2GG</Cost>
+    <PT>4/4</PT>
+    <Type>Creature — Elemental</Type>
+    <Text>Multikicker {G} (You may pay an additional {G} any number of times as you cast this spell.
+When Wolfbriar Elemental enters the battlefield, put a 2/2 green Wolf creature token onto the battlefield for each time it was kicked.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wood Sage</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>GU</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Druid</Type>
+    <Text>{T}: Name a creature card. Reveal the top four cards of your library and put all of them with that name into your hand. Put the rest into your graveyard.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Woodvine Elemental</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4GW</Cost>
+    <PT>4/4</PT>
+    <Type>Creature — Elemental</Type>
+    <Text>Trample
+Parley — Whenever Woodvine Elemental attacks, each player reveals the top card of his or her library. For each nonland card revealed this way, attacking creatures you control get +1/+1 until end of turn. Then each player draws a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wrap in Flames</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>3R</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Wrap in Flames deals 1 damage to each of up to three target creatures. Those creatures can't block this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wrap in Vigor</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Regenerate each creature you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Zombie Goliath</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>4B</Cost>
+    <PT>4/3</PT>
+    <Type>Creature — Zombie Giant</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

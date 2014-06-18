@@ -102,12 +102,12 @@ namespace MagicProgram
                 return;
             }
 
-            if (cc.blue == 0) { buttonRed.Visible = false; }
-            if (cc.green == 0) { buttonGreen.Visible = false; }
-            if (cc.red == 0) { buttonRed.Visible = false; }
-            if (cc.white == 0) { buttonWhite.Visible = false; }
-            if (cc.black == 0) { buttonBlack.Visible = false; }
-            if (cc.colourless == 0) { buttonGrey.Visible = false; }
+            if (cc.blue < 1) { buttonRed.Visible = false; } else { buttonRed.Visible = true; }
+            if (cc.green < 1) { buttonGreen.Visible = false; } else { buttonGreen.Visible = true; }
+            if (cc.red < 1) { buttonRed.Visible = false; } else { buttonRed.Visible = true; }
+            if (cc.white < 1) { buttonWhite.Visible = false; } else { buttonWhite.Visible = true; }
+            if (cc.black < 1) { buttonBlack.Visible = false; } else { buttonBlack.Visible = true; }
+            if (cc.colourless < 1) { buttonGrey.Visible = false; } else { buttonGrey.Visible = true; }
 
             bool vis = Visible;
 
@@ -122,20 +122,14 @@ namespace MagicProgram
 
         public void ShowWheel(string s)
         {
-            ColourCost cc = new ColourCost
-            {
-                black = 1,
-                blue = 1,
-                green = 1,
-                red = 1,
-                white = 1
-            };
+            ColourCost cc = new ColourCost();
 
             //parse string
             foreach (char c in s)
             {
                 if (!char.IsNumber(c))
                 {
+                    # region Colour Costs
                     switch (c)
                     {
                         case 'B':
@@ -158,6 +152,7 @@ namespace MagicProgram
                             cc.white++;
                             break;
                     }
+                    # endregion
                 }
             }
 

@@ -42,7 +42,7 @@ namespace MagicProgram
         # region events
         public event Phase SpellRes;
         public event Phase PhaseChanged;
-
+        public event Action onCancel;
 
         private string _phaseName = "Upkeep";
         public string PhaseName
@@ -60,6 +60,15 @@ namespace MagicProgram
 
         public event CardUse CreaCast;
         public event CardUse CardChosen;
+
+        private void callOnCancel()
+        {
+            Action handler = onCancel;
+            if (handler != null)
+            {
+                handler();
+            }
+        }
 
         private void onSpellRes()
         {
@@ -273,6 +282,13 @@ namespace MagicProgram
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(CardChosen_TritonTactics);
                         break;
 
+                    case "Gaea's Blessing":
+                        targets = 3;
+                        comboCardPicker_Fill(PlArea._graveyard.cards);
+                        CardChosen += new CardUse(CardChosen_GaeasBlessing);
+                        onCancel += new Action(CardCancel_GaeasBlessing);
+                        break;
+
                     case "Predator's Rapport":
                         targets = 1;
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(CardChosen_PredatorsRapport);
@@ -400,6 +416,36 @@ namespace MagicProgram
             return true;
         }
 
+        void CardCancel_GaeasBlessing()
+        {
+            DrawCard(1);
+            onCancel -= CardCancel_GaeasBlessing;
+            CardChosen -= CardChosen_GaeasBlessing;
+        }
+
+        void CardChosen_GaeasBlessing(MagicCard mc)
+        {
+            if (PlArea._graveyard.cards.Contains(mc))
+            {
+                PlArea._graveyard.Remove(mc);
+                PlArea._stack.cards.Add(mc);
+                PlArea._stack = PlArea.Shuffle(PlArea._stack, true);
+            }
+
+            targets--;
+
+            if (targets < 1 || PlArea._graveyard.cards.Count < 1)
+            {
+                CardChosen -= CardChosen_GaeasBlessing;
+                onCancel -= CardCancel_GaeasBlessing;
+            }
+            else
+            {
+                List<MagicCard> cards = PlArea._graveyard.cards;
+                comboCardPicker_Fill(cards);
+            }
+        }
+
         private void CheckMana(MagicCard mc)
         {
             bool mana = true;
@@ -437,6 +483,7 @@ namespace MagicProgram
             # region add card specific event handlers
             switch (mc.Name)
             {
+                # region Elite Arcanist
                 case "Elite Arcanist":
                     if (playerTurn)
                     {
@@ -451,21 +498,42 @@ namespace MagicProgram
                     }
                     mc.Activating += new MagicCard.ActiveAbility(Activating_EliteArcanist);
                     break;
+                # endregion
 
+                # region Mnemonic Wall
+                case "Mnemonic Wall":
+                    if (playerTurn)
+                    {
+                        List<MagicCard> cards = PlArea._graveyard.cards.Where(o => o.Type.ToUpper().Contains("INSTANT") || o.Type.ToUpper().Contains("SORCERY")).ToList();
+                        comboCardPicker_Fill(cards);
+                        CardChosen += new CardUse(CardChosen_MnemonicWall);
+                    }
+                    break;
+                # endregion
+
+                # region BondBeetle
                 case "Bond Beetle":
                     if (playerTurn)
                     {
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClick_BondBeetle);
                     }
                     break;
+                # endregion
 
+                # region Fathom Mage
                 case "Fathom Mage":
-                    mc.CountersChanged += new MagicCard.ValueChanged(mc_CountersChangedFathomMage);
+                    if (playerTurn)
+                    {
+                        mc.CountersChanged += new MagicCard.ValueChanged(mc_CountersChangedFathomMage);
+                    }
                     break;
+                # endregion
 
+                # region Zameck Guildmage
                 case "Zameck Guildmage":
                     mc.Activating += new MagicCard.ActiveAbility(Activating_ZameckGuildmage);
                     break;
+                # endregion
             }
             # endregion
 
@@ -509,8 +577,8 @@ namespace MagicProgram
         {
             if (count > 0)
             {
-                ColourCost cc = new ColourCost();
-                PickerShow(count, cc);
+                xPicker.ShowMax(count);
+                xPicker.BringToFront();
                 ViewCard(new MagicCard());
 
                 xPicker.ValuePicked += new XManaPicker.IntReturn(xPicker_ValuePickedDrawCards);
@@ -557,6 +625,14 @@ namespace MagicProgram
         {
             mc.setMana();
 
+            foreach (MagicCard mca in PlArea._play.cards)
+            {
+                if (mca.Name == "Battlefield Thaumaturge")
+                {
+                    mc.manaCost.grey -= mc.Targets;
+                }
+            }
+
             //mana check
             if (!PlArea.mana.Compare(mc.manaCost))
             {
@@ -592,7 +668,7 @@ namespace MagicProgram
                 }
 
                 mc.Initialise();
-                tempCard = mc;
+                tempCard = viewCard = mc;
                 xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
                 PickerShow(count, mc.manaCost);
                 ViewCard(mc);
@@ -1088,7 +1164,7 @@ namespace MagicProgram
                 MagicCard mc = CardStack[i];
                 if (mc.Name == "Protean Hydra")
                 {
-                    break;
+                    Debug.WriteLine("Card");
                 }
 
                 Debug.WriteLine("ProcStack - UseCard");
@@ -1375,16 +1451,21 @@ namespace MagicProgram
 
         private void buttonCardChoose_Click(object sender, EventArgs e)
         {
+            buttonCardChoose.Visible = false;
+            comboCardPicker.Visible = false;
+            cPanelControls.Visible = false;
+
             int i = comboCardPicker.SelectedIndex;
+
             if (i >= 0 && i < PickList.Count)
             {
                 MagicCard mc = PickList[i];
                 onCardChosen(mc);
             }
-
-            buttonCardChoose.Visible = false;
-            comboCardPicker.Visible = false;
-            cPanelControls.Visible = false;
+            else
+            {
+                callOnCancel();
+            }
         }
 
         private void PickerShow(int MaxCount, ColourCost cost)
@@ -1393,6 +1474,14 @@ namespace MagicProgram
             xPicker.Mana = PlArea.mana;
             xPicker.Value = 0;
             xPicker.Show(MaxCount);
+            xPicker.BringToFront();
+        }
+
+        private void PickerShow(MagicCard mc, ColourCost cc)
+        {
+            xPicker.Mana = PlArea.mana;
+            xPicker.Value = 0;
+            xPicker.Show(mc);
             xPicker.BringToFront();
         }
 
@@ -1424,9 +1513,16 @@ namespace MagicProgram
             if (PlArea.mana.Compare(cc))
             {
                 PlayCard(mc);
+                xPicker.ValuePicked -= picker_ValuePicked;
+            }
+            else
+            {
+                tempCard = mc;
+                xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
+                PickerShow(count, mc.manaCost);
+                ViewCard(mc);
             }
 
-            xPicker.ValuePicked -= picker_ValuePicked;
 
         }
 
@@ -1655,7 +1751,7 @@ namespace MagicProgram
             PlayArea area = PlArea;
             MagicCard mcn = new MagicCard(mc);
             mcn.Token = true;
-            AddToStack(mcn);            
+            AddToStack(mcn);
         }
 
         void Activating_OozeFlux(MagicCard mc, int index)
@@ -1682,6 +1778,25 @@ namespace MagicProgram
             {
                 tempCard = mc;
                 cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_CardEquip);
+            }
+        }
+
+        void EntersBattlefield_MnemonicWall(MagicCard mc)
+        {
+            //TODO potentially redundant - done in PlayCreature
+            List<MagicCard> cards = PlArea._graveyard.cards.Where(o => o.Type == "Instant" || o.Type == "Sorcery").ToList();
+            comboCardPicker_Fill(cards);
+
+            CardChosen += new CardUse(CardChosen_MnemonicWall);
+        }
+
+        void CardChosen_MnemonicWall(MagicCard mc)
+        {
+            if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
+            {
+                PlArea._graveyard.Remove(mc);
+                cardAreaHand.AddCard(mc);
+                CardChosen -= CardChosen_MnemonicWall;
             }
         }
 
@@ -1722,26 +1837,6 @@ namespace MagicProgram
             if (mc.Type.Contains("Equipment"))
             {
                 Debug.WriteLine("Equipping");
-            }
-        }
-
-        void mc_ActivateAxebaneGuardian(MagicCard mc, int index)
-        {
-            int defenders = 0;
-            foreach (MagicCard mcc in PlArea._play.cards)
-            {
-                if (mcc.Text.ToUpper().Contains("DEFENDER"))
-                {
-                    defenders++;
-                }
-            }
-
-            //manapicker for 'defenders' total.
-
-            while (defenders > 0)
-            {
-                PlArea.mw.ShowWheel("UBGRW");
-                defenders--;
             }
         }
 
@@ -1881,8 +1976,6 @@ namespace MagicProgram
 
         void CardChosen_NaturesLore(MagicCard mc)
         {
-            //useCard(mc);
-
             Debug.WriteLine("CardChosen_NaturesLore - AddToStack");
             AddToStack(mc);
             CardChosen -= CardChosen_NaturesLore;
@@ -2152,6 +2245,7 @@ namespace MagicProgram
         private void comboCardPicker_Fill(List<MagicCard> cards)
         {
             PickList = cards;
+            comboCardPicker.Items.Clear();
             foreach (MagicCard mc in PickList)
             {
                 comboCardPicker.Items.Add(mc);
@@ -2412,6 +2506,12 @@ namespace MagicProgram
                         }
                         break;
 
+                    # region Axebane Guardian
+                    case "Axebane Guardian":
+                        mc.Activating += new MagicCard.ActiveAbility(Activating_AxebaneGuardian);
+                        break;
+                    # endregion
+
                     case "Protean Hydra":
                         mc.counters += mc.Xvalue;
                         break;
@@ -2625,6 +2725,19 @@ namespace MagicProgram
             if (mc.Name.Contains("Plains"))
             {
                 mana.white++;
+            }
+
+        }
+
+        void Activating_AxebaneGuardian(MagicCard mc, int index)
+        {
+            int count = _play.cards.Count(o => o.Text.Contains("Defender"));
+            foreach (MagicCard mcp in _play.cards)
+            {
+                if (mcp.Text.Contains("Defender"))
+                {
+                    mw.ShowWheel("UBGRW");
+                }
             }
 
         }

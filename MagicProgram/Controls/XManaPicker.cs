@@ -104,6 +104,18 @@ namespace MagicProgram
             Show();
         }
 
+        public void Show(MagicCard mc)
+        {
+            
+        }
+
+        public void ShowMax(int Maximum)
+        {
+            Value = 1;
+            Max = Maximum;
+            Show();
+        }
+
         private void buttonUp_Click(object sender, EventArgs e)
         {
             Value++;

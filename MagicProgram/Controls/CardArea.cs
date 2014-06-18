@@ -324,13 +324,27 @@ namespace MagicProgram
 
         void mcv_CardDeleted(MagicCardViewer mcv)
         {
-
+            CardDict.Clear();
+            int i = 0;
+            foreach (MagicCardViewer mcvs in mControls)
+            {
+                foreach (MagicCard mc in mcvs.cards)
+                {
+                    if (CardDict.ContainsKey(mc))
+                    {
+                        Output.Write("card {0} already in dict {1}", mc.Name, Name);
+                    }
+                    else
+                    {
+                        CardDict.Add(mc, i);
+                    }
+                }
+                i++;
+            }
         }
 
         public void AddCard(MagicCard card)
         {
-            //TODO adding to lands isn't getting here.
-
             if (Paused)
             {
                 return;
@@ -365,7 +379,15 @@ namespace MagicProgram
             {
                 int c = mControls.Count;
                 MagicCardViewer mcv = CreateViewer(card);
-                CardDict.Add(card, c);
+
+                if (!CardDict.ContainsKey(card))
+                {
+                    CardDict.Add(card, c);
+                }
+                else
+                {
+                    CardDict[card] = c;
+                }
             }
 
             Controls_SetPos();

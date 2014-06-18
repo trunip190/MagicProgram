@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>7</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Island</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Island</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>7</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Axebane Guardian</Name>
+    <Edition>RTR</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>2G</Cost>
+    <PT>0/3</PT>
+    <Type>Creature - Human Druid</Type>
+    <Text>Defender;
+%T: Add X mana in any combination of colors to your mana pool, where X is the number of creatures with defender you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>%T</RawCost>
+        <Text> Add X mana in any combination of colors to your mana pool, where X is the number of creatures with defender you control.</Text>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Progenitor Mimic</Name>
+    <Edition>DGM</Edition>
+    <Rarity>M</Rarity>
+    <Color>Gld</Color>
+    <Cost>4GU</Cost>
+    <PT>0/0</PT>
+    <Type>Creature - Shapeshifter</Type>
+    <Text>You may have Progenitor Mimic enter the battlefield as a copy of any creature on the battlefield except it gains �At the beginning of your upkeep, if this creature isn�t a token, put a token onto the battlefield that�s a copy of this creature.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mnemonic Wall</Name>
+    <Edition>ROE</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>4U</Cost>
+    <PT>0/4</PT>
+    <Type>Creature - Wall</Type>
+    <Text>Defender;
+When Mnemonic Wall enters the battlefield, you may return target instant or sorcery card from your graveyard to your hand.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Call to Heel</Name>
+    <Edition>ALA</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>1U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Return target creature to its owner�s hand. Its controller draws a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Polymorphous Rush</Name>
+    <Edition>NYX</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Strive — Polymorphous Rush costs {1}{U} more to cast for each target beyond the first.
+Choose a creature on the battlefield. Any number of target creatures you control each become a copy of that creature until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Strength of the Tajuru</Name>
+    <Edition>WWK</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>XGG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Multikicker %1 #(You may pay an additional %1 any number of times as you cast this spell.)#;
+Choose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Simic Guildgate</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Simic Guildgate enters the battlefield tapped.;
+%T: Add %G or %U to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gaea's Blessing</Name>
+    <Edition>WL</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Target player shuffles up to three target cards from his or her graveyard into his or her library.;
+Draw a card.;
+When Gaea�s Blessing is put into your graveyard from your library, shuffle your graveyard into your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Explore</Name>
+    <Edition>WWK</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>You may play an additional land this turn.;
+Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Comet Storm</Name>
+    <Edition>WWK</Edition>
+    <Rarity>M</Rarity>
+    <Color>R</Color>
+    <Cost>XRR</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Multikicker %1 #(You may pay an additional %1 any number of times as you cast this spell.)#;
+Choose target creature or player, then choose another target creature or player for each time Comet Storm was kicked. Comet Storm deals X damage to each of them.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Divination</Name>
+    <Edition>BNG</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Draw two cards.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mountain</Name>
+    <Edition>AN</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Mountain</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Battlefield Thaumaturge</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
+Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Interpret the Signs</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>5U</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Scry 3, then reveal the top card of your library. Draw cards equal to that card's converted mana cost. (To scry 3, look at the top three cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>
