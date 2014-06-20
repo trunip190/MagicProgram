@@ -11,7 +11,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>7</quantity>
+    <quantity>6</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -45,12 +45,7 @@
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
-    <Abilities>
-      <CardAbility>
-        <RawCost>%T</RawCost>
-        <Text> Add X mana in any combination of colors to your mana pool, where X is the number of creatures with defender you control.</Text>
-      </CardAbility>
-    </Abilities>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
@@ -99,23 +94,6 @@ When Mnemonic Wall enters the battlefield, you may return target instant or sorc
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Polymorphous Rush</Name>
-    <Edition>NYX</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>2U</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Strive — Polymorphous Rush costs {1}{U} more to cast for each target beyond the first.
-Choose a creature on the battlefield. Any number of target creatures you control each become a copy of that creature until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -233,7 +211,7 @@ Choose target creature or player, then choose another target creature or player 
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -256,14 +234,77 @@ Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battl
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Interpret the Signs</Name>
-    <Edition>JOU</Edition>
+    <Name>Species Gorger</Name>
+    <Edition>DGM</Edition>
     <Rarity>U</Rarity>
-    <Color />
-    <Cost>5U</Cost>
+    <Color>Gld</Color>
+    <Cost>3GU</Cost>
+    <PT>6/6</PT>
+    <Type>Creature - Frog Beast</Type>
+    <Text>At the beginning of your upkeep, return a creature you control to its owner�s hand.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Temple of Triumph</Name>
+    <Edition>THS</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost />
     <PT />
-    <Type>Sorcery</Type>
-    <Text>Scry 3, then reveal the top card of your library. Draw cards equal to that card's converted mana cost. (To scry 3, look at the top three cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.</Text>
+    <Type>Land</Type>
+    <Text>Temple of Triumph enters the battlefield tapped. 
+When Temple of Triumph enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.) 
+Tap: Add R or W to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>Tap</RawCost>
+        <Text> Add R or W to your mana pool.</Text>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Temple of Malady</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>Temple of Malady enters the battlefield tapped.
+When Temple of Malady enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.
+{T}: Add {B} or {G} to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>{T}</RawCost>
+        <Text> Add {B} or {G} to your mana pool.</Text>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Basilica Guards</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>W</Color>
+    <Cost>2W</Cost>
+    <PT>1/4</PT>
+    <Type>Creature - Human Soldier</Type>
+    <Text>Defender;
+Extort #(Whenever you cast a spell, you may pay %O. If you do, each opponent loses 1 life and you gain that much life.)#</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>1</quantity>

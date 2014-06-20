@@ -324,6 +324,8 @@ namespace MagicProgram
         public List<MagicCard> attachedCards = new List<MagicCard>();
         [XmlIgnore]
         public MagicCard Parent = null;
+        [XmlIgnore]
+        public string Location = "Library";
 
         //[XmlIgnore]
         public List<CardAbility> Abilities = new List<CardAbility>();

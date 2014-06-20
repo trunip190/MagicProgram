@@ -261,8 +261,16 @@ namespace MagicProgram
             # region land
             if (mc.Type.Contains("Land"))
             {
-                area.PlayCard(mc);
-                cardAreaLand.AddCard(mc);
+                if (area.landPlayed < area.landMax)
+                {
+                    area.PlayCard(mc);
+                    cardAreaLand.AddCard(mc);
+                    area.landPlayed++;
+                }
+                else
+                {
+                    MessageBox.Show("Played lands this turn (" + area.landPlayed.ToString() + "/" + area.landMax.ToString() + ")");
+                }
                 //update_listViewLand();
             }
             # endregion
@@ -436,8 +444,8 @@ namespace MagicProgram
 
             if (targets < 1 || PlArea._graveyard.cards.Count < 1)
             {
-                CardChosen -= CardChosen_GaeasBlessing;
                 onCancel -= CardCancel_GaeasBlessing;
+                CardChosen -= CardChosen_GaeasBlessing;
             }
             else
             {
@@ -553,6 +561,18 @@ namespace MagicProgram
             //final resolution - add card to play.
             area.PlayCard(mc);
             update_listViewPlay();
+        }
+
+        void CardToHand(MagicCard mc)
+        {
+            switch (mc.Location)
+            {
+                case "Play":
+                    break;
+
+                default:
+                    break;
+            }
         }
 
         void mc_OnEquip(MagicCard mc)
@@ -2295,6 +2315,9 @@ namespace MagicProgram
         }
         # endregion
 
+        public int landPlayed = 0;
+        public int landMax = 1;
+
         public int MaxHand = 7;
         int shuffles = 0;
 
@@ -2433,6 +2456,15 @@ namespace MagicProgram
             {
                 switch (mc.Name)
                 {
+                    case "Explore":
+                        landMax++;
+                        drawCards(1);
+                        break;
+
+                    case "Divination":
+                        drawCards(2);
+                        break;
+
                     default:
                         break;
                 }
@@ -2877,6 +2909,8 @@ namespace MagicProgram
 
         public void Upkeep()
         {
+            landPlayed = 0;
+
             foreach (MagicCard mc in _play.cards)
             {
                 mc.UpkeepCard();
@@ -2901,6 +2935,7 @@ namespace MagicProgram
             {
                 mc.EndStepCard();
             }
+            landMax = 1;
         }
 
         public CardCollection Shuffle(CardCollection cc, bool standard)
