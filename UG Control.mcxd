@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>wavecrash triton</Name>
+    <Edition />
+    <Rarity />
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Creature</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Triton Tactics</Name>
+    <Edition>THS</Edition>
+    <Rarity>U</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT>0/0</PT>
+    <Type>Instant</Type>
+    <Text>Up to two target creatures each get +0/+3 until end of turn. Untap those creatures. At this turn's next end of combat, tap each creature that was blocked by one of those creatures this turn and it doesn't untap during its controller's next untap step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Elite Arcanist</Name>
+    <Edition>M14</Edition>
+    <Rarity>R</Rarity>
+    <Color>U</Color>
+    <Cost>3U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>When Elite Arcanist enters the battlefield, you may exile an instant card from your hand.;
+%X, %T: Copy the exiled card. You may cast the copy without paying its mana cost. X is the converted mana cost of the exiled card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>%X, %T</RawCost>
+        <Text> Copy the exiled card. You may cast the copy without paying its mana cost. X is the converted mana cost of the exiled card.</Text>
+        <Name />
+        <Active>false</Active>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wall of Vines</Name>
+    <Edition>M11</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>0/3</PT>
+    <Type>Creature - Plant Wall</Type>
+    <Text>Defender #(This creature can�t attack.)#;
+Reach #(This creature can block creatures with flying.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Axebane Guardian</Name>
+    <Edition>RTR</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>2G</Cost>
+    <PT>0/3</PT>
+    <Type>Creature - Human Druid</Type>
+    <Text>Defender;
+%T: Add X mana in any combination of colors to your mana pool, where X is the number of creatures with defender you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>%T</RawCost>
+        <Text> Add X mana in any combination of colors to your mana pool, where X is the number of creatures with defender you control.</Text>
+        <Name />
+        <Active>false</Active>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sage of Hours</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>Heroic — Whenever you cast a spell that targets Sage of Hours, put a +1/+1 counter on it.
+Remove all +1/+1 counters from Sage of Hours: For each five counters removed this way, take an extra turn after this one.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Divination</Name>
+    <Edition>BNG</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Draw two cards.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Battlefield Thaumaturge</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
+Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Pheres-Band Thunderhoof</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>4G</Cost>
+    <PT>3/4</PT>
+    <Type>Creature — Centaur Warrior</Type>
+    <Text>Heroic — Whenever you cast a spell that targets Pheres-Band Thunderhoof, put two +1/+1 counters on Pheres-Band Thunderhoof.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Solidarity of Heroes</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Strive — Solidarity of Heroes costs {1}{G} more to cast for each target beyond the first.
+Choose any number of target creatures. Double the number of +1/+1 counters on each of them.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Strength of the Tajuru</Name>
+    <Edition>WWK</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>XGG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Multikicker %1 #(You may pay an additional %1 any number of times as you cast this spell.)#;
+Choose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>10</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Island</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Island</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>10</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

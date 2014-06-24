@@ -1059,14 +1059,35 @@ namespace MagicProgram
                     # region prepare values
                     string[] card = line.Split('#');
                     int count = 0;
-
-                    //set quantity for card
-                    if (card.Length < 2) count = 1;
-                    else int.TryParse(card[1], out count);
+                    int a = 0;
+                    int b = 1;
                     # endregion
 
-                    int index = Database.getIndex(card[0]);
-                    int jIndex = LibCards.getIndex(card[0]);
+                    # region set type
+                    int f = 0;
+                    if (card.Length > 1 && int.TryParse(card[1], out f))
+                    {
+                        a = 0; b = 1;
+                    }
+                    else
+                    {
+                        int ind = line.IndexOf(' ');
+                        if (ind > -1)
+                        {
+                            string t1 = line.Substring(0, ind).Trim();
+                            string t2 = line.Substring(ind, line.Length - ind).Trim();
+                            card = new string[] { t2, t1 };
+                        }
+                    }
+                    # endregion
+
+                    # region set quantity for card
+                    if (card.Length < 2) count = 1;
+                    else int.TryParse(card[b], out count);
+                    # endregion
+
+                    int index = Database.getIndex(card[a]);
+                    int jIndex = LibCards.getIndex(card[a]);
 
                     if ((jIndex) > -1)
                     {
@@ -1080,7 +1101,7 @@ namespace MagicProgram
                         MagicCard temp;
 
                         if (index > -1) { temp = Database.cards[index].Clone() as MagicCard; }
-                        else { temp = new MagicCard { Name = card[0] }; }
+                        else { temp = new MagicCard { Name = card[a] }; }
 
                         temp.quantity = count;
                         # endregion
@@ -1088,7 +1109,7 @@ namespace MagicProgram
                         # region set up image etc
                         if (temp.imgLoc.Length < 1)
                         {
-                            temp.set(fetchImage(card[0].ToUpper()));
+                            temp.set(fetchImage(card[a].ToUpper()));
                         }
                         # endregion
 

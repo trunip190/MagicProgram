@@ -1,23 +1,6 @@
 <?xml version="1.0"?>
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Card>
-    <Name>Battlefield Thaumaturge</Name>
-    <Edition>Nyx</Edition>
-    <Rarity>R</Rarity>
-    <Color>U</Color>
-    <Cost>1U</Cost>
-    <PT>2/1</PT>
-    <Type>Creature - Human Wizard</Type>
-    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
-Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Island</Name>
     <Edition>UG</Edition>
     <Rarity>C</Rarity>
@@ -329,6 +312,23 @@ Draw a card.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Battlefield Thaumaturge</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
+Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

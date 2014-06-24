@@ -346,6 +346,7 @@ namespace MagicProgram
         public event PassiveAbility OnUnequip;
         public event PassiveAbility onEquipmentAdd;
         public event PassiveAbility onEquipmentRemoved;
+        public event PassiveAbility onSpellCast;
         public event ValueChanged CountersChanged;
         public event CardUse TapChanged;
         public event CardUse Discard;
@@ -409,6 +410,15 @@ namespace MagicProgram
             if (handler != null)
             {
                 handler(this, index);
+            }
+        }
+
+        public void callSpellCast()
+        {
+            PassiveAbility handler = onSpellCast;
+            if (handler != null)
+            {
+                handler(this);
             }
         }
 
@@ -670,6 +680,16 @@ namespace MagicProgram
                     abi.Text = cost[1];
                     Abilities.Add(abi);
                 }
+
+                if (s.Contains("Bestow"))
+                {
+                    string[] tCost = Text.Split('(');
+                    CardAbility abi = new CardAbility();
+                    abi.RawCost = tCost[0].Replace("Bestow ", "");
+                    abi.Text = tCost[1].Trim();
+                    abi.Name = "Bestow";
+                    Abilities.Add(abi);
+                }
             }
         }
 
@@ -812,18 +832,26 @@ namespace MagicProgram
         }
 
         /// <summary>
-        /// Returns a List<string> of all the enchancements that the card provides when attached
+        /// Returns a string list of all the enchancements that the card provides when attached
         /// </summary>
         /// <returns>The enhancements it provides when attached to another card</returns>
         public List<string> getStats()
         {
             List<string> result = new List<string>();
 
-            if (Name == "Rancor")
+            switch (Name)
             {
-                result.Add("Power#2");
-                result.Add("Toughness#0");
-                result.Add("Ability#Trample");
+                case "Rancor":
+                    result.Add("Power#2");
+                    result.Add("Toughness#0");
+                    result.Add("Ability#Trample");
+                    break;
+
+                case "Mogis's Warhound":
+                    result.Add("Power#2");
+                    result.Add("Toughness#2");
+                    result.Add("Ability#Must Attack");
+                    break;
             }
 
             return result;
@@ -1024,110 +1052,59 @@ namespace MagicProgram
             return result;
         }
 
-        //public static string convertManaToRtf(string s)
-        //{
-        //    using (RichTextBox rtb = new RichTextBox())
-        //    {
-        //        for (int i = 0; i < s.Length; i++)
-        //        {
-        //            rtb.Font = new Font("WingDings 2", 11, FontStyle.Regular);
+        public static ColourCost textToMana(string cost)
+        {
+            ColourCost result = new ColourCost();
 
-        //            rtb.Select(rtb.Text.Length, 0);
-        //            string ch = s[i].ToString();
+            int t = cost.IndexOf('{');
 
-        //            switch (s[i])
-        //            {
-        //                # region colours
-        //                case 'G':
-        //                    rtb.SelectionColor = Color.Green;
-        //                    ch = "u";
-        //                    break;
+            string trimmed = cost.Substring(t, cost.Length - t);
+            trimmed = trimmed.Replace("{", "").Replace("}", "");
 
-        //                case 'U':
-        //                    rtb.SelectionColor = Color.Blue;
-        //                    ch = "u";
-        //                    break;
+            foreach (char c in trimmed)
+            {
+                # region numbers
+                if (char.IsNumber(c))
+                {
+                    int n = 0;
+                    int.TryParse(c.ToString(), out n);
+                    result.grey += n;
+                }
+                # endregion
+                # region colours
+                else
+                {
+                    switch (c)
+                    {
+                        case 'B':
+                            result.black++;
+                            break;
 
-        //                case 'R':
-        //                    rtb.SelectionColor = Color.Red;
-        //                    ch = "u";
-        //                    break;
+                        case 'G':
+                            result.green++;
+                            break;
 
-        //                case 'W':
-        //                    rtb.SelectionColor = Color.White;
-        //                    ch = "u";
-        //                    break;
+                        case 'R':
+                            result.red++;
+                            break;
 
-        //                case 'B':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = "j";
-        //                    break;
+                        case 'U':
+                            result.blue++;
+                            break;
 
-        //                case '/':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = " ";
-        //                    break;
-        //                # endregion
+                        case 'W':
+                            result.white++;
+                            break;
 
-        //                # region numbers
-        //                case '1':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = "u";
-        //                    break;
+                        default:
+                            break;
+                    }
+                }
+                # endregion
+            }
 
-        //                case '2':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = "v";
-        //                    break;
-
-        //                case '3':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = "w";
-        //                    break;
-
-        //                case '4':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = "x";
-        //                    break;
-
-        //                case '5':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = "y";
-        //                    break;
-
-        //                case '6':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = "z";
-        //                    break;
-
-        //                case '7':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = "{";
-        //                    break;
-
-        //                case '8':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = "|";
-        //                    break;
-
-        //                case '9':
-        //                    rtb.SelectionColor = Color.Black;
-        //                    ch = "}";
-        //                    break;
-        //                # endregion
-
-        //                default:
-        //                    rtb.SelectionColor = Color.Black;
-        //                    Output.Write("{0}", s[i]);
-        //                    break;
-        //            }
-
-        //            rtb.AppendText(ch);
-        //        }
-
-        //        return rtb.Rtf;
-        //    }
-        //}
+            return result;
+        }
 
         # region convert paths to/from relative
         public static string convertTo(string s)
@@ -1572,47 +1549,59 @@ namespace MagicProgram
 
     public class CardAbility
     {
+        public ColourCost _cost;
         public ColourCost Cost
         {
             get
             {
-                ColourCost c = new ColourCost();
-
-                string adj = RawCost.Replace(",", "").Replace(" ", "");
-                List<string> colours = adj.Split(new string[] { "%" }, StringSplitOptions.RemoveEmptyEntries).ToList();
-
-                foreach (string s in colours)
+                if (_cost != null)
                 {
-                    switch (s)
-                    {
-                        case "U":
-                            c.blue++;
-                            break;
-
-                        case "R":
-                            c.red++;
-                            break;
-
-                        case "G":
-                            c.green++;
-                            break;
-
-                        case "W":
-                            c.white++;
-                            break;
-
-                        case "B":
-                            c.black++;
-                            break;
-                    }
+                    return _cost;
                 }
+                else
+                {
+                    ColourCost c = new ColourCost();
 
-                return c;
+                    string adj = RawCost.Replace(",", "").Replace(" ", "");
+                    List<string> colours = adj.Split('%').ToList();
+
+                    # region colours
+                    foreach (string s in colours)
+                    {
+                        switch (s)
+                        {
+                            case "U":
+                                c.blue++;
+                                break;
+
+                            case "R":
+                                c.red++;
+                                break;
+
+                            case "G":
+                                c.green++;
+                                break;
+
+                            case "W":
+                                c.white++;
+                                break;
+
+                            case "B":
+                                c.black++;
+                                break;
+                        }
+                    }
+                    # endregion
+
+                    _cost = c;
+                    return c;
+                }
             }
         }
         public string RawCost = "";
         public string Text = "";
-
+        public string Name = "";
+        public bool Active = false;
     }
 
     public enum CSize

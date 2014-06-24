@@ -244,12 +244,6 @@ namespace MagicProgram
 
         private bool useCard(MagicCard mc)
         {
-            //work out if there is enough mana
-            CheckMana(mc);
-
-            mc.callOnPlay();
-            //mc = new MagicCard(mc);   //TODO check that only one copy is being created
-
             # region set side to work with
             PlayArea area = PlArea;
             if (!playerTurn)
@@ -258,19 +252,30 @@ namespace MagicProgram
             }
             # endregion
 
+            //work out if there is enough mana
+            CheckMana(mc);
+
+            # region check if land allowance used
+            if (mc.Type.Contains("Land"))
+            {
+                if (area.landPlayed >= area.landMax)
+                {
+                    MessageBox.Show("Played lands this turn (" + area.landPlayed.ToString() + "/" + area.landMax.ToString() + ")");
+                    mc.OnPlay -= temp_OnPlay;
+                    return false;
+                }
+            }
+            # endregion
+
+            mc.callOnPlay();
+            //mc = new MagicCard(mc);   //TODO check that only one copy is being created
+
             # region land
             if (mc.Type.Contains("Land"))
             {
-                if (area.landPlayed < area.landMax)
-                {
-                    area.PlayCard(mc);
-                    cardAreaLand.AddCard(mc);
-                    area.landPlayed++;
-                }
-                else
-                {
-                    MessageBox.Show("Played lands this turn (" + area.landPlayed.ToString() + "/" + area.landMax.ToString() + ")");
-                }
+                area.PlayCard(mc);
+                cardAreaLand.AddCard(mc);
+                area.landPlayed++;
                 //update_listViewLand();
             }
             # endregion
@@ -312,6 +317,14 @@ namespace MagicProgram
                         mc.Resolving += new CardUse(mc_ResolvingStrengthTajuru);
                         //cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_StrengthOfTheTajuru);
                         break;
+
+                    case "Rouse the Mob":
+                        mc.Resolving += new CardUse(mc_ResolvingRouseTheMob);
+                        break;
+
+                    case "Nature's Panoply":
+                        mc.Resolving += new CardUse(mc_ResolvingNaturesPanoply);                        
+                        break;
                 }
 
                 if (mc.Text.Contains("Cipher"))
@@ -342,12 +355,31 @@ namespace MagicProgram
                 }
             }
             # endregion
+            # region creatures
+            else if (mc.Type.ToUpper().Contains("CREATURE"))
+            {
+                if (mc.Abilities.Count > 0 && mc.Abilities[0].Name == "Bestow" && mc.Abilities[0].Active)
+                {
+                    if (playerTurn)
+                    {
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_CardClicked);
+                    }
+                    tempCard = mc;
+                    update_listViewArtEnch();
+                }
+                else
+                {
+                    PlayCreature(mc, area);
+                }
+            }
+            # endregion
             # region artifacts and enchantments
             else if (mc.Type.Contains("Artifact") || mc.Type.Contains("Enchantment"))
             {
                 onSpellRes();
                 CardsProc = new List<MagicCard>();
 
+                # region Enchant Land
                 if (mc.Text.Contains("Enchant land"))
                 {
                     if (playerTurn)
@@ -356,14 +388,17 @@ namespace MagicProgram
                         //listViewLand.MouseUp += new MouseEventHandler(listViewLand_MouseClick);
                     }
                 }
+                # endregion
+                # region Enchant Creature
                 else if (mc.Text.Contains("Enchant creature"))
                 {
                     if (playerTurn)
                     {
-                        //listViewPlay.MouseUp += new MouseEventHandler(listViewPlay_MouseClick);
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_CardClicked);
                     }
                 }
+                # endregion
+                # region Equipment
                 else if (mc.Type.Contains("Equipment"))
                 {
                     switch (mc.Name)
@@ -374,6 +409,10 @@ namespace MagicProgram
                             mc.Activating += new MagicCard.ActiveAbility(Activating_Equipment);
                             break;
 
+                        case "Godsend":
+
+                            break;
+
                         default:
                             mc.Activating += new MagicCard.ActiveAbility(Activating_Equipment);
                             mc.OnEquip += new MagicCard.PassiveAbility(mc_OnEquip);
@@ -382,6 +421,7 @@ namespace MagicProgram
                     area.PlayCard(mc);
                     update_listViewPlay();
                 }
+                # endregion
                 else
                 {
                     area.PlayCard(mc);
@@ -397,18 +437,10 @@ namespace MagicProgram
                     case "Ooze Flux":
                         mc.Activating += new MagicCard.ActiveAbility(Activating_OozeFlux);
                         break;
-
-
                 }
 
                 tempCard = mc;
                 update_listViewArtEnch();
-            }
-            # endregion
-            # region creatures
-            else if (mc.Type.ToUpper().Contains("CREATURE"))
-            {
-                PlayCreature(mc, area);
             }
             # endregion
             # region New card type
@@ -422,6 +454,36 @@ namespace MagicProgram
 
             //updateAll();
             return true;
+        }
+
+        void mc_ResolvingNaturesPanoply(MagicCard mc)
+        {
+            mc.Resolving -= mc_ResolvingNaturesPanoply;
+            cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_NaturesPanoply);
+        }
+
+        void CardClicked_NaturesPanoply(MagicCard mc, MouseEventArgs e)
+        {
+            mc.counters++;
+            targets--;
+
+            if (targets < 1)
+            {
+                cardAreaPlay.CardClicked -= CardClicked_NaturesPanoply;
+            }
+        }
+
+        void mc_ResolvingRouseTheMob(MagicCard mc)
+        {
+            cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_RouseTheMob);
+            mc.Resolving -= mc_ResolvingRouseTheMob;
+        }
+
+        void CardClicked_RouseTheMob(MagicCard mc, MouseEventArgs e)
+        {
+            mc.PBonus += 2;
+            mc.callSpellCast();
+            cardAreaPlay.CardClicked -= CardClicked_RouseTheMob;
         }
 
         void CardCancel_GaeasBlessing()
@@ -542,6 +604,12 @@ namespace MagicProgram
                     mc.Activating += new MagicCard.ActiveAbility(Activating_ZameckGuildmage);
                     break;
                 # endregion
+
+                # region Sigiled Skink
+                case "Sigiled Skink":
+                    mc.OnAttack += new MagicCard.PassiveAbility(mc_OnAttackSigiledSkink);
+                    break;
+                #endregion
             }
             # endregion
 
@@ -563,11 +631,25 @@ namespace MagicProgram
             update_listViewPlay();
         }
 
+        void mc_OnAttackSigiledSkink(MagicCard mc)
+        {
+            Scry(1);
+        }
+
         void CardToHand(MagicCard mc)
         {
             switch (mc.Location)
             {
                 case "Play":
+                    break;
+
+                case "Hand":
+                    break;
+
+                case "Graveyard":
+                    break;
+
+                case "Library":
                     break;
 
                 default:
@@ -644,17 +726,34 @@ namespace MagicProgram
         public void PrePlay(MagicCard mc)
         {
             mc.setMana();
+            ColourCost cc = mc.manaCost;
 
+            # region cycle through cost reduction
             foreach (MagicCard mca in PlArea._play.cards)
             {
                 if (mca.Name == "Battlefield Thaumaturge")
                 {
-                    mc.manaCost.grey -= mc.Targets;
+                    cc.grey -= mc.Targets;
                 }
             }
+            # endregion
+
+            # region check bestow
+            foreach (CardAbility cAbi in mc.Abilities)
+            {
+                if (cAbi.Name == "Bestow")
+                {
+                    if (MessageBox.Show("Do you want to bestow this card?", "Bestow?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        cAbi.Active = true;
+                        cc = cAbi.Cost;
+                    }
+                }
+            }
+            # endregion
 
             //mana check
-            if (!PlArea.mana.Compare(mc.manaCost))
+            if (!PlArea.mana.Compare(cc))
             {
                 return;
             }
@@ -690,7 +789,7 @@ namespace MagicProgram
                 mc.Initialise();
                 tempCard = viewCard = mc;
                 xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
-                PickerShow(count, mc.manaCost);
+                PickerShow(count, cc);
                 ViewCard(mc);
             }
             # endregion
@@ -743,6 +842,7 @@ namespace MagicProgram
         {
             mc.attachedCards.Add(tempCard);
             mc.checkPT();
+            mc.callSpellCast();
             tempCard = null;
             cardAreaPlay.CardClicked -= cardAreaPlay_CardClicked;
         }
@@ -1766,6 +1866,38 @@ namespace MagicProgram
         }
         # endregion
 
+        void Scry(int count)
+        {
+            List<MagicCard> cards = new List<MagicCard>();
+
+            for (int i = 0; i < count; i++)
+            {
+                cards.Add(PlArea._stack.cards[i]);
+            }
+
+            comboCardPicker_Fill(cards);
+            CardChosen += new CardUse(CardChosen_ToBottom);
+            onCancel += new Action(OnCancel_ToBottom);
+        }
+
+        void OnCancel_ToBottom()
+        {
+            onCancel -= OnCancel_ToBottom;
+            CardChosen -= CardChosen_ToBottom;
+        }
+
+        void CardChosen_ToBottom(MagicCard mc)
+        {
+            if (PlArea._stack.cards.Contains(mc))
+            {
+                PlArea._stack.cards.Remove(mc);
+                PlArea._stack.cards.Add(mc);
+
+                onCancel -= OnCancel_ToBottom;
+                CardChosen -= CardChosen_ToBottom;
+            }
+        }
+
         void Upkeep_ProgenitorMimic(MagicCard mc)
         {
             PlayArea area = PlArea;
@@ -2400,9 +2532,9 @@ namespace MagicProgram
 
             Output.Write("\r\nshuffling cards\r\n");
             _stack.cards.OrderBy(o => o.Type);
-            _stack = Shuffle(_stack, false);
-            _stack = Shuffle(_stack, false);
             _stack = Shuffle(_stack, true);
+            _stack = Shuffle(_stack, true);
+            _stack = Shuffle(_stack, false);
         }
 
         public void PlayCard(MagicCard mc)
@@ -2414,11 +2546,17 @@ namespace MagicProgram
                 {
                     mc.TapChanged += new CardUse(Activate_BasicLand);
                 }
-                if (mc.Type.Contains("Gate"))
+                else if (mc.Type.Contains("Gate"))
                 {
                     mc.TapChanged += new CardUse(Tap_Gate);
                     mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
                 }
+                else
+                {
+                    mc.TapChanged += new CardUse(mc_TapLand);
+                    mc.Activating += new MagicCard.ActiveAbility(mc_Land);
+                }
+
 
                 # region named cards
                 switch (mc.Name)
@@ -2473,24 +2611,8 @@ namespace MagicProgram
                 _graveyard.index();
             }
             # endregion
-            # region artifacts and enchantments
-            else if (mc.Type.Contains("Artifact") || mc.Type.Contains("Enchantment"))
-            {
-                if (mc.Type.Contains("Equipment"))
-                {
-                    mc.OnEquip += new MagicCard.PassiveAbility(mc_OnEquip);
-                    _play.Add(mc);
-                    _play.index();
-                }
-                else
-                {
-                    _artEnch.Add(mc);
-                    //_artEnch.index();  //called as part of _artEnch.Add();
-                }
-            }
-            # endregion
             # region creatures
-            else
+            else if (mc.Type.ToUpper().Contains("CREATURE"))
             {
                 foreach (MagicCard mstc in _play.cards)
                 {
@@ -2498,11 +2620,6 @@ namespace MagicProgram
                     {
                         mc.counters += mstc.Power;
                     }
-                }
-
-                if (mc.Name == "Leech Bonder")
-                {
-                    mc.counters -= 2;
                 }
 
                 # region individual card switch
@@ -2529,6 +2646,14 @@ namespace MagicProgram
                         {
                             drawCards(1);
                         }
+                        break;
+
+                    case "Nyx-Fleece Ram":
+                        mc.OnUpkeep += new MagicCard.PassiveAbility(mc_OnUpkeepNyxbornFleese);
+                        break;
+
+                    case "Leech Bonder":
+                        mc.counters -= 2;
                         break;
 
                     case "Saruli Gatekeepers":
@@ -2580,10 +2705,35 @@ namespace MagicProgram
                 _play.index();
             }
             # endregion
+            # region artifacts and enchantments
+            else if (mc.Type.Contains("Artifact") || mc.Type.Contains("Enchantment"))
+            {
+                if (mc.Type.Contains("Equipment"))
+                {
+                    mc.OnEquip += new MagicCard.PassiveAbility(mc_OnEquip);
+                    _play.Add(mc);
+                    _play.index();
+                }
+                else
+                {
+                    _artEnch.Add(mc);
+                    //_artEnch.index();  //called as part of _artEnch.Add();
+                }
+            }
+            # endregion
+            else
+            {
+                throw new NotImplementedException();
+            }
 
             mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
             mc.Discard += new CardUse(Play_Discard);
             mc.Destroyed += new CardUse(Play_Destroyed);
+        }
+
+        void mc_OnUpkeepNyxbornFleese(MagicCard mc)
+        {
+            HP++;
         }
 
         void mc_OnEquip(MagicCard mc)
@@ -2829,6 +2979,30 @@ namespace MagicProgram
 
             mw.ShowWheel(ManaAdd);
         }
+
+        void mc_Land(MagicCard mc, int index)
+        {
+            string text = mc.Abilities[index].Text;
+            ColourCost cc = new ColourCost
+            {
+                black = text.Length - text.Replace("{B}", "{}").Length,
+                blue = text.Length - text.Replace("{U}", "{}").Length,
+                green = text.Length - text.Replace("{G}", "{}").Length,
+                red = text.Length - text.Replace("{R}", "{}").Length,
+                white = text.Length - text.Replace("{W}", "{}").Length,
+            };
+
+            mw.ShowWheel(cc);
+
+        }
+
+        void mc_TapLand(MagicCard mc)
+        {
+            if (!mc.Tapped)
+            {
+                mc.TryActivate(0);
+            }
+        }
         # endregion
 
         void mw_Closing(ColourCost c)
@@ -2945,6 +3119,7 @@ namespace MagicProgram
 
             if (standard)
             {
+                Debug.WriteLine("Standard");
                 # region randomise
                 int s = seed + DateTime.Now.Second + shuffles;
                 Random rng = new Random(s);
@@ -2960,37 +3135,51 @@ namespace MagicProgram
             }
             else
             {
-                # region method shuffle
-                List<MagicCard> one = new List<MagicCard>();
-                List<MagicCard> two = new List<MagicCard>();
-                List<MagicCard> three = new List<MagicCard>();
+                Debug.WriteLine("Special");
+                # region Land Shuffle
+                List<MagicCard> Lands = new List<MagicCard>();
+                List<MagicCard> nonLands = new List<MagicCard>();
 
-                List<MagicCard> list = one;
-                int l = 0;
-                for (int i = 0; i < source.Count; i++)
+                # region split into lands/nonlands
+                foreach (MagicCard mc in cc.cards)
                 {
-                    list.Add(source[i]);
+                    if (mc.Type.Contains("Land"))
+                    {
+                        Lands.Add(mc);
+                    }
+                    else
+                    {
+                        nonLands.Add(mc);
+                    }
+                }
+                # endregion
 
-                    # region set list
-                    if (l == 0) { l = 1; list = two; }
-                    else if (l == 1) { l = 2; list = three; }
-                    else if (l == 2) { l = 0; list = one; }
-                    # endregion
-                }
+                int ratio = (Lands.Count + nonLands.Count) / Lands.Count;
+                int count = 0;
 
-                result.cards = new List<MagicCard>();
-                foreach (MagicCard mc in one)
+                # region add cards to list
+                while (Lands.Count + nonLands.Count > 0)
                 {
-                    result.cards.Add(mc);
+                    ratio = (Lands.Count + nonLands.Count) / Lands.Count;
+                    if (count < ratio && nonLands.Count > 0)
+                    {
+                        result.cards.Add(nonLands[0]);
+                        nonLands.RemoveAt(0);
+                        count++;
+                    }
+                    else if (Lands.Count > 0)
+                    {
+                        result.cards.Add(Lands[0]);
+                        Lands.RemoveAt(0);
+                        count = 0;
+                    }
+                    else
+                    {
+                        int p = Lands.Count;
+                        int q = nonLands.Count;
+                    }
                 }
-                foreach (MagicCard mc in two)
-                {
-                    result.cards.Add(mc);
-                }
-                foreach (MagicCard mc in three)
-                {
-                    result.cards.Add(mc);
-                }
+                # endregion
                 # endregion
             }
 

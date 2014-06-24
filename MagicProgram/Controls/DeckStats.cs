@@ -68,7 +68,6 @@ namespace MagicProgram
 
         private void updateStats()
         {
-            Debug.WriteLine("Updating DeckStats.");
             foreach (MagicCard mc in deck)
             {
                 # region set CMC
@@ -98,41 +97,45 @@ namespace MagicProgram
                         break;
                 }
                 # endregion
-
+                
                 # region set type
+                if (mc.Type.ToLower().Contains("creature"))
+                {
+                    crea++;
+                }
                 if (mc.Type.ToLower().Contains("enchantment"))
                 {
                     other++;
                 }
-                else if (mc.Type.ToLower().Contains("land"))
+                if (mc.Type.ToLower().Contains("land"))
                 {
                     land++;
                 }
-                else if (mc.Type.ToLower().Contains("creature"))
-                {
-                    crea++;
-                }
-                else if (mc.Type.ToLower().Contains("sorcery") || mc.Type.ToLower().Contains("instant"))
+                if (mc.Type.ToLower().Contains("sorcery") || mc.Type.ToLower().Contains("instant"))
                 {
                     spell++;
                 }
-                else
+                if (mc.Type.ToLower().Contains("artifact"))
                 {
                     other++;
                 }
                 # endregion
             }
 
+            # region Type
             textBox1.Text = land.ToString();
             textBox2.Text = crea.ToString();
             textBox3.Text = spell.ToString();
             textBox4.Text = other.ToString();
+            # endregion
 
+            # region CMC
             textCost1.Text = one.ToString();
             textCost2.Text = two.ToString();
             textCost3.Text = three.ToString();
             textCost4.Text = four.ToString();
             textCost5.Text = five.ToString();
+            # endregion
         }
 
         private void DeckStats_Click(object sender, EventArgs e)
