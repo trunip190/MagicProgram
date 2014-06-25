@@ -323,7 +323,7 @@ namespace MagicProgram
                         break;
 
                     case "Nature's Panoply":
-                        mc.Resolving += new CardUse(mc_ResolvingNaturesPanoply);                        
+                        mc.Resolving += new CardUse(mc_ResolvingNaturesPanoply);
                         break;
                 }
 
@@ -840,7 +840,7 @@ namespace MagicProgram
 
         void cardAreaPlay_CardClicked(MagicCard mc, MouseEventArgs e)
         {
-            mc.attachedCards.Add(tempCard);
+            mc.AttachCard(tempCard);
             mc.checkPT();
             mc.callSpellCast();
             tempCard = null;
@@ -854,7 +854,7 @@ namespace MagicProgram
 
             MagicCard mcvt = tempCard;
 
-            tempCard.attachedCards.Add(mc);
+            tempCard.AttachCard(mc);
             cardAreaHand.RemoveCard(mc);
 
             int cost = mc.CMC;
@@ -868,7 +868,7 @@ namespace MagicProgram
 
         void cardAreaHand_CardClickedCipher(MagicCard mc, MouseEventArgs e)
         {
-            tempCard.attachedCards.Add(mc);
+            tempCard.AttachCard(mc);
             tempCard.checkPT();
             tempCard = null;
 
@@ -888,7 +888,7 @@ namespace MagicProgram
         void cardArea1_CardClicked1(MagicCard mc, MouseEventArgs e)
         {
             mc.quantity = 1;
-            mc.attachedCards.Add(tempCard);
+            mc.AttachCard(tempCard);
             mc.checkPT();
             mc.Name += "*";
             mc.TapChanged += new CardUse(mc_TapVerdantHaven);
@@ -2542,25 +2542,9 @@ namespace MagicProgram
             # region land
             if (mc.Type.Contains("Land"))
             {
-                if (mc.Type.Contains("Basic Land"))
-                {
-                    mc.TapChanged += new CardUse(Activate_BasicLand);
-                }
-                else if (mc.Type.Contains("Gate"))
-                {
-                    mc.TapChanged += new CardUse(Tap_Gate);
-                    mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
-                }
-                else
-                {
-                    mc.TapChanged += new CardUse(mc_TapLand);
-                    mc.Activating += new MagicCard.ActiveAbility(mc_Land);
-                }
-
-
-                # region named cards
                 switch (mc.Name)
                 {
+                    # region named cards
                     case "Breeding Pool":
                         DialogResult dr = MessageBox.Show("Pay 2 life to untap?", "Pay life?", MessageBoxButtons.YesNo);
                         mc.TapChanged += new CardUse(Tap_Gate);
@@ -2579,12 +2563,26 @@ namespace MagicProgram
                     case "Oran-Rief, the Vastwood":
                         mc.Tap(true, true);
                         break;
+                    # endregion
 
-                    case "Simic Guildgate":
-                        mc.Tap(true, true);
+                    default:
+                        if (mc.Type.Contains("Basic Land"))
+                        {
+                            mc.TapChanged += new CardUse(Activate_BasicLand);
+                        }
+                        else if (mc.Type.Contains("Gate"))
+                        {
+                            mc.TapChanged += new CardUse(Tap_Gate);
+                            mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
+                            mc.Tap(true, true);
+                        }
+                        else
+                        {
+                            mc.TapChanged += new CardUse(mc_TapLand);
+                            mc.Activating += new MagicCard.ActiveAbility(mc_Land);
+                        }
                         break;
                 }
-                # endregion
                 _lands.cards.Add(mc);
                 _lands.index();
             }
@@ -2998,10 +2996,10 @@ namespace MagicProgram
 
         void mc_TapLand(MagicCard mc)
         {
-            if (!mc.Tapped)
-            {
-                mc.TryActivate(0);
-            }
+            //if (!mc.Tapped)
+            //{
+            //    mc.TryActivate(0);
+            //}
         }
         # endregion
 

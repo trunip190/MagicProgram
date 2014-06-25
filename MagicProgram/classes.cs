@@ -693,6 +693,12 @@ namespace MagicProgram
             }
         }
 
+        public void AttachCard(MagicCard mc)
+        {
+            attachedCards.Add(mc);
+            mc.Parent = this;
+        }
+
         # region Image get/set
         public void set(string im)
         {
@@ -851,6 +857,21 @@ namespace MagicProgram
                     result.Add("Power#2");
                     result.Add("Toughness#2");
                     result.Add("Ability#Must Attack");
+                    break;
+
+                case "Favor of the Overbeing":
+                    if (Parent.Color == "U")
+                    {
+                        result.Add("Power#1");
+                        result.Add("Toughness#1");
+                        result.Add("Ability#Flying");
+                    }
+                    if (Parent.Color == "G")
+                    {
+                        result.Add("Power#1");
+                        result.Add("Toughness#1");
+                        result.Add("Ability#Vigilance");
+                    }
                     break;
             }
 
