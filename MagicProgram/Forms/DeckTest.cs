@@ -607,7 +607,11 @@ namespace MagicProgram
 
                 # region Sigiled Skink
                 case "Sigiled Skink":
-                    mc.OnAttack += new MagicCard.PassiveAbility(mc_OnAttackSigiledSkink);
+                    mc.OnAttack += new MagicCard.PassiveAbility(mc_Scry1);
+                    break;
+
+                case "Sigiled Starfish":
+                    mc.Activating += new MagicCard.ActiveAbility(mc_ActivatingScry1);
                     break;
                 #endregion
             }
@@ -631,7 +635,13 @@ namespace MagicProgram
             update_listViewPlay();
         }
 
-        void mc_OnAttackSigiledSkink(MagicCard mc)
+        void mc_ActivatingScry1(MagicCard mc, int index)
+        {
+            mc.Tap(true, false);
+            Scry(1);
+        }
+
+        void mc_Scry1(MagicCard mc)
         {
             Scry(1);
         }
@@ -2526,6 +2536,7 @@ namespace MagicProgram
                 {
                     MagicCard newCard = mc.Clone() as MagicCard;
                     newCard.quantity = 1;
+                    newCard.Initialise();
                     _stack.cards.Add(newCard);
                 }
             }

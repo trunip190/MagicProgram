@@ -561,6 +561,7 @@ namespace MagicProgram
 
         public void Initialise()
         {
+            attachedCards.Clear();
             setMana();
             checkPT();
             ParseText();
