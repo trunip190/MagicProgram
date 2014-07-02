@@ -27,7 +27,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>7</quantity>
+    <quantity>8</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -44,7 +44,7 @@
 Choose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -79,7 +79,7 @@ Draw a card.;
 When Gaea�s Blessing is put into your graveyard from your library, shuffle your graveyard into your library.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -96,7 +96,7 @@ When Gaea�s Blessing is put into your graveyard from your library, shuffle you
 Draw a card.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -129,7 +129,7 @@ Choose target creature or player, then choose another target creature or player 
     <Text>Draw two cards.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -212,7 +212,7 @@ When Mnemonic Wall enters the battlefield, you may return target instant or sorc
 Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -229,7 +229,7 @@ Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battl
 Reach #(This creature can block creatures with flying.)#</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -247,6 +247,40 @@ Reach #(This creature can block creatures with flying.)#</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Nourish</Name>
+    <Edition>DS</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>GG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>You gain 6 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fog Bank</Name>
+    <Edition>US</Edition>
+    <Rarity>U</Rarity>
+    <Color>U</Color>
+    <Cost>1U</Cost>
+    <PT>0/2</PT>
+    <Type>Creature - Wall</Type>
+    <Text>Defender #(This creature can�t attack.)#;
+Flying;
+Prevent all combat damage that would be dealt to and dealt by Fog Bank.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

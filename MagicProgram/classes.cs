@@ -325,6 +325,8 @@ namespace MagicProgram
         [XmlIgnore]
         public MagicCard Parent = null;
         [XmlIgnore]
+        public PlayArea PArea = null;
+        [XmlIgnore]
         public string Location = "Library";
 
         //[XmlIgnore]

@@ -2617,13 +2617,20 @@ namespace MagicProgram
                         drawCards(2);
                         break;
 
+                    case "Nourish":
+                        HP += 6;
+                        break;
+
                     default:
                         break;
                 }
 
-                _graveyard.cards.Add(mc);
-                mc.Location = "Graveyard";
-                _graveyard.index();
+                if (!mc.Token)
+                {
+                    _graveyard.cards.Add(mc);
+                    mc.Location = "Graveyard";
+                    _graveyard.index();
+                }
             }
             # endregion
             # region creatures
@@ -2650,6 +2657,10 @@ namespace MagicProgram
 
                     case "Gyre Sage":
                         mc.Activate += new MagicCard.ActiveAbility(Activate_GyreSage);
+                        break;
+
+                    case "Overgrown Battlement":
+                        mc.Activate += new MagicCard.ActiveAbility(Activate_OvergrownBattlement);
                         break;
 
                     case "Voyaging Satyr":
@@ -2745,6 +2756,21 @@ namespace MagicProgram
             mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
             mc.Discard += new CardUse(Play_Discard);
             mc.Destroyed += new CardUse(Play_Destroyed);
+        }
+
+        void Activate_OvergrownBattlement(MagicCard mc, int index)
+        {
+            int c = 0;
+            foreach (MagicCard mcp in _play.cards)
+            {
+                if (mc.Text.Contains("Defender"))
+                {
+                    c++;
+                }
+            }
+            mana.green += c;
+            mc.Tap(true, false);
+
         }
 
         void mc_OnUpkeepNyxbornFleese(MagicCard mc)

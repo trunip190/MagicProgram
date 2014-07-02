@@ -152,6 +152,7 @@
     <Compile Include="Controls\ManaWheel.Designer.cs">
       <DependentUpon>ManaWheel.cs</DependentUpon>
     </Compile>
+    <Compile Include="NyxCards.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Controls\ProgressDialog.cs">
       <SubType>UserControl</SubType>
