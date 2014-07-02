@@ -342,6 +342,7 @@ namespace MagicProgram
                         if (dr == DialogResult.No)
                         {
                             area._graveyard.cards.Add(mc);
+                            mc.Location = "Graveyard";
                         }
                         else
                         {
@@ -499,6 +500,7 @@ namespace MagicProgram
             {
                 PlArea._graveyard.Remove(mc);
                 PlArea._stack.cards.Add(mc);
+                mc.Location = "Library";
                 PlArea._stack = PlArea.Shuffle(PlArea._stack, true);
             }
 
@@ -1902,6 +1904,7 @@ namespace MagicProgram
             {
                 PlArea._stack.cards.Remove(mc);
                 PlArea._stack.cards.Add(mc);
+                mc.Location = "Library";
 
                 onCancel -= OnCancel_ToBottom;
                 CardChosen -= CardChosen_ToBottom;
@@ -2534,10 +2537,11 @@ namespace MagicProgram
             {
                 for (int i = 0; i < mc.quantity; i++)
                 {
-                    MagicCard newCard = mc.Clone() as MagicCard;
+                    MagicCard newCard = new MagicCard(mc);
                     newCard.quantity = 1;
                     newCard.Initialise();
                     _stack.cards.Add(newCard);
+                    newCard.Location = "Library";
                 }
             }
 
@@ -2595,6 +2599,7 @@ namespace MagicProgram
                         break;
                 }
                 _lands.cards.Add(mc);
+                mc.Location = "Play";
                 _lands.index();
             }
             # endregion
@@ -2617,6 +2622,7 @@ namespace MagicProgram
                 }
 
                 _graveyard.cards.Add(mc);
+                mc.Location = "Graveyard";
                 _graveyard.index();
             }
             # endregion
@@ -2711,6 +2717,7 @@ namespace MagicProgram
                 }
 
                 _play.cards.Add(mc);
+                mc.Location = "Play";
                 _play.index();
             }
             # endregion
@@ -2765,24 +2772,26 @@ namespace MagicProgram
             CheckGrave(mc);
         }
 
-        private bool CheckGrave(MagicCard mca)
+        private bool CheckGrave(MagicCard mc)
         {
             bool toGrave = true;
-            if (mca.Name == "Rancor")
+            if (mc.Name == "Rancor")
             {
-                _hand.cards.Add(mca.Copy());
+                MagicCard mcv = new MagicCard(mc);
+                _hand.cards.Add(mcv);
+                mcv.Location = "Hand";
                 toGrave = false;
             }
-            if (mca.Type.Contains("Equipment"))
+            if (mc.Type.Contains("Equipment"))
             {
-                _play.Add(mca);
-                mca.OnEquip += new MagicCard.PassiveAbility(mc_OnEquip);
+                _play.Add(mc);
+                mc.OnEquip += new MagicCard.PassiveAbility(mc_OnEquip);
                 toGrave = false;
             }
 
             if (toGrave)
             {
-                _graveyard.Add(mca.Copy());
+                _graveyard.Add(mc.Copy());
                 toGrave = true;
             }
 
@@ -2797,6 +2806,7 @@ namespace MagicProgram
                 if (mc.Name == "Rancor")
                 {
                     _hand.cards.Add(mc);
+                    mc.Location = "Hand";
                     toHand = true;
                 }
             }
@@ -2804,6 +2814,7 @@ namespace MagicProgram
             if (!toHand)
             {
                 _graveyard.cards.Add(mc);
+                mc.Location = "Graveyard";
             }
             _play.cards.Remove(mc);
         }
@@ -2811,6 +2822,7 @@ namespace MagicProgram
         void Hand_Discard(MagicCard mc)
         {
             _graveyard.cards.Add(mc);
+            mc.Location = "Graveyard";
             _hand.cards.Remove(mc);
         }
 
@@ -3049,6 +3061,7 @@ namespace MagicProgram
                 MagicCard mc = _stack.cards[0];
 
                 _hand.cards.Add(mc);
+                mc.Location = "Hand";
                 _stack.cards.Remove(mc);    //remove?
                 //_stack.cards.RemoveAt(0);
 
@@ -3125,6 +3138,7 @@ namespace MagicProgram
         {
             CardCollection result = new CardCollection();
             List<MagicCard> source = cc.cards;
+            Random r = new Random();
 
             if (standard)
             {
@@ -3169,17 +3183,30 @@ namespace MagicProgram
                 # region add cards to list
                 while (Lands.Count + nonLands.Count > 0)
                 {
-                    ratio = (Lands.Count + nonLands.Count) / Lands.Count;
+                    if (Lands.Count > 0)
+                    {
+                        ratio = (Lands.Count + nonLands.Count) / Lands.Count;
+                    }
+                    else
+                    {
+                        ratio = 1;
+                    }
                     if (count < ratio && nonLands.Count > 0)
                     {
-                        result.cards.Add(nonLands[0]);
-                        nonLands.RemoveAt(0);
+                        int c = r.Next(0, nonLands.Count);
+                        MagicCard mc = nonLands[c];
+                        result.cards.Add(mc);
+                        mc.Location = "Library";
+                        nonLands.Remove(mc);
                         count++;
                     }
                     else if (Lands.Count > 0)
                     {
-                        result.cards.Add(Lands[0]);
-                        Lands.RemoveAt(0);
+                        int c = r.Next(0, Lands.Count);
+                        MagicCard mc = Lands[c];
+                        result.cards.Add(mc);
+                        mc.Location = "Library";
+                        Lands.Remove(mc);
                         count = 0;
                     }
                     else

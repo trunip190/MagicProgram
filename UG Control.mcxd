@@ -1,22 +1,6 @@
 <?xml version="1.0"?>
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Card>
-    <Name>wavecrash triton</Name>
-    <Edition />
-    <Rarity />
-    <Color />
-    <Cost />
-    <PT />
-    <Type>Creature</Type>
-    <Text />
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Triton Tactics</Name>
     <Edition>THS</Edition>
     <Rarity>U</Rarity>
@@ -225,6 +209,22 @@ Choose target creature, then choose another target creature for each time Streng
     <Flavor />
     <Token>false</Token>
     <quantity>10</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wavecrash Triton</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT>1/4</PT>
+    <Type>Creature - Merfolk Wizard</Type>
+    <Text>Heroic - Whenever you cast a spell that targets Wavecrash Triton, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

@@ -11,7 +11,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>6</quantity>
+    <quantity>8</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -28,72 +28,6 @@
     <Flavor />
     <Token>false</Token>
     <quantity>7</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Axebane Guardian</Name>
-    <Edition>RTR</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>2G</Cost>
-    <PT>0/3</PT>
-    <Type>Creature - Human Druid</Type>
-    <Text>Defender;
-%T: Add X mana in any combination of colors to your mana pool, where X is the number of creatures with defender you control.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Progenitor Mimic</Name>
-    <Edition>DGM</Edition>
-    <Rarity>M</Rarity>
-    <Color>Gld</Color>
-    <Cost>4GU</Cost>
-    <PT>0/0</PT>
-    <Type>Creature - Shapeshifter</Type>
-    <Text>You may have Progenitor Mimic enter the battlefield as a copy of any creature on the battlefield except it gains �At the beginning of your upkeep, if this creature isn�t a token, put a token onto the battlefield that�s a copy of this creature.�</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Mnemonic Wall</Name>
-    <Edition>ROE</Edition>
-    <Rarity>C</Rarity>
-    <Color>U</Color>
-    <Cost>4U</Cost>
-    <PT>0/4</PT>
-    <Type>Creature - Wall</Type>
-    <Text>Defender;
-When Mnemonic Wall enters the battlefield, you may return target instant or sorcery card from your graveyard to your hand.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Call to Heel</Name>
-    <Edition>ALA</Edition>
-    <Rarity>C</Rarity>
-    <Color>U</Color>
-    <Cost>1U</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Return target creature to its owner�s hand. Its controller draws a card.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -217,6 +151,56 @@ Choose target creature or player, then choose another target creature or player 
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Progenitor Mimic</Name>
+    <Edition>DGM</Edition>
+    <Rarity>M</Rarity>
+    <Color>Gld</Color>
+    <Cost>4GU</Cost>
+    <PT>0/0</PT>
+    <Type>Creature - Shapeshifter</Type>
+    <Text>You may have Progenitor Mimic enter the battlefield as a copy of any creature on the battlefield except it gains �At the beginning of your upkeep, if this creature isn�t a token, put a token onto the battlefield that�s a copy of this creature.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Axebane Guardian</Name>
+    <Edition>RTR</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>2G</Cost>
+    <PT>0/3</PT>
+    <Type>Creature - Human Druid</Type>
+    <Text>Defender;
+%T: Add X mana in any combination of colors to your mana pool, where X is the number of creatures with defender you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mnemonic Wall</Name>
+    <Edition>ROE</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>4U</Cost>
+    <PT>0/4</PT>
+    <Type>Creature - Wall</Type>
+    <Text>Defender;
+When Mnemonic Wall enters the battlefield, you may return target instant or sorcery card from your graveyard to your hand.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Battlefield Thaumaturge</Name>
     <Edition>JOU</Edition>
     <Rarity>R</Rarity>
@@ -234,80 +218,35 @@ Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battl
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Species Gorger</Name>
-    <Edition>DGM</Edition>
-    <Rarity>U</Rarity>
-    <Color>Gld</Color>
-    <Cost>3GU</Cost>
-    <PT>6/6</PT>
-    <Type>Creature - Frog Beast</Type>
-    <Text>At the beginning of your upkeep, return a creature you control to its owner�s hand.</Text>
+    <Name>Wall of Vines</Name>
+    <Edition>M11</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>0/3</PT>
+    <Type>Creature - Plant Wall</Type>
+    <Text>Defender #(This creature can�t attack.)#;
+Reach #(This creature can block creatures with flying.)#</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Temple of Triumph</Name>
-    <Edition>THS</Edition>
-    <Rarity>R</Rarity>
-    <Color>R</Color>
-    <Cost />
-    <PT />
-    <Type>Land</Type>
-    <Text>Temple of Triumph enters the battlefield tapped. 
-When Temple of Triumph enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.) 
-Tap: Add R or W to your mana pool.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities>
-      <CardAbility>
-        <RawCost>Tap</RawCost>
-        <Text> Add R or W to your mana pool.</Text>
-      </CardAbility>
-    </Abilities>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Temple of Malady</Name>
-    <Edition>JOU</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost />
-    <PT />
-    <Type>Land</Type>
-    <Text>Temple of Malady enters the battlefield tapped.
-When Temple of Malady enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.
-{T}: Add {B} or {G} to your mana pool.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities>
-      <CardAbility>
-        <RawCost>{T}</RawCost>
-        <Text> Add {B} or {G} to your mana pool.</Text>
-      </CardAbility>
-    </Abilities>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Basilica Guards</Name>
-    <Edition>GTC</Edition>
+    <Name>Overgrown Battlement</Name>
+    <Edition>ROE</Edition>
     <Rarity>C</Rarity>
-    <Color>W</Color>
-    <Cost>2W</Cost>
-    <PT>1/4</PT>
-    <Type>Creature - Human Soldier</Type>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>0/4</PT>
+    <Type>Creature - Wall</Type>
     <Text>Defender;
-Extort #(Whenever you cast a spell, you may pay %O. If you do, each opponent loses 1 life and you gain that much life.)#</Text>
+%T: Add %G to your mana pool for each creature with defender you control.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

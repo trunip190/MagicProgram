@@ -861,13 +861,13 @@ namespace MagicProgram
                     break;
 
                 case "Favor of the Overbeing":
-                    if (Parent.Color == "U")
+                    if (Parent.Cost.Contains("U"))
                     {
                         result.Add("Power#1");
                         result.Add("Toughness#1");
                         result.Add("Ability#Flying");
                     }
-                    if (Parent.Color == "G")
+                    if (Parent.Cost.Contains("G"))
                     {
                         result.Add("Power#1");
                         result.Add("Toughness#1");
