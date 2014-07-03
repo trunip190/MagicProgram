@@ -172,7 +172,7 @@ namespace MagicProgram
 
             PlArea.CardDrawn += new CardUse(PlArea_CardDrawn);
             OppArea.CardDrawn += new CardUse(OppArea_CardDrawn);
-
+            
             Controls.Add(PlArea.mw);
             PlArea.mw.Parent = this;
         }
@@ -2421,6 +2421,19 @@ namespace MagicProgram
             comboCardPicker.Visible = true;
         }
         # endregion
+
+        private void listViewOppCrea_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                int i = listViewOppCrea.SelectedIndices[0];
+                if (i > -1 && OppArea._play.cards.Count > i)
+                {
+                    MagicCard mc = OppArea._play.cards[i];
+                    ViewCard(mc);
+                }
+            }
+        }
     }
 
     public class PlayArea

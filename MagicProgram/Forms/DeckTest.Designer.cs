@@ -930,6 +930,7 @@
             this.listViewOppCrea.TabIndex = 6;
             this.listViewOppCrea.UseCompatibleStateImageBehavior = false;
             this.listViewOppCrea.KeyUp += new System.Windows.Forms.KeyEventHandler(this.listViewOppCrea_KeyUp);
+            this.listViewOppCrea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listViewOppCrea_MouseClick);
             // 
             // cPanelOppLand
             // 

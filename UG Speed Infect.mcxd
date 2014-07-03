@@ -102,22 +102,6 @@ Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters o
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Ooze Flux</Name>
-    <Edition>GTC</Edition>
-    <Rarity>R</Rarity>
-    <Color>G</Color>
-    <Cost>3G</Cost>
-    <PT />
-    <Type>Enchantment</Type>
-    <Text>%1%G, Remove one or more +1/+1 counters from among creatures you control: Put an X/X green Ooze creature token onto the battlefield, where X is the number of +1/+1 counters removed this way.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Multani's Harmony</Name>
     <Edition>PS</Edition>
     <Rarity>U</Rarity>
@@ -230,6 +214,22 @@ As Breeding Pool enters the battlefield, you may pay 2 life. If you don�t, Bre
     <Type>Creature - Troll</Type>
     <Text>Wither #(This deals damage to creatures in the form of -1/-1 counters.)#;
 Persist #(When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner�s control with a -1/-1 counter on it.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fate Transfer</Name>
+    <Edition>SHM</Edition>
+    <Rarity>C</Rarity>
+    <Color>Gld</Color>
+    <Cost>1%V</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Move all counters from target creature onto another target creature.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
