@@ -33,22 +33,6 @@
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Eagle of the Watch</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>2W</Cost>
-    <PT>2/1</PT>
-    <Type>Creature — Bird</Type>
-    <Text>Flying, vigilance</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Vanguard of Brimaz</Name>
     <Edition>BNG</Edition>
     <Rarity>U</Rarity>
@@ -60,39 +44,7 @@
 Heroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 white Cat Soldier creature token with vigilance onto the battlefield.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Lagonna-Band Trailblazer</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>W</Cost>
-    <PT>0/4</PT>
-    <Type>Creature — Centaur Scout</Type>
-    <Text>Heroic — Whenever you cast a spell that targets Lagonna-Band Trailblazer, put a +1/+1 counter on Lagonna-Band Trailblazer.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Bearer of the Heavens</Name>
-    <Edition>JOU</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>7R</Cost>
-    <PT>10/10</PT>
-    <Type>Creature — Giant</Type>
-    <Text>When Bearer of the Heavens dies, destroy all permanents at the beginning of the next end step.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -107,22 +59,6 @@ Heroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 
     <Type>Creature — Human Soldier</Type>
     <Text>Flying, lifelink
 Heroic — Whenever you cast a spell that targets Dawnbringer Charioteers, put a +1/+1 counter on Dawnbringer Charioteers.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Satyr Hoplite</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>R</Cost>
-    <PT>1/1</PT>
-    <Type>Creature — Satyr Soldier</Type>
-    <Text>Heroic — Whenever you cast a spell that targets Satyr Hoplite, put a +1/+1 counter on Satyr Hoplite.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -147,6 +83,7 @@ Heroic — Whenever you cast a spell that targets Dawnbringer Charioteers, put a
         <RawCost>{2}{W}, Sacrifice Font of Vigor</RawCost>
         <Text> You gain 7 life.</Text>
         <Name />
+        <Active>false</Active>
       </CardAbility>
     </Abilities>
     <Tapped>false</Tapped>
@@ -169,6 +106,7 @@ Heroic — Whenever you cast a spell that targets Dawnbringer Charioteers, put a
         <RawCost>{3}{R}, Sacrifice Font of Ire</RawCost>
         <Text> Font of Ire deals 5 damage to target player.</Text>
         <Name />
+        <Active>false</Active>
       </CardAbility>
     </Abilities>
     <Tapped>false</Tapped>
@@ -228,6 +166,7 @@ Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
 Mogis's Warhound attacks each turn if able.
 Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
         <Name>Bestow</Name>
+        <Active>false</Active>
       </CardAbility>
     </Abilities>
     <Tapped>false</Tapped>
@@ -244,7 +183,7 @@ Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
     <Text>At the beginning of your upkeep, you gain 1 life.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -317,6 +256,7 @@ Any number of target creatures each get +2/+0 and gain trample until end of turn
         <RawCost>%T</RawCost>
         <Text> Add %R or %W to your mana pool.</Text>
         <Name />
+        <Active>false</Active>
       </CardAbility>
     </Abilities>
     <Tapped>false</Tapped>
@@ -371,6 +311,55 @@ Any number of target creatures each get +2/+0 and gain first strike and vigilanc
     <Flavor />
     <Token>false</Token>
     <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Odric, Master Tactician</Name>
+    <Edition>M13</Edition>
+    <Rarity>R</Rarity>
+    <Color>W</Color>
+    <Cost>2WW</Cost>
+    <PT>3/4</PT>
+    <Type>Legendary Creature - Human Soldier</Type>
+    <Text>First strike #(This creature deals combat damage before creatures without first strike.)#;
+Whenever Odric, Master Tactician and at least three other creatures attack, you choose which creatures block this combat and how those creatures block.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Crusader of Odric</Name>
+    <Edition>M13</Edition>
+    <Rarity>U</Rarity>
+    <Color>W</Color>
+    <Cost>2W</Cost>
+    <PT>*/*</PT>
+    <Type>Creature - Human Soldier</Type>
+    <Text>Crusader of Odric�s power and toughness are each equal to the number of creatures you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Harvestguard Alseids</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT>2/3</PT>
+    <Type>Enchantment Creature — Nymph</Type>
+    <Text>Constellation — Whenever Harvestguard Alseids or another enchantment enters the battlefield under your control, prevent all damage that would be dealt to target creature this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

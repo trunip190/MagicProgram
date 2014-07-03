@@ -199,7 +199,7 @@ As Breeding Pool enters the battlefield, you may pay 2 life. If you don�t, Bre
     <Text>Draw two cards.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -232,7 +232,7 @@ Persist #(When this creature dies, if it had no -1/-1 counters on it, return it 
     <Text>Move all counters from target creature onto another target creature.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

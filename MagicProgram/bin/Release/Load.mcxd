@@ -140,24 +140,6 @@ Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters o
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Gaea's Blessing</Name>
-    <Edition>WL</Edition>
-    <Rarity>U</Rarity>
-    <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT />
-    <Type>Sorcery</Type>
-    <Text>Target player shuffles up to three target cards from his or her graveyard into his or her library.;
-Draw a card.;
-When Gaea�s Blessing is put into your graveyard from your library, shuffle your graveyard into your library.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Explore</Name>
     <Edition>WWK</Edition>
     <Rarity>C</Rarity>
@@ -253,7 +235,7 @@ Whenever a +1/+1 counter is placed on Fathom Mage, you may draw a card.</Text>
     <Text>%1%G, Remove one or more +1/+1 counters from among creatures you control: Put an X/X green Ooze creature token onto the battlefield, where X is the number of +1/+1 counters removed this way.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>4</quantity>
     <Abilities>
       <CardAbility>
         <RawCost>%1%G, Remove one or more +1/+1 counters from among creatures you control</RawCost>
@@ -262,23 +244,6 @@ Whenever a +1/+1 counter is placed on Fathom Mage, you may draw a card.</Text>
         <Active>false</Active>
       </CardAbility>
     </Abilities>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Crowned Ceratok</Name>
-    <Edition>GTC</Edition>
-    <Rarity>U</Rarity>
-    <Color>G</Color>
-    <Cost>3G</Cost>
-    <PT>4/3</PT>
-    <Type>Creature - Rhino</Type>
-    <Text>Trample;
-Each creature you control with a +1/+1 counter on it has trample.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
