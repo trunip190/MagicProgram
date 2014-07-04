@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Plains</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Plains</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>20</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ajani's Presence</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Strive — Ajani's Presence costs {2}{W} more to cast for each target beyond the first.
+Any number of target creatures each get +1/+1 and gain indestructible until end of turn. (Damage and effects that say "destroy" don't destroy them.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wake the Reflections</Name>
+    <Edition>DGM</Edition>
+    <Rarity>C</Rarity>
+    <Color>W</Color>
+    <Cost>W</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Populate. #(Put a token onto the battlefield that�s a copy of a creature token you control.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Doomed Traveler</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Soldier</Type>
+    <Text>When Doomed Traveler dies, put a 1/1 white Spirit creature token with flying onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ajani's Pridemate</Name>
+    <Edition>DDH</Edition>
+    <Rarity>U</Rarity>
+    <Color>W</Color>
+    <Cost>1W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Cat Soldier</Type>
+    <Text>Whenever you gain life, you may put a +1/+1 counter on Ajani�s Pridemate. #(For example, if an effect causes you to gain 3 life, you may put one +1/+1 counter on this creature.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Font of Vigor</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1W</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>{2}{W}, Sacrifice Font of Vigor: You gain 7 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>{2}{W}, Sacrifice Font of Vigor</RawCost>
+        <Text> You gain 7 life.</Text>
+        <Name />
+        <Active>false</Active>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Nyx-Fleece Ram</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1W</Cost>
+    <PT>0/5</PT>
+    <Type>Enchantment Creature — Sheep</Type>
+    <Text>At the beginning of your upkeep, you gain 1 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Armament of Nyx</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+Enchanted creature has double strike as long as it's an enchantment. Otherwise, prevent all damage that would be dealt by enchanted creature. (A creature with double strike deals both first-strike and regular combat damage.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Harvestguard Alseids</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT>2/3</PT>
+    <Type>Enchantment Creature — Nymph</Type>
+    <Text>Constellation — Whenever Harvestguard Alseids or another enchantment enters the battlefield under your control, prevent all damage that would be dealt to target creature this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Godsend</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1WW</Cost>
+    <PT />
+    <Type>Legendary Artifact — Equipment</Type>
+    <Text>Equipped creature gets +3/+3.
+Whenever equipped creature blocks or becomes blocked by one or more creatures, you may exile one of those creatures.
+Opponents can't cast cards with the same name as cards exiled with Godsend.
+Equip {3}</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Eidolon of Countless Battles</Name>
+    <Edition>BNG</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1WW</Cost>
+    <PT>0/0</PT>
+    <Type>Enchantment Creature — Spirit</Type>
+    <Text>Bestow {2}{W}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.)
+Eidolon of Countless Battles and enchanted creature each get +1/+1 for each creature you control and +1/+1 for each Aura you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dawnbringer Charioteers</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2WW</Cost>
+    <PT>2/4</PT>
+    <Type>Creature — Human Soldier</Type>
+    <Text>Flying, lifelink
+Heroic — Whenever you cast a spell that targets Dawnbringer Charioteers, put a +1/+1 counter on Dawnbringer Charioteers.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Odric, Master Tactician</Name>
+    <Edition>M13</Edition>
+    <Rarity>R</Rarity>
+    <Color>W</Color>
+    <Cost>2WW</Cost>
+    <PT>3/4</PT>
+    <Type>Legendary Creature - Human Soldier</Type>
+    <Text>First strike #(This creature deals combat damage before creatures without first strike.)#;
+Whenever Odric, Master Tactician and at least three other creatures attack, you choose which creatures block this combat and how those creatures block.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Soul Warden</Name>
+    <Edition>BRB</Edition>
+    <Rarity>C</Rarity>
+    <Color>W</Color>
+    <Cost>W</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Cleric</Type>
+    <Text>Whenever another creature enters the battlefield, you gain 1 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

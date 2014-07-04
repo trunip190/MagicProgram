@@ -307,11 +307,11 @@ namespace MagicProgram
             set
             {
                 int change = value - _counters;
+                _counters = value;
                 if (value < _counters && Name == "Protean Hydra")
                 {
                     countersTurn -= change;
                 }
-                _counters = value;
                 checkPT();
                 callCountersChanged(change);
             }
@@ -324,8 +324,19 @@ namespace MagicProgram
         public List<MagicCard> attachedCards = new List<MagicCard>();
         [XmlIgnore]
         public MagicCard Parent = null;
+
         [XmlIgnore]
-        public PlayArea PArea = null;
+        public PlayArea PArea
+        {
+            get { return _pArea; }
+            set
+            {
+                _pArea = value;
+                onPlay();
+            }
+        }
+        private PlayArea _pArea = null;
+
         [XmlIgnore]
         public string Location = "Library";
 
@@ -336,19 +347,19 @@ namespace MagicProgram
         # region handlers
         # region delegates/events
         public delegate void ActiveAbility(MagicCard mc, int index);  //index of ability being used. 0 based.
-        public delegate void PassiveAbility(MagicCard mc);
-        public delegate void ValueChanged(int count);
+        public delegate void PassiveEvent(MagicCard mc);
 
-        public event PassiveAbility Evolving;
         public event ActiveAbility Activate;
         public event ActiveAbility Activating;
-        public event PassiveAbility OnUpkeep;
-        public event PassiveAbility OnAttack;
-        public event PassiveAbility OnEquip;
-        public event PassiveAbility OnUnequip;
-        public event PassiveAbility onEquipmentAdd;
-        public event PassiveAbility onEquipmentRemoved;
-        public event PassiveAbility onSpellCast;
+        public event PassiveEvent Evolving;
+        public event PassiveEvent OnUpkeep;
+        public event PassiveEvent OnAttack;
+        public event PassiveEvent OnEquip;
+        public event PassiveEvent OnUnequip;
+        public event PassiveEvent onEquipmentAdd;
+        public event PassiveEvent onEquipmentRemoved;
+        public event PassiveEvent onSpellCast;
+        public event PassiveEvent onDie;
         public event ValueChanged CountersChanged;
         public event CardUse TapChanged;
         public event CardUse Discard;
@@ -371,7 +382,16 @@ namespace MagicProgram
 
         public void callOnUpkeep()
         {
-            PassiveAbility handler = OnUpkeep;
+            PassiveEvent handler = OnUpkeep;
+            if (handler != null)
+            {
+                handler(this);
+            }
+        }
+
+        public void callDie()
+        {
+            PassiveEvent handler = onDie;
             if (handler != null)
             {
                 handler(this);
@@ -398,7 +418,7 @@ namespace MagicProgram
 
         public void callEvolve()
         {
-            PassiveAbility handler = Evolving;
+            PassiveEvent handler = Evolving;
 
             if (handler != null)
             {
@@ -417,7 +437,7 @@ namespace MagicProgram
 
         public void callSpellCast()
         {
-            PassiveAbility handler = onSpellCast;
+            PassiveEvent handler = onSpellCast;
             if (handler != null)
             {
                 handler(this);
@@ -426,7 +446,7 @@ namespace MagicProgram
 
         public void callOnEquipmentAdd()
         {
-            PassiveAbility handler = onEquipmentAdd;
+            PassiveEvent handler = onEquipmentAdd;
             if (handler != null)
             {
                 handler(this);
@@ -435,7 +455,7 @@ namespace MagicProgram
 
         private void callOnEquipmentRemoved(MagicCard mc)
         {
-            PassiveAbility handler = onEquipmentRemoved;
+            PassiveEvent handler = onEquipmentRemoved;
             if (handler != null)
             {
                 handler(mc);
@@ -444,7 +464,7 @@ namespace MagicProgram
 
         public void callOnEquip()
         {
-            PassiveAbility handler = OnEquip;
+            PassiveEvent handler = OnEquip;
             if (handler != null)
             {
                 handler(this);
@@ -453,7 +473,7 @@ namespace MagicProgram
 
         public void callOnUnequip()
         {
-            PassiveAbility handler = OnUnequip;
+            PassiveEvent handler = OnUnequip;
             if (handler != null)
             {
                 handler(this);
@@ -462,7 +482,7 @@ namespace MagicProgram
 
         public void callOnAttack()
         {
-            PassiveAbility handler = OnAttack;
+            PassiveEvent handler = OnAttack;
             if (handler != null)
             {
                 handler(this);
@@ -569,6 +589,32 @@ namespace MagicProgram
             ParseText();
         }
 
+        private void onPlay()
+        {
+            if (PArea == null)
+            {
+                return;
+            }
+
+            switch (Name)
+            {
+                case "Ajani's Pridemate":
+                    PArea.HPUp -= PArea_HPChanged;
+                    PArea.HPUp += new ValueChanged(PArea_HPChanged);
+                    break;
+            }
+        }
+
+        void PArea_HPChanged(int value)
+        {
+            Debug.WriteLine("{0}: {1} counters.", Name, counters);
+            if (value > 0)
+            {
+                counters++;
+            }
+            Debug.WriteLine("\t{0}: {1} counters.", Name, counters);
+        }
+
         public void checkPT()
         {
             string[] parts = PT.Split('/');
@@ -579,6 +625,25 @@ namespace MagicProgram
             {
                 int.TryParse(parts[0], out Power);
                 int.TryParse(parts[1], out Toughness);
+            }
+
+            switch (Name)
+            {
+                case "Crusader of Odric":
+                    if (PArea != null)
+                    {
+                        Power = PArea._play.cards.Count;
+                        Toughness = PArea._play.cards.Count;
+                    }
+                    break;
+
+                case "Eidolon of Countless Battles":
+                    if (PArea != null)
+                    {
+                        Power = PArea._play.cards.Count;
+                        Toughness = PArea._play.cards.Count;
+                    }
+                    break;
             }
 
             # region cycle through attached cards
@@ -762,7 +827,7 @@ namespace MagicProgram
             attachedCards.Add(mc);
             mc.Parent = this;
             callOnEquipmentAdd();
-            mc.OnEquip += new PassiveAbility(RemoveEquipment);
+            mc.OnEquip += new PassiveEvent(RemoveEquipment);
         }
 
         public void RemoveEquipment(MagicCard mc)

@@ -234,7 +234,7 @@ namespace MagicProgram
             }
 
             card.CountersChanged -= mc_CountersChanged;
-            card.CountersChanged += new MagicCard.ValueChanged(mc_CountersChanged);
+            card.CountersChanged += new ValueChanged(mc_CountersChanged);
 
             card.TapChanged -= mc_TapChanged;
             card.TapChanged += new CardUse(mc_TapChanged);

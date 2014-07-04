@@ -11,7 +11,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>11</quantity>
+    <quantity>9</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -27,7 +27,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>10</quantity>
+    <quantity>12</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -44,7 +44,7 @@
 Heroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 white Cat Soldier creature token with vigilance onto the battlefield.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -217,7 +217,7 @@ Any number of target creatures each get +1/+1 and gain indestructible until end 
 Any number of target creatures each get +2/+0 and gain trample until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>1</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -310,7 +310,7 @@ Any number of target creatures can't block this turn.</Text>
 Any number of target creatures each get +2/+0 and gain first strike and vigilance until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -360,6 +360,22 @@ Whenever Odric, Master Tactician and at least three other creatures attack, you 
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ajani's Pridemate</Name>
+    <Edition>DDH</Edition>
+    <Rarity>U</Rarity>
+    <Color>W</Color>
+    <Cost>1W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Cat Soldier</Type>
+    <Text>Whenever you gain life, you may put a +1/+1 counter on Ajani�s Pridemate. #(For example, if an effect causes you to gain 3 life, you may put one +1/+1 counter on this creature.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

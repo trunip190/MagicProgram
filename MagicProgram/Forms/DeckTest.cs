@@ -172,7 +172,7 @@ namespace MagicProgram
 
             PlArea.CardDrawn += new CardUse(PlArea_CardDrawn);
             OppArea.CardDrawn += new CardUse(OppArea_CardDrawn);
-            
+
             Controls.Add(PlArea.mw);
             PlArea.mw.Parent = this;
         }
@@ -284,47 +284,75 @@ namespace MagicProgram
             {
                 switch (mc.Name)
                 {
+                    # region Nature's Lore
                     case "Nature's Lore":
                         List<MagicCard> cards = PlArea._stack.cards.Where(o => o.Type.ToUpper().Contains("FOREST")).ToList();
                         comboCardPicker_Fill(cards);
                         CardChosen += new CardUse(CardChosen_NaturesLore);
                         break;
+                    # endregion
 
+                    # region Triton Tactics
                     case "Triton Tactics":
                         targets = 2;
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(CardChosen_TritonTactics);
                         break;
+                    # endregion
 
+                    # region Gaea's Blessing
                     case "Gaea's Blessing":
                         targets = 3;
                         comboCardPicker_Fill(PlArea._graveyard.cards);
                         CardChosen += new CardUse(CardChosen_GaeasBlessing);
                         onCancel += new Action(CardCancel_GaeasBlessing);
                         break;
+                    # endregion
 
+                    # region Predator's Rapport
                     case "Predator's Rapport":
                         targets = 1;
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(CardChosen_PredatorsRapport);
                         break;
+                    # endregion
 
+                    # region Call to Heel
                     case "Call to Heel":
                         targets = 1;
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(CardChosen_CalltoHeel);
                         break;
+                    # endregion
 
+                    # region Strength of the Tajuru
                     case "Strength of the Tajuru":
                         //targets = mc.Xvalue;
                         mc.Resolving += new CardUse(mc_ResolvingStrengthTajuru);
                         //cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_StrengthOfTheTajuru);
                         break;
+                    # endregion
 
+                    # region Rouse the Mob
                     case "Rouse the Mob":
                         mc.Resolving += new CardUse(mc_ResolvingRouseTheMob);
                         break;
+                    # endregion
 
+                    # region Nature's Panoply
                     case "Nature's Panoply":
                         mc.Resolving += new CardUse(mc_ResolvingNaturesPanoply);
                         break;
+                    # endregion
+
+                    # region Ajani's Presence
+                    case "Ajani's Presence":
+                        mc.Resolving += new CardUse(mc_ResolvingAjanisPresence);
+                        break;
+                    # endregion
+
+                    # region Wake the Reflections
+                    case "Wake the Reflections":
+                        cardAreaPlay.ChoseCard += new CardUse(CardClicked_WakeReflections);
+                        break;
+                    # endregion
                 }
 
                 if (mc.Text.Contains("Cipher"))
@@ -405,8 +433,8 @@ namespace MagicProgram
                     switch (mc.Name)
                     {
                         case "Explorer's Scope":
-                            mc.OnEquip += new MagicCard.PassiveAbility(OnEquip_ExplorersScope);
-                            mc.OnUnequip += new MagicCard.PassiveAbility(OnUnequip_ExplorersScope);
+                            mc.OnEquip += new MagicCard.PassiveEvent(OnEquip_ExplorersScope);
+                            mc.OnUnequip += new MagicCard.PassiveEvent(OnUnequip_ExplorersScope);
                             mc.Activating += new MagicCard.ActiveAbility(Activating_Equipment);
                             break;
 
@@ -416,7 +444,7 @@ namespace MagicProgram
 
                         default:
                             mc.Activating += new MagicCard.ActiveAbility(Activating_Equipment);
-                            mc.OnEquip += new MagicCard.PassiveAbility(mc_OnEquip);
+                            mc.OnEquip += new MagicCard.PassiveEvent(mc_OnEquip);
                             break;
                     }
                     area.PlayCard(mc);
@@ -453,10 +481,54 @@ namespace MagicProgram
 
             mc.Resolve();
 
+            if (mc.PArea == null)
+            {
+                mc.PArea = area;
+            }
+
             //updateAll();
             return true;
         }
 
+        void CardClicked_WakeReflections(MagicCard mc)
+        {
+            if (mc.Token)
+            {
+                MagicCard mct = new MagicCard(mc);
+                PlayCreature(mct, PlArea);
+                cardAreaPlay.ChoseCard -= CardClicked_WakeReflections;
+            }
+        }
+
+        # region Ajani's Presence
+        void mc_ResolvingAjanisPresence(MagicCard mc)
+        {
+            mc.Resolving -= mc_ResolvingAjanisPresence;
+            cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_AjanisPresence);
+        }
+
+        void CardClicked_AjanisPresence(MagicCard mc, MouseEventArgs e)
+        {
+            targets--;
+
+            # region card effect
+            mc.PBonus++;
+            mc.TBonus++;
+            mc.Abilities.Add(new CardAbility
+            {
+                Name = "Indestructable",
+            });
+            mc.callSpellCast();
+            # endregion
+
+            if (targets < 1)
+            {
+                cardAreaPlay.CardClicked -= CardClicked_AjanisPresence;
+            }
+        }
+        # endregion
+
+        # region Nature's Panoply
         void mc_ResolvingNaturesPanoply(MagicCard mc)
         {
             mc.Resolving -= mc_ResolvingNaturesPanoply;
@@ -473,7 +545,9 @@ namespace MagicProgram
                 cardAreaPlay.CardClicked -= CardClicked_NaturesPanoply;
             }
         }
+        # endregion
 
+        # region Reouse the Mob
         void mc_ResolvingRouseTheMob(MagicCard mc)
         {
             cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_RouseTheMob);
@@ -486,7 +560,9 @@ namespace MagicProgram
             mc.callSpellCast();
             cardAreaPlay.CardClicked -= CardClicked_RouseTheMob;
         }
+        # endregion
 
+        # region Gaea's Blessing
         void CardCancel_GaeasBlessing()
         {
             DrawCard(1);
@@ -517,6 +593,7 @@ namespace MagicProgram
                 comboCardPicker_Fill(cards);
             }
         }
+        # endregion
 
         private void CheckMana(MagicCard mc)
         {
@@ -596,7 +673,7 @@ namespace MagicProgram
                 case "Fathom Mage":
                     if (playerTurn)
                     {
-                        mc.CountersChanged += new MagicCard.ValueChanged(mc_CountersChangedFathomMage);
+                        mc.CountersChanged += new ValueChanged(mc_CountersChangedFathomMage);
                     }
                     break;
                 # endregion
@@ -609,13 +686,25 @@ namespace MagicProgram
 
                 # region Sigiled Skink
                 case "Sigiled Skink":
-                    mc.OnAttack += new MagicCard.PassiveAbility(mc_Scry1);
+                    mc.OnAttack += new MagicCard.PassiveEvent(mc_Scry1);
                     break;
 
                 case "Sigiled Starfish":
                     mc.Activating += new MagicCard.ActiveAbility(mc_ActivatingScry1);
                     break;
                 #endregion
+
+                # region Vanguard of Brimaz
+                case "Vanguard of Brimaz":
+                    mc.onSpellCast += new MagicCard.PassiveEvent(mc_HeroicVanguardBrimaz);
+                    break;
+                # endregion
+
+                # region Doomed Traveler
+                case "Doomed Traveler":
+                    mc.onDie += new MagicCard.PassiveEvent(Discard_DoomedTraveler);
+                    break;
+                # endregion
             }
             # endregion
 
@@ -623,7 +712,7 @@ namespace MagicProgram
 
             if (!mc.Token && mc.Text.Contains("At the beginning of your upkeep, if this creature isn't a token, put a token onto the battlefield that's a copy of this creature."))
             {
-                mc.OnUpkeep += new MagicCard.PassiveAbility(Upkeep_ProgenitorMimic);
+                mc.OnUpkeep += new MagicCard.PassiveEvent(Upkeep_ProgenitorMimic);
             }
 
             mc.checkPT();
@@ -635,6 +724,46 @@ namespace MagicProgram
             //final resolution - add card to play.
             area.PlayCard(mc);
             update_listViewPlay();
+        }
+
+        void Discard_DoomedTraveler(MagicCard mc)
+        {
+            MagicCard mct = new MagicCard
+            {
+                Name = "Spirit",
+                Token = true,
+                PT = "1/1",
+                Power = 1,
+                Toughness = 1,
+                Text = "Flying",
+            };
+
+            mct.Abilities.Add(new CardAbility
+            {
+                Name = "Flying",
+            });
+
+            PlayCreature(mct, PlArea);
+        }
+
+        void mc_HeroicVanguardBrimaz(MagicCard mc)
+        {
+            MagicCard mct = new MagicCard
+            {
+                Name = "Cat",
+                Token = true,
+                PT = "1/1",
+                Power = 1,
+                Toughness = 1,
+                Text = "Vigilance",
+                Sick = true,
+            };
+            mct.Abilities.Add(new CardAbility
+            {
+                Name = "Vigilance"
+            });
+
+            PlayCreature(mct, PlArea);
         }
 
         void mc_ActivatingScry1(MagicCard mc, int index)
@@ -1852,7 +1981,7 @@ namespace MagicProgram
             }
 
             //TODO not getting called
-            mc.Parent.OnAttack += new MagicCard.PassiveAbility(OnAttack_ExplorersScope);
+            mc.Parent.OnAttack += new MagicCard.PassiveEvent(OnAttack_ExplorersScope);
         }
 
         void OnAttack_ExplorersScope(MagicCard mc)
@@ -2451,6 +2580,8 @@ namespace MagicProgram
 
         # region hp
         public event Action HPChanged;
+        public event ValueChanged HPDown;
+        public event ValueChanged HPUp;
 
         private void onHPChanged()
         {
@@ -2460,6 +2591,25 @@ namespace MagicProgram
                 handler();
             }
         }
+        private void callHPDown(int value)
+        {
+            ValueChanged handler = HPDown;
+            if (handler != null)
+            {
+                handler(value);
+            }
+            onHPChanged();
+        }
+        private void callHPUp(int value)
+        {
+            ValueChanged handler = HPUp;
+            if (handler != null)
+            {
+                handler(value);
+            }
+            onHPChanged();
+            List<MagicCard> cards = _play.cards;
+        }
 
         private int _hp = 20;
         public int HP
@@ -2467,8 +2617,16 @@ namespace MagicProgram
             get { return _hp; }
             set
             {
+                int val = value - _hp;
                 _hp = value;
-                onHPChanged();
+                if (val > 0)
+                {
+                    callHPUp(val);
+                }
+                else if (val < 0)
+                {
+                    callHPDown(val);
+                }
             }
         }
         # endregion
@@ -2651,9 +2809,15 @@ namespace MagicProgram
             {
                 foreach (MagicCard mstc in _play.cards)
                 {
-                    if (mstc.Name == "Master Biomancer")
+                    switch (mstc.Name)
                     {
-                        mc.counters += mstc.Power;
+                        case "Master Biomancer":
+                            mc.counters += mstc.Power;
+                            break;
+
+                        case "Soul Warden":
+                            HP++;
+                            break;
                     }
                 }
 
@@ -2661,7 +2825,7 @@ namespace MagicProgram
                 switch (mc.Name)
                 {
                     case "Renegade Krasis":
-                        mc.Evolving += new MagicCard.PassiveAbility(RenegadeKrasis_Evolve);
+                        mc.Evolving += new MagicCard.PassiveEvent(RenegadeKrasis_Evolve);
                         break;
 
                     case "Vorel of the Hull Clade":
@@ -2688,7 +2852,7 @@ namespace MagicProgram
                         break;
 
                     case "Nyx-Fleece Ram":
-                        mc.OnUpkeep += new MagicCard.PassiveAbility(mc_OnUpkeepNyxbornFleese);
+                        mc.OnUpkeep += new MagicCard.PassiveEvent(mc_OnUpkeepNyxbornFleese);
                         break;
 
                     case "Leech Bonder":
@@ -2750,7 +2914,7 @@ namespace MagicProgram
             {
                 if (mc.Type.Contains("Equipment"))
                 {
-                    mc.OnEquip += new MagicCard.PassiveAbility(mc_OnEquip);
+                    mc.OnEquip += new MagicCard.PassiveEvent(mc_OnEquip);
                     _play.Add(mc);
                     _play.index();
                 }
@@ -2765,6 +2929,8 @@ namespace MagicProgram
             {
                 throw new NotImplementedException();
             }
+
+            mc.PArea = this;
 
             mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
             mc.Discard += new CardUse(Play_Discard);
@@ -2824,7 +2990,7 @@ namespace MagicProgram
             if (mc.Type.Contains("Equipment"))
             {
                 _play.Add(mc);
-                mc.OnEquip += new MagicCard.PassiveAbility(mc_OnEquip);
+                mc.OnEquip += new MagicCard.PassiveEvent(mc_OnEquip);
                 toGrave = false;
             }
 
@@ -2855,7 +3021,10 @@ namespace MagicProgram
                 _graveyard.cards.Add(mc);
                 mc.Location = "Graveyard";
             }
+
             _play.cards.Remove(mc);
+
+            mc.callDie();
         }
 
         void Hand_Discard(MagicCard mc)
@@ -3266,4 +3435,5 @@ namespace MagicProgram
     public delegate void Phase();
     public delegate void CardUse(MagicCard mc);
     public delegate void CardDraw();
+    public delegate void ValueChanged(int value);
 }
