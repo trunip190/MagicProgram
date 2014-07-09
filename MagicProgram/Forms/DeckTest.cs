@@ -250,6 +250,7 @@ namespace MagicProgram
             {
                 area = OppArea;
             }
+            mc.PArea = area;
             # endregion
 
             //work out if there is enough mana
@@ -268,7 +269,6 @@ namespace MagicProgram
             # endregion
 
             mc.callOnPlay();
-            //mc = new MagicCard(mc);   //TODO check that only one copy is being created
 
             # region land
             if (mc.Type.Contains("Land"))
@@ -399,6 +399,7 @@ namespace MagicProgram
                 else
                 {
                     PlayCreature(mc, area);
+                    CheckAreaCont(mc, area);
                 }
             }
             # endregion
@@ -481,13 +482,17 @@ namespace MagicProgram
 
             mc.Resolve();
 
-            if (mc.PArea == null)
-            {
-                mc.PArea = area;
-            }
+            CheckAreaCont(mc, area);
 
-            //updateAll();
             return true;
+        }
+
+        private static void CheckAreaCont(MagicCard mc, PlayArea area)
+        {
+            if (mc.Type.Contains("Creature") && !area._play.cards.Contains(mc))
+            {
+                Debug.WriteLine("{0} not in {1}", mc.Name, "Area");
+            }
         }
 
         void CardClicked_WakeReflections(MagicCard mc)
@@ -717,12 +722,11 @@ namespace MagicProgram
 
             mc.checkPT();
 
-            //resolve spell
-            //onSpellRes(); //TODO re-enable
             CardsProc = new List<MagicCard>();
 
             //final resolution - add card to play.
             area.PlayCard(mc);
+            area.CheckArea(mc);
             update_listViewPlay();
         }
 
@@ -2627,6 +2631,10 @@ namespace MagicProgram
                 {
                     callHPDown(val);
                 }
+                foreach (MagicCard mc in _play.cards)
+                {
+                    mc.LifeChanged(val);
+                }
             }
         }
         # endregion
@@ -2807,6 +2815,7 @@ namespace MagicProgram
             # region creatures
             else if (mc.Type.ToUpper().Contains("CREATURE"))
             {
+                # region card enters effects
                 foreach (MagicCard mstc in _play.cards)
                 {
                     switch (mstc.Name)
@@ -2820,6 +2829,7 @@ namespace MagicProgram
                             break;
                     }
                 }
+                # endregion
 
                 # region individual card switch
                 switch (mc.Name)
@@ -2905,8 +2915,13 @@ namespace MagicProgram
                 }
 
                 _play.cards.Add(mc);
+
+                CheckArea(mc);
+
                 mc.Location = "Play";
                 _play.index();
+
+                CheckArea(mc);
             }
             # endregion
             # region artifacts and enchantments
@@ -2930,11 +2945,23 @@ namespace MagicProgram
                 throw new NotImplementedException();
             }
 
-            mc.PArea = this;
-
             mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
             mc.Discard += new CardUse(Play_Discard);
             mc.Destroyed += new CardUse(Play_Destroyed);
+
+            CheckArea(mc);
+        }
+
+        public void CheckArea(MagicCard mc)
+        {
+            if (!_play.cards.Contains(mc))
+            {
+                Debug.WriteLine("{0} not in {1}", mc.Name, "area");
+            }
+            else
+            {
+                Debug.WriteLine("{0} IS in {1}", mc.Name, "area");
+            }
         }
 
         void Activate_OvergrownBattlement(MagicCard mc, int index)

@@ -34,22 +34,6 @@ Any number of target creatures each get +1/+1 and gain indestructible until end 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Wake the Reflections</Name>
-    <Edition>DGM</Edition>
-    <Rarity>C</Rarity>
-    <Color>W</Color>
-    <Cost>W</Cost>
-    <PT />
-    <Type>Sorcery</Type>
-    <Text>Populate. #(Put a token onto the battlefield that�s a copy of a creature token you control.)#</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Doomed Traveler</Name>
     <Edition>CNS</Edition>
     <Rarity>C</Rarity>
@@ -78,29 +62,6 @@ Any number of target creatures each get +1/+1 and gain indestructible until end 
     <Token>false</Token>
     <quantity>4</quantity>
     <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Font of Vigor</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>1W</Cost>
-    <PT />
-    <Type>Enchantment</Type>
-    <Text>{2}{W}, Sacrifice Font of Vigor: You gain 7 life.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities>
-      <CardAbility>
-        <RawCost>{2}{W}, Sacrifice Font of Vigor</RawCost>
-        <Text> You gain 7 life.</Text>
-        <Name />
-        <Active>false</Active>
-      </CardAbility>
-    </Abilities>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
@@ -173,23 +134,6 @@ Equip {3}</Text>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Eidolon of Countless Battles</Name>
-    <Edition>BNG</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>1WW</Cost>
-    <PT>0/0</PT>
-    <Type>Enchantment Creature — Spirit</Type>
-    <Text>Bestow {2}{W}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.)
-Eidolon of Countless Battles and enchanted creature each get +1/+1 for each creature you control and +1/+1 for each Aura you control.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Dawnbringer Charioteers</Name>
     <Edition>JOU</Edition>
     <Rarity>R</Rarity>
@@ -218,7 +162,7 @@ Heroic — Whenever you cast a spell that targets Dawnbringer Charioteers, put a
 Whenever Odric, Master Tactician and at least three other creatures attack, you choose which creatures block this combat and how those creatures block.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -232,6 +176,38 @@ Whenever Odric, Master Tactician and at least three other creatures attack, you 
     <PT>1/1</PT>
     <Type>Creature - Human Cleric</Type>
     <Text>Whenever another creature enters the battlefield, you gain 1 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Storm Herd</Name>
+    <Edition>GP</Edition>
+    <Rarity>R</Rarity>
+    <Color>W</Color>
+    <Cost>8WW</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Put X 1/1 white Pegasus creature tokens with flying onto the battlefield, where X is your life total.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Crusader of Odric</Name>
+    <Edition>M13</Edition>
+    <Rarity>U</Rarity>
+    <Color>W</Color>
+    <Cost>2W</Cost>
+    <PT>*/*</PT>
+    <Type>Creature - Human Soldier</Type>
+    <Text>Crusader of Odric�s power and toughness are each equal to the number of creatures you control.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>

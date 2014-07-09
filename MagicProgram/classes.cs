@@ -332,7 +332,6 @@ namespace MagicProgram
             set
             {
                 _pArea = value;
-                onPlay();
             }
         }
         private PlayArea _pArea = null;
@@ -588,33 +587,7 @@ namespace MagicProgram
             checkPT();
             ParseText();
         }
-
-        private void onPlay()
-        {
-            if (PArea == null)
-            {
-                return;
-            }
-
-            switch (Name)
-            {
-                case "Ajani's Pridemate":
-                    PArea.HPUp -= PArea_HPChanged;
-                    PArea.HPUp += new ValueChanged(PArea_HPChanged);
-                    break;
-            }
-        }
-
-        void PArea_HPChanged(int value)
-        {
-            Debug.WriteLine("{0}: {1} counters.", Name, counters);
-            if (value > 0)
-            {
-                counters++;
-            }
-            Debug.WriteLine("\t{0}: {1} counters.", Name, counters);
-        }
-
+        
         public void checkPT()
         {
             string[] parts = PT.Split('/');
@@ -944,6 +917,30 @@ namespace MagicProgram
             }
 
             return result;
+        }
+        # endregion
+
+        # region triggers
+        public void LifeChanged(int i)
+        {
+            if (i > 0)
+            {
+                //hp increase
+                if (Name == "Ajani's Pridemate")
+                {
+                    counters++;
+                }
+            }
+            else if (i < 0)
+            {
+                //hp decrease
+
+            }
+            else
+            {
+                //no change
+
+            }
         }
         # endregion
 
@@ -1701,5 +1698,5 @@ namespace MagicProgram
         Large,
         vLarge
     };
-
+        
 }
