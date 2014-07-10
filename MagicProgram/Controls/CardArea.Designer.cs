@@ -41,6 +41,7 @@
             this.buttonDone.Text = "Done";
             this.buttonDone.UseVisualStyleBackColor = true;
             this.buttonDone.Visible = false;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
             // CardArea
             // 
@@ -59,7 +60,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonDone;
+        public System.Windows.Forms.Button buttonDone;
+
+
 
 
 

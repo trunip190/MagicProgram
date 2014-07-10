@@ -165,7 +165,7 @@ namespace MagicProgram
         public delegate void MagicCardViewerEvent(MagicCardViewer mcv);
         public event MagicCardViewerEvent CardChanged;
         public event MagicCardViewerEvent CardDeleted;
-        public event CardUse CardChosen;
+        public event PassiveEvent CardChosen;
 
         protected void onCardChanged()
         {
@@ -178,7 +178,7 @@ namespace MagicProgram
 
         protected void callCardChosen()
         {
-            CardUse handler = CardChosen;
+            PassiveEvent handler = CardChosen;
             if (handler != null)
             {
                 handler(cards[0]);
@@ -237,10 +237,10 @@ namespace MagicProgram
             card.CountersChanged += new ValueChanged(mc_CountersChanged);
 
             card.TapChanged -= mc_TapChanged;
-            card.TapChanged += new CardUse(mc_TapChanged);
+            card.TapChanged += new PassiveEvent(mc_TapChanged);
 
             card.Destroyed -= card_Destroyed;
-            card.Destroyed += new CardUse(card_Destroyed);
+            card.Destroyed += new PassiveEvent(card_Destroyed);
 
             cards.Add(card);
             mc = card;

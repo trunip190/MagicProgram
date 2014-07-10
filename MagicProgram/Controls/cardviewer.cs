@@ -41,7 +41,7 @@ namespace MagicProgram
 
             //is getting assigned multiple times.
             nMC.TapChanged -= LoadCard;
-            nMC.TapChanged += new CardUse(LoadCard);
+            nMC.TapChanged += new PassiveEvent(LoadCard);
 
             LoadCard();
         }

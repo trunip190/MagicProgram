@@ -24,7 +24,7 @@ namespace MagicProgram
         {
             _mc = mc;
 
-            _mc.TapChanged += new CardUse(_mc_TapChanged);
+            _mc.TapChanged += new PassiveEvent(_mc_TapChanged);
 
             LoadCard();
         }

@@ -115,25 +115,6 @@ Enchanted creature has double strike as long as it's an enchantment. Otherwise, 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Godsend</Name>
-    <Edition>JOU</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>1WW</Cost>
-    <PT />
-    <Type>Legendary Artifact — Equipment</Type>
-    <Text>Equipped creature gets +3/+3.
-Whenever equipped creature blocks or becomes blocked by one or more creatures, you may exile one of those creatures.
-Opponents can't cast cards with the same name as cards exiled with Godsend.
-Equip {3}</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Dawnbringer Charioteers</Name>
     <Edition>JOU</Edition>
     <Rarity>R</Rarity>
@@ -184,22 +165,6 @@ Whenever Odric, Master Tactician and at least three other creatures attack, you 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Storm Herd</Name>
-    <Edition>GP</Edition>
-    <Rarity>R</Rarity>
-    <Color>W</Color>
-    <Cost>8WW</Cost>
-    <PT />
-    <Type>Sorcery</Type>
-    <Text>Put X 1/1 white Pegasus creature tokens with flying onto the battlefield, where X is your life total.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Crusader of Odric</Name>
     <Edition>M13</Edition>
     <Rarity>U</Rarity>
@@ -211,6 +176,22 @@ Whenever Odric, Master Tactician and at least three other creatures attack, you 
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>God-Favored General</Name>
+    <Edition>BNG</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1W</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Soldier</Type>
+    <Text>Inspired — Whenever God-Favored General becomes untapped, you may pay {2}{W}. If you do, put two 1/1 white Soldier enchantment creature tokens onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

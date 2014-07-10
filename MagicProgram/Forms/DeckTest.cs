@@ -58,8 +58,8 @@ namespace MagicProgram
             }
         }
 
-        public event CardUse CreaCast;
-        public event CardUse CardChosen;
+        public event PassiveEvent CreaCast;
+        public event PassiveEvent CardChosen;
 
         private void callOnCancel()
         {
@@ -89,7 +89,7 @@ namespace MagicProgram
 
         private void onCreaCast(MagicCard mc)
         {
-            CardUse handler = CreaCast;
+            PassiveEvent handler = CreaCast;
             if (handler != null)
             {
                 handler(mc);
@@ -98,7 +98,7 @@ namespace MagicProgram
 
         private void onCardChosen(MagicCard mc)
         {
-            CardUse handler = CardChosen;
+            PassiveEvent handler = CardChosen;
             if (handler != null)
             {
                 handler(mc);
@@ -164,14 +164,14 @@ namespace MagicProgram
             PlArea.HPChanged += new Action(PlaHP_ValueChanged);
             OppArea.HPChanged += new Action(FoeHP_ValueChanged);
 
-            PlArea.CardUsed += new CardUse(PlArea_CardUsed);
-            OppArea.CardUsed += new CardUse(OppArea_CardUsed);
+            PlArea.CardUsed += new PassiveEvent(PlArea_CardUsed);
+            OppArea.CardUsed += new PassiveEvent(OppArea_CardUsed);
 
             PlArea.mana.ManaChanged += new ColourCost.Action(updateManaLabel);
             OppArea.mana.ManaChanged += new ColourCost.Action(updateManaLabel);
 
-            PlArea.CardDrawn += new CardUse(PlArea_CardDrawn);
-            OppArea.CardDrawn += new CardUse(OppArea_CardDrawn);
+            PlArea.CardDrawn += new PassiveEvent(PlArea_CardDrawn);
+            OppArea.CardDrawn += new PassiveEvent(OppArea_CardDrawn);
 
             Controls.Add(PlArea.mw);
             PlArea.mw.Parent = this;
@@ -288,7 +288,7 @@ namespace MagicProgram
                     case "Nature's Lore":
                         List<MagicCard> cards = PlArea._stack.cards.Where(o => o.Type.ToUpper().Contains("FOREST")).ToList();
                         comboCardPicker_Fill(cards);
-                        CardChosen += new CardUse(CardChosen_NaturesLore);
+                        CardChosen += new PassiveEvent(CardChosen_NaturesLore);
                         break;
                     # endregion
 
@@ -303,7 +303,7 @@ namespace MagicProgram
                     case "Gaea's Blessing":
                         targets = 3;
                         comboCardPicker_Fill(PlArea._graveyard.cards);
-                        CardChosen += new CardUse(CardChosen_GaeasBlessing);
+                        CardChosen += new PassiveEvent(CardChosen_GaeasBlessing);
                         onCancel += new Action(CardCancel_GaeasBlessing);
                         break;
                     # endregion
@@ -325,32 +325,32 @@ namespace MagicProgram
                     # region Strength of the Tajuru
                     case "Strength of the Tajuru":
                         //targets = mc.Xvalue;
-                        mc.Resolving += new CardUse(mc_ResolvingStrengthTajuru);
+                        mc.Resolving += new PassiveEvent(mc_ResolvingStrengthTajuru);
                         //cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_StrengthOfTheTajuru);
                         break;
                     # endregion
 
                     # region Rouse the Mob
                     case "Rouse the Mob":
-                        mc.Resolving += new CardUse(mc_ResolvingRouseTheMob);
+                        mc.Resolving += new PassiveEvent(mc_ResolvingRouseTheMob);
                         break;
                     # endregion
 
                     # region Nature's Panoply
                     case "Nature's Panoply":
-                        mc.Resolving += new CardUse(mc_ResolvingNaturesPanoply);
+                        mc.Resolving += new PassiveEvent(mc_ResolvingNaturesPanoply);
                         break;
                     # endregion
 
                     # region Ajani's Presence
                     case "Ajani's Presence":
-                        mc.Resolving += new CardUse(mc_ResolvingAjanisPresence);
+                        mc.Resolving += new PassiveEvent(mc_ResolvingAjanisPresence);
                         break;
                     # endregion
 
                     # region Wake the Reflections
                     case "Wake the Reflections":
-                        cardAreaPlay.ChoseCard += new CardUse(CardClicked_WakeReflections);
+                        cardAreaPlay.ChoseCard += new PassiveEvent(CardClicked_WakeReflections);
                         break;
                     # endregion
                 }
@@ -434,8 +434,8 @@ namespace MagicProgram
                     switch (mc.Name)
                     {
                         case "Explorer's Scope":
-                            mc.OnEquip += new MagicCard.PassiveEvent(OnEquip_ExplorersScope);
-                            mc.OnUnequip += new MagicCard.PassiveEvent(OnUnequip_ExplorersScope);
+                            mc.OnEquip += new PassiveEvent(OnEquip_ExplorersScope);
+                            mc.OnUnequip += new PassiveEvent(OnUnequip_ExplorersScope);
                             mc.Activating += new MagicCard.ActiveAbility(Activating_Equipment);
                             break;
 
@@ -445,7 +445,7 @@ namespace MagicProgram
 
                         default:
                             mc.Activating += new MagicCard.ActiveAbility(Activating_Equipment);
-                            mc.OnEquip += new MagicCard.PassiveEvent(mc_OnEquip);
+                            mc.OnEquip += new PassiveEvent(mc_OnEquip);
                             break;
                     }
                     area.PlayCard(mc);
@@ -660,7 +660,7 @@ namespace MagicProgram
                     {
                         List<MagicCard> cards = PlArea._graveyard.cards.Where(o => o.Type.ToUpper().Contains("INSTANT") || o.Type.ToUpper().Contains("SORCERY")).ToList();
                         comboCardPicker_Fill(cards);
-                        CardChosen += new CardUse(CardChosen_MnemonicWall);
+                        CardChosen += new PassiveEvent(CardChosen_MnemonicWall);
                     }
                     break;
                 # endregion
@@ -691,7 +691,7 @@ namespace MagicProgram
 
                 # region Sigiled Skink
                 case "Sigiled Skink":
-                    mc.OnAttack += new MagicCard.PassiveEvent(mc_Scry1);
+                    mc.OnAttack += new PassiveEvent(mc_Scry1);
                     break;
 
                 case "Sigiled Starfish":
@@ -701,13 +701,19 @@ namespace MagicProgram
 
                 # region Vanguard of Brimaz
                 case "Vanguard of Brimaz":
-                    mc.onSpellCast += new MagicCard.PassiveEvent(mc_HeroicVanguardBrimaz);
+                    mc.onSpellCast += new PassiveEvent(mc_HeroicVanguardBrimaz);
                     break;
                 # endregion
 
                 # region Doomed Traveler
                 case "Doomed Traveler":
-                    mc.onDie += new MagicCard.PassiveEvent(Discard_DoomedTraveler);
+                    mc.onDie += new PassiveEvent(Discard_DoomedTraveler);
+                    break;
+                # endregion
+
+                # region God-Favored General
+                case "God-Favored General":
+                    mc.TapChanged += new PassiveEvent(Untap_GodFavoredGeneral);
                     break;
                 # endregion
             }
@@ -717,7 +723,7 @@ namespace MagicProgram
 
             if (!mc.Token && mc.Text.Contains("At the beginning of your upkeep, if this creature isn't a token, put a token onto the battlefield that's a copy of this creature."))
             {
-                mc.OnUpkeep += new MagicCard.PassiveEvent(Upkeep_ProgenitorMimic);
+                mc.OnUpkeep += new PassiveEvent(Upkeep_ProgenitorMimic);
             }
 
             mc.checkPT();
@@ -1036,7 +1042,7 @@ namespace MagicProgram
             mc.AttachCard(tempCard);
             mc.checkPT();
             mc.Name += "*";
-            mc.TapChanged += new CardUse(mc_TapVerdantHaven);
+            mc.TapChanged += new PassiveEvent(mc_TapVerdantHaven);
 
             tempCard = null;
 
@@ -1060,7 +1066,7 @@ namespace MagicProgram
 
         private void cardAreaHand_ChoseCard(MagicCard mc)
         {
-            mc.OnPlay += new CardUse(temp_OnPlay);
+            mc.OnPlay += new PassiveEvent(temp_OnPlay);
             PrePlay(mc);
         }
         # endregion
@@ -1985,7 +1991,7 @@ namespace MagicProgram
             }
 
             //TODO not getting called
-            mc.Parent.OnAttack += new MagicCard.PassiveEvent(OnAttack_ExplorersScope);
+            mc.Parent.OnAttack += new PassiveEvent(OnAttack_ExplorersScope);
         }
 
         void OnAttack_ExplorersScope(MagicCard mc)
@@ -2021,7 +2027,7 @@ namespace MagicProgram
             }
 
             comboCardPicker_Fill(cards);
-            CardChosen += new CardUse(CardChosen_ToBottom);
+            CardChosen += new PassiveEvent(CardChosen_ToBottom);
             onCancel += new Action(OnCancel_ToBottom);
         }
 
@@ -2050,6 +2056,58 @@ namespace MagicProgram
             MagicCard mcn = new MagicCard(mc);
             mcn.Token = true;
             AddToStack(mcn);
+        }
+
+        void Untap_GodFavoredGeneral(MagicCard mc)
+        {
+            if (mc.Tapped)
+            {
+                return;
+            }
+
+            
+
+            if (MessageBox.Show("Do you want to pay {2}{W} to create two soldier tokens?", "Inspired", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                //need a way to produce the mana...
+                cardAreaPlay.CountersPicked += new CardArea.CountersChosen(cardAreaPlay_GodFavoredGeneral);
+
+                cardAreaPlay.buttonDone.Show();
+
+            }
+        }
+
+        void cardAreaPlay_GodFavoredGeneral(int value, Dictionary<MagicCard, int> sources)
+        {
+            ColourCost cc = new ColourCost
+            {
+                white = 1,
+                grey = 2,
+            };
+
+            PlArea.mana.Subtract(cc);
+
+            # region Play Token
+            PlArea.PlayToken(new MagicCard
+            {
+                Name = "Soldier",
+                PT = "1/1",
+                Token = true
+            });
+            # endregion
+
+            # region Play Token
+            PlArea.PlayToken(new MagicCard
+            {
+                Name = "Soldier",
+                PT = "1/1",
+                Token = true
+            });
+            # endregion
+
+            cardAreaPlay.CountersPicked -= cardAreaPlay_GodFavoredGeneral;
+
+            update_listViewPlay();
         }
 
         void Activating_OozeFlux(MagicCard mc, int index)
@@ -2085,7 +2143,7 @@ namespace MagicProgram
             List<MagicCard> cards = PlArea._graveyard.cards.Where(o => o.Type == "Instant" || o.Type == "Sorcery").ToList();
             comboCardPicker_Fill(cards);
 
-            CardChosen += new CardUse(CardChosen_MnemonicWall);
+            CardChosen += new PassiveEvent(CardChosen_MnemonicWall);
         }
 
         void CardChosen_MnemonicWall(MagicCard mc)
@@ -2652,6 +2710,7 @@ namespace MagicProgram
         private List<MagicCard> CardsProc = new List<MagicCard>();
 
         public event Phase SpellRes;
+        public event Phase UpkeepDone;
         protected void onSpellRes()
         {
             Phase handler = SpellRes;
@@ -2668,12 +2727,12 @@ namespace MagicProgram
             }
         }
 
-        public event CardUse CardUsed;
-        public event CardUse CardDrawn;
+        public event PassiveEvent CardUsed;
+        public event PassiveEvent CardDrawn;
 
         protected void onCardUse(MagicCard mc)
         {
-            CardUse handler = CardUsed;
+            PassiveEvent handler = CardUsed;
             if (handler != null)
             {
                 handler(mc);
@@ -2681,10 +2740,19 @@ namespace MagicProgram
         }
         protected void onCardDrawn(MagicCard mc)
         {
-            CardUse handler = CardDrawn;
+            PassiveEvent handler = CardDrawn;
             if (handler != null)
             {
                 handler(mc);
+            }
+        }
+
+        protected void callUpkeepDone()
+        {
+            Phase handler = UpkeepDone;
+            if (handler != null)
+            {
+                handler();
             }
         }
 
@@ -2741,7 +2809,7 @@ namespace MagicProgram
                     # region named cards
                     case "Breeding Pool":
                         DialogResult dr = MessageBox.Show("Pay 2 life to untap?", "Pay life?", MessageBoxButtons.YesNo);
-                        mc.TapChanged += new CardUse(Tap_Gate);
+                        mc.TapChanged += new PassiveEvent(Tap_Gate);
 
                         if (dr == DialogResult.Yes)
                         {
@@ -2762,17 +2830,17 @@ namespace MagicProgram
                     default:
                         if (mc.Type.Contains("Basic Land"))
                         {
-                            mc.TapChanged += new CardUse(Activate_BasicLand);
+                            mc.TapChanged += new PassiveEvent(Activate_BasicLand);
                         }
                         else if (mc.Type.Contains("Gate"))
                         {
-                            mc.TapChanged += new CardUse(Tap_Gate);
+                            mc.TapChanged += new PassiveEvent(Tap_Gate);
                             mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
                             mc.Tap(true, true);
                         }
                         else
                         {
-                            mc.TapChanged += new CardUse(mc_TapLand);
+                            mc.TapChanged += new PassiveEvent(mc_TapLand);
                             mc.Activating += new MagicCard.ActiveAbility(mc_Land);
                         }
                         break;
@@ -2835,7 +2903,7 @@ namespace MagicProgram
                 switch (mc.Name)
                 {
                     case "Renegade Krasis":
-                        mc.Evolving += new MagicCard.PassiveEvent(RenegadeKrasis_Evolve);
+                        mc.Evolving += new PassiveEvent(RenegadeKrasis_Evolve);
                         break;
 
                     case "Vorel of the Hull Clade":
@@ -2862,7 +2930,7 @@ namespace MagicProgram
                         break;
 
                     case "Nyx-Fleece Ram":
-                        mc.OnUpkeep += new MagicCard.PassiveEvent(mc_OnUpkeepNyxbornFleese);
+                        mc.OnUpkeep += new PassiveEvent(mc_OnUpkeepNyxbornFleese);
                         break;
 
                     case "Leech Bonder":
@@ -2929,7 +2997,7 @@ namespace MagicProgram
             {
                 if (mc.Type.Contains("Equipment"))
                 {
-                    mc.OnEquip += new MagicCard.PassiveEvent(mc_OnEquip);
+                    mc.OnEquip += new PassiveEvent(mc_OnEquip);
                     _play.Add(mc);
                     _play.index();
                 }
@@ -2946,8 +3014,8 @@ namespace MagicProgram
             }
 
             mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
-            mc.Discard += new CardUse(Play_Discard);
-            mc.Destroyed += new CardUse(Play_Destroyed);
+            mc.Discard += new PassiveEvent(Play_Discard);
+            mc.Destroyed += new PassiveEvent(Play_Destroyed);
 
             CheckArea(mc);
         }
@@ -3017,7 +3085,7 @@ namespace MagicProgram
             if (mc.Type.Contains("Equipment"))
             {
                 _play.Add(mc);
-                mc.OnEquip += new MagicCard.PassiveEvent(mc_OnEquip);
+                mc.OnEquip += new PassiveEvent(mc_OnEquip);
                 toGrave = false;
             }
 
@@ -3342,22 +3410,24 @@ namespace MagicProgram
         {
             landPlayed = 0;
 
-            foreach (MagicCard mc in _play.cards)
+            for ( int i = 0; i < _lands.cards.Count; i++)
             {
-                mc.UpkeepCard();
+                _lands.cards[i].UpkeepCard();
             }
-            foreach (MagicCard mc in _artEnch.cards)
+            for (int i = 0; i < _play.cards.Count; i++)
             {
-                mc.UpkeepCard();
+                _play.cards[i].UpkeepCard();
             }
-            foreach (MagicCard mc in _lands.cards)
+            for (int i = 0; i < _artEnch.cards.Count; i++)
             {
-                mc.UpkeepCard();
+                _artEnch.cards[i].UpkeepCard();
             }
-            foreach (MagicCard mc in _hand.cards)
-            {
-                mc.UpkeepCard();
-            }
+            //foreach (MagicCard mc in _hand.cards)
+            //{
+            //    mc.UpkeepCard();
+            //}
+
+            callUpkeepDone();
         }
 
         public void EndStep()
@@ -3460,7 +3530,7 @@ namespace MagicProgram
     }
 
     public delegate void Phase();
-    public delegate void CardUse(MagicCard mc);
+    public delegate void PassiveEvent(MagicCard mc);
     public delegate void CardDraw();
     public delegate void ValueChanged(int value);
 }

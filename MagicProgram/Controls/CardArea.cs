@@ -161,7 +161,7 @@ namespace MagicProgram
 
         public event CardChosen CardClicked;
         public event CardChosen CardDoubleClicked;
-        public event CardUse ChoseCard;
+        public event PassiveEvent ChoseCard;
 
         public event CountersChosen CountersPicked;
 
@@ -187,7 +187,7 @@ namespace MagicProgram
 
         protected void callChoseCard(MagicCard mc)
         {
-            CardUse handler = ChoseCard;
+            PassiveEvent handler = ChoseCard;
             if (handler != null)
             {
                 handler(mc);
@@ -511,7 +511,7 @@ namespace MagicProgram
             mcv.MouseClick += new MouseEventHandler(mcv_MouseClick);
             mcv.MouseDoubleClick += new MouseEventHandler(mcv_MouseDoubleClick);
             mcv.CardChanged += new MagicCardViewer.MagicCardViewerEvent(mcv_CardChanged);
-            mcv.CardChosen += new CardUse(callChoseCard);
+            mcv.CardChosen += new PassiveEvent(callChoseCard);
             Controls.Add(mcv);
             mControls.Add(mcv);
             mcv.BringToFront();
@@ -803,15 +803,13 @@ namespace MagicProgram
             }
 
             int x = Controls.Count;
-
-            buttonDone.Click += new EventHandler(buttonDone_Click);
+                        
             buttonDone.Show();
         }
 
         void buttonDone_Click(object sender, EventArgs e)
         {
             callCountersPicked();
-            buttonDone.Click -= buttonDone_Click;
         }
     }
 }

@@ -863,7 +863,7 @@
             this.cardAreaHand.TextSpoiler = false;
             this.cardAreaHand.CardClicked += new MagicProgram.CardArea.CardChosen(this.cardAreaHand_CardClicked);
             this.cardAreaHand.CardDoubleClicked += new MagicProgram.CardArea.CardChosen(this.cardAreaHand_CardDoubleClicked);
-            this.cardAreaHand.ChoseCard += new MagicProgram.CardUse(this.cardAreaHand_ChoseCard);
+            this.cardAreaHand.ChoseCard += new MagicProgram.PassiveEvent(this.cardAreaHand_ChoseCard);
             // 
             // panelOppPlay
             // 

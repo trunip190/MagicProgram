@@ -27,20 +27,20 @@ namespace MagicProgram
         public string Filename = "";
 
         # region cards changed
-        public event CardUse CardAdded;
+        public event PassiveEvent CardAdded;
         protected void callCardAdded(MagicCard mc)
         {
-            CardUse handler = CardAdded;
+            PassiveEvent handler = CardAdded;
             if (handler != null)
             {
                 handler(mc);
             }
         }
 
-        public event CardUse CardRemoved;
+        public event PassiveEvent CardRemoved;
         protected void callCardRemoved(MagicCard mc)
         {
-            CardUse handler = CardRemoved;
+            PassiveEvent handler = CardRemoved;
             if (handler != null)
             {
                 handler(mc);
@@ -236,8 +236,11 @@ namespace MagicProgram
             get { return _Tapped; }
             set
             {
-                _Tapped = value;
-                callTapChanged();
+                if (_Tapped != value)
+                {
+                    _Tapped = value;
+                    callTapChanged();
+                }
             }
         }
 
@@ -346,7 +349,6 @@ namespace MagicProgram
         # region handlers
         # region delegates/events
         public delegate void ActiveAbility(MagicCard mc, int index);  //index of ability being used. 0 based.
-        public delegate void PassiveEvent(MagicCard mc);
 
         public event ActiveAbility Activate;
         public event ActiveAbility Activating;
@@ -360,19 +362,21 @@ namespace MagicProgram
         public event PassiveEvent onSpellCast;
         public event PassiveEvent onDie;
         public event ValueChanged CountersChanged;
-        public event CardUse TapChanged;
-        public event CardUse Discard;
-        public event CardUse Destroyed;
-        public event CardUse PrePlay;
-        public event CardUse OnPlay;
-        public event CardUse Resolving;
+        public event PassiveEvent TapChanged;
+        public event PassiveEvent OnTap;
+        public event PassiveEvent OnUntap;
+        public event PassiveEvent Discard;
+        public event PassiveEvent Destroyed;
+        public event PassiveEvent PrePlay;
+        public event PassiveEvent OnPlay;
+        public event PassiveEvent Resolving;
         public event Action StatsChanged;
         # endregion
 
         # region event trigger methods
         public void callResolving()
         {
-            CardUse handler = Resolving;
+            PassiveEvent handler = Resolving;
             if (handler != null)
             {
                 handler(this);
@@ -490,7 +494,34 @@ namespace MagicProgram
 
         public void callTapChanged()
         {
-            CardUse handler = TapChanged;
+            PassiveEvent handler = TapChanged;
+            if (handler != null)
+            {
+                handler(this);
+            }
+
+            if (Tapped)
+            {
+                callOnTap();
+            }
+            else
+            {
+                callOnUntap();
+            }
+        }
+
+        public void callOnTap()
+        {
+            PassiveEvent handler = OnTap;
+            if (handler != null)
+            {
+                handler(this);
+            }
+        }
+
+        public void callOnUntap()
+        {
+            PassiveEvent handler = OnUntap;
             if (handler != null)
             {
                 handler(this);
@@ -499,7 +530,7 @@ namespace MagicProgram
 
         public void callDiscard()
         {
-            CardUse handler = Discard;
+            PassiveEvent handler = Discard;
             if (handler != null)
             {
                 handler(this);
@@ -508,7 +539,7 @@ namespace MagicProgram
 
         public void callDestroyed()
         {
-            CardUse handler = Destroyed;
+            PassiveEvent handler = Destroyed;
             if (handler != null)
             {
                 handler(this);
@@ -526,7 +557,7 @@ namespace MagicProgram
 
         public void callPrePlay()
         {
-            CardUse handler = PrePlay;
+            PassiveEvent handler = PrePlay;
             if (handler != null)
             {
                 handler(this);
@@ -535,7 +566,7 @@ namespace MagicProgram
 
         public void callOnPlay()
         {
-            CardUse handler = OnPlay;
+            PassiveEvent handler = OnPlay;
             if (handler != null)
             {
                 handler(this);
@@ -587,7 +618,7 @@ namespace MagicProgram
             checkPT();
             ParseText();
         }
-        
+
         public void checkPT()
         {
             string[] parts = PT.Split('/');
@@ -1698,5 +1729,5 @@ namespace MagicProgram
         Large,
         vLarge
     };
-        
+
 }
