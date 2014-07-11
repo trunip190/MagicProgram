@@ -648,6 +648,14 @@ namespace MagicProgram
                         Toughness = PArea._play.cards.Count;
                     }
                     break;
+
+                case "Geist-Honored Monk":
+                    if (PArea != null)
+                    {
+                        Power = PArea._play.cards.Count;
+                        Toughness = PArea._play.cards.Count;
+                    }
+                    break;
             }
 
             # region cycle through attached cards

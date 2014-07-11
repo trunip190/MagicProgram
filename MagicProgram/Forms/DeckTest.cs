@@ -716,6 +716,12 @@ namespace MagicProgram
                     mc.TapChanged += new PassiveEvent(Untap_GodFavoredGeneral);
                     break;
                 # endregion
+
+                # region Geist-Honored Monk
+                case "Geist-Honored Monk":
+                    mc.Resolving+=new PassiveEvent(EntersBattlefield_GeistHonoredMonk);
+                    break;
+                # endregion
             }
             # endregion
 
@@ -2065,7 +2071,7 @@ namespace MagicProgram
                 return;
             }
 
-            
+
 
             if (MessageBox.Show("Do you want to pay {2}{W} to create two soldier tokens?", "Inspired", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -2085,11 +2091,17 @@ namespace MagicProgram
                 grey = 2,
             };
 
+            if (!PlArea.mana.Compare(cc))
+            {
+                return;
+            }
+
             PlArea.mana.Subtract(cc);
 
             # region Play Token
             PlArea.PlayToken(new MagicCard
             {
+                Type = "Enchantment Creature",
                 Name = "Soldier",
                 PT = "1/1",
                 Token = true
@@ -2144,6 +2156,33 @@ namespace MagicProgram
             comboCardPicker_Fill(cards);
 
             CardChosen += new PassiveEvent(CardChosen_MnemonicWall);
+        }
+
+        void EntersBattlefield_GeistHonoredMonk(MagicCard mc)
+        {
+            # region Play Token
+            PlArea.PlayToken(new MagicCard
+            {
+                Name = "Spirit",
+                Type = "Creature",
+                PT = "1/1",
+                Text = "Flying",
+                Token = true
+            });
+            # endregion
+
+            # region Play Token
+            PlArea.PlayToken(new MagicCard
+            {
+                Name = "Spirit",
+                Type = "Creature",
+                PT = "1/1",
+                Text = "Flying",
+                Token = true
+            });
+            # endregion
+
+            update_listViewPlay();
         }
 
         void CardChosen_MnemonicWall(MagicCard mc)
@@ -3410,7 +3449,7 @@ namespace MagicProgram
         {
             landPlayed = 0;
 
-            for ( int i = 0; i < _lands.cards.Count; i++)
+            for (int i = 0; i < _lands.cards.Count; i++)
             {
                 _lands.cards[i].UpkeepCard();
             }

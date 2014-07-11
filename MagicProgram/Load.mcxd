@@ -50,6 +50,22 @@ Any number of target creatures each get +1/+1 and gain indestructible until end 
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Soul Warden</Name>
+    <Edition>BRB</Edition>
+    <Rarity>C</Rarity>
+    <Color>W</Color>
+    <Cost>W</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Cleric</Type>
+    <Text>Whenever another creature enters the battlefield, you gain 1 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Ajani's Pridemate</Name>
     <Edition>DDH</Edition>
     <Rarity>U</Rarity>
@@ -82,23 +98,6 @@ Any number of target creatures each get +1/+1 and gain indestructible until end 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Armament of Nyx</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>2W</Cost>
-    <PT />
-    <Type>Enchantment — Aura</Type>
-    <Text>Enchant creature
-Enchanted creature has double strike as long as it's an enchantment. Otherwise, prevent all damage that would be dealt by enchanted creature. (A creature with double strike deals both first-strike and regular combat damage.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Harvestguard Alseids</Name>
     <Edition>JOU</Edition>
     <Rarity>C</Rarity>
@@ -109,7 +108,23 @@ Enchanted creature has double strike as long as it's an enchantment. Otherwise, 
     <Text>Constellation — Whenever Harvestguard Alseids or another enchantment enters the battlefield under your control, prevent all damage that would be dealt to target creature this turn.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Crusader of Odric</Name>
+    <Edition>M13</Edition>
+    <Rarity>U</Rarity>
+    <Color>W</Color>
+    <Cost>2W</Cost>
+    <PT>*/*</PT>
+    <Type>Creature - Human Soldier</Type>
+    <Text>Crusader of Odric�s power and toughness are each equal to the number of creatures you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -149,46 +164,33 @@ Whenever Odric, Master Tactician and at least three other creatures attack, you 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Soul Warden</Name>
-    <Edition>BRB</Edition>
-    <Rarity>C</Rarity>
+    <Name>Geist-Honored Monk</Name>
+    <Edition>ISD</Edition>
+    <Rarity>R</Rarity>
+    <Color>W</Color>
+    <Cost>3WW</Cost>
+    <PT>*/*</PT>
+    <Type>Creature - Human Monk</Type>
+    <Text>Vigilance;
+Geist-Honored Monk�s power and toughness are each equal to the number of creatures you control.;
+When Geist-Honored Monk enters the battlefield, put two 1/1 white Spirit creature tokens with flying onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Spirit Link</Name>
+    <Edition>LG</Edition>
+    <Rarity>U</Rarity>
     <Color>W</Color>
     <Cost>W</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Human Cleric</Type>
-    <Text>Whenever another creature enters the battlefield, you gain 1 life.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Crusader of Odric</Name>
-    <Edition>M13</Edition>
-    <Rarity>U</Rarity>
-    <Color>W</Color>
-    <Cost>2W</Cost>
-    <PT>*/*</PT>
-    <Type>Creature - Human Soldier</Type>
-    <Text>Crusader of Odric�s power and toughness are each equal to the number of creatures you control.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>God-Favored General</Name>
-    <Edition>BNG</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>1W</Cost>
-    <PT>1/1</PT>
-    <Type>Creature — Human Soldier</Type>
-    <Text>Inspired — Whenever God-Favored General becomes untapped, you may pay {2}{W}. If you do, put two 1/1 white Soldier enchantment creature tokens onto the battlefield.</Text>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature #(Target a creature as you cast this. This card enters the battlefield attached to that creature.)#;
+Whenever enchanted creature deals damage, you gain that much life.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
