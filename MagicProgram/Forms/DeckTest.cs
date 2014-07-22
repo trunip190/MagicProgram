@@ -368,7 +368,7 @@ namespace MagicProgram
 
                     # region Magma Jet
                     case "Magma Jet":
-                        mc.Resolving += new PassiveEvent(mc_Scry1);
+                        mc.Resolving += new PassiveEvent(mc_Scry2);
                         break;
                     # endregion
                 }
@@ -813,7 +813,7 @@ namespace MagicProgram
                 PlArea._graveyard.Remove(mc);
                 PlArea._stack.cards.Add(mc);
                 mc.Location = "Library";
-                PlArea._stack = PlArea.Shuffle(PlArea._stack, true);
+                PlArea._stack = PlArea.Shuffle(PlArea._stack);
             }
 
             targets--;
@@ -890,6 +890,11 @@ namespace MagicProgram
         void mc_Scry1(MagicCard mc)
         {
             Scry(1);
+        }
+
+        void mc_Scry2(MagicCard mc)
+        {
+            Scry(2);
         }
 
         void CardToHand(MagicCard mc)
@@ -2893,6 +2898,7 @@ namespace MagicProgram
         int shuffles = 0;
 
         public int seed = 0;
+        private Random r = new Random();
 
         public ManaWheel mw = new ManaWheel { Visible = false };
 
@@ -2984,9 +2990,9 @@ namespace MagicProgram
 
             Output.Write("\r\nshuffling cards\r\n");
             _stack.cards.OrderBy(o => o.Type);
-            _stack = Shuffle(_stack, true);
-            _stack = Shuffle(_stack, true);
-            _stack = Shuffle(_stack, false);
+            _stack = Shuffle(_stack);
+            _stack = Shuffle(_stack);
+            _stack = Shuffle(_stack);
         }
 
         public void PlayCard(MagicCard mc)
@@ -3646,92 +3652,98 @@ namespace MagicProgram
             landMax = 1;
         }
 
-        public CardCollection Shuffle(CardCollection cc, bool standard)
+        public CardCollection Shuffle(CardCollection cc)
         {
-            CardCollection result = new CardCollection();
-            List<MagicCard> source = cc.cards;
-            Random r = new Random();
+            int s = seed + DateTime.Now.Second + shuffles;
+            r = new Random(s);
 
-            if (standard)
+            // randomise cards
+            CardCollection result = new CardCollection
             {
-                Debug.WriteLine("Standard");
-                # region randomise
-                int s = seed + DateTime.Now.Second + shuffles;
-                Random rng = new Random(s);
+                cards = Randomise(cc.cards)
+            };
 
-                while (source.Count > 0)
-                {
-                    int k = rng.Next(source.Count);
+            # region Land Shuffle
+            //Create Lists
+            List<MagicCard> Lands = new List<MagicCard>();
+            List<MagicCard> nonLands = new List<MagicCard>();
 
-                    result.cards.Add(source[k]);
-                    source.RemoveAt(k);
-                }
-                # endregion
-            }
-            else
+            # region split into lands/nonlands
+            foreach (MagicCard mc in result.cards)
             {
-                Debug.WriteLine("Special");
-                # region Land Shuffle
-                List<MagicCard> Lands = new List<MagicCard>();
-                List<MagicCard> nonLands = new List<MagicCard>();
-
-                # region split into lands/nonlands
-                foreach (MagicCard mc in cc.cards)
+                if (mc.Type.Contains("Land"))
                 {
-                    if (mc.Type.Contains("Land"))
-                    {
-                        Lands.Add(mc);
-                    }
-                    else
-                    {
-                        nonLands.Add(mc);
-                    }
+                    Lands.Add(mc);
                 }
-                # endregion
-
-                int ratio = (Lands.Count + nonLands.Count) / Lands.Count;
-                int count = 0;
-
-                # region add cards to list
-                while (Lands.Count + nonLands.Count > 0)
+                else
                 {
-                    if (Lands.Count > 0)
-                    {
-                        ratio = (Lands.Count + nonLands.Count) / Lands.Count;
-                    }
-                    else
-                    {
-                        ratio = 1;
-                    }
-                    if (count < ratio && nonLands.Count > 0)
-                    {
-                        int c = r.Next(0, nonLands.Count);
-                        MagicCard mc = nonLands[c];
-                        result.cards.Add(mc);
-                        mc.Location = "Library";
-                        nonLands.Remove(mc);
-                        count++;
-                    }
-                    else if (Lands.Count > 0)
-                    {
-                        int c = r.Next(0, Lands.Count);
-                        MagicCard mc = Lands[c];
-                        result.cards.Add(mc);
-                        mc.Location = "Library";
-                        Lands.Remove(mc);
-                        count = 0;
-                    }
-                    else
-                    {
-                        int p = Lands.Count;
-                        int q = nonLands.Count;
-                    }
+                    nonLands.Add(mc);
                 }
-                # endregion
-                # endregion
             }
+            # endregion
+
+            int ratio = (Lands.Count + nonLands.Count) / Lands.Count;
+            int count = 0;
+
+            result = new CardCollection();
+
+            Lands = Randomise(Lands);
+            nonLands = Randomise(nonLands);
+
+            # region add cards to list
+            while (Lands.Count + nonLands.Count > 0)
+            {
+                if (Lands.Count > 0)
+                {
+                    ratio = (Lands.Count + nonLands.Count) / Lands.Count;
+                }
+                else
+                {
+                    ratio = 1;
+                }
+                if (count < ratio && nonLands.Count > 0)
+                {
+                    MagicCard mc = nonLands[0];
+
+                    result.cards.Add(mc);
+                    mc.Location = "Library";
+                    nonLands.Remove(mc);
+                    count++;
+                }
+                else if (Lands.Count > 0)
+                {
+                    MagicCard mc = Lands[0];
+
+                    result.cards.Add(mc);
+                    mc.Location = "Library";
+                    Lands.Remove(mc);
+                    count = 0;
+                }
+                else
+                {
+                    int p = Lands.Count;
+                    int q = nonLands.Count;
+                }
+            }
+            # endregion
+            # endregion
 
             shuffles++;
+            return result;
+        }
+
+        private List<MagicCard> Randomise(List<MagicCard> cards)
+        {
+            List<MagicCard> result = new List<MagicCard>();
+            List<MagicCard> source = cards;
+
+            while (source.Count > 0)
+            {
+                int k = r.Next(source.Count);
+
+                result.Add(source[k]);
+                source.RemoveAt(k);
+            }
             return result;
         }
     }
