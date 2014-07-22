@@ -865,10 +865,10 @@ namespace MagicProgram
                 {
                     foreach (string s in Directory.GetFiles(p))
                     {
-                        string filename = s.ToUpper();
-                        filename = filename.Replace(p.ToUpper(), "");
+                        string filename = Path.GetFileNameWithoutExtension(s).ToUpper();
+                        //filename = filename.Replace(p.ToUpper(), "");
                         filename = filename.Replace("’", "'");
-                        filename = filename.Replace(".JPG", "");
+                        //filename = filename.Replace(".JPG", "");
                         filename = filename.Replace("\\", "");
 
                         if (!Lib.image.ContainsKey(filename))

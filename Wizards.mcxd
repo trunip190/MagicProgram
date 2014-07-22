@@ -2,95 +2,130 @@
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Card>
     <Name>Island</Name>
-    <Edition>UG</Edition>
+    <Edition />
     <Rarity>C</Rarity>
-    <Color>Lnd</Color>
+    <Color />
     <Cost />
     <PT />
     <Type>Basic Land - Island</Type>
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>22</quantity>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Forest</Name>
-    <Edition>UG</Edition>
-    <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
-    <PT />
-    <Type>Basic Land - Forest</Type>
-    <Text />
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Simic Guildgate</Name>
-    <Edition>GTC</Edition>
-    <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
-    <PT />
-    <Type>Land - Gate</Type>
-    <Text>Simic Guildgate enters the battlefield tapped.;
-%T: Add %G or %U to your mana pool.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Breeding Pool</Name>
-    <Edition>GTC</Edition>
-    <Rarity>R</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
-    <PT />
-    <Type>Land - Forest Island</Type>
-    <Text>#(%T: Add %G or %U to your mana pool.)#;
-As Breeding Pool enters the battlefield, you may pay 2 life. If you don�t, Breeding Pool enters the battlefield tapped.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Battlefield Thaumaturge</Name>
-    <Edition>Nyx</Edition>
-    <Rarity>R</Rarity>
+    <Name>Triton Tactics</Name>
+    <Edition>THS</Edition>
+    <Rarity>U</Rarity>
     <Color>U</Color>
-    <Cost>1U</Cost>
-    <PT>2/1</PT>
-    <Type>Creature - Human Wizard</Type>
-    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
-Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
+    <Cost>U</Cost>
+    <PT>0/0</PT>
+    <Type>Instant</Type>
+    <Text>Up to two target creatures each get +0/+3 until end of turn. Untap those creatures. At this turn's next end of combat, tap each creature that was blocked by one of those creatures this turn and it doesn't untap during its controller's next untap step.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>4</quantity>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Axebane Guardian</Name>
-    <Edition>RTR</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>2G</Cost>
-    <PT>0/3</PT>
-    <Type>Creature - Human Druid</Type>
-    <Text>Defender;
-%T: Add X mana in any combination of colors to your mana pool, where X is the number of creatures with defender you control.</Text>
+    <Name>Gridlock</Name>
+    <Edition>GTC</Edition>
+    <Rarity>U</Rarity>
+    <Color>U</Color>
+    <Cost>XU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Tap X target nonland permanents.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sage of Hours</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>Heroic — Whenever you cast a spell that targets Sage of Hours, put a +1/+1 counter on it.
+Remove all +1/+1 counters from Sage of Hours: For each five counters removed this way, take an extra turn after this one.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Artisan of Forms</Name>
+    <Edition />
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>Heroic - Whenever you cast a spell that targets Artisan of Forms, you may have Artisan of Forms become a copy of target creature and gain this ability.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wavecrash Triton</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT>1/4</PT>
+    <Type>Creature - Merfolk Wizard</Type>
+    <Text>Heroic - Whenever you cast a spell that targets Wavecrash Triton, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fated Infatuation</Name>
+    <Edition>BNG</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>UUU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Put a token onto the battlefield that's a copy of target creature you control. If it's your turn, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Triton Fortune Hunter</Name>
+    <Edition />
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Merfolk Soldier</Type>
+    <Text>Heroic - Whenever you cast a spell that targets Triton Fortune Hunter, draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
@@ -106,116 +141,41 @@ Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battl
 %X, %T: Copy the exiled card. You may cast the copy without paying its mana cost. X is the converted mana cost of the exiled card.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>4</quantity>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Mnemonic Wall</Name>
-    <Edition>ROE</Edition>
+    <Name>Pin to the Earth</Name>
+    <Edition>JOU</Edition>
     <Rarity>C</Rarity>
-    <Color>U</Color>
-    <Cost>4U</Cost>
-    <PT>0/4</PT>
-    <Type>Creature - Wall</Type>
-    <Text>Defender;
-When Mnemonic Wall enters the battlefield, you may return target instant or sorcery card from your graveyard to your hand.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Progenitor Mimic</Name>
-    <Edition>DGM</Edition>
-    <Rarity>M</Rarity>
-    <Color>Gld</Color>
-    <Cost>4GU</Cost>
-    <PT>0/0</PT>
-    <Type>Creature - Shapeshifter</Type>
-    <Text>You may have Progenitor Mimic enter the battlefield as a copy of any creature on the battlefield except it gains �At the beginning of your upkeep, if this creature isn�t a token, put a token onto the battlefield that�s a copy of this creature.�</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Fathom Mage</Name>
-    <Edition>GTC</Edition>
-    <Rarity>R</Rarity>
-    <Color>Gld</Color>
-    <Cost>2GU</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Human Wizard</Type>
-    <Text>Evolve #(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)#;
-Whenever a +1/+1 counter is placed on Fathom Mage, you may draw a card.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Opportunity</Name>
-    <Edition>7E</Edition>
-    <Rarity>U</Rarity>
-    <Color>U</Color>
-    <Cost>4UU</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Target player draws four cards.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Call to Heel</Name>
-    <Edition>ALA</Edition>
-    <Rarity>C</Rarity>
-    <Color>U</Color>
+    <Color />
     <Cost>1U</Cost>
     <PT />
-    <Type>Instant</Type>
-    <Text>Return target creature to its owner�s hand. Its controller draws a card.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Strength of the Tajuru</Name>
-    <Edition>WWK</Edition>
-    <Rarity>R</Rarity>
-    <Color>G</Color>
-    <Cost>XGG</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Multikicker %1 #(You may pay an additional %1 any number of times as you cast this spell.)#;
-Choose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Polymorphous Rush</Name>
-    <Edition>NYX</Edition>
-    <Rarity>R</Rarity>
-    <Color>U</Color>
-    <Cost>2U</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Strive - Polymorphous Rush costs 1U more to cast for each target beyond the first.
-Choose a creature on the battlefield. Any number of target creatures you control each become a copy of that creature until end of turn.</Text>
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+Enchanted creature gets -6/-0.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Voyage's End</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Return target creature to its owner's hand. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>

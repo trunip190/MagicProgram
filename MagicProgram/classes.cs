@@ -953,6 +953,23 @@ namespace MagicProgram
                         result.Add("Ability#Vigilance");
                     }
                     break;
+
+                case "Hopeful Eidolon":
+                    result.Add("Power#1");
+                    result.Add("Toughness#1");
+                    result.Add("Ability#Lifelink");
+                    break;
+
+                case "Eidolon of Countless Battles":
+                    result.Add("Power#" + PArea._play.cards.Count);
+                    result.Add("Toughness#" + PArea._play.cards.Count);
+                    break;
+
+                case "Nimbus Wings":
+                    result.Add("Power#1");
+                    result.Add("Toughness#1");
+                    result.Add("Ability#Flying");
+                    break;
             }
 
             return result;

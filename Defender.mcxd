@@ -33,23 +33,6 @@
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Strength of the Tajuru</Name>
-    <Edition>WWK</Edition>
-    <Rarity>R</Rarity>
-    <Color>G</Color>
-    <Cost>XGG</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Multikicker %1 #(You may pay an additional %1 any number of times as you cast this spell.)#;
-Choose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Simic Guildgate</Name>
     <Edition>GTC</Edition>
     <Rarity>C</Rarity>
@@ -67,19 +50,18 @@ Choose target creature, then choose another target creature for each time Streng
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Gaea's Blessing</Name>
-    <Edition>WL</Edition>
-    <Rarity>U</Rarity>
+    <Name>Wall of Vines</Name>
+    <Edition>M11</Edition>
+    <Rarity>C</Rarity>
     <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT />
-    <Type>Sorcery</Type>
-    <Text>Target player shuffles up to three target cards from his or her graveyard into his or her library.;
-Draw a card.;
-When Gaea�s Blessing is put into your graveyard from your library, shuffle your graveyard into your library.</Text>
+    <Cost>G</Cost>
+    <PT>0/3</PT>
+    <Type>Creature - Plant Wall</Type>
+    <Text>Defender #(This creature can�t attack.)#;
+Reach #(This creature can block creatures with flying.)#</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -94,6 +76,91 @@ When Gaea�s Blessing is put into your graveyard from your library, shuffle you
     <Type>Sorcery</Type>
     <Text>You may play an additional land this turn.;
 Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Nourish</Name>
+    <Edition>DS</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>GG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>You gain 6 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fog Bank</Name>
+    <Edition>US</Edition>
+    <Rarity>U</Rarity>
+    <Color>U</Color>
+    <Cost>1U</Cost>
+    <PT>0/2</PT>
+    <Type>Creature - Wall</Type>
+    <Text>Defender #(This creature can�t attack.)#;
+Flying;
+Prevent all combat damage that would be dealt to and dealt by Fog Bank.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Overgrown Battlement</Name>
+    <Edition>ROE</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>0/4</PT>
+    <Type>Creature - Wall</Type>
+    <Text>Defender;
+%T: Add %G to your mana pool for each creature with defender you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Battlefield Thaumaturge</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
+Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Strength of the Tajuru</Name>
+    <Edition>WWK</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>XGG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Multikicker %1 #(You may pay an additional %1 any number of times as you cast this spell.)#;
+Choose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
@@ -135,38 +202,6 @@ Choose target creature or player, then choose another target creature or player 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Mountain</Name>
-    <Edition>AN</Edition>
-    <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
-    <PT />
-    <Type>Basic Land - Mountain</Type>
-    <Text />
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Progenitor Mimic</Name>
-    <Edition>DGM</Edition>
-    <Rarity>M</Rarity>
-    <Color>Gld</Color>
-    <Cost>4GU</Cost>
-    <PT>0/0</PT>
-    <Type>Creature - Shapeshifter</Type>
-    <Text>You may have Progenitor Mimic enter the battlefield as a copy of any creature on the battlefield except it gains �At the beginning of your upkeep, if this creature isn�t a token, put a token onto the battlefield that�s a copy of this creature.�</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Axebane Guardian</Name>
     <Edition>RTR</Edition>
     <Rarity>C</Rarity>
@@ -201,86 +236,17 @@ When Mnemonic Wall enters the battlefield, you may return target instant or sorc
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Battlefield Thaumaturge</Name>
-    <Edition>JOU</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>1U</Cost>
-    <PT>2/1</PT>
-    <Type>Creature — Human Wizard</Type>
-    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
-Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Wall of Vines</Name>
-    <Edition>M11</Edition>
+    <Name>Gruul Guildgate</Name>
+    <Edition>GTC</Edition>
     <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>G</Cost>
-    <PT>0/3</PT>
-    <Type>Creature - Plant Wall</Type>
-    <Text>Defender #(This creature can�t attack.)#;
-Reach #(This creature can block creatures with flying.)#</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Overgrown Battlement</Name>
-    <Edition>ROE</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT>0/4</PT>
-    <Type>Creature - Wall</Type>
-    <Text>Defender;
-%T: Add %G to your mana pool for each creature with defender you control.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Nourish</Name>
-    <Edition>DS</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>GG</Cost>
+    <Color>Lnd</Color>
+    <Cost />
     <PT />
-    <Type>Instant</Type>
-    <Text>You gain 6 life.</Text>
+    <Type>Land - Gate</Type>
+    <Text>Gruul Guildgate enters the battlefield tapped. %T: Add %R or %G to your mana pool.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Fog Bank</Name>
-    <Edition>US</Edition>
-    <Rarity>U</Rarity>
-    <Color>U</Color>
-    <Cost>1U</Cost>
-    <PT>0/2</PT>
-    <Type>Creature - Wall</Type>
-    <Text>Defender #(This creature can�t attack.)#;
-Flying;
-Prevent all combat damage that would be dealt to and dealt by Fog Bank.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

@@ -467,6 +467,10 @@ namespace MagicProgram
                     case "Ooze Flux":
                         mc.Activating += new MagicCard.ActiveAbility(Activating_OozeFlux);
                         break;
+
+                    case "Spirit Bonds":
+                        mc.PArea.CreatureEntered += new PassiveEvent(CreatureEntered_Spiritbonds);
+                        break;
                 }
 
                 tempCard = mc;
@@ -485,6 +489,171 @@ namespace MagicProgram
             CheckAreaCont(mc, area);
 
             return true;
+        }
+
+        void CreatureEntered_Spiritbonds(MagicCard mc)
+        {
+            if (mc.Token)
+            {
+                return;
+            }
+
+            if (MessageBox.Show("Pay {W} to create a Spirit token?", "Spirit Bonds", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                cardAreaPlay.CountersPicked += new CardArea.CountersChosen(CountersPicked_SpiritBonds);
+                cardAreaPlay.buttonDone.Show();
+            }
+        }
+
+        void CountersPicked_SpiritBonds(int value, Dictionary<MagicCard, int> sources)
+        {
+            ColourCost cc = new ColourCost { white = 1, };
+
+            if (PlArea.mana.Compare(cc))
+            {
+                PlArea.mana.Subtract(cc);
+
+                PlArea.PlayToken(new MagicCard
+                {
+                    Name = "Spirit",
+                    Text = "Flying",
+                    Type = "Creature - Spirit",
+                    Token = true,
+                    PT = "1/1"
+                });
+
+                update_listViewPlay();
+            }
+
+            cardAreaPlay.CountersPicked -= CountersPicked_SpiritBonds;
+        }
+
+        private void PlayCreature(MagicCard mc, PlayArea area)
+        {
+            onCreaCast(mc);
+
+            # region add card specific event handlers
+            switch (mc.Name)
+            {
+                # region Elite Arcanist
+                case "Elite Arcanist":
+                    if (playerTurn)
+                    {
+                        DialogResult dr = MessageBox.Show("Copy card onto Elite Arcanist?", "Copy card?", MessageBoxButtons.YesNo);
+
+                        Debug.WriteLine("count: {0}", CardStack.Count);
+                        if (dr == DialogResult.Yes)
+                        {
+                            tempCard = mc;
+                            cardAreaHand.CardClicked += new CardArea.CardChosen(cardAreaHand_CardClickedEliteArcanist);
+                        }
+                    }
+                    mc.Activating += new MagicCard.ActiveAbility(Activating_EliteArcanist);
+                    break;
+                # endregion
+
+                # region Mnemonic Wall
+                case "Mnemonic Wall":
+                    if (playerTurn)
+                    {
+                        List<MagicCard> cards = PlArea._graveyard.cards.Where(o => o.Type.ToUpper().Contains("INSTANT") || o.Type.ToUpper().Contains("SORCERY")).ToList();
+                        comboCardPicker_Fill(cards);
+                        CardChosen += new PassiveEvent(CardChosen_MnemonicWall);
+                    }
+                    break;
+                # endregion
+
+                # region BondBeetle
+                case "Bond Beetle":
+                    if (playerTurn)
+                    {
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClick_BondBeetle);
+                    }
+                    break;
+                # endregion
+
+                # region Fathom Mage
+                case "Fathom Mage":
+                    if (playerTurn)
+                    {
+                        mc.CountersChanged += new ValueChanged(mc_CountersChangedFathomMage);
+                    }
+                    break;
+                # endregion
+
+                # region Zameck Guildmage
+                case "Zameck Guildmage":
+                    mc.Activating += new MagicCard.ActiveAbility(Activating_ZameckGuildmage);
+                    break;
+                # endregion
+
+                # region Sigiled Skink
+                case "Sigiled Skink":
+                    mc.OnAttack += new PassiveEvent(mc_Scry1);
+                    break;
+
+                case "Sigiled Starfish":
+                    mc.Activating += new MagicCard.ActiveAbility(mc_ActivatingScry1);
+                    break;
+                #endregion
+
+                # region Vanguard of Brimaz
+                case "Vanguard of Brimaz":
+                    mc.onSpellCast += new PassiveEvent(Heroic_VanguardBrimaz);
+                    break;
+                # endregion
+
+                # region Doomed Traveler
+                case "Doomed Traveler":
+                    mc.onDie += new PassiveEvent(Discard_DoomedTraveler);
+                    break;
+                # endregion
+
+                # region God-Favored General
+                case "God-Favored General":
+                    mc.TapChanged += new PassiveEvent(Untap_GodFavoredGeneral);
+                    break;
+                # endregion
+
+                # region Geist-Honored Monk
+                case "Geist-Honored Monk":
+                    break;
+                # endregion
+
+                # region Phalanx Leader
+                case "Phalanx Leader":
+                    mc.onSpellCast += new PassiveEvent(Heroic_PhalanxLeader);
+                    break;
+                # endregion
+
+                # region Tethmos High Priest
+                case "Tethmos High Priest":
+                    mc.onSpellCast += new PassiveEvent(Heroic_TethmosHighPriest);
+                    break;
+                # endregion
+
+                # region Hero of Iroas
+                case "Hero of Iroas":
+                    mc.onSpellCast += new PassiveEvent(Heroic_One);
+                    break;
+                # endregion
+            }
+            # endregion
+
+            mc.Activate += new MagicCard.ActiveAbility(mc_ActivateCard);
+
+            if (!mc.Token && mc.Text.Contains("At the beginning of your upkeep, if this creature isn't a token, put a token onto the battlefield that's a copy of this creature."))
+            {
+                mc.OnUpkeep += new PassiveEvent(Upkeep_ProgenitorMimic);
+            }
+
+            mc.checkPT();
+
+            CardsProc = new List<MagicCard>();
+
+            area.PlayCard(mc);
+
+            update_listViewPlay();
         }
 
         private static void CheckAreaCont(MagicCard mc, PlayArea area)
@@ -630,118 +799,6 @@ namespace MagicProgram
             }
         }
 
-        private void PlayCreature(MagicCard mc, PlayArea area)
-        {
-            onCreaCast(mc);
-
-            # region add card specific event handlers
-            switch (mc.Name)
-            {
-                # region Elite Arcanist
-                case "Elite Arcanist":
-                    if (playerTurn)
-                    {
-                        DialogResult dr = MessageBox.Show("Copy card onto Elite Arcanist?", "Copy card?", MessageBoxButtons.YesNo);
-
-                        Debug.WriteLine("count: {0}", CardStack.Count);
-                        if (dr == DialogResult.Yes)
-                        {
-                            tempCard = mc;
-                            cardAreaHand.CardClicked += new CardArea.CardChosen(cardAreaHand_CardClickedEliteArcanist);
-                        }
-                    }
-                    mc.Activating += new MagicCard.ActiveAbility(Activating_EliteArcanist);
-                    break;
-                # endregion
-
-                # region Mnemonic Wall
-                case "Mnemonic Wall":
-                    if (playerTurn)
-                    {
-                        List<MagicCard> cards = PlArea._graveyard.cards.Where(o => o.Type.ToUpper().Contains("INSTANT") || o.Type.ToUpper().Contains("SORCERY")).ToList();
-                        comboCardPicker_Fill(cards);
-                        CardChosen += new PassiveEvent(CardChosen_MnemonicWall);
-                    }
-                    break;
-                # endregion
-
-                # region BondBeetle
-                case "Bond Beetle":
-                    if (playerTurn)
-                    {
-                        cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClick_BondBeetle);
-                    }
-                    break;
-                # endregion
-
-                # region Fathom Mage
-                case "Fathom Mage":
-                    if (playerTurn)
-                    {
-                        mc.CountersChanged += new ValueChanged(mc_CountersChangedFathomMage);
-                    }
-                    break;
-                # endregion
-
-                # region Zameck Guildmage
-                case "Zameck Guildmage":
-                    mc.Activating += new MagicCard.ActiveAbility(Activating_ZameckGuildmage);
-                    break;
-                # endregion
-
-                # region Sigiled Skink
-                case "Sigiled Skink":
-                    mc.OnAttack += new PassiveEvent(mc_Scry1);
-                    break;
-
-                case "Sigiled Starfish":
-                    mc.Activating += new MagicCard.ActiveAbility(mc_ActivatingScry1);
-                    break;
-                #endregion
-
-                # region Vanguard of Brimaz
-                case "Vanguard of Brimaz":
-                    mc.onSpellCast += new PassiveEvent(mc_HeroicVanguardBrimaz);
-                    break;
-                # endregion
-
-                # region Doomed Traveler
-                case "Doomed Traveler":
-                    mc.onDie += new PassiveEvent(Discard_DoomedTraveler);
-                    break;
-                # endregion
-
-                # region God-Favored General
-                case "God-Favored General":
-                    mc.TapChanged += new PassiveEvent(Untap_GodFavoredGeneral);
-                    break;
-                # endregion
-
-                # region Geist-Honored Monk
-                case "Geist-Honored Monk":
-                    mc.Resolving+=new PassiveEvent(EntersBattlefield_GeistHonoredMonk);
-                    break;
-                # endregion
-            }
-            # endregion
-
-            mc.Activate += new MagicCard.ActiveAbility(mc_ActivateCard);
-
-            if (!mc.Token && mc.Text.Contains("At the beginning of your upkeep, if this creature isn't a token, put a token onto the battlefield that's a copy of this creature."))
-            {
-                mc.OnUpkeep += new PassiveEvent(Upkeep_ProgenitorMimic);
-            }
-
-            mc.checkPT();
-
-            CardsProc = new List<MagicCard>();
-
-            //final resolution - add card to play.
-            area.PlayCard(mc);
-            area.CheckArea(mc);
-            update_listViewPlay();
-        }
-
         void Discard_DoomedTraveler(MagicCard mc)
         {
             MagicCard mct = new MagicCard
@@ -757,26 +814,6 @@ namespace MagicProgram
             mct.Abilities.Add(new CardAbility
             {
                 Name = "Flying",
-            });
-
-            PlayCreature(mct, PlArea);
-        }
-
-        void mc_HeroicVanguardBrimaz(MagicCard mc)
-        {
-            MagicCard mct = new MagicCard
-            {
-                Name = "Cat",
-                Token = true,
-                PT = "1/1",
-                Power = 1,
-                Toughness = 1,
-                Text = "Vigilance",
-                Sick = true,
-            };
-            mct.Abilities.Add(new CardAbility
-            {
-                Name = "Vigilance"
             });
 
             PlayCreature(mct, PlArea);
@@ -2071,17 +2108,65 @@ namespace MagicProgram
                 return;
             }
 
-
-
             if (MessageBox.Show("Do you want to pay {2}{W} to create two soldier tokens?", "Inspired", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 //need a way to produce the mana...
                 cardAreaPlay.CountersPicked += new CardArea.CountersChosen(cardAreaPlay_GodFavoredGeneral);
-
                 cardAreaPlay.buttonDone.Show();
-
             }
         }
+
+        # region Heroic
+        void Heroic_One(MagicCard mc)
+        {
+            mc.counters++;
+        }
+
+        void Heroic_PhalanxLeader(MagicCard mc)
+        {
+            foreach (MagicCard mcc in mc.PArea._play.cards)
+            {
+                mcc.counters++;
+            }
+        }
+
+        void Heroic_VanguardBrimaz(MagicCard mc)
+        {
+            MagicCard mct = new MagicCard
+            {
+                Name = "Cat",
+                Token = true,
+                PT = "1/1",
+                Power = 1,
+                Toughness = 1,
+                Text = "Vigilance",
+                Sick = true,
+            };
+            mct.Abilities.Add(new CardAbility
+            {
+                Name = "Vigilance"
+            });
+
+            PlayCreature(mct, PlArea);
+        }
+
+        # region Tethmos High Priest
+        void Heroic_TethmosHighPriest(MagicCard mc)
+        {
+            List<MagicCard> cards = mc.PArea._graveyard.cards.Where(o => o.CMC <= 2).ToList();
+            comboCardPicker_Fill(cards);
+            CardChosen += new PassiveEvent(CardChosen_TethmosHighPriest);
+        }
+
+        void CardChosen_TethmosHighPriest(MagicCard mc)
+        {
+            PlArea._graveyard.Remove(mc);
+            mc.Location = "Play";
+
+            CardChosen -= CardChosen_TethmosHighPriest;
+        }
+        # endregion
+        # endregion
 
         void cardAreaPlay_GodFavoredGeneral(int value, Dictionary<MagicCard, int> sources)
         {
@@ -2191,6 +2276,7 @@ namespace MagicProgram
             {
                 PlArea._graveyard.Remove(mc);
                 cardAreaHand.AddCard(mc);
+                mc.Location = "Hand";
                 CardChosen -= CardChosen_MnemonicWall;
             }
         }
@@ -2768,6 +2854,7 @@ namespace MagicProgram
 
         public event PassiveEvent CardUsed;
         public event PassiveEvent CardDrawn;
+        public event PassiveEvent CreatureEntered;
 
         protected void onCardUse(MagicCard mc)
         {
@@ -2930,10 +3017,6 @@ namespace MagicProgram
                         case "Master Biomancer":
                             mc.counters += mstc.Power;
                             break;
-
-                        case "Soul Warden":
-                            HP++;
-                            break;
                     }
                 }
                 # endregion
@@ -2941,10 +3024,6 @@ namespace MagicProgram
                 # region individual card switch
                 switch (mc.Name)
                 {
-                    case "Renegade Krasis":
-                        mc.Evolving += new PassiveEvent(RenegadeKrasis_Evolve);
-                        break;
-
                     case "Vorel of the Hull Clade":
                         mc.Activating += new MagicCard.ActiveAbility(Activate_VorelHullClade);
                         break;
@@ -3000,10 +3079,6 @@ namespace MagicProgram
                     case "Primordial Hydra":
                         mc.counters += mc.Xvalue;
                         break;
-
-                    case "Elite Arcanist":
-                        //mc.Activating += new MagicCard.Ability(Activating_EliteArcanist);
-                        break;
                 }
                 # endregion
 
@@ -3023,12 +3098,8 @@ namespace MagicProgram
 
                 _play.cards.Add(mc);
 
-                CheckArea(mc);
-
                 mc.Location = "Play";
                 _play.index();
-
-                CheckArea(mc);
             }
             # endregion
             # region artifacts and enchantments
@@ -3042,6 +3113,14 @@ namespace MagicProgram
                 }
                 else
                 {
+                    switch (mc.Name)
+                    {
+                        case "Spirit Bonds":
+                            //moved oncreaentered to decktest main
+                            mc.Activating += new MagicCard.ActiveAbility(Activating_SpiritBonds);
+                            break;
+                    }
+
                     _artEnch.Add(mc);
                     //_artEnch.index();  //called as part of _artEnch.Add();
                 }
@@ -3056,19 +3135,42 @@ namespace MagicProgram
             mc.Discard += new PassiveEvent(Play_Discard);
             mc.Destroyed += new PassiveEvent(Play_Destroyed);
 
-            CheckArea(mc);
+            if (mc.Type.Contains("Creature"))
+            {
+                CallCreatureEntered(mc);
+            }
+
+            # region PostPlay individual card events
+            switch (mc.Name)
+            {
+                case "Renegade Krasis":
+                    mc.Evolving += new PassiveEvent(RenegadeKrasis_Evolve);
+                    break;
+
+                case "Soul Warden":
+                    CreatureEntered += new PassiveEvent(CreatureEntered_SoulWarden);
+                    break;
+            }
+            # endregion
         }
 
-        public void CheckArea(MagicCard mc)
+        void Activating_SpiritBonds(MagicCard mc, int index)
         {
-            if (!_play.cards.Contains(mc))
+
+        }
+
+        private void CallCreatureEntered(MagicCard mc)
+        {
+            PassiveEvent handler = CreatureEntered;
+            if (handler != null)
             {
-                Debug.WriteLine("{0} not in {1}", mc.Name, "area");
+                handler(mc);
             }
-            else
-            {
-                Debug.WriteLine("{0} IS in {1}", mc.Name, "area");
-            }
+        }
+
+        void CreatureEntered_SoulWarden(MagicCard mc)
+        {
+            HP++;
         }
 
         void Activate_OvergrownBattlement(MagicCard mc, int index)
@@ -3327,7 +3429,7 @@ namespace MagicProgram
             ColourCost ManaAdd = new ColourCost();
 
             if (mc.Name.Contains("Simic")) { ManaAdd.blue = ManaAdd.green = 1; }
-            if (mc.Name.Contains("Gruul")) { ManaAdd.blue = ManaAdd.black = 1; }
+            if (mc.Name.Contains("Gruul")) { ManaAdd.red = ManaAdd.green = 1; }
             if (mc.Name.Contains("Selesnya")) { ManaAdd.white = ManaAdd.green = 1; }
             if (mc.Name.Contains("Rakdos")) { ManaAdd.black = ManaAdd.red = 1; }
             if (mc.Name.Contains("Azorius")) { ManaAdd.blue = ManaAdd.white = 1; }

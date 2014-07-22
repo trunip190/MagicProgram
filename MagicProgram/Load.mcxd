@@ -17,23 +17,6 @@
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Ajani's Presence</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>W</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Strive — Ajani's Presence costs {2}{W} more to cast for each target beyond the first.
-Any number of target creatures each get +1/+1 and gain indestructible until end of turn. (Damage and effects that say "destroy" don't destroy them.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Doomed Traveler</Name>
     <Edition>CNS</Edition>
     <Rarity>C</Rarity>
@@ -66,6 +49,41 @@ Any number of target creatures each get +1/+1 and gain indestructible until end 
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Spirit Link</Name>
+    <Edition>LG</Edition>
+    <Rarity>U</Rarity>
+    <Color>W</Color>
+    <Cost>W</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature #(Target a creature as you cast this. This card enters the battlefield attached to that creature.)#;
+Whenever enchanted creature deals damage, you gain that much life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Hopeful Eidolon</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT>1/1</PT>
+    <Type>Enchantment Creature - Spirit</Type>
+    <Text>Bestow {3}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.)
+Lifelink
+Enchanted creature gets +1/+1 and has lifelink.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Ajani's Pridemate</Name>
     <Edition>DDH</Edition>
     <Rarity>U</Rarity>
@@ -82,14 +100,14 @@ Any number of target creatures each get +1/+1 and gain indestructible until end 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Nyx-Fleece Ram</Name>
-    <Edition>JOU</Edition>
+    <Name>Phalanx Leader</Name>
+    <Edition />
     <Rarity>U</Rarity>
     <Color />
-    <Cost>1W</Cost>
-    <PT>0/5</PT>
-    <Type>Enchantment Creature — Sheep</Type>
-    <Text>At the beginning of your upkeep, you gain 1 life.</Text>
+    <Cost>WW</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Soldier</Type>
+    <Text>Heroic - Whenever you cast a spell that targets Phalanx Leader, put a +1/+1 counter on each creature you control.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -98,14 +116,32 @@ Any number of target creatures each get +1/+1 and gain indestructible until end 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Harvestguard Alseids</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
+    <Name>Hero of Iroas</Name>
+    <Edition>BNG</Edition>
+    <Rarity>R</Rarity>
     <Color />
-    <Cost>2W</Cost>
-    <PT>2/3</PT>
-    <Type>Enchantment Creature — Nymph</Type>
-    <Text>Constellation — Whenever Harvestguard Alseids or another enchantment enters the battlefield under your control, prevent all damage that would be dealt to target creature this turn.</Text>
+    <Cost>1W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Human Soldier</Type>
+    <Text>Aura spells you cast cost {1} less to cast.
+Heroic — Whenever you cast a spell that targets Hero of Iroas, put a +1/+1 counter on Hero of Iroas.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Nimbus Wings</Name>
+    <Edition>ZEN</Edition>
+    <Rarity>C</Rarity>
+    <Color>W</Color>
+    <Cost>1W</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature;
+Enchanted creature gets +1/+2 and has flying.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -122,23 +158,6 @@ Any number of target creatures each get +1/+1 and gain indestructible until end 
     <PT>*/*</PT>
     <Type>Creature - Human Soldier</Type>
     <Text>Crusader of Odric�s power and toughness are each equal to the number of creatures you control.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Dawnbringer Charioteers</Name>
-    <Edition>JOU</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>2WW</Cost>
-    <PT>2/4</PT>
-    <Type>Creature — Human Soldier</Type>
-    <Text>Flying, lifelink
-Heroic — Whenever you cast a spell that targets Dawnbringer Charioteers, put a +1/+1 counter on Dawnbringer Charioteers.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
@@ -164,33 +183,16 @@ Whenever Odric, Master Tactician and at least three other creatures attack, you 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Geist-Honored Monk</Name>
-    <Edition>ISD</Edition>
-    <Rarity>R</Rarity>
+    <Name>Spirit Bonds</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
     <Color>W</Color>
-    <Cost>3WW</Cost>
-    <PT>*/*</PT>
-    <Type>Creature - Human Monk</Type>
-    <Text>Vigilance;
-Geist-Honored Monk�s power and toughness are each equal to the number of creatures you control.;
-When Geist-Honored Monk enters the battlefield, put two 1/1 white Spirit creature tokens with flying onto the battlefield.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Spirit Link</Name>
-    <Edition>LG</Edition>
-    <Rarity>U</Rarity>
-    <Color>W</Color>
-    <Cost>W</Cost>
+    <Cost>1W</Cost>
     <PT />
-    <Type>Enchantment - Aura</Type>
-    <Text>Enchant creature #(Target a creature as you cast this. This card enters the battlefield attached to that creature.)#;
-Whenever enchanted creature deals damage, you gain that much life.</Text>
+    <Type>Enchantment</Type>
+    <Text>Whenever a nontoken creature enters the battlefield under your control, you may pay W. If you do, put a 1/1 white Spirit creature token with flying into play.
+
+1W, Sacrifice a Spirit: Target non-Spirit creature you control gains indestructible until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>

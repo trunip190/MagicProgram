@@ -33,62 +33,14 @@
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Pheres-Band Thunderhoof</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>4G</Cost>
-    <PT>3/4</PT>
-    <Type>Creature — Centaur Warrior</Type>
-    <Text>Heroic — Whenever you cast a spell that targets Pheres-Band Thunderhoof, put two +1/+1 counters on Pheres-Band Thunderhoof.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Arbor Elf</Name>
-    <Edition>M13</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>G</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Elf Druid</Type>
-    <Text>%T: Untap target Forest.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Skinbrand Goblin</Name>
+    <Name>Gruul Guildgate</Name>
     <Edition>GTC</Edition>
     <Rarity>C</Rarity>
-    <Color>R</Color>
-    <Cost>1R</Cost>
-    <PT>2/1</PT>
-    <Type>Creature - Goblin Warrior</Type>
-    <Text>#Bloodrush# � %R, Discard Skinbrand Goblin: Target attacking creature gets +2/+1 until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Disciple of the Old Ways</Name>
-    <Edition>GTC</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT>2/2</PT>
-    <Type>Creature - Human Warrior</Type>
-    <Text>%R: Disciple of the Old Ways gains first strike until end of turn.</Text>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Gruul Guildgate enters the battlefield tapped. %T: Add %R or %G to your mana pool.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>1</quantity>
@@ -105,56 +57,6 @@
     <PT>1/1</PT>
     <Type>Creature — Satyr Soldier</Type>
     <Text>Heroic — Whenever you cast a spell that targets Satyr Hoplite, put a +1/+1 counter on Satyr Hoplite.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Dictate of the Twin Gods</Name>
-    <Edition>JOU</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>3RR</Cost>
-    <PT />
-    <Type>Enchantment</Type>
-    <Text>Flash
-If a source would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Font of Ire</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>1R</Cost>
-    <PT />
-    <Type>Enchantment</Type>
-    <Text>{3}{R}, Sacrifice Font of Ire: Font of Ire deals 5 damage to target player.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Alpha Authority</Name>
-    <Edition>GTC</Edition>
-    <Rarity>U</Rarity>
-    <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT />
-    <Type>Enchantment - Aura</Type>
-    <Text>Enchant creature;
-Enchanted creature has hexproof and can�t be blocked by more than one creature.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -198,72 +100,6 @@ Whenever enchanted creature deals combat damage to a player, you may sacrifice F
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Cyclops of Eternal Fury</Name>
-    <Edition>JOU</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>4RR</Cost>
-    <PT>5/3</PT>
-    <Type>Enchantment Creature — Cyclops</Type>
-    <Text>Creatures you control have haste.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Mogis's Warhound</Name>
-    <Edition>JOU</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>1R</Cost>
-    <PT>2/2</PT>
-    <Type>Enchantment Creature — Hound</Type>
-    <Text>Bestow {2}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.
-Mogis's Warhound attacks each turn if able.
-Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Forgeborn Oreads</Name>
-    <Edition>JOU</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>2RR</Cost>
-    <PT>4/2</PT>
-    <Type>Enchantment Creature — Nymph</Type>
-    <Text>Constellation — Whenever Forgeborn Oreads or another enchantment enters the battlefield under your control, Forgeborn Oreads deals 1 damage to target creature or player.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Oakheart Dryads</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>2G</Cost>
-    <PT>2/3</PT>
-    <Type>Enchantment Creature — Nymph Dryad</Type>
-    <Text>Constellation — Whenever Oakheart Dryads or another enchantment enters the battlefield under your control, target creature gets +1/+1 until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Nyxborn Rollicker</Name>
     <Edition>BNG</Edition>
     <Rarity>C</Rarity>
@@ -275,75 +111,7 @@ Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
 Enchanted creature gets +1/+1.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Nyxborn Wolf</Name>
-    <Edition>BNG</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>2G</Cost>
-    <PT>3/1</PT>
-    <Type>Enchantment Creature — Wolf</Type>
-    <Text>Bestow {4}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.)
-Enchanted creature gets +3/+1.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Nature's Panoply</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>G</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Strive — Nature's Panoply costs {2}{G} more to cast for each target beyond the first.
-Choose any number of target creatures. Put a +1/+1 counter on each of them.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Rouse the Mob</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>R</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Strive — Rouse the Mob costs {2}{R} more to cast for each target beyond the first.
-Any number of target creatures each get +2/+0 and gain trample until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Solidarity of Heroes</Name>
-    <Edition>JOU</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>1G</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Strive — Solidarity of Heroes costs {1}{G} more to cast for each target beyond the first.
-Choose any number of target creatures. Double the number of +1/+1 counters on each of them.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -375,7 +143,74 @@ Choose any number of target creatures. Double the number of +1/+1 counters on ea
     <Text>Magma Spray deals 2 damage to target creature. If that creature would die this turn, exile it instead.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Skinbrand Goblin</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT>2/1</PT>
+    <Type>Creature - Goblin Warrior</Type>
+    <Text>#Bloodrush# � %R, Discard Skinbrand Goblin: Target attacking creature gets +2/+1 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Font of Ire</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>{3}{R}, Sacrifice Font of Ire: Font of Ire deals 5 damage to target player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Alpha Authority</Name>
+    <Edition>GTC</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature;
+Enchanted creature has hexproof and can�t be blocked by more than one creature.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mogis's Warhound</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1R</Cost>
+    <PT>2/2</PT>
+    <Type>Enchantment Creature — Hound</Type>
+    <Text>Bestow {2}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.
+Mogis's Warhound attacks each turn if able.
+Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -397,14 +232,80 @@ Choose any number of target creatures. Double the number of +1/+1 counters on ea
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Gruul Guildgate</Name>
-    <Edition>GTC</Edition>
+    <Name>Oakheart Dryads</Name>
+    <Edition>JOU</Edition>
     <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
+    <Color />
+    <Cost>2G</Cost>
+    <PT>2/3</PT>
+    <Type>Enchantment Creature — Nymph Dryad</Type>
+    <Text>Constellation — Whenever Oakheart Dryads or another enchantment enters the battlefield under your control, target creature gets +1/+1 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Nyxborn Wolf</Name>
+    <Edition>BNG</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2G</Cost>
+    <PT>3/1</PT>
+    <Type>Enchantment Creature — Wolf</Type>
+    <Text>Bestow {4}{G} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.)
+Enchanted creature gets +3/+1.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Forgeborn Oreads</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2RR</Cost>
+    <PT>4/2</PT>
+    <Type>Enchantment Creature — Nymph</Type>
+    <Text>Constellation — Whenever Forgeborn Oreads or another enchantment enters the battlefield under your control, Forgeborn Oreads deals 1 damage to target creature or player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dictate of the Twin Gods</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>3RR</Cost>
     <PT />
-    <Type>Land - Gate</Type>
-    <Text>Gruul Guildgate enters the battlefield tapped. %T: Add %R or %G to your mana pool.</Text>
+    <Type>Enchantment</Type>
+    <Text>Flash
+If a source would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cyclops of Eternal Fury</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4RR</Cost>
+    <PT>5/3</PT>
+    <Type>Enchantment Creature — Cyclops</Type>
+    <Text>Creatures you control have haste.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>1</quantity>
