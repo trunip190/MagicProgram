@@ -350,7 +350,25 @@ namespace MagicProgram
 
                     # region Wake the Reflections
                     case "Wake the Reflections":
-                        cardAreaPlay.ChoseCard += new PassiveEvent(CardClicked_WakeReflections);
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_WakeReflections);
+                        break;
+                    # endregion
+
+                    #region Fated Infatuation
+                    case "Fated Infatuation":
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(CreateCopyScry);
+                        break;
+                    # endregion
+
+                    # region Cerulean Wisps
+                    case "Cerulean Wisps":
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(BlueUntapDraw);
+                        break;
+                    # endregion
+
+                    # region Magma Jet
+                    case "Magma Jet":
+                        mc.Resolving += new PassiveEvent(mc_Scry1);
                         break;
                     # endregion
                 }
@@ -491,6 +509,33 @@ namespace MagicProgram
             return true;
         }
 
+        void BlueUntapDraw(MagicCard mc, MouseEventArgs e)
+        {
+            if (mc.Type.Contains("Creature"))
+            {
+                mc.callSpellCast();
+                mc.Color = "U";
+                mc.Tap(false, false);
+                DrawCard(1);
+                cardAreaPlay.CardClicked -= BlueUntapDraw;
+            }
+        }
+
+        void CreateCopyScry(MagicCard mc, MouseEventArgs e)
+        {
+            if (mc.Type.Contains("Creature"))
+            {
+                mc.callSpellCast();
+                MagicCard nmc = new MagicCard(mc);
+                nmc.Token = true;
+                PlayCreature(nmc, mc.PArea);
+
+                if (playerTurn) { Scry(2); }
+
+                cardAreaPlay.CardClicked -= CreateCopyScry;
+            }
+        }
+
         void CreatureEntered_Spiritbonds(MagicCard mc)
         {
             if (mc.Token)
@@ -620,6 +665,18 @@ namespace MagicProgram
                     break;
                 # endregion
 
+                # region Triton Fortune Hunter
+                case "Triton Fortune Hunter":
+                    mc.onSpellCast += new PassiveEvent(HeroicDrawCard);
+                    break;
+                # endregion
+
+                # region Sage of Hours
+                case "Sage of Hours":
+                    mc.onSpellCast += new PassiveEvent(Heroic_One);
+                    break;
+                # endregion
+
                 # region Phalanx Leader
                 case "Phalanx Leader":
                     mc.onSpellCast += new PassiveEvent(Heroic_PhalanxLeader);
@@ -656,6 +713,11 @@ namespace MagicProgram
             update_listViewPlay();
         }
 
+        void HeroicDrawCard(MagicCard mc)
+        {
+            DrawCard(1);
+        }
+
         private static void CheckAreaCont(MagicCard mc, PlayArea area)
         {
             if (mc.Type.Contains("Creature") && !area._play.cards.Contains(mc))
@@ -664,13 +726,13 @@ namespace MagicProgram
             }
         }
 
-        void CardClicked_WakeReflections(MagicCard mc)
+        void CardClicked_WakeReflections(MagicCard mc, MouseEventArgs e)
         {
             if (mc.Token)
             {
                 MagicCard mct = new MagicCard(mc);
                 PlayCreature(mct, PlArea);
-                cardAreaPlay.ChoseCard -= CardClicked_WakeReflections;
+                cardAreaPlay.CardClicked -= CardClicked_WakeReflections;
             }
         }
 
@@ -2400,6 +2462,7 @@ namespace MagicProgram
         {
             if (PlArea._play.cards.Contains(mc))
             {
+                mc.callSpellCast();
                 mc.Tap(false, false);
                 mc.TBonus += 3;
                 mc.checkPT();
@@ -2457,7 +2520,8 @@ namespace MagicProgram
 
         void CardChosen_NaturesLore(MagicCard mc)
         {
-            Debug.WriteLine("CardChosen_NaturesLore - AddToStack");
+            PlArea.landMax++;
+            //technically doesn't use the stack.
             AddToStack(mc);
             CardChosen -= CardChosen_NaturesLore;
         }
@@ -3428,19 +3492,22 @@ namespace MagicProgram
 
             ColourCost ManaAdd = new ColourCost();
 
-            if (mc.Name.Contains("Simic")) { ManaAdd.blue = ManaAdd.green = 1; }
-            if (mc.Name.Contains("Gruul")) { ManaAdd.red = ManaAdd.green = 1; }
-            if (mc.Name.Contains("Selesnya")) { ManaAdd.white = ManaAdd.green = 1; }
-            if (mc.Name.Contains("Rakdos")) { ManaAdd.black = ManaAdd.red = 1; }
-            if (mc.Name.Contains("Azorius")) { ManaAdd.blue = ManaAdd.white = 1; }
+            switch (mc.Name)
+            {
+                case "Simic Guildgate": ManaAdd.blue = ManaAdd.green = 1; break;
+                case "Gruul Guildgate": ManaAdd.red = ManaAdd.green = 1; break;
+                case "Selesnya Guildgate": ManaAdd.white = ManaAdd.green = 1; break;
+                case "Rakdos Guildgate": ManaAdd.black = ManaAdd.red = 1; break;
+                case "Azorius Guildgate": ManaAdd.blue = ManaAdd.white = 1; break;
 
-            if (mc.Name.Contains("Orzhov")) { ManaAdd.white = ManaAdd.black = 1; }
-            if (mc.Name.Contains("Izzet")) { ManaAdd.blue = ManaAdd.red = 1; }
-            if (mc.Name.Contains("Golgari")) { ManaAdd.black = ManaAdd.green = 1; }
-            if (mc.Name.Contains("Boros")) { ManaAdd.white = ManaAdd.red = 1; }
-            if (mc.Name.Contains("Dimir")) { ManaAdd.blue = ManaAdd.black = 1; }
+                case "Orzhov Guildgate": ManaAdd.white = ManaAdd.black = 1; break;
+                case "Izzet Guildgate": ManaAdd.blue = ManaAdd.red = 1; break;
+                case "Golgari Guildgate": ManaAdd.black = ManaAdd.green = 1; break;
+                case "Boros Guildgate": ManaAdd.white = ManaAdd.red = 1; break;
+                case "Dimir Guildgate": ManaAdd.blue = ManaAdd.black = 1; break;
 
-            if (mc.Name.Contains("Breeding Pool")) { ManaAdd.green = ManaAdd.blue = 1; }
+                case "Breeding Pool": ManaAdd.green = ManaAdd.blue = 1; break;
+            }
 
             mw.ShowWheel(ManaAdd);
         }
@@ -3458,7 +3525,6 @@ namespace MagicProgram
             };
 
             mw.ShowWheel(cc);
-
         }
 
         void mc_TapLand(MagicCard mc)

@@ -311,7 +311,7 @@ namespace MagicProgram
             {
                 int change = value - _counters;
                 _counters = value;
-                if (value < _counters && Name == "Protean Hydra")
+                if (change< 0&& Name == "Protean Hydra")
                 {
                     countersTurn -= change;
                 }

@@ -11,7 +11,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>22</quantity>
+    <quantity>9</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -25,55 +25,6 @@
     <PT>0/0</PT>
     <Type>Instant</Type>
     <Text>Up to two target creatures each get +0/+3 until end of turn. Untap those creatures. At this turn's next end of combat, tap each creature that was blocked by one of those creatures this turn and it doesn't untap during its controller's next untap step.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Gridlock</Name>
-    <Edition>GTC</Edition>
-    <Rarity>U</Rarity>
-    <Color>U</Color>
-    <Cost>XU</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Tap X target nonland permanents.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Sage of Hours</Name>
-    <Edition>JOU</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>1U</Cost>
-    <PT>1/1</PT>
-    <Type>Creature — Human Wizard</Type>
-    <Text>Heroic — Whenever you cast a spell that targets Sage of Hours, put a +1/+1 counter on it.
-Remove all +1/+1 counters from Sage of Hours: For each five counters removed this way, take an extra turn after this one.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Artisan of Forms</Name>
-    <Edition />
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>1U</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Human Wizard</Type>
-    <Text>Heroic - Whenever you cast a spell that targets Artisan of Forms, you may have Artisan of Forms become a copy of target creature and gain this ability.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -98,38 +49,6 @@ Remove all +1/+1 counters from Sage of Hours: For each five counters removed thi
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Fated Infatuation</Name>
-    <Edition>BNG</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>UUU</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Put a token onto the battlefield that's a copy of target creature you control. If it's your turn, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Triton Fortune Hunter</Name>
-    <Edition />
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>2U</Cost>
-    <PT>2/2</PT>
-    <Type>Creature - Merfolk Soldier</Type>
-    <Text>Heroic - Whenever you cast a spell that targets Triton Fortune Hunter, draw a card.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Elite Arcanist</Name>
     <Edition>M14</Edition>
     <Rarity>R</Rarity>
@@ -147,15 +66,15 @@ Remove all +1/+1 counters from Sage of Hours: For each five counters removed thi
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Pin to the Earth</Name>
-    <Edition>JOU</Edition>
+    <Name>Cerulean Wisps</Name>
+    <Edition>SHM</Edition>
     <Rarity>C</Rarity>
-    <Color />
-    <Cost>1U</Cost>
+    <Color>U</Color>
+    <Cost>U</Cost>
     <PT />
-    <Type>Enchantment — Aura</Type>
-    <Text>Enchant creature
-Enchanted creature gets -6/-0.</Text>
+    <Type>Instant</Type>
+    <Text>Target creature becomes blue until end of turn. Untap that creature.;
+Draw a card.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -164,17 +83,134 @@ Enchanted creature gets -6/-0.</Text>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Voyage's End</Name>
+    <Name>Mountain</Name>
     <Edition />
     <Rarity>C</Rarity>
     <Color />
-    <Cost>1U</Cost>
+    <Cost />
     <PT />
-    <Type>Instant</Type>
-    <Text>Return target creature to its owner's hand. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)</Text>
+    <Type>Basic Land - Mountain</Type>
+    <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>9</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Young Pyromancer</Name>
+    <Edition>M14</Edition>
+    <Rarity>U</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT>2/1</PT>
+    <Type>Creature - Human Shaman</Type>
+    <Text>Whenever you cast an instant or sorcery spell, put a 1/1 red Elemental creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Guttersnipe</Name>
+    <Edition>RTR</Edition>
+    <Rarity>U</Rarity>
+    <Color>R</Color>
+    <Cost>2R</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Goblin Shaman</Type>
+    <Text>Whenever you cast an instant or sorcery spell, Guttersnipe deals 2 damage to each opponent.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gelectrode</Name>
+    <Edition>GP</Edition>
+    <Rarity>U</Rarity>
+    <Color>Gld</Color>
+    <Cost>1UR</Cost>
+    <PT>0/1</PT>
+    <Type>Creature - Weird</Type>
+    <Text>%T: Gelectrode deals 1 damage to target creature or player.;
+Whenever you cast an instant or sorcery spell, you may untap Gelectrode.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Magma Jet</Name>
+    <Edition>FD</Edition>
+    <Rarity>U</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Magma Jet deals 2 damage to target creature or player.;
+Scry 2. #(To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Izzet Guildgate</Name>
+    <Edition>RTR</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Izzet Guildgate enters the battlefield tapped.;
+%T: Add %U or %R to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Pyromatics</Name>
+    <Edition>GP</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Replicate %1%R #(When you cast this spell, copy it for each time you paid its replicate cost. You may choose new targets for the copies.)#;
+Pyromatics deals 1 damage to target creature or player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Pyromancer Ascension</Name>
+    <Edition>ZEN</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Whenever you cast an instant or sorcery spell that has the same name as a card in your graveyard, you may put a quest counter on Pyromancer Ascension.;
+Whenever you cast an instant or sorcery spell while Pyromancer Ascension has two or more quest counters on it, you may copy that spell. You may choose new targets for the copy.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
