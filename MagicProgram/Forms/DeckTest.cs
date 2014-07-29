@@ -470,6 +470,7 @@ namespace MagicProgram
                     update_listViewPlay();
                 }
                 # endregion
+                # region non-Equipment
                 else
                 {
                     area.PlayCard(mc);
@@ -494,6 +495,7 @@ namespace MagicProgram
                 tempCard = mc;
                 update_listViewArtEnch();
             }
+            # endregion
             # endregion
             # region New card type
             else
@@ -694,6 +696,18 @@ namespace MagicProgram
                     mc.onSpellCast += new PassiveEvent(Heroic_One);
                     break;
                 # endregion
+
+                # region Guttersnipe
+                case "Guttersnipe":
+                    area.SpellRes += new PassiveEvent(SpellCast_Guttersnipe);
+                    break;
+                # endregion
+
+                # region Young Pyromancer
+                case "Young Pyromancer":
+                    area.SpellRes += new PassiveEvent(SpellCast_YoungPyromancer);
+                    break;
+                # endregion
             }
             # endregion
 
@@ -711,6 +725,31 @@ namespace MagicProgram
             area.PlayCard(mc);
 
             update_listViewPlay();
+        }
+
+        void SpellCast_YoungPyromancer(MagicCard mc)
+        {
+            if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
+            {
+                MagicCard mct = new MagicCard
+                {
+                    Token = true,
+                    Name = "Elemental",
+                    Type = "Creature - Elemental",
+                    Color = "Red",
+                    PT = "1/1",
+                };
+                mc.PArea.PlayToken(mct);
+                update_listViewPlay();
+            }
+        }
+
+        void SpellCast_Guttersnipe(MagicCard mc)
+        {
+            if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
+            {
+                OppArea.HP -= 2;
+            }
         }
 
         void HeroicDrawCard(MagicCard mc)
@@ -2904,21 +2943,21 @@ namespace MagicProgram
 
         private List<MagicCard> CardsProc = new List<MagicCard>();
 
-        public event Phase SpellRes;
+        public event PassiveEvent SpellRes;
         public event Phase UpkeepDone;
-        protected void onSpellRes()
+        protected void onSpellRes(MagicCard mc)
         {
-            Phase handler = SpellRes;
+            PassiveEvent handler = SpellRes;
 
-            foreach (MagicCard mc in CardsProc)
+            foreach (MagicCard mcp in CardsProc)
             {
                 //TODO need to rewrite Ability to take an index or bool for being used on the stack.
-                mc.callAbility(0);
+                mcp.callAbility(0);
             }
 
             if (handler != null)
             {
-                handler();
+                handler(mc);
             }
         }
 
@@ -3158,8 +3197,6 @@ namespace MagicProgram
                     mcs.Evolve(mc.Power, mc.Toughness);
                 }
 
-                onSpellRes();
-
                 //TODO need to expand this to actually check.
                 if (!mc.Text.Contains("Haste"))
                 {
@@ -3200,6 +3237,8 @@ namespace MagicProgram
             {
                 throw new NotImplementedException();
             }
+
+            onSpellRes(mc);
 
             mc.Activating += new MagicCard.ActiveAbility(mc_Activating);
             mc.Discard += new PassiveEvent(Play_Discard);

@@ -311,7 +311,7 @@ namespace MagicProgram
             {
                 int change = value - _counters;
                 _counters = value;
-                if (change< 0&& Name == "Protean Hydra")
+                if (change < 0 && Name == "Protean Hydra")
                 {
                     countersTurn -= change;
                 }
@@ -748,6 +748,7 @@ namespace MagicProgram
 
             List<string> groups = Text.Split(new string[] { "\r", "\n" }, StringSplitOptions.None).ToList();
 
+            # region search for costs ":"
             foreach (string s in groups)
             {
                 int i = s.IndexOf(':');
@@ -770,6 +771,24 @@ namespace MagicProgram
                     abi.Name = "Bestow";
                     Abilities.Add(abi);
                 }
+            }
+            # endregion
+
+            int e = Text.IndexOf("Equip") ;
+            if (e > -1)
+            {
+                e += 6;
+                int len = Text.Length - e;
+                string c = Text.Substring(e, len);
+                Debug.WriteLine("Equip cost is {0}", c);
+
+                CardAbility Abi = new CardAbility
+                {
+                    Text = "Equip " + c,
+                    RawCost = c,
+                    Name = "Equip",
+                };
+                Abilities.Add(Abi);
             }
         }
 

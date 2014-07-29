@@ -1,6 +1,257 @@
 <?xml version="1.0"?>
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Card>
+    <Name>Boros Guildgate</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Boros Guildgate enters the battlefield tapped.;
+%T: Add %R or %W to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>%T</RawCost>
+        <Text> Add %R or %W to your mana pool.</Text>
+        <Name />
+        <Active>false</Active>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Blinding Flare</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Strive — Blinding Flare costs {R} more to cast for each target beyond the first.
+Any number of target creatures can't block this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Magma Spray</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Magma Spray deals 2 damage to target creature. If that creature would die this turn, exile it instead.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Armament of Nyx</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature
+Enchanted creature has double strike as long as it's an enchantment. Otherwise, prevent all damage that would be dealt by enchanted creature. (A creature with double strike deals both first-strike and regular combat damage.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Odric, Master Tactician</Name>
+    <Edition>M13</Edition>
+    <Rarity>R</Rarity>
+    <Color>W</Color>
+    <Cost>2WW</Cost>
+    <PT>3/4</PT>
+    <Type>Legendary Creature - Human Soldier</Type>
+    <Text>First strike #(This creature deals combat damage before creatures without first strike.)#;
+Whenever Odric, Master Tactician and at least three other creatures attack, you choose which creatures block this combat and how those creatures block.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cyclops of Eternal Fury</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>4RR</Cost>
+    <PT>5/3</PT>
+    <Type>Enchantment Creature — Cyclops</Type>
+    <Text>Creatures you control have haste.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Harvestguard Alseids</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2W</Cost>
+    <PT>2/3</PT>
+    <Type>Enchantment Creature — Nymph</Type>
+    <Text>Constellation — Whenever Harvestguard Alseids or another enchantment enters the battlefield under your control, prevent all damage that would be dealt to target creature this turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ajani's Presence</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Strive — Ajani's Presence costs {2}{W} more to cast for each target beyond the first.
+Any number of target creatures each get +1/+1 and gain indestructible until end of turn. (Damage and effects that say "destroy" don't destroy them.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Rouse the Mob</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Strive — Rouse the Mob costs {2}{R} more to cast for each target beyond the first.
+Any number of target creatures each get +2/+0 and gain trample until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Satyr Hoplite</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Satyr Soldier</Type>
+    <Text>Heroic — Whenever you cast a spell that targets Satyr Hoplite, put a +1/+1 counter on Satyr Hoplite.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Vanguard of Brimaz</Name>
+    <Edition>BNG</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>WW</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Cat Soldier</Type>
+    <Text>Vigilance
+Heroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 white Cat Soldier creature token with vigilance onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mogis's Warhound</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1R</Cost>
+    <PT>2/2</PT>
+    <Type>Enchantment Creature — Hound</Type>
+    <Text>Bestow {2}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.
+Mogis's Warhound attacks each turn if able.
+Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>{2}{R}</RawCost>
+        <Text>If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.
+Mogis's Warhound attacks each turn if able.
+Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
+        <Name>Bestow</Name>
+        <Active>false</Active>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Desperate Stand</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>RW</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Strive — Desperate Stand costs {R}{W} more to cast for each target beyond the first.
+Any number of target creatures each get +2/+0 and gain first strike and vigilance until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Tajic, Blade of the Legion</Name>
+    <Edition>DGM</Edition>
+    <Rarity>R</Rarity>
+    <Color>Gld</Color>
+    <Cost>2RW</Cost>
+    <PT>2/2</PT>
+    <Type>Legendary Creature - Human Soldier</Type>
+    <Text>Indestructible;
+#Battalion# � Whenever Tajic, Blade of the Legion and at least two other creatures attack, Tajic gets +5/+5 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Mountain</Name>
     <Edition>AN</Edition>
     <Rarity>C</Rarity>
@@ -28,348 +279,6 @@
     <Flavor />
     <Token>false</Token>
     <quantity>12</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Boros Guildgate</Name>
-    <Edition>GTC</Edition>
-    <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
-    <PT />
-    <Type>Land - Gate</Type>
-    <Text>Boros Guildgate enters the battlefield tapped.;
-%T: Add %R or %W to your mana pool.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities>
-      <CardAbility>
-        <RawCost>%T</RawCost>
-        <Text> Add %R or %W to your mana pool.</Text>
-        <Name />
-        <Active>false</Active>
-      </CardAbility>
-    </Abilities>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Ajani's Presence</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>W</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Strive — Ajani's Presence costs {2}{W} more to cast for each target beyond the first.
-Any number of target creatures each get +1/+1 and gain indestructible until end of turn. (Damage and effects that say "destroy" don't destroy them.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Rouse the Mob</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>R</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Strive — Rouse the Mob costs {2}{R} more to cast for each target beyond the first.
-Any number of target creatures each get +2/+0 and gain trample until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Magma Spray</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>R</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Magma Spray deals 2 damage to target creature. If that creature would die this turn, exile it instead.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Blinding Flare</Name>
-    <Edition>JOU</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>R</Cost>
-    <PT />
-    <Type>Sorcery</Type>
-    <Text>Strive — Blinding Flare costs {R} more to cast for each target beyond the first.
-Any number of target creatures can't block this turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Vanguard of Brimaz</Name>
-    <Edition>BNG</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>WW</Cost>
-    <PT>2/2</PT>
-    <Type>Creature — Cat Soldier</Type>
-    <Text>Vigilance
-Heroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 white Cat Soldier creature token with vigilance onto the battlefield.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Font of Vigor</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>1W</Cost>
-    <PT />
-    <Type>Enchantment</Type>
-    <Text>{2}{W}, Sacrifice Font of Vigor: You gain 7 life.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities>
-      <CardAbility>
-        <RawCost>{2}{W}, Sacrifice Font of Vigor</RawCost>
-        <Text> You gain 7 life.</Text>
-        <Name />
-        <Active>false</Active>
-      </CardAbility>
-    </Abilities>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Mogis's Warhound</Name>
-    <Edition>JOU</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>1R</Cost>
-    <PT>2/2</PT>
-    <Type>Enchantment Creature — Hound</Type>
-    <Text>Bestow {2}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.
-Mogis's Warhound attacks each turn if able.
-Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities>
-      <CardAbility>
-        <RawCost>{2}{R}</RawCost>
-        <Text>If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.
-Mogis's Warhound attacks each turn if able.
-Enchanted creature gets +2/+2 and attacks each turn if able.</Text>
-        <Name>Bestow</Name>
-        <Active>false</Active>
-      </CardAbility>
-    </Abilities>
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Nyx-Fleece Ram</Name>
-    <Edition>JOU</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>1W</Cost>
-    <PT>0/5</PT>
-    <Type>Enchantment Creature — Sheep</Type>
-    <Text>At the beginning of your upkeep, you gain 1 life.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Desperate Stand</Name>
-    <Edition>JOU</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>RW</Cost>
-    <PT />
-    <Type>Sorcery</Type>
-    <Text>Strive — Desperate Stand costs {R}{W} more to cast for each target beyond the first.
-Any number of target creatures each get +2/+0 and gain first strike and vigilance until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Ajani's Pridemate</Name>
-    <Edition>DDH</Edition>
-    <Rarity>U</Rarity>
-    <Color>W</Color>
-    <Cost>1W</Cost>
-    <PT>2/2</PT>
-    <Type>Creature - Cat Soldier</Type>
-    <Text>Whenever you gain life, you may put a +1/+1 counter on Ajani�s Pridemate. #(For example, if an effect causes you to gain 3 life, you may put one +1/+1 counter on this creature.)#</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Armament of Nyx</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>2W</Cost>
-    <PT />
-    <Type>Enchantment — Aura</Type>
-    <Text>Enchant creature
-Enchanted creature has double strike as long as it's an enchantment. Otherwise, prevent all damage that would be dealt by enchanted creature. (A creature with double strike deals both first-strike and regular combat damage.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Godsend</Name>
-    <Edition>JOU</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>1WW</Cost>
-    <PT />
-    <Type>Legendary Artifact — Equipment</Type>
-    <Text>Equipped creature gets +3/+3.
-Whenever equipped creature blocks or becomes blocked by one or more creatures, you may exile one of those creatures.
-Opponents can't cast cards with the same name as cards exiled with Godsend.
-Equip {3}</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Crusader of Odric</Name>
-    <Edition>M13</Edition>
-    <Rarity>U</Rarity>
-    <Color>W</Color>
-    <Cost>2W</Cost>
-    <PT>*/*</PT>
-    <Type>Creature - Human Soldier</Type>
-    <Text>Crusader of Odric�s power and toughness are each equal to the number of creatures you control.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Harvestguard Alseids</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>2W</Cost>
-    <PT>2/3</PT>
-    <Type>Enchantment Creature — Nymph</Type>
-    <Text>Constellation — Whenever Harvestguard Alseids or another enchantment enters the battlefield under your control, prevent all damage that would be dealt to target creature this turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Dawnbringer Charioteers</Name>
-    <Edition>JOU</Edition>
-    <Rarity>R</Rarity>
-    <Color />
-    <Cost>2WW</Cost>
-    <PT>2/4</PT>
-    <Type>Creature — Human Soldier</Type>
-    <Text>Flying, lifelink
-Heroic — Whenever you cast a spell that targets Dawnbringer Charioteers, put a +1/+1 counter on Dawnbringer Charioteers.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Odric, Master Tactician</Name>
-    <Edition>M13</Edition>
-    <Rarity>R</Rarity>
-    <Color>W</Color>
-    <Cost>2WW</Cost>
-    <PT>3/4</PT>
-    <Type>Legendary Creature - Human Soldier</Type>
-    <Text>First strike #(This creature deals combat damage before creatures without first strike.)#;
-Whenever Odric, Master Tactician and at least three other creatures attack, you choose which creatures block this combat and how those creatures block.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Tajic, Blade of the Legion</Name>
-    <Edition>DGM</Edition>
-    <Rarity>R</Rarity>
-    <Color>Gld</Color>
-    <Cost>2RW</Cost>
-    <PT>2/2</PT>
-    <Type>Legendary Creature - Human Soldier</Type>
-    <Text>Indestructible;
-#Battalion# � Whenever Tajic, Blade of the Legion and at least two other creatures attack, Tajic gets +5/+5 until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Cyclops of Eternal Fury</Name>
-    <Edition>JOU</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>4RR</Cost>
-    <PT>5/3</PT>
-    <Type>Enchantment Creature — Cyclops</Type>
-    <Text>Creatures you control have haste.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>1</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

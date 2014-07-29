@@ -61,39 +61,7 @@
 Draw a card.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Triton Tactics</Name>
-    <Edition>THS</Edition>
-    <Rarity>U</Rarity>
-    <Color>U</Color>
-    <Cost>U</Cost>
-    <PT>0/0</PT>
-    <Type>Instant</Type>
-    <Text>Up to two target creatures each get +0/+3 until end of turn. Untap those creatures. At this turn's next end of combat, tap each creature that was blocked by one of those creatures this turn and it doesn't untap during its controller's next untap step.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Izzet Charm</Name>
-    <Edition>DDJ</Edition>
-    <Rarity>U</Rarity>
-    <Color>Gld</Color>
-    <Cost>UR</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Choose one � Counter target noncreature spell unless its controller pays %2; or Izzet Charm deals 2 damage to target creature; or draw two cards, then discard two cards.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -165,22 +133,6 @@ Scry 2. #(To scry 2, look at the top two cards of your library, then put any num
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Brainstorm</Name>
-    <Edition>CNS</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>U</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Draw three cards, then put two cards from your hand on top of your library in any order.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Magma Spray</Name>
     <Edition>JOU</Edition>
     <Rarity>C</Rarity>
@@ -189,6 +141,56 @@ Scry 2. #(To scry 2, look at the top two cards of your library, then put any num
     <PT />
     <Type>Instant</Type>
     <Text>Magma Spray deals 2 damage to target creature. If that creature would die this turn, exile it instead.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mizzium Mortars</Name>
+    <Edition>RTR</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Mizzium Mortars deals 4 damage to target creature you don�t control.;
+Overload %3%R%R%R #(You may cast this spell for its overload cost. If you do, change its text by replacing all instances of �target� with �each.�)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dream's Grip</Name>
+    <Edition>MR</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Choose one � Tap target permanent; or untap target permanent.;
+Entwine %1 #(Choose both if you pay the entwine cost.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Illusionist's Bracers</Name>
+    <Edition>GTC</Edition>
+    <Rarity>R</Rarity>
+    <Color>Art</Color>
+    <Cost>2</Cost>
+    <PT />
+    <Type>Artifact - Equipment</Type>
+    <Text>Whenever an ability of equipped creature is activated, if it isn�t a mana ability, copy that ability. You may choose new targets for the copy. Equip %3</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
