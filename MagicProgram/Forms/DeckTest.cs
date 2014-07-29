@@ -708,6 +708,12 @@ namespace MagicProgram
                     mc.Activating += new MagicCard.ActiveAbility(Activating_ElvishFarmer);
                     break;
                 # endregion
+
+                # region Mycoloth
+                case "Mycoloth":
+                    mc.OnUpkeep += new PassiveEvent(Upkeep_Mycoloth);
+                    break;
+                # endregion
             }
             # endregion
 
@@ -727,6 +733,14 @@ namespace MagicProgram
             update_listViewPlay();
         }
 
+        void Upkeep_Mycoloth(MagicCard mc)
+        {
+            for (int i = 0; i < mc.counters; i++)
+            {
+                CreateSaproling(mc);
+            }
+        }
+
         void Activating_ElvishFarmer(MagicCard mc, int index)
         {
             if (index == 0)
@@ -744,16 +758,21 @@ namespace MagicProgram
             if (mc.counters >= 3)
             {
                 mc.counters -= 3;
-                MagicCard mct = new MagicCard
-                {
-                    Name  = "Saproling",
-                    Type = "Creature - Saproling",
-                    Token = true,
-                    PT = "1/1"
-                };
-                PlayCreature(mct, mc.PArea);
-                update_listViewPlay();
+                CreateSaproling(mc);
             }
+        }
+
+        private void CreateSaproling(MagicCard mc)
+        {
+            MagicCard mct = new MagicCard
+            {
+                Name = "Saproling",
+                Type = "Creature - Saproling",
+                Token = true,
+                PT = "1/1"
+            };
+            PlayCreature(mct, mc.PArea);
+            update_listViewPlay();
         }
 
         void Upkeep_Thallid(MagicCard mc)
