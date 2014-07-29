@@ -83,6 +83,22 @@ Draw a card.</Text>
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Izzet Charm</Name>
+    <Edition>DDJ</Edition>
+    <Rarity>U</Rarity>
+    <Color>Gld</Color>
+    <Cost>UR</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Choose one � Counter target noncreature spell unless its controller pays %2; or Izzet Charm deals 2 damage to target creature; or draw two cards, then discard two cards.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Magma Jet</Name>
     <Edition>FD</Edition>
     <Rarity>U</Rarity>
@@ -173,23 +189,6 @@ Scry 2. #(To scry 2, look at the top two cards of your library, then put any num
     <PT />
     <Type>Instant</Type>
     <Text>Magma Spray deals 2 damage to target creature. If that creature would die this turn, exile it instead.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Mizzium Mortars</Name>
-    <Edition>RTR</Edition>
-    <Rarity>R</Rarity>
-    <Color>R</Color>
-    <Cost>1R</Cost>
-    <PT />
-    <Type>Sorcery</Type>
-    <Text>Mizzium Mortars deals 4 damage to target creature you don�t control.;
-Overload %3%R%R%R #(You may cast this spell for its overload cost. If you do, change its text by replacing all instances of �target� with �each.�)#</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>

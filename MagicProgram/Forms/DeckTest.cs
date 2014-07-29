@@ -694,6 +694,20 @@ namespace MagicProgram
                     mc.onSpellCast += new PassiveEvent(Heroic_One);
                     break;
                 # endregion
+
+                # region Thallid
+                case "Thallid":
+                    mc.OnUpkeep += new PassiveEvent(Upkeep_Thallid);
+                    mc.Activating += new MagicCard.ActiveAbility(Activating_Fungus);
+                    break;
+                # endregion
+
+                # region Elvish Farmer
+                case "Elvish Farmer":
+                    mc.OnUpkeep+=new PassiveEvent(Upkeep_Thallid);
+                    mc.Activating += new MagicCard.ActiveAbility(Activating_ElvishFarmer);
+                    break;
+                # endregion
             }
             # endregion
 
@@ -711,6 +725,40 @@ namespace MagicProgram
             area.PlayCard(mc);
 
             update_listViewPlay();
+        }
+
+        void Activating_ElvishFarmer(MagicCard mc, int index)
+        {
+            if (index == 0)
+            {
+                Activating_Fungus(mc, index);
+            }
+            else
+            {
+                //choose a saproling.
+            }
+        }
+
+        void Activating_Fungus(MagicCard mc, int index)
+        {
+            if (mc.counters >= 3)
+            {
+                mc.counters -= 3;
+                MagicCard mct = new MagicCard
+                {
+                    Name  = "Saproling",
+                    Type = "Creature - Saproling",
+                    Token = true,
+                    PT = "1/1"
+                };
+                PlayCreature(mct, mc.PArea);
+                update_listViewPlay();
+            }
+        }
+
+        void Upkeep_Thallid(MagicCard mc)
+        {
+            mc.counters++;
         }
 
         void HeroicDrawCard(MagicCard mc)

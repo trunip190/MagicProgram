@@ -773,7 +773,7 @@ namespace MagicProgram
             }
         }
 
-        public void AttachCard(MagicCard mc)
+        public virtual void AttachCard(MagicCard mc)
         {
             attachedCards.Add(mc);
             mc.Parent = this;
@@ -809,14 +809,14 @@ namespace MagicProgram
         # endregion
 
         # region card actions
-        public void UpkeepCard()
+        public virtual void UpkeepCard()
         {
             callOnUpkeep();
             Sick = false;
             Tapped = false;
         }
 
-        public void EndStepCard()
+        public virtual void EndStepCard()
         {
             if (Name == "Protean Hydra")
             {
@@ -828,13 +828,13 @@ namespace MagicProgram
             TBonus = 0;
         }
 
-        public void ChangeTap()
+        public virtual void ChangeTap()
         {
             Tapped = !Tapped;
         }
 
         # region equipment
-        public void AddEquipment(MagicCard mc)
+        public virtual void AddEquipment(MagicCard mc)
         {
             attachedCards.Add(mc);
             mc.Parent = this;
@@ -842,7 +842,7 @@ namespace MagicProgram
             mc.OnEquip += new PassiveEvent(RemoveEquipment);
         }
 
-        public void RemoveEquipment(MagicCard mc)
+        public virtual void RemoveEquipment(MagicCard mc)
         {
             attachedCards.Remove(mc);
             mc.callOnUnequip();
@@ -857,7 +857,7 @@ namespace MagicProgram
         }
         # endregion
 
-        internal void Resolve()
+        internal virtual void Resolve()
         {
             callResolving();
         }
@@ -882,7 +882,7 @@ namespace MagicProgram
         /// </summary>
         /// <param name="i">The index of the ability to try (0 base)</param>
         /// <returns>Whether the ability can activate</returns>
-        public bool TryActivate(int i)
+        public virtual bool TryActivate(int i)
         {
             ParseText();
 
