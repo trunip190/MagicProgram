@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Biovisionary</Name>
+    <Edition>GTC</Edition>
+    <Rarity>R</Rarity>
+    <Color>Gld</Color>
+    <Cost>1GU</Cost>
+    <PT>2/3</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>At the beginning of the end step, if you control four or more creatures named Biovisionary, you win the game.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Progenitor Mimic</Name>
+    <Edition>DGM</Edition>
+    <Rarity>M</Rarity>
+    <Color>Gld</Color>
+    <Cost>4GU</Cost>
+    <PT>0/0</PT>
+    <Type>Creature - Shapeshifter</Type>
+    <Text>You may have Progenitor Mimic enter the battlefield as a copy of any creature on the battlefield except it gains �At the beginning of your upkeep, if this creature isn�t a token, put a token onto the battlefield that�s a copy of this creature.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Polymorphous Rush</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Strive — Polymorphous Rush costs {1}{U} more to cast for each target beyond the first.
+Choose a creature on the battlefield. Any number of target creatures you control each become a copy of that creature until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fated Infatuation</Name>
+    <Edition>BNG</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>UUU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Put a token onto the battlefield that's a copy of target creature you control. If it's your turn, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Forest</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>6</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Island</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Basic Land - Island</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>16</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Artisan of Forms</Name>
+    <Edition />
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>Heroic - Whenever you cast a spell that targets Artisan of Forms, you may have Artisan of Forms become a copy of target creature and gain this ability.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cackling Counterpart</Name>
+    <Edition>ISD</Edition>
+    <Rarity>R</Rarity>
+    <Color>U</Color>
+    <Cost>1UU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Put a token onto the battlefield that�s a copy of target creature you control.;
+Flashback %5%U%U #(You may cast this card from your graveyard for its flashback cost. Then exile it.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cryptoplasm</Name>
+    <Edition>MBS</Edition>
+    <Rarity>R</Rarity>
+    <Color>U</Color>
+    <Cost>1UU</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Shapeshifter</Type>
+    <Text>At the beginning of your upkeep, you may have Cryptoplasm become a copy of another target creature. If you do, Cryptoplasm gains this ability.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Divination</Name>
+    <Edition>BNG</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Draw two cards.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ponder</Name>
+    <Edition>M10</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Look at the top three cards of your library, then put them back in any order. You may shuffle your library.;
+Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Opportunity</Name>
+    <Edition>7E</Edition>
+    <Rarity>U</Rarity>
+    <Color>U</Color>
+    <Cost>4UU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Target player draws four cards.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

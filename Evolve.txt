@@ -1,0 +1,22 @@
+10 Island
+10 Forest
+3 Simic Guildgate
+1 Breeding Pool
+-------------------------
+4 Cloudfin Raptor
+3 Bond Beetle
+3 Gyre Sage
+3 Battlefield Thaumaturge
+2 Renegade Krasis
+2 Elusive Krasis
+1 Master Biomancer
+2 Fathom Mage
+2 Progenitor Mimic
+2 Protean Hydra
+-------------------------
+3 Strength of the Tajuru
+2 Predator's Rapport
+2 Gaea's Blessing
+2 Explore
+-------------------------
+3 Ooze Flux
