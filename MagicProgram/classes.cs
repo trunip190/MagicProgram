@@ -828,11 +828,18 @@ namespace MagicProgram
         # endregion
 
         # region card actions
+        public void UntapStep()
+        {
+            Sick = false;
+            if (Tapped)
+            {
+                Tap(false, false);
+            }
+        }
+
         public void UpkeepCard()
         {
             callOnUpkeep();
-            Sick = false;
-            Tapped = false;
         }
 
         public void EndStepCard()

@@ -1,6 +1,22 @@
 <?xml version="1.0"?>
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Card>
+    <Name>Forest</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>20</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Arbor Elf</Name>
     <Edition>M13</Edition>
     <Rarity>C</Rarity>
@@ -28,7 +44,23 @@
 Remove three spore counters from Thallid: Put a 1/1 green Saproling creature token onto the battlefield.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Essence Warden</Name>
+    <Edition>DDH</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Elf Shaman</Type>
+    <Text>Whenever another creature enters the battlefield, you gain 1 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -68,24 +100,6 @@ Sacrifice a Saproling: You gain 2 life.</Text>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Goblin Sharpshooter</Name>
-    <Edition>ON</Edition>
-    <Rarity>R</Rarity>
-    <Color>R</Color>
-    <Cost>2R</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Goblin</Type>
-    <Text>Goblin Sharpshooter doesn�t untap during your untap step.;
-Whenever a creature dies, untap Goblin Sharpshooter.;
-%T: Goblin Sharpshooter deals 1 damage to target creature or player.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Gluttonous Slime</Name>
     <Edition>CFX</Edition>
     <Rarity>U</Rarity>
@@ -98,6 +112,23 @@ Devour 1 #(As this enters the battlefield, you may sacrifice any number of creat
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Bow of Nylea</Name>
+    <Edition />
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1GG</Cost>
+    <PT />
+    <Type>Legendary Enchantment Artifact</Type>
+    <Text>Attacking creatures you control have deathtouch.
+{1}{G}, {T}: Choose one - Put a +1/+1 counter on target creature; or Bow of Nylea deals 2 damage to target creature with flying; or you gain 3 life; or put up to four target cards from your graveyard on the bottom of your library in any order.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -136,6 +167,22 @@ Whenever a creature dies, put a +1/+1 counter on Lumberknot.</Text>
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Fungal Sprouting</Name>
+    <Edition>M13</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>3G</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Put X 1/1 green Saproling creature tokens onto the battlefield, where X is the greatest power among creatures you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Mycoloth</Name>
     <Edition>ALA</Edition>
     <Rarity>R</Rarity>
@@ -147,89 +194,24 @@ Whenever a creature dies, put a +1/+1 counter on Lumberknot.</Text>
 At the beginning of your upkeep, put a 1/1 green Saproling creature token onto the battlefield for each +1/+1 counter on Mycoloth.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Forest</Name>
+    <Name>Chord of Calling</Name>
     <Edition />
     <Rarity>C</Rarity>
     <Color />
-    <Cost />
+    <Cost>XGGG</Cost>
     <PT />
-    <Type>Basic Land - Forest</Type>
-    <Text />
-    <Flavor />
-    <Token>false</Token>
-    <quantity>11</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Mountain</Name>
-    <Edition />
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost />
-    <PT />
-    <Type>Basic Land - Mountain</Type>
-    <Text />
-    <Flavor />
-    <Token>false</Token>
-    <quantity>5</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Gorgon's Head</Name>
-    <Edition>BNG</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>1</Cost>
-    <PT />
-    <Type>Artifact — Equipment</Type>
-    <Text>Equipped creature has deathtouch.
-Equip {2}</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Mizzium Mortars</Name>
-    <Edition>RTR</Edition>
-    <Rarity>R</Rarity>
-    <Color>R</Color>
-    <Cost>1R</Cost>
-    <PT />
-    <Type>Sorcery</Type>
-    <Text>Mizzium Mortars deals 4 damage to target creature you don�t control.;
-Overload %3%R%R%R #(You may cast this spell for its overload cost. If you do, change its text by replacing all instances of �target� with �each.�)#</Text>
+    <Type>Instant</Type>
+    <Text>Convoke
+Search your library for a creature card with converted Cost X or less and put it onto the battlefield. Then shuffle your library.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Gruul Guildgate</Name>
-    <Edition>GTC</Edition>
-    <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
-    <PT />
-    <Type>Land - Gate</Type>
-    <Text>Gruul Guildgate enters the battlefield tapped. %T: Add %R or %G to your mana pool.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

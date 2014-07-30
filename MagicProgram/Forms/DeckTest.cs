@@ -371,6 +371,14 @@ namespace MagicProgram
                         mc.Resolving += new PassiveEvent(mc_Scry2);
                         break;
                     # endregion
+
+                    # region Chord of Calling
+                    case "Chord of Calling":
+                        List<MagicCard> cardList = area._stack.cards.Where(o => o.Type.Contains("Creature")).ToList();
+                        comboCardPicker_Fill(cardList);
+                        CardChosen += new PassiveEvent(CardChosen_ChordofCalling);
+                        break;
+                    # endregion
                 }
 
                 if (mc.Text.Contains("Cipher"))
@@ -509,6 +517,11 @@ namespace MagicProgram
             CheckAreaCont(mc, area);
 
             return true;
+        }
+
+        void CardChosen_ChordofCalling(MagicCard mc)
+        {
+            PlayCreature(mc, PlArea);
         }
 
         void BlueUntapDraw(MagicCard mc, MouseEventArgs e)
@@ -757,6 +770,7 @@ namespace MagicProgram
         void Activating_JadeMage(MagicCard mc, int index)
         {
             CreateSaproling(mc);
+            update_listViewPlay();
         }
 
         void Entering_Mycoloth(MagicCard mc)
@@ -770,6 +784,7 @@ namespace MagicProgram
             {
                 CreateSaproling(mc);
             }
+            update_listViewPlay();
         }
 
         void Activating_ElvishFarmer(MagicCard mc, int index)
@@ -786,6 +801,7 @@ namespace MagicProgram
             {
                 mc.counters -= 3;
                 CreateSaproling(mc);
+                update_listViewPlay();
             }
         }
 
@@ -799,7 +815,6 @@ namespace MagicProgram
                 PT = "1/1",
             };
             PlayCreature(mct, mc.PArea);
-            update_listViewPlay();
         }
 
         void Upkeep_Fungus(MagicCard mc)
@@ -2666,6 +2681,7 @@ namespace MagicProgram
             //Pause refreshing areas until all updated
             cardAreaPlay.Paused = true;
             cardAreaLand.Paused = true;
+            PlArea.UntapStep();
             PlArea.Upkeep();
             cardAreaPlay.Paused = false;
             cardAreaLand.Paused = false;
@@ -2766,6 +2782,7 @@ namespace MagicProgram
             PhaseChanged += new Phase(DeckTest_OppUpkeepEnd);
             PhaseName = "Foe - Turn Start";
 
+            OppArea.UntapStep();
             OppArea.Upkeep();
             OppArea.drawCards(1);
         }
@@ -3339,6 +3356,10 @@ namespace MagicProgram
                 case "Soul Warden":
                     CreatureEntered += new PassiveEvent(CreatureEntered_SoulWarden);
                     break;
+
+                case "Essence Warden":
+                    CreatureEntered += new PassiveEvent(CreatureEntered_SoulWarden);
+                    break;
             }
             # endregion
         }
@@ -3738,10 +3759,26 @@ namespace MagicProgram
             }
         }
 
-        public void Upkeep()
+        public void UntapStep()
         {
             landPlayed = 0;
 
+            for (int i = 0; i < _lands.cards.Count; i++)
+            {
+                _lands.cards[i].UntapStep();
+            }
+            for (int i = 0; i < _play.cards.Count; i++)
+            {
+                _play.cards[i].UntapStep();
+            }
+            for (int i = 0; i < _artEnch.cards.Count; i++)
+            {
+                _artEnch.cards[i].UntapStep();
+            }
+        }
+
+        public void Upkeep()
+        {
             for (int i = 0; i < _lands.cards.Count; i++)
             {
                 _lands.cards[i].UpkeepCard();
