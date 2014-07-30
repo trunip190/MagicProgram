@@ -179,7 +179,7 @@ At the beginning of your upkeep, put a 1/1 green Saproling creature token onto t
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>9</quantity>
+    <quantity>5</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -214,6 +214,22 @@ Overload %3%R%R%R #(You may cast this spell for its overload cost. If you do, ch
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gruul Guildgate</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Gruul Guildgate enters the battlefield tapped. %T: Add %R or %G to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

@@ -188,12 +188,20 @@ namespace MagicProgram
 
         private void loadDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Magic Xml Database (*.mxd)|*.mxd|Text (*.txt;*.csv)|*.csv;*.txt";
+            //OpenFileDialog ofd = new OpenFileDialog();
+            //ofd.Filter = "Magic Xml Database (*.mxd)|*.mxd|Text (*.txt;*.csv)|*.csv;*.txt";
 
-            if (ofd.ShowDialog() == DialogResult.OK)
+            //if (ofd.ShowDialog() == DialogResult.OK)
+            //{
+            //    Database_Load(ofd.FileName);
+            //}
+
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            fbd.SelectedPath = Properties.Settings.Default.DatabaseDir;
+
+            if (fbd.ShowDialog() == DialogResult.OK)
             {
-                Database_Load(ofd.FileName);
+                LoadDatabaseCollection(fbd.SelectedPath);
             }
         }
         # endregion
