@@ -495,7 +495,7 @@ namespace MagicProgram
                 tempCard = mc;
                 update_listViewArtEnch();
             }
-            # endregion
+                # endregion
             # endregion
             # region New card type
             else
@@ -708,8 +708,35 @@ namespace MagicProgram
                     area.SpellRes += new PassiveEvent(SpellCast_YoungPyromancer);
                     break;
                 # endregion
+
+                # region Thallid
+                case "Thallid":
+                    mc.OnUpkeep += new PassiveEvent(Upkeep_Fungus);
+                    mc.Activating += new MagicCard.ActiveAbility(Activating_Fungus);
+                    break;
+                # endregion
+
+                # region Elvish Farmer
+                case "Elvish Farmer":
+                    mc.OnUpkeep += new PassiveEvent(Upkeep_Fungus);
+                    mc.Activating += new MagicCard.ActiveAbility(Activating_ElvishFarmer);
+                    break;
+                # endregion
+
+                # region Mycoloth
+                case "Mycoloth":
+                    mc.OnPlay += new PassiveEvent(Entering_Mycoloth);
+                    mc.OnUpkeep += new PassiveEvent(Upkeep_Mycoloth);
+                    break;
+                # endregion
+
+                # region Jade Mage
+                case "Jade Mage":
+                    mc.Activating += new MagicCard.ActiveAbility(Activating_JadeMage);
+                    break;
+                # endregion
             }
-            # endregion
+                # endregion
 
             mc.Activate += new MagicCard.ActiveAbility(mc_ActivateCard);
 
@@ -725,6 +752,59 @@ namespace MagicProgram
             area.PlayCard(mc);
 
             update_listViewPlay();
+        }
+
+        void Activating_JadeMage(MagicCard mc, int index)
+        {
+            CreateSaproling(mc);
+        }
+
+        void Entering_Mycoloth(MagicCard mc)
+        {
+            //throw new NotImplementedException();
+        }
+
+        void Upkeep_Mycoloth(MagicCard mc)
+        {
+            for (int i = 0; i < mc.counters; i++)
+            {
+                CreateSaproling(mc);
+            }
+        }
+
+        void Activating_ElvishFarmer(MagicCard mc, int index)
+        {
+            if (index == 0)
+            {
+                Activating_Fungus(mc, 0);
+            }
+        }
+
+        void Activating_Fungus(MagicCard mc, int index)
+        {
+            if (index == 0 && mc.counters >= 3)
+            {
+                mc.counters -= 3;
+                CreateSaproling(mc);
+            }
+        }
+
+        private void CreateSaproling(MagicCard mc)
+        {
+            MagicCard mct = new MagicCard
+            {
+                Name = "Saproling",
+                Type = "Creature - Saproling",
+                Token = true,
+                PT = "1/1",
+            };
+            PlayCreature(mct, mc.PArea);
+            update_listViewPlay();
+        }
+
+        void Upkeep_Fungus(MagicCard mc)
+        {
+            mc.counters++;
         }
 
         void SpellCast_YoungPyromancer(MagicCard mc)
@@ -1355,7 +1435,7 @@ namespace MagicProgram
             updateAll();
         }
         # endregion
-        # endregion
+            # endregion
 
         # region internal
         # region update
