@@ -267,9 +267,7 @@ namespace MagicProgram
                 }
             }
             # endregion
-
-            mc.callOnPlay();
-
+            
             # region land
             if (mc.Type.Contains("Land"))
             {
@@ -513,79 +511,11 @@ namespace MagicProgram
             # endregion
 
             mc.Resolve();
+            mc.callOnPlay();
 
             CheckAreaCont(mc, area);
 
             return true;
-        }
-
-        void CardChosen_ChordofCalling(MagicCard mc)
-        {
-            PlayCreature(mc, PlArea);
-        }
-
-        void BlueUntapDraw(MagicCard mc, MouseEventArgs e)
-        {
-            if (mc.Type.Contains("Creature"))
-            {
-                mc.callSpellCast();
-                mc.Color = "U";
-                mc.Tap(false, false);
-                DrawCard(1);
-                cardAreaPlay.CardClicked -= BlueUntapDraw;
-            }
-        }
-
-        void CreateCopyScry(MagicCard mc, MouseEventArgs e)
-        {
-            if (mc.Type.Contains("Creature"))
-            {
-                mc.callSpellCast();
-                MagicCard nmc = new MagicCard(mc);
-                nmc.Token = true;
-                PlayCreature(nmc, mc.PArea);
-
-                if (playerTurn) { Scry(2); }
-
-                cardAreaPlay.CardClicked -= CreateCopyScry;
-            }
-        }
-
-        void CreatureEntered_Spiritbonds(MagicCard mc)
-        {
-            if (mc.Token)
-            {
-                return;
-            }
-
-            if (MessageBox.Show("Pay {W} to create a Spirit token?", "Spirit Bonds", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                cardAreaPlay.CountersPicked += new CardArea.CountersChosen(CountersPicked_SpiritBonds);
-                cardAreaPlay.buttonDone.Show();
-            }
-        }
-
-        void CountersPicked_SpiritBonds(int value, Dictionary<MagicCard, int> sources)
-        {
-            ColourCost cc = new ColourCost { white = 1, };
-
-            if (PlArea.mana.Compare(cc))
-            {
-                PlArea.mana.Subtract(cc);
-
-                PlArea.PlayToken(new MagicCard
-                {
-                    Name = "Spirit",
-                    Text = "Flying",
-                    Type = "Creature - Spirit",
-                    Token = true,
-                    PT = "1/1"
-                });
-
-                update_listViewPlay();
-            }
-
-            cardAreaPlay.CountersPicked -= CountersPicked_SpiritBonds;
         }
 
         private void PlayCreature(MagicCard mc, PlayArea area)
@@ -749,7 +679,7 @@ namespace MagicProgram
                     break;
                 # endregion
             }
-                # endregion
+            # endregion
 
             mc.Activate += new MagicCard.ActiveAbility(mc_ActivateCard);
 
@@ -765,91 +695,6 @@ namespace MagicProgram
             area.PlayCard(mc);
 
             update_listViewPlay();
-        }
-
-        void Activating_JadeMage(MagicCard mc, int index)
-        {
-            CreateSaproling(mc);
-            update_listViewPlay();
-        }
-
-        void Entering_Mycoloth(MagicCard mc)
-        {
-            //throw new NotImplementedException();
-        }
-
-        void Upkeep_Mycoloth(MagicCard mc)
-        {
-            for (int i = 0; i < mc.counters; i++)
-            {
-                CreateSaproling(mc);
-            }
-            update_listViewPlay();
-        }
-
-        void Activating_ElvishFarmer(MagicCard mc, int index)
-        {
-            if (index == 0)
-            {
-                Activating_Fungus(mc, 0);
-            }
-        }
-
-        void Activating_Fungus(MagicCard mc, int index)
-        {
-            if (index == 0 && mc.counters >= 3)
-            {
-                mc.counters -= 3;
-                CreateSaproling(mc);
-                update_listViewPlay();
-            }
-        }
-
-        private void CreateSaproling(MagicCard mc)
-        {
-            MagicCard mct = new MagicCard
-            {
-                Name = "Saproling",
-                Type = "Creature - Saproling",
-                Token = true,
-                PT = "1/1",
-            };
-            PlayCreature(mct, mc.PArea);
-        }
-
-        void Upkeep_Fungus(MagicCard mc)
-        {
-            mc.counters++;
-        }
-
-        void SpellCast_YoungPyromancer(MagicCard mc)
-        {
-            if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
-            {
-                MagicCard mct = new MagicCard
-                {
-                    Token = true,
-                    Name = "Elemental",
-                    Type = "Creature - Elemental",
-                    Color = "Red",
-                    PT = "1/1",
-                };
-                mc.PArea.PlayToken(mct);
-                update_listViewPlay();
-            }
-        }
-
-        void SpellCast_Guttersnipe(MagicCard mc)
-        {
-            if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
-            {
-                OppArea.HP -= 2;
-            }
-        }
-
-        void HeroicDrawCard(MagicCard mc)
-        {
-            DrawCard(1);
         }
 
         private static void CheckAreaCont(MagicCard mc, PlayArea area)
@@ -1189,7 +1034,7 @@ namespace MagicProgram
             }
             # endregion
         }
-
+        
         private void PlayCard(MagicCard mc)
         {
             if (mc.Type.ToUpper().Contains("LAND"))
@@ -1450,7 +1295,7 @@ namespace MagicProgram
             updateAll();
         }
         # endregion
-            # endregion
+        # endregion
 
         # region internal
         # region update
@@ -1624,6 +1469,7 @@ namespace MagicProgram
 
         # region casting cycle
         //choose card
+
         //remove from hand
 
         private void CalcCost(MagicCard mc)
@@ -2318,6 +2164,11 @@ namespace MagicProgram
         }
 
         # region Heroic
+        void HeroicDrawCard(MagicCard mc)
+        {
+            DrawCard(1);
+        }
+
         void Heroic_One(MagicCard mc)
         {
             mc.counters++;
@@ -2368,6 +2219,197 @@ namespace MagicProgram
         }
         # endregion
         # endregion
+
+        void CardChosen_ChordofCalling(MagicCard mc)
+        {
+            PlayCreature(mc, PlArea);
+        }
+
+        void BlueUntapDraw(MagicCard mc, MouseEventArgs e)
+        {
+            if (mc.Type.Contains("Creature"))
+            {
+                mc.callSpellCast();
+                mc.Color = "U";
+                mc.Tap(false, false);
+                DrawCard(1);
+                cardAreaPlay.CardClicked -= BlueUntapDraw;
+            }
+        }
+
+        void CreateCopyScry(MagicCard mc, MouseEventArgs e)
+        {
+            if (mc.Type.Contains("Creature"))
+            {
+                mc.callSpellCast();
+                MagicCard nmc = new MagicCard(mc);
+                nmc.Token = true;
+                PlayCreature(nmc, mc.PArea);
+
+                if (playerTurn) { Scry(2); }
+
+                cardAreaPlay.CardClicked -= CreateCopyScry;
+            }
+        }
+
+        void CreatureEntered_Spiritbonds(MagicCard mc)
+        {
+            if (mc.Token)
+            {
+                return;
+            }
+
+            if (MessageBox.Show("Pay {W} to create a Spirit token?", "Spirit Bonds", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                cardAreaPlay.CountersPicked += new CardArea.CountersChosen(CountersPicked_SpiritBonds);
+                cardAreaPlay.buttonDone.Show();
+            }
+        }
+
+        void CountersPicked_SpiritBonds(int value, Dictionary<MagicCard, int> sources)
+        {
+            ColourCost cc = new ColourCost { white = 1, };
+
+            if (PlArea.mana.Compare(cc))
+            {
+                PlArea.mana.Subtract(cc);
+
+                PlArea.PlayToken(new MagicCard
+                {
+                    Name = "Spirit",
+                    Text = "Flying",
+                    Type = "Creature - Spirit",
+                    Token = true,
+                    PT = "1/1"
+                });
+
+                update_listViewPlay();
+            }
+
+            cardAreaPlay.CountersPicked -= CountersPicked_SpiritBonds;
+        }
+
+        void Activating_JadeMage(MagicCard mc, int index)
+        {
+            CreateSaproling(mc);
+            update_listViewPlay();
+        }
+
+        void Entering_Mycoloth(MagicCard mc)
+        {
+            cardAreaPlay.CountersPicked += new CardArea.CountersChosen(CardsPicked_Devour2);
+            cardAreaPlay.PickCounters();
+            cardAreaPlay.buttonDone.Show();
+        }
+
+        void Upkeep_Mycoloth(MagicCard mc)
+        {
+            for (int i = 0; i < mc.counters; i++)
+            {
+                CreateSaproling(mc);
+            }
+            update_listViewPlay();
+        }
+
+        void Activating_ElvishFarmer(MagicCard mc, int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    Activating_Fungus(mc, 0);
+                    break;
+
+                case 1:
+                    cardAreaPlay.CardClicked += new CardArea.CardChosen(Cardclicked_Sapsac);
+                    break;
+            }
+
+        }
+
+        void Cardclicked_Sapsac(MagicCard mc, MouseEventArgs e)
+        {
+            if (!mc.Type.Contains("Saproling"))
+            {
+                return;
+            }
+
+            //mc.callSacrificed();
+            mc.callDiscard();
+            PlArea.HP += 2;
+            cardAreaPlay.CardClicked -= Cardclicked_Sapsac;
+            update_listViewPlay();
+        }
+
+        void CardsPicked_Devour2(int value, Dictionary<MagicCard, int> sources)
+        {
+            int count = 0;
+
+            foreach (KeyValuePair<MagicCard, int> k in sources)
+            {
+                k.Key.callDiscard();
+                count++;
+            }
+
+            if (tempCard != null)
+            {
+                tempCard.counters += count * 2;
+            }
+
+            cardAreaPlay.CountersPicked -= CardsPicked_Devour2;
+            cardAreaPlay.buttonDone.Hide();
+        }
+
+        void Activating_Fungus(MagicCard mc, int index)
+        {
+            if (index == 0 && mc.counters >= 3)
+            {
+                mc.counters -= 3;
+                CreateSaproling(mc);
+                update_listViewPlay();
+            }
+        }
+
+        private void CreateSaproling(MagicCard mc)
+        {
+            MagicCard mct = new MagicCard
+            {
+                Name = "Saproling",
+                Type = "Creature - Saproling",
+                Token = true,
+                PT = "1/1",
+            };
+            PlayCreature(mct, mc.PArea);
+        }
+
+        void Upkeep_Fungus(MagicCard mc)
+        {
+            mc.counters++;
+        }
+
+        void SpellCast_YoungPyromancer(MagicCard mc)
+        {
+            if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
+            {
+                MagicCard mct = new MagicCard
+                {
+                    Token = true,
+                    Name = "Elemental",
+                    Type = "Creature - Elemental",
+                    Color = "Red",
+                    PT = "1/1",
+                };
+                mc.PArea.PlayToken(mct);
+                update_listViewPlay();
+            }
+        }
+
+        void SpellCast_Guttersnipe(MagicCard mc)
+        {
+            if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
+            {
+                OppArea.HP -= 2;
+            }
+        }
 
         void cardAreaPlay_GodFavoredGeneral(int value, Dictionary<MagicCard, int> sources)
         {

@@ -793,6 +793,9 @@ namespace MagicProgram
 
         public void PickCounters()
         {
+            int min = 1;
+            bool mult = true;
+
             foreach (MagicCardViewer mcv in mControls)
             {
                 if (mcv.cards[0].counters > 0)
