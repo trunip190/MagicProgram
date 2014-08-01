@@ -505,7 +505,12 @@ namespace MagicProgram
 
             if (Chosen)
             {
+                buttonChoose.BackColor = Color.LightSeaGreen;
                 callCardChosen();
+            }
+            else
+            {
+                buttonChoose.BackColor = Control.DefaultBackColor;
             }
         }
 

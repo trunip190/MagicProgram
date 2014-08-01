@@ -377,6 +377,23 @@ namespace MagicProgram
                         CardChosen += new PassiveEvent(CardChosen_ChordofCalling);
                         break;
                     # endregion
+
+                    # region Fungal Sprouting
+                    case "Fungal Sprouting":
+                        int x = 0;
+                        foreach (MagicCard mcp in area._play.cards)
+                        {
+                            if (mcp.Power > x)
+                            {
+                                x = mcp.Power;
+                            }
+                        }
+                        for (int i = 0; i < x; i++)
+                        {
+                            CreateSaproling(mc);
+                        }
+                        break;
+                    # endregion
                 }
 
                 if (mc.Text.Contains("Cipher"))
@@ -423,7 +440,6 @@ namespace MagicProgram
                 else
                 {
                     PlayCreature(mc, area);
-                    CheckAreaCont(mc, area);
                 }
             }
             # endregion
@@ -512,8 +528,6 @@ namespace MagicProgram
 
             mc.Resolve();
             mc.callOnPlay();
-
-            CheckAreaCont(mc, area);
 
             return true;
         }
@@ -696,15 +710,7 @@ namespace MagicProgram
 
             update_listViewPlay();
         }
-
-        private static void CheckAreaCont(MagicCard mc, PlayArea area)
-        {
-            if (mc.Type.Contains("Creature") && !area._play.cards.Contains(mc))
-            {
-                Debug.WriteLine("{0} not in {1}", mc.Name, "Area");
-            }
-        }
-
+        
         void CardClicked_WakeReflections(MagicCard mc, MouseEventArgs e)
         {
             if (mc.Token)
@@ -2300,6 +2306,7 @@ namespace MagicProgram
             cardAreaPlay.CountersPicked += new CardArea.CountersChosen(CardsPicked_Devour2);
             cardAreaPlay.PickCounters();
             cardAreaPlay.buttonDone.Show();
+            tempCard = mc;
         }
 
         void Upkeep_Mycoloth(MagicCard mc)
@@ -2346,8 +2353,11 @@ namespace MagicProgram
 
             foreach (KeyValuePair<MagicCard, int> k in sources)
             {
-                k.Key.callDiscard();
-                count++;
+                if (k.Value > 0)
+                {
+                    k.Key.callDiscard();
+                    count++;
+                }
             }
 
             if (tempCard != null)
@@ -2356,6 +2366,7 @@ namespace MagicProgram
             }
 
             cardAreaPlay.CountersPicked -= CardsPicked_Devour2;
+            update_listViewPlay();
             cardAreaPlay.buttonDone.Hide();
         }
 
