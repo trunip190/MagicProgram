@@ -60,7 +60,7 @@ Remove three spore counters from Thallid: Put a 1/1 green Saproling creature tok
     <Text>Whenever another creature enters the battlefield, you gain 1 life.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -100,23 +100,6 @@ Sacrifice a Saproling: You gain 2 life.</Text>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Gluttonous Slime</Name>
-    <Edition>CFX</Edition>
-    <Rarity>U</Rarity>
-    <Color>G</Color>
-    <Cost>2G</Cost>
-    <PT>2/2</PT>
-    <Type>Creature - Ooze</Type>
-    <Text>Flash;
-Devour 1 #(As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with that many +1/+1 counters on it.)#</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Bow of Nylea</Name>
     <Edition />
     <Rarity>R</Rarity>
@@ -145,7 +128,7 @@ Devour 1 #(As this enters the battlefield, you may sacrifice any number of creat
 Whenever a creature dies, put a +1/+1 counter on Lumberknot.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -177,7 +160,7 @@ Whenever a creature dies, put a +1/+1 counter on Lumberknot.</Text>
     <Text>Put X 1/1 green Saproling creature tokens onto the battlefield, where X is the greatest power among creatures you control.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -212,6 +195,39 @@ Search your library for a creature card with converted Cost X or less and put it
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Champion of Lambholt</Name>
+    <Edition>AVR</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>1GG</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Warrior</Type>
+    <Text>Creatures with power less than Champion of Lambholt�s power can�t block creatures you control.;
+Whenever another creature enters the battlefield under your control, put a +1/+1 counter on Champion of Lambholt.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Nature's Lore</Name>
+    <Edition>P2</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Search your library for a Forest card and put that card onto the battlefield. Then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

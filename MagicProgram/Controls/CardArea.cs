@@ -158,12 +158,14 @@ namespace MagicProgram
         # region delegates/events/handlers
         public delegate void CardChosen(MagicCard mc, MouseEventArgs e);
         public delegate void CountersChosen(int value, Dictionary<MagicCard, int> sources);
+        public delegate void CardsChosen(List<MagicCard> sources);
 
         public event CardChosen CardClicked;
         public event CardChosen CardDoubleClicked;
         public event PassiveEvent ChoseCard;
 
         public event CountersChosen CountersPicked;
+        public event CardsChosen CardsPicked;
 
         protected void callCardClicked(MagicCard mc, MouseEventArgs e)
         {
@@ -191,6 +193,15 @@ namespace MagicProgram
             if (handler != null)
             {
                 handler(mc);
+            }
+        }
+
+        protected void callCardsChosen(List<MagicCard> sources)
+        {
+            CardsChosen handler = CardsPicked;
+            if (handler != null)
+            {
+                handler(sources);
             }
         }
 
@@ -793,9 +804,6 @@ namespace MagicProgram
 
         public void PickCounters()
         {
-            int min = 1;
-            bool mult = true;
-
             foreach (MagicCardViewer mcv in mControls)
             {
                 if (mcv.cards[0].counters > 0)
@@ -806,13 +814,37 @@ namespace MagicProgram
             }
 
             int x = Controls.Count;
-                        
+
+            buttonDone.Show();
+        }
+
+        public void ChooseCards()
+        {
+            ChooseCard = true;
             buttonDone.Show();
         }
 
         void buttonDone_Click(object sender, EventArgs e)
         {
-            callCountersPicked();
+            if (ChooseCard)
+            {
+                List<MagicCard> source = new List<MagicCard>();
+
+                foreach (MagicCardViewer mcv in mControls)
+                {
+                    if (mcv.Chosen)
+                    {
+                        source.AddRange(mcv.cards);
+                    }
+                }
+
+                callCardsChosen(source);
+            }
+            else
+            {
+                callCountersPicked();
+            }
+            buttonDone.Hide();
         }
     }
 }

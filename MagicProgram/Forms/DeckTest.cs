@@ -33,8 +33,10 @@ namespace MagicProgram
 
         # region cards/controls held in temp
         ListView lvTemp;
+
         MagicCard tempCard;
         MagicCard viewCard;
+
         List<MagicCard> CardStack = new List<MagicCard>();
         List<MagicCard> PickList = new List<MagicCard>();
         # endregion
@@ -267,7 +269,7 @@ namespace MagicProgram
                 }
             }
             # endregion
-            
+
             # region land
             if (mc.Type.Contains("Land"))
             {
@@ -682,7 +684,6 @@ namespace MagicProgram
 
                 # region Mycoloth
                 case "Mycoloth":
-                    mc.OnPlay += new PassiveEvent(Entering_Mycoloth);
                     mc.OnUpkeep += new PassiveEvent(Upkeep_Mycoloth);
                     break;
                 # endregion
@@ -710,7 +711,7 @@ namespace MagicProgram
 
             update_listViewPlay();
         }
-        
+
         void CardClicked_WakeReflections(MagicCard mc, MouseEventArgs e)
         {
             if (mc.Token)
@@ -1007,6 +1008,22 @@ namespace MagicProgram
             mc.callPrePlay();
 
             string cost = mc.Cost.ToUpper();
+            # region Devour
+            if (mc.Text.Contains("Devour 1"))
+            {
+                tempCard = mc;
+                cardAreaPlay.ChooseCards();
+                cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsPicked_Devour1);
+                return;
+            }
+            else if (mc.Text.Contains("Devour 2"))
+            {
+                tempCard = mc;
+                cardAreaPlay.ChooseCards();
+                cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsPicked_Devour2);
+                return;
+            }
+            # endregion
             # region no x in cost
             if (!cost.Contains("X"))
             {
@@ -1040,7 +1057,7 @@ namespace MagicProgram
             }
             # endregion
         }
-        
+
         private void PlayCard(MagicCard mc)
         {
             if (mc.Type.ToUpper().Contains("LAND"))
@@ -1885,7 +1902,7 @@ namespace MagicProgram
             else
             {
                 tempCard = mc;
-                xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
+                //xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
                 PickerShow(count, mc.manaCost);
                 ViewCard(mc);
             }
@@ -2301,11 +2318,21 @@ namespace MagicProgram
             update_listViewPlay();
         }
 
-        void Entering_Mycoloth(MagicCard mc)
+        void Entering_Devour2(MagicCard mc)
         {
-            cardAreaPlay.CountersPicked += new CardArea.CountersChosen(CardsPicked_Devour2);
-            cardAreaPlay.PickCounters();
-            cardAreaPlay.buttonDone.Show();
+            mc.OnPlay -= Entering_Devour2;
+
+            cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsPicked_Devour2);
+            cardAreaPlay.ChooseCards();
+            tempCard = mc;
+        }
+
+        void Entering_Devour1(MagicCard mc)
+        {
+            mc.OnPlay -= Entering_Devour1;
+
+            cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsPicked_Devour1);
+            cardAreaPlay.ChooseCards();
             tempCard = mc;
         }
 
@@ -2347,17 +2374,14 @@ namespace MagicProgram
             update_listViewPlay();
         }
 
-        void CardsPicked_Devour2(int value, Dictionary<MagicCard, int> sources)
+        void CardsPicked_Devour2(List<MagicCard> sources)
         {
             int count = 0;
 
-            foreach (KeyValuePair<MagicCard, int> k in sources)
+            foreach (MagicCard mc in sources)
             {
-                if (k.Value > 0)
-                {
-                    k.Key.callDiscard();
-                    count++;
-                }
+                mc.callDiscard();
+                count++;
             }
 
             if (tempCard != null)
@@ -2365,9 +2389,27 @@ namespace MagicProgram
                 tempCard.counters += count * 2;
             }
 
-            cardAreaPlay.CountersPicked -= CardsPicked_Devour2;
-            update_listViewPlay();
-            cardAreaPlay.buttonDone.Hide();
+            cardAreaPlay.CardsPicked -= CardsPicked_Devour2;
+            PlayCard(tempCard);
+        }
+
+        void CardsPicked_Devour1(List<MagicCard> sources)
+        {
+            int count = 0;
+
+            foreach (MagicCard mc in sources)
+            {
+                mc.callDiscard();
+                count++;
+            }
+
+            if (tempCard != null)
+            {
+                tempCard.counters += count;
+            }
+
+            cardAreaPlay.CardsPicked -= CardsPicked_Devour1;
+            PlayCard(tempCard);
         }
 
         void Activating_Fungus(MagicCard mc, int index)
@@ -3276,6 +3318,14 @@ namespace MagicProgram
                         case "Master Biomancer":
                             mc.counters += mstc.Power;
                             break;
+
+                        case "Champion of Lambholt":
+                            mstc.counters++;
+                            break;
+
+                        case "Soul Warden":
+
+                            break;
                     }
                 }
                 # endregion
@@ -3434,6 +3484,11 @@ namespace MagicProgram
         void CreatureEntered_SoulWarden(MagicCard mc)
         {
             HP++;
+        }
+
+        void Simple_AddOne(MagicCard mc)
+        {
+            mc.counters++;
         }
 
         void Activate_OvergrownBattlement(MagicCard mc, int index)
