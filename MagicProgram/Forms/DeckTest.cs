@@ -390,6 +390,7 @@ namespace MagicProgram
                                 x = mcp.Power;
                             }
                         }
+
                         for (int i = 0; i < x; i++)
                         {
                             CreateSaproling(mc);
@@ -1006,30 +1007,13 @@ namespace MagicProgram
             }
 
             mc.callPrePlay();
-
             string cost = mc.Cost.ToUpper();
-            # region Devour
-            if (mc.Text.Contains("Devour 1"))
-            {
-                tempCard = mc;
-                cardAreaPlay.ChooseCards();
-                cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsPicked_Devour1);
-                return;
-            }
-            else if (mc.Text.Contains("Devour 2"))
-            {
-                tempCard = mc;
-                cardAreaPlay.ChooseCards();
-                cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsPicked_Devour2);
-                return;
-            }
-            # endregion
+
             # region no x in cost
             if (!cost.Contains("X"))
             {
-                {
-                    PlayCard(mc);
-                }
+                CheckEntersBattlefield(mc);
+                return;
             }
             # endregion
             # region x in cost
@@ -1054,6 +1038,28 @@ namespace MagicProgram
                 xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
                 PickerShow(count, cc);
                 ViewCard(mc);
+            }
+            # endregion
+        }
+
+        private void CheckEntersBattlefield(MagicCard mc)
+        {
+            # region Devour
+            if (mc.Text.Contains("Devour 1"))
+            {
+                tempCard = mc;
+                cardAreaPlay.ChooseCards();
+                cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsPicked_Devour1);
+            }
+            else if (mc.Text.Contains("Devour 2"))
+            {
+                tempCard = mc;
+                cardAreaPlay.ChooseCards();
+                cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsPicked_Devour2);
+            }
+            else
+            {
+                PlayCard(mc);
             }
             # endregion
         }
@@ -1896,7 +1902,7 @@ namespace MagicProgram
 
             if (PlArea.mana.Compare(cc))
             {
-                PlayCard(mc);
+                CheckEntersBattlefield(mc);
                 xPicker.ValuePicked -= picker_ValuePicked;
             }
             else
@@ -2245,7 +2251,7 @@ namespace MagicProgram
 
         void CardChosen_ChordofCalling(MagicCard mc)
         {
-            PlayCreature(mc, PlArea);
+            CheckEntersBattlefield(mc);
         }
 
         void BlueUntapDraw(MagicCard mc, MouseEventArgs e)
