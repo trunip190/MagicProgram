@@ -1,22 +1,6 @@
 <?xml version="1.0"?>
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Card>
-    <Name>Forest</Name>
-    <Edition />
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost />
-    <PT />
-    <Type>Basic Land - Forest</Type>
-    <Text />
-    <Flavor />
-    <Token>false</Token>
-    <quantity>6</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Island</Name>
     <Edition />
     <Rarity>C</Rarity>
@@ -27,7 +11,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>6</quantity>
+    <quantity>11</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -60,7 +44,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>6</quantity>
+    <quantity>11</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -77,39 +61,7 @@
 Draw a card.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Triton Tactics</Name>
-    <Edition>THS</Edition>
-    <Rarity>U</Rarity>
-    <Color>U</Color>
-    <Cost>U</Cost>
-    <PT>0/0</PT>
-    <Type>Instant</Type>
-    <Text>Up to two target creatures each get +0/+3 until end of turn. Untap those creatures. At this turn's next end of combat, tap each creature that was blocked by one of those creatures this turn and it doesn't untap during its controller's next untap step.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Izzet Charm</Name>
-    <Edition>DDJ</Edition>
-    <Rarity>U</Rarity>
-    <Color>Gld</Color>
-    <Cost>UR</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Choose one � Counter target noncreature spell unless its controller pays %2; or Izzet Charm deals 2 damage to target creature; or draw two cards, then discard two cards.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -132,40 +84,6 @@ Scry 2. #(To scry 2, look at the top two cards of your library, then put any num
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Pyromancer Ascension</Name>
-    <Edition>ZEN</Edition>
-    <Rarity>R</Rarity>
-    <Color>R</Color>
-    <Cost>1R</Cost>
-    <PT />
-    <Type>Enchantment</Type>
-    <Text>Whenever you cast an instant or sorcery spell that has the same name as a card in your graveyard, you may put a quest counter on Pyromancer Ascension.;
-Whenever you cast an instant or sorcery spell while Pyromancer Ascension has two or more quest counters on it, you may copy that spell. You may choose new targets for the copy.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Pyromatics</Name>
-    <Edition>GP</Edition>
-    <Rarity>C</Rarity>
-    <Color>R</Color>
-    <Cost>1R</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Replicate %1%R #(When you cast this spell, copy it for each time you paid its replicate cost. You may choose new targets for the copies.)#;
-Pyromatics deals 1 damage to target creature or player.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Young Pyromancer</Name>
     <Edition>M14</Edition>
     <Rarity>U</Rarity>
@@ -174,23 +92,6 @@ Pyromatics deals 1 damage to target creature or player.</Text>
     <PT>2/1</PT>
     <Type>Creature - Human Shaman</Type>
     <Text>Whenever you cast an instant or sorcery spell, put a 1/1 red Elemental creature token onto the battlefield.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Zhur-Taa Druid</Name>
-    <Edition>DGM</Edition>
-    <Rarity>C</Rarity>
-    <Color>Gld</Color>
-    <Cost>RG</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Human Druid</Type>
-    <Text>%T: Add %G to your mana pool.;
-Whenever you tap Zhur-Taa Druid for mana, it deals 1 damage to each opponent.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -224,6 +125,72 @@ Whenever you tap Zhur-Taa Druid for mana, it deals 1 damage to each opponent.</T
     <Type>Creature - Human Wizard</Type>
     <Text>When Elite Arcanist enters the battlefield, you may exile an instant card from your hand.;
 %X, %T: Copy the exiled card. You may cast the copy without paying its mana cost. X is the converted mana cost of the exiled card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Magma Spray</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Magma Spray deals 2 damage to target creature. If that creature would die this turn, exile it instead.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mizzium Mortars</Name>
+    <Edition>RTR</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Mizzium Mortars deals 4 damage to target creature you don�t control.;
+Overload %3%R%R%R #(You may cast this spell for its overload cost. If you do, change its text by replacing all instances of �target� with �each.�)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dream's Grip</Name>
+    <Edition>MR</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Choose one � Tap target permanent; or untap target permanent.;
+Entwine %1 #(Choose both if you pay the entwine cost.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Illusionist's Bracers</Name>
+    <Edition>GTC</Edition>
+    <Rarity>R</Rarity>
+    <Color>Art</Color>
+    <Cost>2</Cost>
+    <PT />
+    <Type>Artifact - Equipment</Type>
+    <Text>Whenever an ability of equipped creature is activated, if it isn�t a mana ability, copy that ability. You may choose new targets for the copy. Equip %3</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
