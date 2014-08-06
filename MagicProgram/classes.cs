@@ -357,6 +357,8 @@ namespace MagicProgram
         public event PassiveEvent OnAttack;
         public event PassiveEvent OnEquip;
         public event PassiveEvent OnUnequip;
+        public event PassiveEvent onAuraAdded;
+        public event PassiveEvent onAuraRemoved;
         public event PassiveEvent onEquipmentAdd;
         public event PassiveEvent onEquipmentRemoved;
         public event PassiveEvent onSpellCast;
@@ -389,6 +391,15 @@ namespace MagicProgram
             if (handler != null)
             {
                 handler(this);
+            }
+        }
+
+        public void callAuraAdded(MagicCard mc)
+        {
+            PassiveEvent handler = onAuraAdded;
+            if (handler != null)
+            {
+                handler(mc);
             }
         }
 
@@ -795,6 +806,7 @@ namespace MagicProgram
         public void AttachCard(MagicCard mc)
         {
             attachedCards.Add(mc);
+            callAuraAdded(mc);
             mc.Parent = this;
         }
 
@@ -840,6 +852,10 @@ namespace MagicProgram
         public void UpkeepCard()
         {
             callOnUpkeep();
+            if (Name == "Primordial Hydra")
+            {
+                counters += counters;
+            }
         }
 
         public void EndStepCard()
@@ -995,6 +1011,25 @@ namespace MagicProgram
                     result.Add("Power#1");
                     result.Add("Toughness#1");
                     result.Add("Ability#Flying");
+                    break;
+
+                case "Nyxborn Rollicker":
+                    result.Add("Power#1");
+                    result.Add("Toughness#1");
+                    break;
+
+                case "Inferno Fist":
+                    result.Add("Power#2");
+                    break;
+
+                case "Hammerhand":
+                    result.Add("Power#1");
+                    result.Add("Toughness#1");
+                    break;
+
+                case "Flamespeaker's Will":
+                    result.Add("Power#1");
+                    result.Add("Toughness#1");
                     break;
             }
 

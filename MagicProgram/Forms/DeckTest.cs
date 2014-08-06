@@ -397,6 +397,12 @@ namespace MagicProgram
                         }
                         break;
                     # endregion
+
+                    # region Titan's Strength
+                    case "Titan's Strength":
+                        mc.Resolving += new PassiveEvent(Resolving_TitansStrength);
+                        break;
+                    # endregion
                 }
 
                 if (mc.Text.Contains("Cipher"))
@@ -657,6 +663,18 @@ namespace MagicProgram
                     break;
                 # endregion
 
+                # region Brood Keeper
+                case "Brood Keeper":
+                    mc.onAuraAdded += new PassiveEvent(AuraAdded_BroodKeeper);
+                    break;
+                # endregion
+
+                # region Akroan Crusader
+                case "Akroan Crusader":
+                    mc.onSpellCast += new PassiveEvent(Heroic_Soldier);
+                    break;
+                # endregion
+
                 # region Guttersnipe
                 case "Guttersnipe":
                     area.SpellRes += new PassiveEvent(SpellCast_Guttersnipe);
@@ -694,6 +712,12 @@ namespace MagicProgram
                     mc.Activating += new MagicCard.ActiveAbility(Activating_JadeMage);
                     break;
                 # endregion
+
+                # region Satyr Hoplite
+                case "Satyr Hoplite":
+                    mc.onSpellCast+=new PassiveEvent(Heroic_One);
+                    break;
+                # endregion
             }
             # endregion
 
@@ -711,6 +735,19 @@ namespace MagicProgram
             area.PlayCard(mc);
 
             update_listViewPlay();
+        }
+
+        void Heroic_Soldier(MagicCard mc)
+        {
+            MagicCard mct = new MagicCard
+            {
+                Name = "Soldier",
+                Type = "Creature - Soldier",
+                Text = "Haste",
+                PT = "1/1",
+                Token = true,
+            };
+            PlayCard(mct);
         }
 
         void CardClicked_WakeReflections(MagicCard mc, MouseEventArgs e)
@@ -817,6 +854,35 @@ namespace MagicProgram
             }
         }
         # endregion
+
+        void Resolving_TitansStrength(MagicCard mc)
+        {
+            cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_TitansStrength);
+            mc.Resolving -= Resolving_TitansStrength;
+        }
+
+        void CardClicked_TitansStrength(MagicCard mc, MouseEventArgs e)
+        {
+            mc.PBonus += 3;
+            mc.TBonus += 1;
+            mc.callSpellCast();
+            Scry(1);
+            cardAreaPlay.CardClicked -= CardClicked_TitansStrength;
+        }
+
+        void AuraAdded_BroodKeeper(MagicCard mc)
+        {
+            MagicCard mct = new MagicCard
+            {
+                Name = "Dragon",
+                Type = "Creature - Dragon",
+                Color = "R",
+                Text = "Flying\r\n{R}: This creature gets +1/+0 until end of turn",
+                PT = "2/2",
+                Token = true,
+            };
+            PlayCard(mct);
+        }
 
         private void CheckMana(MagicCard mc)
         {

@@ -1,22 +1,6 @@
 <?xml version="1.0"?>
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Card>
-    <Name>Forest</Name>
-    <Edition />
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost />
-    <PT />
-    <Type>Basic Land - Forest</Type>
-    <Text />
-    <Flavor />
-    <Token>false</Token>
-    <quantity>6</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Island</Name>
     <Edition />
     <Rarity>C</Rarity>
@@ -27,7 +11,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>6</quantity>
+    <quantity>9</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -60,7 +44,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>6</quantity>
+    <quantity>9</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -93,20 +77,53 @@ Draw a card.</Text>
     <Text>Up to two target creatures each get +0/+3 until end of turn. Untap those creatures. At this turn's next end of combat, tap each creature that was blocked by one of those creatures this turn and it doesn't untap during its controller's next untap step.</Text>
     <Flavor />
     <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Satyr Hoplite</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Satyr Soldier</Type>
+    <Text>Heroic — Whenever you cast a spell that targets Satyr Hoplite, put a +1/+1 counter on Satyr Hoplite.</Text>
+    <Flavor />
+    <Token>false</Token>
     <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Izzet Charm</Name>
-    <Edition>DDJ</Edition>
-    <Rarity>U</Rarity>
-    <Color>Gld</Color>
-    <Cost>UR</Cost>
+    <Name>Dream's Grip</Name>
+    <Edition>MR</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
     <PT />
     <Type>Instant</Type>
-    <Text>Choose one � Counter target noncreature spell unless its controller pays %2; or Izzet Charm deals 2 damage to target creature; or draw two cards, then discard two cards.</Text>
+    <Text>Choose one � Tap target permanent; or untap target permanent.;
+Entwine %1 #(Choose both if you pay the entwine cost.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Shock</Name>
+    <Edition>BD</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Shock deals 2 damage to target creature or player.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -127,23 +144,6 @@ Scry 2. #(To scry 2, look at the top two cards of your library, then put any num
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Pyromancer Ascension</Name>
-    <Edition>ZEN</Edition>
-    <Rarity>R</Rarity>
-    <Color>R</Color>
-    <Cost>1R</Cost>
-    <PT />
-    <Type>Enchantment</Type>
-    <Text>Whenever you cast an instant or sorcery spell that has the same name as a card in your graveyard, you may put a quest counter on Pyromancer Ascension.;
-Whenever you cast an instant or sorcery spell while Pyromancer Ascension has two or more quest counters on it, you may copy that spell. You may choose new targets for the copy.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -182,23 +182,6 @@ Pyromatics deals 1 damage to target creature or player.</Text>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Zhur-Taa Druid</Name>
-    <Edition>DGM</Edition>
-    <Rarity>C</Rarity>
-    <Color>Gld</Color>
-    <Cost>RG</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Human Druid</Type>
-    <Text>%T: Add %G to your mana pool.;
-Whenever you tap Zhur-Taa Druid for mana, it deals 1 damage to each opponent.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Guttersnipe</Name>
     <Edition>RTR</Edition>
     <Rarity>U</Rarity>
@@ -209,7 +192,7 @@ Whenever you tap Zhur-Taa Druid for mana, it deals 1 damage to each opponent.</T
     <Text>Whenever you cast an instant or sorcery spell, Guttersnipe deals 2 damage to each opponent.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

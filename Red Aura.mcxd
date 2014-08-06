@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Mountain</Name>
+    <Edition>AN</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Mountain</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>22</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Satyr Hoplite</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Satyr Soldier</Type>
+    <Text>Heroic — Whenever you cast a spell that targets Satyr Hoplite, put a +1/+1 counter on Satyr Hoplite.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Hammerhand</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature
+When Hammerhand enters the battlefield, target creature can't block this turn.
+Enchanted creature gets +1/+1 and has haste.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Crown of Flames</Name>
+    <Edition>IN</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>R</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature;
+%R: Enchanted creature gets +1/+0 until end of turn.;
+%R: Return Crown of Flames to its owner�s hand.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Flamespeaker's Will</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT />
+    <Type>Enchantment — Aura</Type>
+    <Text>Enchant creature you control
+Enchanted creature gets +1/+1.
+Whenever enchanted creature deals combat damage to a player, you may sacrifice Flamespeaker's Will. If you do, destroy target artifact.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Nyxborn Rollicker</Name>
+    <Edition>BNG</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT>1/1</PT>
+    <Type>Enchantment Creature — Satyr</Type>
+    <Text>Bestow {1}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.)
+Enchanted creature gets +1/+1.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Titan's Strength</Name>
+    <Edition>THS</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Target creature gets +3/+1 until end of turn. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Magma Spray</Name>
+    <Edition>JOU</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Magma Spray deals 2 damage to target creature. If that creature would die this turn, exile it instead.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Crowd's Favor</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Convoke
+Target creature gets +1/+0 and gains first strike until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Inferno Fist</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature you control
+Enchanted creature gets +2/+0.
+R, Sacrifice Inferno Fist: Inferno Fist deals 2 damage to target creature or player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Soul's Fire</Name>
+    <Edition>ALA</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>2R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Target creature you control on the battlefield deals damage equal to its power to target creature or player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Grenzo's Cutthroat</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Goblin Rogue</Type>
+    <Text>First strike
+Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Boros Recruit</Name>
+    <Edition>RAV</Edition>
+    <Rarity>C</Rarity>
+    <Color>Gld</Color>
+    <Cost>%P</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Goblin Soldier</Type>
+    <Text>#(%P can be paid with either %R or %W.)#;
+First strike</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

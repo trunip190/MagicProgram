@@ -35,24 +35,6 @@ Primordial Hydra has trample as long as it has ten or more +1/+1 counters on it.
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Protean Hydra</Name>
-    <Edition>M10</Edition>
-    <Rarity>M</Rarity>
-    <Color>G</Color>
-    <Cost>XG</Cost>
-    <PT>0/0</PT>
-    <Type>Creature - Hydra</Type>
-    <Text>Protean Hydra enters the battlefield with X +1/+1 counters on it.;
-If damage would be dealt to Protean Hydra, prevent that damage and remove that many +1/+1 counters from it.;
-Whenever a +1/+1 counter is removed from Protean Hydra, put two +1/+1 counters on it at the beginning of the next end step.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Vastwood Hydra</Name>
     <Edition>M14</Edition>
     <Rarity>R</Rarity>
@@ -185,6 +167,23 @@ Draw a card.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Polukranos, World Eater</Name>
+    <Edition />
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>2{G}{G}</Cost>
+    <PT>5/5</PT>
+    <Type>Legendary Creature - Hydra</Type>
+    <Text>{X}{X}{G}: Monstrosity X. (If this creature instant monstrous, put X +1/+1 counters on it and it becomes monstrous.)
+When Polukranos, World Eater becomes monstrous, it deals X damage divided as you choose among any number of target creatures your opponents control. Each of those creatures deals damage equal to its power to Polukranos.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
