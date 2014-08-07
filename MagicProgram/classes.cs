@@ -1031,6 +1031,11 @@ namespace MagicProgram
                     result.Add("Power#1");
                     result.Add("Toughness#1");
                     break;
+
+                case "Madcap Skills":
+                    result.Add("Power#3");
+                    result.Add("Ability#Can only be blocked by two or more creatures");
+                    break;
             }
 
             return result;
