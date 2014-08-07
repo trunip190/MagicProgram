@@ -67,24 +67,6 @@ Enchanted creature gets +1/+1 and has haste.</Text>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Crown of Flames</Name>
-    <Edition>IN</Edition>
-    <Rarity>C</Rarity>
-    <Color>R</Color>
-    <Cost>R</Cost>
-    <PT />
-    <Type>Enchantment - Aura</Type>
-    <Text>Enchant creature;
-%R: Enchanted creature gets +1/+0 until end of turn.;
-%R: Return Crown of Flames to its owner�s hand.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Madcap Skills</Name>
     <Edition>GTC</Edition>
     <Rarity>C</Rarity>
@@ -196,6 +178,24 @@ Target creature gets +1/+0 and gains first strike until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dragon Mantle</Name>
+    <Edition>THS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature
+When Dragon Mantle enters the battlefield, draw a card.
+Enchanted creature has "{R}: This creature gets +1/+0 until end of turn."</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

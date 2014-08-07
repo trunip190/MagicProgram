@@ -414,7 +414,7 @@ namespace MagicProgram
                         if (dr == DialogResult.Yes)
                         {
                             //listViewPlay.MouseUp += new MouseEventHandler(listViewPlay_MouseClick);
-                            cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_CardClicked);
+                            cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_AuraCard);
                             tempCard = mc;
                         }
                         if (dr == DialogResult.No)
@@ -441,7 +441,7 @@ namespace MagicProgram
                 {
                     if (playerTurn)
                     {
-                        cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_CardClicked);
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_AuraCard);
                     }
                     tempCard = mc;
                     update_listViewArtEnch();
@@ -469,11 +469,11 @@ namespace MagicProgram
                 }
                 # endregion
                 # region Enchant Creature
-                else if (mc.Text.Contains("Enchant creature"))
+                else if (mc.Text.ToLower().Contains("enchant creature"))
                 {
                     if (playerTurn)
                     {
-                        cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_CardClicked);
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_AuraCard);
                     }
                 }
                 # endregion
@@ -1059,6 +1059,8 @@ namespace MagicProgram
                 {
                     if (MessageBox.Show("Do you want to bestow this card?", "Bestow?", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
+                        mc.Type = "Enchantment - Aura";
+                        mc.Text += "\r\nEnchant Creature";
                         cAbi.Active = true;
                         cc = cAbi.Cost;
                     }
@@ -1173,13 +1175,13 @@ namespace MagicProgram
             updateAll();
         }
 
-        void cardAreaPlay_CardClicked(MagicCard mc, MouseEventArgs e)
+        void cardAreaPlay_AuraCard(MagicCard mc, MouseEventArgs e)
         {
             mc.AttachCard(tempCard);
             mc.checkPT();
             mc.callSpellCast();
             tempCard = null;
-            cardAreaPlay.CardClicked -= cardAreaPlay_CardClicked;
+            cardAreaPlay.CardClicked -= cardAreaPlay_AuraCard;
         }
 
         void cardAreaHand_CardClickedEliteArcanist(MagicCard mc, MouseEventArgs e)
@@ -3398,6 +3400,10 @@ namespace MagicProgram
                         case "Soul Warden":
 
                             break;
+
+                        case "Foundry Street Denizen":
+                            mstc.PBonus += 1;
+                            break;
                     }
                 }
                 # endregion
@@ -3558,7 +3564,7 @@ namespace MagicProgram
             HP++;
         }
 
-        void Simple_AddOne(MagicCard mc)
+        void Passive_AddOne(MagicCard mc)
         {
             mc.counters++;
         }
@@ -3600,7 +3606,9 @@ namespace MagicProgram
             {
                 CheckGrave(mca);    //place card in appropriate place                
             }
-            CheckGrave(mc);
+            CheckGrave(mc); 
+            
+            _play.cards.Remove(mc);
         }
 
         private bool CheckGrave(MagicCard mc)
@@ -3619,6 +3627,13 @@ namespace MagicProgram
                 mc.OnEquip += new PassiveEvent(mc_OnEquip);
                 toGrave = false;
             }
+            if (mc.Text.Contains("Bestow") && mc.Type.Contains("Aura"))
+            {
+                _play.Add(mc);
+                mc.Type = "Enchantment Creature";
+                mc.Text = mc.Text.Replace("\r\nEnchant creature", "");
+                toGrave = false;
+            }
 
             if (toGrave)
             {
@@ -3631,22 +3646,29 @@ namespace MagicProgram
 
         void Play_Discard(MagicCard mc)
         {
-            bool toHand = false;
+            //bool toHand = false;
+            //foreach (MagicCard mca in mc.attachedCards)
+            //{
+            //    if (mc.Name == "Rancor")
+            //    {
+            //        _hand.cards.Add(mc);
+            //        mc.Location = "Hand";
+            //        toHand = true;
+            //    }
+            //}
+
+            //if (!toHand)
+            //{
+            //    _graveyard.cards.Add(mc);
+            //    mc.Location = "Graveyard";
+            //}
+
+
             foreach (MagicCard mca in mc.attachedCards)
             {
-                if (mc.Name == "Rancor")
-                {
-                    _hand.cards.Add(mc);
-                    mc.Location = "Hand";
-                    toHand = true;
-                }
+                CheckGrave(mca);    //place card in appropriate place                
             }
-
-            if (!toHand)
-            {
-                _graveyard.cards.Add(mc);
-                mc.Location = "Graveyard";
-            }
+            CheckGrave(mc);
 
             _play.cards.Remove(mc);
 
