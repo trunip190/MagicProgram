@@ -11,7 +11,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>8</quantity>
+    <quantity>7</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -27,7 +27,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>10</quantity>
+    <quantity>7</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -99,38 +99,6 @@ Draw a card.</Text>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Magma Spray</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>R</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Magma Spray deals 2 damage to target creature. If that creature would die this turn, exile it instead.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Generator Servant</Name>
-    <Edition>M15</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>1R</Cost>
-    <PT>2/1</PT>
-    <Type>Creature - Elemental</Type>
-    <Text>T, Sacrifice Generator Servant: Add 2 to your mana pool. If that mana is spent on a creature spell, it gains haste until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Lightning Bolt</Name>
     <Edition>A</Edition>
     <Rarity>C</Rarity>
@@ -139,76 +107,6 @@ Draw a card.</Text>
     <PT />
     <Type>Instant</Type>
     <Text>Lightning Bolt deals 3 damage to target creature or player.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Niv-Mizzet, Dracogenius</Name>
-    <Edition>RTR</Edition>
-    <Rarity>M</Rarity>
-    <Color>Gld</Color>
-    <Cost>2UURR</Cost>
-    <PT>5/5</PT>
-    <Type>Legendary Creature - Dragon Wizard</Type>
-    <Text>Flying;
-Whenever Niv-Mizzet, Dracogenius deals damage to a player, you may draw a card.;
-%U%R: Niv-Mizzet, Dracogenius deals 1 damage to target creature or player.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Izzet Boilerworks</Name>
-    <Edition>GP</Edition>
-    <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
-    <PT />
-    <Type>Land</Type>
-    <Text>Izzet Boilerworks enters the battlefield tapped.;
-When Izzet Boilerworks enters the battlefield, return a land you control to its owner�s hand.;
-%T: Add %U%R to your mana pool.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Melek, Izzet Paragon</Name>
-    <Edition>MGD</Edition>
-    <Rarity />
-    <Color>Gld</Color>
-    <Cost>4UR</Cost>
-    <PT>2/4</PT>
-    <Type>Legendary Creature - Weird Wizard</Type>
-    <Text>Play with the top card of your library revealed.;
-You may cast the top card of your library if it�s an instant or sorcery card.;
-Whenever you cast an instant or sorcery spell from your library, copy it. You may choose new targets for the copy.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Battle Hymn</Name>
-    <Edition>AVR</Edition>
-    <Rarity>C</Rarity>
-    <Color>R</Color>
-    <Cost>1R</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Add %R to your mana pool for each creature you control.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -225,6 +123,89 @@ Whenever you cast an instant or sorcery spell from your library, copy it. You ma
     <PT>0/0</PT>
     <Type>Instant</Type>
     <Text>Up to two target creatures each get +0/+3 until end of turn. Untap those creatures. At this turn's next end of combat, tap each creature that was blocked by one of those creatures this turn and it doesn't untap during its controller's next untap step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Zhur-Taa Druid</Name>
+    <Edition>DGM</Edition>
+    <Rarity>C</Rarity>
+    <Color>Gld</Color>
+    <Cost>RG</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Druid</Type>
+    <Text>%T: Add %G to your mana pool.;
+Whenever you tap Zhur-Taa Druid for mana, it deals 1 damage to each opponent.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>6</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Izzet Staticaster</Name>
+    <Edition>RTR</Edition>
+    <Rarity>U</Rarity>
+    <Color>Gld</Color>
+    <Cost>1UR</Cost>
+    <PT>0/3</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>Flash #(You may cast this spell any time you could cast an instant.)#;
+Haste;
+%T: Izzet Staticaster deals 1 damage to target creature and each other creature with the same name as that creature.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Counterspell</Name>
+    <Edition>5E</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>UU</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Counter target spell.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Terramorphic Expanse</Name>
+    <Edition>10E</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>%T, Sacrifice Terramorphic Expanse: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>

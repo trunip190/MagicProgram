@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Forest</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>10</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Arbor Elf</Name>
+    <Edition>M13</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Elf Druid</Type>
+    <Text>%T: Untap target Forest.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Thallid</Name>
+    <Edition>MMA</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Fungus</Type>
+    <Text>At the beginning of your upkeep, put a spore counter on Thallid.;
+Remove three spore counters from Thallid: Put a 1/1 green Saproling creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Essence Warden</Name>
+    <Edition>DDH</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Elf Shaman</Type>
+    <Text>Whenever another creature enters the battlefield, you gain 1 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Elvish Farmer</Name>
+    <Edition>FE</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>0/2</PT>
+    <Type>Creature - Elf</Type>
+    <Text>At the beginning of your upkeep, put a spore counter on Elvish Farmer.;
+Remove three spore counters from Elvish Farmer: Put a 1/1 green Saproling creature token onto the battlefield.;
+Sacrifice a Saproling: You gain 2 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Jade Mage</Name>
+    <Edition>DDH</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>2/1</PT>
+    <Type>Creature - Human Shaman</Type>
+    <Text>%2%G: Put a 1/1 green Saproling creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Lumberknot</Name>
+    <Edition>PC2</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>2GG</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Treefolk</Type>
+    <Text>Hexproof #(This creature can�t be the target of spells or abilities your opponents control.)#;
+Whenever a creature dies, put a +1/+1 counter on Lumberknot.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mycoloth</Name>
+    <Edition>ALA</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>3GG</Cost>
+    <PT>4/4</PT>
+    <Type>Creature - Fungus</Type>
+    <Text>Devour 2 #(As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with twice that many +1/+1 counters on it.)#;
+At the beginning of your upkeep, put a 1/1 green Saproling creature token onto the battlefield for each +1/+1 counter on Mycoloth.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Chord of Calling</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>XGGG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Convoke
+Search your library for a creature card with converted Cost X or less and put it onto the battlefield. Then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Nature's Lore</Name>
+    <Edition>P2</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Search your library for a Forest card and put that card onto the battlefield. Then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Goblin Sharpshooter</Name>
+    <Edition>ON</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>2R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Goblin</Type>
+    <Text>Goblin Sharpshooter doesn�t untap during your untap step.;
+Whenever a creature dies, untap Goblin Sharpshooter.;
+%T: Goblin Sharpshooter deals 1 damage to target creature or player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Goblin Bombardment</Name>
+    <Edition>TE</Edition>
+    <Rarity>U</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Sacrifice a creature: Goblin Bombardment deals 1 damage to target creature or player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gorgon's Head</Name>
+    <Edition>BNG</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1</Cost>
+    <PT />
+    <Type>Artifact — Equipment</Type>
+    <Text>Equipped creature has deathtouch.
+Equip {2}</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mountain</Name>
+    <Edition>AN</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Mountain</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>10</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

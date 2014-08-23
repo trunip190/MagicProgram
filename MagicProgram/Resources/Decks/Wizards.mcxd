@@ -17,6 +17,23 @@
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Izzet Guildgate</Name>
+    <Edition>RTR</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Izzet Guildgate enters the battlefield tapped.;
+%T: Add %U or %R to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Mountain</Name>
     <Edition />
     <Rarity>C</Rarity>
@@ -42,6 +59,23 @@
     <Type>Instant</Type>
     <Text>Target creature becomes blue until end of turn. Untap that creature.;
 Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Magma Jet</Name>
+    <Edition>FD</Edition>
+    <Rarity>U</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Magma Jet deals 2 damage to target creature or player.;
+Scry 2. #(To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)#</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -115,6 +149,39 @@ Draw a card.</Text>
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Dream's Grip</Name>
+    <Edition>MR</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Choose one � Tap target permanent; or untap target permanent.;
+Entwine %1 #(Choose both if you pay the entwine cost.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Illusionist's Bracers</Name>
+    <Edition>GTC</Edition>
+    <Rarity>R</Rarity>
+    <Color>Art</Color>
+    <Cost>2</Cost>
+    <PT />
+    <Type>Artifact - Equipment</Type>
+    <Text>Whenever an ability of equipped creature is activated, if it isn�t a mana ability, copy that ability. You may choose new targets for the copy. Equip %3</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Generator Servant</Name>
     <Edition>M15</Edition>
     <Rarity>C</Rarity>
@@ -131,100 +198,16 @@ Draw a card.</Text>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Lightning Bolt</Name>
-    <Edition>A</Edition>
-    <Rarity>C</Rarity>
-    <Color>R</Color>
-    <Cost>R</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Lightning Bolt deals 3 damage to target creature or player.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Niv-Mizzet, Dracogenius</Name>
+    <Name>Izzet Staticaster</Name>
     <Edition>RTR</Edition>
-    <Rarity>M</Rarity>
-    <Color>Gld</Color>
-    <Cost>2UURR</Cost>
-    <PT>5/5</PT>
-    <Type>Legendary Creature - Dragon Wizard</Type>
-    <Text>Flying;
-Whenever Niv-Mizzet, Dracogenius deals damage to a player, you may draw a card.;
-%U%R: Niv-Mizzet, Dracogenius deals 1 damage to target creature or player.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Izzet Boilerworks</Name>
-    <Edition>GP</Edition>
-    <Rarity>C</Rarity>
-    <Color>Lnd</Color>
-    <Cost />
-    <PT />
-    <Type>Land</Type>
-    <Text>Izzet Boilerworks enters the battlefield tapped.;
-When Izzet Boilerworks enters the battlefield, return a land you control to its owner�s hand.;
-%T: Add %U%R to your mana pool.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Melek, Izzet Paragon</Name>
-    <Edition>MGD</Edition>
-    <Rarity />
-    <Color>Gld</Color>
-    <Cost>4UR</Cost>
-    <PT>2/4</PT>
-    <Type>Legendary Creature - Weird Wizard</Type>
-    <Text>Play with the top card of your library revealed.;
-You may cast the top card of your library if it�s an instant or sorcery card.;
-Whenever you cast an instant or sorcery spell from your library, copy it. You may choose new targets for the copy.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Battle Hymn</Name>
-    <Edition>AVR</Edition>
-    <Rarity>C</Rarity>
-    <Color>R</Color>
-    <Cost>1R</Cost>
-    <PT />
-    <Type>Instant</Type>
-    <Text>Add %R to your mana pool for each creature you control.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Triton Tactics</Name>
-    <Edition>THS</Edition>
     <Rarity>U</Rarity>
-    <Color>U</Color>
-    <Cost>U</Cost>
-    <PT>0/0</PT>
-    <Type>Instant</Type>
-    <Text>Up to two target creatures each get +0/+3 until end of turn. Untap those creatures. At this turn's next end of combat, tap each creature that was blocked by one of those creatures this turn and it doesn't untap during its controller's next untap step.</Text>
+    <Color>Gld</Color>
+    <Cost>1UR</Cost>
+    <PT>0/3</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>Flash #(You may cast this spell any time you could cast an instant.)#;
+Haste;
+%T: Izzet Staticaster deals 1 damage to target creature and each other creature with the same name as that creature.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>

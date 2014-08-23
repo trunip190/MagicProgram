@@ -51,7 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>2E1086A3A43DF3B4BE98CA7514C9A25137AEC8BF</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>08191EB571E70E53712C1D0AEA2E08415A971EB9</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>MagicProgram_TemporaryKey.pfx</ManifestKeyFile>

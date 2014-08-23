@@ -363,6 +363,7 @@ namespace MagicProgram
         public event PassiveEvent onEquipmentRemoved;
         public event PassiveEvent onSpellCast;
         public event PassiveEvent onDie;
+        public event PassiveEvent onSacrifice;
         public event ValueChanged CountersChanged;
         public event PassiveEvent TapChanged;
         public event PassiveEvent OnTap;
@@ -410,6 +411,17 @@ namespace MagicProgram
             {
                 handler(this);
             }
+            callDestroyed();
+        }
+
+        public void callSacrifice()
+        {
+            PassiveEvent handler = onSacrifice;
+            if (handler != null)
+            {
+                handler(this);
+            }
+            callDie();
         }
 
         public void callActivate(int index)
@@ -785,7 +797,7 @@ namespace MagicProgram
             }
             # endregion
 
-            int e = Text.IndexOf("Equip") ;
+            int e = Text.IndexOf("Equip");
             if (e > -1)
             {
                 e += 6;
@@ -1668,6 +1680,48 @@ namespace MagicProgram
             red += cc.red;
             white += cc.white;
             grey += cc.grey;
+        }
+
+        public void Add(string s)
+        {
+            ColourCost nc = new ColourCost();
+            foreach (char c in s)
+            {
+                if (Char.IsNumber(c))
+                {
+                    nc.grey += int.Parse(c.ToString());
+                    continue;
+                }
+
+                switch (c)
+                {
+                    case 'U':
+                        nc.blue++;
+                        break;
+
+                    case 'G':
+                        nc.green++;
+                        break;
+
+                    case 'W':
+                        nc.white++;
+                        break;
+
+                    case 'R':
+                        nc.red++;
+                        break;
+
+                    case 'B':
+                        nc.black++;
+                        break;
+
+                    default:
+                        Debug.WriteLine("unrecognised character {0}", c);
+                        break;
+                }
+            }
+
+            Add(nc);
         }
 
         public void Subtract(ColourCost cc)

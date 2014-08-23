@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Plains</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Plains</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>11</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Doomed Traveler</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Soldier</Type>
+    <Text>When Doomed Traveler dies, put a 1/1 white Spirit creature token with flying onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Crusader of Odric</Name>
+    <Edition>M13</Edition>
+    <Rarity>U</Rarity>
+    <Color>W</Color>
+    <Cost>2W</Cost>
+    <PT>*/*</PT>
+    <Type>Creature - Human Soldier</Type>
+    <Text>Crusader of Odric�s power and toughness are each equal to the number of creatures you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Odric, Master Tactician</Name>
+    <Edition>M13</Edition>
+    <Rarity>R</Rarity>
+    <Color>W</Color>
+    <Cost>2WW</Cost>
+    <PT>3/4</PT>
+    <Type>Legendary Creature - Human Soldier</Type>
+    <Text>First strike #(This creature deals combat damage before creatures without first strike.)#;
+Whenever Odric, Master Tactician and at least three other creatures attack, you choose which creatures block this combat and how those creatures block.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Launch the Fleet</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Strive — Launch the Fleet costs {1} more to cast for each target beyond the first.
+Until end of turn, any number of target creatures each gain "Whenever this creature attacks, put a 1/1 white Soldier creature token onto the battlefield tapped and attacking."</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Vanguard of Brimaz</Name>
+    <Edition>BNG</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>WW</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Cat Soldier</Type>
+    <Text>Vigilance
+Heroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 white Cat Soldier creature token with vigilance onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Intangible Virtue</Name>
+    <Edition>CNS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1W</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Creature tokens you control get +1/+1 and have vigilance.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Akroan Crusader</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Soldier</Type>
+    <Text>Heroic - Whenever you cast a spell that targets Akroan Crusader, put a 1/1 red Soldier creature token with haste onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mountain</Name>
+    <Edition>AN</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Mountain</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>11</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Goblin Assault</Name>
+    <Edition>ALA</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>2R</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>At the beginning of your upkeep, put a 1/1 red Goblin creature token with haste onto the battlefield.;
+Goblin creatures attack each turn if able.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Foundry Street Denizen</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Goblin Warrior</Type>
+    <Text>Whenever another red creature enters the battlefield under your control, Foundry Street Denizen gets +1/+0 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Phalanx Leader</Name>
+    <Edition />
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>WW</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Soldier</Type>
+    <Text>Heroic - Whenever you cast a spell that targets Phalanx Leader, put a +1/+1 counter on each creature you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

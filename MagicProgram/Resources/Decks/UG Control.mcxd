@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>6</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Island</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Island</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>14</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Elite Arcanist</Name>
+    <Edition>M14</Edition>
+    <Rarity>R</Rarity>
+    <Color>U</Color>
+    <Cost>3U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Wizard</Type>
+    <Text>When Elite Arcanist enters the battlefield, you may exile an instant card from your hand.;
+%X, %T: Copy the exiled card. You may cast the copy without paying its mana cost. X is the converted mana cost of the exiled card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>%X, %T</RawCost>
+        <Text> Copy the exiled card. You may cast the copy without paying its mana cost. X is the converted mana cost of the exiled card.</Text>
+        <Name />
+        <Active>false</Active>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sage of Hours</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>Heroic — Whenever you cast a spell that targets Sage of Hours, put a +1/+1 counter on it.
+Remove all +1/+1 counters from Sage of Hours: For each five counters removed this way, take an extra turn after this one.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Battlefield Thaumaturge</Name>
+    <Edition>JOU</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1U</Cost>
+    <PT>2/1</PT>
+    <Type>Creature — Human Wizard</Type>
+    <Text>Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.
+Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wavecrash Triton</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT>1/4</PT>
+    <Type>Creature - Merfolk Wizard</Type>
+    <Text>Heroic - Whenever you cast a spell that targets Wavecrash Triton, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Triton Tactics</Name>
+    <Edition>THS</Edition>
+    <Rarity>U</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT>0/0</PT>
+    <Type>Instant</Type>
+    <Text>Up to two target creatures each get +0/+3 until end of turn. Untap those creatures. At this turn's next end of combat, tap each creature that was blocked by one of those creatures this turn and it doesn't untap during its controller's next untap step.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Solidarity of Heroes</Name>
+    <Edition>JOU</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Strive — Solidarity of Heroes costs {1}{G} more to cast for each target beyond the first.
+Choose any number of target creatures. Double the number of +1/+1 counters on each of them.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Strength of the Tajuru</Name>
+    <Edition>WWK</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>XGG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Multikicker %1 #(You may pay an additional %1 any number of times as you cast this spell.)#;
+Choose target creature, then choose another target creature for each time Strength of the Tajuru was kicked. Put X +1/+1 counters on each of them.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Simic Guildgate</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Simic Guildgate enters the battlefield tapped.;
+%T: Add %G or %U to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Triton Fortune Hunter</Name>
+    <Edition />
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>2U</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Merfolk Soldier</Type>
+    <Text>Heroic - Whenever you cast a spell that targets Triton Fortune Hunter, draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Dream's Grip</Name>
+    <Edition>MR</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Choose one � Tap target permanent; or untap target permanent.;
+Entwine %1 #(Choose both if you pay the entwine cost.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cerulean Wisps</Name>
+    <Edition>SHM</Edition>
+    <Rarity>C</Rarity>
+    <Color>U</Color>
+    <Cost>U</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Target creature becomes blue until end of turn. Untap that creature.;
+Draw a card.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

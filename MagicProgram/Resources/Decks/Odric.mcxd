@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Plains</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Plains</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>20</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Doomed Traveler</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Human Soldier</Type>
+    <Text>When Doomed Traveler dies, put a 1/1 white Spirit creature token with flying onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Soul Warden</Name>
+    <Edition>BRB</Edition>
+    <Rarity>C</Rarity>
+    <Color>W</Color>
+    <Cost>W</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Cleric</Type>
+    <Text>Whenever another creature enters the battlefield, you gain 1 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Spirit Link</Name>
+    <Edition>LG</Edition>
+    <Rarity>U</Rarity>
+    <Color>W</Color>
+    <Cost>W</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature #(Target a creature as you cast this. This card enters the battlefield attached to that creature.)#;
+Whenever enchanted creature deals damage, you gain that much life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ajani's Pridemate</Name>
+    <Edition>DDH</Edition>
+    <Rarity>U</Rarity>
+    <Color>W</Color>
+    <Cost>1W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Cat Soldier</Type>
+    <Text>Whenever you gain life, you may put a +1/+1 counter on Ajani�s Pridemate. #(For example, if an effect causes you to gain 3 life, you may put one +1/+1 counter on this creature.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Hero of Iroas</Name>
+    <Edition>BNG</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost>1W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Human Soldier</Type>
+    <Text>Aura spells you cast cost {1} less to cast.
+Heroic — Whenever you cast a spell that targets Hero of Iroas, put a +1/+1 counter on Hero of Iroas.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Crusader of Odric</Name>
+    <Edition>M13</Edition>
+    <Rarity>U</Rarity>
+    <Color>W</Color>
+    <Cost>2W</Cost>
+    <PT>*/*</PT>
+    <Type>Creature - Human Soldier</Type>
+    <Text>Crusader of Odric�s power and toughness are each equal to the number of creatures you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Odric, Master Tactician</Name>
+    <Edition>M13</Edition>
+    <Rarity>R</Rarity>
+    <Color>W</Color>
+    <Cost>2WW</Cost>
+    <PT>3/4</PT>
+    <Type>Legendary Creature - Human Soldier</Type>
+    <Text>First strike #(This creature deals combat damage before creatures without first strike.)#;
+Whenever Odric, Master Tactician and at least three other creatures attack, you choose which creatures block this combat and how those creatures block.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Path of Bravery</Name>
+    <Edition>M14</Edition>
+    <Rarity>R</Rarity>
+    <Color>W</Color>
+    <Cost>2W</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>As long your life total is greater than or equal to your starting life total, creatures you control get +1/+1.Whenever one or more creatures you control attack, you gain life equal to the number of attacking creatures.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Vanguard of Brimaz</Name>
+    <Edition>BNG</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>WW</Cost>
+    <PT>2/2</PT>
+    <Type>Creature — Cat Soldier</Type>
+    <Text>Vigilance
+Heroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 white Cat Soldier creature token with vigilance onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gods Willing</Name>
+    <Edition />
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>W</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Target creature you control gains protection from the color of your choice until end of turn. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Nimbus Wings</Name>
+    <Edition>ZEN</Edition>
+    <Rarity>C</Rarity>
+    <Color>W</Color>
+    <Cost>1W</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature;
+Enchanted creature gets +1/+2 and has flying.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

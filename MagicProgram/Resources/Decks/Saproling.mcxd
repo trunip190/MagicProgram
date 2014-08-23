@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>22</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Thallid</Name>
+    <Edition>MMA</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Fungus</Type>
+    <Text>At the beginning of your upkeep, put a spore counter on Thallid.;
+Remove three spore counters from Thallid: Put a 1/1 green Saproling creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Arbor Elf</Name>
+    <Edition>M13</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Elf Druid</Type>
+    <Text>%T: Untap target Forest.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Elvish Farmer</Name>
+    <Edition>FE</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>0/2</PT>
+    <Type>Creature - Elf</Type>
+    <Text>At the beginning of your upkeep, put a spore counter on Elvish Farmer.;
+Remove three spore counters from Elvish Farmer: Put a 1/1 green Saproling creature token onto the battlefield.;
+Sacrifice a Saproling: You gain 2 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Jade Mage</Name>
+    <Edition>DDH</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>2/1</PT>
+    <Type>Creature - Human Shaman</Type>
+    <Text>%2%G: Put a 1/1 green Saproling creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Lumberknot</Name>
+    <Edition>PC2</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>2GG</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Treefolk</Type>
+    <Text>Hexproof #(This creature can�t be the target of spells or abilities your opponents control.)#;
+Whenever a creature dies, put a +1/+1 counter on Lumberknot.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Life and Limb</Name>
+    <Edition>PLC</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>3G</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>All Forests and all Saprolings are 1/1 green Saproling creatures and Forest lands in addition to their other types.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Mycoloth</Name>
+    <Edition>ALA</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>3GG</Cost>
+    <PT>4/4</PT>
+    <Type>Creature - Fungus</Type>
+    <Text>Devour 2 #(As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with twice that many +1/+1 counters on it.)#;
+At the beginning of your upkeep, put a 1/1 green Saproling creature token onto the battlefield for each +1/+1 counter on Mycoloth.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Chord of Calling</Name>
+    <Edition>RAV</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>XGGG</Cost>
+    <PT />
+    <Type>Instant</Type>
+    <Text>Convoke #(Each creature you tap while casting this spell pays for %1 or one mana of that creature�s color.)#;
+Search your library for a creature card with converted mana cost X or less and put it onto the battlefield. Then shuffle your library.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Fungal Sprouting</Name>
+    <Edition>M13</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>3G</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Put X 1/1 green Saproling creature tokens onto the battlefield, where X is the greatest power among creatures you control.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Essence Warden</Name>
+    <Edition>DDH</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Elf Shaman</Type>
+    <Text>Whenever another creature enters the battlefield, you gain 1 life.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Champion of Lambholt</Name>
+    <Edition>AVR</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>1GG</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Human Warrior</Type>
+    <Text>Creatures with power less than Champion of Lambholt�s power can�t block creatures you control.;
+Whenever another creature enters the battlefield under your control, put a +1/+1 counter on Champion of Lambholt.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>
