@@ -293,7 +293,7 @@ namespace MagicProgram
         [XmlIgnore]
         public int AbilityIndex = 0;
         [XmlIgnore]
-        public int AdditionalCost = 1;
+        public ColourCost AdditionalCost = new ColourCost();
         # endregion
 
         [XmlIgnore]
@@ -1666,9 +1666,27 @@ namespace MagicProgram
             grey = 0;
         }
 
+        public ColourCost()
+        { }
+
+        public ColourCost(string s)
+        {
+            ParseString(s);
+        }
+
         public void ParseString(string s)
         {
+            foreach (char c in s)
+            {
+                if (char.IsNumber(c))
+                {
+                    grey += int.Parse(c.ToString());
+                }
+                else
+                {
 
+                }
+            }
         }
 
         # region Math

@@ -417,6 +417,7 @@ namespace MagicProgram
 
                     # region Launch the Fleet
                     case "Launch the Fleet":
+                        tempCard = mc;
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_LaunchTheFleet);
                         break;
                     # endregion
@@ -424,6 +425,12 @@ namespace MagicProgram
                     # region Battle Hymn
                     case "Battle Hymn":
                         mc.PArea.mana.red += mc.PArea._play.cards.Count(o => o.Type.ToLower().Contains("creature"));
+                        break;
+                    # endregion
+
+                    # region Triplicate Spirits
+                    case "Triplicate Spirits":
+                        mc.Resolving += new PassiveEvent(Resolving_TriplicateSpirits);
                         break;
                     # endregion
                 }
@@ -680,6 +687,24 @@ namespace MagicProgram
         }
         # endregion
 
+        void Resolving_TriplicateSpirits(MagicCard mc)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                MagicCard mct = new MagicCard
+                {
+                    Token = true,
+                    Name = "Spirit",
+                    Type = "Creature - Spirit",
+                    Color = "White",
+                    PT = "1/1",
+                    Text = "Flying",
+                };
+                mc.PArea.PlayToken(mct);
+            }
+            update_listViewPlay();
+        }
+
         void Resolving_TitansStrength(MagicCard mc)
         {
             cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_TitansStrength);
@@ -902,15 +927,8 @@ namespace MagicProgram
             mc.callPrePlay();
             string cost = mc.Cost.ToUpper();
 
-            # region no x in cost
-            if (!cost.Contains("X"))
-            {
-                CheckEntersBattlefield(mc);
-                return;
-            }
-            # endregion
             # region x in cost
-            else
+            if (cost.Contains("X"))
             {
                 int x = 0;
                 int count = cost.Count(c => c == 'X');
@@ -931,6 +949,27 @@ namespace MagicProgram
                 xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
                 PickerShow(count, cc);
                 ViewCard(mc);
+            }
+            # endregion
+            # region Strive
+            else if (mc.Text.Contains("Strive"))
+            {
+                int count = 1;
+                ColourCost Cost = mc.AdditionalCost;
+                mc.Xvalue = 0;  //Make sure it is reset
+
+                mc.Initialise();
+                tempCard = viewCard = mc;
+                xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
+                PickerShow(1, count, cc);
+                ViewCard(mc);
+            }
+            # endregion
+            # region no x in cost
+            else
+            {
+                CheckEntersBattlefield(mc);
+                return;
             }
             # endregion
         }
@@ -1760,6 +1799,15 @@ namespace MagicProgram
             xPicker.BringToFront();
         }
 
+        private void PickerShow(int MinCount, int MaxCount, ColourCost cost)
+        {
+            xPicker.Cost = cost;
+            xPicker.Mana = PlArea.mana;
+            xPicker.Value = MinCount;
+            xPicker.Show(MaxCount);
+            xPicker.BringToFront();
+        }
+
         private void PickerShow(MagicCard mc, ColourCost cc)
         {
             xPicker.Mana = PlArea.mana;
@@ -1789,7 +1837,11 @@ namespace MagicProgram
             //consider Strive, kicker && multikicker etc.
             if (mc.Text.ToUpper().Contains("KICKER"))
             {
-                cc.grey += ((int)numTargets.Value - 1) * mc.AdditionalCost;
+                for (int i = 0; i < numTargets.Value - 1; i++)
+                {
+                    //cc.grey += ((int)numTargets.Value - 1) * mc.AdditionalCost;
+                    cc.Add(mc.AdditionalCost);
+                }
             }
             # endregion
 
@@ -2032,6 +2084,13 @@ namespace MagicProgram
         void CardClicked_LaunchTheFleet(MagicCard mc, MouseEventArgs e)
         {
             mc.OnAttack += new PassiveEvent(OnAttack_CreateSoldier);
+            mc.callSpellCast();
+
+            tempCard.Targets--;
+            if (tempCard.Targets < 1)
+            {
+                cardAreaPlay.CardClicked -= CardClicked_LaunchTheFleet;
+            }
         }
 
         void OnAttack_CreateSoldier(MagicCard mc)

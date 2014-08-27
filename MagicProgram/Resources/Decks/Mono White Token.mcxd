@@ -116,22 +116,6 @@ Heroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Intangible Virtue</Name>
-    <Edition>CNS</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>1W</Cost>
-    <PT />
-    <Type>Enchantment</Type>
-    <Text>Creature tokens you control get +1/+1 and have vigilance.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Path of Bravery</Name>
     <Edition>M14</Edition>
     <Rarity>R</Rarity>
@@ -190,6 +174,23 @@ Heroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 
     <Text>Convoke
 As Obelisk of Urd enters the battlefield, choose a creature type.
 Creatures you control of the chosen type get +2/+2.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Triplicate Spirits</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>4WW</Cost>
+    <PT />
+    <Type>Sorcery</Type>
+    <Text>Convoke
+Put three 1/1 white Spirit creature tokens with flying onto the battlefield.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
