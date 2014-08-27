@@ -385,7 +385,7 @@ namespace MagicProgram
 
                     # region Chord of Calling
                     case "Chord of Calling":
-                        List<MagicCard> cardList = area._stack.cards.Where(o => o.Type.Contains("Creature")).ToList();
+                        List<MagicCard> cardList = area._stack.cards.Where(o => o.Type.Contains("Creature") && o.CMC <= mc.Xvalue).ToList();
                         comboCardPicker_Fill(cardList);
                         CardChosen += new PassiveEvent(CardChosen_ChordofCalling);
                         break;
@@ -544,6 +544,14 @@ namespace MagicProgram
                     case "Spirit Bonds":
                         mc.PArea.CreatureEntered += new PassiveEvent(CreatureEntered_Spiritbonds);
                         break;
+
+                    case "Goblin Assault":
+                        mc.OnUpkeep += new PassiveEvent(Upkeep_GoblinAssault);
+                        break;
+
+                    case "Growing Ranks":
+                        mc.OnUpkeep += new PassiveEvent(PassiveEvent_Populate);
+                        break;
                 }
 
                 tempCard = mc;
@@ -562,6 +570,19 @@ namespace MagicProgram
             mc.callOnPlay();
 
             return true;
+        }
+
+        void Upkeep_GoblinAssault(MagicCard mc)
+        {
+            MagicCard mct = new MagicCard
+            {
+                Token = true,
+                Name = "Goblin",
+                Color = "Red",
+                Type = "Creature - Goblin",
+                Text = "Haste",
+                PT = "1/1",
+            };
         }
 
         # region Ajani's Presence
@@ -2378,6 +2399,7 @@ namespace MagicProgram
         void CardChosen_ChordofCalling(MagicCard mc)
         {
             CheckEntersBattlefield(mc);
+            CardChosen -= CardChosen_ChordofCalling;
         }
 
         void BlueUntapDraw(MagicCard mc, MouseEventArgs e)
@@ -2813,7 +2835,7 @@ namespace MagicProgram
 
         void CardEvent_Populate(MagicCard mc, MouseEventArgs e)
         {
-            if (!mc.Token)
+            if (!mc.Token || !mc.Type.ToLower().Contains("creature"))
             {
                 return;
             }
@@ -2821,6 +2843,14 @@ namespace MagicProgram
             {
                 MagicCard mct = new MagicCard(mc);
                 PlArea.PlayCard(mct);
+            }
+        }
+
+        void PassiveEvent_Populate(MagicCard mc)
+        {
+            if (mc.PArea._play.cards.Count(o => o.Token == true) > 0)
+            {
+                cardAreaPlay.CardClicked += new CardArea.CardChosen(CardEvent_Populate);
             }
         }
 
@@ -3609,10 +3639,12 @@ namespace MagicProgram
 
                 case "Soul Warden":
                     CreatureEntered += new PassiveEvent(CreatureEntered_SoulWarden);
+                    mc.onDie += new PassiveEvent(CreatureLeft_SoulWarden);
                     break;
 
                 case "Essence Warden":
                     CreatureEntered += new PassiveEvent(CreatureEntered_SoulWarden);
+                    mc.onDie += new PassiveEvent(CreatureLeft_SoulWarden);
                     break;
             }
             # endregion
@@ -3640,6 +3672,11 @@ namespace MagicProgram
         void CreatureEntered_SoulWarden(MagicCard mc)
         {
             HP++;
+        }
+
+        void CreatureLeft_SoulWarden(MagicCard mc)
+        {
+            CreatureEntered -= CreatureEntered_SoulWarden;
         }
 
         void Passive_AddOne(MagicCard mc)

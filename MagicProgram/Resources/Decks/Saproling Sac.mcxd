@@ -11,7 +11,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>10</quantity>
+    <quantity>12</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -60,7 +60,7 @@ Remove three spore counters from Thallid: Put a 1/1 green Saproling creature tok
     <Text>Whenever another creature enters the battlefield, you gain 1 life.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -84,39 +84,6 @@ Sacrifice a Saproling: You gain 2 life.</Text>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Jade Mage</Name>
-    <Edition>DDH</Edition>
-    <Rarity>U</Rarity>
-    <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT>2/1</PT>
-    <Type>Creature - Human Shaman</Type>
-    <Text>%2%G: Put a 1/1 green Saproling creature token onto the battlefield.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Lumberknot</Name>
-    <Edition>PC2</Edition>
-    <Rarity>U</Rarity>
-    <Color>G</Color>
-    <Cost>2GG</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Treefolk</Type>
-    <Text>Hexproof #(This creature can�t be the target of spells or abilities your opponents control.)#;
-Whenever a creature dies, put a +1/+1 counter on Lumberknot.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Mycoloth</Name>
     <Edition>ALA</Edition>
     <Rarity>R</Rarity>
@@ -128,7 +95,7 @@ Whenever a creature dies, put a +1/+1 counter on Lumberknot.</Text>
 At the beginning of your upkeep, put a 1/1 green Saproling creature token onto the battlefield for each +1/+1 counter on Mycoloth.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -145,38 +112,52 @@ At the beginning of your upkeep, put a 1/1 green Saproling creature token onto t
 Search your library for a creature card with converted Cost X or less and put it onto the battlefield. Then shuffle your library.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Nature's Lore</Name>
-    <Edition>P2</Edition>
-    <Rarity>C</Rarity>
+    <Name>Fungal Sprouting</Name>
+    <Edition>M13</Edition>
+    <Rarity>U</Rarity>
     <Color>G</Color>
-    <Cost>1G</Cost>
+    <Cost>3G</Cost>
     <PT />
     <Type>Sorcery</Type>
-    <Text>Search your library for a Forest card and put that card onto the battlefield. Then shuffle your library.</Text>
+    <Text>Put X 1/1 green Saproling creature tokens onto the battlefield, where X is the greatest power among creatures you control.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Goblin Sharpshooter</Name>
-    <Edition>ON</Edition>
+    <Name>Life and Limb</Name>
+    <Edition>PLC</Edition>
     <Rarity>R</Rarity>
-    <Color>R</Color>
-    <Cost>2R</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Goblin</Type>
-    <Text>Goblin Sharpshooter doesn�t untap during your untap step.;
-Whenever a creature dies, untap Goblin Sharpshooter.;
-%T: Goblin Sharpshooter deals 1 damage to target creature or player.</Text>
+    <Color>G</Color>
+    <Cost>3G</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>All Forests and all Saprolings are 1/1 green Saproling creatures and Forest lands in addition to their other types.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Growing Ranks</Name>
+    <Edition>RTR</Edition>
+    <Rarity>R</Rarity>
+    <Color>Gld</Color>
+    <Cost>2%A%A</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>At the beginning of your upkeep, populate. #(Put a token onto the battlefield that�s a copy of a creature token you control.)#</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
@@ -201,34 +182,33 @@ Whenever a creature dies, untap Goblin Sharpshooter.;
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Gorgon's Head</Name>
-    <Edition>BNG</Edition>
-    <Rarity>U</Rarity>
-    <Color />
-    <Cost>1</Cost>
-    <PT />
-    <Type>Artifact — Equipment</Type>
-    <Text>Equipped creature has deathtouch.
-Equip {2}</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
     <Name>Mountain</Name>
-    <Edition>AN</Edition>
+    <Edition>M15</Edition>
     <Rarity>C</Rarity>
-    <Color>Lnd</Color>
+    <Color />
     <Cost />
     <PT />
     <Type>Basic Land - Mountain</Type>
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>10</quantity>
+    <quantity>6</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gruul Guildgate</Name>
+    <Edition>GTC</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land - Gate</Type>
+    <Text>Gruul Guildgate enters the battlefield tapped. %T: Add %R or %G to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
