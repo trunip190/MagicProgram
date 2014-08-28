@@ -251,8 +251,14 @@ namespace MagicProgram
             if (!playerTurn)
             {
                 area = OppArea;
+                mc.PArea = OppArea;
+                mc.OppArea = PlArea;
             }
-            mc.PArea = area;
+            else
+            {
+                mc.PArea = PlArea;
+                mc.OppArea = OppArea;
+            }
             # endregion
 
             //work out if there is enough mana
@@ -433,6 +439,13 @@ namespace MagicProgram
                         mc.Resolving += new PassiveEvent(Resolving_TriplicateSpirits);
                         break;
                     # endregion
+
+                    default:
+                        if (MessageBox.Show("Does this spell target one of your creatures?", "Targets?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_Null);
+                        }
+                        break;
                 }
 
                 if (mc.Text.Contains("Cipher"))
@@ -552,10 +565,6 @@ namespace MagicProgram
                         mc.PArea.CreatureEntered += new PassiveEvent(CreatureEntered_Spiritbonds);
                         break;
 
-                    case "Goblin Assault":
-                        mc.OnUpkeep += new PassiveEvent(Upkeep_GoblinAssault);
-                        break;
-
                     case "Growing Ranks":
                         mc.OnUpkeep += new PassiveEvent(PassiveEvent_Populate);
                         break;
@@ -579,17 +588,10 @@ namespace MagicProgram
             return true;
         }
 
-        void Upkeep_GoblinAssault(MagicCard mc)
+        void CardClicked_Null(MagicCard mc, MouseEventArgs e)
         {
-            MagicCard mct = new MagicCard
-            {
-                Token = true,
-                Name = "Goblin",
-                Color = "Red",
-                Type = "Creature - Goblin",
-                Text = "Haste",
-                PT = "1/1",
-            };
+            mc.callSpellCast();
+            cardAreaPlay.CardClicked -= CardClicked_Null;
         }
 
         # region Ajani's Presence
@@ -699,6 +701,8 @@ namespace MagicProgram
                     Color = "White",
                     PT = "1/1",
                     Text = "Flying",
+                    PArea = mc.PArea,
+                    OppArea = mc.OppArea
                 };
                 mc.PArea.PlayToken(mct);
             }
@@ -730,6 +734,8 @@ namespace MagicProgram
                 Text = "Flying\r\n{R}: This creature gets +1/+0 until end of turn",
                 PT = "2/2",
                 Token = true,
+                PArea = mc.PArea,
+                OppArea = mc.OppArea
             };
             PlayCard(mct);
         }
@@ -774,6 +780,8 @@ namespace MagicProgram
                 Power = 1,
                 Toughness = 1,
                 Text = "Flying",
+                PArea = mc.PArea,
+                OppArea = mc.OppArea
             };
 
             mct.Abilities.Add(new CardAbility
@@ -873,7 +881,9 @@ namespace MagicProgram
                 Type = "Creature - Ooze",
                 PT = value + "/" + value,
                 Power = value,
-                Toughness = value
+                Toughness = value,
+                PArea = PlArea,
+                OppArea = OppArea
             };
 
             foreach (KeyValuePair<MagicCard, int> k in sources)
@@ -1803,8 +1813,8 @@ namespace MagicProgram
         {
             xPicker.Cost = cost;
             xPicker.Mana = PlArea.mana;
-            xPicker.Value = MinCount;
             xPicker.Show(MaxCount);
+            xPicker.Value = MinCount;
             xPicker.BringToFront();
         }
 
@@ -1833,13 +1843,20 @@ namespace MagicProgram
             mc.Targets = (int)numTargets.Value;
 
             # region set targeting and cost
-            //TODO replace with actual cost
             //consider Strive, kicker && multikicker etc.
             if (mc.Text.ToUpper().Contains("KICKER"))
             {
                 for (int i = 0; i < numTargets.Value - 1; i++)
                 {
                     //cc.grey += ((int)numTargets.Value - 1) * mc.AdditionalCost;
+                    cc.Add(mc.AdditionalCost);
+                }
+            }
+            else if (mc.Text.ToUpper().Contains("STRIVE"))
+            {
+                mc.Targets += value;
+                for (int i = 0; i < value; i++)
+                {
                     cc.Add(mc.AdditionalCost);
                 }
             }
@@ -2103,11 +2120,13 @@ namespace MagicProgram
                 Tapped = true,
                 Attacking = true,
                 PT = "1/1",
-                PArea = mc.PArea
+                PArea = mc.PArea,
+                OppArea = mc.OppArea
             };
             mc.PArea.PlayToken(mct);
 
             mc.OnAttack -= OnAttack_CreateSoldier;
+            update_listViewPlay();
         }
 
         void Activating_SacSearchBasic(MagicCard mc, int index)
@@ -2260,12 +2279,14 @@ namespace MagicProgram
                 # region Guttersnipe
                 case "Guttersnipe":
                     area.SpellRes += new PassiveEvent(SpellCast_Guttersnipe);
+                    mc.onDie += new PassiveEvent(Died_Guttersnipe);
                     break;
                 # endregion
 
                 # region Young Pyromancer
                 case "Young Pyromancer":
                     area.SpellRes += new PassiveEvent(SpellCast_YoungPyromancer);
+                    mc.onDie += new PassiveEvent(Died_YoungPyromancer);
                     break;
                 # endregion
 
@@ -2328,6 +2349,8 @@ namespace MagicProgram
                 Text = "Haste",
                 PT = "1/1",
                 Token = true,
+                PArea = mc.PArea,
+                OppArea = mc.OppArea
             };
             PlayCard(mct);
         }
@@ -2427,7 +2450,8 @@ namespace MagicProgram
                 Power = 1,
                 Toughness = 1,
                 Text = "Vigilance",
-                Sick = true,
+                PArea = mc.PArea,
+                OppArea = mc.OppArea
             };
             mct.Abilities.Add(new CardAbility
             {
@@ -2516,7 +2540,9 @@ namespace MagicProgram
                     Text = "Flying",
                     Type = "Creature - Spirit",
                     Token = true,
-                    PT = "1/1"
+                    PT = "1/1",
+                    PArea = PlArea,
+                    OppArea = OppArea
                 });
 
                 update_listViewPlay();
@@ -2643,6 +2669,8 @@ namespace MagicProgram
                 Type = "Creature - Saproling",
                 Token = true,
                 PT = "1/1",
+                PArea = mc.PArea,
+                OppArea = mc.OppArea
             };
             PlayCreature(mct, mc.PArea);
         }
@@ -2652,30 +2680,44 @@ namespace MagicProgram
             mc.counters++;
         }
 
+        # region Young Pyromancer
         void SpellCast_YoungPyromancer(MagicCard mc)
         {
-            if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
-            {
-                MagicCard mct = new MagicCard
-                {
-                    Token = true,
-                    Name = "Elemental",
-                    Type = "Creature - Elemental",
-                    Color = "Red",
-                    PT = "1/1",
-                };
-                mc.PArea.PlayToken(mct);
-                update_listViewPlay();
-            }
+            //if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
+            //{
+            //    MagicCard mct = new MagicCard
+            //    {
+            //        Token = true,
+            //        Name = "Elemental",
+            //        Type = "Creature - Elemental",
+            //        Color = "Red",
+            //        PT = "1/1",
+            //    };
+            //    mc.PArea.PlayToken(mct);
+            update_listViewPlay();
+            //}
         }
 
+        void Died_YoungPyromancer(MagicCard mc)
+        {
+            mc.PArea.SpellRes -= SpellCast_YoungPyromancer;
+        }
+        # endregion
+
+        # region Guttersnipe
         void SpellCast_Guttersnipe(MagicCard mc)
         {
-            if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
-            {
-                OppArea.HP -= 2;
-            }
+            //if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
+            //{
+            //    OppArea.HP -= 2;
+            //}
         }
+
+        void Died_Guttersnipe(MagicCard mc)
+        {
+            mc.PArea.SpellRes -= SpellCast_Guttersnipe;
+        }
+        # endregion
 
         void cardAreaPlay_GodFavoredGeneral(int value, Dictionary<MagicCard, int> sources)
         {
@@ -2692,23 +2734,19 @@ namespace MagicProgram
 
             PlArea.mana.Subtract(cc);
 
-            # region Play Token
-            PlArea.PlayToken(new MagicCard
+            # region Play Tokens
+            for (int i = 0; i < 2; i++)
             {
-                Type = "Enchantment Creature",
-                Name = "Soldier",
-                PT = "1/1",
-                Token = true
-            });
-            # endregion
-
-            # region Play Token
-            PlArea.PlayToken(new MagicCard
-            {
-                Name = "Soldier",
-                PT = "1/1",
-                Token = true
-            });
+                PlArea.PlayToken(new MagicCard
+                {
+                    Type = "Enchantment Creature",
+                    Name = "Soldier",
+                    PT = "1/1",
+                    Token = true,
+                    PArea = PlArea,
+                    OppArea = OppArea,
+                });
+            }
             # endregion
 
             cardAreaPlay.CountersPicked -= cardAreaPlay_GodFavoredGeneral;
@@ -2761,7 +2799,9 @@ namespace MagicProgram
                 Type = "Creature",
                 PT = "1/1",
                 Text = "Flying",
-                Token = true
+                Token = true,
+                PArea = mc.PArea,
+                OppArea = mc.OppArea
             });
             # endregion
 
@@ -2772,7 +2812,9 @@ namespace MagicProgram
                 Type = "Creature",
                 PT = "1/1",
                 Text = "Flying",
-                Token = true
+                Token = true,
+                PArea = mc.PArea,
+                OppArea = mc.OppArea
             });
             # endregion
 
@@ -3388,6 +3430,11 @@ namespace MagicProgram
             {
                 //TODO need to rewrite Ability to take an index or bool for being used on the stack.
                 mcp.callAbility(0);
+            }
+
+            foreach (MagicCard mcs in _play.cards)
+            {
+                mcs.SpellResolved(mc);
             }
 
             if (handler != null)

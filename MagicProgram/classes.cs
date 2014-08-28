@@ -340,6 +340,17 @@ namespace MagicProgram
         private PlayArea _pArea = null;
 
         [XmlIgnore]
+        public PlayArea OppArea
+        {
+            get { return _oppArea; }
+            set
+            {
+                _oppArea = value;
+            }
+        }
+        private PlayArea _oppArea = null;
+
+        [XmlIgnore]
         public string Location = "Library";
 
         //[XmlIgnore]
@@ -350,6 +361,8 @@ namespace MagicProgram
         # region delegates/events
         public delegate void ActiveAbility(MagicCard mc, int index);  //index of ability being used. 0 based.
 
+        public event ValueChanged CountersChanged;
+        public event ValueChanged onPingOpponent;
         public event ActiveAbility Activate;
         public event ActiveAbility Activating;
         public event PassiveEvent Evolving;
@@ -364,7 +377,6 @@ namespace MagicProgram
         public event PassiveEvent onSpellCast;
         public event PassiveEvent onDie;
         public event PassiveEvent onSacrifice;
-        public event ValueChanged CountersChanged;
         public event PassiveEvent TapChanged;
         public event PassiveEvent OnTap;
         public event PassiveEvent OnUntap;
@@ -468,6 +480,16 @@ namespace MagicProgram
             {
                 handler(this);
             }
+        }
+
+        public void callPingOpponent(int damage)
+        {
+            ValueChanged handler = onPingOpponent;
+            if (handler != null)
+            {
+                handler(damage);
+            }
+            OppArea.HP -= damage;
         }
 
         public void callOnEquipmentAdd()
@@ -864,9 +886,27 @@ namespace MagicProgram
         public void UpkeepCard()
         {
             callOnUpkeep();
-            if (Name == "Primordial Hydra")
+            switch (Name)
             {
-                counters += counters;
+                case "Primordial Hydra":
+                    counters += counters;
+                    break;
+
+                case "Goblin Assault":
+                    MagicCard mct = new MagicCard
+                    {
+                        Token = true,
+                        Name = "Goblin",
+                        Color = "Red",
+                        Type = "Creature - Goblin",
+                        Text = "Haste",
+                        PT = "1/1",
+                    };
+                    mct.PArea = PArea;
+                    mct.OppArea = OppArea;
+
+                    PArea.PlayToken(mct);
+                    break;
             }
         }
 
@@ -1074,6 +1114,36 @@ namespace MagicProgram
             {
                 //no change
 
+            }
+        }
+
+        public virtual void SpellResolved(MagicCard mc)
+        {
+            switch (Name)
+            {
+                case "Young Pyromancer":
+                    if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
+                    {
+                        # region Create Elemental
+                        MagicCard mct = new MagicCard
+                        {
+                            Token = true,
+                            Name = "Elemental",
+                            Type = "Creature - Elemental",
+                            Color = "Red",
+                            PT = "1/1",
+                        };
+                        # endregion
+                        PArea.PlayToken(mct);
+                    }
+                    break;
+
+                case "Guttersnipe":
+                    if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
+                    {
+                        callPingOpponent(2);
+                    }
+                    break;
             }
         }
         # endregion
