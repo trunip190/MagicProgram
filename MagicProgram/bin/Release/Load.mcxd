@@ -2,7 +2,7 @@
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Card>
     <Name>Island</Name>
-    <Edition />
+    <Edition>M15</Edition>
     <Rarity>C</Rarity>
     <Color />
     <Cost />
@@ -18,7 +18,7 @@
   </Card>
   <Card>
     <Name>Mountain</Name>
-    <Edition />
+    <Edition>M15</Edition>
     <Rarity>C</Rarity>
     <Color />
     <Cost />
@@ -49,7 +49,7 @@ Draw a card.</Text>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
-  <Card>
+  <Card xsi:type="YoungPyromancer">
     <Name>Young Pyromancer</Name>
     <Edition>M14</Edition>
     <Rarity>U</Rarity>
@@ -94,11 +94,18 @@ Draw a card.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
-    <Abilities />
+    <Abilities>
+      <CardAbility>
+        <RawCost>%X, %T</RawCost>
+        <Text> Copy the exiled card. You may cast the copy without paying its mana cost. X is the converted mana cost of the exiled card.</Text>
+        <Name />
+        <Active>false</Active>
+      </CardAbility>
+    </Abilities>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
-  <Card>
+  <Card xsi:type="MagmaSpray">
     <Name>Magma Spray</Name>
     <Edition>JOU</Edition>
     <Rarity>C</Rarity>
@@ -126,7 +133,14 @@ Draw a card.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
-    <Abilities />
+    <Abilities>
+      <CardAbility>
+        <RawCost>T, Sacrifice Generator Servant</RawCost>
+        <Text> Add 2 to your mana pool. If that mana is spent on a creature spell, it gains haste until end of turn.</Text>
+        <Name />
+        <Active>false</Active>
+      </CardAbility>
+    </Abilities>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
@@ -141,25 +155,7 @@ Draw a card.</Text>
     <Text>Lightning Bolt deals 3 damage to target creature or player.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Niv-Mizzet, Dracogenius</Name>
-    <Edition>RTR</Edition>
-    <Rarity>M</Rarity>
-    <Color>Gld</Color>
-    <Cost>2UURR</Cost>
-    <PT>5/5</PT>
-    <Type>Legendary Creature - Dragon Wizard</Type>
-    <Text>Flying;
-Whenever Niv-Mizzet, Dracogenius deals damage to a player, you may draw a card.;
-%U%R: Niv-Mizzet, Dracogenius deals 1 damage to target creature or player.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -178,25 +174,14 @@ When Izzet Boilerworks enters the battlefield, return a land you control to its 
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Melek, Izzet Paragon</Name>
-    <Edition>MGD</Edition>
-    <Rarity />
-    <Color>Gld</Color>
-    <Cost>4UR</Cost>
-    <PT>2/4</PT>
-    <Type>Legendary Creature - Weird Wizard</Type>
-    <Text>Play with the top card of your library revealed.;
-You may cast the top card of your library if it�s an instant or sorcery card.;
-Whenever you cast an instant or sorcery spell from your library, copy it. You may choose new targets for the copy.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
+    <Abilities>
+      <CardAbility>
+        <RawCost>%T</RawCost>
+        <Text> Add %U%R to your mana pool.</Text>
+        <Name />
+        <Active>false</Active>
+      </CardAbility>
+    </Abilities>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
@@ -216,7 +201,7 @@ Whenever you cast an instant or sorcery spell from your library, copy it. You ma
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
-  <Card>
+  <Card xsi:type="TritonTactics">
     <Name>Triton Tactics</Name>
     <Edition>THS</Edition>
     <Rarity>U</Rarity>
@@ -228,6 +213,25 @@ Whenever you cast an instant or sorcery spell from your library, copy it. You ma
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card xsi:type="PurphorosGodoftheForge">
+    <Name>Purphoros, God of the Forge</Name>
+    <Edition>THS</Edition>
+    <Rarity>M</Rarity>
+    <Color />
+    <Cost>3R</Cost>
+    <PT>6/5</PT>
+    <Type>Legendary Enchantment Creature - God</Type>
+    <Text>Indestructible
+As long as your devotion to red is less than five, Purphoros isn't a creature.
+Whenever another creature enters the battlefield under your control, Purphoros deals 2 damage to each opponent.
+{2}{R}: Creatures you control get +1/+0 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

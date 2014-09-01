@@ -585,6 +585,8 @@ namespace MagicProgram
             mc.Resolve();
             mc.callOnPlay();
 
+            string s = mc.GetType().ToString();
+
             return true;
         }
 
@@ -899,28 +901,31 @@ namespace MagicProgram
 
         public void PrePlay(MagicCard mc)
         {
-            mc.setMana();
-            ColourCost cc = mc.manaCost;
+            //MagicCard mcn = CardMethods.GetClass(mc);
+            MagicCard mcn = mc;
+
+            mcn.setMana();
+            ColourCost cc = mcn.manaCost;
 
             # region cycle through cost reduction
-            foreach (MagicCard mca in PlArea._play.cards)
+            foreach (MagicCard mcna in PlArea._play.cards)
             {
-                if (mca.Name == "Battlefield Thaumaturge")
+                if (mcna.Name == "Battlefield Thaumaturge" && (mcn.Type.Contains("Instant") && mcn.Type.Contains("Sorcery")))
                 {
-                    cc.grey -= mc.Targets;
+                    cc.grey -= mcn.Targets;
                 }
             }
             # endregion
 
             # region check bestow
-            foreach (CardAbility cAbi in mc.Abilities)
+            foreach (CardAbility cAbi in mcn.Abilities)
             {
                 if (cAbi.Name == "Bestow")
                 {
                     if (MessageBox.Show("Do you want to bestow this card?", "Bestow?", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        mc.Type = "Enchantment - Aura";
-                        mc.Text += "\r\nEnchant Creature";
+                        mcn.Type = "Enchantment - Aura";
+                        mcn.Text += "\r\nEnchant Creature";
                         cAbi.Active = true;
                         cc = cAbi.Cost;
                     }
@@ -934,8 +939,8 @@ namespace MagicProgram
                 return;
             }
 
-            mc.callPrePlay();
-            string cost = mc.Cost.ToUpper();
+            mcn.callPrePlay();
+            string cost = mcn.Cost.ToUpper();
 
             # region x in cost
             if (cost.Contains("X"))
@@ -943,42 +948,42 @@ namespace MagicProgram
                 int x = 0;
                 int count = cost.Count(c => c == 'X');
                 ColourCost Cost = new ColourCost();
-                mc.Xvalue = 0;
+                mcn.Xvalue = 0;
 
                 for (int c = 0; c < cost.Length; c++)
                 {
-                    char j = mc.Cost[c];
+                    char j = mcn.Cost[c];
                     if (j == 'X')
                     {
                         j = x.ToString()[0];
                     }
                 }
 
-                mc.Initialise();
-                tempCard = viewCard = mc;
+                mcn.Initialise();
+                tempCard = viewCard = mcn;
                 xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
                 PickerShow(count, cc);
-                ViewCard(mc);
+                ViewCard(mcn);
             }
             # endregion
             # region Strive
-            else if (mc.Text.Contains("Strive"))
+            else if (mcn.Text.Contains("Strive"))
             {
                 int count = 1;
-                ColourCost Cost = mc.AdditionalCost;
-                mc.Xvalue = 0;  //Make sure it is reset
+                ColourCost Cost = mcn.AdditionalCost;
+                mcn.Xvalue = 0;  //Make sure it is reset
 
-                mc.Initialise();
-                tempCard = viewCard = mc;
+                mcn.Initialise();
+                tempCard = viewCard = mcn;
                 xPicker.ValuePicked += new XManaPicker.IntReturn(picker_ValuePicked);
                 PickerShow(1, count, cc);
-                ViewCard(mc);
+                ViewCard(mcn);
             }
             # endregion
             # region no x in cost
             else
             {
-                CheckEntersBattlefield(mc);
+                CheckEntersBattlefield(mcn);
                 return;
             }
             # endregion
@@ -1127,6 +1132,7 @@ namespace MagicProgram
         private void cardAreaHand_ChoseCard(MagicCard mc)
         {
             mc.OnPlay += new PassiveEvent(temp_OnPlay);
+
             PrePlay(mc);
         }
         # endregion
@@ -2400,10 +2406,9 @@ namespace MagicProgram
 
         void Upkeep_ProgenitorMimic(MagicCard mc)
         {
-            PlayArea area = PlArea;
-            MagicCard mcn = new MagicCard(mc);
+            MagicCard mcn = CardMethods.GetClass(mc);
             mcn.Token = true;
-            AddToStack(mcn);
+            mc.PArea.PlayToken(mcn);
         }
 
         void Untap_GodFavoredGeneral(MagicCard mc)
@@ -3385,8 +3390,10 @@ namespace MagicProgram
         }
         # endregion
 
+        # region lands
         public int landPlayed = 0;
         public int landMax = 1;
+        # endregion
 
         public int MaxHand = 7;
         int shuffles = 0;
@@ -3394,18 +3401,23 @@ namespace MagicProgram
         public int seed = 0;
         private Random r = new Random();
 
+        # region mana
         public ManaWheel mw = new ManaWheel { Visible = false };
         public ColourCost mana = new ColourCost();
+        # endregion
 
         private List<MagicCard> CardsProc = new List<MagicCard>();
 
+        # region events
         public event Phase UpkeepDone;
         public event PassiveEvent SpellRes;
         public event PassiveEvent CardUsed;
         public event PassiveEvent CardDrawn;
         public event PassiveEvent CreatureEntered;
         public event ValueChanged onDamageOpponent;
+        # endregion
 
+        # region handlers
         protected void callCardUse(MagicCard mc)
         {
             PassiveEvent handler = CardUsed;
@@ -3425,6 +3437,7 @@ namespace MagicProgram
         protected void callSpellRes(MagicCard mc)
         {
             PassiveEvent handler = SpellRes;
+            List<MagicCard> list = new List<MagicCard>();
 
             foreach (MagicCard mcp in CardsProc)
             {
@@ -3432,9 +3445,13 @@ namespace MagicProgram
                 mcp.callAbility(0);
             }
 
-            foreach (MagicCard mcs in _play.cards)
+            foreach (MagicCard mcp in _play.cards)
             {
-                mcs.SpellResolved(mc);
+                list.Add(mcp);
+            }
+            foreach (MagicCard mcp in list)
+            {
+                mcp.SpellResolved(mc);
             }
 
             if (handler != null)
@@ -3458,6 +3475,20 @@ namespace MagicProgram
                 handler(i);
             }
         }
+        protected void CallCreatureEntered(MagicCard mc)
+        {
+            PassiveEvent handler = CreatureEntered;
+            if (handler != null)
+            {
+                handler(mc);
+            }
+
+            foreach (MagicCard mct in _play.cards)
+            {
+                mct.CreatureEnteredPlay(mc);
+            }
+        }
+        # endregion
         # endregion
 
         # region method
@@ -3765,16 +3796,8 @@ namespace MagicProgram
         {
 
         }
-
-        private void CallCreatureEntered(MagicCard mc)
-        {
-            PassiveEvent handler = CreatureEntered;
-            if (handler != null)
-            {
-                handler(mc);
-            }
-        }
-
+        
+        # region soul warden
         void CreatureEntered_SoulWarden(MagicCard mc)
         {
             HP++;
@@ -3784,6 +3807,7 @@ namespace MagicProgram
         {
             CreatureEntered -= CreatureEntered_SoulWarden;
         }
+        # endregion
 
         void Passive_AddOne(MagicCard mc)
         {

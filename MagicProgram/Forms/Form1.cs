@@ -1048,6 +1048,37 @@ namespace MagicProgram
             }
         }
 
+        private void Deck_LoadBasic(string file)
+        {
+            List<MagicCard> cards = new List<MagicCard>();
+            using (StreamReader reader = new StreamReader(file))
+            {
+                string s = "";
+                while ((s = reader.ReadLine()) != null)
+                {
+                    string[] edit = s.Split('#');
+
+                    MagicCard mc = CardMethods.GetClass(edit[0]);
+                    mc.quantity = int.Parse(edit[1]);
+                    cards.Add(mc);
+                }
+            }
+            Deck.cards = cards;
+        }
+
+        private void Deck_SaveBasic(string file)
+        {
+            File.Delete(file);
+            List<string> lines = new List<string>();
+
+            foreach (MagicCard mc in Deck.cards)
+            {
+                lines.Add(mc.Name + "#" + mc.quantity + "\r\n");
+            }
+
+            File.WriteAllLines(file, lines, Encoding.Default);
+        }
+
         private void ImportFile(string file)
         {
             if (!File.Exists(file))
@@ -1108,7 +1139,8 @@ namespace MagicProgram
                         # region create MagicCard
                         MagicCard temp;
 
-                        if (index > -1) { temp = Database.cards[index].Clone() as MagicCard; }
+                        //if (index > -1) { temp = Database.cards[index].Clone() as MagicCard; }
+                        if (index > -1) { temp = CardMethods.GetClass(Database.cards[index]); }
                         else { temp = new MagicCard { Name = card[a] }; }
 
                         temp.quantity = count;
@@ -1347,13 +1379,52 @@ namespace MagicProgram
 
                 if (j > -1 && j < Database.cards.Count)
                 {
-                    Deck.cards[i] = Database.cards[j].Copy();
+                    Deck.cards[i] = CardMethods.GetClass(Database.cards[j]);//.Copy();
                     Deck.cards[i].quantity = c;
                 }
 
                 mc.ParseText();
                 mc.checkPT();
             }
+        }
+
+        private void updateClassType()
+        {
+            List<string> strings = new List<string>();
+            List<string> cards = new List<string>();
+            char c = 'A';
+
+            foreach (MagicCard mc in Database.cards)
+            {
+                string Edit = mc.Name.Replace(",", "").Replace("'", "").Replace("-", "").Replace(" ", "").Replace("/", "");
+
+                string line = "$r [Name]#public class [Edit] : MagicCard#{#$public [Edit]()#${#$$ Name = ~[Name]~;#$$ Edition = ~[Edition]~;#$$ Rarity = ~[Rarity]~;#$$ Color = ~[Colour]~;#$$ Cost = ~[Cost]~;#$$ PT = ~[PT]~;#$$ Type = ~[Type]~;#$$ Text = ~[Text]~;#$$ Flavor = ~[Flavour]~;#$}#}#$e##";
+
+                line = line.Replace("[Edit]", Edit);
+                line = line.Replace("[Name]", mc.Name);
+                line = line.Replace("[Edition]", mc.Edition);
+                line = line.Replace("[Rarity]", mc.Rarity);
+                line = line.Replace("[Colour]", mc.Color);
+                line = line.Replace("[Cost]", mc.Cost);
+                line = line.Replace("[PT]", mc.PT.Replace("#", ""));
+                line = line.Replace("[Type]", mc.Type);
+                line = line.Replace("[Text]", mc.Text.Replace("\n", "^").Replace("#", "@"));
+                line = line.Replace("[Flavour]", mc.Flavor.Replace("\n", "^").Replace("#", "@"));
+
+                strings.Add(line);
+                File.AppendAllText(@"c:\users\topher\files\" + mc.Edition + ".txt", line);
+
+                if (mc.Name[0] != c)
+                {
+                    c = mc.Name[0];
+                    Debug.WriteLine(c);
+                }
+            }
+        }
+
+        private void updateDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updateClassType();
         }
     }
 }

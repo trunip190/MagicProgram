@@ -79,6 +79,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Core.cs" />
+    <Compile Include="Classes\Innistrad.cs" />
+    <Compile Include="Classes\RavnicaCityGuilds.cs" />
+    <Compile Include="Classes\Lorwyn.cs" />
     <Compile Include="Forms\CardBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,17 +107,17 @@
     <Compile Include="Controls\CardViewerSmall.Designer.cs">
       <DependentUpon>CardViewerSmall.cs</DependentUpon>
     </Compile>
-    <Compile Include="classes.cs" />
+    <Compile Include="Classes\classes.cs" />
     <Compile Include="Controls\CollapsiblePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CollapsiblePanel.Designer.cs">
       <DependentUpon>CollapsiblePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Counters.cs">
+    <Compile Include="Controls\Counters.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Counters.Designer.cs">
+    <Compile Include="Controls\Counters.Designer.cs">
       <DependentUpon>Counters.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\DeckStats.cs">
@@ -152,7 +156,8 @@
     <Compile Include="Controls\ManaWheel.Designer.cs">
       <DependentUpon>ManaWheel.cs</DependentUpon>
     </Compile>
-    <Compile Include="NyxCards.cs" />
+    <Compile Include="Classes\ReturnToRavnicaBlock.cs" />
+    <Compile Include="Classes\TherosBlock.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Controls\ProgressDialog.cs">
       <SubType>UserControl</SubType>
@@ -182,7 +187,7 @@
     <EmbeddedResource Include="Controls\CollapsiblePanel.resx">
       <DependentUpon>CollapsiblePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Counters.resx">
+    <EmbeddedResource Include="Controls\Counters.resx">
       <DependentUpon>Counters.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\DeckStats.resx">
