@@ -122,6 +122,29 @@ Draw a card.</Text>
     <counters>0</counters>
   </Card>
   <Card>
+    <Name>Generator Servant</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1R</Cost>
+    <PT>2/1</PT>
+    <Type>Creature - Elemental</Type>
+    <Text>T, Sacrifice Generator Servant: Add 2 to your mana pool. If that mana is spent on a creature spell, it gains haste until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities>
+      <CardAbility>
+        <RawCost>T, Sacrifice Generator Servant</RawCost>
+        <Text> Add 2 to your mana pool. If that mana is spent on a creature spell, it gains haste until end of turn.</Text>
+        <Name />
+        <Active>false</Active>
+      </CardAbility>
+    </Abilities>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
     <Name>Lightning Bolt</Name>
     <Edition>A</Edition>
     <Rarity>C</Rarity>
@@ -173,7 +196,7 @@ When Izzet Boilerworks enters the battlefield, return a land you control to its 
     <Text>Add %R to your mana pool for each creature you control.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>4</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -206,38 +229,6 @@ When Izzet Boilerworks enters the battlefield, return a land you control to its 
 As long as your devotion to red is less than five, Purphoros isn't a creature.
 Whenever another creature enters the battlefield under your control, Purphoros deals 2 damage to each opponent.
 {2}{R}: Creatures you control get +1/+0 until end of turn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Mana Echoes</Name>
-    <Edition>ON</Edition>
-    <Rarity>R</Rarity>
-    <Color>R</Color>
-    <Cost>2RR</Cost>
-    <PT />
-    <Type>Enchantment</Type>
-    <Text>Whenever a creature enters the battlefield, you may add %X to your mana pool, where X is the number of creatures you control that share a creature type with it.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Generator Servant</Name>
-    <Edition>M15</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>1R</Cost>
-    <PT>2/1</PT>
-    <Type>Creature - Elemental</Type>
-    <Text>T, Sacrifice Generator Servant: Add 2 to your mana pool. If that mana is spent on a creature spell, it gains haste until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>

@@ -3318,6 +3318,11 @@ namespace MagicProgram
                 }
             }
         }
+
+        private void manaWheelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PlArea.mw.ShowWheel("BUGRW");
+        }
     }
 
     public class PlayArea

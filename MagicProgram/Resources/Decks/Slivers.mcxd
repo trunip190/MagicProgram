@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Mountain</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Basic Land - Mountain</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>5</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Cavern of Souls</Name>
+    <Edition>AVR</Edition>
+    <Rarity>R</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>As Cavern of Souls enters the battlefield, choose a creature type.;
+%T: Add %1 to your mana pool.;
+%T: Add one mana of any color to your mana pool. Spend this mana only to cast a creature spell of the chosen type, and that spell can�t be countered.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sliver Hive</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>T: Add 1 to your mana pool.
+T: Add one mana of any color to your mana pool. Spend this mana only to cast a Sliver spell.
+5, T: Put a 1/1 colorless Sliver creature token onto the battlefield. Activate this ability only if you control a Sliver.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Forest</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>5</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Plains</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Basic Land - Plains</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Manaweft Sliver</Name>
+    <Edition>M14</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have �%T: Add one mana of any color to your mana pool.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Bonescythe Sliver</Name>
+    <Edition>GAM</Edition>
+    <Rarity />
+    <Color>W</Color>
+    <Cost>3W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have double strike. #(They deal both first-strike and regular combat damage.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Brood Sliver</Name>
+    <Edition>LE</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>4G</Cost>
+    <PT>3/3</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Whenever a Sliver deals combat damage to a player, its controller may put a 1/1 colorless Sliver creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gemhide Sliver</Name>
+    <Edition>TSP</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>All Slivers have �%T: Add one mana of any color to your mana pool.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Heart Sliver</Name>
+    <Edition>H09</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>All Sliver creatures have haste.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Horned Sliver</Name>
+    <Edition>TE</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>2G</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>All Sliver creatures have trample.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Sentinel Sliver</Name>
+    <Edition>M14</Edition>
+    <Rarity>C</Rarity>
+    <Color>W</Color>
+    <Cost>1W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have vigilance. #(Attacking doesn�t cause them to tap.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Striking Sliver</Name>
+    <Edition>M14</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have first strike. #(They deal combat damage before creatures without first strike.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Thorncaster Sliver</Name>
+    <Edition>M14</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>4R</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have �Whenever this creature attacks, it deals 1 damage to target creature or player.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Venom Sliver</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have deathtouch.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

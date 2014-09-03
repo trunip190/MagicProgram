@@ -109,6 +109,7 @@
             this.listViewOppEnch = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.manaWheelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -278,7 +279,8 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewDebugToolStripMenuItem});
+            this.viewDebugToolStripMenuItem,
+            this.manaWheelToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
@@ -286,7 +288,7 @@
             // viewDebugToolStripMenuItem
             // 
             this.viewDebugToolStripMenuItem.Name = "viewDebugToolStripMenuItem";
-            this.viewDebugToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.viewDebugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.viewDebugToolStripMenuItem.Text = "View Debug";
             this.viewDebugToolStripMenuItem.Click += new System.EventHandler(this.viewDebugToolStripMenuItem_Click);
             // 
@@ -1009,6 +1011,13 @@
             // 
             this.columnHeader8.Text = "Quantity";
             // 
+            // manaWheelToolStripMenuItem
+            // 
+            this.manaWheelToolStripMenuItem.Name = "manaWheelToolStripMenuItem";
+            this.manaWheelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manaWheelToolStripMenuItem.Text = "Mana Wheel";
+            this.manaWheelToolStripMenuItem.Click += new System.EventHandler(this.manaWheelToolStripMenuItem_Click);
+            // 
             // DeckTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1148,5 +1157,6 @@
         private System.Windows.Forms.Panel panelTargets;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numTargets;
+        private System.Windows.Forms.ToolStripMenuItem manaWheelToolStripMenuItem;
     }
 }
