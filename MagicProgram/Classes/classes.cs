@@ -447,7 +447,6 @@ namespace MagicProgram
     [XmlInclude(typeof(ZealousConscriptsAVR))]
     [XmlInclude(typeof(ZealousStrikeAVR))]
     #endregion
-
     # region RTR
     [XmlInclude(typeof(AbruptDecay))]
     [XmlInclude(typeof(AerialPredation))]
@@ -14597,6 +14596,7 @@ namespace MagicProgram
 
                 default:
                     mcn = new MagicCard();
+                    mcn.Name = s;
                     break;
             }
 

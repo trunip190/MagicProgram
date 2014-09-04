@@ -7,7 +7,7 @@ namespace MagicProgram
 {
     # region Avacyn Restored
     # region Abundant Growth
-    class AbundantGrowthAVR : MagicCard
+    public class AbundantGrowthAVR : MagicCard
     {
         public AbundantGrowthAVR()
         {
@@ -25,7 +25,7 @@ namespace MagicProgram
     # endregion
 
     # region Aggravate
-    class AggravateAVR : MagicCard
+    public class AggravateAVR : MagicCard
     {
         public AggravateAVR()
         {
@@ -43,7 +43,7 @@ namespace MagicProgram
     # endregion
 
     # region Alchemist's Apprentice
-    class AlchemistsApprenticeAVR : MagicCard
+    public class AlchemistsApprenticeAVR : MagicCard
     {
         public AlchemistsApprenticeAVR()
         {
@@ -61,7 +61,7 @@ namespace MagicProgram
     # endregion
 
     # region Alchemist's Refuge
-    class AlchemistsRefugeAVR : MagicCard
+    public class AlchemistsRefugeAVR : MagicCard
     {
         public AlchemistsRefugeAVR()
         {
@@ -79,7 +79,7 @@ namespace MagicProgram
     # endregion
 
     # region Amass the Components
-    class AmasstheComponentsAVR : MagicCard
+    public class AmasstheComponentsAVR : MagicCard
     {
         public AmasstheComponentsAVR()
         {
@@ -97,7 +97,7 @@ namespace MagicProgram
     # endregion
 
     # region Angel of Glory's Rise
-    class AngelofGlorysRiseAVR : MagicCard
+    public class AngelofGlorysRiseAVR : MagicCard
     {
         public AngelofGlorysRiseAVR()
         {
@@ -115,7 +115,7 @@ namespace MagicProgram
     # endregion
 
     # region Angel of Jubilation
-    class AngelofJubilationAVR : MagicCard
+    public class AngelofJubilationAVR : MagicCard
     {
         public AngelofJubilationAVR()
         {
@@ -133,7 +133,7 @@ namespace MagicProgram
     # endregion
 
     # region Angelic Armaments
-    class AngelicArmamentsAVR : MagicCard
+    public class AngelicArmamentsAVR : MagicCard
     {
         public AngelicArmamentsAVR()
         {
@@ -151,7 +151,7 @@ namespace MagicProgram
     # endregion
 
     # region Angelic Wall
-    class AngelicWallAVR : MagicCard
+    public class AngelicWallAVR : MagicCard
     {
         public AngelicWallAVR()
         {
@@ -169,7 +169,7 @@ namespace MagicProgram
     # endregion
 
     # region Angel's Mercy
-    class AngelsMercyAVR : MagicCard
+    public class AngelsMercyAVR : MagicCard
     {
         public AngelsMercyAVR()
         {
@@ -187,7 +187,7 @@ namespace MagicProgram
     # endregion
 
     # region Angel's Tomb
-    class AngelsTombAVR : MagicCard
+    public class AngelsTombAVR : MagicCard
     {
         public AngelsTombAVR()
         {
@@ -205,7 +205,7 @@ namespace MagicProgram
     # endregion
 
     # region Appetite for Brains
-    class AppetiteforBrainsAVR : MagicCard
+    public class AppetiteforBrainsAVR : MagicCard
     {
         public AppetiteforBrainsAVR()
         {
@@ -223,7 +223,7 @@ namespace MagicProgram
     # endregion
 
     # region Arcane Melee
-    class ArcaneMeleeAVR : MagicCard
+    public class ArcaneMeleeAVR : MagicCard
     {
         public ArcaneMeleeAVR()
         {
@@ -241,7 +241,7 @@ namespace MagicProgram
     # endregion
 
     # region Archangel
-    class ArchangelAVR : MagicCard
+    public class ArchangelAVR : MagicCard
     {
         public ArchangelAVR()
         {
@@ -259,7 +259,7 @@ namespace MagicProgram
     # endregion
 
     # region Archwing Dragon
-    class ArchwingDragonAVR : MagicCard
+    public class ArchwingDragonAVR : MagicCard
     {
         public ArchwingDragonAVR()
         {
@@ -277,7 +277,7 @@ namespace MagicProgram
     # endregion
 
     # region Avacyn, Angel of Hope
-    class AvacynAngelofHopeAVR : MagicCard
+    public class AvacynAngelofHopeAVR : MagicCard
     {
         public AvacynAngelofHopeAVR()
         {
@@ -295,7 +295,7 @@ namespace MagicProgram
     # endregion
 
     # region Banishing Stroke
-    class BanishingStrokeAVR : MagicCard
+    public class BanishingStrokeAVR : MagicCard
     {
         public BanishingStrokeAVR()
         {
@@ -313,7 +313,7 @@ namespace MagicProgram
     # endregion
 
     # region Banners Raised
-    class BannersRaisedAVR : MagicCard
+    public class BannersRaisedAVR : MagicCard
     {
         public BannersRaisedAVR()
         {
@@ -331,7 +331,7 @@ namespace MagicProgram
     # endregion
 
     # region Barter in Blood
-    class BarterinBloodAVR : MagicCard
+    public class BarterinBloodAVR : MagicCard
     {
         public BarterinBloodAVR()
         {
@@ -349,7 +349,7 @@ namespace MagicProgram
     # endregion
 
     # region Battle Hymn
-    class BattleHymnAVR : MagicCard
+    public class BattleHymnAVR : MagicCard
     {
         public BattleHymnAVR()
         {
@@ -367,7 +367,7 @@ namespace MagicProgram
     # endregion
 
     # region Bladed Bracers
-    class BladedBracersAVR : MagicCard
+    public class BladedBracersAVR : MagicCard
     {
         public BladedBracersAVR()
         {
@@ -385,7 +385,7 @@ namespace MagicProgram
     # endregion
 
     # region Blessings of Nature
-    class BlessingsofNatureAVR : MagicCard
+    public class BlessingsofNatureAVR : MagicCard
     {
         public BlessingsofNatureAVR()
         {
@@ -403,7 +403,7 @@ namespace MagicProgram
     # endregion
 
     # region Blood Artist
-    class BloodArtistAVR : MagicCard
+    public class BloodArtistAVR : MagicCard
     {
         public BloodArtistAVR()
         {
@@ -421,7 +421,7 @@ namespace MagicProgram
     # endregion
 
     # region Bloodflow Connoisseur
-    class BloodflowConnoisseurAVR : MagicCard
+    public class BloodflowConnoisseurAVR : MagicCard
     {
         public BloodflowConnoisseurAVR()
         {
@@ -439,7 +439,7 @@ namespace MagicProgram
     # endregion
 
     # region Bone Splinters
-    class BoneSplintersAVR : MagicCard
+    public class BoneSplintersAVR : MagicCard
     {
         public BoneSplintersAVR()
         {
@@ -457,7 +457,7 @@ namespace MagicProgram
     # endregion
 
     # region Bonfire of the Damned
-    class BonfireoftheDamnedAVR : MagicCard
+    public class BonfireoftheDamnedAVR : MagicCard
     {
         public BonfireoftheDamnedAVR()
         {
@@ -475,7 +475,7 @@ namespace MagicProgram
     # endregion
 
     # region Borderland Ranger
-    class BorderlandRangerAVR : MagicCard
+    public class BorderlandRangerAVR : MagicCard
     {
         public BorderlandRangerAVR()
         {
@@ -493,7 +493,7 @@ namespace MagicProgram
     # endregion
 
     # region Bower Passage
-    class BowerPassageAVR : MagicCard
+    public class BowerPassageAVR : MagicCard
     {
         public BowerPassageAVR()
         {
@@ -511,7 +511,7 @@ namespace MagicProgram
     # endregion
 
     # region Bruna, Light of Alabaster
-    class BrunaLightofAlabasterAVR : MagicCard
+    public class BrunaLightofAlabasterAVR : MagicCard
     {
         public BrunaLightofAlabasterAVR()
         {
@@ -529,7 +529,7 @@ namespace MagicProgram
     # endregion
 
     # region Builder's Blessing
-    class BuildersBlessingAVR : MagicCard
+    public class BuildersBlessingAVR : MagicCard
     {
         public BuildersBlessingAVR()
         {
@@ -547,7 +547,7 @@ namespace MagicProgram
     # endregion
 
     # region Burn at the Stake
-    class BurnattheStakeAVR : MagicCard
+    public class BurnattheStakeAVR : MagicCard
     {
         public BurnattheStakeAVR()
         {
@@ -565,7 +565,7 @@ namespace MagicProgram
     # endregion
 
     # region Butcher Ghoul
-    class ButcherGhoulAVR : MagicCard
+    public class ButcherGhoulAVR : MagicCard
     {
         public ButcherGhoulAVR()
         {
@@ -583,7 +583,7 @@ namespace MagicProgram
     # endregion
 
     # region Call to Serve
-    class CalltoServeAVR : MagicCard
+    public class CalltoServeAVR : MagicCard
     {
         public CalltoServeAVR()
         {
@@ -601,7 +601,7 @@ namespace MagicProgram
     # endregion
 
     # region Captain of the Mists
-    class CaptainoftheMistsAVR : MagicCard
+    public class CaptainoftheMistsAVR : MagicCard
     {
         public CaptainoftheMistsAVR()
         {
@@ -619,7 +619,7 @@ namespace MagicProgram
     # endregion
 
     # region Cathars' Crusade
-    class CatharsCrusadeAVR : MagicCard
+    public class CatharsCrusadeAVR : MagicCard
     {
         public CatharsCrusadeAVR()
         {
@@ -637,7 +637,7 @@ namespace MagicProgram
     # endregion
 
     # region Cathedral Sanctifier
-    class CathedralSanctifierAVR : MagicCard
+    public class CathedralSanctifierAVR : MagicCard
     {
         public CathedralSanctifierAVR()
         {
@@ -655,7 +655,7 @@ namespace MagicProgram
     # endregion
 
     # region Cavern of Souls
-    class CavernofSoulsAVR : MagicCard
+    public class CavernofSoulsAVR : MagicCard
     {
         public CavernofSoulsAVR()
         {
@@ -690,7 +690,7 @@ namespace MagicProgram
     # endregion
 
     # region Champion of Lambholt
-    class ChampionofLambholtAVR : MagicCard
+    public class ChampionofLambholtAVR : MagicCard
     {
         public ChampionofLambholtAVR()
         {
@@ -708,7 +708,7 @@ namespace MagicProgram
     # endregion
 
     # region Cloudshift
-    class CloudshiftAVR : MagicCard
+    public class CloudshiftAVR : MagicCard
     {
         public CloudshiftAVR()
         {
@@ -726,7 +726,7 @@ namespace MagicProgram
     # endregion
 
     # region Commander's Authority
-    class CommandersAuthorityAVR : MagicCard
+    public class CommandersAuthorityAVR : MagicCard
     {
         public CommandersAuthorityAVR()
         {
@@ -744,7 +744,7 @@ namespace MagicProgram
     # endregion
 
     # region Conjurer's Closet
-    class ConjurersClosetAVR : MagicCard
+    public class ConjurersClosetAVR : MagicCard
     {
         public ConjurersClosetAVR()
         {
@@ -762,7 +762,7 @@ namespace MagicProgram
     # endregion
 
     # region Corpse Traders
-    class CorpseTradersAVR : MagicCard
+    public class CorpseTradersAVR : MagicCard
     {
         public CorpseTradersAVR()
         {
@@ -780,7 +780,7 @@ namespace MagicProgram
     # endregion
 
     # region Craterhoof Behemoth
-    class CraterhoofBehemothAVR : MagicCard
+    public class CraterhoofBehemothAVR : MagicCard
     {
         public CraterhoofBehemothAVR()
         {
@@ -798,7 +798,7 @@ namespace MagicProgram
     # endregion
 
     # region Crippling Chill
-    class CripplingChillAVR : MagicCard
+    public class CripplingChillAVR : MagicCard
     {
         public CripplingChillAVR()
         {
@@ -816,7 +816,7 @@ namespace MagicProgram
     # endregion
 
     # region Crypt Creeper
-    class CryptCreeperAVR : MagicCard
+    public class CryptCreeperAVR : MagicCard
     {
         public CryptCreeperAVR()
         {
@@ -834,7 +834,7 @@ namespace MagicProgram
     # endregion
 
     # region Cursebreak
-    class CursebreakAVR : MagicCard
+    public class CursebreakAVR : MagicCard
     {
         public CursebreakAVR()
         {
@@ -852,7 +852,7 @@ namespace MagicProgram
     # endregion
 
     # region Dangerous Wager
-    class DangerousWagerAVR : MagicCard
+    public class DangerousWagerAVR : MagicCard
     {
         public DangerousWagerAVR()
         {
@@ -870,7 +870,7 @@ namespace MagicProgram
     # endregion
 
     # region Dark Impostor
-    class DarkImpostorAVR : MagicCard
+    public class DarkImpostorAVR : MagicCard
     {
         public DarkImpostorAVR()
         {
@@ -888,7 +888,7 @@ namespace MagicProgram
     # endregion
 
     # region Deadeye Navigator
-    class DeadeyeNavigatorAVR : MagicCard
+    public class DeadeyeNavigatorAVR : MagicCard
     {
         public DeadeyeNavigatorAVR()
         {
@@ -906,7 +906,7 @@ namespace MagicProgram
     # endregion
 
     # region Death Wind
-    class DeathWindAVR : MagicCard
+    public class DeathWindAVR : MagicCard
     {
         public DeathWindAVR()
         {
@@ -924,7 +924,7 @@ namespace MagicProgram
     # endregion
 
     # region Defang
-    class DefangAVR : MagicCard
+    public class DefangAVR : MagicCard
     {
         public DefangAVR()
         {
@@ -942,7 +942,7 @@ namespace MagicProgram
     # endregion
 
     # region Defy Death
-    class DefyDeathAVR : MagicCard
+    public class DefyDeathAVR : MagicCard
     {
         public DefyDeathAVR()
         {
@@ -960,7 +960,7 @@ namespace MagicProgram
     # endregion
 
     # region Demolish
-    class DemolishAVR : MagicCard
+    public class DemolishAVR : MagicCard
     {
         public DemolishAVR()
         {
@@ -978,7 +978,7 @@ namespace MagicProgram
     # endregion
 
     # region Demonic Rising
-    class DemonicRisingAVR : MagicCard
+    public class DemonicRisingAVR : MagicCard
     {
         public DemonicRisingAVR()
         {
@@ -996,7 +996,7 @@ namespace MagicProgram
     # endregion
 
     # region Demonic Taskmaster
-    class DemonicTaskmasterAVR : MagicCard
+    public class DemonicTaskmasterAVR : MagicCard
     {
         public DemonicTaskmasterAVR()
         {
@@ -1014,7 +1014,7 @@ namespace MagicProgram
     # endregion
 
     # region Demonlord of Ashmouth
-    class DemonlordofAshmouthAVR : MagicCard
+    public class DemonlordofAshmouthAVR : MagicCard
     {
         public DemonlordofAshmouthAVR()
         {
@@ -1032,7 +1032,7 @@ namespace MagicProgram
     # endregion
 
     # region Descendants' Path
-    class DescendantsPathAVR : MagicCard
+    public class DescendantsPathAVR : MagicCard
     {
         public DescendantsPathAVR()
         {
@@ -1050,7 +1050,7 @@ namespace MagicProgram
     # endregion
 
     # region Descent into Madness
-    class DescentintoMadnessAVR : MagicCard
+    public class DescentintoMadnessAVR : MagicCard
     {
         public DescentintoMadnessAVR()
         {
@@ -1068,7 +1068,7 @@ namespace MagicProgram
     # endregion
 
     # region Desolate Lighthouse
-    class DesolateLighthouseAVR : MagicCard
+    public class DesolateLighthouseAVR : MagicCard
     {
         public DesolateLighthouseAVR()
         {
@@ -1086,7 +1086,7 @@ namespace MagicProgram
     # endregion
 
     # region Devastation Tide
-    class DevastationTideAVR : MagicCard
+    public class DevastationTideAVR : MagicCard
     {
         public DevastationTideAVR()
         {
@@ -1104,7 +1104,7 @@ namespace MagicProgram
     # endregion
 
     # region Devout Chaplain
-    class DevoutChaplainAVR : MagicCard
+    public class DevoutChaplainAVR : MagicCard
     {
         public DevoutChaplainAVR()
         {
@@ -1122,7 +1122,7 @@ namespace MagicProgram
     # endregion
 
     # region Diregraf Escort
-    class DiregrafEscortAVR : MagicCard
+    public class DiregrafEscortAVR : MagicCard
     {
         public DiregrafEscortAVR()
         {
@@ -1140,7 +1140,7 @@ namespace MagicProgram
     # endregion
 
     # region Divine Deflection
-    class DivineDeflectionAVR : MagicCard
+    public class DivineDeflectionAVR : MagicCard
     {
         public DivineDeflectionAVR()
         {
@@ -1158,7 +1158,7 @@ namespace MagicProgram
     # endregion
 
     # region Dread Slaver
-    class DreadSlaverAVR : MagicCard
+    public class DreadSlaverAVR : MagicCard
     {
         public DreadSlaverAVR()
         {
@@ -1176,7 +1176,7 @@ namespace MagicProgram
     # endregion
 
     # region Dreadwaters
-    class DreadwatersAVR : MagicCard
+    public class DreadwatersAVR : MagicCard
     {
         public DreadwatersAVR()
         {
@@ -1194,7 +1194,7 @@ namespace MagicProgram
     # endregion
 
     # region Driver of the Dead
-    class DriveroftheDeadAVR : MagicCard
+    public class DriveroftheDeadAVR : MagicCard
     {
         public DriveroftheDeadAVR()
         {
@@ -1212,7 +1212,7 @@ namespace MagicProgram
     # endregion
 
     # region Druid's Familiar
-    class DruidsFamiliarAVR : MagicCard
+    public class DruidsFamiliarAVR : MagicCard
     {
         public DruidsFamiliarAVR()
         {
@@ -1230,7 +1230,7 @@ namespace MagicProgram
     # endregion
 
     # region Druids' Repository
-    class DruidsRepositoryAVR : MagicCard
+    public class DruidsRepositoryAVR : MagicCard
     {
         public DruidsRepositoryAVR()
         {
@@ -1248,7 +1248,7 @@ namespace MagicProgram
     # endregion
 
     # region Dual Casting
-    class DualCastingAVR : MagicCard
+    public class DualCastingAVR : MagicCard
     {
         public DualCastingAVR()
         {
@@ -1266,7 +1266,7 @@ namespace MagicProgram
     # endregion
 
     # region Eaten by Spiders
-    class EatenbySpidersAVR : MagicCard
+    public class EatenbySpidersAVR : MagicCard
     {
         public EatenbySpidersAVR()
         {
@@ -1284,7 +1284,7 @@ namespace MagicProgram
     # endregion
 
     # region Elgaud Shieldmate
-    class ElgaudShieldmateAVR : MagicCard
+    public class ElgaudShieldmateAVR : MagicCard
     {
         public ElgaudShieldmateAVR()
         {
@@ -1302,7 +1302,7 @@ namespace MagicProgram
     # endregion
 
     # region Emancipation Angel
-    class EmancipationAngelAVR : MagicCard
+    public class EmancipationAngelAVR : MagicCard
     {
         public EmancipationAngelAVR()
         {
@@ -1320,7 +1320,7 @@ namespace MagicProgram
     # endregion
 
     # region Entreat the Angels
-    class EntreattheAngelsAVR : MagicCard
+    public class EntreattheAngelsAVR : MagicCard
     {
         public EntreattheAngelsAVR()
         {
@@ -1338,7 +1338,7 @@ namespace MagicProgram
     # endregion
 
     # region Essence Harvest
-    class EssenceHarvestAVR : MagicCard
+    public class EssenceHarvestAVR : MagicCard
     {
         public EssenceHarvestAVR()
         {
@@ -1356,7 +1356,7 @@ namespace MagicProgram
     # endregion
 
     # region Evernight Shade
-    class EvernightShadeAVR : MagicCard
+    public class EvernightShadeAVR : MagicCard
     {
         public EvernightShadeAVR()
         {
@@ -1374,7 +1374,7 @@ namespace MagicProgram
     # endregion
 
     # region Exquisite Blood
-    class ExquisiteBloodAVR : MagicCard
+    public class ExquisiteBloodAVR : MagicCard
     {
         public ExquisiteBloodAVR()
         {
@@ -1392,7 +1392,7 @@ namespace MagicProgram
     # endregion
 
     # region Falkenrath Exterminator
-    class FalkenrathExterminatorAVR : MagicCard
+    public class FalkenrathExterminatorAVR : MagicCard
     {
         public FalkenrathExterminatorAVR()
         {
@@ -1410,7 +1410,7 @@ namespace MagicProgram
     # endregion
 
     # region Farbog Explorer
-    class FarbogExplorerAVR : MagicCard
+    public class FarbogExplorerAVR : MagicCard
     {
         public FarbogExplorerAVR()
         {
@@ -1428,7 +1428,7 @@ namespace MagicProgram
     # endregion
 
     # region Favorable Winds
-    class FavorableWindsAVR : MagicCard
+    public class FavorableWindsAVR : MagicCard
     {
         public FavorableWindsAVR()
         {
@@ -1446,7 +1446,7 @@ namespace MagicProgram
     # endregion
 
     # region Fervent Cathar
-    class FerventCatharAVR : MagicCard
+    public class FerventCatharAVR : MagicCard
     {
         public FerventCatharAVR()
         {
@@ -1464,7 +1464,7 @@ namespace MagicProgram
     # endregion
 
     # region Fettergeist
-    class FettergeistAVR : MagicCard
+    public class FettergeistAVR : MagicCard
     {
         public FettergeistAVR()
         {
@@ -1482,7 +1482,7 @@ namespace MagicProgram
     # endregion
 
     # region Fleeting Distraction
-    class FleetingDistractionAVR : MagicCard
+    public class FleetingDistractionAVR : MagicCard
     {
         public FleetingDistractionAVR()
         {
@@ -1500,7 +1500,7 @@ namespace MagicProgram
     # endregion
 
     # region Flowering Lumberknot
-    class FloweringLumberknotAVR : MagicCard
+    public class FloweringLumberknotAVR : MagicCard
     {
         public FloweringLumberknotAVR()
         {
@@ -1518,7 +1518,7 @@ namespace MagicProgram
     # endregion
 
     # region Forest
-    class ForestAVR : MagicCard
+    public class ForestAVR : MagicCard
     {
         public ForestAVR()
         {
@@ -1536,7 +1536,7 @@ namespace MagicProgram
     # endregion
 
     # region Gallows at Willow Hill
-    class GallowsatWillowHillAVR : MagicCard
+    public class GallowsatWillowHillAVR : MagicCard
     {
         public GallowsatWillowHillAVR()
         {
@@ -1554,7 +1554,7 @@ namespace MagicProgram
     # endregion
 
     # region Galvanic Alchemist
-    class GalvanicAlchemistAVR : MagicCard
+    public class GalvanicAlchemistAVR : MagicCard
     {
         public GalvanicAlchemistAVR()
         {
@@ -1572,7 +1572,7 @@ namespace MagicProgram
     # endregion
 
     # region Gang of Devils
-    class GangofDevilsAVR : MagicCard
+    public class GangofDevilsAVR : MagicCard
     {
         public GangofDevilsAVR()
         {
@@ -1590,7 +1590,7 @@ namespace MagicProgram
     # endregion
 
     # region Geist Snatch
-    class GeistSnatchAVR : MagicCard
+    public class GeistSnatchAVR : MagicCard
     {
         public GeistSnatchAVR()
         {
@@ -1608,7 +1608,7 @@ namespace MagicProgram
     # endregion
 
     # region Geist Trappers
-    class GeistTrappersAVR : MagicCard
+    public class GeistTrappersAVR : MagicCard
     {
         public GeistTrappersAVR()
         {
@@ -1626,7 +1626,7 @@ namespace MagicProgram
     # endregion
 
     # region Ghostform
-    class GhostformAVR : MagicCard
+    public class GhostformAVR : MagicCard
     {
         public GhostformAVR()
         {
@@ -1644,7 +1644,7 @@ namespace MagicProgram
     # endregion
 
     # region Ghostly Flicker
-    class GhostlyFlickerAVR : MagicCard
+    public class GhostlyFlickerAVR : MagicCard
     {
         public GhostlyFlickerAVR()
         {
@@ -1662,7 +1662,7 @@ namespace MagicProgram
     # endregion
 
     # region Ghostly Touch
-    class GhostlyTouchAVR : MagicCard
+    public class GhostlyTouchAVR : MagicCard
     {
         public GhostlyTouchAVR()
         {
@@ -1680,7 +1680,7 @@ namespace MagicProgram
     # endregion
 
     # region Ghoulflesh
-    class GhoulfleshAVR : MagicCard
+    public class GhoulfleshAVR : MagicCard
     {
         public GhoulfleshAVR()
         {
@@ -1698,7 +1698,7 @@ namespace MagicProgram
     # endregion
 
     # region Gisela, Blade of Goldnight
-    class GiselaBladeofGoldnightAVR : MagicCard
+    public class GiselaBladeofGoldnightAVR : MagicCard
     {
         public GiselaBladeofGoldnightAVR()
         {
@@ -1716,7 +1716,7 @@ namespace MagicProgram
     # endregion
 
     # region Gloom Surgeon
-    class GloomSurgeonAVR : MagicCard
+    public class GloomSurgeonAVR : MagicCard
     {
         public GloomSurgeonAVR()
         {
@@ -1734,7 +1734,7 @@ namespace MagicProgram
     # endregion
 
     # region Gloomwidow
-    class GloomwidowAVR : MagicCard
+    public class GloomwidowAVR : MagicCard
     {
         public GloomwidowAVR()
         {
@@ -1752,7 +1752,7 @@ namespace MagicProgram
     # endregion
 
     # region Goldnight Commander
-    class GoldnightCommanderAVR : MagicCard
+    public class GoldnightCommanderAVR : MagicCard
     {
         public GoldnightCommanderAVR()
         {
@@ -1770,7 +1770,7 @@ namespace MagicProgram
     # endregion
 
     # region Goldnight Redeemer
-    class GoldnightRedeemerAVR : MagicCard
+    public class GoldnightRedeemerAVR : MagicCard
     {
         public GoldnightRedeemerAVR()
         {
@@ -1788,7 +1788,7 @@ namespace MagicProgram
     # endregion
 
     # region Grave Exchange
-    class GraveExchangeAVR : MagicCard
+    public class GraveExchangeAVR : MagicCard
     {
         public GraveExchangeAVR()
         {
@@ -1806,7 +1806,7 @@ namespace MagicProgram
     # endregion
 
     # region Griselbrand
-    class GriselbrandAVR : MagicCard
+    public class GriselbrandAVR : MagicCard
     {
         public GriselbrandAVR()
         {
@@ -1824,7 +1824,7 @@ namespace MagicProgram
     # endregion
 
     # region Grounded
-    class GroundedAVR : MagicCard
+    public class GroundedAVR : MagicCard
     {
         public GroundedAVR()
         {
@@ -1842,7 +1842,7 @@ namespace MagicProgram
     # endregion
 
     # region Gryff Vanguard
-    class GryffVanguardAVR : MagicCard
+    public class GryffVanguardAVR : MagicCard
     {
         public GryffVanguardAVR()
         {
@@ -1860,7 +1860,7 @@ namespace MagicProgram
     # endregion
 
     # region Guise of Fire
-    class GuiseofFireAVR : MagicCard
+    public class GuiseofFireAVR : MagicCard
     {
         public GuiseofFireAVR()
         {
@@ -1878,7 +1878,7 @@ namespace MagicProgram
     # endregion
 
     # region Hanweir Lancer
-    class HanweirLancerAVR : MagicCard
+    public class HanweirLancerAVR : MagicCard
     {
         public HanweirLancerAVR()
         {
@@ -1896,7 +1896,7 @@ namespace MagicProgram
     # endregion
 
     # region Harvester of Souls
-    class HarvesterofSoulsAVR : MagicCard
+    public class HarvesterofSoulsAVR : MagicCard
     {
         public HarvesterofSoulsAVR()
         {
@@ -1914,7 +1914,7 @@ namespace MagicProgram
     # endregion
 
     # region Haunted Guardian
-    class HauntedGuardianAVR : MagicCard
+    public class HauntedGuardianAVR : MagicCard
     {
         public HauntedGuardianAVR()
         {
@@ -1932,7 +1932,7 @@ namespace MagicProgram
     # endregion
 
     # region Havengul Skaab
-    class HavengulSkaabAVR : MagicCard
+    public class HavengulSkaabAVR : MagicCard
     {
         public HavengulSkaabAVR()
         {
@@ -1950,7 +1950,7 @@ namespace MagicProgram
     # endregion
 
     # region Havengul Vampire
-    class HavengulVampireAVR : MagicCard
+    public class HavengulVampireAVR : MagicCard
     {
         public HavengulVampireAVR()
         {
@@ -1968,7 +1968,7 @@ namespace MagicProgram
     # endregion
 
     # region Heirs of Stromkirk
-    class HeirsofStromkirkAVR : MagicCard
+    public class HeirsofStromkirkAVR : MagicCard
     {
         public HeirsofStromkirkAVR()
         {
@@ -1986,7 +1986,7 @@ namespace MagicProgram
     # endregion
 
     # region Herald of War
-    class HeraldofWarAVR : MagicCard
+    public class HeraldofWarAVR : MagicCard
     {
         public HeraldofWarAVR()
         {
@@ -2004,7 +2004,7 @@ namespace MagicProgram
     # endregion
 
     # region Holy Justiciar
-    class HolyJusticiarAVR : MagicCard
+    public class HolyJusticiarAVR : MagicCard
     {
         public HolyJusticiarAVR()
         {
@@ -2022,7 +2022,7 @@ namespace MagicProgram
     # endregion
 
     # region Homicidal Seclusion
-    class HomicidalSeclusionAVR : MagicCard
+    public class HomicidalSeclusionAVR : MagicCard
     {
         public HomicidalSeclusionAVR()
         {
@@ -2040,7 +2040,7 @@ namespace MagicProgram
     # endregion
 
     # region Hound of Griselbrand
-    class HoundofGriselbrandAVR : MagicCard
+    public class HoundofGriselbrandAVR : MagicCard
     {
         public HoundofGriselbrandAVR()
         {
@@ -2058,7 +2058,7 @@ namespace MagicProgram
     # endregion
 
     # region Howlgeist
-    class HowlgeistAVR : MagicCard
+    public class HowlgeistAVR : MagicCard
     {
         public HowlgeistAVR()
         {
@@ -2076,7 +2076,7 @@ namespace MagicProgram
     # endregion
 
     # region Human Frailty
-    class HumanFrailtyAVR : MagicCard
+    public class HumanFrailtyAVR : MagicCard
     {
         public HumanFrailtyAVR()
         {
@@ -2094,7 +2094,7 @@ namespace MagicProgram
     # endregion
 
     # region Hunted Ghoul
-    class HuntedGhoulAVR : MagicCard
+    public class HuntedGhoulAVR : MagicCard
     {
         public HuntedGhoulAVR()
         {
@@ -2112,7 +2112,7 @@ namespace MagicProgram
     # endregion
 
     # region Infinite Reflection
-    class InfiniteReflectionAVR : MagicCard
+    public class InfiniteReflectionAVR : MagicCard
     {
         public InfiniteReflectionAVR()
         {
@@ -2130,7 +2130,7 @@ namespace MagicProgram
     # endregion
 
     # region Into the Void
-    class IntotheVoidAVR : MagicCard
+    public class IntotheVoidAVR : MagicCard
     {
         public IntotheVoidAVR()
         {
@@ -2148,7 +2148,7 @@ namespace MagicProgram
     # endregion
 
     # region Island
-    class IslandAVR : MagicCard
+    public class IslandAVR : MagicCard
     {
         public IslandAVR()
         {
@@ -2166,7 +2166,7 @@ namespace MagicProgram
     # endregion
 
     # region Joint Assault
-    class JointAssaultAVR : MagicCard
+    public class JointAssaultAVR : MagicCard
     {
         public JointAssaultAVR()
         {
@@ -2184,7 +2184,7 @@ namespace MagicProgram
     # endregion
 
     # region Kessig Malcontents
-    class KessigMalcontentsAVR : MagicCard
+    public class KessigMalcontentsAVR : MagicCard
     {
         public KessigMalcontentsAVR()
         {
@@ -2202,7 +2202,7 @@ namespace MagicProgram
     # endregion
 
     # region Killing Wave
-    class KillingWaveAVR : MagicCard
+    public class KillingWaveAVR : MagicCard
     {
         public KillingWaveAVR()
         {
@@ -2220,7 +2220,7 @@ namespace MagicProgram
     # endregion
 
     # region Kruin Striker
-    class KruinStrikerAVR : MagicCard
+    public class KruinStrikerAVR : MagicCard
     {
         public KruinStrikerAVR()
         {
@@ -2238,7 +2238,7 @@ namespace MagicProgram
     # endregion
 
     # region Lair Delve
-    class LairDelveAVR : MagicCard
+    public class LairDelveAVR : MagicCard
     {
         public LairDelveAVR()
         {
@@ -2256,7 +2256,7 @@ namespace MagicProgram
     # endregion
 
     # region Latch Seeker
-    class LatchSeekerAVR : MagicCard
+    public class LatchSeekerAVR : MagicCard
     {
         public LatchSeekerAVR()
         {
@@ -2274,7 +2274,7 @@ namespace MagicProgram
     # endregion
 
     # region Leap of Faith
-    class LeapofFaithAVR : MagicCard
+    public class LeapofFaithAVR : MagicCard
     {
         public LeapofFaithAVR()
         {
@@ -2292,7 +2292,7 @@ namespace MagicProgram
     # endregion
 
     # region Lightning Mauler
-    class LightningMaulerAVR : MagicCard
+    public class LightningMaulerAVR : MagicCard
     {
         public LightningMaulerAVR()
         {
@@ -2310,7 +2310,7 @@ namespace MagicProgram
     # endregion
 
     # region Lightning Prowess
-    class LightningProwessAVR : MagicCard
+    public class LightningProwessAVR : MagicCard
     {
         public LightningProwessAVR()
         {
@@ -2328,7 +2328,7 @@ namespace MagicProgram
     # endregion
 
     # region Lone Revenant
-    class LoneRevenantAVR : MagicCard
+    public class LoneRevenantAVR : MagicCard
     {
         public LoneRevenantAVR()
         {
@@ -2346,7 +2346,7 @@ namespace MagicProgram
     # endregion
 
     # region Lunar Mystic
-    class LunarMysticAVR : MagicCard
+    public class LunarMysticAVR : MagicCard
     {
         public LunarMysticAVR()
         {
@@ -2364,7 +2364,7 @@ namespace MagicProgram
     # endregion
 
     # region Maalfeld Twins
-    class MaalfeldTwinsAVR : MagicCard
+    public class MaalfeldTwinsAVR : MagicCard
     {
         public MaalfeldTwinsAVR()
         {
@@ -2382,7 +2382,7 @@ namespace MagicProgram
     # endregion
 
     # region Mad Prophet
-    class MadProphetAVR : MagicCard
+    public class MadProphetAVR : MagicCard
     {
         public MadProphetAVR()
         {
@@ -2400,7 +2400,7 @@ namespace MagicProgram
     # endregion
 
     # region Malicious Intent
-    class MaliciousIntentAVR : MagicCard
+    public class MaliciousIntentAVR : MagicCard
     {
         public MaliciousIntentAVR()
         {
@@ -2418,7 +2418,7 @@ namespace MagicProgram
     # endregion
 
     # region Malignus
-    class MalignusAVR : MagicCard
+    public class MalignusAVR : MagicCard
     {
         public MalignusAVR()
         {
@@ -2436,7 +2436,7 @@ namespace MagicProgram
     # endregion
 
     # region Marrow Bats
-    class MarrowBatsAVR : MagicCard
+    public class MarrowBatsAVR : MagicCard
     {
         public MarrowBatsAVR()
         {
@@ -2454,7 +2454,7 @@ namespace MagicProgram
     # endregion
 
     # region Mass Appeal
-    class MassAppealAVR : MagicCard
+    public class MassAppealAVR : MagicCard
     {
         public MassAppealAVR()
         {
@@ -2472,7 +2472,7 @@ namespace MagicProgram
     # endregion
 
     # region Mental Agony
-    class MentalAgonyAVR : MagicCard
+    public class MentalAgonyAVR : MagicCard
     {
         public MentalAgonyAVR()
         {
@@ -2490,7 +2490,7 @@ namespace MagicProgram
     # endregion
 
     # region Midnight Duelist
-    class MidnightDuelistAVR : MagicCard
+    public class MidnightDuelistAVR : MagicCard
     {
         public MidnightDuelistAVR()
         {
@@ -2508,7 +2508,7 @@ namespace MagicProgram
     # endregion
 
     # region Midvast Protector
-    class MidvastProtectorAVR : MagicCard
+    public class MidvastProtectorAVR : MagicCard
     {
         public MidvastProtectorAVR()
         {
@@ -2526,7 +2526,7 @@ namespace MagicProgram
     # endregion
 
     # region Mist Raven
-    class MistRavenAVR : MagicCard
+    public class MistRavenAVR : MagicCard
     {
         public MistRavenAVR()
         {
@@ -2544,7 +2544,7 @@ namespace MagicProgram
     # endregion
 
     # region Misthollow Griffin
-    class MisthollowGriffinAVR : MagicCard
+    public class MisthollowGriffinAVR : MagicCard
     {
         public MisthollowGriffinAVR()
         {
@@ -2562,7 +2562,7 @@ namespace MagicProgram
     # endregion
 
     # region Moonlight Geist
-    class MoonlightGeistAVR : MagicCard
+    public class MoonlightGeistAVR : MagicCard
     {
         public MoonlightGeistAVR()
         {
@@ -2580,7 +2580,7 @@ namespace MagicProgram
     # endregion
 
     # region Moonsilver Spear
-    class MoonsilverSpearAVR : MagicCard
+    public class MoonsilverSpearAVR : MagicCard
     {
         public MoonsilverSpearAVR()
         {
@@ -2598,7 +2598,7 @@ namespace MagicProgram
     # endregion
 
     # region Moorland Inquisitor
-    class MoorlandInquisitorAVR : MagicCard
+    public class MoorlandInquisitorAVR : MagicCard
     {
         public MoorlandInquisitorAVR()
         {
@@ -2616,7 +2616,7 @@ namespace MagicProgram
     # endregion
 
     # region Mountain
-    class MountainAVR : MagicCard
+    public class MountainAVR : MagicCard
     {
         public MountainAVR()
         {
@@ -2634,7 +2634,7 @@ namespace MagicProgram
     # endregion
 
     # region Narstad Scrapper
-    class NarstadScrapperAVR : MagicCard
+    public class NarstadScrapperAVR : MagicCard
     {
         public NarstadScrapperAVR()
         {
@@ -2652,7 +2652,7 @@ namespace MagicProgram
     # endregion
 
     # region Natural End
-    class NaturalEndAVR : MagicCard
+    public class NaturalEndAVR : MagicCard
     {
         public NaturalEndAVR()
         {
@@ -2670,7 +2670,7 @@ namespace MagicProgram
     # endregion
 
     # region Nearheath Pilgrim
-    class NearheathPilgrimAVR : MagicCard
+    public class NearheathPilgrimAVR : MagicCard
     {
         public NearheathPilgrimAVR()
         {
@@ -2688,7 +2688,7 @@ namespace MagicProgram
     # endregion
 
     # region Necrobite
-    class NecrobiteAVR : MagicCard
+    public class NecrobiteAVR : MagicCard
     {
         public NecrobiteAVR()
         {
@@ -2706,7 +2706,7 @@ namespace MagicProgram
     # endregion
 
     # region Nephalia Smuggler
-    class NephaliaSmugglerAVR : MagicCard
+    public class NephaliaSmugglerAVR : MagicCard
     {
         public NephaliaSmugglerAVR()
         {
@@ -2724,7 +2724,7 @@ namespace MagicProgram
     # endregion
 
     # region Nettle Swine
-    class NettleSwineAVR : MagicCard
+    public class NettleSwineAVR : MagicCard
     {
         public NettleSwineAVR()
         {
@@ -2742,7 +2742,7 @@ namespace MagicProgram
     # endregion
 
     # region Nightshade Peddler
-    class NightshadePeddlerAVR : MagicCard
+    public class NightshadePeddlerAVR : MagicCard
     {
         public NightshadePeddlerAVR()
         {
@@ -2760,7 +2760,7 @@ namespace MagicProgram
     # endregion
 
     # region Otherworld Atlas
-    class OtherworldAtlasAVR : MagicCard
+    public class OtherworldAtlasAVR : MagicCard
     {
         public OtherworldAtlasAVR()
         {
@@ -2778,7 +2778,7 @@ namespace MagicProgram
     # endregion
 
     # region Outwit
-    class OutwitAVR : MagicCard
+    public class OutwitAVR : MagicCard
     {
         public OutwitAVR()
         {
@@ -2796,7 +2796,7 @@ namespace MagicProgram
     # endregion
 
     # region Pathbreaker Wurm
-    class PathbreakerWurmAVR : MagicCard
+    public class PathbreakerWurmAVR : MagicCard
     {
         public PathbreakerWurmAVR()
         {
@@ -2814,7 +2814,7 @@ namespace MagicProgram
     # endregion
 
     # region Peel from Reality
-    class PeelfromRealityAVR : MagicCard
+    public class PeelfromRealityAVR : MagicCard
     {
         public PeelfromRealityAVR()
         {
@@ -2832,7 +2832,7 @@ namespace MagicProgram
     # endregion
 
     # region Pillar of Flame
-    class PillarofFlameAVR : MagicCard
+    public class PillarofFlameAVR : MagicCard
     {
         public PillarofFlameAVR()
         {
@@ -2850,7 +2850,7 @@ namespace MagicProgram
     # endregion
 
     # region Plains
-    class PlainsAVR : MagicCard
+    public class PlainsAVR : MagicCard
     {
         public PlainsAVR()
         {
@@ -2868,7 +2868,7 @@ namespace MagicProgram
     # endregion
 
     # region Polluted Dead
-    class PollutedDeadAVR : MagicCard
+    public class PollutedDeadAVR : MagicCard
     {
         public PollutedDeadAVR()
         {
@@ -2886,7 +2886,7 @@ namespace MagicProgram
     # endregion
 
     # region Predator's Gambit
-    class PredatorsGambitAVR : MagicCard
+    public class PredatorsGambitAVR : MagicCard
     {
         public PredatorsGambitAVR()
         {
@@ -2904,7 +2904,7 @@ namespace MagicProgram
     # endregion
 
     # region Primal Surge
-    class PrimalSurgeAVR : MagicCard
+    public class PrimalSurgeAVR : MagicCard
     {
         public PrimalSurgeAVR()
         {
@@ -2922,7 +2922,7 @@ namespace MagicProgram
     # endregion
 
     # region Raging Poltergeist
-    class RagingPoltergeistAVR : MagicCard
+    public class RagingPoltergeistAVR : MagicCard
     {
         public RagingPoltergeistAVR()
         {
@@ -2940,7 +2940,7 @@ namespace MagicProgram
     # endregion
 
     # region Rain of Thorns
-    class RainofThornsAVR : MagicCard
+    public class RainofThornsAVR : MagicCard
     {
         public RainofThornsAVR()
         {
@@ -2958,7 +2958,7 @@ namespace MagicProgram
     # endregion
 
     # region Reforge the Soul
-    class ReforgetheSoulAVR : MagicCard
+    public class ReforgetheSoulAVR : MagicCard
     {
         public ReforgetheSoulAVR()
         {
@@ -2976,7 +2976,7 @@ namespace MagicProgram
     # endregion
 
     # region Renegade Demon
-    class RenegadeDemonAVR : MagicCard
+    public class RenegadeDemonAVR : MagicCard
     {
         public RenegadeDemonAVR()
         {
@@ -2994,7 +2994,7 @@ namespace MagicProgram
     # endregion
 
     # region Restoration Angel
-    class RestorationAngelAVR : MagicCard
+    public class RestorationAngelAVR : MagicCard
     {
         public RestorationAngelAVR()
         {
@@ -3012,7 +3012,7 @@ namespace MagicProgram
     # endregion
 
     # region Revenge of the Hunted
-    class RevengeoftheHuntedAVR : MagicCard
+    public class RevengeoftheHuntedAVR : MagicCard
     {
         public RevengeoftheHuntedAVR()
         {
@@ -3030,7 +3030,7 @@ namespace MagicProgram
     # endregion
 
     # region Riders of Gavony
-    class RidersofGavonyAVR : MagicCard
+    public class RidersofGavonyAVR : MagicCard
     {
         public RidersofGavonyAVR()
         {
@@ -3048,7 +3048,7 @@ namespace MagicProgram
     # endregion
 
     # region Righteous Blow
-    class RighteousBlowAVR : MagicCard
+    public class RighteousBlowAVR : MagicCard
     {
         public RighteousBlowAVR()
         {
@@ -3066,7 +3066,7 @@ namespace MagicProgram
     # endregion
 
     # region Riot Ringleader
-    class RiotRingleaderAVR : MagicCard
+    public class RiotRingleaderAVR : MagicCard
     {
         public RiotRingleaderAVR()
         {
@@ -3084,7 +3084,7 @@ namespace MagicProgram
     # endregion
 
     # region Rite of Ruin
-    class RiteofRuinAVR : MagicCard
+    public class RiteofRuinAVR : MagicCard
     {
         public RiteofRuinAVR()
         {
@@ -3102,7 +3102,7 @@ namespace MagicProgram
     # endregion
 
     # region Rotcrown Ghoul
-    class RotcrownGhoulAVR : MagicCard
+    public class RotcrownGhoulAVR : MagicCard
     {
         public RotcrownGhoulAVR()
         {
@@ -3120,7 +3120,7 @@ namespace MagicProgram
     # endregion
 
     # region Rush of Blood
-    class RushofBloodAVR : MagicCard
+    public class RushofBloodAVR : MagicCard
     {
         public RushofBloodAVR()
         {
@@ -3138,7 +3138,7 @@ namespace MagicProgram
     # endregion
 
     # region Scalding Devil
-    class ScaldingDevilAVR : MagicCard
+    public class ScaldingDevilAVR : MagicCard
     {
         public ScaldingDevilAVR()
         {
@@ -3156,7 +3156,7 @@ namespace MagicProgram
     # endregion
 
     # region Scrapskin Drake
-    class ScrapskinDrakeAVR : MagicCard
+    public class ScrapskinDrakeAVR : MagicCard
     {
         public ScrapskinDrakeAVR()
         {
@@ -3174,7 +3174,7 @@ namespace MagicProgram
     # endregion
 
     # region Scroll of Avacyn
-    class ScrollofAvacynAVR : MagicCard
+    public class ScrollofAvacynAVR : MagicCard
     {
         public ScrollofAvacynAVR()
         {
@@ -3192,7 +3192,7 @@ namespace MagicProgram
     # endregion
 
     # region Scroll of Griselbrand
-    class ScrollofGriselbrandAVR : MagicCard
+    public class ScrollofGriselbrandAVR : MagicCard
     {
         public ScrollofGriselbrandAVR()
         {
@@ -3210,7 +3210,7 @@ namespace MagicProgram
     # endregion
 
     # region Searchlight Geist
-    class SearchlightGeistAVR : MagicCard
+    public class SearchlightGeistAVR : MagicCard
     {
         public SearchlightGeistAVR()
         {
@@ -3228,7 +3228,7 @@ namespace MagicProgram
     # endregion
 
     # region Second Guess
-    class SecondGuessAVR : MagicCard
+    public class SecondGuessAVR : MagicCard
     {
         public SecondGuessAVR()
         {
@@ -3246,7 +3246,7 @@ namespace MagicProgram
     # endregion
 
     # region Seraph of Dawn
-    class SeraphofDawnAVR : MagicCard
+    public class SeraphofDawnAVR : MagicCard
     {
         public SeraphofDawnAVR()
         {
@@ -3264,7 +3264,7 @@ namespace MagicProgram
     # endregion
 
     # region Seraph Sanctuary
-    class SeraphSanctuaryAVR : MagicCard
+    public class SeraphSanctuaryAVR : MagicCard
     {
         public SeraphSanctuaryAVR()
         {
@@ -3282,7 +3282,7 @@ namespace MagicProgram
     # endregion
 
     # region Sheltering Word
-    class ShelteringWordAVR : MagicCard
+    public class ShelteringWordAVR : MagicCard
     {
         public ShelteringWordAVR()
         {
@@ -3300,7 +3300,7 @@ namespace MagicProgram
     # endregion
 
     # region Sigarda, Host of Herons
-    class SigardaHostofHeronsAVR : MagicCard
+    public class SigardaHostofHeronsAVR : MagicCard
     {
         public SigardaHostofHeronsAVR()
         {
@@ -3318,7 +3318,7 @@ namespace MagicProgram
     # endregion
 
     # region Silverblade Paladin
-    class SilverbladePaladinAVR : MagicCard
+    public class SilverbladePaladinAVR : MagicCard
     {
         public SilverbladePaladinAVR()
         {
@@ -3336,7 +3336,7 @@ namespace MagicProgram
     # endregion
 
     # region Slayers' Stronghold
-    class SlayersStrongholdAVR : MagicCard
+    public class SlayersStrongholdAVR : MagicCard
     {
         public SlayersStrongholdAVR()
         {
@@ -3354,7 +3354,7 @@ namespace MagicProgram
     # endregion
 
     # region Snare the Skies
-    class SnaretheSkiesAVR : MagicCard
+    public class SnaretheSkiesAVR : MagicCard
     {
         public SnaretheSkiesAVR()
         {
@@ -3372,7 +3372,7 @@ namespace MagicProgram
     # endregion
 
     # region Somberwald Sage
-    class SomberwaldSageAVR : MagicCard
+    public class SomberwaldSageAVR : MagicCard
     {
         public SomberwaldSageAVR()
         {
@@ -3390,7 +3390,7 @@ namespace MagicProgram
     # endregion
 
     # region Somberwald Vigilante
-    class SomberwaldVigilanteAVR : MagicCard
+    public class SomberwaldVigilanteAVR : MagicCard
     {
         public SomberwaldVigilanteAVR()
         {
@@ -3408,7 +3408,7 @@ namespace MagicProgram
     # endregion
 
     # region Soul of the Harvest
-    class SouloftheHarvestAVR : MagicCard
+    public class SouloftheHarvestAVR : MagicCard
     {
         public SouloftheHarvestAVR()
         {
@@ -3426,7 +3426,7 @@ namespace MagicProgram
     # endregion
 
     # region Soulcage Fiend
-    class SoulcageFiendAVR : MagicCard
+    public class SoulcageFiendAVR : MagicCard
     {
         public SoulcageFiendAVR()
         {
@@ -3444,7 +3444,7 @@ namespace MagicProgram
     # endregion
 
     # region Spectral Gateguards
-    class SpectralGateguardsAVR : MagicCard
+    public class SpectralGateguardsAVR : MagicCard
     {
         public SpectralGateguardsAVR()
         {
@@ -3462,7 +3462,7 @@ namespace MagicProgram
     # endregion
 
     # region Spectral Prison
-    class SpectralPrisonAVR : MagicCard
+    public class SpectralPrisonAVR : MagicCard
     {
         public SpectralPrisonAVR()
         {
@@ -3480,7 +3480,7 @@ namespace MagicProgram
     # endregion
 
     # region Spirit Away
-    class SpiritAwayAVR : MagicCard
+    public class SpiritAwayAVR : MagicCard
     {
         public SpiritAwayAVR()
         {
@@ -3498,7 +3498,7 @@ namespace MagicProgram
     # endregion
 
     # region Stern Mentor
-    class SternMentorAVR : MagicCard
+    public class SternMentorAVR : MagicCard
     {
         public SternMentorAVR()
         {
@@ -3516,7 +3516,7 @@ namespace MagicProgram
     # endregion
 
     # region Stolen Goods
-    class StolenGoodsAVR : MagicCard
+    public class StolenGoodsAVR : MagicCard
     {
         public StolenGoodsAVR()
         {
@@ -3534,7 +3534,7 @@ namespace MagicProgram
     # endregion
 
     # region Stonewright
-    class StonewrightAVR : MagicCard
+    public class StonewrightAVR : MagicCard
     {
         public StonewrightAVR()
         {
@@ -3552,7 +3552,7 @@ namespace MagicProgram
     # endregion
 
     # region Swamp
-    class SwampAVR : MagicCard
+    public class SwampAVR : MagicCard
     {
         public SwampAVR()
         {
@@ -3570,7 +3570,7 @@ namespace MagicProgram
     # endregion
 
     # region Tamiyo, the Moon Sage
-    class TamiyotheMoonSageAVR : MagicCard
+    public class TamiyotheMoonSageAVR : MagicCard
     {
         public TamiyotheMoonSageAVR()
         {
@@ -3588,7 +3588,7 @@ namespace MagicProgram
     # endregion
 
     # region Tandem Lookout
-    class TandemLookoutAVR : MagicCard
+    public class TandemLookoutAVR : MagicCard
     {
         public TandemLookoutAVR()
         {
@@ -3606,7 +3606,7 @@ namespace MagicProgram
     # endregion
 
     # region Temporal Mastery
-    class TemporalMasteryAVR : MagicCard
+    public class TemporalMasteryAVR : MagicCard
     {
         public TemporalMasteryAVR()
         {
@@ -3624,7 +3624,7 @@ namespace MagicProgram
     # endregion
 
     # region Terminus
-    class TerminusAVR : MagicCard
+    public class TerminusAVR : MagicCard
     {
         public TerminusAVR()
         {
@@ -3642,7 +3642,7 @@ namespace MagicProgram
     # endregion
 
     # region Terrifying Presence
-    class TerrifyingPresenceAVR : MagicCard
+    public class TerrifyingPresenceAVR : MagicCard
     {
         public TerrifyingPresenceAVR()
         {
@@ -3660,7 +3660,7 @@ namespace MagicProgram
     # endregion
 
     # region Thatcher Revolt
-    class ThatcherRevoltAVR : MagicCard
+    public class ThatcherRevoltAVR : MagicCard
     {
         public ThatcherRevoltAVR()
         {
@@ -3678,7 +3678,7 @@ namespace MagicProgram
     # endregion
 
     # region Thraben Valiant
-    class ThrabenValiantAVR : MagicCard
+    public class ThrabenValiantAVR : MagicCard
     {
         public ThrabenValiantAVR()
         {
@@ -3696,7 +3696,7 @@ namespace MagicProgram
     # endregion
 
     # region Thunderbolt
-    class ThunderboltAVR : MagicCard
+    public class ThunderboltAVR : MagicCard
     {
         public ThunderboltAVR()
         {
@@ -3714,7 +3714,7 @@ namespace MagicProgram
     # endregion
 
     # region Thunderous Wrath
-    class ThunderousWrathAVR : MagicCard
+    public class ThunderousWrathAVR : MagicCard
     {
         public ThunderousWrathAVR()
         {
@@ -3732,7 +3732,7 @@ namespace MagicProgram
     # endregion
 
     # region Tibalt, the Fiend-Blooded
-    class TibalttheFiendBloodedAVR : MagicCard
+    public class TibalttheFiendBloodedAVR : MagicCard
     {
         public TibalttheFiendBloodedAVR()
         {
@@ -3750,7 +3750,7 @@ namespace MagicProgram
     # endregion
 
     # region Timberland Guide
-    class TimberlandGuideAVR : MagicCard
+    public class TimberlandGuideAVR : MagicCard
     {
         public TimberlandGuideAVR()
         {
@@ -3768,7 +3768,7 @@ namespace MagicProgram
     # endregion
 
     # region Tormentor's Trident
-    class TormentorsTridentAVR : MagicCard
+    public class TormentorsTridentAVR : MagicCard
     {
         public TormentorsTridentAVR()
         {
@@ -3786,7 +3786,7 @@ namespace MagicProgram
     # endregion
 
     # region Treacherous Pit-Dweller
-    class TreacherousPitDwellerAVR : MagicCard
+    public class TreacherousPitDwellerAVR : MagicCard
     {
         public TreacherousPitDwellerAVR()
         {
@@ -3804,7 +3804,7 @@ namespace MagicProgram
     # endregion
 
     # region Triumph of Cruelty
-    class TriumphofCrueltyAVR : MagicCard
+    public class TriumphofCrueltyAVR : MagicCard
     {
         public TriumphofCrueltyAVR()
         {
@@ -3822,7 +3822,7 @@ namespace MagicProgram
     # endregion
 
     # region Triumph of Ferocity
-    class TriumphofFerocityAVR : MagicCard
+    public class TriumphofFerocityAVR : MagicCard
     {
         public TriumphofFerocityAVR()
         {
@@ -3840,7 +3840,7 @@ namespace MagicProgram
     # endregion
 
     # region Trusted Forcemage
-    class TrustedForcemageAVR : MagicCard
+    public class TrustedForcemageAVR : MagicCard
     {
         public TrustedForcemageAVR()
         {
@@ -3858,7 +3858,7 @@ namespace MagicProgram
     # endregion
 
     # region Tyrant of Discord
-    class TyrantofDiscordAVR : MagicCard
+    public class TyrantofDiscordAVR : MagicCard
     {
         public TyrantofDiscordAVR()
         {
@@ -3876,7 +3876,7 @@ namespace MagicProgram
     # endregion
 
     # region Ulvenwald Tracker
-    class UlvenwaldTrackerAVR : MagicCard
+    public class UlvenwaldTrackerAVR : MagicCard
     {
         public UlvenwaldTrackerAVR()
         {
@@ -3894,7 +3894,7 @@ namespace MagicProgram
     # endregion
 
     # region Uncanny Speed
-    class UncannySpeedAVR : MagicCard
+    public class UncannySpeedAVR : MagicCard
     {
         public UncannySpeedAVR()
         {
@@ -3912,7 +3912,7 @@ namespace MagicProgram
     # endregion
 
     # region Undead Executioner
-    class UndeadExecutionerAVR : MagicCard
+    public class UndeadExecutionerAVR : MagicCard
     {
         public UndeadExecutionerAVR()
         {
@@ -3930,7 +3930,7 @@ namespace MagicProgram
     # endregion
 
     # region Unhallowed Pact
-    class UnhallowedPactAVR : MagicCard
+    public class UnhallowedPactAVR : MagicCard
     {
         public UnhallowedPactAVR()
         {
@@ -3948,7 +3948,7 @@ namespace MagicProgram
     # endregion
 
     # region Vanguard's Shield
-    class VanguardsShieldAVR : MagicCard
+    public class VanguardsShieldAVR : MagicCard
     {
         public VanguardsShieldAVR()
         {
@@ -3966,7 +3966,7 @@ namespace MagicProgram
     # endregion
 
     # region Vanishment
-    class VanishmentAVR : MagicCard
+    public class VanishmentAVR : MagicCard
     {
         public VanishmentAVR()
         {
@@ -3984,7 +3984,7 @@ namespace MagicProgram
     # endregion
 
     # region Vessel of Endless Rest
-    class VesselofEndlessRestAVR : MagicCard
+    public class VesselofEndlessRestAVR : MagicCard
     {
         public VesselofEndlessRestAVR()
         {
@@ -4002,7 +4002,7 @@ namespace MagicProgram
     # endregion
 
     # region Vexing Devil
-    class VexingDevilAVR : MagicCard
+    public class VexingDevilAVR : MagicCard
     {
         public VexingDevilAVR()
         {
@@ -4020,7 +4020,7 @@ namespace MagicProgram
     # endregion
 
     # region Vigilante Justice
-    class VigilanteJusticeAVR : MagicCard
+    public class VigilanteJusticeAVR : MagicCard
     {
         public VigilanteJusticeAVR()
         {
@@ -4038,7 +4038,7 @@ namespace MagicProgram
     # endregion
 
     # region Voice of the Provinces
-    class VoiceoftheProvincesAVR : MagicCard
+    public class VoiceoftheProvincesAVR : MagicCard
     {
         public VoiceoftheProvincesAVR()
         {
@@ -4056,7 +4056,7 @@ namespace MagicProgram
     # endregion
 
     # region Vorstclaw
-    class VorstclawAVR : MagicCard
+    public class VorstclawAVR : MagicCard
     {
         public VorstclawAVR()
         {
@@ -4074,7 +4074,7 @@ namespace MagicProgram
     # endregion
 
     # region Wandering Wolf
-    class WanderingWolfAVR : MagicCard
+    public class WanderingWolfAVR : MagicCard
     {
         public WanderingWolfAVR()
         {
@@ -4092,7 +4092,7 @@ namespace MagicProgram
     # endregion
 
     # region Wild Defiance
-    class WildDefianceAVR : MagicCard
+    public class WildDefianceAVR : MagicCard
     {
         public WildDefianceAVR()
         {
@@ -4110,7 +4110,7 @@ namespace MagicProgram
     # endregion
 
     # region Wildwood Geist
-    class WildwoodGeistAVR : MagicCard
+    public class WildwoodGeistAVR : MagicCard
     {
         public WildwoodGeistAVR()
         {
@@ -4128,7 +4128,7 @@ namespace MagicProgram
     # endregion
 
     # region Wingcrafter
-    class WingcrafterAVR : MagicCard
+    public class WingcrafterAVR : MagicCard
     {
         public WingcrafterAVR()
         {
@@ -4146,7 +4146,7 @@ namespace MagicProgram
     # endregion
 
     # region Wolfir Avenger
-    class WolfirAvengerAVR : MagicCard
+    public class WolfirAvengerAVR : MagicCard
     {
         public WolfirAvengerAVR()
         {
@@ -4164,7 +4164,7 @@ namespace MagicProgram
     # endregion
 
     # region Wolfir Silverheart
-    class WolfirSilverheartAVR : MagicCard
+    public class WolfirSilverheartAVR : MagicCard
     {
         public WolfirSilverheartAVR()
         {
@@ -4182,7 +4182,7 @@ namespace MagicProgram
     # endregion
 
     # region Yew Spirit
-    class YewSpiritAVR : MagicCard
+    public class YewSpiritAVR : MagicCard
     {
         public YewSpiritAVR()
         {
@@ -4200,7 +4200,7 @@ namespace MagicProgram
     # endregion
 
     # region Zealous Conscripts
-    class ZealousConscriptsAVR : MagicCard
+    public class ZealousConscriptsAVR : MagicCard
     {
         public ZealousConscriptsAVR()
         {
@@ -4218,7 +4218,7 @@ namespace MagicProgram
     # endregion
 
     # region Zealous Strike
-    class ZealousStrikeAVR : MagicCard
+    public class ZealousStrikeAVR : MagicCard
     {
         public ZealousStrikeAVR()
         {

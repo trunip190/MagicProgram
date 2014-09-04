@@ -100,31 +100,23 @@ namespace MagicProgram
             if (!File.Exists(filename))
             {
                 SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd";
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    filename = sfd.FileName;
-                }
-                else
+                sfd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd|Text file (*.txt)|*.txt";
+
+                if (sfd.ShowDialog() != DialogResult.OK)
                 {
                     return;
                 }
+
+                Deck.Filename = sfd.FileName;
             }
 
-            Deck.Filename = filename;
-
-            using (Stream stream = File.Create(filename))
-            {
-                XmlSerializer serial = new XmlSerializer(typeof(CardCollection));
-
-                serial.Serialize(stream, Deck);
-            }
+            Deck_Save(filename);
         }
 
         private void saveAsDeckToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd";
+            sfd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd|Text file (*.txt)|*.txt";
 
             if (sfd.ShowDialog() != DialogResult.OK)
             {
@@ -133,11 +125,26 @@ namespace MagicProgram
 
             Deck.Filename = sfd.FileName;
 
-            using (Stream stream = File.Create(sfd.FileName))
-            {
-                XmlSerializer serial = new XmlSerializer(typeof(CardCollection));
+            Deck_Save(Deck.Filename);
+        }
 
-                serial.Serialize(stream, Deck);
+        private void Deck_Save(string filename)
+        {
+            Deck.Filename = filename;
+            string s = Path.GetExtension(Deck.Filename);
+
+            if (s == ".mcxd")
+            {
+                using (Stream stream = File.Create(filename))
+                {
+                    XmlSerializer serial = new XmlSerializer(typeof(CardCollection));
+
+                    serial.Serialize(stream, Deck);
+                }
+            }
+            else if (s == ".txt")
+            {
+                Deck_SaveBasic(Deck.Filename);
             }
         }
 
@@ -165,7 +172,7 @@ namespace MagicProgram
         private void loadDeckToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd";
+            ofd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd|Text files (*.txt)|*.txt";
 
             if (ofd.ShowDialog() == DialogResult.OK && File.Exists(ofd.FileName))
             {
@@ -1028,14 +1035,22 @@ namespace MagicProgram
             {
                 Deck.Clear();
 
-                using (Stream stream = File.Open(file, FileMode.Open))
+                string s = Path.GetExtension(file);
+                if (s == ".mcxd")
                 {
-                    XmlSerializer serial = new XmlSerializer(typeof(CardCollection));
+                    using (Stream stream = File.Open(file, FileMode.Open))
+                    {
+                        XmlSerializer serial = new XmlSerializer(typeof(CardCollection));
 
-                    Deck = (CardCollection)serial.Deserialize(stream);
-                    listView2_refresh();
+                        Deck = (CardCollection)serial.Deserialize(stream);
+                        listView2_refresh();
 
-                    Output.Write("Deck loaded.");
+                        Output.Write("Deck loaded.");
+                    }
+                }
+                else if ( s == ".txt")
+                {
+                    Deck_LoadBasic(file);
                 }
 
                 Deck.Filename = file;
@@ -1064,6 +1079,7 @@ namespace MagicProgram
                 }
             }
             Deck.cards = cards;
+            listView2_refresh();
         }
 
         private void Deck_SaveBasic(string file)
@@ -1073,7 +1089,7 @@ namespace MagicProgram
 
             foreach (MagicCard mc in Deck.cards)
             {
-                lines.Add(mc.Name + "#" + mc.quantity + "\r\n");
+                lines.Add(mc.Name + "#" + mc.quantity);
             }
 
             File.WriteAllLines(file, lines, Encoding.Default);
