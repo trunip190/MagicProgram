@@ -7375,6 +7375,23 @@ namespace MagicProgram
             Text = "Sliver creatures you control have �%T: Add one mana of any color to your mana pool.�";
             Flavor = "";
         }
+
+        public override bool TryActivate(int i)
+        {
+            if (Tapped)
+            {
+                return false;
+            }
+
+            Tap(true, false);
+            DoActivate(i);
+            return true;
+        }
+
+        public override void DoActivate(int i)
+        {
+            PArea.mw.ShowWheel("BGURW");
+        }
     }
     # endregion
 
@@ -13269,6 +13286,30 @@ namespace MagicProgram
             Type = "Land";
             Text = "T: Add 1 to your mana pool.^T: Add one mana of any color to your mana pool. Spend this mana only to cast a Sliver spell.^5, T: Put a 1/1 colorless Sliver creature token onto the battlefield. Activate this ability only if you control a Sliver.";
             Flavor = "";
+        }
+
+        public override bool TryActivate(int i)
+        {
+            if (Tapped)
+            {
+                return false;
+            }
+
+            Tap(true, false);
+            DoActivate(i);
+            return true;
+        }
+
+        public override void DoActivate(int i)
+        {
+            if (i == 0)
+            {
+                PArea.mana.grey += 1;
+            }
+            if (i == 1)
+            {
+                PArea.mw.ShowWheel("BGURW");
+            }
         }
     }
     # endregion

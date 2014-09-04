@@ -2756,7 +2756,7 @@ namespace MagicProgram
         /// </summary>
         /// <param name="i">The index of the ability to try (0 base)</param>
         /// <returns>Whether the ability can activate</returns>
-        public bool TryActivate(int i)
+        public virtual bool TryActivate(int i)
         {
             ParseText();
 
@@ -2770,6 +2770,11 @@ namespace MagicProgram
             callActivating(i);
 
             return result;
+        }
+
+        public virtual void DoActivate(int i)
+        {
+            callActivate(i);
         }
 
         public virtual void Evolve(int p, int t)

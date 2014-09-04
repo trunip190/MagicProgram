@@ -1170,7 +1170,7 @@ namespace MagicProgram
 
             if (i > -1)
             {
-                MagicCard mc = new MagicCard(OppArea._hand.cards[i]);
+                MagicCard mc = CardMethods.GetClass(OppArea._hand.cards[i]);
                 OppArea.PlayCard(mc);
                 OppArea._hand.cards.RemoveAt(i);
             }
@@ -1230,7 +1230,7 @@ namespace MagicProgram
                     //play card
                     if (mana)
                     {
-                        MagicCard mcs = new MagicCard(mc);
+                        MagicCard mcs = CardMethods.GetClass(mc);
                         OppArea.PlayCard(mcs);
                         OppArea._hand.cards.Remove(mc);
                         break;
@@ -3522,7 +3522,7 @@ namespace MagicProgram
             {
                 for (int i = 0; i < mc.quantity; i++)
                 {
-                    MagicCard newCard = new MagicCard(mc);
+                    MagicCard newCard = CardMethods.GetClass(mc); ;
                     newCard.quantity = 1;
                     newCard.Initialise();
                     _stack.cards.Add(newCard);
