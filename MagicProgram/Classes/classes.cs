@@ -3700,6 +3700,1416 @@ namespace MagicProgram
             MagicCard mcn;
             switch (s)
             {
+                # region Innistrad
+
+                # endregion
+
+                # region Avacyn Restored
+                # region Abundant Growth
+                case "Abundant Growth":
+                    mcn = new AbundantGrowthAVR();
+                    break;
+                # endregion
+
+                # region Aggravate
+                case "Aggravate":
+                    mcn = new AggravateAVR();
+                    break;
+                # endregion
+
+                # region Alchemist's Apprentice
+                case "Alchemist's Apprentice":
+                    mcn = new AlchemistsApprenticeAVR();
+                    break;
+                # endregion
+
+                # region Alchemist's Refuge
+                case "Alchemist's Refuge":
+                    mcn = new AlchemistsRefugeAVR();
+                    break;
+                # endregion
+
+                # region Amass the Components
+                case "Amass the Components":
+                    mcn = new AmasstheComponentsAVR();
+                    break;
+                # endregion
+
+                # region Angel of Glory's Rise
+                case "Angel of Glory's Rise":
+                    mcn = new AngelofGlorysRiseAVR();
+                    break;
+                # endregion
+
+                # region Angel of Jubilation
+                case "Angel of Jubilation":
+                    mcn = new AngelofJubilationAVR();
+                    break;
+                # endregion
+
+                # region Angelic Armaments
+                case "Angelic Armaments":
+                    mcn = new AngelicArmamentsAVR();
+                    break;
+                # endregion
+
+                # region Angelic Wall
+                case "Angelic Wall":
+                    mcn = new AngelicWallAVR();
+                    break;
+                # endregion
+
+                # region Angel's Mercy
+                case "Angel's Mercy":
+                    mcn = new AngelsMercyAVR();
+                    break;
+                # endregion
+
+                # region Angel's Tomb
+                case "Angel's Tomb":
+                    mcn = new AngelsTombAVR();
+                    break;
+                # endregion
+
+                # region Appetite for Brains
+                case "Appetite for Brains":
+                    mcn = new AppetiteforBrainsAVR();
+                    break;
+                # endregion
+
+                # region Arcane Melee
+                case "Arcane Melee":
+                    mcn = new ArcaneMeleeAVR();
+                    break;
+                # endregion
+
+                # region Archangel
+                case "Archangel":
+                    mcn = new ArchangelAVR();
+                    break;
+                # endregion
+
+                # region Archwing Dragon
+                case "Archwing Dragon":
+                    mcn = new ArchwingDragonAVR();
+                    break;
+                # endregion
+
+                # region Avacyn, Angel of Hope
+                case "Avacyn, Angel of Hope":
+                    mcn = new AvacynAngelofHopeAVR();
+                    break;
+                # endregion
+
+                # region Banishing Stroke
+                case "Banishing Stroke":
+                    mcn = new BanishingStrokeAVR();
+                    break;
+                # endregion
+
+                # region Banners Raised
+                case "Banners Raised":
+                    mcn = new BannersRaisedAVR();
+                    break;
+                # endregion
+
+                # region Barter in Blood
+                case "Barter in Blood":
+                    mcn = new BarterinBloodAVR();
+                    break;
+                # endregion
+
+                # region Battle Hymn
+                case "Battle Hymn":
+                    mcn = new BattleHymnAVR();
+                    break;
+                # endregion
+
+                # region Bladed Bracers
+                case "Bladed Bracers":
+                    mcn = new BladedBracersAVR();
+                    break;
+                # endregion
+
+                # region Blessings of Nature
+                case "Blessings of Nature":
+                    mcn = new BlessingsofNatureAVR();
+                    break;
+                # endregion
+
+                # region Blood Artist
+                case "Blood Artist":
+                    mcn = new BloodArtistAVR();
+                    break;
+                # endregion
+
+                # region Bloodflow Connoisseur
+                case "Bloodflow Connoisseur":
+                    mcn = new BloodflowConnoisseurAVR();
+                    break;
+                # endregion
+
+                # region Bone Splinters
+                case "Bone Splinters":
+                    mcn = new BoneSplintersAVR();
+                    break;
+                # endregion
+
+                # region Bonfire of the Damned
+                case "Bonfire of the Damned":
+                    mcn = new BonfireoftheDamnedAVR();
+                    break;
+                # endregion
+
+                # region Borderland Ranger
+                case "Borderland Ranger":
+                    mcn = new BorderlandRangerAVR();
+                    break;
+                # endregion
+
+                # region Bower Passage
+                case "Bower Passage":
+                    mcn = new BowerPassageAVR();
+                    break;
+                # endregion
+
+                # region Bruna, Light of Alabaster
+                case "Bruna, Light of Alabaster":
+                    mcn = new BrunaLightofAlabasterAVR();
+                    break;
+                # endregion
+
+                # region Builder's Blessing
+                case "Builder's Blessing":
+                    mcn = new BuildersBlessingAVR();
+                    break;
+                # endregion
+
+                # region Burn at the Stake
+                case "Burn at the Stake":
+                    mcn = new BurnattheStakeAVR();
+                    break;
+                # endregion
+
+                # region Butcher Ghoul
+                case "Butcher Ghoul":
+                    mcn = new ButcherGhoulAVR();
+                    break;
+                # endregion
+
+                # region Call to Serve
+                case "Call to Serve":
+                    mcn = new CalltoServeAVR();
+                    break;
+                # endregion
+
+                # region Captain of the Mists
+                case "Captain of the Mists":
+                    mcn = new CaptainoftheMistsAVR();
+                    break;
+                # endregion
+
+                # region Cathars' Crusade
+                case "Cathars' Crusade":
+                    mcn = new CatharsCrusadeAVR();
+                    break;
+                # endregion
+
+                # region Cathedral Sanctifier
+                case "Cathedral Sanctifier":
+                    mcn = new CathedralSanctifierAVR();
+                    break;
+                # endregion
+
+                # region Cavern of Souls
+                case "Cavern of Souls":
+                    mcn = new CavernofSoulsAVR();
+                    break;
+                # endregion
+
+                # region Champion of Lambholt
+                case "Champion of Lambholt":
+                    mcn = new ChampionofLambholtAVR();
+                    break;
+                # endregion
+
+                # region Cloudshift
+                case "Cloudshift":
+                    mcn = new CloudshiftAVR();
+                    break;
+                # endregion
+
+                # region Commander's Authority
+                case "Commander's Authority":
+                    mcn = new CommandersAuthorityAVR();
+                    break;
+                # endregion
+
+                # region Conjurer's Closet
+                case "Conjurer's Closet":
+                    mcn = new ConjurersClosetAVR();
+                    break;
+                # endregion
+
+                # region Corpse Traders
+                case "Corpse Traders":
+                    mcn = new CorpseTradersAVR();
+                    break;
+                # endregion
+
+                # region Craterhoof Behemoth
+                case "Craterhoof Behemoth":
+                    mcn = new CraterhoofBehemothAVR();
+                    break;
+                # endregion
+
+                # region Crippling Chill
+                case "Crippling Chill":
+                    mcn = new CripplingChillAVR();
+                    break;
+                # endregion
+
+                # region Crypt Creeper
+                case "Crypt Creeper":
+                    mcn = new CryptCreeperAVR();
+                    break;
+                # endregion
+
+                # region Cursebreak
+                case "Cursebreak":
+                    mcn = new CursebreakAVR();
+                    break;
+                # endregion
+
+                # region Dangerous Wager
+                case "Dangerous Wager":
+                    mcn = new DangerousWagerAVR();
+                    break;
+                # endregion
+
+                # region Dark Impostor
+                case "Dark Impostor":
+                    mcn = new DarkImpostorAVR();
+                    break;
+                # endregion
+
+                # region Deadeye Navigator
+                case "Deadeye Navigator":
+                    mcn = new DeadeyeNavigatorAVR();
+                    break;
+                # endregion
+
+                # region Death Wind
+                case "Death Wind":
+                    mcn = new DeathWindAVR();
+                    break;
+                # endregion
+
+                # region Defang
+                case "Defang":
+                    mcn = new DefangAVR();
+                    break;
+                # endregion
+
+                # region Defy Death
+                case "Defy Death":
+                    mcn = new DefyDeathAVR();
+                    break;
+                # endregion
+
+                # region Demolish
+                case "Demolish":
+                    mcn = new DemolishAVR();
+                    break;
+                # endregion
+
+                # region Demonic Rising
+                case "Demonic Rising":
+                    mcn = new DemonicRisingAVR();
+                    break;
+                # endregion
+
+                # region Demonic Taskmaster
+                case "Demonic Taskmaster":
+                    mcn = new DemonicTaskmasterAVR();
+                    break;
+                # endregion
+
+                # region Demonlord of Ashmouth
+                case "Demonlord of Ashmouth":
+                    mcn = new DemonlordofAshmouthAVR();
+                    break;
+                # endregion
+
+                # region Descendants' Path
+                case "Descendants' Path":
+                    mcn = new DescendantsPathAVR();
+                    break;
+                # endregion
+
+                # region Descent into Madness
+                case "Descent into Madness":
+                    mcn = new DescentintoMadnessAVR();
+                    break;
+                # endregion
+
+                # region Desolate Lighthouse
+                case "Desolate Lighthouse":
+                    mcn = new DesolateLighthouseAVR();
+                    break;
+                # endregion
+
+                # region Devastation Tide
+                case "Devastation Tide":
+                    mcn = new DevastationTideAVR();
+                    break;
+                # endregion
+
+                # region Devout Chaplain
+                case "Devout Chaplain":
+                    mcn = new DevoutChaplainAVR();
+                    break;
+                # endregion
+
+                # region Diregraf Escort
+                case "Diregraf Escort":
+                    mcn = new DiregrafEscortAVR();
+                    break;
+                # endregion
+
+                # region Divine Deflection
+                case "Divine Deflection":
+                    mcn = new DivineDeflectionAVR();
+                    break;
+                # endregion
+
+                # region Dread Slaver
+                case "Dread Slaver":
+                    mcn = new DreadSlaverAVR();
+                    break;
+                # endregion
+
+                # region Dreadwaters
+                case "Dreadwaters":
+                    mcn = new DreadwatersAVR();
+                    break;
+                # endregion
+
+                # region Driver of the Dead
+                case "Driver of the Dead":
+                    mcn = new DriveroftheDeadAVR();
+                    break;
+                # endregion
+
+                # region Druid's Familiar
+                case "Druid's Familiar":
+                    mcn = new DruidsFamiliarAVR();
+                    break;
+                # endregion
+
+                # region Druids' Repository
+                case "Druids' Repository":
+                    mcn = new DruidsRepositoryAVR();
+                    break;
+                # endregion
+
+                # region Dual Casting
+                case "Dual Casting":
+                    mcn = new DualCastingAVR();
+                    break;
+                # endregion
+
+                # region Eaten by Spiders
+                case "Eaten by Spiders":
+                    mcn = new EatenbySpidersAVR();
+                    break;
+                # endregion
+
+                # region Elgaud Shieldmate
+                case "Elgaud Shieldmate":
+                    mcn = new ElgaudShieldmateAVR();
+                    break;
+                # endregion
+
+                # region Emancipation Angel
+                case "Emancipation Angel":
+                    mcn = new EmancipationAngelAVR();
+                    break;
+                # endregion
+
+                # region Entreat the Angels
+                case "Entreat the Angels":
+                    mcn = new EntreattheAngelsAVR();
+                    break;
+                # endregion
+
+                # region Essence Harvest
+                case "Essence Harvest":
+                    mcn = new EssenceHarvestAVR();
+                    break;
+                # endregion
+
+                # region Evernight Shade
+                case "Evernight Shade":
+                    mcn = new EvernightShadeAVR();
+                    break;
+                # endregion
+
+                # region Exquisite Blood
+                case "Exquisite Blood":
+                    mcn = new ExquisiteBloodAVR();
+                    break;
+                # endregion
+
+                # region Falkenrath Exterminator
+                case "Falkenrath Exterminator":
+                    mcn = new FalkenrathExterminatorAVR();
+                    break;
+                # endregion
+
+                # region Farbog Explorer
+                case "Farbog Explorer":
+                    mcn = new FarbogExplorerAVR();
+                    break;
+                # endregion
+
+                # region Favorable Winds
+                case "Favorable Winds":
+                    mcn = new FavorableWindsAVR();
+                    break;
+                # endregion
+
+                # region Fervent Cathar
+                case "Fervent Cathar":
+                    mcn = new FerventCatharAVR();
+                    break;
+                # endregion
+
+                # region Fettergeist
+                case "Fettergeist":
+                    mcn = new FettergeistAVR();
+                    break;
+                # endregion
+
+                # region Fleeting Distraction
+                case "Fleeting Distraction":
+                    mcn = new FleetingDistractionAVR();
+                    break;
+                # endregion
+
+                # region Flowering Lumberknot
+                case "Flowering Lumberknot":
+                    mcn = new FloweringLumberknotAVR();
+                    break;
+                # endregion
+
+                # region Forest
+                case "Forest":
+                    mcn = new ForestAVR();
+                    break;
+                # endregion
+
+                # region Gallows at Willow Hill
+                case "Gallows at Willow Hill":
+                    mcn = new GallowsatWillowHillAVR();
+                    break;
+                # endregion
+
+                # region Galvanic Alchemist
+                case "Galvanic Alchemist":
+                    mcn = new GalvanicAlchemistAVR();
+                    break;
+                # endregion
+
+                # region Gang of Devils
+                case "Gang of Devils":
+                    mcn = new GangofDevilsAVR();
+                    break;
+                # endregion
+
+                # region Geist Snatch
+                case "Geist Snatch":
+                    mcn = new GeistSnatchAVR();
+                    break;
+                # endregion
+
+                # region Geist Trappers
+                case "Geist Trappers":
+                    mcn = new GeistTrappersAVR();
+                    break;
+                # endregion
+
+                # region Ghostform
+                case "Ghostform":
+                    mcn = new GhostformAVR();
+                    break;
+                # endregion
+
+                # region Ghostly Flicker
+                case "Ghostly Flicker":
+                    mcn = new GhostlyFlickerAVR();
+                    break;
+                # endregion
+
+                # region Ghostly Touch
+                case "Ghostly Touch":
+                    mcn = new GhostlyTouchAVR();
+                    break;
+                # endregion
+
+                # region Ghoulflesh
+                case "Ghoulflesh":
+                    mcn = new GhoulfleshAVR();
+                    break;
+                # endregion
+
+                # region Gisela, Blade of Goldnight
+                case "Gisela, Blade of Goldnight":
+                    mcn = new GiselaBladeofGoldnightAVR();
+                    break;
+                # endregion
+
+                # region Gloom Surgeon
+                case "Gloom Surgeon":
+                    mcn = new GloomSurgeonAVR();
+                    break;
+                # endregion
+
+                # region Gloomwidow
+                case "Gloomwidow":
+                    mcn = new GloomwidowAVR();
+                    break;
+                # endregion
+
+                # region Goldnight Commander
+                case "Goldnight Commander":
+                    mcn = new GoldnightCommanderAVR();
+                    break;
+                # endregion
+
+                # region Goldnight Redeemer
+                case "Goldnight Redeemer":
+                    mcn = new GoldnightRedeemerAVR();
+                    break;
+                # endregion
+
+                # region Grave Exchange
+                case "Grave Exchange":
+                    mcn = new GraveExchangeAVR();
+                    break;
+                # endregion
+
+                # region Griselbrand
+                case "Griselbrand":
+                    mcn = new GriselbrandAVR();
+                    break;
+                # endregion
+
+                # region Grounded
+                case "Grounded":
+                    mcn = new GroundedAVR();
+                    break;
+                # endregion
+
+                # region Gryff Vanguard
+                case "Gryff Vanguard":
+                    mcn = new GryffVanguardAVR();
+                    break;
+                # endregion
+
+                # region Guise of Fire
+                case "Guise of Fire":
+                    mcn = new GuiseofFireAVR();
+                    break;
+                # endregion
+
+                # region Hanweir Lancer
+                case "Hanweir Lancer":
+                    mcn = new HanweirLancerAVR();
+                    break;
+                # endregion
+
+                # region Harvester of Souls
+                case "Harvester of Souls":
+                    mcn = new HarvesterofSoulsAVR();
+                    break;
+                # endregion
+
+                # region Haunted Guardian
+                case "Haunted Guardian":
+                    mcn = new HauntedGuardianAVR();
+                    break;
+                # endregion
+
+                # region Havengul Skaab
+                case "Havengul Skaab":
+                    mcn = new HavengulSkaabAVR();
+                    break;
+                # endregion
+
+                # region Havengul Vampire
+                case "Havengul Vampire":
+                    mcn = new HavengulVampireAVR();
+                    break;
+                # endregion
+
+                # region Heirs of Stromkirk
+                case "Heirs of Stromkirk":
+                    mcn = new HeirsofStromkirkAVR();
+                    break;
+                # endregion
+
+                # region Herald of War
+                case "Herald of War":
+                    mcn = new HeraldofWarAVR();
+                    break;
+                # endregion
+
+                # region Holy Justiciar
+                case "Holy Justiciar":
+                    mcn = new HolyJusticiarAVR();
+                    break;
+                # endregion
+
+                # region Homicidal Seclusion
+                case "Homicidal Seclusion":
+                    mcn = new HomicidalSeclusionAVR();
+                    break;
+                # endregion
+
+                # region Hound of Griselbrand
+                case "Hound of Griselbrand":
+                    mcn = new HoundofGriselbrandAVR();
+                    break;
+                # endregion
+
+                # region Howlgeist
+                case "Howlgeist":
+                    mcn = new HowlgeistAVR();
+                    break;
+                # endregion
+
+                # region Human Frailty
+                case "Human Frailty":
+                    mcn = new HumanFrailtyAVR();
+                    break;
+                # endregion
+
+                # region Hunted Ghoul
+                case "Hunted Ghoul":
+                    mcn = new HuntedGhoulAVR();
+                    break;
+                # endregion
+
+                # region Infinite Reflection
+                case "Infinite Reflection":
+                    mcn = new InfiniteReflectionAVR();
+                    break;
+                # endregion
+
+                # region Into the Void
+                case "Into the Void":
+                    mcn = new IntotheVoidAVR();
+                    break;
+                # endregion
+
+                # region Island
+                case "Island":
+                    mcn = new IslandAVR();
+                    break;
+                # endregion
+
+                # region Joint Assault
+                case "Joint Assault":
+                    mcn = new JointAssaultAVR();
+                    break;
+                # endregion
+
+                # region Kessig Malcontents
+                case "Kessig Malcontents":
+                    mcn = new KessigMalcontentsAVR();
+                    break;
+                # endregion
+
+                # region Killing Wave
+                case "Killing Wave":
+                    mcn = new KillingWaveAVR();
+                    break;
+                # endregion
+
+                # region Kruin Striker
+                case "Kruin Striker":
+                    mcn = new KruinStrikerAVR();
+                    break;
+                # endregion
+
+                # region Lair Delve
+                case "Lair Delve":
+                    mcn = new LairDelveAVR();
+                    break;
+                # endregion
+
+                # region Latch Seeker
+                case "Latch Seeker":
+                    mcn = new LatchSeekerAVR();
+                    break;
+                # endregion
+
+                # region Leap of Faith
+                case "Leap of Faith":
+                    mcn = new LeapofFaithAVR();
+                    break;
+                # endregion
+
+                # region Lightning Mauler
+                case "Lightning Mauler":
+                    mcn = new LightningMaulerAVR();
+                    break;
+                # endregion
+
+                # region Lightning Prowess
+                case "Lightning Prowess":
+                    mcn = new LightningProwessAVR();
+                    break;
+                # endregion
+
+                # region Lone Revenant
+                case "Lone Revenant":
+                    mcn = new LoneRevenantAVR();
+                    break;
+                # endregion
+
+                # region Lunar Mystic
+                case "Lunar Mystic":
+                    mcn = new LunarMysticAVR();
+                    break;
+                # endregion
+
+                # region Maalfeld Twins
+                case "Maalfeld Twins":
+                    mcn = new MaalfeldTwinsAVR();
+                    break;
+                # endregion
+
+                # region Mad Prophet
+                case "Mad Prophet":
+                    mcn = new MadProphetAVR();
+                    break;
+                # endregion
+
+                # region Malicious Intent
+                case "Malicious Intent":
+                    mcn = new MaliciousIntentAVR();
+                    break;
+                # endregion
+
+                # region Malignus
+                case "Malignus":
+                    mcn = new MalignusAVR();
+                    break;
+                # endregion
+
+                # region Marrow Bats
+                case "Marrow Bats":
+                    mcn = new MarrowBatsAVR();
+                    break;
+                # endregion
+
+                # region Mass Appeal
+                case "Mass Appeal":
+                    mcn = new MassAppealAVR();
+                    break;
+                # endregion
+
+                # region Mental Agony
+                case "Mental Agony":
+                    mcn = new MentalAgonyAVR();
+                    break;
+                # endregion
+
+                # region Midnight Duelist
+                case "Midnight Duelist":
+                    mcn = new MidnightDuelistAVR();
+                    break;
+                # endregion
+
+                # region Midvast Protector
+                case "Midvast Protector":
+                    mcn = new MidvastProtectorAVR();
+                    break;
+                # endregion
+
+                # region Mist Raven
+                case "Mist Raven":
+                    mcn = new MistRavenAVR();
+                    break;
+                # endregion
+
+                # region Misthollow Griffin
+                case "Misthollow Griffin":
+                    mcn = new MisthollowGriffinAVR();
+                    break;
+                # endregion
+
+                # region Moonlight Geist
+                case "Moonlight Geist":
+                    mcn = new MoonlightGeistAVR();
+                    break;
+                # endregion
+
+                # region Moonsilver Spear
+                case "Moonsilver Spear":
+                    mcn = new MoonsilverSpearAVR();
+                    break;
+                # endregion
+
+                # region Moorland Inquisitor
+                case "Moorland Inquisitor":
+                    mcn = new MoorlandInquisitorAVR();
+                    break;
+                # endregion
+
+                # region Mountain
+                case "Mountain":
+                    mcn = new MountainAVR();
+                    break;
+                # endregion
+
+                # region Narstad Scrapper
+                case "Narstad Scrapper":
+                    mcn = new NarstadScrapperAVR();
+                    break;
+                # endregion
+
+                # region Natural End
+                case "Natural End":
+                    mcn = new NaturalEndAVR();
+                    break;
+                # endregion
+
+                # region Nearheath Pilgrim
+                case "Nearheath Pilgrim":
+                    mcn = new NearheathPilgrimAVR();
+                    break;
+                # endregion
+
+                # region Necrobite
+                case "Necrobite":
+                    mcn = new NecrobiteAVR();
+                    break;
+                # endregion
+
+                # region Nephalia Smuggler
+                case "Nephalia Smuggler":
+                    mcn = new NephaliaSmugglerAVR();
+                    break;
+                # endregion
+
+                # region Nettle Swine
+                case "Nettle Swine":
+                    mcn = new NettleSwineAVR();
+                    break;
+                # endregion
+
+                # region Nightshade Peddler
+                case "Nightshade Peddler":
+                    mcn = new NightshadePeddlerAVR();
+                    break;
+                # endregion
+
+                # region Otherworld Atlas
+                case "Otherworld Atlas":
+                    mcn = new OtherworldAtlasAVR();
+                    break;
+                # endregion
+
+                # region Outwit
+                case "Outwit":
+                    mcn = new OutwitAVR();
+                    break;
+                # endregion
+
+                # region Pathbreaker Wurm
+                case "Pathbreaker Wurm":
+                    mcn = new PathbreakerWurmAVR();
+                    break;
+                # endregion
+
+                # region Peel from Reality
+                case "Peel from Reality":
+                    mcn = new PeelfromRealityAVR();
+                    break;
+                # endregion
+
+                # region Pillar of Flame
+                case "Pillar of Flame":
+                    mcn = new PillarofFlameAVR();
+                    break;
+                # endregion
+
+                # region Plains
+                case "Plains":
+                    mcn = new PlainsAVR();
+                    break;
+                # endregion
+
+                # region Polluted Dead
+                case "Polluted Dead":
+                    mcn = new PollutedDeadAVR();
+                    break;
+                # endregion
+
+                # region Predator's Gambit
+                case "Predator's Gambit":
+                    mcn = new PredatorsGambitAVR();
+                    break;
+                # endregion
+
+                # region Primal Surge
+                case "Primal Surge":
+                    mcn = new PrimalSurgeAVR();
+                    break;
+                # endregion
+
+                # region Raging Poltergeist
+                case "Raging Poltergeist":
+                    mcn = new RagingPoltergeistAVR();
+                    break;
+                # endregion
+
+                # region Rain of Thorns
+                case "Rain of Thorns":
+                    mcn = new RainofThornsAVR();
+                    break;
+                # endregion
+
+                # region Reforge the Soul
+                case "Reforge the Soul":
+                    mcn = new ReforgetheSoulAVR();
+                    break;
+                # endregion
+
+                # region Renegade Demon
+                case "Renegade Demon":
+                    mcn = new RenegadeDemonAVR();
+                    break;
+                # endregion
+
+                # region Restoration Angel
+                case "Restoration Angel":
+                    mcn = new RestorationAngelAVR();
+                    break;
+                # endregion
+
+                # region Revenge of the Hunted
+                case "Revenge of the Hunted":
+                    mcn = new RevengeoftheHuntedAVR();
+                    break;
+                # endregion
+
+                # region Riders of Gavony
+                case "Riders of Gavony":
+                    mcn = new RidersofGavonyAVR();
+                    break;
+                # endregion
+
+                # region Righteous Blow
+                case "Righteous Blow":
+                    mcn = new RighteousBlowAVR();
+                    break;
+                # endregion
+
+                # region Riot Ringleader
+                case "Riot Ringleader":
+                    mcn = new RiotRingleaderAVR();
+                    break;
+                # endregion
+
+                # region Rite of Ruin
+                case "Rite of Ruin":
+                    mcn = new RiteofRuinAVR();
+                    break;
+                # endregion
+
+                # region Rotcrown Ghoul
+                case "Rotcrown Ghoul":
+                    mcn = new RotcrownGhoulAVR();
+                    break;
+                # endregion
+
+                # region Rush of Blood
+                case "Rush of Blood":
+                    mcn = new RushofBloodAVR();
+                    break;
+                # endregion
+
+                # region Scalding Devil
+                case "Scalding Devil":
+                    mcn = new ScaldingDevilAVR();
+                    break;
+                # endregion
+
+                # region Scrapskin Drake
+                case "Scrapskin Drake":
+                    mcn = new ScrapskinDrakeAVR();
+                    break;
+                # endregion
+
+                # region Scroll of Avacyn
+                case "Scroll of Avacyn":
+                    mcn = new ScrollofAvacynAVR();
+                    break;
+                # endregion
+
+                # region Scroll of Griselbrand
+                case "Scroll of Griselbrand":
+                    mcn = new ScrollofGriselbrandAVR();
+                    break;
+                # endregion
+
+                # region Searchlight Geist
+                case "Searchlight Geist":
+                    mcn = new SearchlightGeistAVR();
+                    break;
+                # endregion
+
+                # region Second Guess
+                case "Second Guess":
+                    mcn = new SecondGuessAVR();
+                    break;
+                # endregion
+
+                # region Seraph of Dawn
+                case "Seraph of Dawn":
+                    mcn = new SeraphofDawnAVR();
+                    break;
+                # endregion
+
+                # region Seraph Sanctuary
+                case "Seraph Sanctuary":
+                    mcn = new SeraphSanctuaryAVR();
+                    break;
+                # endregion
+
+                # region Sheltering Word
+                case "Sheltering Word":
+                    mcn = new ShelteringWordAVR();
+                    break;
+                # endregion
+
+                # region Sigarda, Host of Herons
+                case "Sigarda, Host of Herons":
+                    mcn = new SigardaHostofHeronsAVR();
+                    break;
+                # endregion
+
+                # region Silverblade Paladin
+                case "Silverblade Paladin":
+                    mcn = new SilverbladePaladinAVR();
+                    break;
+                # endregion
+
+                # region Slayers' Stronghold
+                case "Slayers' Stronghold":
+                    mcn = new SlayersStrongholdAVR();
+                    break;
+                # endregion
+
+                # region Snare the Skies
+                case "Snare the Skies":
+                    mcn = new SnaretheSkiesAVR();
+                    break;
+                # endregion
+
+                # region Somberwald Sage
+                case "Somberwald Sage":
+                    mcn = new SomberwaldSageAVR();
+                    break;
+                # endregion
+
+                # region Somberwald Vigilante
+                case "Somberwald Vigilante":
+                    mcn = new SomberwaldVigilanteAVR();
+                    break;
+                # endregion
+
+                # region Soul of the Harvest
+                case "Soul of the Harvest":
+                    mcn = new SouloftheHarvestAVR();
+                    break;
+                # endregion
+
+                # region Soulcage Fiend
+                case "Soulcage Fiend":
+                    mcn = new SoulcageFiendAVR();
+                    break;
+                # endregion
+
+                # region Spectral Gateguards
+                case "Spectral Gateguards":
+                    mcn = new SpectralGateguardsAVR();
+                    break;
+                # endregion
+
+                # region Spectral Prison
+                case "Spectral Prison":
+                    mcn = new SpectralPrisonAVR();
+                    break;
+                # endregion
+
+                # region Spirit Away
+                case "Spirit Away":
+                    mcn = new SpiritAwayAVR();
+                    break;
+                # endregion
+
+                # region Stern Mentor
+                case "Stern Mentor":
+                    mcn = new SternMentorAVR();
+                    break;
+                # endregion
+
+                # region Stolen Goods
+                case "Stolen Goods":
+                    mcn = new StolenGoodsAVR();
+                    break;
+                # endregion
+
+                # region Stonewright
+                case "Stonewright":
+                    mcn = new StonewrightAVR();
+                    break;
+                # endregion
+
+                # region Swamp
+                case "Swamp":
+                    mcn = new SwampAVR();
+                    break;
+                # endregion
+
+                # region Tamiyo, the Moon Sage
+                case "Tamiyo, the Moon Sage":
+                    mcn = new TamiyotheMoonSageAVR();
+                    break;
+                # endregion
+
+                # region Tandem Lookout
+                case "Tandem Lookout":
+                    mcn = new TandemLookoutAVR();
+                    break;
+                # endregion
+
+                # region Temporal Mastery
+                case "Temporal Mastery":
+                    mcn = new TemporalMasteryAVR();
+                    break;
+                # endregion
+
+                # region Terminus
+                case "Terminus":
+                    mcn = new TerminusAVR();
+                    break;
+                # endregion
+
+                # region Terrifying Presence
+                case "Terrifying Presence":
+                    mcn = new TerrifyingPresenceAVR();
+                    break;
+                # endregion
+
+                # region Thatcher Revolt
+                case "Thatcher Revolt":
+                    mcn = new ThatcherRevoltAVR();
+                    break;
+                # endregion
+
+                # region Thraben Valiant
+                case "Thraben Valiant":
+                    mcn = new ThrabenValiantAVR();
+                    break;
+                # endregion
+
+                # region Thunderbolt
+                case "Thunderbolt":
+                    mcn = new ThunderboltAVR();
+                    break;
+                # endregion
+
+                # region Thunderous Wrath
+                case "Thunderous Wrath":
+                    mcn = new ThunderousWrathAVR();
+                    break;
+                # endregion
+
+                # region Tibalt, the Fiend-Blooded
+                case "Tibalt, the Fiend-Blooded":
+                    mcn = new TibalttheFiendBloodedAVR();
+                    break;
+                # endregion
+
+                # region Timberland Guide
+                case "Timberland Guide":
+                    mcn = new TimberlandGuideAVR();
+                    break;
+                # endregion
+
+                # region Tormentor's Trident
+                case "Tormentor's Trident":
+                    mcn = new TormentorsTridentAVR();
+                    break;
+                # endregion
+
+                # region Treacherous Pit-Dweller
+                case "Treacherous Pit-Dweller":
+                    mcn = new TreacherousPitDwellerAVR();
+                    break;
+                # endregion
+
+                # region Triumph of Cruelty
+                case "Triumph of Cruelty":
+                    mcn = new TriumphofCrueltyAVR();
+                    break;
+                # endregion
+
+                # region Triumph of Ferocity
+                case "Triumph of Ferocity":
+                    mcn = new TriumphofFerocityAVR();
+                    break;
+                # endregion
+
+                # region Trusted Forcemage
+                case "Trusted Forcemage":
+                    mcn = new TrustedForcemageAVR();
+                    break;
+                # endregion
+
+                # region Tyrant of Discord
+                case "Tyrant of Discord":
+                    mcn = new TyrantofDiscordAVR();
+                    break;
+                # endregion
+
+                # region Ulvenwald Tracker
+                case "Ulvenwald Tracker":
+                    mcn = new UlvenwaldTrackerAVR();
+                    break;
+                # endregion
+
+                # region Uncanny Speed
+                case "Uncanny Speed":
+                    mcn = new UncannySpeedAVR();
+                    break;
+                # endregion
+
+                # region Undead Executioner
+                case "Undead Executioner":
+                    mcn = new UndeadExecutionerAVR();
+                    break;
+                # endregion
+
+                # region Unhallowed Pact
+                case "Unhallowed Pact":
+                    mcn = new UnhallowedPactAVR();
+                    break;
+                # endregion
+
+                # region Vanguard's Shield
+                case "Vanguard's Shield":
+                    mcn = new VanguardsShieldAVR();
+                    break;
+                # endregion
+
+                # region Vanishment
+                case "Vanishment":
+                    mcn = new VanishmentAVR();
+                    break;
+                # endregion
+
+                # region Vessel of Endless Rest
+                case "Vessel of Endless Rest":
+                    mcn = new VesselofEndlessRestAVR();
+                    break;
+                # endregion
+
+                # region Vexing Devil
+                case "Vexing Devil":
+                    mcn = new VexingDevilAVR();
+                    break;
+                # endregion
+
+                # region Vigilante Justice
+                case "Vigilante Justice":
+                    mcn = new VigilanteJusticeAVR();
+                    break;
+                # endregion
+
+                # region Voice of the Provinces
+                case "Voice of the Provinces":
+                    mcn = new VoiceoftheProvincesAVR();
+                    break;
+                # endregion
+
+                # region Vorstclaw
+                case "Vorstclaw":
+                    mcn = new VorstclawAVR();
+                    break;
+                # endregion
+
+                # region Wandering Wolf
+                case "Wandering Wolf":
+                    mcn = new WanderingWolfAVR();
+                    break;
+                # endregion
+
+                # region Wild Defiance
+                case "Wild Defiance":
+                    mcn = new WildDefianceAVR();
+                    break;
+                # endregion
+
+                # region Wildwood Geist
+                case "Wildwood Geist":
+                    mcn = new WildwoodGeistAVR();
+                    break;
+                # endregion
+
+                # region Wingcrafter
+                case "Wingcrafter":
+                    mcn = new WingcrafterAVR();
+                    break;
+                # endregion
+
+                # region Wolfir Avenger
+                case "Wolfir Avenger":
+                    mcn = new WolfirAvengerAVR();
+                    break;
+                # endregion
+
+                # region Wolfir Silverheart
+                case "Wolfir Silverheart":
+                    mcn = new WolfirSilverheartAVR();
+                    break;
+                # endregion
+
+                # region Yew Spirit
+                case "Yew Spirit":
+                    mcn = new YewSpiritAVR();
+                    break;
+                # endregion
+
+                # region Zealous Conscripts
+                case "Zealous Conscripts":
+                    mcn = new ZealousConscriptsAVR();
+                    break;
+                # endregion
+
+                # region Zealous Strike
+                case "Zealous Strike":
+                    mcn = new ZealousStrikeAVR();
+                    break;
+                # endregion
+                # endregion
+
                 # region Born of the Gods
                 case "Acolyte's Reward":
                     mcn = new AcolytesReward();
@@ -4069,9 +5479,9 @@ namespace MagicProgram
                     mcn = new MortalsResolve();
                     break;
 
-                case "Necrobite":
-                    mcn = new Necrobite();
-                    break;
+                //case "Necrobite":
+                //    mcn = new Necrobite();
+                //    break;
 
                 case "Nessian Demolok":
                     mcn = new NessianDemolok();
@@ -5237,9 +6647,9 @@ namespace MagicProgram
                     mcn = new DefendtheHearth();
                     break;
 
-                case "Demolish":
-                    mcn = new Demolish();
-                    break;
+                //case "Demolish":
+                //    mcn = new Demolish();
+                //    break;
 
                 case "Destructive Revelry":
                     mcn = new DestructiveRevelry();
@@ -6459,11 +7869,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Forest
-                case "Forest":
-                    mcn = new Forest();
-                    break;
-                # endregion
+                //# region Forest
+                //case "Forest":
+                //    mcn = new Forest();
+                //    break;
+                //# endregion
 
                 # region Frostburn Weird
                 case "Frostburn Weird":
@@ -6639,11 +8049,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Island
-                case "Island":
-                    mcn = new Island();
-                    break;
-                # endregion
+                //# region Island
+                //case "Island":
+                //    mcn = new Island();
+                //    break;
+                //# endregion
 
                 # region Isperia, Supreme Judge
                 case "Isperia, Supreme Judge":
@@ -6801,11 +8211,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Mountain
-                case "Mountain":
-                    mcn = new Mountain();
-                    break;
-                # endregion
+                //# region Mountain
+                //case "Mountain":
+                //    mcn = new Mountain();
+                //    break;
+                //# endregion
 
                 # region Necropolis Regent
                 case "Necropolis Regent":
@@ -6891,11 +8301,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Plains
-                case "Plains":
-                    mcn = new Plains();
-                    break;
-                # endregion
+                //# region Plains
+                //case "Plains":
+                //    mcn = new Plains();
+                //    break;
+                //# endregion
 
                 # region Precinct Captain
                 case "Precinct Captain":
@@ -7257,11 +8667,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Swamp
-                case "Swamp":
-                    mcn = new Swamp();
-                    break;
-                # endregion
+                //# region Swamp
+                //case "Swamp":
+                //    mcn = new Swamp();
+                //    break;
+                //# endregion
 
                 # region Swift Justice
                 case "Swift Justice":
@@ -9963,11 +11373,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Angelic Wall
-                case "Angelic Wall":
-                    mcn = new AngelicWall();
-                    break;
-                # endregion
+                //# region Angelic Wall
+                //case "Angelic Wall":
+                //    mcn = new AngelicWall();
+                //    break;
+                //# endregion
 
                 # region Archaeomancer
                 case "Archaeomancer":
@@ -11308,8 +12718,7 @@ namespace MagicProgram
                 # endregion
 
                 # endregion
-
-
+                    
                 # region Magic 2015
                 //# region Accursed Spirit
                 //case "Accursed Spirit":
@@ -11953,11 +13362,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Into the Void
-                case "Into the Void":
-                    mcn = new IntotheVoid15();
-                    break;
-                # endregion
+                //# region Into the Void
+                //case "Into the Void":
+                //    mcn = new IntotheVoid15();
+                //    break;
+                //# endregion
 
                 # region Invasive Species
                 case "Invasive Species":
@@ -12307,11 +13716,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Peel from Reality
-                case "Peel from Reality":
-                    mcn = new PeelfromReality15();
-                    break;
-                # endregion
+                //# region Peel from Reality
+                //case "Peel from Reality":
+                //    mcn = new PeelfromReality15();
+                //    break;
+                //# endregion
 
                 # region Perilous Vault
                 case "Perilous Vault":
@@ -12926,8 +14335,7 @@ namespace MagicProgram
                 # endregion
 
                 # endregion
-
-
+                    
                 # region Basic Lands
                 //case "Forest":
                 //    mcn = new Forest();
