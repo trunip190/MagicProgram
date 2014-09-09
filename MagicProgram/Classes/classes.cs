@@ -14673,6 +14673,11 @@ namespace MagicProgram
         public bool Active = false;
     }
 
+    public class TempAbility : CardAbility
+    {
+        public string Expire = "End Turn";
+    }
+
     public enum CSize
     {
         vSmall,

@@ -6762,8 +6762,8 @@ namespace MagicProgram
 
 	public void SpellResolve(MagicCard mc)
 	{
-		mc.pBonus += 1;
-		Ability abi = new TempAbility
+		mc.PBonus += 1;
+		CardAbility abi = new TempAbility
 		{
 			Name = "First Strike",
 			Expire = "Turn",
