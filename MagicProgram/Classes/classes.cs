@@ -3138,6 +3138,11 @@ namespace MagicProgram
             }
         }
 
+		public virtual void ResolveCard()
+		{
+		
+		}
+
         public virtual void SpellResolved(MagicCard mc)
         {
             switch (Name)
@@ -3178,7 +3183,7 @@ namespace MagicProgram
         {
             return Name + " " + quantity;
         }
-
+		
         # region toListViewItem
         public ListViewItem toListViewItem()
         {

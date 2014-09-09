@@ -6757,7 +6757,19 @@ namespace MagicProgram
             Type = "Instant";
             Text = "Up to two target creatures each get +1/+0 and gain first strike until end of turn.";
             Flavor = "";
+            Targets = 2;
         }
+
+	public void SpellResolve(MagicCard mc)
+	{
+		mc.pBonus += 1;
+		Ability abi = new TempAbility
+		{
+			Name = "First Strike",
+			Expire = "Turn",
+		};
+		mc.Abilities.Add(abi);
+	}
     }
     # endregion
 
