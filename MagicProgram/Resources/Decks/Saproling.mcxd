@@ -199,4 +199,22 @@ Whenever another creature enters the battlefield under your control, put a +1/+1
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
+  <Card>
+    <Name>Fists of Ironwood</Name>
+    <Edition>RAV</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature;
+When Fists of Ironwood enters the battlefield, put two 1/1 green Saproling creature tokens onto the battlefield.;
+Enchanted creature has trample.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
 </Collection>

@@ -52,6 +52,7 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manaWheelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.turnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,7 +110,6 @@
             this.listViewOppEnch = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.manaWheelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -288,9 +288,16 @@
             // viewDebugToolStripMenuItem
             // 
             this.viewDebugToolStripMenuItem.Name = "viewDebugToolStripMenuItem";
-            this.viewDebugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewDebugToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.viewDebugToolStripMenuItem.Text = "View Debug";
             this.viewDebugToolStripMenuItem.Click += new System.EventHandler(this.viewDebugToolStripMenuItem_Click);
+            // 
+            // manaWheelToolStripMenuItem
+            // 
+            this.manaWheelToolStripMenuItem.Name = "manaWheelToolStripMenuItem";
+            this.manaWheelToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.manaWheelToolStripMenuItem.Text = "Mana Wheel";
+            this.manaWheelToolStripMenuItem.Click += new System.EventHandler(this.manaWheelToolStripMenuItem_Click);
             // 
             // gameToolStripMenuItem
             // 
@@ -431,6 +438,7 @@
             // cPanelControls.Working Area
             // 
             this.cPanelControls.WorkingArea.AutoSize = true;
+            this.cPanelControls.WorkingArea.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.cPanelControls.WorkingArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cPanelControls.WorkingArea.Controls.Add(this.panel1);
             this.cPanelControls.WorkingArea.Controls.Add(this.panel8);
@@ -1010,13 +1018,6 @@
             // columnHeader8
             // 
             this.columnHeader8.Text = "Quantity";
-            // 
-            // manaWheelToolStripMenuItem
-            // 
-            this.manaWheelToolStripMenuItem.Name = "manaWheelToolStripMenuItem";
-            this.manaWheelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.manaWheelToolStripMenuItem.Text = "Mana Wheel";
-            this.manaWheelToolStripMenuItem.Click += new System.EventHandler(this.manaWheelToolStripMenuItem_Click);
             // 
             // DeckTest
             // 

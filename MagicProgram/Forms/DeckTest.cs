@@ -1907,6 +1907,9 @@ namespace MagicProgram
                 cv.Left = (panel1.Controls.Count - 1) * 200;
                 cv.LoadCard(mc.attachedCards[i]);
             }
+
+            cPanelControls.Width = panel8.Width + panel1.Width;
+            cPanelControls.Left = (this.Width - cPanelControls.Width) / 2;
         }
         # endregion
 
