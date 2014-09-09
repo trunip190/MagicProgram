@@ -30,22 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageListLarge = new System.Windows.Forms.ImageList(this.components);
             this.imageListSmall = new System.Windows.Forms.ImageList(this.components);
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAddOne = new System.Windows.Forms.Button();
             this.buttonTakeOne = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,13 +40,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.SearchResults = new System.Windows.Forms.ListBox();
-            this.deckStats1 = new MagicProgram.DeckStats();
             this.numericCount = new System.Windows.Forms.NumericUpDown();
             this.buttonTakeAll = new System.Windows.Forms.Button();
             this.buttonAddAll = new System.Windows.Forms.Button();
-            this.progressDialog1 = new MagicProgram.ProgressDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cardViewerLarge1 = new MagicProgram.CardViewerLarge();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,84 +75,39 @@
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setImageLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateCardImagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.updateDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.collapsablePanel2 = new MagicProgram.CollapsiblePanel();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.collapsablePanel1 = new MagicProgram.CollapsiblePanel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.deckStats1 = new MagicProgram.DeckStats();
+            this.progressDialog1 = new MagicProgram.ProgressDialog();
+            this.cardViewerLarge1 = new MagicProgram.CardViewerLarge();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCount)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.collapsablePanel2.WorkingArea.SuspendLayout();
+            this.collapsablePanel2.SuspendLayout();
+            this.collapsablePanel1.WorkingArea.SuspendLayout();
+            this.collapsablePanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // listView1
-            // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12});
-            this.listView1.FullRowSelect = true;
-            this.listView1.LargeImageList = this.imageListLarge;
-            this.listView1.Location = new System.Drawing.Point(14, 7);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(136, 417);
-            this.listView1.SmallImageList = this.imageListSmall;
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView_HeaderClick);
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            this.listView1.DoubleClick += new System.EventHandler(this.buttonAddOne_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Name";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Quantity";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Edition";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Rarity";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Colour";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Cost";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "P/T";
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Type";
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Text";
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Flavour";
             // 
             // imageListLarge
             // 
@@ -182,34 +120,6 @@
             this.imageListSmall.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageListSmall.ImageSize = new System.Drawing.Size(20, 28);
             this.imageListSmall.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // listView2
-            // 
-            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView2.FullRowSelect = true;
-            this.listView2.LargeImageList = this.imageListLarge;
-            this.listView2.Location = new System.Drawing.Point(427, 7);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(136, 417);
-            this.listView2.SmallImageList = this.imageListSmall;
-            this.listView2.TabIndex = 2;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView2_ColumnClick);
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
-            this.listView2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.listView2_KeyPress);
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Name";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Quantity";
             // 
             // buttonAddOne
             // 
@@ -233,13 +143,14 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.collapsablePanel2);
+            this.panel1.Controls.Add(this.collapsablePanel1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.listView1);
-            this.panel1.Controls.Add(this.listView2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-2, 27);
             this.panel1.Name = "panel1";
@@ -251,7 +162,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(427, 427);
+            this.label2.Location = new System.Drawing.Point(425, 425);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 12;
@@ -261,7 +172,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 427);
+            this.label1.Location = new System.Drawing.Point(14, 425);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 11;
@@ -310,16 +221,6 @@
             this.SearchResults.SelectedIndexChanged += new System.EventHandler(this.SearchResults_SelectedIndexChanged);
             this.SearchResults.Leave += new System.EventHandler(this.hide_control);
             // 
-            // deckStats1
-            // 
-            this.deckStats1.Location = new System.Drawing.Point(34, 126);
-            this.deckStats1.MaximumSize = new System.Drawing.Size(208, 142);
-            this.deckStats1.MinimumSize = new System.Drawing.Size(208, 142);
-            this.deckStats1.Name = "deckStats1";
-            this.deckStats1.Size = new System.Drawing.Size(208, 142);
-            this.deckStats1.TabIndex = 7;
-            this.deckStats1.Visible = false;
-            // 
             // numericCount
             // 
             this.numericCount.Location = new System.Drawing.Point(232, 27);
@@ -354,15 +255,6 @@
             this.buttonAddAll.UseVisualStyleBackColor = true;
             this.buttonAddAll.Click += new System.EventHandler(this.buttonAddAll_Click);
             // 
-            // progressDialog1
-            // 
-            this.progressDialog1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.progressDialog1.Location = new System.Drawing.Point(28, 148);
-            this.progressDialog1.Name = "progressDialog1";
-            this.progressDialog1.Size = new System.Drawing.Size(218, 110);
-            this.progressDialog1.TabIndex = 10;
-            this.progressDialog1.Visible = false;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(77, 5);
@@ -373,15 +265,6 @@
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Click);
             this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
-            // 
-            // cardViewerLarge1
-            // 
-            this.cardViewerLarge1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cardViewerLarge1.BackgroundImage")));
-            this.cardViewerLarge1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cardViewerLarge1.Location = new System.Drawing.Point(6, 48);
-            this.cardViewerLarge1.Name = "cardViewerLarge1";
-            this.cardViewerLarge1.Size = new System.Drawing.Size(265, 370);
-            this.cardViewerLarge1.TabIndex = 13;
             // 
             // menuStrip1
             // 
@@ -639,6 +522,13 @@
             this.updateCardImagesToolStripMenuItem.Text = "Update card images";
             this.updateCardImagesToolStripMenuItem.Click += new System.EventHandler(this.updateImagesToolStripMenuItem_Click);
             // 
+            // updateDatabaseToolStripMenuItem
+            // 
+            this.updateDatabaseToolStripMenuItem.Name = "updateDatabaseToolStripMenuItem";
+            this.updateDatabaseToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.updateDatabaseToolStripMenuItem.Text = "Update Database";
+            this.updateDatabaseToolStripMenuItem.Click += new System.EventHandler(this.updateDatabaseToolStripMenuItem_Click);
+            // 
             // deckToolStripMenuItem
             // 
             this.deckToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -669,12 +559,179 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // updateDatabaseToolStripMenuItem
+            // collapsablePanel2
             // 
-            this.updateDatabaseToolStripMenuItem.Name = "updateDatabaseToolStripMenuItem";
-            this.updateDatabaseToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.updateDatabaseToolStripMenuItem.Text = "Update Database";
-            this.updateDatabaseToolStripMenuItem.Click += new System.EventHandler(this.updateDatabaseToolStripMenuItem_Click);
+            this.collapsablePanel2.AllowDrop = true;
+            this.collapsablePanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.collapsablePanel2.Collapsed = false;
+            this.collapsablePanel2.Direction = MagicProgram.CollapsiblePanel.CollapseDirection.Left;
+            this.collapsablePanel2.HoverEdges = true;
+            this.collapsablePanel2.Location = new System.Drawing.Point(425, 3);
+            this.collapsablePanel2.MinimumSize = new System.Drawing.Size(23, 23);
+            this.collapsablePanel2.Name = "collapsablePanel2";
+            this.collapsablePanel2.Size = new System.Drawing.Size(146, 419);
+            this.collapsablePanel2.TabIndex = 14;
+            // 
+            // collapsablePanel2.Working Area
+            // 
+            this.collapsablePanel2.WorkingArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.collapsablePanel2.WorkingArea.Controls.Add(this.listView2);
+            this.collapsablePanel2.WorkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.collapsablePanel2.WorkingArea.Location = new System.Drawing.Point(23, 0);
+            this.collapsablePanel2.WorkingArea.Margin = new System.Windows.Forms.Padding(0);
+            this.collapsablePanel2.WorkingArea.Name = "Working Area";
+            this.collapsablePanel2.WorkingArea.Size = new System.Drawing.Size(123, 419);
+            this.collapsablePanel2.WorkingArea.TabIndex = 4;
+            this.collapsablePanel2.CollapsedChanged += new System.Action(this.collapsablePanel2_CollapsedChanged);
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.FullRowSelect = true;
+            this.listView2.LargeImageList = this.imageListLarge;
+            this.listView2.Location = new System.Drawing.Point(0, 0);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(121, 417);
+            this.listView2.SmallImageList = this.imageListSmall;
+            this.listView2.TabIndex = 2;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView2_ColumnClick);
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            this.listView2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.listView2_KeyPress);
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Name";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Quantity";
+            // 
+            // collapsablePanel1
+            // 
+            this.collapsablePanel1.AllowDrop = true;
+            this.collapsablePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.collapsablePanel1.Collapsed = false;
+            this.collapsablePanel1.Direction = MagicProgram.CollapsiblePanel.CollapseDirection.Right;
+            this.collapsablePanel1.HoverEdges = true;
+            this.collapsablePanel1.Location = new System.Drawing.Point(3, 3);
+            this.collapsablePanel1.MinimumSize = new System.Drawing.Size(23, 23);
+            this.collapsablePanel1.Name = "collapsablePanel1";
+            this.collapsablePanel1.Size = new System.Drawing.Size(147, 419);
+            this.collapsablePanel1.TabIndex = 13;
+            // 
+            // collapsablePanel1.Working Area
+            // 
+            this.collapsablePanel1.WorkingArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.collapsablePanel1.WorkingArea.Controls.Add(this.listView1);
+            this.collapsablePanel1.WorkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.collapsablePanel1.WorkingArea.Location = new System.Drawing.Point(0, 0);
+            this.collapsablePanel1.WorkingArea.Margin = new System.Windows.Forms.Padding(0);
+            this.collapsablePanel1.WorkingArea.Name = "Working Area";
+            this.collapsablePanel1.WorkingArea.Size = new System.Drawing.Size(124, 419);
+            this.collapsablePanel1.WorkingArea.TabIndex = 4;
+            this.collapsablePanel1.CollapsedChanged += new System.Action(this.collapsablePanel2_CollapsedChanged);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.FullRowSelect = true;
+            this.listView1.LargeImageList = this.imageListLarge;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(122, 417);
+            this.listView1.SmallImageList = this.imageListSmall;
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView_HeaderClick);
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView1.DoubleClick += new System.EventHandler(this.buttonAddOne_Click);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Quantity";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Edition";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Rarity";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Colour";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Cost";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "P/T";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Type";
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Text";
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Flavour";
+            // 
+            // deckStats1
+            // 
+            this.deckStats1.Location = new System.Drawing.Point(34, 126);
+            this.deckStats1.MaximumSize = new System.Drawing.Size(208, 142);
+            this.deckStats1.MinimumSize = new System.Drawing.Size(208, 142);
+            this.deckStats1.Name = "deckStats1";
+            this.deckStats1.Size = new System.Drawing.Size(208, 142);
+            this.deckStats1.TabIndex = 7;
+            this.deckStats1.Visible = false;
+            // 
+            // progressDialog1
+            // 
+            this.progressDialog1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.progressDialog1.Location = new System.Drawing.Point(28, 148);
+            this.progressDialog1.Name = "progressDialog1";
+            this.progressDialog1.Size = new System.Drawing.Size(218, 110);
+            this.progressDialog1.TabIndex = 10;
+            this.progressDialog1.Visible = false;
+            // 
+            // cardViewerLarge1
+            // 
+            this.cardViewerLarge1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cardViewerLarge1.BackgroundImage")));
+            this.cardViewerLarge1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cardViewerLarge1.Location = new System.Drawing.Point(6, 48);
+            this.cardViewerLarge1.Name = "cardViewerLarge1";
+            this.cardViewerLarge1.Size = new System.Drawing.Size(265, 370);
+            this.cardViewerLarge1.TabIndex = 13;
             // 
             // Form1
             // 
@@ -685,6 +742,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(310, 421);
             this.Name = "Form1";
             this.Text = "Magic Viewer";
             this.ResizeEnd += new System.EventHandler(this.form1_Resize);
@@ -695,6 +753,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericCount)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.collapsablePanel2.WorkingArea.ResumeLayout(false);
+            this.collapsablePanel2.ResumeLayout(false);
+            this.collapsablePanel1.WorkingArea.ResumeLayout(false);
+            this.collapsablePanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,6 +831,8 @@
         private System.Windows.Forms.ToolStripMenuItem exportDeckListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsDeckToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateDatabaseToolStripMenuItem;
+        private CollapsiblePanel collapsablePanel2;
+        private CollapsiblePanel collapsablePanel1;
     }
 }
 

@@ -604,14 +604,69 @@ namespace MagicProgram
         private void form1_Resize(object sender, EventArgs e)
         {
             # region set widths
-            int width = (panel1.Width - 33 - panel2.Width);
-            listView1.Width = width / 2;
-            listView2.Width = width - listView1.Width;
+            //int width = (panel1.Width - 33 - panel2.Width);
+            int width = (panel1.Width - panel2.Width);
+
+            # region neither collapsed
+            if (!collapsablePanel1.Collapsed && !collapsablePanel2.Collapsed)
+            {
+                collapsablePanel1.Width = width / 2;
+                collapsablePanel2.Width = width - collapsablePanel1.Width;
+            }
+            # endregion
+
+            # region collapsiblePanel1 Collapsed
+            if (collapsablePanel1.Collapsed && !collapsablePanel2.Collapsed)
+            {
+                collapsablePanel2.Width = width - collapsablePanel1.Width;
+                if (collapsablePanel2.Width < 147)
+                {
+                    collapsablePanel2.Width = 147;
+                }
+            }
+            # endregion
+
+            # region collapsiblePanel2 Collapsed
+            if (!collapsablePanel1.Collapsed && collapsablePanel2.Collapsed)
+            {
+                collapsablePanel1.Width = width - collapsablePanel2.Width;
+                if (collapsablePanel1.Width < 147)
+                {
+                    collapsablePanel1.Width = 147;
+                }
+            }
+            # endregion
+
+            # region both Collapsed
+            if (collapsablePanel1.Collapsed && collapsablePanel2.Collapsed)
+            {
+                //this.Width = collapsablePanel1.Width + 33 + collapsablePanel2.Width;
+
+            }
+            # endregion
+
             # endregion
 
             # region set lefts
-            panel2.Left = listView1.Right;
-            listView2.Left = panel2.Right;
+            if (collapsablePanel1.Collapsed && collapsablePanel2.Collapsed)
+            {
+                panel2.Left = width - (panel2.Width / 2);
+            }
+            else
+            {
+                panel2.Left = collapsablePanel1.Right;
+
+            }
+
+            if (collapsablePanel2.Collapsed)
+            {
+                collapsablePanel2.Left = panel1.Width - collapsablePanel2.Width;
+            }
+            else
+            {
+                collapsablePanel2.Left = panel2.Right;
+            }
+
             # endregion
         }
 
@@ -1048,7 +1103,7 @@ namespace MagicProgram
                         Output.Write("Deck loaded.");
                     }
                 }
-                else if ( s == ".txt")
+                else if (s == ".txt")
                 {
                     Deck_LoadBasic(file);
                 }
@@ -1441,6 +1496,11 @@ namespace MagicProgram
         private void updateDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             updateClassType();
+        }
+
+        private void collapsablePanel2_CollapsedChanged()
+        {
+            form1_Resize(this, EventArgs.Empty);
         }
     }
 }

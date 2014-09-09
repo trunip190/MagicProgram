@@ -1,10 +1,10 @@
-akroan crusader#4
-aura gnarlid#4
-hero of leina tower#4
-mogis's warhound#4
-nyxborn rollicker#4
-nyxborn wolf#4
-satyr hoplite#4
-setessan oathsworn#4
+Akroan Crusader#4
+Aura Gnarlid#4
+Hero of Leina Tower#4
+Mogis's Warhound#4
+Nyxborn Rollicker#4
+Nyxborn Wolf#4
+Satyr Hoplite#4
+Setessan Oathsworn#4
 Forest#12
 Mountain#12
