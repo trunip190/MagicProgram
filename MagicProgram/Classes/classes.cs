@@ -211,6 +211,7 @@ namespace MagicProgram
 
     //need to add ALL of the classes that are being used
     # region included derivatives
+    [XmlInclude(typeof(SliverQueenSH))]
     #region AVR
     [XmlInclude(typeof(AbundantGrowthAVR))]
     [XmlInclude(typeof(AggravateAVR))]
@@ -3941,6 +3942,12 @@ namespace MagicProgram
             MagicCard mcn;
             switch (s)
             {
+                # region Stronghold uncomplete
+                case "Sliver Queen":
+                    mcn = new SliverQueenSH();
+                    break;
+                # endregion
+
                 # region Innistrad
 
                 # endregion

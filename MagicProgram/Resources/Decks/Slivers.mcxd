@@ -1,5 +1,21 @@
 <?xml version="1.0"?>
 <Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card xsi:type="ForestAVR">
+    <Name>Forest</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>5</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
   <Card xsi:type="MountainAVR">
     <Name>Mountain</Name>
     <Edition>M15</Edition>
@@ -12,6 +28,182 @@
     <Flavor />
     <Token>false</Token>
     <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card xsi:type="PlainsAVR">
+    <Name>Plains</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Basic Land - Plains</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card xsi:type="StrikingSliver">
+    <Name>Striking Sliver</Name>
+    <Edition>M14</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have first strike. #(They deal combat damage before creatures without first strike.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card xsi:type="ManaweftSliver">
+    <Name>Manaweft Sliver</Name>
+    <Edition>M14</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have �%T: Add one mana of any color to your mana pool.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Gemhide Sliver</Name>
+    <Edition>TSP</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>All Slivers have �%T: Add one mana of any color to your mana pool.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Heart Sliver</Name>
+    <Edition>H09</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>1R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>All Sliver creatures have haste.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card xsi:type="SentinelSliver">
+    <Name>Sentinel Sliver</Name>
+    <Edition>M14</Edition>
+    <Rarity>C</Rarity>
+    <Color>W</Color>
+    <Cost>1W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have vigilance. #(Attacking doesn�t cause them to tap.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card xsi:type="VenomSliver15">
+    <Name>Venom Sliver</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>1G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have deathtouch.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Horned Sliver</Name>
+    <Edition>TE</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>2G</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>All Sliver creatures have trample.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card xsi:type="BonescytheSliver">
+    <Name>Bonescythe Sliver</Name>
+    <Edition>GAM</Edition>
+    <Rarity />
+    <Color>W</Color>
+    <Cost>3W</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have double strike. #(They deal both first-strike and regular combat damage.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Brood Sliver</Name>
+    <Edition>LE</Edition>
+    <Rarity>R</Rarity>
+    <Color>G</Color>
+    <Cost>4G</Cost>
+    <PT>3/3</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Whenever a Sliver deals combat damage to a player, its controller may put a 1/1 colorless Sliver creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card xsi:type="ThorncasterSliver">
+    <Name>Thorncaster Sliver</Name>
+    <Edition>M14</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>4R</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Sliver</Type>
+    <Text>Sliver creatures you control have �Whenever this creature attacks, it deals 1 damage to target creature or player.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -52,198 +244,6 @@ T: Add one mana of any color to your mana pool. Spend this mana only to cast a S
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
-  <Card xsi:type="ForestAVR">
-    <Name>Forest</Name>
-    <Edition>M15</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost />
-    <PT />
-    <Type>Basic Land - Forest</Type>
-    <Text />
-    <Flavor />
-    <Token>false</Token>
-    <quantity>5</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card xsi:type="PlainsAVR">
-    <Name>Plains</Name>
-    <Edition>M15</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost />
-    <PT />
-    <Type>Basic Land - Plains</Type>
-    <Text />
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card xsi:type="ManaweftSliver">
-    <Name>Manaweft Sliver</Name>
-    <Edition>M14</Edition>
-    <Rarity>U</Rarity>
-    <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Sliver</Type>
-    <Text>Sliver creatures you control have �%T: Add one mana of any color to your mana pool.�</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card xsi:type="BonescytheSliver">
-    <Name>Bonescythe Sliver</Name>
-    <Edition>GAM</Edition>
-    <Rarity />
-    <Color>W</Color>
-    <Cost>3W</Cost>
-    <PT>2/2</PT>
-    <Type>Creature - Sliver</Type>
-    <Text>Sliver creatures you control have double strike. #(They deal both first-strike and regular combat damage.)#</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Brood Sliver</Name>
-    <Edition>LE</Edition>
-    <Rarity>R</Rarity>
-    <Color>G</Color>
-    <Cost>4G</Cost>
-    <PT>3/3</PT>
-    <Type>Creature - Sliver</Type>
-    <Text>Whenever a Sliver deals combat damage to a player, its controller may put a 1/1 colorless Sliver creature token onto the battlefield.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Gemhide Sliver</Name>
-    <Edition>TSP</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>1G</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Sliver</Type>
-    <Text>All Slivers have �%T: Add one mana of any color to your mana pool.�</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Heart Sliver</Name>
-    <Edition>H09</Edition>
-    <Rarity>C</Rarity>
-    <Color>R</Color>
-    <Cost>1R</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Sliver</Type>
-    <Text>All Sliver creatures have haste.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card>
-    <Name>Horned Sliver</Name>
-    <Edition>TE</Edition>
-    <Rarity>U</Rarity>
-    <Color>G</Color>
-    <Cost>2G</Cost>
-    <PT>2/2</PT>
-    <Type>Creature - Sliver</Type>
-    <Text>All Sliver creatures have trample.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card xsi:type="SentinelSliver">
-    <Name>Sentinel Sliver</Name>
-    <Edition>M14</Edition>
-    <Rarity>C</Rarity>
-    <Color>W</Color>
-    <Cost>1W</Cost>
-    <PT>2/2</PT>
-    <Type>Creature - Sliver</Type>
-    <Text>Sliver creatures you control have vigilance. #(Attacking doesn�t cause them to tap.)#</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card xsi:type="StrikingSliver">
-    <Name>Striking Sliver</Name>
-    <Edition>M14</Edition>
-    <Rarity>C</Rarity>
-    <Color>R</Color>
-    <Cost>R</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Sliver</Type>
-    <Text>Sliver creatures you control have first strike. #(They deal combat damage before creatures without first strike.)#</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card xsi:type="ThorncasterSliver">
-    <Name>Thorncaster Sliver</Name>
-    <Edition>M14</Edition>
-    <Rarity>R</Rarity>
-    <Color>R</Color>
-    <Cost>4R</Cost>
-    <PT>2/2</PT>
-    <Type>Creature - Sliver</Type>
-    <Text>Sliver creatures you control have �Whenever this creature attacks, it deals 1 damage to target creature or player.�</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card xsi:type="VenomSliver15">
-    <Name>Venom Sliver</Name>
-    <Edition>M15</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>1G</Cost>
-    <PT>1/1</PT>
-    <Type>Creature - Sliver</Type>
-    <Text>Sliver creatures you control have deathtouch.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>4</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
   <Card xsi:type="SliverHivelord15">
     <Name>Sliver Hivelord</Name>
     <Edition>M15</Edition>
@@ -276,6 +276,22 @@ T: Add one mana of any color to your mana pool. Spend this mana only to cast a S
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
+  <Card xsi:type="SliverQueenSH">
+    <Name>Sliver Queen</Name>
+    <Edition>SH</Edition>
+    <Rarity>R</Rarity>
+    <Color>Gld</Color>
+    <Cost>WUBRG</Cost>
+    <PT>7/7</PT>
+    <Type>Legendary Creature - Sliver</Type>
+    <Text>%2: Put a 1/1 colorless Sliver creature token onto the battlefield.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>1</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
   <Card>
     <Name>Sliver Overlord</Name>
     <Edition>SC</Edition>
@@ -293,18 +309,20 @@ T: Add one mana of any color to your mana pool. Spend this mana only to cast a S
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
-  <Card>
-    <Name>Sliver Queen</Name>
-    <Edition>SH</Edition>
-    <Rarity>R</Rarity>
-    <Color>Gld</Color>
-    <Cost>WUBRG</Cost>
-    <PT>7/7</PT>
-    <Type>Legendary Creature - Sliver</Type>
-    <Text>%2: Put a 1/1 colorless Sliver creature token onto the battlefield.</Text>
+  <Card xsi:type="ObeliskofUrd15">
+    <Name>Obelisk of Urd</Name>
+    <Edition>M15</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>6</Cost>
+    <PT />
+    <Type>Artifact</Type>
+    <Text>Convoke
+As Obelisk of Urd enters the battlefield, choose a creature type.
+Creatures you control of the chosen type get +2/+2.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>1</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
