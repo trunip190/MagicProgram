@@ -53,7 +53,7 @@ namespace MagicProgram
             }
 
             # region try and load "Load" deck
-            string sFile = Directory.GetCurrentDirectory() + "\\Load.mcxd";
+            string sFile = Directory.GetCurrentDirectory() + "\\Resources\\Decks\\Load.txt";
             if (File.Exists(sFile))
             {
                 Deck_Load(sFile);

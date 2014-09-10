@@ -253,6 +253,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Decks\Load.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\mr224_back.png" />
   </ItemGroup>
   <ItemGroup>
@@ -260,42 +263,43 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Icon.ico" />
-    <None Include="Resources\0.gif" />
-    <None Include="Resources\Icon.png" />
+    <Content Include="Resources\Load.txt" />
+    <None Include="Resources\Icons\0.gif" />
+    <None Include="Resources\Icons\Icon.png" />
     <None Include="Resources\CounterPlus.png" />
     <None Include="Resources\CounterMinus.png" />
     <None Include="Resources\Counter-.png" />
     <None Include="Resources\Counter.png" />
     <None Include="Resources\Arbor Elf.jpg" />
     <None Include="Resources\ARTISANS-SORROW.jpg" />
-    <None Include="Resources\Q.png" />
-    <None Include="Resources\P.png" />
-    <None Include="Resources\O.png" />
-    <None Include="Resources\L.png" />
-    <None Include="Resources\K.png" />
-    <None Include="Resources\I.png" />
-    <None Include="Resources\D.png" />
-    <None Include="Resources\A.png" />
-    <None Include="Resources\V.png" />
-    <None Include="Resources\S.png" />
-    <None Include="Resources\X.gif" />
-    <None Include="Resources\W.gif" />
-    <None Include="Resources\U.gif" />
-    <None Include="Resources\R.gif" />
-    <None Include="Resources\G.gif" />
-    <None Include="Resources\B.gif" />
-    <None Include="Resources\7.gif" />
-    <None Include="Resources\6.gif" />
-    <None Include="Resources\5.gif" />
-    <None Include="Resources\4.gif" />
-    <None Include="Resources\3.gif" />
-    <None Include="Resources\2.gif" />
-    <None Include="Resources\1.gif" />
-    <None Include="Resources\White.png" />
-    <None Include="Resources\Red.png" />
-    <None Include="Resources\Green.png" />
-    <None Include="Resources\Blue.png" />
-    <None Include="Resources\Black.png" />
+    <None Include="Resources\Icons\Q.png" />
+    <None Include="Resources\Icons\P.png" />
+    <None Include="Resources\Icons\O.png" />
+    <None Include="Resources\Icons\L.png" />
+    <None Include="Resources\Icons\K.png" />
+    <None Include="Resources\Icons\I.png" />
+    <None Include="Resources\Icons\D.png" />
+    <None Include="Resources\Icons\A.png" />
+    <None Include="Resources\Icons\V.png" />
+    <None Include="Resources\Icons\S.png" />
+    <None Include="Resources\Icons\X.gif" />
+    <None Include="Resources\Icons\W.gif" />
+    <None Include="Resources\Icons\U.gif" />
+    <None Include="Resources\Icons\R.gif" />
+    <None Include="Resources\Icons\G.gif" />
+    <None Include="Resources\Icons\B.gif" />
+    <None Include="Resources\Icons\7.gif" />
+    <None Include="Resources\Icons\6.gif" />
+    <None Include="Resources\Icons\5.gif" />
+    <None Include="Resources\Icons\4.gif" />
+    <None Include="Resources\Icons\3.gif" />
+    <None Include="Resources\Icons\2.gif" />
+    <None Include="Resources\Icons\1.gif" />
+    <None Include="Resources\Icons\White.png" />
+    <None Include="Resources\Icons\Red.png" />
+    <None Include="Resources\Icons\Green.png" />
+    <None Include="Resources\Icons\Blue.png" />
+    <None Include="Resources\Icons\Black.png" />
     <None Include="Resources\Background.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +324,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
