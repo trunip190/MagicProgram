@@ -76,25 +76,7 @@
     <Text>Whenever Hamlet Captain attacks or blocks, other Human creatures you control get +1/+1 until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card xsi:type="Hammerhand15">
-    <Name>Hammerhand</Name>
-    <Edition>M15</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>R</Cost>
-    <PT />
-    <Type>Enchantment - Aura</Type>
-    <Text>Enchant creature
-When Hammerhand enters the battlefield, target creature can't block this turn.
-Enchanted creature gets +1/+1 and has haste.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>3</quantity>
+    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -180,7 +162,7 @@ Enchanted creature gets +1/+0 and has first strike.;
 Sacrifice Crown of Fury: Enchanted creature and other creatures that share a creature type with it get +1/+0 and gain first strike until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
-    <quantity>4</quantity>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -249,6 +231,40 @@ When Temple of Abandon enters the battlefield, scry 1. (Look at the top card of 
     <Flavor />
     <Token>false</Token>
     <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Ordeal of Purphoros</Name>
+    <Edition>THS</Edition>
+    <Rarity>U</Rarity>
+    <Color />
+    <Cost>1R</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature
+Whenever enchanted creature attacks, put a +1/+1 counter on it. Then if it has three or more +1/+1 counters on it, sacrifice Ordeal of Purphoros.
+When you sacrifice Ordeal of Purphoros, it deals 3 damage to target creature or player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Raid Bombardment</Name>
+    <Edition>ROE</Edition>
+    <Rarity>C</Rarity>
+    <Color>R</Color>
+    <Cost>2R</Cost>
+    <PT />
+    <Type>Enchantment</Type>
+    <Text>Whenever a creature you control with power 2 or less attacks, Raid Bombardment deals 1 damage to defending player.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>3</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>

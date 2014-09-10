@@ -1084,6 +1084,18 @@ namespace MagicProgram
             imageListLarge.Images.Clear();
         }
 
+		private void ConvertSaves(string directory)
+		{
+			foreach ( string s in Directory.GetFiles(directory))
+			{
+				if ( Path.GetExtension(s) == ".mcxd")
+				{
+					Deck_Load(s);
+					Deck_SaveBasic(s + ".txt");
+				}
+			}
+		}
+		
         private void Deck_Load(string file)
         {
             if (File.Exists(file))
@@ -1501,6 +1513,15 @@ namespace MagicProgram
         private void collapsablePanel2_CollapsedChanged()
         {
             form1_Resize(this, EventArgs.Empty);
+        }
+
+        private void convertSavesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                ConvertSaves(fbd.SelectedPath);
+            }
         }
     }
 }
