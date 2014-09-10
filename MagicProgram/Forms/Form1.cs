@@ -100,7 +100,7 @@ namespace MagicProgram
             if (!File.Exists(filename))
             {
                 SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd|Text file (*.txt)|*.txt";
+                sfd.Filter = "Text file (*.txt)|*.txt|Magic Card Xml Deck (*.mcxd)|*.mcxd";
 
                 if (sfd.ShowDialog() != DialogResult.OK)
                 {
@@ -116,7 +116,7 @@ namespace MagicProgram
         private void saveAsDeckToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd|Text file (*.txt)|*.txt";
+            sfd.Filter = "Text file (*.txt)|*.txt|Magic Card Xml Deck (*.mcxd)|*.mcxd";
 
             if (sfd.ShowDialog() != DialogResult.OK)
             {
@@ -172,7 +172,7 @@ namespace MagicProgram
         private void loadDeckToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Magic Card Xml Deck (*.mcxd)|*.mcxd|Text files (*.txt)|*.txt";
+            ofd.Filter = "Text files (*.txt)|*.txt|Magic Card Xml Deck (*.mcxd)|*.mcxd";
 
             if (ofd.ShowDialog() == DialogResult.OK && File.Exists(ofd.FileName))
             {
@@ -1091,7 +1091,8 @@ namespace MagicProgram
 				if ( Path.GetExtension(s) == ".mcxd")
 				{
 					Deck_Load(s);
-					Deck_SaveBasic(s + ".txt");
+                    string path = s.Replace(".mcxd", ".txt");
+					Deck_SaveBasic(path);
 				}
 			}
 		}

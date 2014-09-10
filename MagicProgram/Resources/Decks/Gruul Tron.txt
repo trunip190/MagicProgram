@@ -1,10 +1,16 @@
+Forest#10
+Mountain#10
+Legion Loyalist#3
 Akroan Crusader#4
-Aura Gnarlid#4
-Hero of Leina Tower#4
-Mogis's Warhound#4
-Nyxborn Rollicker#4
-Nyxborn Wolf#4
-Satyr Hoplite#4
-Setessan Oathsworn#4
-Forest#12
-Mountain#12
+Hamlet Captain#2
+Rancor#2
+Alpha Authority#3
+Madcap Skills#4
+Bravado#3
+Crown of Fury#3
+Keen Sense#3
+Nyxborn Rollicker#2
+Temple of Abandon#4
+Copperhorn Scout#2
+Ordeal of Purphoros#2
+Raid Bombardment#3

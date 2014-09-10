@@ -1,13 +1,18 @@
-Island#8
-Mountain#10
-Cerulean Wisps#4
-Young Pyromancer#4
-Guttersnipe#4
-Elite Arcanist#4
-Magma Spray#4
-Generator Servant#4
-Lightning Bolt#4
-Izzet Boilerworks#3
-Battle Hymn#4
-Triton Tactics#4
-Purphoros, God of the Forge#3
+Forest#10
+Island#10
+Renegade Krasis#2
+Cloudfin Raptor#3
+Gyre Sage#3
+Master Biomancer#1
+Fathom Mage#2
+Protean Hydra#4
+Bond Beetle#4
+Progenitor Mimic#2
+Ooze Flux#2
+Strength of the Tajuru#4
+Predator's Rapport#2
+Breeding Pool#1
+Simic Guildgate#3
+Gaea's Blessing#1
+Explore#4
+Favor of the Overbeing#2

@@ -1,0 +1,13 @@
+Island#7
+Mountain#7
+Cerulean Wisps#4
+Young Pyromancer#4
+Guttersnipe#4
+Elite Arcanist#4
+Lightning Bolt#4
+Triton Tactics#4
+Zhur-Taa Druid#4
+Forest#6
+Izzet Staticaster#3
+Counterspell#4
+Terramorphic Expanse#4
