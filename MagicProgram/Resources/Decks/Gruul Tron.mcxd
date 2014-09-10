@@ -11,7 +11,7 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>12</quantity>
+    <quantity>10</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -27,21 +27,21 @@
     <Text />
     <Flavor />
     <Token>false</Token>
-    <quantity>12</quantity>
+    <quantity>10</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
   <Card>
-    <Name>Aura Gnarlid</Name>
-    <Edition>ROE</Edition>
-    <Rarity>C</Rarity>
-    <Color>G</Color>
-    <Cost>2G</Cost>
-    <PT>2/2</PT>
-    <Type>Creature - Beast</Type>
-    <Text>Creatures with power less than Aura Gnarlid�s power can�t block it.;
-Aura Gnarlid gets +1/+1 for each Aura on the battlefield.</Text>
+    <Name>Legion Loyalist</Name>
+    <Edition>GTC</Edition>
+    <Rarity>R</Rarity>
+    <Color>R</Color>
+    <Cost>R</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Goblin Soldier</Type>
+    <Text>Haste;
+#Battalion# � Whenever Legion Loyalist and at least two other creatures attack, creatures you control gain first strike and trample until end of turn and can�t be blocked by creature tokens this turn.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
@@ -65,34 +65,18 @@ Aura Gnarlid gets +1/+1 for each Aura on the battlefield.</Text>
     <Tapped>false</Tapped>
     <counters>0</counters>
   </Card>
-  <Card xsi:type="SatyrHoplite">
-    <Name>Satyr Hoplite</Name>
-    <Edition>JOU</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>R</Cost>
-    <PT>1/1</PT>
-    <Type>Creature — Satyr Soldier</Type>
-    <Text>Heroic — Whenever you cast a spell that targets Satyr Hoplite, put a +1/+1 counter on Satyr Hoplite.</Text>
+  <Card>
+    <Name>Hamlet Captain</Name>
+    <Edition>ISD</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>2/2</PT>
+    <Type>Creature - Human Warrior</Type>
+    <Text>Whenever Hamlet Captain attacks or blocks, other Human creatures you control get +1/+1 until end of turn.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>3</quantity>
-    <Abilities />
-    <Tapped>false</Tapped>
-    <counters>0</counters>
-  </Card>
-  <Card xsi:type="SetessanOathsworn">
-    <Name>Setessan Oathsworn</Name>
-    <Edition>BNG</Edition>
-    <Rarity>C</Rarity>
-    <Color />
-    <Cost>1GG</Cost>
-    <PT>1/1</PT>
-    <Type>Creature — Satyr Warrior</Type>
-    <Text>Heroic — Whenever you cast a spell that targets Setessan Oathsworn, put two +1/+1 counters on Setessan Oathsworn.</Text>
-    <Flavor />
-    <Token>false</Token>
-    <quantity>2</quantity>
     <Abilities />
     <Tapped>false</Tapped>
     <counters>0</counters>
@@ -228,6 +212,40 @@ Whenever enchanted creature deals damage to an opponent, you may draw a card.</T
     <Type>Enchantment Creature — Satyr</Type>
     <Text>Bestow {1}{R} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached to a creature.)
 Enchanted creature gets +1/+1.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>2</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Temple of Abandon</Name>
+    <Edition>THS</Edition>
+    <Rarity>R</Rarity>
+    <Color />
+    <Cost />
+    <PT />
+    <Type>Land</Type>
+    <Text>Temple of Abandon enters the battlefield tapped.
+When Temple of Abandon enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)
+{T}: Add {R} or {G} to your mana pool.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Abilities />
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Copperhorn Scout</Name>
+    <Edition>CNS</Edition>
+    <Rarity>C</Rarity>
+    <Color />
+    <Cost>G</Cost>
+    <PT>1/1</PT>
+    <Type>Creature — Elf Scout</Type>
+    <Text>Whenever Copperhorn Scout attacks, untap each other creature you control.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>2</quantity>

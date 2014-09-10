@@ -110,6 +110,8 @@
             this.listViewOppEnch = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PlArea = new MagicProgram.Controls.PlayArea();
+            this.OppArea = new MagicProgram.Controls.PlayArea();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -1019,6 +1021,21 @@
             // 
             this.columnHeader8.Text = "Quantity";
             // 
+            // PlArea
+            // 
+            this.PlArea.HP = 20;
+            this.PlArea.HPChanged += new System.Action(this.PlaHP_ValueChanged);
+            this.PlArea.CardUsed += new MagicProgram.PassiveEvent(this.PlArea_CardUsed);
+            this.PlArea.CardDrawn += new MagicProgram.PassiveEvent(this.PlArea_CardDrawn);
+            this.PlArea.onScry += new MagicProgram.Controls.PlayArea.ValueEvent(this.PlArea_onScry);
+            // 
+            // OppArea
+            // 
+            this.OppArea.HP = 20;
+            this.OppArea.HPChanged += new System.Action(this.FoeHP_ValueChanged);
+            this.OppArea.CardUsed += new MagicProgram.PassiveEvent(this.OppArea_CardUsed);
+            this.OppArea.CardDrawn += new MagicProgram.PassiveEvent(this.OppArea_CardDrawn);
+            // 
             // DeckTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1159,5 +1176,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numTargets;
         private System.Windows.Forms.ToolStripMenuItem manaWheelToolStripMenuItem;
+        private MagicProgram.Controls.PlayArea PlArea;
+        private MagicProgram.Controls.PlayArea OppArea;
     }
 }

@@ -2721,6 +2721,12 @@ namespace MagicProgram
             Text = "Temple of Enlightenment enters the battlefield tapped.^When Temple of Enlightenment enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)^{T}: Add {W} or {U} to your mana pool.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 1);
+            Tap(true, true);
+        }
     }
     # endregion
 
@@ -2739,6 +2745,12 @@ namespace MagicProgram
             Text = "Temple of Malice enters the battlefield tapped.^When Temple of Malice enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)^{T}: Add {B} or {R} to your mana pool.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 1);
+            Tap(true, true);
+        }
     }
     # endregion
 
@@ -2756,6 +2768,12 @@ namespace MagicProgram
             Type = "Land";
             Text = "Temple of Plenty enters the battlefield tapped.^When Temple of Plenty enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)^{T}: Add {G} or {W} to your mana pool.";
             Flavor = "";
+        }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 1);
+            Tap(true, true);
         }
     }
     # endregion
@@ -5695,6 +5713,12 @@ namespace MagicProgram
             Text = "Temple of Epiphany enters the battlefield tapped.^When Temple of Epiphany enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.^{T}: Add {U} or {R} to your mana pool.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 1);
+            Tap(true, true);
+        }
     }
     # endregion
 
@@ -5712,6 +5736,12 @@ namespace MagicProgram
             Type = "Land";
             Text = "Temple of Malady enters the battlefield tapped.^When Temple of Malady enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.^{T}: Add {B} or {G} to your mana pool.";
             Flavor = "";
+        }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 1);
+            Tap(true, true);
         }
     }
     # endregion
@@ -9478,6 +9508,12 @@ namespace MagicProgram
             Text = "Temple of Abandon enters the battlefield tapped.^When Temple of Abandon enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)^{T}: Add {R} or {G} to your mana pool.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 1);
+            Tap(true, true);
+        }
     }
     # endregion
 
@@ -9495,6 +9531,12 @@ namespace MagicProgram
             Type = "Land";
             Text = "Temple of Deceit enters the battlefield tapped.^When Temple of Deceit enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)^{T}: Add {U} or {B} to your mana pool.";
             Flavor = "";
+        }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 1);
+            Tap(true, true);
         }
     }
     # endregion
@@ -9514,6 +9556,12 @@ namespace MagicProgram
             Text = "Temple of Mystery enters the battlefield tapped.^When Temple of Mystery enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)^{T}: Add {G} or {U} to your mana pool.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 1);
+            Tap(true, true);
+        }
     }
     # endregion
 
@@ -9532,6 +9580,12 @@ namespace MagicProgram
             Text = "Temple of Silence enters the battlefield tapped.^When Temple of Silence enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)^{T}: Add {W} or {B} to your mana pool.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 1);
+            Tap(true, true);
+        }
     }
     # endregion
 
@@ -9549,6 +9603,12 @@ namespace MagicProgram
             Type = "Land";
             Text = "Temple of Triumph enters the battlefield tapped. ^When Temple of Triumph enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.) ^Tap: Add R or W to your mana pool.";
             Flavor = "";
+        }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 1);
+            Tap(true, true);
         }
     }
     # endregion

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
+using MagicProgram.Controls;
 
 namespace MagicProgram
 {
@@ -2345,12 +2346,12 @@ namespace MagicProgram
 
         # region handlers
         # region delegates/events
-        public delegate void ActiveAbility(MagicCard mc, int index);  //index of ability being used. 0 based.
+        public delegate void ValueAbility(MagicCard mc, int index);  //index of ability being used. 0 based.
 
         public event ValueChanged CountersChanged;
         public event ValueChanged onPingOpponent;
-        public event ActiveAbility Activate;
-        public event ActiveAbility Activating;
+        public event ValueAbility Activate;
+        public event ValueAbility Activating;
         public event PassiveEvent Evolving;
         public event PassiveEvent OnUpkeep;
         public event PassiveEvent OnAttack;
@@ -2424,7 +2425,7 @@ namespace MagicProgram
 
         public void callActivate(int index)
         {
-            ActiveAbility handler = Activate;
+            ValueAbility handler = Activate;
             if (handler != null)
             {
                 handler(this, index);
@@ -2433,7 +2434,7 @@ namespace MagicProgram
 
         private void callActivating(int index)
         {
-            ActiveAbility handler = Activating;
+            ValueAbility handler = Activating;
             if (handler != null)
             {
                 handler(this, index);
@@ -2452,7 +2453,7 @@ namespace MagicProgram
 
         public void callAbility(int index)
         {
-            ActiveAbility handler = Activate;
+            ValueAbility handler = Activate;
             if (handler != null)
             {
                 handler(this, index);
@@ -2968,7 +2969,7 @@ namespace MagicProgram
         }
         # endregion
 
-        internal void Resolve()
+        public virtual void Resolve()
         {
             callResolving();
         }
@@ -3138,12 +3139,7 @@ namespace MagicProgram
 
             }
         }
-
-		public virtual void ResolveCard()
-		{
-		
-		}
-
+        
         public virtual void SpellResolved(MagicCard mc)
         {
             switch (Name)

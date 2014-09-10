@@ -84,6 +84,9 @@
     <Compile Include="Classes\RavnicaCityGuilds.cs" />
     <Compile Include="Classes\Lorwyn.cs" />
     <Compile Include="Classes\Tempest.cs" />
+    <Compile Include="Controls\PlayArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\CardBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
