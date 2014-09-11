@@ -1,21 +1,16 @@
-Bioshift#1
-Bond Beetle#4
-Bred for the Hunt#1
-Breeding Pool#1
-Cloudfin Raptor#4
-Counterspell#1
-Crocanura#4
 Forest#10
-Give/Take#1
-Gyre Sage#4
-Island#7
-Master Biomancer#1
-Ooze Flux#3
-Predator's Rapport#2
-Protean Hydra#4
-Rancor#1
+Island#10
 Renegade Krasis#2
-Simic Guildgate#4
-Triton Tactics#2
-Verdant Haven#2
-Vorel of the Hull Clade#1
+Cloudfin Raptor#4
+Gyre Sage#4
+Master Biomancer#1
+Fathom Mage#2
+Bond Beetle#4
+Ooze Flux#3
+Strength of the Tajuru#4
+Predator's Rapport#3
+Breeding Pool#1
+Simic Guildgate#3
+Explore#3
+Forced Adaptation#3
+Elusive Krasis#3

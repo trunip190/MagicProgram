@@ -146,7 +146,7 @@ namespace MagicProgram
             PlArea.seed = rand.Next();
             PlArea.initialise();
             PlArea.Setup();
-            
+
             createOppDeck();
 
             cardAreaHand.Paused = true;
@@ -433,6 +433,15 @@ namespace MagicProgram
                     # region Triplicate Spirits
                     case "Triplicate Spirits":
                         mc.Resolving += new PassiveEvent(Resolving_TriplicateSpirits);
+                        break;
+                    # endregion
+
+                    # region TwinFlame
+                    case "Twinflame":
+                        //cardAreaPlay.CardClicked += new CardArea.CardChosen(CardEvent_MakeToken);
+                        cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsChosen_Twinflame);
+                        cardAreaPlay.ChooseCards();
+                        targets = mc.Targets;
                         break;
                     # endregion
 
@@ -845,17 +854,17 @@ namespace MagicProgram
             cardAreaPlay.CardClicked -= cardAreaPlay_CardEquip;
         }
 
-        void mc_CountersChangedFathomMage(int count)
-        {
-            if (count > 0)
-            {
-                xPicker.ShowMax(count);
-                xPicker.BringToFront();
-                ViewCard(new MagicCard());
+        //void mc_CountersChangedFathomMage(int count)
+        //{
+        //    if (count > 0)
+        //    {
+        //        xPicker.ShowMax(count);
+        //        xPicker.BringToFront();
+        //        ViewCard(new MagicCard());
 
-                xPicker.ValuePicked += new XManaPicker.IntReturn(xPicker_ValuePickedDrawCards);
-            }
-        }
+        //        xPicker.ValuePicked += new XManaPicker.IntReturn(xPicker_ValuePickedDrawCards);
+        //    }
+        //}
 
         void xPicker_ValuePickedDrawCards(int value, int count)
         {
@@ -2200,12 +2209,12 @@ namespace MagicProgram
                 # endregion
 
                 # region Fathom Mage
-                case "Fathom Mage":
-                    if (playerTurn)
-                    {
-                        mc.CountersChanged += new ValueChanged(mc_CountersChangedFathomMage);
-                    }
-                    break;
+                //case "Fathom Mage":
+                //    if (playerTurn)
+                //    {
+                //        mc.CountersChanged += new ValueChanged(mc_CountersChangedFathomMage);
+                //    }
+                //    break;
                 # endregion
 
                 # region Zameck Guildmage
@@ -2954,9 +2963,41 @@ namespace MagicProgram
             }
             else
             {
-                MagicCard mct = new MagicCard(mc);
-                PlArea.PlayCard(mct);
+                CardEvent_MakeToken(mc);
+                cardAreaPlay.CardClicked -= CardEvent_Populate;
             }
+        }
+
+        MagicCard CardEvent_MakeToken(MagicCard mc)
+        {
+            MagicCard mct = new MagicCard(mc);
+            if (mc.PArea == null)
+            {
+                mc.PArea = PlArea;
+            }
+
+            return mct;
+        }
+
+
+        void CardsChosen_Twinflame(List<MagicCard> sources)
+        {
+            if (sources.Count > targets)
+            {
+                MessageBox.Show("Too many targets");
+                return;
+            }
+
+            foreach (MagicCard mc in sources)
+            {
+                MagicCard mct = CardEvent_MakeToken(mc);
+                mct.Text += "\r\nHaste";
+
+                mc.PArea.PlayToken(mct);
+            }
+
+            cardAreaPlay.CardsPicked -= CardsChosen_Twinflame;
+            update_listViewPlay();
         }
 
         void PassiveEvent_Populate(MagicCard mc)
@@ -3336,7 +3377,7 @@ namespace MagicProgram
             Scry(value);
         }
     }
-    
+
     public delegate void Phase();
     public delegate void PassiveEvent(MagicCard mc);
     public delegate void CardDraw();

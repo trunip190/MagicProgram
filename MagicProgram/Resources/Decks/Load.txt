@@ -1,18 +1,16 @@
 Forest#10
 Island#10
 Renegade Krasis#2
-Cloudfin Raptor#3
-Gyre Sage#3
+Cloudfin Raptor#4
+Gyre Sage#4
 Master Biomancer#1
 Fathom Mage#2
-Protean Hydra#4
 Bond Beetle#4
-Progenitor Mimic#2
-Ooze Flux#2
+Ooze Flux#3
 Strength of the Tajuru#4
-Predator's Rapport#2
+Predator's Rapport#3
 Breeding Pool#1
 Simic Guildgate#3
-Gaea's Blessing#1
-Explore#4
-Favor of the Overbeing#2
+Explore#3
+Forced Adaptation#3
+Elusive Krasis#3

@@ -5892,6 +5892,16 @@ namespace MagicProgram
             Type = "Creature - Human Wizard";
             Text = "Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@;^Whenever a +1/+1 counter is placed on Fathom Mage, you may draw a card.";
             Flavor = "";
+
+            CountersChanged += new ValueChanged(FathomMage_CountersChanged);
+        }
+
+        void FathomMage_CountersChanged(int value)
+        {
+            if (PArea != null & value > 0)
+            {
+                PArea.drawCards(value);
+            }
         }
     }
     # endregion
@@ -5964,6 +5974,15 @@ namespace MagicProgram
             Type = "Enchantment - Aura";
             Text = "Enchant creature;^At the beginning of your upkeep, put a +1/+1 counter on enchanted creature.";
             Flavor = "";
+        }
+
+        public override void UpkeepCard()
+        {
+            if (Parent != null && Parent.Type.Contains("Creature"))
+            {
+                Parent.counters++;
+            }
+            base.UpkeepCard();
         }
     }
     # endregion
