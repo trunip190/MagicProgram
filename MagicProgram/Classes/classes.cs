@@ -2354,6 +2354,7 @@ namespace MagicProgram
         public event ValueAbility Activating;
         public event PassiveEvent Evolving;
         public event PassiveEvent OnUpkeep;
+        public event PassiveEvent onEndStep;
         public event PassiveEvent OnAttack;
         public event PassiveEvent OnEquip;
         public event PassiveEvent OnUnequip;
@@ -2363,6 +2364,7 @@ namespace MagicProgram
         public event PassiveEvent onEquipmentRemoved;
         public event PassiveEvent onSpellCast;
         public event PassiveEvent onDie;
+        public event PassiveEvent onExile;
         public event PassiveEvent onSacrifice;
         public event PassiveEvent TapChanged;
         public event PassiveEvent OnTap;
@@ -2411,6 +2413,20 @@ namespace MagicProgram
                 handler(this);
             }
             callDestroyed();
+        }
+
+        public void callExile()
+        {
+            PassiveEvent handler = onExile;
+            if (handler != null)
+            {
+                handler(this);
+            }
+
+            if (PArea != null)
+            {
+                PArea.Play_Exile(this);
+            }
         }
 
         public void callSacrifice()
@@ -2518,6 +2534,24 @@ namespace MagicProgram
         public void callOnAttack()
         {
             PassiveEvent handler = OnAttack;
+            if (handler != null)
+            {
+                handler(this);
+            }
+        }
+
+        public void callEndStep()
+        {
+            PassiveEvent handler = onEndStep;
+            if (handler != null)
+            {
+                handler(this);
+            }
+        }
+
+        public void callUpkeep()
+        {
+            PassiveEvent handler = OnUpkeep;
             if (handler != null)
             {
                 handler(this);
@@ -14605,6 +14639,2240 @@ namespace MagicProgram
                 //    mcn = new Island();
                 //    break;
                 # endregion
+                    
+                    # region Abyssal Specter
+case "Abyssal Specter":
+mcn = new AbyssalSpecterIA();
+break;
+# endregion
+
+# region Adarkar Sentinel
+case "Adarkar Sentinel":
+mcn = new AdarkarSentinelIA();
+break;
+# endregion
+
+# region Adarkar Unicorn
+case "Adarkar Unicorn":
+mcn = new AdarkarUnicornIA();
+break;
+# endregion
+
+# region Adarkar Wastes
+case "Adarkar Wastes":
+mcn = new AdarkarWastesIA();
+break;
+# endregion
+
+# region Aegis of the Meek
+case "Aegis of the Meek":
+mcn = new AegisoftheMeekIA();
+break;
+# endregion
+
+# region Aggression
+case "Aggression":
+mcn = new AggressionIA();
+break;
+# endregion
+
+# region Altar of Bone
+case "Altar of Bone":
+mcn = new AltarofBoneIA();
+break;
+# endregion
+
+# region Amulet of Quoz
+case "Amulet of Quoz":
+mcn = new AmuletofQuozIA();
+break;
+# endregion
+
+# region Anarchy
+case "Anarchy":
+mcn = new AnarchyIA();
+break;
+# endregion
+
+# region Arctic Foxes
+case "Arctic Foxes":
+mcn = new ArcticFoxesIA();
+break;
+# endregion
+
+# region Arcum's Sleigh
+case "Arcum's Sleigh":
+mcn = new ArcumsSleighIA();
+break;
+# endregion
+
+# region Arcum's Weathervane
+case "Arcum's Weathervane":
+mcn = new ArcumsWeathervaneIA();
+break;
+# endregion
+
+# region Arcum's Whistle
+case "Arcum's Whistle":
+mcn = new ArcumsWhistleIA();
+break;
+# endregion
+
+# region Arenson's Aura
+case "Arenson's Aura":
+mcn = new ArensonsAuraIA();
+break;
+# endregion
+
+# region Armor of Faith
+case "Armor of Faith":
+mcn = new ArmorofFaithIA();
+break;
+# endregion
+
+# region Arnjlot's Ascent
+case "Arnjlot's Ascent":
+mcn = new ArnjlotsAscentIA();
+break;
+# endregion
+
+# region Ashen Ghoul
+case "Ashen Ghoul":
+mcn = new AshenGhoulIA();
+break;
+# endregion
+
+# region Aurochs
+case "Aurochs":
+mcn = new AurochsIA();
+break;
+# endregion
+
+# region Avalanche
+case "Avalanche":
+mcn = new AvalancheIA();
+break;
+# endregion
+
+# region Balduvian Barbarians
+case "Balduvian Barbarians":
+mcn = new BalduvianBarbariansIA();
+break;
+# endregion
+
+# region Balduvian Bears
+case "Balduvian Bears":
+mcn = new BalduvianBearsIA();
+break;
+# endregion
+
+# region Balduvian Conjurer
+case "Balduvian Conjurer":
+mcn = new BalduvianConjurerIA();
+break;
+# endregion
+
+# region Balduvian Hydra
+case "Balduvian Hydra":
+mcn = new BalduvianHydraIA();
+break;
+# endregion
+
+# region Balduvian Shaman
+case "Balduvian Shaman":
+mcn = new BalduvianShamanIA();
+break;
+# endregion
+
+# region Barbarian Guides
+case "Barbarian Guides":
+mcn = new BarbarianGuidesIA();
+break;
+# endregion
+
+# region Barbed Sextant
+case "Barbed Sextant":
+mcn = new BarbedSextantIA();
+break;
+# endregion
+
+# region Baton of Morale
+case "Baton of Morale":
+mcn = new BatonofMoraleIA();
+break;
+# endregion
+
+# region Battle Cry
+case "Battle Cry":
+mcn = new BattleCryIA();
+break;
+# endregion
+
+# region Battle Frenzy
+case "Battle Frenzy":
+mcn = new BattleFrenzyIA();
+break;
+# endregion
+
+# region Binding Grasp
+case "Binding Grasp":
+mcn = new BindingGraspIA();
+break;
+# endregion
+
+# region Black Scarab
+case "Black Scarab":
+mcn = new BlackScarabIA();
+break;
+# endregion
+
+# region Blessed Wine
+case "Blessed Wine":
+mcn = new BlessedWineIA();
+break;
+# endregion
+
+# region Blinking Spirit
+case "Blinking Spirit":
+mcn = new BlinkingSpiritIA();
+break;
+# endregion
+
+# region Blizzard
+case "Blizzard":
+mcn = new BlizzardIA();
+break;
+# endregion
+
+# region Blue Scarab
+case "Blue Scarab":
+mcn = new BlueScarabIA();
+break;
+# endregion
+
+# region Bone Shaman
+case "Bone Shaman":
+mcn = new BoneShamanIA();
+break;
+# endregion
+
+# region Brainstorm
+case "Brainstorm":
+mcn = new BrainstormIA();
+break;
+# endregion
+
+# region Brand of Ill Omen
+case "Brand of Ill Omen":
+mcn = new BrandofIllOmenIA();
+break;
+# endregion
+
+# region Breath of Dreams
+case "Breath of Dreams":
+mcn = new BreathofDreamsIA();
+break;
+# endregion
+
+# region Brine Shaman
+case "Brine Shaman":
+mcn = new BrineShamanIA();
+break;
+# endregion
+
+# region Brown Ouphe
+case "Brown Ouphe":
+mcn = new BrownOupheIA();
+break;
+# endregion
+
+# region Brushland
+case "Brushland":
+mcn = new BrushlandIA();
+break;
+# endregion
+
+# region Burnt Offering
+case "Burnt Offering":
+mcn = new BurntOfferingIA();
+break;
+# endregion
+
+# region Call to Arms
+case "Call to Arms":
+mcn = new CalltoArmsIA();
+break;
+# endregion
+
+# region Caribou Range
+case "Caribou Range":
+mcn = new CaribouRangeIA();
+break;
+# endregion
+
+# region Celestial Sword
+case "Celestial Sword":
+mcn = new CelestialSwordIA();
+break;
+# endregion
+
+# region Centaur Archer
+case "Centaur Archer":
+mcn = new CentaurArcherIA();
+break;
+# endregion
+
+# region Chaos Lord
+case "Chaos Lord":
+mcn = new ChaosLordIA();
+break;
+# endregion
+
+# region Chaos Moon
+case "Chaos Moon":
+mcn = new ChaosMoonIA();
+break;
+# endregion
+
+# region Chromatic Armor
+case "Chromatic Armor":
+mcn = new ChromaticArmorIA();
+break;
+# endregion
+
+# region Chub Toad
+case "Chub Toad":
+mcn = new ChubToadIA();
+break;
+# endregion
+
+# region Circle of Protection: Black
+case "Circle of Protection: Black":
+mcn = new CircleofProtectionBlackIA();
+break;
+# endregion
+
+# region Circle of Protection: Blue
+case "Circle of Protection: Blue":
+mcn = new CircleofProtectionBlueIA();
+break;
+# endregion
+
+# region Circle of Protection: Green
+case "Circle of Protection: Green":
+mcn = new CircleofProtectionGreenIA();
+break;
+# endregion
+
+# region Circle of Protection: Red
+case "Circle of Protection: Red":
+mcn = new CircleofProtectionRedIA();
+break;
+# endregion
+
+# region Circle of Protection: White
+case "Circle of Protection: White":
+mcn = new CircleofProtectionWhiteIA();
+break;
+# endregion
+
+# region Clairvoyance
+case "Clairvoyance":
+mcn = new ClairvoyanceIA();
+break;
+# endregion
+
+# region Cloak of Confusion
+case "Cloak of Confusion":
+mcn = new CloakofConfusionIA();
+break;
+# endregion
+
+# region Cold Snap
+case "Cold Snap":
+mcn = new ColdSnapIA();
+break;
+# endregion
+
+# region Conquer
+case "Conquer":
+mcn = new ConquerIA();
+break;
+# endregion
+
+# region Cooperation
+case "Cooperation":
+mcn = new CooperationIA();
+break;
+# endregion
+
+# region Counterspell
+case "Counterspell":
+mcn = new CounterspellIA();
+break;
+# endregion
+
+# region Crown of the Ages
+case "Crown of the Ages":
+mcn = new CrownoftheAgesIA();
+break;
+# endregion
+
+# region Curse of Marit Lage
+case "Curse of Marit Lage":
+mcn = new CurseofMaritLageIA();
+break;
+# endregion
+
+# region Dance of the Dead
+case "Dance of the Dead":
+mcn = new DanceoftheDeadIA();
+break;
+# endregion
+
+# region Dark Banishing
+case "Dark Banishing":
+mcn = new DarkBanishingIA();
+break;
+# endregion
+
+# region Dark Ritual
+case "Dark Ritual":
+mcn = new DarkRitualIA();
+break;
+# endregion
+
+# region Death Ward
+case "Death Ward":
+mcn = new DeathWardIA();
+break;
+# endregion
+
+# region Deflection
+case "Deflection":
+mcn = new DeflectionIA();
+break;
+# endregion
+
+# region Demonic Consultation
+case "Demonic Consultation":
+mcn = new DemonicConsultationIA();
+break;
+# endregion
+
+# region Despotic Scepter
+case "Despotic Scepter":
+mcn = new DespoticScepterIA();
+break;
+# endregion
+
+# region Diabolic Vision
+case "Diabolic Vision":
+mcn = new DiabolicVisionIA();
+break;
+# endregion
+
+# region Dire Wolves
+case "Dire Wolves":
+mcn = new DireWolvesIA();
+break;
+# endregion
+
+# region Disenchant
+case "Disenchant":
+mcn = new DisenchantIA();
+break;
+# endregion
+
+# region Dread Wight
+case "Dread Wight":
+mcn = new DreadWightIA();
+break;
+# endregion
+
+# region Dreams of the Dead
+case "Dreams of the Dead":
+mcn = new DreamsoftheDeadIA();
+break;
+# endregion
+
+# region Drift of the Dead
+case "Drift of the Dead":
+mcn = new DriftoftheDeadIA();
+break;
+# endregion
+
+# region Drought
+case "Drought":
+mcn = new DroughtIA();
+break;
+# endregion
+
+# region Dwarven Armory
+case "Dwarven Armory":
+mcn = new DwarvenArmoryIA();
+break;
+# endregion
+
+# region Earthlink
+case "Earthlink":
+mcn = new EarthlinkIA();
+break;
+# endregion
+
+# region Earthlore
+case "Earthlore":
+mcn = new EarthloreIA();
+break;
+# endregion
+
+# region Elder Druid
+case "Elder Druid":
+mcn = new ElderDruidIA();
+break;
+# endregion
+
+# region Elemental Augury
+case "Elemental Augury":
+mcn = new ElementalAuguryIA();
+break;
+# endregion
+
+# region Elkin Bottle
+case "Elkin Bottle":
+mcn = new ElkinBottleIA();
+break;
+# endregion
+
+# region Elvish Healer
+case "Elvish Healer":
+mcn = new ElvishHealerIA();
+break;
+# endregion
+
+# region Enduring Renewal
+case "Enduring Renewal":
+mcn = new EnduringRenewalIA();
+break;
+# endregion
+
+# region Energy Storm
+case "Energy Storm":
+mcn = new EnergyStormIA();
+break;
+# endregion
+
+# region Enervate
+case "Enervate":
+mcn = new EnervateIA();
+break;
+# endregion
+
+# region Errant Minion
+case "Errant Minion":
+mcn = new ErrantMinionIA();
+break;
+# endregion
+
+# region Errantry
+case "Errantry":
+mcn = new ErrantryIA();
+break;
+# endregion
+
+# region Essence Filter
+case "Essence Filter":
+mcn = new EssenceFilterIA();
+break;
+# endregion
+
+# region Essence Flare
+case "Essence Flare":
+mcn = new EssenceFlareIA();
+break;
+# endregion
+
+# region Essence Vortex
+case "Essence Vortex":
+mcn = new EssenceVortexIA();
+break;
+# endregion
+
+# region Fanatical Fever
+case "Fanatical Fever":
+mcn = new FanaticalFeverIA();
+break;
+# endregion
+
+# region Fear
+case "Fear":
+mcn = new FearIA();
+break;
+# endregion
+
+# region Fiery Justice
+case "Fiery Justice":
+mcn = new FieryJusticeIA();
+break;
+# endregion
+
+# region Fire Covenant
+case "Fire Covenant":
+mcn = new FireCovenantIA();
+break;
+# endregion
+
+# region Flame Spirit
+case "Flame Spirit":
+mcn = new FlameSpiritIA();
+break;
+# endregion
+
+# region Flare
+case "Flare":
+mcn = new FlareIA();
+break;
+# endregion
+
+# region Flooded Woodlands
+case "Flooded Woodlands":
+mcn = new FloodedWoodlandsIA();
+break;
+# endregion
+
+# region Flow of Maggots
+case "Flow of Maggots":
+mcn = new FlowofMaggotsIA();
+break;
+# endregion
+
+# region Folk of the Pines
+case "Folk of the Pines":
+mcn = new FolkofthePinesIA();
+break;
+# endregion
+
+# region Forbidden Lore
+case "Forbidden Lore":
+mcn = new ForbiddenLoreIA();
+break;
+# endregion
+
+# region Force Void
+case "Force Void":
+mcn = new ForceVoidIA();
+break;
+# endregion
+
+# region Forest 
+case "Forest ":
+mcn = new ForestIA();
+break;
+# endregion
+
+# region Forgotten Lore
+case "Forgotten Lore":
+mcn = new ForgottenLoreIA();
+break;
+# endregion
+
+# region Formation
+case "Formation":
+mcn = new FormationIA();
+break;
+# endregion
+
+# region Foul Familiar
+case "Foul Familiar":
+mcn = new FoulFamiliarIA();
+break;
+# endregion
+
+# region Foxfire
+case "Foxfire":
+mcn = new FoxfireIA();
+break;
+# endregion
+
+# region Freyalise Supplicant
+case "Freyalise Supplicant":
+mcn = new FreyaliseSupplicantIA();
+break;
+# endregion
+
+# region Freyalise's Charm
+case "Freyalise's Charm":
+mcn = new FreyalisesCharmIA();
+break;
+# endregion
+
+# region Freyalise's Winds
+case "Freyalise's Winds":
+mcn = new FreyalisesWindsIA();
+break;
+# endregion
+
+# region Fumarole
+case "Fumarole":
+mcn = new FumaroleIA();
+break;
+# endregion
+
+# region Fylgja
+case "Fylgja":
+mcn = new FylgjaIA();
+break;
+# endregion
+
+# region Fyndhorn Bow
+case "Fyndhorn Bow":
+mcn = new FyndhornBowIA();
+break;
+# endregion
+
+# region Fyndhorn Brownie
+case "Fyndhorn Brownie":
+mcn = new FyndhornBrownieIA();
+break;
+# endregion
+
+# region Fyndhorn Elder
+case "Fyndhorn Elder":
+mcn = new FyndhornElderIA();
+break;
+# endregion
+
+# region Fyndhorn Elves
+case "Fyndhorn Elves":
+mcn = new FyndhornElvesIA();
+break;
+# endregion
+
+# region Fyndhorn Pollen
+case "Fyndhorn Pollen":
+mcn = new FyndhornPollenIA();
+break;
+# endregion
+
+# region Game of Chaos
+case "Game of Chaos":
+mcn = new GameofChaosIA();
+break;
+# endregion
+
+# region Gangrenous Zombies
+case "Gangrenous Zombies":
+mcn = new GangrenousZombiesIA();
+break;
+# endregion
+
+# region Gaze of Pain
+case "Gaze of Pain":
+mcn = new GazeofPainIA();
+break;
+# endregion
+
+# region General Jarkeld
+case "General Jarkeld":
+mcn = new GeneralJarkeldIA();
+break;
+# endregion
+
+# region Ghostly Flame
+case "Ghostly Flame":
+mcn = new GhostlyFlameIA();
+break;
+# endregion
+
+//# region Giant Growth
+//case "Giant Growth":
+//mcn = new GiantGrowthIA();
+//break;
+//# endregion
+
+# region Giant Trap Door Spider
+case "Giant Trap Door Spider":
+mcn = new GiantTrapDoorSpiderIA();
+break;
+# endregion
+
+# region Glacial Chasm
+case "Glacial Chasm":
+mcn = new GlacialChasmIA();
+break;
+# endregion
+
+# region Glacial Crevasses
+case "Glacial Crevasses":
+mcn = new GlacialCrevassesIA();
+break;
+# endregion
+
+# region Glacial Wall
+case "Glacial Wall":
+mcn = new GlacialWallIA();
+break;
+# endregion
+
+# region Glaciers
+case "Glaciers":
+mcn = new GlaciersIA();
+break;
+# endregion
+
+# region Goblin Lyre
+case "Goblin Lyre":
+mcn = new GoblinLyreIA();
+break;
+# endregion
+
+# region Goblin Mutant
+case "Goblin Mutant":
+mcn = new GoblinMutantIA();
+break;
+# endregion
+
+# region Goblin Sappers
+case "Goblin Sappers":
+mcn = new GoblinSappersIA();
+break;
+# endregion
+
+# region Goblin Ski Patrol
+case "Goblin Ski Patrol":
+mcn = new GoblinSkiPatrolIA();
+break;
+# endregion
+
+# region Goblin Snowman
+case "Goblin Snowman":
+mcn = new GoblinSnowmanIA();
+break;
+# endregion
+
+# region Gorilla Pack
+case "Gorilla Pack":
+mcn = new GorillaPackIA();
+break;
+# endregion
+
+# region Gravebind
+case "Gravebind":
+mcn = new GravebindIA();
+break;
+# endregion
+
+# region Green Scarab
+case "Green Scarab":
+mcn = new GreenScarabIA();
+break;
+# endregion
+
+# region Grizzled Wolverine
+case "Grizzled Wolverine":
+mcn = new GrizzledWolverineIA();
+break;
+# endregion
+
+# region Hallowed Ground
+case "Hallowed Ground":
+mcn = new HallowedGroundIA();
+break;
+# endregion
+
+# region Halls of Mist
+case "Halls of Mist":
+mcn = new HallsofMistIA();
+break;
+# endregion
+
+# region Heal
+case "Heal":
+mcn = new HealIA();
+break;
+# endregion
+
+# region Hecatomb
+case "Hecatomb":
+mcn = new HecatombIA();
+break;
+# endregion
+
+# region Hematite Talisman
+case "Hematite Talisman":
+mcn = new HematiteTalismanIA();
+break;
+# endregion
+
+# region Hipparion
+case "Hipparion":
+mcn = new HipparionIA();
+break;
+# endregion
+
+# region Hoar Shade
+case "Hoar Shade":
+mcn = new HoarShadeIA();
+break;
+# endregion
+
+# region Hot Springs
+case "Hot Springs":
+mcn = new HotSpringsIA();
+break;
+# endregion
+
+# region Howl from Beyond
+case "Howl from Beyond":
+mcn = new HowlfromBeyondIA();
+break;
+# endregion
+
+# region Hurricane
+case "Hurricane":
+mcn = new HurricaneIA();
+break;
+# endregion
+
+# region Hyalopterous Lemure
+case "Hyalopterous Lemure":
+mcn = new HyalopterousLemureIA();
+break;
+# endregion
+
+# region Hydroblast
+case "Hydroblast":
+mcn = new HydroblastIA();
+break;
+# endregion
+
+# region Hymn of Rebirth
+case "Hymn of Rebirth":
+mcn = new HymnofRebirthIA();
+break;
+# endregion
+
+# region Ice Cauldron
+case "Ice Cauldron":
+mcn = new IceCauldronIA();
+break;
+# endregion
+
+# region Ice Floe
+case "Ice Floe":
+mcn = new IceFloeIA();
+break;
+# endregion
+
+# region Iceberg
+case "Iceberg":
+mcn = new IcebergIA();
+break;
+# endregion
+
+# region Icequake
+case "Icequake":
+mcn = new IcequakeIA();
+break;
+# endregion
+
+# region Icy Manipulator
+case "Icy Manipulator":
+mcn = new IcyManipulatorIA();
+break;
+# endregion
+
+# region Icy Prison
+case "Icy Prison":
+mcn = new IcyPrisonIA();
+break;
+# endregion
+
+# region Illusionary Forces
+case "Illusionary Forces":
+mcn = new IllusionaryForcesIA();
+break;
+# endregion
+
+# region Illusionary Presence
+case "Illusionary Presence":
+mcn = new IllusionaryPresenceIA();
+break;
+# endregion
+
+# region Illusionary Terrain
+case "Illusionary Terrain":
+mcn = new IllusionaryTerrainIA();
+break;
+# endregion
+
+# region Illusionary Wall
+case "Illusionary Wall":
+mcn = new IllusionaryWallIA();
+break;
+# endregion
+
+# region Illusions of Grandeur
+case "Illusions of Grandeur":
+mcn = new IllusionsofGrandeurIA();
+break;
+# endregion
+
+# region Imposing Visage
+case "Imposing Visage":
+mcn = new ImposingVisageIA();
+break;
+# endregion
+
+# region Incinerate
+case "Incinerate":
+mcn = new IncinerateIA();
+break;
+# endregion
+
+# region Infernal Darkness
+case "Infernal Darkness":
+mcn = new InfernalDarknessIA();
+break;
+# endregion
+
+# region Infernal Denizen
+case "Infernal Denizen":
+mcn = new InfernalDenizenIA();
+break;
+# endregion
+
+# region Infinite Hourglass
+case "Infinite Hourglass":
+mcn = new InfiniteHourglassIA();
+break;
+# endregion
+
+# region Infuse
+case "Infuse":
+mcn = new InfuseIA();
+break;
+# endregion
+
+# region Island 
+case "Island ":
+mcn = new IslandIA();
+break;
+# endregion
+
+# region Jester's Cap
+case "Jester's Cap":
+mcn = new JestersCapIA();
+break;
+# endregion
+
+# region Jester's Mask
+case "Jester's Mask":
+mcn = new JestersMaskIA();
+break;
+# endregion
+
+# region Jeweled Amulet
+case "Jeweled Amulet":
+mcn = new JeweledAmuletIA();
+break;
+# endregion
+
+# region Johtull Wurm
+case "Johtull Wurm":
+mcn = new JohtullWurmIA();
+break;
+# endregion
+
+# region Jokulhaups
+case "Jokulhaups":
+mcn = new JokulhaupsIA();
+break;
+# endregion
+
+# region Juniper Order Druid
+case "Juniper Order Druid":
+mcn = new JuniperOrderDruidIA();
+break;
+# endregion
+
+# region Justice
+case "Justice":
+mcn = new JusticeIA();
+break;
+# endregion
+
+# region Karplusan Forest
+case "Karplusan Forest":
+mcn = new KarplusanForestIA();
+break;
+# endregion
+
+# region Karplusan Giant
+case "Karplusan Giant":
+mcn = new KarplusanGiantIA();
+break;
+# endregion
+
+# region Karplusan Yeti
+case "Karplusan Yeti":
+mcn = new KarplusanYetiIA();
+break;
+# endregion
+
+# region Kelsinko Ranger
+case "Kelsinko Ranger":
+mcn = new KelsinkoRangerIA();
+break;
+# endregion
+
+# region Kjeldoran Dead
+case "Kjeldoran Dead":
+mcn = new KjeldoranDeadIA();
+break;
+# endregion
+
+# region Kjeldoran Elite Guard
+case "Kjeldoran Elite Guard":
+mcn = new KjeldoranEliteGuardIA();
+break;
+# endregion
+
+# region Kjeldoran Frostbeast
+case "Kjeldoran Frostbeast":
+mcn = new KjeldoranFrostbeastIA();
+break;
+# endregion
+
+# region Kjeldoran Guard
+case "Kjeldoran Guard":
+mcn = new KjeldoranGuardIA();
+break;
+# endregion
+
+# region Kjeldoran Knight
+case "Kjeldoran Knight":
+mcn = new KjeldoranKnightIA();
+break;
+# endregion
+
+# region Kjeldoran Phalanx
+case "Kjeldoran Phalanx":
+mcn = new KjeldoranPhalanxIA();
+break;
+# endregion
+
+# region Kjeldoran Royal Guard
+case "Kjeldoran Royal Guard":
+mcn = new KjeldoranRoyalGuardIA();
+break;
+# endregion
+
+# region Kjeldoran Skycaptain
+case "Kjeldoran Skycaptain":
+mcn = new KjeldoranSkycaptainIA();
+break;
+# endregion
+
+# region Kjeldoran Skyknight
+case "Kjeldoran Skyknight":
+mcn = new KjeldoranSkyknightIA();
+break;
+# endregion
+
+# region Kjeldoran Warrior
+case "Kjeldoran Warrior":
+mcn = new KjeldoranWarriorIA();
+break;
+# endregion
+
+# region Knight of Stromgald
+case "Knight of Stromgald":
+mcn = new KnightofStromgaldIA();
+break;
+# endregion
+
+# region Krovikan Elementalist
+case "Krovikan Elementalist":
+mcn = new KrovikanElementalistIA();
+break;
+# endregion
+
+# region Krovikan Fetish
+case "Krovikan Fetish":
+mcn = new KrovikanFetishIA();
+break;
+# endregion
+
+# region Krovikan Sorcerer
+case "Krovikan Sorcerer":
+mcn = new KrovikanSorcererIA();
+break;
+# endregion
+
+# region Krovikan Vampire
+case "Krovikan Vampire":
+mcn = new KrovikanVampireIA();
+break;
+# endregion
+
+# region Land Cap
+case "Land Cap":
+mcn = new LandCapIA();
+break;
+# endregion
+
+# region Lapis Lazuli Talisman
+case "Lapis Lazuli Talisman":
+mcn = new LapisLazuliTalismanIA();
+break;
+# endregion
+
+# region Lava Burst
+case "Lava Burst":
+mcn = new LavaBurstIA();
+break;
+# endregion
+
+# region Lava Tubes
+case "Lava Tubes":
+mcn = new LavaTubesIA();
+break;
+# endregion
+
+# region Legions of Lim-Dul
+case "Legions of Lim-Dul":
+mcn = new LegionsofLimDulIA();
+break;
+# endregion
+
+# region Leshrac's Rite
+case "Leshrac's Rite":
+mcn = new LeshracsRiteIA();
+break;
+# endregion
+
+# region Leshrac's Sigil
+case "Leshrac's Sigil":
+mcn = new LeshracsSigilIA();
+break;
+# endregion
+
+# region Lhurgoyf
+case "Lhurgoyf":
+mcn = new LhurgoyfIA();
+break;
+# endregion
+
+# region Lightning Blow
+case "Lightning Blow":
+mcn = new LightningBlowIA();
+break;
+# endregion
+
+# region Lim-Dul's Cohort
+case "Lim-Dul's Cohort":
+mcn = new LimDulsCohortIA();
+break;
+# endregion
+
+# region Lim-Dul's Hex
+case "Lim-Dul's Hex":
+mcn = new LimDulsHexIA();
+break;
+# endregion
+
+# region Lost Order of Jarkeld
+case "Lost Order of Jarkeld":
+mcn = new LostOrderofJarkeldIA();
+break;
+# endregion
+
+# region Lure
+case "Lure":
+mcn = new LureIA();
+break;
+# endregion
+
+# region Maddening Wind
+case "Maddening Wind":
+mcn = new MaddeningWindIA();
+break;
+# endregion
+
+# region Magus of the Unseen
+case "Magus of the Unseen":
+mcn = new MagusoftheUnseenIA();
+break;
+# endregion
+
+# region Malachite Talisman
+case "Malachite Talisman":
+mcn = new MalachiteTalismanIA();
+break;
+# endregion
+
+# region Marton Stromgald
+case "Marton Stromgald":
+mcn = new MartonStromgaldIA();
+break;
+# endregion
+
+# region Melee
+case "Melee":
+mcn = new MeleeIA();
+break;
+# endregion
+
+# region Melting
+case "Melting":
+mcn = new MeltingIA();
+break;
+# endregion
+
+# region Mercenaries
+case "Mercenaries":
+mcn = new MercenariesIA();
+break;
+# endregion
+
+# region Merieke Ri Berit
+case "Merieke Ri Berit":
+mcn = new MeriekeRiBeritIA();
+break;
+# endregion
+
+# region Mesmeric Trance
+case "Mesmeric Trance":
+mcn = new MesmericTranceIA();
+break;
+# endregion
+
+# region Meteor Shower
+case "Meteor Shower":
+mcn = new MeteorShowerIA();
+break;
+# endregion
+
+# region Mind Ravel
+case "Mind Ravel":
+mcn = new MindRavelIA();
+break;
+# endregion
+
+# region Mind Warp
+case "Mind Warp":
+mcn = new MindWarpIA();
+break;
+# endregion
+
+# region Mind Whip
+case "Mind Whip":
+mcn = new MindWhipIA();
+break;
+# endregion
+
+# region Minion of Leshrac
+case "Minion of Leshrac":
+mcn = new MinionofLeshracIA();
+break;
+# endregion
+
+# region Minion of Tevesh Szat
+case "Minion of Tevesh Szat":
+mcn = new MinionofTeveshSzatIA();
+break;
+# endregion
+
+# region Mistfolk
+case "Mistfolk":
+mcn = new MistfolkIA();
+break;
+# endregion
+
+# region Mole Worms
+case "Mole Worms":
+mcn = new MoleWormsIA();
+break;
+# endregion
+
+# region Monsoon
+case "Monsoon":
+mcn = new MonsoonIA();
+break;
+# endregion
+
+# region Moor Fiend
+case "Moor Fiend":
+mcn = new MoorFiendIA();
+break;
+# endregion
+
+# region Mountain 
+case "Mountain ":
+mcn = new MountainIA();
+break;
+# endregion
+
+# region Mountain Goat
+case "Mountain Goat":
+mcn = new MountainGoatIA();
+break;
+# endregion
+
+# region Mountain Titan
+case "Mountain Titan":
+mcn = new MountainTitanIA();
+break;
+# endregion
+
+# region Mudslide
+case "Mudslide":
+mcn = new MudslideIA();
+break;
+# endregion
+
+# region Musician
+case "Musician":
+mcn = new MusicianIA();
+break;
+# endregion
+
+# region Mystic Might
+case "Mystic Might":
+mcn = new MysticMightIA();
+break;
+# endregion
+
+# region Mystic Remora
+case "Mystic Remora":
+mcn = new MysticRemoraIA();
+break;
+# endregion
+
+# region Nacre Talisman
+case "Nacre Talisman":
+mcn = new NacreTalismanIA();
+break;
+# endregion
+
+# region Naked Singularity
+case "Naked Singularity":
+mcn = new NakedSingularityIA();
+break;
+# endregion
+
+# region Nature's Lore
+case "Nature's Lore":
+mcn = new NaturesLoreIA();
+break;
+# endregion
+
+# region Necropotence
+case "Necropotence":
+mcn = new NecropotenceIA();
+break;
+# endregion
+
+# region Norritt
+case "Norritt":
+mcn = new NorrittIA();
+break;
+# endregion
+
+# region Oath of Lim-Dul
+case "Oath of Lim-Dul":
+mcn = new OathofLimDulIA();
+break;
+# endregion
+
+# region Onyx Talisman
+case "Onyx Talisman":
+mcn = new OnyxTalismanIA();
+break;
+# endregion
+
+# region Orcish Cannoneers
+case "Orcish Cannoneers":
+mcn = new OrcishCannoneersIA();
+break;
+# endregion
+
+# region Orcish Conscripts
+case "Orcish Conscripts":
+mcn = new OrcishConscriptsIA();
+break;
+# endregion
+
+# region Orcish Farmer
+case "Orcish Farmer":
+mcn = new OrcishFarmerIA();
+break;
+# endregion
+
+# region Orcish Healer
+case "Orcish Healer":
+mcn = new OrcishHealerIA();
+break;
+# endregion
+
+# region Orcish Librarian
+case "Orcish Librarian":
+mcn = new OrcishLibrarianIA();
+break;
+# endregion
+
+# region Orcish Lumberjack
+case "Orcish Lumberjack":
+mcn = new OrcishLumberjackIA();
+break;
+# endregion
+
+# region Orcish Squatters
+case "Orcish Squatters":
+mcn = new OrcishSquattersIA();
+break;
+# endregion
+
+# region Order of the Sacred Torch
+case "Order of the Sacred Torch":
+mcn = new OrderoftheSacredTorchIA();
+break;
+# endregion
+
+# region Order of the White Shield
+case "Order of the White Shield":
+mcn = new OrderoftheWhiteShieldIA();
+break;
+# endregion
+
+# region Pale Bears
+case "Pale Bears":
+mcn = new PaleBearsIA();
+break;
+# endregion
+
+# region Panic
+case "Panic":
+mcn = new PanicIA();
+break;
+# endregion
+
+# region Pentagram of the Ages
+case "Pentagram of the Ages":
+mcn = new PentagramoftheAgesIA();
+break;
+# endregion
+
+# region Pestilence Rats
+case "Pestilence Rats":
+mcn = new PestilenceRatsIA();
+break;
+# endregion
+
+# region Phantasmal Mount
+case "Phantasmal Mount":
+mcn = new PhantasmalMountIA();
+break;
+# endregion
+
+# region Pit Trap
+case "Pit Trap":
+mcn = new PitTrapIA();
+break;
+# endregion
+
+# region Plains 
+case "Plains ":
+mcn = new PlainsIA();
+break;
+# endregion
+
+# region Polar Kraken
+case "Polar Kraken":
+mcn = new PolarKrakenIA();
+break;
+# endregion
+
+# region Portent
+case "Portent":
+mcn = new PortentIA();
+break;
+# endregion
+
+# region Power Sink
+case "Power Sink":
+mcn = new PowerSinkIA();
+break;
+# endregion
+
+# region Pox
+case "Pox":
+mcn = new PoxIA();
+break;
+# endregion
+
+# region Prismatic Ward
+case "Prismatic Ward":
+mcn = new PrismaticWardIA();
+break;
+# endregion
+
+# region Pygmy Allosaurus
+case "Pygmy Allosaurus":
+mcn = new PygmyAllosaurusIA();
+break;
+# endregion
+
+# region Pyknite
+case "Pyknite":
+mcn = new PykniteIA();
+break;
+# endregion
+
+# region Pyroblast
+case "Pyroblast":
+mcn = new PyroblastIA();
+break;
+# endregion
+
+# region Pyroclasm
+case "Pyroclasm":
+mcn = new PyroclasmIA();
+break;
+# endregion
+
+# region Rally
+case "Rally":
+mcn = new RallyIA();
+break;
+# endregion
+
+# region Ray of Command
+case "Ray of Command":
+mcn = new RayofCommandIA();
+break;
+# endregion
+
+# region Ray of Erasure
+case "Ray of Erasure":
+mcn = new RayofErasureIA();
+break;
+# endregion
+
+# region Reality Twist
+case "Reality Twist":
+mcn = new RealityTwistIA();
+break;
+# endregion
+
+# region Reclamation
+case "Reclamation":
+mcn = new ReclamationIA();
+break;
+# endregion
+
+# region Red Scarab
+case "Red Scarab":
+mcn = new RedScarabIA();
+break;
+# endregion
+
+# region Regeneration
+case "Regeneration":
+mcn = new RegenerationIA();
+break;
+# endregion
+
+# region Rime Dryad
+case "Rime Dryad":
+mcn = new RimeDryadIA();
+break;
+# endregion
+
+# region Ritual of Subdual
+case "Ritual of Subdual":
+mcn = new RitualofSubdualIA();
+break;
+# endregion
+
+# region River Delta
+case "River Delta":
+mcn = new RiverDeltaIA();
+break;
+# endregion
+
+# region Runed Arch
+case "Runed Arch":
+mcn = new RunedArchIA();
+break;
+# endregion
+
+# region Sabretooth Tiger
+case "Sabretooth Tiger":
+mcn = new SabretoothTigerIA();
+break;
+# endregion
+
+# region Sacred Boon
+case "Sacred Boon":
+mcn = new SacredBoonIA();
+break;
+# endregion
+
+# region Scaled Wurm
+case "Scaled Wurm":
+mcn = new ScaledWurmIA();
+break;
+# endregion
+
+# region Sea Spirit
+case "Sea Spirit":
+mcn = new SeaSpiritIA();
+break;
+# endregion
+
+# region Seizures
+case "Seizures":
+mcn = new SeizuresIA();
+break;
+# endregion
+
+# region Seraph
+case "Seraph":
+mcn = new SeraphIA();
+break;
+# endregion
+
+# region Shambling Strider
+case "Shambling Strider":
+mcn = new ShamblingStriderIA();
+break;
+# endregion
+
+# region Shatter
+case "Shatter":
+mcn = new ShatterIA();
+break;
+# endregion
+
+# region Shield Bearer
+case "Shield Bearer":
+mcn = new ShieldBearerIA();
+break;
+# endregion
+
+# region Shield of the Ages
+case "Shield of the Ages":
+mcn = new ShieldoftheAgesIA();
+break;
+# endregion
+
+# region Shyft
+case "Shyft":
+mcn = new ShyftIA();
+break;
+# endregion
+
+# region Sibilant Spirit
+case "Sibilant Spirit":
+mcn = new SibilantSpiritIA();
+break;
+# endregion
+
+# region Silver Erne
+case "Silver Erne":
+mcn = new SilverErneIA();
+break;
+# endregion
+
+# region Skeleton Ship
+case "Skeleton Ship":
+mcn = new SkeletonShipIA();
+break;
+# endregion
+
+# region Skull Catapult
+case "Skull Catapult":
+mcn = new SkullCatapultIA();
+break;
+# endregion
+
+# region Sleight of Mind
+case "Sleight of Mind":
+mcn = new SleightofMindIA();
+break;
+# endregion
+
+# region Snow Devil
+case "Snow Devil":
+mcn = new SnowDevilIA();
+break;
+# endregion
+
+# region Snow Fortress
+case "Snow Fortress":
+mcn = new SnowFortressIA();
+break;
+# endregion
+
+# region Snow Hound
+case "Snow Hound":
+mcn = new SnowHoundIA();
+break;
+# endregion
+
+# region Snowblind
+case "Snowblind":
+mcn = new SnowblindIA();
+break;
+# endregion
+
+# region Snow-Covered Forest
+case "Snow-Covered Forest":
+mcn = new SnowCoveredForestIA();
+break;
+# endregion
+
+# region Snow-Covered Island
+case "Snow-Covered Island":
+mcn = new SnowCoveredIslandIA();
+break;
+# endregion
+
+# region Snow-Covered Mountain
+case "Snow-Covered Mountain":
+mcn = new SnowCoveredMountainIA();
+break;
+# endregion
+
+# region Snow-Covered Plains
+case "Snow-Covered Plains":
+mcn = new SnowCoveredPlainsIA();
+break;
+# endregion
+
+# region Snow-Covered Swamp
+case "Snow-Covered Swamp":
+mcn = new SnowCoveredSwampIA();
+break;
+# endregion
+
+# region Snowfall
+case "Snowfall":
+mcn = new SnowfallIA();
+break;
+# endregion
+
+# region Soldevi Golem
+case "Soldevi Golem":
+mcn = new SoldeviGolemIA();
+break;
+# endregion
+
+# region Soldevi Machinist
+case "Soldevi Machinist":
+mcn = new SoldeviMachinistIA();
+break;
+# endregion
+
+# region Soldevi Simulacrum
+case "Soldevi Simulacrum":
+mcn = new SoldeviSimulacrumIA();
+break;
+# endregion
+
+# region Songs of the Damned
+case "Songs of the Damned":
+mcn = new SongsoftheDamnedIA();
+break;
+# endregion
+
+# region Soul Barrier
+case "Soul Barrier":
+mcn = new SoulBarrierIA();
+break;
+# endregion
+
+# region Soul Burn
+case "Soul Burn":
+mcn = new SoulBurnIA();
+break;
+# endregion
+
+# region Soul Kiss
+case "Soul Kiss":
+mcn = new SoulKissIA();
+break;
+# endregion
+
+# region Spectral Shield
+case "Spectral Shield":
+mcn = new SpectralShieldIA();
+break;
+# endregion
+
+# region Spoils of Evil
+case "Spoils of Evil":
+mcn = new SpoilsofEvilIA();
+break;
+# endregion
+
+# region Spoils of War
+case "Spoils of War":
+mcn = new SpoilsofWarIA();
+break;
+# endregion
+
+# region Staff of the Ages
+case "Staff of the Ages":
+mcn = new StaffoftheAgesIA();
+break;
+# endregion
+
+# region Stampede
+case "Stampede":
+mcn = new StampedeIA();
+break;
+# endregion
+
+# region Stench of Evil
+case "Stench of Evil":
+mcn = new StenchofEvilIA();
+break;
+# endregion
+
+# region Stone Rain
+case "Stone Rain":
+mcn = new StoneRainIA();
+break;
+# endregion
+
+# region Stone Spirit
+case "Stone Spirit":
+mcn = new StoneSpiritIA();
+break;
+# endregion
+
+# region Stonehands
+case "Stonehands":
+mcn = new StonehandsIA();
+break;
+# endregion
+
+# region Storm Spirit
+case "Storm Spirit":
+mcn = new StormSpiritIA();
+break;
+# endregion
+
+# region Stormbind
+case "Stormbind":
+mcn = new StormbindIA();
+break;
+# endregion
+
+# region Stromgald Cabal
+case "Stromgald Cabal":
+mcn = new StromgaldCabalIA();
+break;
+# endregion
+
+# region Stunted Growth
+case "Stunted Growth":
+mcn = new StuntedGrowthIA();
+break;
+# endregion
+
+# region Sulfurous Springs
+case "Sulfurous Springs":
+mcn = new SulfurousSpringsIA();
+break;
+# endregion
+
+# region Sunstone
+case "Sunstone":
+mcn = new SunstoneIA();
+break;
+# endregion
+
+# region Swamp 
+case "Swamp ":
+mcn = new SwampIA();
+break;
+# endregion
+
+# region Swords to Plowshares
+case "Swords to Plowshares":
+mcn = new SwordstoPlowsharesIA();
+break;
+# endregion
+
+# region Tarpan
+case "Tarpan":
+mcn = new TarpanIA();
+break;
+# endregion
+
+# region Thermokarst
+case "Thermokarst":
+mcn = new ThermokarstIA();
+break;
+# endregion
+
+# region Thoughtleech
+case "Thoughtleech":
+mcn = new ThoughtleechIA();
+break;
+# endregion
+
+# region Thunder Wall
+case "Thunder Wall":
+mcn = new ThunderWallIA();
+break;
+# endregion
+
+# region Timberline Ridge
+case "Timberline Ridge":
+mcn = new TimberlineRidgeIA();
+break;
+# endregion
+
+# region Time Bomb
+case "Time Bomb":
+mcn = new TimeBombIA();
+break;
+# endregion
+
+# region Tinder Wall
+case "Tinder Wall":
+mcn = new TinderWallIA();
+break;
+# endregion
+
+# region Tor Giant
+case "Tor Giant":
+mcn = new TorGiantIA();
+break;
+# endregion
+
+# region Total War
+case "Total War":
+mcn = new TotalWarIA();
+break;
+# endregion
+
+# region Touch of Death
+case "Touch of Death":
+mcn = new TouchofDeathIA();
+break;
+# endregion
+
+# region Touch of Vitae
+case "Touch of Vitae":
+mcn = new TouchofVitaeIA();
+break;
+# endregion
+
+# region Trailblazer
+case "Trailblazer":
+mcn = new TrailblazerIA();
+break;
+# endregion
+
+# region Underground River
+case "Underground River":
+mcn = new UndergroundRiverIA();
+break;
+# endregion
+
+# region Updraft
+case "Updraft":
+mcn = new UpdraftIA();
+break;
+# endregion
+
+# region Urza's Bauble
+case "Urza's Bauble":
+mcn = new UrzasBaubleIA();
+break;
+# endregion
+
+# region Veldt
+case "Veldt":
+mcn = new VeldtIA();
+break;
+# endregion
+
+# region Venomous Breath
+case "Venomous Breath":
+mcn = new VenomousBreathIA();
+break;
+# endregion
+
+# region Vertigo
+case "Vertigo":
+mcn = new VertigoIA();
+break;
+# endregion
+
+# region Vexing Arcanix
+case "Vexing Arcanix":
+mcn = new VexingArcanixIA();
+break;
+# endregion
+
+# region Vibrating Sphere
+case "Vibrating Sphere":
+mcn = new VibratingSphereIA();
+break;
+# endregion
+
+# region Walking Wall
+case "Walking Wall":
+mcn = new WalkingWallIA();
+break;
+# endregion
+
+# region Wall of Lava
+case "Wall of Lava":
+mcn = new WallofLavaIA();
+break;
+# endregion
+
+# region Wall of Pine Needles
+case "Wall of Pine Needles":
+mcn = new WallofPineNeedlesIA();
+break;
+# endregion
+
+# region Wall of Shields
+case "Wall of Shields":
+mcn = new WallofShieldsIA();
+break;
+# endregion
+
+# region War Chariot
+case "War Chariot":
+mcn = new WarChariotIA();
+break;
+# endregion
+
+# region Warning
+case "Warning":
+mcn = new WarningIA();
+break;
+# endregion
+
+# region Whalebone Glider
+case "Whalebone Glider":
+mcn = new WhaleboneGliderIA();
+break;
+# endregion
+
+# region White Scarab
+case "White Scarab":
+mcn = new WhiteScarabIA();
+break;
+# endregion
+
+# region Whiteout
+case "Whiteout":
+mcn = new WhiteoutIA();
+break;
+# endregion
+
+# region Wiitigo
+case "Wiitigo":
+mcn = new WiitigoIA();
+break;
+# endregion
+
+# region Wild Growth
+case "Wild Growth":
+mcn = new WildGrowthIA();
+break;
+# endregion
+
+# region Wind Spirit
+case "Wind Spirit":
+mcn = new WindSpiritIA();
+break;
+# endregion
+
+# region Wings of Aesthir
+case "Wings of Aesthir":
+mcn = new WingsofAesthirIA();
+break;
+# endregion
+
+# region Winter's Chill
+case "Winter's Chill":
+mcn = new WintersChillIA();
+break;
+# endregion
+
+# region Withering Wisps
+case "Withering Wisps":
+mcn = new WitheringWispsIA();
+break;
+# endregion
+
+# region Woolly Mammoths
+case "Woolly Mammoths":
+mcn = new WoollyMammothsIA();
+break;
+# endregion
+
+# region Woolly Spider
+case "Woolly Spider":
+mcn = new WoollySpiderIA();
+break;
+# endregion
+
+# region Word of Blasting
+case "Word of Blasting":
+mcn = new WordofBlastingIA();
+break;
+# endregion
+
+# region Word of Undoing
+case "Word of Undoing":
+mcn = new WordofUndoingIA();
+break;
+# endregion
+
+# region Wrath of Marit Lage
+case "Wrath of Marit Lage":
+mcn = new WrathofMaritLageIA();
+break;
+# endregion
+
+# region Yavimaya Gnats
+case "Yavimaya Gnats":
+mcn = new YavimayaGnatsIA();
+break;
+# endregion
+
+# region Zuran Enchanter
+case "Zuran Enchanter":
+mcn = new ZuranEnchanterIA();
+break;
+# endregion
+
+# region Zuran Orb
+case "Zuran Orb":
+mcn = new ZuranOrbIA();
+break;
+# endregion
+
+# region Zur's Weirding
+case "Zur's Weirding":
+mcn = new ZursWeirdingIA();
+break;
+# endregion
+
+
 
                 default:
                     mcn = new MagicCard();

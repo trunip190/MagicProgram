@@ -8150,6 +8150,12 @@ namespace MagicProgram
             Text = "Defender^When Mnemonic Wall enters the battlefield, you may return target instant or sorcery card from your graveyard to your hand.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            List<MagicCard> cards = PArea._graveyard.cards.Where(o => o.Type.Contains("Instant") || o.Type.Contains("Sorcery")).ToList();
+            PArea.callPickCards(cards);
+        }
     }
     # endregion
 

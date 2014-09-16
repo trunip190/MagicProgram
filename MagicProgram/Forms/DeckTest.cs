@@ -2978,8 +2978,7 @@ namespace MagicProgram
 
             return mct;
         }
-
-
+        
         void CardsChosen_Twinflame(List<MagicCard> sources)
         {
             if (sources.Count > targets)
@@ -2992,12 +2991,18 @@ namespace MagicProgram
             {
                 MagicCard mct = CardEvent_MakeToken(mc);
                 mct.Text += "\r\nHaste";
+                mct.onEndStep += new PassiveEvent(PassiveEvent_ExileSelf);
 
-                mc.PArea.PlayToken(mct);
+                PlayCard(mct);
             }
 
             cardAreaPlay.CardsPicked -= CardsChosen_Twinflame;
             update_listViewPlay();
+        }
+
+        void PassiveEvent_ExileSelf(MagicCard mc)
+        {
+            mc.callExile();
         }
 
         void PassiveEvent_Populate(MagicCard mc)
@@ -3375,6 +3380,23 @@ namespace MagicProgram
         private void PlArea_onScry(MagicCard mc, int value)
         {
             Scry(value);
+        }
+
+        private void PlArea_onPickCards(List<MagicCard> cards)
+        {
+            comboCardPicker_Fill(cards);
+            CardChosen += new PassiveEvent(CardChosen_ToHand);
+        }
+
+        void CardChosen_ToHand(MagicCard mc)
+        {
+            if (mc.PArea != null && mc.PArea._graveyard.cards.Contains(mc))
+            {
+                mc.PArea._graveyard.cards.Remove(mc);
+                mc.PArea._hand.Add(mc);
+                update_listViewHand();
+            }
+            CardChosen -= CardChosen_ToHand;
         }
     }
 

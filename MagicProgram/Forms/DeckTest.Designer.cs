@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeckTest));
-            MagicProgram.ColourCost colourCost1 = new MagicProgram.ColourCost();
-            MagicProgram.ColourCost colourCost2 = new MagicProgram.ColourCost();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Murmuring Phantasm (0,5) (0)");
+            MagicProgram.ColourCost colourCost3 = new MagicProgram.ColourCost();
+            MagicProgram.ColourCost colourCost4 = new MagicProgram.ColourCost();
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Murmuring Phantasm (0,5) (0)");
             this.imageListHand = new System.Windows.Forms.ImageList(this.components);
             this.imageListPlay = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -531,22 +531,22 @@
             // xPicker
             // 
             this.xPicker.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            colourCost1.black = 0;
-            colourCost1.blue = 0;
-            colourCost1.green = 0;
-            colourCost1.grey = 0;
-            colourCost1.red = 0;
-            colourCost1.white = 0;
-            this.xPicker.Cost = colourCost1;
+            colourCost3.black = 0;
+            colourCost3.blue = 0;
+            colourCost3.green = 0;
+            colourCost3.grey = 0;
+            colourCost3.red = 0;
+            colourCost3.white = 0;
+            this.xPicker.Cost = colourCost3;
             this.xPicker.Dock = System.Windows.Forms.DockStyle.Top;
             this.xPicker.Location = new System.Drawing.Point(0, 104);
-            colourCost2.black = 0;
-            colourCost2.blue = 0;
-            colourCost2.green = 0;
-            colourCost2.grey = 0;
-            colourCost2.red = 0;
-            colourCost2.white = 0;
-            this.xPicker.Mana = colourCost2;
+            colourCost4.black = 0;
+            colourCost4.blue = 0;
+            colourCost4.green = 0;
+            colourCost4.grey = 0;
+            colourCost4.red = 0;
+            colourCost4.white = 0;
+            this.xPicker.Mana = colourCost4;
             this.xPicker.Margin = new System.Windows.Forms.Padding(0);
             this.xPicker.Max = 0;
             this.xPicker.MaximumSize = new System.Drawing.Size(135, 105);
@@ -933,7 +933,7 @@
             this.listViewOppCrea.ContextMenuStrip = this.contextMenuStrip1;
             this.listViewOppCrea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewOppCrea.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listViewOppCrea.LargeImageList = this.imageListPlay;
             this.listViewOppCrea.Location = new System.Drawing.Point(0, 0);
             this.listViewOppCrea.Margin = new System.Windows.Forms.Padding(0);
@@ -1028,6 +1028,7 @@
             this.PlArea.CardUsed += new MagicProgram.PassiveEvent(this.PlArea_CardUsed);
             this.PlArea.CardDrawn += new MagicProgram.PassiveEvent(this.PlArea_CardDrawn);
             this.PlArea.onScry += new MagicProgram.Controls.PlayArea.ValueEvent(this.PlArea_onScry);
+            this.PlArea.onPickCards += new MagicProgram.Controls.PlayArea.CardsPicked(this.PlArea_onPickCards);
             // 
             // OppArea
             // 

@@ -99,6 +99,7 @@ namespace MagicProgram.Controls
 
         # region events
         public delegate void ValueEvent(MagicCard mc, int value);
+        public delegate void CardsPicked(List<MagicCard> cards);
 
         public event Phase UpkeepDone;
         public event PassiveEvent SpellRes;
@@ -107,6 +108,7 @@ namespace MagicProgram.Controls
         public event PassiveEvent CreatureEntered;
         public event ValueChanged onDamageOpponent;
         public event ValueEvent onScry;
+		public event CardsPicked onPickCards;
         # endregion
 
         # region handlers
@@ -188,7 +190,15 @@ namespace MagicProgram.Controls
                 handler(mc, value);
             }
         }
-        # endregion
+        public void callPickCards(List<MagicCard> cards)
+		{
+			CardsPicked handler = onPickCards;
+			if ( handler != null )
+			{
+				handler(cards);
+			}
+		}
+		# endregion
         # endregion
 
         # region method
@@ -594,24 +604,6 @@ namespace MagicProgram.Controls
 
         void Play_Discard(MagicCard mc)
         {
-            //bool toHand = false;
-            //foreach (MagicCard mca in mc.attachedCards)
-            //{
-            //    if (mc.Name == "Rancor")
-            //    {
-            //        _hand.cards.Add(mc);
-            //        mc.Location = "Hand";
-            //        toHand = true;
-            //    }
-            //}
-
-            //if (!toHand)
-            //{
-            //    _graveyard.cards.Add(mc);
-            //    mc.Location = "Graveyard";
-            //}
-
-
             foreach (MagicCard mca in mc.attachedCards)
             {
                 CheckGrave(mca);    //place card in appropriate place                
@@ -621,6 +613,16 @@ namespace MagicProgram.Controls
             _play.cards.Remove(mc);
 
             mc.callDie();
+        }
+
+        public void Play_Exile(MagicCard mc)
+        {
+            foreach (MagicCard mca in mc.attachedCards)
+            {
+                CheckGrave(mca);    //place card in appropriate place                
+            }
+
+            _play.cards.Remove(mc);
         }
 
         void Hand_Discard(MagicCard mc)

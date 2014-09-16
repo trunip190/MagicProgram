@@ -5449,6 +5449,12 @@ namespace MagicProgram
             Text = "When Archaeomancer enters the battlefield, return target instant or sorcery card from your graveyard to your hand.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            List<MagicCard> cards = PArea._graveyard.cards.Where(o => o.Type.Contains("Instant") || o.Type.Contains("Sorcery")).ToList();
+            PArea.callPickCards(cards);
+        }
     }
     # endregion
 

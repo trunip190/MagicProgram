@@ -1084,19 +1084,19 @@ namespace MagicProgram
             imageListLarge.Images.Clear();
         }
 
-		private void ConvertSaves(string directory)
-		{
-			foreach ( string s in Directory.GetFiles(directory))
-			{
-				if ( Path.GetExtension(s) == ".mcxd")
-				{
-					Deck_Load(s);
+        private void ConvertSaves(string directory)
+        {
+            foreach (string s in Directory.GetFiles(directory))
+            {
+                if (Path.GetExtension(s) == ".mcxd")
+                {
+                    Deck_Load(s);
                     string path = s.Replace(".mcxd", ".txt");
-					Deck_SaveBasic(path);
-				}
-			}
-		}
-		
+                    Deck_SaveBasic(path);
+                }
+            }
+        }
+
         private void Deck_Load(string file)
         {
             if (File.Exists(file))
@@ -1480,11 +1480,12 @@ namespace MagicProgram
 
             foreach (MagicCard mc in Database.cards)
             {
-                string Edit = mc.Name.Replace(",", "").Replace("'", "").Replace("-", "").Replace(" ", "").Replace("/", "");
+                string Edit = mc.Name.Replace(",", "").Replace("'", "").Replace("-", "").Replace(" ", "").Replace("/", "").Replace(":", "");
 
                 string line = "$r [Name]#public class [Edit] : MagicCard#{#$public [Edit]()#${#$$ Name = ~[Name]~;#$$ Edition = ~[Edition]~;#$$ Rarity = ~[Rarity]~;#$$ Color = ~[Colour]~;#$$ Cost = ~[Cost]~;#$$ PT = ~[PT]~;#$$ Type = ~[Type]~;#$$ Text = ~[Text]~;#$$ Flavor = ~[Flavour]~;#$}#}#$e##";
+                string lines = "$r [Name]#case ^[Name]^:#mcn = new [Edit]();#break;#$e##";
 
-                line = line.Replace("[Edit]", Edit);
+                line = line.Replace("[Edit]", Edit + mc.Edition);
                 line = line.Replace("[Name]", mc.Name);
                 line = line.Replace("[Edition]", mc.Edition);
                 line = line.Replace("[Rarity]", mc.Rarity);
@@ -1496,7 +1497,11 @@ namespace MagicProgram
                 line = line.Replace("[Flavour]", mc.Flavor.Replace("\n", "^").Replace("#", "@"));
 
                 strings.Add(line);
+
+                lines = lines.Replace("[Edit]", Edit + mc.Edition);
+                lines = lines.Replace("[Name]", mc.Name);
                 File.AppendAllText(@"c:\users\topher\files\" + mc.Edition + ".txt", line);
+                File.AppendAllText(@"c:\users\topher\file\" + mc.Edition + ".txt", lines);
 
                 if (mc.Name[0] != c)
                 {

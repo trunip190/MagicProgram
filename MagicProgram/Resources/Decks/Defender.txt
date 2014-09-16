@@ -1,15 +1,15 @@
+Simic Guildgate#2
+Progenitor Mimic#2
+Battlefield Thaumaturge#3
+Overgrown Battlement#3
+Strength of the Tajuru#3
+Divination#4
+Axebane Guardian#4
+Mnemonic Wall#4
+Comet Storm#4
+Gruul Guildgate#4
+Twinflame#4
 Forest#8
 Island#8
-Axebane Guardian#4
-Battlefield Thaumaturge#3
-Wall of Vines#4
-Overgrown Battlement#3
-Mnemonic Wall#4
-Strength of the Tajuru#3
-Comet Storm#4
-Simic Guildgate#2
-Gruul Guildgate#4
-Explore#3
-Divination#3
-Twinflame#4
-Triskelion#3
+Tinder Wall#3
+Archaeomancer#4

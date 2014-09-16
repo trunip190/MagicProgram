@@ -51,10 +51,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>08191EB571E70E53712C1D0AEA2E08415A971EB9</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>3CA0B8F2FDBB9E7CA46CA318B160DFDC0A123286</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MagicProgram_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MagicProgram_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Core.cs" />
+    <Compile Include="Classes\IceAge.cs" />
     <Compile Include="Classes\Innistrad.cs" />
     <Compile Include="Classes\RavnicaCityGuilds.cs" />
     <Compile Include="Classes\Lorwyn.cs" />

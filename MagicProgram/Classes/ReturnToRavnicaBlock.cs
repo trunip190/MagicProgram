@@ -1605,6 +1605,12 @@ namespace MagicProgram
             Text = "Defender;^When Gatecreeper Vine enters the battlefield, you may search your library for a basic land card or a Gate card, reveal it, put it into your hand, then shuffle your library.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            List<MagicCard> cards = PArea._stack.cards.Where(o => o.Type.Contains("Basic Land") || o.Type.Contains("Gate")).ToList();
+            PArea.callPickCards(cards);
+        }
     }
     # endregion
 
