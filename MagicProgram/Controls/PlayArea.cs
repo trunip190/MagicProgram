@@ -622,7 +622,8 @@ namespace MagicProgram.Controls
                 CheckGrave(mca);    //place card in appropriate place                
             }
 
-            _play.cards.Remove(mc);
+            //_play.cards.Remove(mc);
+            _play.Remove(mc);
         }
 
         void Hand_Discard(MagicCard mc)
@@ -985,7 +986,9 @@ namespace MagicProgram.Controls
 
         public void EndStep()
         {
-            foreach (MagicCard mc in _play.cards)
+            List<MagicCard> list = _play.cards.Where(o => o != null).ToList();
+
+            foreach (MagicCard mc in list)
             {
                 mc.EndStepCard();
             }

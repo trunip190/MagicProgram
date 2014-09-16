@@ -2972,6 +2972,8 @@ namespace MagicProgram
 
             PBonus = 0;
             TBonus = 0;
+
+            callEndStep();
         }
 
         public void ChangeTap()
