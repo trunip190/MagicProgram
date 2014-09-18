@@ -1,16 +1,16 @@
-Memnite#4
-Ornithopter#4
-Vault Skirge#4
-Arcbound Ravager#4
-Ensoul Artifact#4
+Sol Ring#3
+Golem Foundry#3
 Cranial Plating#3
+Memnite#4
+Frogmite#3
+Vault Skirge#4
+Plague Myr#3
+Arcbound Slith#3
+Ornithopter#4
+Darksteel Citadel#4
+Seat of the Synod#4
+Island#7
+Mountain#4
+Ensoul Artifact#4
 Galvanic Blast#3
 Thoughtcast#4
-Darksteel Citadel#4
-Island#5
-Mountain#6
-Sol Ring#3
-Arcbound Slith#3
-Pentavus#2
-Darksteel Ingot#3
-Seat of the Synod#4
