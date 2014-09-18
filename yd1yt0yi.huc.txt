@@ -1,0 +1,19 @@
+﻿updating decks to current level
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch testing
+# Your branch is up-to-date with 'origin/testing'.
+#
+# Changes to be committed:
+#	new file:   MagicProgram/Resources/Database Files/Temp.mxd
+#	modified:   MagicProgram/Resources/Decks/Affinity.txt
+#	modified:   MagicProgram/Resources/Decks/Gruul Tron.txt
+#	new file:   MagicProgram/Resources/Decks/Jeskai.txt
+#	modified:   MagicProgram/Resources/Load.txt
+#
+# Untracked files:
+#	4fa5zovp.soq.txt
+#	kzwdkwqd.apj.txt
+#
+
+updating decks to current level
