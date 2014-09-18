@@ -7,9 +7,9 @@ namespace MagicProgram
 {
     # region Alpha
     # region Air Elemental
-    public class AirElemental : MagicCard
+    public class AirElementalA : MagicCard
     {
-        public AirElemental()
+        public AirElementalA()
         {
             Name = "Air Elemental";
             Edition = "A";
@@ -25,9 +25,9 @@ namespace MagicProgram
     # endregion
 
     # region Ancestral Recall
-    public class AncestralRecall : MagicCard
+    public class AncestralRecallA : MagicCard
     {
-        public AncestralRecall()
+        public AncestralRecallA()
         {
             Name = "Ancestral Recall";
             Edition = "A";
@@ -43,9 +43,9 @@ namespace MagicProgram
     # endregion
 
     # region Animate Artifact
-    public class AnimateArtifact : MagicCard
+    public class AnimateArtifactA : MagicCard
     {
-        public AnimateArtifact()
+        public AnimateArtifactA()
         {
             Name = "Animate Artifact";
             Edition = "A";
@@ -61,9 +61,9 @@ namespace MagicProgram
     # endregion
 
     # region Animate Dead
-    public class AnimateDead : MagicCard
+    public class AnimateDeadA : MagicCard
     {
-        public AnimateDead()
+        public AnimateDeadA()
         {
             Name = "Animate Dead";
             Edition = "A";
@@ -79,9 +79,9 @@ namespace MagicProgram
     # endregion
 
     # region Animate Wall
-    public class AnimateWall : MagicCard
+    public class AnimateWallA : MagicCard
     {
-        public AnimateWall()
+        public AnimateWallA()
         {
             Name = "Animate Wall";
             Edition = "A";
@@ -97,9 +97,9 @@ namespace MagicProgram
     # endregion
 
     # region Ankh of Mishra
-    public class AnkhofMishra : MagicCard
+    public class AnkhofMishraA : MagicCard
     {
-        public AnkhofMishra()
+        public AnkhofMishraA()
         {
             Name = "Ankh of Mishra";
             Edition = "A";
@@ -115,9 +115,9 @@ namespace MagicProgram
     # endregion
 
     # region Armageddon
-    public class Armageddon : MagicCard
+    public class ArmageddonA : MagicCard
     {
-        public Armageddon()
+        public ArmageddonA()
         {
             Name = "Armageddon";
             Edition = "A";
@@ -133,9 +133,9 @@ namespace MagicProgram
     # endregion
 
     # region Aspect of Wolf
-    public class AspectofWolf : MagicCard
+    public class AspectofWolfA : MagicCard
     {
-        public AspectofWolf()
+        public AspectofWolfA()
         {
             Name = "Aspect of Wolf";
             Edition = "A";
@@ -151,9 +151,9 @@ namespace MagicProgram
     # endregion
 
     # region Bad Moon
-    public class BadMoon : MagicCard
+    public class BadMoonA : MagicCard
     {
-        public BadMoon()
+        public BadMoonA()
         {
             Name = "Bad Moon";
             Edition = "A";
@@ -169,9 +169,9 @@ namespace MagicProgram
     # endregion
 
     # region Badlands
-    public class Badlands : MagicCard
+    public class BadlandsA : MagicCard
     {
-        public Badlands()
+        public BadlandsA()
         {
             Name = "Badlands";
             Edition = "A";
@@ -187,9 +187,9 @@ namespace MagicProgram
     # endregion
 
     # region Balance
-    public class Balance : MagicCard
+    public class BalanceA : MagicCard
     {
-        public Balance()
+        public BalanceA()
         {
             Name = "Balance";
             Edition = "A";
@@ -205,9 +205,9 @@ namespace MagicProgram
     # endregion
 
     # region Basalt Monolith
-    public class BasaltMonolith : MagicCard
+    public class BasaltMonolithA : MagicCard
     {
-        public BasaltMonolith()
+        public BasaltMonolithA()
         {
             Name = "Basalt Monolith";
             Edition = "A";
@@ -223,9 +223,9 @@ namespace MagicProgram
     # endregion
 
     # region Bayou
-    public class Bayou : MagicCard
+    public class BayouA : MagicCard
     {
-        public Bayou()
+        public BayouA()
         {
             Name = "Bayou";
             Edition = "A";
@@ -241,9 +241,9 @@ namespace MagicProgram
     # endregion
 
     # region Benalish Hero
-    public class BenalishHero : MagicCard
+    public class BenalishHeroA : MagicCard
     {
-        public BenalishHero()
+        public BenalishHeroA()
         {
             Name = "Benalish Hero";
             Edition = "A";
@@ -259,9 +259,9 @@ namespace MagicProgram
     # endregion
 
     # region Berserk
-    public class Berserk : MagicCard
+    public class BerserkA : MagicCard
     {
-        public Berserk()
+        public BerserkA()
         {
             Name = "Berserk";
             Edition = "A";
@@ -277,9 +277,9 @@ namespace MagicProgram
     # endregion
 
     # region Birds of Paradise
-    public class BirdsofParadise : MagicCard
+    public class BirdsofParadiseA : MagicCard
     {
-        public BirdsofParadise()
+        public BirdsofParadiseA()
         {
             Name = "Birds of Paradise";
             Edition = "A";
@@ -295,9 +295,9 @@ namespace MagicProgram
     # endregion
 
     # region Black Knight
-    public class BlackKnight : MagicCard
+    public class BlackKnightA : MagicCard
     {
-        public BlackKnight()
+        public BlackKnightA()
         {
             Name = "Black Knight";
             Edition = "A";
@@ -313,9 +313,9 @@ namespace MagicProgram
     # endregion
 
     # region Black Lotus
-    public class BlackLotus : MagicCard
+    public class BlackLotusA : MagicCard
     {
-        public BlackLotus()
+        public BlackLotusA()
         {
             Name = "Black Lotus";
             Edition = "A";
@@ -331,9 +331,9 @@ namespace MagicProgram
     # endregion
 
     # region Black Vise
-    public class BlackVise : MagicCard
+    public class BlackViseA : MagicCard
     {
-        public BlackVise()
+        public BlackViseA()
         {
             Name = "Black Vise";
             Edition = "A";
@@ -349,9 +349,9 @@ namespace MagicProgram
     # endregion
 
     # region Black Ward
-    public class BlackWard : MagicCard
+    public class BlackWardA : MagicCard
     {
-        public BlackWard()
+        public BlackWardA()
         {
             Name = "Black Ward";
             Edition = "A";
@@ -367,9 +367,9 @@ namespace MagicProgram
     # endregion
 
     # region Blaze of Glory
-    public class BlazeofGlory : MagicCard
+    public class BlazeofGloryA : MagicCard
     {
-        public BlazeofGlory()
+        public BlazeofGloryA()
         {
             Name = "Blaze of Glory";
             Edition = "A";
@@ -385,9 +385,9 @@ namespace MagicProgram
     # endregion
 
     # region Blessing
-    public class Blessing : MagicCard
+    public class BlessingA : MagicCard
     {
-        public Blessing()
+        public BlessingA()
         {
             Name = "Blessing";
             Edition = "A";
@@ -403,9 +403,9 @@ namespace MagicProgram
     # endregion
 
     # region Blue Elemental Blast
-    public class BlueElementalBlast : MagicCard
+    public class BlueElementalBlastA : MagicCard
     {
-        public BlueElementalBlast()
+        public BlueElementalBlastA()
         {
             Name = "Blue Elemental Blast";
             Edition = "A";
@@ -421,9 +421,9 @@ namespace MagicProgram
     # endregion
 
     # region Blue Ward
-    public class BlueWard : MagicCard
+    public class BlueWardA : MagicCard
     {
-        public BlueWard()
+        public BlueWardA()
         {
             Name = "Blue Ward";
             Edition = "A";
@@ -439,9 +439,9 @@ namespace MagicProgram
     # endregion
 
     # region Bog Wraith
-    public class BogWraith : MagicCard
+    public class BogWraithA : MagicCard
     {
-        public BogWraith()
+        public BogWraithA()
         {
             Name = "Bog Wraith";
             Edition = "A";
@@ -457,9 +457,9 @@ namespace MagicProgram
     # endregion
 
     # region Braingeyser
-    public class Braingeyser : MagicCard
+    public class BraingeyserA : MagicCard
     {
-        public Braingeyser()
+        public BraingeyserA()
         {
             Name = "Braingeyser";
             Edition = "A";
@@ -475,9 +475,9 @@ namespace MagicProgram
     # endregion
 
     # region Burrowing
-    public class Burrowing : MagicCard
+    public class BurrowingA : MagicCard
     {
-        public Burrowing()
+        public BurrowingA()
         {
             Name = "Burrowing";
             Edition = "A";
@@ -493,9 +493,9 @@ namespace MagicProgram
     # endregion
 
     # region Camouflage
-    public class Camouflage : MagicCard
+    public class CamouflageA : MagicCard
     {
-        public Camouflage()
+        public CamouflageA()
         {
             Name = "Camouflage";
             Edition = "A";
@@ -511,9 +511,9 @@ namespace MagicProgram
     # endregion
 
     # region Castle
-    public class Castle : MagicCard
+    public class CastleA : MagicCard
     {
-        public Castle()
+        public CastleA()
         {
             Name = "Castle";
             Edition = "A";
@@ -529,9 +529,9 @@ namespace MagicProgram
     # endregion
 
     # region Celestial Prism
-    public class CelestialPrism : MagicCard
+    public class CelestialPrismA : MagicCard
     {
-        public CelestialPrism()
+        public CelestialPrismA()
         {
             Name = "Celestial Prism";
             Edition = "A";
@@ -547,9 +547,9 @@ namespace MagicProgram
     # endregion
 
     # region Channel
-    public class Channel : MagicCard
+    public class ChannelA : MagicCard
     {
-        public Channel()
+        public ChannelA()
         {
             Name = "Channel";
             Edition = "A";
@@ -565,9 +565,9 @@ namespace MagicProgram
     # endregion
 
     # region Chaos Orb
-    public class ChaosOrb : MagicCard
+    public class ChaosOrbA : MagicCard
     {
-        public ChaosOrb()
+        public ChaosOrbA()
         {
             Name = "Chaos Orb";
             Edition = "A";
@@ -583,9 +583,9 @@ namespace MagicProgram
     # endregion
 
     # region Chaoslace
-    public class Chaoslace : MagicCard
+    public class ChaoslaceA : MagicCard
     {
-        public Chaoslace()
+        public ChaoslaceA()
         {
             Name = "Chaoslace";
             Edition = "A";
@@ -601,9 +601,9 @@ namespace MagicProgram
     # endregion
 
     # region Circle of Protection: Blue
-    public class CircleofProtectionBlue : MagicCard
+    public class CircleofProtectionBlueA : MagicCard
     {
-        public CircleofProtectionBlue()
+        public CircleofProtectionBlueA()
         {
             Name = "Circle of Protection: Blue";
             Edition = "A";
@@ -619,9 +619,9 @@ namespace MagicProgram
     # endregion
 
     # region Circle of Protection: Green
-    public class CircleofProtectionGreen : MagicCard
+    public class CircleofProtectionGreenA : MagicCard
     {
-        public CircleofProtectionGreen()
+        public CircleofProtectionGreenA()
         {
             Name = "Circle of Protection: Green";
             Edition = "A";
@@ -637,9 +637,9 @@ namespace MagicProgram
     # endregion
 
     # region Circle of Protection: Red
-    public class CircleofProtectionRed : MagicCard
+    public class CircleofProtectionRedA : MagicCard
     {
-        public CircleofProtectionRed()
+        public CircleofProtectionRedA()
         {
             Name = "Circle of Protection: Red";
             Edition = "A";
@@ -655,9 +655,9 @@ namespace MagicProgram
     # endregion
 
     # region Circle of Protection: White
-    public class CircleofProtectionWhite : MagicCard
+    public class CircleofProtectionWhiteA : MagicCard
     {
-        public CircleofProtectionWhite()
+        public CircleofProtectionWhiteA()
         {
             Name = "Circle of Protection: White";
             Edition = "A";
@@ -673,9 +673,9 @@ namespace MagicProgram
     # endregion
 
     # region Clockwork Beast
-    public class ClockworkBeast : MagicCard
+    public class ClockworkBeastA : MagicCard
     {
-        public ClockworkBeast()
+        public ClockworkBeastA()
         {
             Name = "Clockwork Beast";
             Edition = "A";
@@ -691,9 +691,9 @@ namespace MagicProgram
     # endregion
 
     # region Clone
-    public class Clone : MagicCard
+    public class CloneA : MagicCard
     {
-        public Clone()
+        public CloneA()
         {
             Name = "Clone";
             Edition = "A";
@@ -709,9 +709,9 @@ namespace MagicProgram
     # endregion
 
     # region Cockatrice
-    public class Cockatrice : MagicCard
+    public class CockatriceA : MagicCard
     {
-        public Cockatrice()
+        public CockatriceA()
         {
             Name = "Cockatrice";
             Edition = "A";
@@ -727,9 +727,9 @@ namespace MagicProgram
     # endregion
 
     # region Consecrate Land
-    public class ConsecrateLand : MagicCard
+    public class ConsecrateLandA : MagicCard
     {
-        public ConsecrateLand()
+        public ConsecrateLandA()
         {
             Name = "Consecrate Land";
             Edition = "A";
@@ -745,9 +745,9 @@ namespace MagicProgram
     # endregion
 
     # region Conservator
-    public class Conservator : MagicCard
+    public class ConservatorA : MagicCard
     {
-        public Conservator()
+        public ConservatorA()
         {
             Name = "Conservator";
             Edition = "A";
@@ -763,9 +763,9 @@ namespace MagicProgram
     # endregion
 
     # region Contract from Below
-    public class ContractfromBelow : MagicCard
+    public class ContractfromBelowA : MagicCard
     {
-        public ContractfromBelow()
+        public ContractfromBelowA()
         {
             Name = "Contract from Below";
             Edition = "A";
@@ -781,9 +781,9 @@ namespace MagicProgram
     # endregion
 
     # region Control Magic
-    public class ControlMagic : MagicCard
+    public class ControlMagicA : MagicCard
     {
-        public ControlMagic()
+        public ControlMagicA()
         {
             Name = "Control Magic";
             Edition = "A";
@@ -799,9 +799,9 @@ namespace MagicProgram
     # endregion
 
     # region Conversion
-    public class Conversion : MagicCard
+    public class ConversionA : MagicCard
     {
-        public Conversion()
+        public ConversionA()
         {
             Name = "Conversion";
             Edition = "A";
@@ -817,9 +817,9 @@ namespace MagicProgram
     # endregion
 
     # region Copper Tablet
-    public class CopperTablet : MagicCard
+    public class CopperTabletA : MagicCard
     {
-        public CopperTablet()
+        public CopperTabletA()
         {
             Name = "Copper Tablet";
             Edition = "A";
@@ -835,9 +835,9 @@ namespace MagicProgram
     # endregion
 
     # region Copy Artifact
-    public class CopyArtifact : MagicCard
+    public class CopyArtifactA : MagicCard
     {
-        public CopyArtifact()
+        public CopyArtifactA()
         {
             Name = "Copy Artifact";
             Edition = "A";
@@ -853,9 +853,9 @@ namespace MagicProgram
     # endregion
 
     # region Counterspell
-    public class Counterspell : MagicCard
+    public class CounterspellA : MagicCard
     {
-        public Counterspell()
+        public CounterspellA()
         {
             Name = "Counterspell";
             Edition = "A";
@@ -871,9 +871,9 @@ namespace MagicProgram
     # endregion
 
     # region Craw Wurm
-    public class CrawWurm : MagicCard
+    public class CrawWurmA : MagicCard
     {
-        public CrawWurm()
+        public CrawWurmA()
         {
             Name = "Craw Wurm";
             Edition = "A";
@@ -889,9 +889,9 @@ namespace MagicProgram
     # endregion
 
     # region Creature Bond
-    public class CreatureBond : MagicCard
+    public class CreatureBondA : MagicCard
     {
-        public CreatureBond()
+        public CreatureBondA()
         {
             Name = "Creature Bond";
             Edition = "A";
@@ -907,9 +907,9 @@ namespace MagicProgram
     # endregion
 
     # region Crusade
-    public class Crusade : MagicCard
+    public class CrusadeA : MagicCard
     {
-        public Crusade()
+        public CrusadeA()
         {
             Name = "Crusade";
             Edition = "A";
@@ -925,9 +925,9 @@ namespace MagicProgram
     # endregion
 
     # region Crystal Rod
-    public class CrystalRod : MagicCard
+    public class CrystalRodA : MagicCard
     {
-        public CrystalRod()
+        public CrystalRodA()
         {
             Name = "Crystal Rod";
             Edition = "A";
@@ -943,9 +943,9 @@ namespace MagicProgram
     # endregion
 
     # region Cursed Land
-    public class CursedLand : MagicCard
+    public class CursedLandA : MagicCard
     {
-        public CursedLand()
+        public CursedLandA()
         {
             Name = "Cursed Land";
             Edition = "A";
@@ -961,9 +961,9 @@ namespace MagicProgram
     # endregion
 
     # region Cyclopean Tomb
-    public class CyclopeanTomb : MagicCard
+    public class CyclopeanTombA : MagicCard
     {
-        public CyclopeanTomb()
+        public CyclopeanTombA()
         {
             Name = "Cyclopean Tomb";
             Edition = "A";
@@ -979,9 +979,9 @@ namespace MagicProgram
     # endregion
 
     # region Dark Ritual
-    public class DarkRitual : MagicCard
+    public class DarkRitualA : MagicCard
     {
-        public DarkRitual()
+        public DarkRitualA()
         {
             Name = "Dark Ritual";
             Edition = "A";
@@ -997,9 +997,9 @@ namespace MagicProgram
     # endregion
 
     # region Darkpact
-    public class Darkpact : MagicCard
+    public class DarkpactA : MagicCard
     {
-        public Darkpact()
+        public DarkpactA()
         {
             Name = "Darkpact";
             Edition = "A";
@@ -1015,9 +1015,9 @@ namespace MagicProgram
     # endregion
 
     # region Death Ward
-    public class DeathWard : MagicCard
+    public class DeathWardA : MagicCard
     {
-        public DeathWard()
+        public DeathWardA()
         {
             Name = "Death Ward";
             Edition = "A";
@@ -1033,9 +1033,9 @@ namespace MagicProgram
     # endregion
 
     # region Deathgrip
-    public class Deathgrip : MagicCard
+    public class DeathgripA : MagicCard
     {
-        public Deathgrip()
+        public DeathgripA()
         {
             Name = "Deathgrip";
             Edition = "A";
@@ -1051,9 +1051,9 @@ namespace MagicProgram
     # endregion
 
     # region Deathlace
-    public class Deathlace : MagicCard
+    public class DeathlaceA : MagicCard
     {
-        public Deathlace()
+        public DeathlaceA()
         {
             Name = "Deathlace";
             Edition = "A";
@@ -1069,9 +1069,9 @@ namespace MagicProgram
     # endregion
 
     # region Demonic Attorney
-    public class DemonicAttorney : MagicCard
+    public class DemonicAttorneyA : MagicCard
     {
-        public DemonicAttorney()
+        public DemonicAttorneyA()
         {
             Name = "Demonic Attorney";
             Edition = "A";
@@ -1087,9 +1087,9 @@ namespace MagicProgram
     # endregion
 
     # region Demonic Hordes
-    public class DemonicHordes : MagicCard
+    public class DemonicHordesA : MagicCard
     {
-        public DemonicHordes()
+        public DemonicHordesA()
         {
             Name = "Demonic Hordes";
             Edition = "A";
@@ -1105,9 +1105,9 @@ namespace MagicProgram
     # endregion
 
     # region Demonic Tutor
-    public class DemonicTutor : MagicCard
+    public class DemonicTutorA : MagicCard
     {
-        public DemonicTutor()
+        public DemonicTutorA()
         {
             Name = "Demonic Tutor";
             Edition = "A";
@@ -1123,9 +1123,9 @@ namespace MagicProgram
     # endregion
 
     # region Dingus Egg
-    public class DingusEgg : MagicCard
+    public class DingusEggA : MagicCard
     {
-        public DingusEgg()
+        public DingusEggA()
         {
             Name = "Dingus Egg";
             Edition = "A";
@@ -1141,9 +1141,9 @@ namespace MagicProgram
     # endregion
 
     # region Disenchant
-    public class Disenchant : MagicCard
+    public class DisenchantA : MagicCard
     {
-        public Disenchant()
+        public DisenchantA()
         {
             Name = "Disenchant";
             Edition = "A";
@@ -1159,9 +1159,9 @@ namespace MagicProgram
     # endregion
 
     # region Disintegrate
-    public class Disintegrate : MagicCard
+    public class DisintegrateA : MagicCard
     {
-        public Disintegrate()
+        public DisintegrateA()
         {
             Name = "Disintegrate";
             Edition = "A";
@@ -1177,9 +1177,9 @@ namespace MagicProgram
     # endregion
 
     # region Disrupting Scepter
-    public class DisruptingScepter : MagicCard
+    public class DisruptingScepterA : MagicCard
     {
-        public DisruptingScepter()
+        public DisruptingScepterA()
         {
             Name = "Disrupting Scepter";
             Edition = "A";
@@ -1195,9 +1195,9 @@ namespace MagicProgram
     # endregion
 
     # region Dragon Whelp
-    public class DragonWhelp : MagicCard
+    public class DragonWhelpA : MagicCard
     {
-        public DragonWhelp()
+        public DragonWhelpA()
         {
             Name = "Dragon Whelp";
             Edition = "A";
@@ -1213,9 +1213,9 @@ namespace MagicProgram
     # endregion
 
     # region Drain Life
-    public class DrainLife : MagicCard
+    public class DrainLifeA : MagicCard
     {
-        public DrainLife()
+        public DrainLifeA()
         {
             Name = "Drain Life";
             Edition = "A";
@@ -1231,9 +1231,9 @@ namespace MagicProgram
     # endregion
 
     # region Drain Power
-    public class DrainPower : MagicCard
+    public class DrainPowerA : MagicCard
     {
-        public DrainPower()
+        public DrainPowerA()
         {
             Name = "Drain Power";
             Edition = "A";
@@ -1249,9 +1249,9 @@ namespace MagicProgram
     # endregion
 
     # region Drudge Skeletons
-    public class DrudgeSkeletons : MagicCard
+    public class DrudgeSkeletonsA : MagicCard
     {
-        public DrudgeSkeletons()
+        public DrudgeSkeletonsA()
         {
             Name = "Drudge Skeletons";
             Edition = "A";
@@ -1267,9 +1267,9 @@ namespace MagicProgram
     # endregion
 
     # region Dwarven Demolition Team
-    public class DwarvenDemolitionTeam : MagicCard
+    public class DwarvenDemolitionTeamA : MagicCard
     {
-        public DwarvenDemolitionTeam()
+        public DwarvenDemolitionTeamA()
         {
             Name = "Dwarven Demolition Team";
             Edition = "A";
@@ -1285,9 +1285,9 @@ namespace MagicProgram
     # endregion
 
     # region Dwarven Warriors
-    public class DwarvenWarriors : MagicCard
+    public class DwarvenWarriorsA : MagicCard
     {
-        public DwarvenWarriors()
+        public DwarvenWarriorsA()
         {
             Name = "Dwarven Warriors";
             Edition = "A";
@@ -1303,9 +1303,9 @@ namespace MagicProgram
     # endregion
 
     # region Earth Elemental
-    public class EarthElemental : MagicCard
+    public class EarthElementalA : MagicCard
     {
-        public EarthElemental()
+        public EarthElementalA()
         {
             Name = "Earth Elemental";
             Edition = "A";
@@ -1321,9 +1321,9 @@ namespace MagicProgram
     # endregion
 
     # region Earthbind
-    public class Earthbind : MagicCard
+    public class EarthbindA : MagicCard
     {
-        public Earthbind()
+        public EarthbindA()
         {
             Name = "Earthbind";
             Edition = "A";
@@ -1339,9 +1339,9 @@ namespace MagicProgram
     # endregion
 
     # region Earthquake
-    public class Earthquake : MagicCard
+    public class EarthquakeA : MagicCard
     {
-        public Earthquake()
+        public EarthquakeA()
         {
             Name = "Earthquake";
             Edition = "A";
@@ -1357,9 +1357,9 @@ namespace MagicProgram
     # endregion
 
     # region Elvish Archers
-    public class ElvishArchers : MagicCard
+    public class ElvishArchersA : MagicCard
     {
-        public ElvishArchers()
+        public ElvishArchersA()
         {
             Name = "Elvish Archers";
             Edition = "A";
@@ -1375,9 +1375,9 @@ namespace MagicProgram
     # endregion
 
     # region Evil Presence
-    public class EvilPresence : MagicCard
+    public class EvilPresenceA : MagicCard
     {
-        public EvilPresence()
+        public EvilPresenceA()
         {
             Name = "Evil Presence";
             Edition = "A";
@@ -1393,9 +1393,9 @@ namespace MagicProgram
     # endregion
 
     # region False Orders
-    public class FalseOrders : MagicCard
+    public class FalseOrdersA : MagicCard
     {
-        public FalseOrders()
+        public FalseOrdersA()
         {
             Name = "False Orders";
             Edition = "A";
@@ -1411,9 +1411,9 @@ namespace MagicProgram
     # endregion
 
     # region Farmstead
-    public class Farmstead : MagicCard
+    public class FarmsteadA : MagicCard
     {
-        public Farmstead()
+        public FarmsteadA()
         {
             Name = "Farmstead";
             Edition = "A";
@@ -1429,9 +1429,9 @@ namespace MagicProgram
     # endregion
 
     # region Fastbond
-    public class Fastbond : MagicCard
+    public class FastbondA : MagicCard
     {
-        public Fastbond()
+        public FastbondA()
         {
             Name = "Fastbond";
             Edition = "A";
@@ -1447,9 +1447,9 @@ namespace MagicProgram
     # endregion
 
     # region Fear
-    public class Fear : MagicCard
+    public class FearA : MagicCard
     {
-        public Fear()
+        public FearA()
         {
             Name = "Fear";
             Edition = "A";
@@ -1465,9 +1465,9 @@ namespace MagicProgram
     # endregion
 
     # region Feedback
-    public class Feedback : MagicCard
+    public class FeedbackA : MagicCard
     {
-        public Feedback()
+        public FeedbackA()
         {
             Name = "Feedback";
             Edition = "A";
@@ -1483,9 +1483,9 @@ namespace MagicProgram
     # endregion
 
     # region Fire Elemental
-    public class FireElemental : MagicCard
+    public class FireElementalA : MagicCard
     {
-        public FireElemental()
+        public FireElementalA()
         {
             Name = "Fire Elemental";
             Edition = "A";
@@ -1501,9 +1501,9 @@ namespace MagicProgram
     # endregion
 
     # region Fireball
-    public class Fireball : MagicCard
+    public class FireballA : MagicCard
     {
-        public Fireball()
+        public FireballA()
         {
             Name = "Fireball";
             Edition = "A";
@@ -1519,9 +1519,9 @@ namespace MagicProgram
     # endregion
 
     # region Firebreathing
-    public class Firebreathing : MagicCard
+    public class FirebreathingA : MagicCard
     {
-        public Firebreathing()
+        public FirebreathingA()
         {
             Name = "Firebreathing";
             Edition = "A";
@@ -1537,9 +1537,9 @@ namespace MagicProgram
     # endregion
 
     # region Flashfires
-    public class Flashfires : MagicCard
+    public class FlashfiresA : MagicCard
     {
-        public Flashfires()
+        public FlashfiresA()
         {
             Name = "Flashfires";
             Edition = "A";
@@ -1555,9 +1555,9 @@ namespace MagicProgram
     # endregion
 
     # region Flight
-    public class Flight : MagicCard
+    public class FlightA : MagicCard
     {
-        public Flight()
+        public FlightA()
         {
             Name = "Flight";
             Edition = "A";
@@ -1573,9 +1573,9 @@ namespace MagicProgram
     # endregion
 
     # region Fog
-    public class Fog : MagicCard
+    public class FogA : MagicCard
     {
-        public Fog()
+        public FogA()
         {
             Name = "Fog";
             Edition = "A";
@@ -1591,9 +1591,9 @@ namespace MagicProgram
     # endregion
 
     # region Force of Nature
-    public class ForceofNature : MagicCard
+    public class ForceofNatureA : MagicCard
     {
-        public ForceofNature()
+        public ForceofNatureA()
         {
             Name = "Force of Nature";
             Edition = "A";
@@ -1609,9 +1609,9 @@ namespace MagicProgram
     # endregion
 
     # region Forcefield
-    public class Forcefield : MagicCard
+    public class ForcefieldA : MagicCard
     {
-        public Forcefield()
+        public ForcefieldA()
         {
             Name = "Forcefield";
             Edition = "A";
@@ -1627,9 +1627,9 @@ namespace MagicProgram
     # endregion
 
     # region Forest
-    public class ForestA : MagicCard
+    public class ForestAA : MagicCard
     {
-        public ForestA()
+        public ForestAA()
         {
             Name = "Forest";
             Edition = "A";
@@ -1645,9 +1645,9 @@ namespace MagicProgram
     # endregion
 
     # region Fork
-    public class Fork : MagicCard
+    public class ForkA : MagicCard
     {
-        public Fork()
+        public ForkA()
         {
             Name = "Fork";
             Edition = "A";
@@ -1663,9 +1663,9 @@ namespace MagicProgram
     # endregion
 
     # region Frozen Shade
-    public class FrozenShade : MagicCard
+    public class FrozenShadeA : MagicCard
     {
-        public FrozenShade()
+        public FrozenShadeA()
         {
             Name = "Frozen Shade";
             Edition = "A";
@@ -1681,9 +1681,9 @@ namespace MagicProgram
     # endregion
 
     # region Fungusaur
-    public class Fungusaur : MagicCard
+    public class FungusaurA : MagicCard
     {
-        public Fungusaur()
+        public FungusaurA()
         {
             Name = "Fungusaur";
             Edition = "A";
@@ -1699,9 +1699,9 @@ namespace MagicProgram
     # endregion
 
     # region Gaea's Liege
-    public class GaeasLiege : MagicCard
+    public class GaeasLiegeA : MagicCard
     {
-        public GaeasLiege()
+        public GaeasLiegeA()
         {
             Name = "Gaea's Liege";
             Edition = "A";
@@ -1717,9 +1717,9 @@ namespace MagicProgram
     # endregion
 
     # region Gauntlet of Might
-    public class GauntletofMight : MagicCard
+    public class GauntletofMightA : MagicCard
     {
-        public GauntletofMight()
+        public GauntletofMightA()
         {
             Name = "Gauntlet of Might";
             Edition = "A";
@@ -1735,9 +1735,9 @@ namespace MagicProgram
     # endregion
 
     # region Giant Growth
-    public class GiantGrowthGP : MagicCard
+    public class GiantGrowthGPA : MagicCard
     {
-        public GiantGrowthGP()
+        public GiantGrowthGPA()
         {
             Name = "Giant Growth";
             Edition = "A";
@@ -1753,9 +1753,9 @@ namespace MagicProgram
     # endregion
 
     # region Giant Spider
-    public class GiantSpider : MagicCard
+    public class GiantSpiderA : MagicCard
     {
-        public GiantSpider()
+        public GiantSpiderA()
         {
             Name = "Giant Spider";
             Edition = "A";
@@ -1771,9 +1771,9 @@ namespace MagicProgram
     # endregion
 
     # region Glasses of Urza
-    public class GlassesofUrza : MagicCard
+    public class GlassesofUrzaA : MagicCard
     {
-        public GlassesofUrza()
+        public GlassesofUrzaA()
         {
             Name = "Glasses of Urza";
             Edition = "A";
@@ -1789,9 +1789,9 @@ namespace MagicProgram
     # endregion
 
     # region Gloom
-    public class Gloom : MagicCard
+    public class GloomA : MagicCard
     {
-        public Gloom()
+        public GloomA()
         {
             Name = "Gloom";
             Edition = "A";
@@ -1807,9 +1807,9 @@ namespace MagicProgram
     # endregion
 
     # region Goblin Balloon Brigade
-    public class GoblinBalloonBrigade : MagicCard
+    public class GoblinBalloonBrigadeA : MagicCard
     {
-        public GoblinBalloonBrigade()
+        public GoblinBalloonBrigadeA()
         {
             Name = "Goblin Balloon Brigade";
             Edition = "A";
@@ -1825,9 +1825,9 @@ namespace MagicProgram
     # endregion
 
     # region Goblin King
-    public class GoblinKing : MagicCard
+    public class GoblinKingA : MagicCard
     {
-        public GoblinKing()
+        public GoblinKingA()
         {
             Name = "Goblin King";
             Edition = "A";
@@ -1843,9 +1843,9 @@ namespace MagicProgram
     # endregion
 
     # region Granite Gargoyle
-    public class GraniteGargoyle : MagicCard
+    public class GraniteGargoyleA : MagicCard
     {
-        public GraniteGargoyle()
+        public GraniteGargoyleA()
         {
             Name = "Granite Gargoyle";
             Edition = "A";
@@ -1861,9 +1861,9 @@ namespace MagicProgram
     # endregion
 
     # region Gray Ogre
-    public class GrayOgre : MagicCard
+    public class GrayOgreA : MagicCard
     {
-        public GrayOgre()
+        public GrayOgreA()
         {
             Name = "Gray Ogre";
             Edition = "A";
@@ -1879,9 +1879,9 @@ namespace MagicProgram
     # endregion
 
     # region Green Ward
-    public class GreenWard : MagicCard
+    public class GreenWardA : MagicCard
     {
-        public GreenWard()
+        public GreenWardA()
         {
             Name = "Green Ward";
             Edition = "A";
@@ -1897,9 +1897,9 @@ namespace MagicProgram
     # endregion
 
     # region Grizzly Bears
-    public class GrizzlyBears : MagicCard
+    public class GrizzlyBearsA : MagicCard
     {
-        public GrizzlyBears()
+        public GrizzlyBearsA()
         {
             Name = "Grizzly Bears";
             Edition = "A";
@@ -1915,9 +1915,9 @@ namespace MagicProgram
     # endregion
 
     # region Guardian Angel
-    public class GuardianAngel : MagicCard
+    public class GuardianAngelA : MagicCard
     {
-        public GuardianAngel()
+        public GuardianAngelA()
         {
             Name = "Guardian Angel";
             Edition = "A";
@@ -1933,9 +1933,9 @@ namespace MagicProgram
     # endregion
 
     # region Healing Salve
-    public class HealingSalve : MagicCard
+    public class HealingSalveA : MagicCard
     {
-        public HealingSalve()
+        public HealingSalveA()
         {
             Name = "Healing Salve";
             Edition = "A";
@@ -1951,9 +1951,9 @@ namespace MagicProgram
     # endregion
 
     # region Helm of Chatzuk
-    public class HelmofChatzuk : MagicCard
+    public class HelmofChatzukA : MagicCard
     {
-        public HelmofChatzuk()
+        public HelmofChatzukA()
         {
             Name = "Helm of Chatzuk";
             Edition = "A";
@@ -1969,9 +1969,9 @@ namespace MagicProgram
     # endregion
 
     # region Hill Giant
-    public class HillGiant : MagicCard
+    public class HillGiantA : MagicCard
     {
-        public HillGiant()
+        public HillGiantA()
         {
             Name = "Hill Giant";
             Edition = "A";
@@ -1987,9 +1987,9 @@ namespace MagicProgram
     # endregion
 
     # region Holy Armor
-    public class HolyArmor : MagicCard
+    public class HolyArmorA : MagicCard
     {
-        public HolyArmor()
+        public HolyArmorA()
         {
             Name = "Holy Armor";
             Edition = "A";
@@ -2005,9 +2005,9 @@ namespace MagicProgram
     # endregion
 
     # region Holy Strength
-    public class HolyStrength : MagicCard
+    public class HolyStrengthA : MagicCard
     {
-        public HolyStrength()
+        public HolyStrengthA()
         {
             Name = "Holy Strength";
             Edition = "A";
@@ -2023,9 +2023,9 @@ namespace MagicProgram
     # endregion
 
     # region Howl from Beyond
-    public class HowlfromBeyond : MagicCard
+    public class HowlfromBeyondA : MagicCard
     {
-        public HowlfromBeyond()
+        public HowlfromBeyondA()
         {
             Name = "Howl from Beyond";
             Edition = "A";
@@ -2041,9 +2041,9 @@ namespace MagicProgram
     # endregion
 
     # region Howling Mine
-    public class HowlingMine : MagicCard
+    public class HowlingMineA : MagicCard
     {
-        public HowlingMine()
+        public HowlingMineA()
         {
             Name = "Howling Mine";
             Edition = "A";
@@ -2059,9 +2059,9 @@ namespace MagicProgram
     # endregion
 
     # region Hurloon Minotaur
-    public class HurloonMinotaur : MagicCard
+    public class HurloonMinotaurA : MagicCard
     {
-        public HurloonMinotaur()
+        public HurloonMinotaurA()
         {
             Name = "Hurloon Minotaur";
             Edition = "A";
@@ -2077,9 +2077,9 @@ namespace MagicProgram
     # endregion
 
     # region Hurricane
-    public class Hurricane : MagicCard
+    public class HurricaneA : MagicCard
     {
-        public Hurricane()
+        public HurricaneA()
         {
             Name = "Hurricane";
             Edition = "A";
@@ -2095,9 +2095,9 @@ namespace MagicProgram
     # endregion
 
     # region Hypnotic Specter
-    public class HypnoticSpecter : MagicCard
+    public class HypnoticSpecterA : MagicCard
     {
-        public HypnoticSpecter()
+        public HypnoticSpecterA()
         {
             Name = "Hypnotic Specter";
             Edition = "A";
@@ -2113,9 +2113,9 @@ namespace MagicProgram
     # endregion
 
     # region Ice Storm
-    public class IceStorm : MagicCard
+    public class IceStormA : MagicCard
     {
-        public IceStorm()
+        public IceStormA()
         {
             Name = "Ice Storm";
             Edition = "A";
@@ -2131,9 +2131,9 @@ namespace MagicProgram
     # endregion
 
     # region Icy Manipulator
-    public class IcyManipulator : MagicCard
+    public class IcyManipulatorA : MagicCard
     {
-        public IcyManipulator()
+        public IcyManipulatorA()
         {
             Name = "Icy Manipulator";
             Edition = "A";
@@ -2149,9 +2149,9 @@ namespace MagicProgram
     # endregion
 
     # region Illusionary Mask
-    public class IllusionaryMask : MagicCard
+    public class IllusionaryMaskA : MagicCard
     {
-        public IllusionaryMask()
+        public IllusionaryMaskA()
         {
             Name = "Illusionary Mask";
             Edition = "A";
@@ -2167,9 +2167,9 @@ namespace MagicProgram
     # endregion
 
     # region Instill Energy
-    public class InstillEnergy : MagicCard
+    public class InstillEnergyA : MagicCard
     {
-        public InstillEnergy()
+        public InstillEnergyA()
         {
             Name = "Instill Energy";
             Edition = "A";
@@ -2185,9 +2185,9 @@ namespace MagicProgram
     # endregion
 
     # region Invisibility
-    public class Invisibility : MagicCard
+    public class InvisibilityA : MagicCard
     {
-        public Invisibility()
+        public InvisibilityA()
         {
             Name = "Invisibility";
             Edition = "A";
@@ -2203,9 +2203,9 @@ namespace MagicProgram
     # endregion
 
     # region Iron Star
-    public class IronStar : MagicCard
+    public class IronStarA : MagicCard
     {
-        public IronStar()
+        public IronStarA()
         {
             Name = "Iron Star";
             Edition = "A";
@@ -2221,9 +2221,9 @@ namespace MagicProgram
     # endregion
 
     # region Ironclaw Orcs
-    public class IronclawOrcs : MagicCard
+    public class IronclawOrcsA : MagicCard
     {
-        public IronclawOrcs()
+        public IronclawOrcsA()
         {
             Name = "Ironclaw Orcs";
             Edition = "A";
@@ -2239,9 +2239,9 @@ namespace MagicProgram
     # endregion
 
     # region Ironroot Treefolk
-    public class IronrootTreefolk : MagicCard
+    public class IronrootTreefolkA : MagicCard
     {
-        public IronrootTreefolk()
+        public IronrootTreefolkA()
         {
             Name = "Ironroot Treefolk";
             Edition = "A";
@@ -2257,9 +2257,9 @@ namespace MagicProgram
     # endregion
 
     # region Island A
-    public class IslandA : MagicCard
+    public class IslandAA : MagicCard
     {
-        public IslandA()
+        public IslandAA()
         {
             Name = "Island";
             Edition = "A";
@@ -2275,9 +2275,9 @@ namespace MagicProgram
     # endregion
 
     # region Island Sanctuary
-    public class IslandSanctuary : MagicCard
+    public class IslandSanctuaryA : MagicCard
     {
-        public IslandSanctuary()
+        public IslandSanctuaryA()
         {
             Name = "Island Sanctuary";
             Edition = "A";
@@ -2293,9 +2293,9 @@ namespace MagicProgram
     # endregion
 
     # region Ivory Cup
-    public class IvoryCup : MagicCard
+    public class IvoryCupA : MagicCard
     {
-        public IvoryCup()
+        public IvoryCupA()
         {
             Name = "Ivory Cup";
             Edition = "A";
@@ -2311,9 +2311,9 @@ namespace MagicProgram
     # endregion
 
     # region Jade Monolith
-    public class JadeMonolith : MagicCard
+    public class JadeMonolithA : MagicCard
     {
-        public JadeMonolith()
+        public JadeMonolithA()
         {
             Name = "Jade Monolith";
             Edition = "A";
@@ -2329,9 +2329,9 @@ namespace MagicProgram
     # endregion
 
     # region Jade Statue
-    public class JadeStatue : MagicCard
+    public class JadeStatueA : MagicCard
     {
-        public JadeStatue()
+        public JadeStatueA()
         {
             Name = "Jade Statue";
             Edition = "A";
@@ -2347,9 +2347,9 @@ namespace MagicProgram
     # endregion
 
     # region Jayemdae Tome
-    public class JayemdaeTome : MagicCard
+    public class JayemdaeTomeA : MagicCard
     {
-        public JayemdaeTome()
+        public JayemdaeTomeA()
         {
             Name = "Jayemdae Tome";
             Edition = "A";
@@ -2365,9 +2365,9 @@ namespace MagicProgram
     # endregion
 
     # region Juggernaut
-    public class Juggernaut : MagicCard
+    public class JuggernautA : MagicCard
     {
-        public Juggernaut()
+        public JuggernautA()
         {
             Name = "Juggernaut";
             Edition = "A";
@@ -2383,9 +2383,9 @@ namespace MagicProgram
     # endregion
 
     # region Jump
-    public class Jump : MagicCard
+    public class JumpA : MagicCard
     {
-        public Jump()
+        public JumpA()
         {
             Name = "Jump";
             Edition = "A";
@@ -2401,9 +2401,9 @@ namespace MagicProgram
     # endregion
 
     # region Karma
-    public class Karma : MagicCard
+    public class KarmaA : MagicCard
     {
-        public Karma()
+        public KarmaA()
         {
             Name = "Karma";
             Edition = "A";
@@ -2419,9 +2419,9 @@ namespace MagicProgram
     # endregion
 
     # region Keldon Warlord
-    public class KeldonWarlord : MagicCard
+    public class KeldonWarlordA : MagicCard
     {
-        public KeldonWarlord()
+        public KeldonWarlordA()
         {
             Name = "Keldon Warlord";
             Edition = "A";
@@ -2437,9 +2437,9 @@ namespace MagicProgram
     # endregion
 
     # region Kormus Bell
-    public class KormusBell : MagicCard
+    public class KormusBellA : MagicCard
     {
-        public KormusBell()
+        public KormusBellA()
         {
             Name = "Kormus Bell";
             Edition = "A";
@@ -2455,9 +2455,9 @@ namespace MagicProgram
     # endregion
 
     # region Kudzu
-    public class Kudzu : MagicCard
+    public class KudzuA : MagicCard
     {
-        public Kudzu()
+        public KudzuA()
         {
             Name = "Kudzu";
             Edition = "A";
@@ -2473,9 +2473,9 @@ namespace MagicProgram
     # endregion
 
     # region Lance
-    public class Lance : MagicCard
+    public class LanceA : MagicCard
     {
-        public Lance()
+        public LanceA()
         {
             Name = "Lance";
             Edition = "A";
@@ -2491,9 +2491,9 @@ namespace MagicProgram
     # endregion
 
     # region Ley Druid
-    public class LeyDruid : MagicCard
+    public class LeyDruidA : MagicCard
     {
-        public LeyDruid()
+        public LeyDruidA()
         {
             Name = "Ley Druid";
             Edition = "A";
@@ -2509,9 +2509,9 @@ namespace MagicProgram
     # endregion
 
     # region Library of Leng
-    public class LibraryofLeng : MagicCard
+    public class LibraryofLengA : MagicCard
     {
-        public LibraryofLeng()
+        public LibraryofLengA()
         {
             Name = "Library of Leng";
             Edition = "A";
@@ -2527,9 +2527,9 @@ namespace MagicProgram
     # endregion
 
     # region Lich
-    public class Lich : MagicCard
+    public class LichA : MagicCard
     {
-        public Lich()
+        public LichA()
         {
             Name = "Lich";
             Edition = "A";
@@ -2545,9 +2545,9 @@ namespace MagicProgram
     # endregion
 
     # region Lifeforce
-    public class Lifeforce : MagicCard
+    public class LifeforceA : MagicCard
     {
-        public Lifeforce()
+        public LifeforceA()
         {
             Name = "Lifeforce";
             Edition = "A";
@@ -2563,9 +2563,9 @@ namespace MagicProgram
     # endregion
 
     # region Lifelace
-    public class Lifelace : MagicCard
+    public class LifelaceA : MagicCard
     {
-        public Lifelace()
+        public LifelaceA()
         {
             Name = "Lifelace";
             Edition = "A";
@@ -2581,9 +2581,9 @@ namespace MagicProgram
     # endregion
 
     # region Lifetap
-    public class Lifetap : MagicCard
+    public class LifetapA : MagicCard
     {
-        public Lifetap()
+        public LifetapA()
         {
             Name = "Lifetap";
             Edition = "A";
@@ -2599,9 +2599,9 @@ namespace MagicProgram
     # endregion
 
     # region Lightning Bolt
-    public class LightningBolt : MagicCard
+    public class LightningBoltA : MagicCard
     {
-        public LightningBolt()
+        public LightningBoltA()
         {
             Name = "Lightning Bolt";
             Edition = "A";
@@ -2617,9 +2617,9 @@ namespace MagicProgram
     # endregion
 
     # region Living Artifact
-    public class LivingArtifact : MagicCard
+    public class LivingArtifactA : MagicCard
     {
-        public LivingArtifact()
+        public LivingArtifactA()
         {
             Name = "Living Artifact";
             Edition = "A";
@@ -2635,9 +2635,9 @@ namespace MagicProgram
     # endregion
 
     # region Living Lands
-    public class LivingLands : MagicCard
+    public class LivingLandsA : MagicCard
     {
-        public LivingLands()
+        public LivingLandsA()
         {
             Name = "Living Lands";
             Edition = "A";
@@ -2653,9 +2653,9 @@ namespace MagicProgram
     # endregion
 
     # region Living Wall
-    public class LivingWall : MagicCard
+    public class LivingWallA : MagicCard
     {
-        public LivingWall()
+        public LivingWallA()
         {
             Name = "Living Wall";
             Edition = "A";
@@ -2671,9 +2671,9 @@ namespace MagicProgram
     # endregion
 
     # region Llanowar Elves
-    public class LlanowarElves : MagicCard
+    public class LlanowarElvesA : MagicCard
     {
-        public LlanowarElves()
+        public LlanowarElvesA()
         {
             Name = "Llanowar Elves";
             Edition = "A";
@@ -2689,9 +2689,9 @@ namespace MagicProgram
     # endregion
 
     # region Lord of Atlantis
-    public class LordofAtlantis : MagicCard
+    public class LordofAtlantisA : MagicCard
     {
-        public LordofAtlantis()
+        public LordofAtlantisA()
         {
             Name = "Lord of Atlantis";
             Edition = "A";
@@ -2707,9 +2707,9 @@ namespace MagicProgram
     # endregion
 
     # region Lord of the Pit
-    public class LordofthePit : MagicCard
+    public class LordofthePitA : MagicCard
     {
-        public LordofthePit()
+        public LordofthePitA()
         {
             Name = "Lord of the Pit";
             Edition = "A";
@@ -2725,9 +2725,9 @@ namespace MagicProgram
     # endregion
 
     # region Lure
-    public class Lure : MagicCard
+    public class LureA : MagicCard
     {
-        public Lure()
+        public LureA()
         {
             Name = "Lure";
             Edition = "A";
@@ -2743,9 +2743,9 @@ namespace MagicProgram
     # endregion
 
     # region Magical Hack
-    public class MagicalHack : MagicCard
+    public class MagicalHackA : MagicCard
     {
-        public MagicalHack()
+        public MagicalHackA()
         {
             Name = "Magical Hack";
             Edition = "A";
@@ -2761,9 +2761,9 @@ namespace MagicProgram
     # endregion
 
     # region Mahamoti Djinn
-    public class MahamotiDjinn : MagicCard
+    public class MahamotiDjinnA : MagicCard
     {
-        public MahamotiDjinn()
+        public MahamotiDjinnA()
         {
             Name = "Mahamoti Djinn";
             Edition = "A";
@@ -2779,9 +2779,9 @@ namespace MagicProgram
     # endregion
 
     # region Mana Flare
-    public class ManaFlare : MagicCard
+    public class ManaFlareA : MagicCard
     {
-        public ManaFlare()
+        public ManaFlareA()
         {
             Name = "Mana Flare";
             Edition = "A";
@@ -2797,9 +2797,9 @@ namespace MagicProgram
     # endregion
 
     # region Mana Short
-    public class ManaShort : MagicCard
+    public class ManaShortA : MagicCard
     {
-        public ManaShort()
+        public ManaShortA()
         {
             Name = "Mana Short";
             Edition = "A";
@@ -2815,9 +2815,9 @@ namespace MagicProgram
     # endregion
 
     # region Mana Vault
-    public class ManaVault : MagicCard
+    public class ManaVaultA : MagicCard
     {
-        public ManaVault()
+        public ManaVaultA()
         {
             Name = "Mana Vault";
             Edition = "A";
@@ -2833,9 +2833,9 @@ namespace MagicProgram
     # endregion
 
     # region Manabarbs
-    public class Manabarbs : MagicCard
+    public class ManabarbsA : MagicCard
     {
-        public Manabarbs()
+        public ManabarbsA()
         {
             Name = "Manabarbs";
             Edition = "A";
@@ -2851,9 +2851,9 @@ namespace MagicProgram
     # endregion
 
     # region Meekstone
-    public class Meekstone : MagicCard
+    public class MeekstoneA : MagicCard
     {
-        public Meekstone()
+        public MeekstoneA()
         {
             Name = "Meekstone";
             Edition = "A";
@@ -2869,9 +2869,9 @@ namespace MagicProgram
     # endregion
 
     # region Merfolk of the Pearl Trident
-    public class MerfolkofthePearlTrident : MagicCard
+    public class MerfolkofthePearlTridentA : MagicCard
     {
-        public MerfolkofthePearlTrident()
+        public MerfolkofthePearlTridentA()
         {
             Name = "Merfolk of the Pearl Trident";
             Edition = "A";
@@ -2887,9 +2887,9 @@ namespace MagicProgram
     # endregion
 
     # region Mesa Pegasus
-    public class MesaPegasus : MagicCard
+    public class MesaPegasusA : MagicCard
     {
-        public MesaPegasus()
+        public MesaPegasusA()
         {
             Name = "Mesa Pegasus";
             Edition = "A";
@@ -2905,9 +2905,9 @@ namespace MagicProgram
     # endregion
 
     # region Mind Twist
-    public class MindTwist : MagicCard
+    public class MindTwistA : MagicCard
     {
-        public MindTwist()
+        public MindTwistA()
         {
             Name = "Mind Twist";
             Edition = "A";
@@ -2923,9 +2923,9 @@ namespace MagicProgram
     # endregion
 
     # region Mons's Goblin Raiders
-    public class MonssGoblinRaiders : MagicCard
+    public class MonssGoblinRaidersA : MagicCard
     {
-        public MonssGoblinRaiders()
+        public MonssGoblinRaidersA()
         {
             Name = "Mons's Goblin Raiders";
             Edition = "A";
@@ -2941,9 +2941,9 @@ namespace MagicProgram
     # endregion
 
     # region Mountain A
-    public class MountainA : MagicCard
+    public class MountainAA : MagicCard
     {
-        public MountainA()
+        public MountainAA()
         {
             Name = "Mountain";
             Edition = "A";
@@ -2959,9 +2959,9 @@ namespace MagicProgram
     # endregion
 
     # region Mox Emerald
-    public class MoxEmerald : MagicCard
+    public class MoxEmeraldA : MagicCard
     {
-        public MoxEmerald()
+        public MoxEmeraldA()
         {
             Name = "Mox Emerald";
             Edition = "A";
@@ -2977,9 +2977,9 @@ namespace MagicProgram
     # endregion
 
     # region Mox Jet
-    public class MoxJet : MagicCard
+    public class MoxJetA : MagicCard
     {
-        public MoxJet()
+        public MoxJetA()
         {
             Name = "Mox Jet";
             Edition = "A";
@@ -2995,9 +2995,9 @@ namespace MagicProgram
     # endregion
 
     # region Mox Pearl
-    public class MoxPearl : MagicCard
+    public class MoxPearlA : MagicCard
     {
-        public MoxPearl()
+        public MoxPearlA()
         {
             Name = "Mox Pearl";
             Edition = "A";
@@ -3013,9 +3013,9 @@ namespace MagicProgram
     # endregion
 
     # region Mox Ruby
-    public class MoxRuby : MagicCard
+    public class MoxRubyA : MagicCard
     {
-        public MoxRuby()
+        public MoxRubyA()
         {
             Name = "Mox Ruby";
             Edition = "A";
@@ -3031,9 +3031,9 @@ namespace MagicProgram
     # endregion
 
     # region Mox Sapphire
-    public class MoxSapphire : MagicCard
+    public class MoxSapphireA : MagicCard
     {
-        public MoxSapphire()
+        public MoxSapphireA()
         {
             Name = "Mox Sapphire";
             Edition = "A";
@@ -3049,9 +3049,9 @@ namespace MagicProgram
     # endregion
 
     # region Natural Selection
-    public class NaturalSelection : MagicCard
+    public class NaturalSelectionA : MagicCard
     {
-        public NaturalSelection()
+        public NaturalSelectionA()
         {
             Name = "Natural Selection";
             Edition = "A";
@@ -3067,9 +3067,9 @@ namespace MagicProgram
     # endregion
 
     # region Nether Shadow
-    public class NetherShadow : MagicCard
+    public class NetherShadowA : MagicCard
     {
-        public NetherShadow()
+        public NetherShadowA()
         {
             Name = "Nether Shadow";
             Edition = "A";
@@ -3085,9 +3085,9 @@ namespace MagicProgram
     # endregion
 
     # region Nettling Imp
-    public class NettlingImp : MagicCard
+    public class NettlingImpA : MagicCard
     {
-        public NettlingImp()
+        public NettlingImpA()
         {
             Name = "Nettling Imp";
             Edition = "A";
@@ -3103,9 +3103,9 @@ namespace MagicProgram
     # endregion
 
     # region Nevinyrral's Disk
-    public class NevinyrralsDisk : MagicCard
+    public class NevinyrralsDiskA : MagicCard
     {
-        public NevinyrralsDisk()
+        public NevinyrralsDiskA()
         {
             Name = "Nevinyrral's Disk";
             Edition = "A";
@@ -3121,9 +3121,9 @@ namespace MagicProgram
     # endregion
 
     # region Nightmare
-    public class Nightmare : MagicCard
+    public class NightmareA : MagicCard
     {
-        public Nightmare()
+        public NightmareA()
         {
             Name = "Nightmare";
             Edition = "A";
@@ -3139,9 +3139,9 @@ namespace MagicProgram
     # endregion
 
     # region Northern Paladin
-    public class NorthernPaladin : MagicCard
+    public class NorthernPaladinA : MagicCard
     {
-        public NorthernPaladin()
+        public NorthernPaladinA()
         {
             Name = "Northern Paladin";
             Edition = "A";
@@ -3157,9 +3157,9 @@ namespace MagicProgram
     # endregion
 
     # region Obsianus Golem
-    public class ObsianusGolem : MagicCard
+    public class ObsianusGolemA : MagicCard
     {
-        public ObsianusGolem()
+        public ObsianusGolemA()
         {
             Name = "Obsianus Golem";
             Edition = "A";
@@ -3175,9 +3175,9 @@ namespace MagicProgram
     # endregion
 
     # region Orcish Artillery
-    public class OrcishArtillery : MagicCard
+    public class OrcishArtilleryA : MagicCard
     {
-        public OrcishArtillery()
+        public OrcishArtilleryA()
         {
             Name = "Orcish Artillery";
             Edition = "A";
@@ -3193,9 +3193,9 @@ namespace MagicProgram
     # endregion
 
     # region Orcish Oriflamme
-    public class OrcishOriflamme : MagicCard
+    public class OrcishOriflammeA : MagicCard
     {
-        public OrcishOriflamme()
+        public OrcishOriflammeA()
         {
             Name = "Orcish Oriflamme";
             Edition = "A";
@@ -3211,9 +3211,9 @@ namespace MagicProgram
     # endregion
 
     # region Paralyze
-    public class Paralyze : MagicCard
+    public class ParalyzeA : MagicCard
     {
-        public Paralyze()
+        public ParalyzeA()
         {
             Name = "Paralyze";
             Edition = "A";
@@ -3229,9 +3229,9 @@ namespace MagicProgram
     # endregion
 
     # region Pearled Unicorn
-    public class PearledUnicorn : MagicCard
+    public class PearledUnicornA : MagicCard
     {
-        public PearledUnicorn()
+        public PearledUnicornA()
         {
             Name = "Pearled Unicorn";
             Edition = "A";
@@ -3247,9 +3247,9 @@ namespace MagicProgram
     # endregion
 
     # region Personal Incarnation
-    public class PersonalIncarnation : MagicCard
+    public class PersonalIncarnationA : MagicCard
     {
-        public PersonalIncarnation()
+        public PersonalIncarnationA()
         {
             Name = "Personal Incarnation";
             Edition = "A";
@@ -3265,9 +3265,9 @@ namespace MagicProgram
     # endregion
 
     # region Pestilence
-    public class Pestilence : MagicCard
+    public class PestilenceA : MagicCard
     {
-        public Pestilence()
+        public PestilenceA()
         {
             Name = "Pestilence";
             Edition = "A";
@@ -3283,9 +3283,9 @@ namespace MagicProgram
     # endregion
 
     # region Phantasmal Forces
-    public class PhantasmalForces : MagicCard
+    public class PhantasmalForcesA : MagicCard
     {
-        public PhantasmalForces()
+        public PhantasmalForcesA()
         {
             Name = "Phantasmal Forces";
             Edition = "A";
@@ -3301,9 +3301,9 @@ namespace MagicProgram
     # endregion
 
     # region Phantasmal Terrain
-    public class PhantasmalTerrain : MagicCard
+    public class PhantasmalTerrainA : MagicCard
     {
-        public PhantasmalTerrain()
+        public PhantasmalTerrainA()
         {
             Name = "Phantasmal Terrain";
             Edition = "A";
@@ -3319,9 +3319,9 @@ namespace MagicProgram
     # endregion
 
     # region Phantom Monster
-    public class PhantomMonster : MagicCard
+    public class PhantomMonsterA : MagicCard
     {
-        public PhantomMonster()
+        public PhantomMonsterA()
         {
             Name = "Phantom Monster";
             Edition = "A";
@@ -3337,9 +3337,9 @@ namespace MagicProgram
     # endregion
 
     # region Pirate Ship
-    public class PirateShip : MagicCard
+    public class PirateShipA : MagicCard
     {
-        public PirateShip()
+        public PirateShipA()
         {
             Name = "Pirate Ship";
             Edition = "A";
@@ -3355,9 +3355,9 @@ namespace MagicProgram
     # endregion
 
     # region Plague Rats
-    public class PlagueRats : MagicCard
+    public class PlagueRatsA : MagicCard
     {
-        public PlagueRats()
+        public PlagueRatsA()
         {
             Name = "Plague Rats";
             Edition = "A";
@@ -3373,9 +3373,9 @@ namespace MagicProgram
     # endregion
 
     # region Plains A
-    public class PlainsA : MagicCard
+    public class PlainsAA : MagicCard
     {
-        public PlainsA()
+        public PlainsAA()
         {
             Name = "Plains";
             Edition = "A";
@@ -3391,9 +3391,9 @@ namespace MagicProgram
     # endregion
 
     # region Plateau
-    public class Plateau : MagicCard
+    public class PlateauA : MagicCard
     {
-        public Plateau()
+        public PlateauA()
         {
             Name = "Plateau";
             Edition = "A";
@@ -3409,9 +3409,9 @@ namespace MagicProgram
     # endregion
 
     # region Power Leak
-    public class PowerLeak : MagicCard
+    public class PowerLeakA : MagicCard
     {
-        public PowerLeak()
+        public PowerLeakA()
         {
             Name = "Power Leak";
             Edition = "A";
@@ -3427,9 +3427,9 @@ namespace MagicProgram
     # endregion
 
     # region Power Sink
-    public class PowerSink : MagicCard
+    public class PowerSinkA : MagicCard
     {
-        public PowerSink()
+        public PowerSinkA()
         {
             Name = "Power Sink";
             Edition = "A";
@@ -3445,9 +3445,9 @@ namespace MagicProgram
     # endregion
 
     # region Power Surge
-    public class PowerSurge : MagicCard
+    public class PowerSurgeA : MagicCard
     {
-        public PowerSurge()
+        public PowerSurgeA()
         {
             Name = "Power Surge";
             Edition = "A";
@@ -3463,9 +3463,9 @@ namespace MagicProgram
     # endregion
 
     # region Prodigal Sorcerer
-    public class ProdigalSorcerer : MagicCard
+    public class ProdigalSorcererA : MagicCard
     {
-        public ProdigalSorcerer()
+        public ProdigalSorcererA()
         {
             Name = "Prodigal Sorcerer";
             Edition = "A";
@@ -3481,9 +3481,9 @@ namespace MagicProgram
     # endregion
 
     # region Psionic Blast
-    public class PsionicBlast : MagicCard
+    public class PsionicBlastA : MagicCard
     {
-        public PsionicBlast()
+        public PsionicBlastA()
         {
             Name = "Psionic Blast";
             Edition = "A";
@@ -3499,9 +3499,9 @@ namespace MagicProgram
     # endregion
 
     # region Psychic Venom
-    public class PsychicVenom : MagicCard
+    public class PsychicVenomA : MagicCard
     {
-        public PsychicVenom()
+        public PsychicVenomA()
         {
             Name = "Psychic Venom";
             Edition = "A";
@@ -3517,9 +3517,9 @@ namespace MagicProgram
     # endregion
 
     # region Purelace
-    public class Purelace : MagicCard
+    public class PurelaceA : MagicCard
     {
-        public Purelace()
+        public PurelaceA()
         {
             Name = "Purelace";
             Edition = "A";
@@ -3535,9 +3535,9 @@ namespace MagicProgram
     # endregion
 
     # region Raging River
-    public class RagingRiver : MagicCard
+    public class RagingRiverA : MagicCard
     {
-        public RagingRiver()
+        public RagingRiverA()
         {
             Name = "Raging River";
             Edition = "A";
@@ -3553,9 +3553,9 @@ namespace MagicProgram
     # endregion
 
     # region Raise Dead
-    public class RaiseDead : MagicCard
+    public class RaiseDeadA : MagicCard
     {
-        public RaiseDead()
+        public RaiseDeadA()
         {
             Name = "Raise Dead";
             Edition = "A";
@@ -3571,9 +3571,9 @@ namespace MagicProgram
     # endregion
 
     # region Red Elemental Blast
-    public class RedElementalBlast : MagicCard
+    public class RedElementalBlastA : MagicCard
     {
-        public RedElementalBlast()
+        public RedElementalBlastA()
         {
             Name = "Red Elemental Blast";
             Edition = "A";
@@ -3589,9 +3589,9 @@ namespace MagicProgram
     # endregion
 
     # region Red Ward
-    public class RedWard : MagicCard
+    public class RedWardA : MagicCard
     {
-        public RedWard()
+        public RedWardA()
         {
             Name = "Red Ward";
             Edition = "A";
@@ -3607,9 +3607,9 @@ namespace MagicProgram
     # endregion
 
     # region Regeneration
-    public class Regeneration : MagicCard
+    public class RegenerationA : MagicCard
     {
-        public Regeneration()
+        public RegenerationA()
         {
             Name = "Regeneration";
             Edition = "A";
@@ -3625,9 +3625,9 @@ namespace MagicProgram
     # endregion
 
     # region Regrowth
-    public class Regrowth : MagicCard
+    public class RegrowthA : MagicCard
     {
-        public Regrowth()
+        public RegrowthA()
         {
             Name = "Regrowth";
             Edition = "A";
@@ -3643,9 +3643,9 @@ namespace MagicProgram
     # endregion
 
     # region Resurrection
-    public class Resurrection : MagicCard
+    public class ResurrectionA : MagicCard
     {
-        public Resurrection()
+        public ResurrectionA()
         {
             Name = "Resurrection";
             Edition = "A";
@@ -3661,9 +3661,9 @@ namespace MagicProgram
     # endregion
 
     # region Reverse Damage
-    public class ReverseDamage : MagicCard
+    public class ReverseDamageA : MagicCard
     {
-        public ReverseDamage()
+        public ReverseDamageA()
         {
             Name = "Reverse Damage";
             Edition = "A";
@@ -3679,9 +3679,9 @@ namespace MagicProgram
     # endregion
 
     # region Righteousness
-    public class Righteousness : MagicCard
+    public class RighteousnessA : MagicCard
     {
-        public Righteousness()
+        public RighteousnessA()
         {
             Name = "Righteousness";
             Edition = "A";
@@ -3697,9 +3697,9 @@ namespace MagicProgram
     # endregion
 
     # region Roc of Kher Ridges
-    public class RocofKherRidges : MagicCard
+    public class RocofKherRidgesA : MagicCard
     {
-        public RocofKherRidges()
+        public RocofKherRidgesA()
         {
             Name = "Roc of Kher Ridges";
             Edition = "A";
@@ -3715,9 +3715,9 @@ namespace MagicProgram
     # endregion
 
     # region Rock Hydra
-    public class RockHydra : MagicCard
+    public class RockHydraA : MagicCard
     {
-        public RockHydra()
+        public RockHydraA()
         {
             Name = "Rock Hydra";
             Edition = "A";
@@ -3733,9 +3733,9 @@ namespace MagicProgram
     # endregion
 
     # region Rod of Ruin
-    public class RodofRuin : MagicCard
+    public class RodofRuinA : MagicCard
     {
-        public RodofRuin()
+        public RodofRuinA()
         {
             Name = "Rod of Ruin";
             Edition = "A";
@@ -3751,9 +3751,9 @@ namespace MagicProgram
     # endregion
 
     # region Royal Assassin
-    public class RoyalAssassin : MagicCard
+    public class RoyalAssassinA : MagicCard
     {
-        public RoyalAssassin()
+        public RoyalAssassinA()
         {
             Name = "Royal Assassin";
             Edition = "A";
@@ -3769,9 +3769,9 @@ namespace MagicProgram
     # endregion
 
     # region Sacrifice
-    public class Sacrifice : MagicCard
+    public class SacrificeA : MagicCard
     {
-        public Sacrifice()
+        public SacrificeA()
         {
             Name = "Sacrifice";
             Edition = "A";
@@ -3787,9 +3787,9 @@ namespace MagicProgram
     # endregion
 
     # region Samite Healer
-    public class SamiteHealer : MagicCard
+    public class SamiteHealerA : MagicCard
     {
-        public SamiteHealer()
+        public SamiteHealerA()
         {
             Name = "Samite Healer";
             Edition = "A";
@@ -3805,9 +3805,9 @@ namespace MagicProgram
     # endregion
 
     # region Savannah
-    public class Savannah : MagicCard
+    public class SavannahA : MagicCard
     {
-        public Savannah()
+        public SavannahA()
         {
             Name = "Savannah";
             Edition = "A";
@@ -3823,9 +3823,9 @@ namespace MagicProgram
     # endregion
 
     # region Savannah Lions
-    public class SavannahLions : MagicCard
+    public class SavannahLionsA : MagicCard
     {
-        public SavannahLions()
+        public SavannahLionsA()
         {
             Name = "Savannah Lions";
             Edition = "A";
@@ -3841,9 +3841,9 @@ namespace MagicProgram
     # endregion
 
     # region Scathe Zombies
-    public class ScatheZombies : MagicCard
+    public class ScatheZombiesA : MagicCard
     {
-        public ScatheZombies()
+        public ScatheZombiesA()
         {
             Name = "Scathe Zombies";
             Edition = "A";
@@ -3859,9 +3859,9 @@ namespace MagicProgram
     # endregion
 
     # region Scavenging Ghoul
-    public class ScavengingGhoul : MagicCard
+    public class ScavengingGhoulA : MagicCard
     {
-        public ScavengingGhoul()
+        public ScavengingGhoulA()
         {
             Name = "Scavenging Ghoul";
             Edition = "A";
@@ -3877,9 +3877,9 @@ namespace MagicProgram
     # endregion
 
     # region Scrubland
-    public class Scrubland : MagicCard
+    public class ScrublandA : MagicCard
     {
-        public Scrubland()
+        public ScrublandA()
         {
             Name = "Scrubland";
             Edition = "A";
@@ -3895,9 +3895,9 @@ namespace MagicProgram
     # endregion
 
     # region Scryb Sprites
-    public class ScrybSprites : MagicCard
+    public class ScrybSpritesA : MagicCard
     {
-        public ScrybSprites()
+        public ScrybSpritesA()
         {
             Name = "Scryb Sprites";
             Edition = "A";
@@ -3913,9 +3913,9 @@ namespace MagicProgram
     # endregion
 
     # region Sea Serpent
-    public class SeaSerpent : MagicCard
+    public class SeaSerpentA : MagicCard
     {
-        public SeaSerpent()
+        public SeaSerpentA()
         {
             Name = "Sea Serpent";
             Edition = "A";
@@ -3931,9 +3931,9 @@ namespace MagicProgram
     # endregion
 
     # region Sedge Troll
-    public class SedgeTroll : MagicCard
+    public class SedgeTrollA : MagicCard
     {
-        public SedgeTroll()
+        public SedgeTrollA()
         {
             Name = "Sedge Troll";
             Edition = "A";
@@ -3949,9 +3949,9 @@ namespace MagicProgram
     # endregion
 
     # region Sengir Vampire
-    public class SengirVampire : MagicCard
+    public class SengirVampireA : MagicCard
     {
-        public SengirVampire()
+        public SengirVampireA()
         {
             Name = "Sengir Vampire";
             Edition = "A";
@@ -3967,9 +3967,9 @@ namespace MagicProgram
     # endregion
 
     # region Serra Angel
-    public class SerraAngel : MagicCard
+    public class SerraAngelA : MagicCard
     {
-        public SerraAngel()
+        public SerraAngelA()
         {
             Name = "Serra Angel";
             Edition = "A";
@@ -3985,9 +3985,9 @@ namespace MagicProgram
     # endregion
 
     # region Shanodin Dryads
-    public class ShanodinDryads : MagicCard
+    public class ShanodinDryadsA : MagicCard
     {
-        public ShanodinDryads()
+        public ShanodinDryadsA()
         {
             Name = "Shanodin Dryads";
             Edition = "A";
@@ -4003,9 +4003,9 @@ namespace MagicProgram
     # endregion
 
     # region Shatter
-    public class Shatter : MagicCard
+    public class ShatterA : MagicCard
     {
-        public Shatter()
+        public ShatterA()
         {
             Name = "Shatter";
             Edition = "A";
@@ -4021,9 +4021,9 @@ namespace MagicProgram
     # endregion
 
     # region Shivan Dragon
-    public class ShivanDragon : MagicCard
+    public class ShivanDragonA : MagicCard
     {
-        public ShivanDragon()
+        public ShivanDragonA()
         {
             Name = "Shivan Dragon";
             Edition = "A";
@@ -4039,9 +4039,9 @@ namespace MagicProgram
     # endregion
 
     # region Simulacrum
-    public class Simulacrum : MagicCard
+    public class SimulacrumA : MagicCard
     {
-        public Simulacrum()
+        public SimulacrumA()
         {
             Name = "Simulacrum";
             Edition = "A";
@@ -4057,9 +4057,9 @@ namespace MagicProgram
     # endregion
 
     # region Sinkhole
-    public class Sinkhole : MagicCard
+    public class SinkholeA : MagicCard
     {
-        public Sinkhole()
+        public SinkholeA()
         {
             Name = "Sinkhole";
             Edition = "A";
@@ -4075,9 +4075,9 @@ namespace MagicProgram
     # endregion
 
     # region Siren's Call
-    public class SirensCall : MagicCard
+    public class SirensCallA : MagicCard
     {
-        public SirensCall()
+        public SirensCallA()
         {
             Name = "Siren's Call";
             Edition = "A";
@@ -4093,9 +4093,9 @@ namespace MagicProgram
     # endregion
 
     # region Sleight of Mind
-    public class SleightofMind : MagicCard
+    public class SleightofMindA : MagicCard
     {
-        public SleightofMind()
+        public SleightofMindA()
         {
             Name = "Sleight of Mind";
             Edition = "A";
@@ -4111,9 +4111,9 @@ namespace MagicProgram
     # endregion
 
     # region Smoke
-    public class Smoke : MagicCard
+    public class SmokeA : MagicCard
     {
-        public Smoke()
+        public SmokeA()
         {
             Name = "Smoke";
             Edition = "A";
@@ -4129,9 +4129,9 @@ namespace MagicProgram
     # endregion
 
     # region Sol Ring
-    public class SolRing : MagicCard
+    public class SolRingA : MagicCard
     {
-        public SolRing()
+        public SolRingA()
         {
             Name = "Sol Ring";
             Edition = "A";
@@ -4143,13 +4143,30 @@ namespace MagicProgram
             Text = "%T: Add %2 to your mana pool.";
             Flavor = "";
         }
+
+        public override bool TryActivate(int i)
+        {
+            if (!Tapped)
+            {
+                DoActivate(i);
+                return true;
+            }
+
+            return false;
+        }
+
+        public override void DoActivate(int i)
+        {
+            PArea.mana.grey += 2;
+            Tap(true, false);
+        }
     }
     # endregion
 
     # region Soul Net
-    public class SoulNet : MagicCard
+    public class SoulNetA : MagicCard
     {
-        public SoulNet()
+        public SoulNetA()
         {
             Name = "Soul Net";
             Edition = "A";
@@ -4165,9 +4182,9 @@ namespace MagicProgram
     # endregion
 
     # region Spell Blast
-    public class SpellBlast : MagicCard
+    public class SpellBlastA : MagicCard
     {
-        public SpellBlast()
+        public SpellBlastA()
         {
             Name = "Spell Blast";
             Edition = "A";
@@ -4183,9 +4200,9 @@ namespace MagicProgram
     # endregion
 
     # region Stasis
-    public class Stasis : MagicCard
+    public class StasisA : MagicCard
     {
-        public Stasis()
+        public StasisA()
         {
             Name = "Stasis";
             Edition = "A";
@@ -4201,9 +4218,9 @@ namespace MagicProgram
     # endregion
 
     # region Steal Artifact
-    public class StealArtifact : MagicCard
+    public class StealArtifactA : MagicCard
     {
-        public StealArtifact()
+        public StealArtifactA()
         {
             Name = "Steal Artifact";
             Edition = "A";
@@ -4219,9 +4236,9 @@ namespace MagicProgram
     # endregion
 
     # region Stone Giant
-    public class StoneGiant : MagicCard
+    public class StoneGiantA : MagicCard
     {
-        public StoneGiant()
+        public StoneGiantA()
         {
             Name = "Stone Giant";
             Edition = "A";
@@ -4237,9 +4254,9 @@ namespace MagicProgram
     # endregion
 
     # region Stone Rain
-    public class StoneRain : MagicCard
+    public class StoneRainA : MagicCard
     {
-        public StoneRain()
+        public StoneRainA()
         {
             Name = "Stone Rain";
             Edition = "A";
@@ -4255,9 +4272,9 @@ namespace MagicProgram
     # endregion
 
     # region Stream of Life
-    public class StreamofLife : MagicCard
+    public class StreamofLifeA : MagicCard
     {
-        public StreamofLife()
+        public StreamofLifeA()
         {
             Name = "Stream of Life";
             Edition = "A";
@@ -4273,9 +4290,9 @@ namespace MagicProgram
     # endregion
 
     # region Sunglasses of Urza
-    public class SunglassesofUrza : MagicCard
+    public class SunglassesofUrzaA : MagicCard
     {
-        public SunglassesofUrza()
+        public SunglassesofUrzaA()
         {
             Name = "Sunglasses of Urza";
             Edition = "A";
@@ -4291,9 +4308,9 @@ namespace MagicProgram
     # endregion
 
     # region Swamp A
-    public class SwampA : MagicCard
+    public class SwampAA : MagicCard
     {
-        public SwampA()
+        public SwampAA()
         {
             Name = "Swamp";
             Edition = "A";
@@ -4309,9 +4326,9 @@ namespace MagicProgram
     # endregion
 
     # region Swords to Plowshares
-    public class SwordstoPlowshares : MagicCard
+    public class SwordstoPlowsharesA : MagicCard
     {
-        public SwordstoPlowshares()
+        public SwordstoPlowsharesA()
         {
             Name = "Swords to Plowshares";
             Edition = "A";
@@ -4327,9 +4344,9 @@ namespace MagicProgram
     # endregion
 
     # region Taiga
-    public class Taiga : MagicCard
+    public class TaigaA : MagicCard
     {
-        public Taiga()
+        public TaigaA()
         {
             Name = "Taiga";
             Edition = "A";
@@ -4345,9 +4362,9 @@ namespace MagicProgram
     # endregion
 
     # region Terror
-    public class Terror : MagicCard
+    public class TerrorA : MagicCard
     {
-        public Terror()
+        public TerrorA()
         {
             Name = "Terror";
             Edition = "A";
@@ -4363,9 +4380,9 @@ namespace MagicProgram
     # endregion
 
     # region The Hive
-    public class TheHive : MagicCard
+    public class TheHiveA : MagicCard
     {
-        public TheHive()
+        public TheHiveA()
         {
             Name = "The Hive";
             Edition = "A";
@@ -4381,9 +4398,9 @@ namespace MagicProgram
     # endregion
 
     # region Thicket Basilisk
-    public class ThicketBasilisk : MagicCard
+    public class ThicketBasiliskA : MagicCard
     {
-        public ThicketBasilisk()
+        public ThicketBasiliskA()
         {
             Name = "Thicket Basilisk";
             Edition = "A";
@@ -4399,9 +4416,9 @@ namespace MagicProgram
     # endregion
 
     # region Thoughtlace
-    public class Thoughtlace : MagicCard
+    public class ThoughtlaceA : MagicCard
     {
-        public Thoughtlace()
+        public ThoughtlaceA()
         {
             Name = "Thoughtlace";
             Edition = "A";
@@ -4417,9 +4434,9 @@ namespace MagicProgram
     # endregion
 
     # region Throne of Bone
-    public class ThroneofBone : MagicCard
+    public class ThroneofBoneA : MagicCard
     {
-        public ThroneofBone()
+        public ThroneofBoneA()
         {
             Name = "Throne of Bone";
             Edition = "A";
@@ -4435,9 +4452,9 @@ namespace MagicProgram
     # endregion
 
     # region Timber Wolves
-    public class TimberWolves : MagicCard
+    public class TimberWolvesA : MagicCard
     {
-        public TimberWolves()
+        public TimberWolvesA()
         {
             Name = "Timber Wolves";
             Edition = "A";
@@ -4453,9 +4470,9 @@ namespace MagicProgram
     # endregion
 
     # region Time Vault
-    public class TimeVault : MagicCard
+    public class TimeVaultA : MagicCard
     {
-        public TimeVault()
+        public TimeVaultA()
         {
             Name = "Time Vault";
             Edition = "A";
@@ -4471,9 +4488,9 @@ namespace MagicProgram
     # endregion
 
     # region Time Walk
-    public class TimeWalk : MagicCard
+    public class TimeWalkA : MagicCard
     {
-        public TimeWalk()
+        public TimeWalkA()
         {
             Name = "Time Walk";
             Edition = "A";
@@ -4489,9 +4506,9 @@ namespace MagicProgram
     # endregion
 
     # region Timetwister
-    public class Timetwister : MagicCard
+    public class TimetwisterA : MagicCard
     {
-        public Timetwister()
+        public TimetwisterA()
         {
             Name = "Timetwister";
             Edition = "A";
@@ -4507,9 +4524,9 @@ namespace MagicProgram
     # endregion
 
     # region Tranquility
-    public class Tranquility : MagicCard
+    public class TranquilityA : MagicCard
     {
-        public Tranquility()
+        public TranquilityA()
         {
             Name = "Tranquility";
             Edition = "A";
@@ -4525,9 +4542,9 @@ namespace MagicProgram
     # endregion
 
     # region Tropical Island
-    public class TropicalIsland : MagicCard
+    public class TropicalIslandA : MagicCard
     {
-        public TropicalIsland()
+        public TropicalIslandA()
         {
             Name = "Tropical Island";
             Edition = "A";
@@ -4543,9 +4560,9 @@ namespace MagicProgram
     # endregion
 
     # region Tsunami
-    public class Tsunami : MagicCard
+    public class TsunamiA : MagicCard
     {
-        public Tsunami()
+        public TsunamiA()
         {
             Name = "Tsunami";
             Edition = "A";
@@ -4561,9 +4578,9 @@ namespace MagicProgram
     # endregion
 
     # region Tundra
-    public class Tundra : MagicCard
+    public class TundraA : MagicCard
     {
-        public Tundra()
+        public TundraA()
         {
             Name = "Tundra";
             Edition = "A";
@@ -4579,9 +4596,9 @@ namespace MagicProgram
     # endregion
 
     # region Tunnel
-    public class Tunnel : MagicCard
+    public class TunnelA : MagicCard
     {
-        public Tunnel()
+        public TunnelA()
         {
             Name = "Tunnel";
             Edition = "A";
@@ -4597,9 +4614,9 @@ namespace MagicProgram
     # endregion
 
     # region Twiddle
-    public class Twiddle : MagicCard
+    public class TwiddleA : MagicCard
     {
-        public Twiddle()
+        public TwiddleA()
         {
             Name = "Twiddle";
             Edition = "A";
@@ -4615,9 +4632,9 @@ namespace MagicProgram
     # endregion
 
     # region Two-Headed Giant of Foriys
-    public class TwoHeadedGiantofForiys : MagicCard
+    public class TwoHeadedGiantofForiysA : MagicCard
     {
-        public TwoHeadedGiantofForiys()
+        public TwoHeadedGiantofForiysA()
         {
             Name = "Two-Headed Giant of Foriys";
             Edition = "A";
@@ -4633,9 +4650,9 @@ namespace MagicProgram
     # endregion
 
     # region Underground Sea
-    public class UndergroundSea : MagicCard
+    public class UndergroundSeaA : MagicCard
     {
-        public UndergroundSea()
+        public UndergroundSeaA()
         {
             Name = "Underground Sea";
             Edition = "A";
@@ -4651,9 +4668,9 @@ namespace MagicProgram
     # endregion
 
     # region Unholy Strength
-    public class UnholyStrength : MagicCard
+    public class UnholyStrengthA : MagicCard
     {
-        public UnholyStrength()
+        public UnholyStrengthA()
         {
             Name = "Unholy Strength";
             Edition = "A";
@@ -4669,9 +4686,9 @@ namespace MagicProgram
     # endregion
 
     # region Unsummon
-    public class Unsummon : MagicCard
+    public class UnsummonA : MagicCard
     {
-        public Unsummon()
+        public UnsummonA()
         {
             Name = "Unsummon";
             Edition = "A";
@@ -4687,9 +4704,9 @@ namespace MagicProgram
     # endregion
 
     # region Uthden Troll
-    public class UthdenTroll : MagicCard
+    public class UthdenTrollA : MagicCard
     {
-        public UthdenTroll()
+        public UthdenTrollA()
         {
             Name = "Uthden Troll";
             Edition = "A";
@@ -4705,9 +4722,9 @@ namespace MagicProgram
     # endregion
 
     # region Verduran Enchantress
-    public class VerduranEnchantress : MagicCard
+    public class VerduranEnchantressA : MagicCard
     {
-        public VerduranEnchantress()
+        public VerduranEnchantressA()
         {
             Name = "Verduran Enchantress";
             Edition = "A";
@@ -4723,9 +4740,9 @@ namespace MagicProgram
     # endregion
 
     # region Vesuvan Doppelganger
-    public class VesuvanDoppelganger : MagicCard
+    public class VesuvanDoppelgangerA : MagicCard
     {
-        public VesuvanDoppelganger()
+        public VesuvanDoppelgangerA()
         {
             Name = "Vesuvan Doppelganger";
             Edition = "A";
@@ -4741,9 +4758,9 @@ namespace MagicProgram
     # endregion
 
     # region Veteran Bodyguard
-    public class VeteranBodyguard : MagicCard
+    public class VeteranBodyguardA : MagicCard
     {
-        public VeteranBodyguard()
+        public VeteranBodyguardA()
         {
             Name = "Veteran Bodyguard";
             Edition = "A";
@@ -4759,9 +4776,9 @@ namespace MagicProgram
     # endregion
 
     # region Volcanic Eruption
-    public class VolcanicEruption : MagicCard
+    public class VolcanicEruptionA : MagicCard
     {
-        public VolcanicEruption()
+        public VolcanicEruptionA()
         {
             Name = "Volcanic Eruption";
             Edition = "A";
@@ -4777,9 +4794,9 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Air
-    public class WallofAir : MagicCard
+    public class WallofAirA : MagicCard
     {
-        public WallofAir()
+        public WallofAirA()
         {
             Name = "Wall of Air";
             Edition = "A";
@@ -4795,9 +4812,9 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Bone
-    public class WallofBone : MagicCard
+    public class WallofBoneA : MagicCard
     {
-        public WallofBone()
+        public WallofBoneA()
         {
             Name = "Wall of Bone";
             Edition = "A";
@@ -4813,9 +4830,9 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Brambles
-    public class WallofBrambles : MagicCard
+    public class WallofBramblesA : MagicCard
     {
-        public WallofBrambles()
+        public WallofBramblesA()
         {
             Name = "Wall of Brambles";
             Edition = "A";
@@ -4831,9 +4848,9 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Fire
-    public class WallofFire : MagicCard
+    public class WallofFireA : MagicCard
     {
-        public WallofFire()
+        public WallofFireA()
         {
             Name = "Wall of Fire";
             Edition = "A";
@@ -4849,9 +4866,9 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Ice
-    public class WallofIce : MagicCard
+    public class WallofIceA : MagicCard
     {
-        public WallofIce()
+        public WallofIceA()
         {
             Name = "Wall of Ice";
             Edition = "A";
@@ -4867,9 +4884,9 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Stone
-    public class WallofStone : MagicCard
+    public class WallofStoneA : MagicCard
     {
-        public WallofStone()
+        public WallofStoneA()
         {
             Name = "Wall of Stone";
             Edition = "A";
@@ -4885,9 +4902,9 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Swords
-    public class WallofSwords : MagicCard
+    public class WallofSwordsA : MagicCard
     {
-        public WallofSwords()
+        public WallofSwordsA()
         {
             Name = "Wall of Swords";
             Edition = "A";
@@ -4903,9 +4920,9 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Water
-    public class WallofWater : MagicCard
+    public class WallofWaterA : MagicCard
     {
-        public WallofWater()
+        public WallofWaterA()
         {
             Name = "Wall of Water";
             Edition = "A";
@@ -4921,9 +4938,9 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Wood
-    public class WallofWood : MagicCard
+    public class WallofWoodA : MagicCard
     {
-        public WallofWood()
+        public WallofWoodA()
         {
             Name = "Wall of Wood";
             Edition = "A";
@@ -4939,9 +4956,9 @@ namespace MagicProgram
     # endregion
 
     # region Wanderlust
-    public class Wanderlust : MagicCard
+    public class WanderlustA : MagicCard
     {
-        public Wanderlust()
+        public WanderlustA()
         {
             Name = "Wanderlust";
             Edition = "A";
@@ -4957,9 +4974,9 @@ namespace MagicProgram
     # endregion
 
     # region War Mammoth
-    public class WarMammoth : MagicCard
+    public class WarMammothA : MagicCard
     {
-        public WarMammoth()
+        public WarMammothA()
         {
             Name = "War Mammoth";
             Edition = "A";
@@ -4975,9 +4992,9 @@ namespace MagicProgram
     # endregion
 
     # region Warp Artifact
-    public class WarpArtifact : MagicCard
+    public class WarpArtifactA : MagicCard
     {
-        public WarpArtifact()
+        public WarpArtifactA()
         {
             Name = "Warp Artifact";
             Edition = "A";
@@ -4993,9 +5010,9 @@ namespace MagicProgram
     # endregion
 
     # region Water Elemental
-    public class WaterElemental : MagicCard
+    public class WaterElementalA : MagicCard
     {
-        public WaterElemental()
+        public WaterElementalA()
         {
             Name = "Water Elemental";
             Edition = "A";
@@ -5011,9 +5028,9 @@ namespace MagicProgram
     # endregion
 
     # region Weakness
-    public class Weakness : MagicCard
+    public class WeaknessA : MagicCard
     {
-        public Weakness()
+        public WeaknessA()
         {
             Name = "Weakness";
             Edition = "A";
@@ -5029,9 +5046,9 @@ namespace MagicProgram
     # endregion
 
     # region Web
-    public class Web : MagicCard
+    public class WebA : MagicCard
     {
-        public Web()
+        public WebA()
         {
             Name = "Web";
             Edition = "A";
@@ -5047,9 +5064,9 @@ namespace MagicProgram
     # endregion
 
     # region Wheel of Fortune
-    public class WheelofFortune : MagicCard
+    public class WheelofFortuneA : MagicCard
     {
-        public WheelofFortune()
+        public WheelofFortuneA()
         {
             Name = "Wheel of Fortune";
             Edition = "A";
@@ -5065,9 +5082,9 @@ namespace MagicProgram
     # endregion
 
     # region White Knight
-    public class WhiteKnight : MagicCard
+    public class WhiteKnightA : MagicCard
     {
-        public WhiteKnight()
+        public WhiteKnightA()
         {
             Name = "White Knight";
             Edition = "A";
@@ -5083,9 +5100,9 @@ namespace MagicProgram
     # endregion
 
     # region White Ward
-    public class WhiteWard : MagicCard
+    public class WhiteWardA : MagicCard
     {
-        public WhiteWard()
+        public WhiteWardA()
         {
             Name = "White Ward";
             Edition = "A";
@@ -5101,9 +5118,9 @@ namespace MagicProgram
     # endregion
 
     # region Wild Growth
-    public class WildGrowth : MagicCard
+    public class WildGrowthA : MagicCard
     {
-        public WildGrowth()
+        public WildGrowthA()
         {
             Name = "Wild Growth";
             Edition = "A";
@@ -5119,9 +5136,9 @@ namespace MagicProgram
     # endregion
 
     # region Will-o'-the-Wisp
-    public class WillotheWisp : MagicCard
+    public class WillotheWispA : MagicCard
     {
-        public WillotheWisp()
+        public WillotheWispA()
         {
             Name = "Will-o'-the-Wisp";
             Edition = "A";
@@ -5137,9 +5154,9 @@ namespace MagicProgram
     # endregion
 
     # region Winter Orb
-    public class WinterOrb : MagicCard
+    public class WinterOrbA : MagicCard
     {
-        public WinterOrb()
+        public WinterOrbA()
         {
             Name = "Winter Orb";
             Edition = "A";
@@ -5155,9 +5172,9 @@ namespace MagicProgram
     # endregion
 
     # region Wooden Sphere
-    public class WoodenSphere : MagicCard
+    public class WoodenSphereA : MagicCard
     {
-        public WoodenSphere()
+        public WoodenSphereA()
         {
             Name = "Wooden Sphere";
             Edition = "A";
@@ -5173,9 +5190,9 @@ namespace MagicProgram
     # endregion
 
     # region Word of Command
-    public class WordofCommand : MagicCard
+    public class WordofCommandA : MagicCard
     {
-        public WordofCommand()
+        public WordofCommandA()
         {
             Name = "Word of Command";
             Edition = "A";
@@ -5191,9 +5208,9 @@ namespace MagicProgram
     # endregion
 
     # region Wrath of God
-    public class WrathofGod : MagicCard
+    public class WrathofGodA : MagicCard
     {
-        public WrathofGod()
+        public WrathofGodA()
         {
             Name = "Wrath of God";
             Edition = "A";
@@ -5209,9 +5226,9 @@ namespace MagicProgram
     # endregion
 
     # region Zombie Master
-    public class ZombieMaster : MagicCard
+    public class ZombieMasterA : MagicCard
     {
-        public ZombieMaster()
+        public ZombieMasterA()
         {
             Name = "Zombie Master";
             Edition = "A";
@@ -10412,6 +10429,12 @@ namespace MagicProgram
             Type = "Artifact Land";
             Text = "Indestructible^T: Add 1 to your mana pool.";
             Flavor = "";
+        }
+
+        public override void DoActivate(int i)
+        {
+            PArea.mana.grey += 1;
+            Tap(true, false);
         }
     }
     # endregion

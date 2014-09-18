@@ -1474,7 +1474,7 @@ namespace MagicProgram
 
         private void updateClassType()
         {
-            List<string> strings = new List<string>();
+            //List<string> strings = new List<string>();
             List<string> cards = new List<string>();
             char c = 'A';
 
@@ -1496,10 +1496,15 @@ namespace MagicProgram
                 line = line.Replace("[Text]", mc.Text.Replace("\n", "^").Replace("#", "@"));
                 line = line.Replace("[Flavour]", mc.Flavor.Replace("\n", "^").Replace("#", "@"));
 
-                strings.Add(line);
+                line = ParseText(line);
+
+                //strings.Add(line);
 
                 lines = lines.Replace("[Edit]", Edit + mc.Edition);
                 lines = lines.Replace("[Name]", mc.Name);
+
+                lines = ParseText(lines);
+
                 File.AppendAllText(@"c:\users\topher\files\" + mc.Edition + ".txt", line);
                 File.AppendAllText(@"c:\users\topher\file\" + mc.Edition + ".txt", lines);
 
@@ -1509,6 +1514,19 @@ namespace MagicProgram
                     Debug.WriteLine(c);
                 }
             }
+        }
+
+        private static string ParseText(string lines)
+        {
+
+            lines = lines.Replace("#", Environment.NewLine);
+            lines = lines.Replace("$r", "# region");
+            lines = lines.Replace("$e", "# endregion");
+            lines = lines.Replace('"', '^');
+            lines = lines.Replace('~', '"');
+            lines = lines.Replace('$', '\t');
+
+            return lines;
         }
 
         private void updateDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
