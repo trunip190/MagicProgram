@@ -1,7 +1,6 @@
 Island#6
 Mountain#6
 Plains#5
-Young Pyromancer#4
 Favored Hoplite#4
 Akroan Crusader#4
 Battlefield Thaumaturge#4
@@ -12,3 +11,4 @@ Coordinated Assault#4
 Launch the Fleet#4
 Sliver Hive#4
 Obelisk of Urd#3
+Satyr Hoplite#4
