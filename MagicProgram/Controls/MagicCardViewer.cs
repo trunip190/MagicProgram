@@ -534,8 +534,19 @@ namespace MagicProgram
 
         private void buttonAttack_Click(object sender, EventArgs e)
         {
-            cards[0].ChangeTap();
-            cards[0].Attacking = cards[0].Tapped;
+            cards[0].Attacking = !cards[0].Attacking;
+            if (!mc.Text.Contains("Vigilance"))
+            {
+                cards[0].ChangeTap();
+            }
+            if (cards[0].Attacking)
+            {
+                buttonAttack.BackColor = Color.Green;
+            }
+            else
+            {
+                buttonAttack.BackColor = Color.Transparent;
+            }
         }
         # endregion
 

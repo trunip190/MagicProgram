@@ -84,6 +84,7 @@
     <Compile Include="Classes\Core.cs" />
     <Compile Include="Classes\IceAge.cs" />
     <Compile Include="Classes\Innistrad.cs" />
+    <Compile Include="Classes\KhansofTarkir.cs" />
     <Compile Include="Classes\Mirrodin.cs" />
     <Compile Include="Classes\RavnicaCityGuilds.cs" />
     <Compile Include="Classes\Lorwyn.cs" />

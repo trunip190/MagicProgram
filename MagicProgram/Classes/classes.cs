@@ -20460,6 +20460,12 @@ break;
                 # endregion
                 # endregion
 
+                # region Khans of Tarkir uncomplete
+                case "Mystic Monastery":
+                    mcn = new MysticMonastery();
+                    break;
+                # endregion
+
                 default:
                     mcn = new MagicCard();
                     mcn.Name = s;

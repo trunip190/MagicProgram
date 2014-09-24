@@ -260,18 +260,6 @@ namespace MagicProgram
             //work out if there is enough mana
             CheckMana(mc);
 
-            # region check if land allowance used
-            if (mc.Type.Contains("Land"))
-            {
-                if (area.landPlayed >= area.landMax)
-                {
-                    MessageBox.Show("Played lands this turn (" + area.landPlayed.ToString() + "/" + area.landMax.ToString() + ")");
-                    mc.OnPlay -= temp_OnPlay;
-                    return false;
-                }
-            }
-            # endregion
-
             # region land
             if (mc.Type.Contains("Land"))
             {
@@ -921,6 +909,22 @@ namespace MagicProgram
 
             mcn.setMana();
             ColourCost cc = mcn.manaCost;
+
+            if (mcn.PArea == null)
+            {
+                mcn.PArea = PlArea;
+            }
+
+            # region check if land allowance used
+            if (mcn.Type.Contains("Land"))
+            {
+                if (mcn.PArea.landPlayed >= mcn.PArea.landMax)
+                {
+                    MessageBox.Show("Played lands this turn (" + mcn.PArea.landPlayed.ToString() + "/" + mcn.PArea.landMax.ToString() + ")");
+                    return;
+                }
+            }
+            # endregion
 
             # region cycle through cost reduction
             foreach (MagicCard mcna in PlArea._play.cards)
@@ -2131,19 +2135,19 @@ namespace MagicProgram
         # endregion
 
 		# region Launch The Fleet
-		void CardsChosen_LaunchTheFleet(List<MagicCard> cards)
+		void CardsChosen_LaunchTheFleet(List<MagicCard> sources)
 		{
-			if (cards.count > targets)
+            if (sources.Count > targets)
 			{
 				return;
 			}
-			
-			foreach (MagicCard mc in cards)
+
+            foreach (MagicCard mc in sources)
 			{
 				mc.OnAttack += new PassiveEvent(OnAttack_CreateSoldier);
 				mc.callSpellCast();
 			}
-			cardAreaPlay.CardsChosen -= CardsChosen_LaunchTheFleet;			
+			cardAreaPlay.CardsPicked -= CardsChosen_LaunchTheFleet;			
             update_listViewPlay();
 		}
 		# endregion

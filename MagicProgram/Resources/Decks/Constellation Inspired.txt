@@ -1,0 +1,18 @@
+Island#4
+Mountain#5
+Plains#3
+Akroan Crusader#4
+Triton Shorestalker#3
+Triton Fortune Hunter#3
+Satyr Hoplite#4
+Jeskai Ascendancy#4
+Crowd's Favor#4
+Triton Tactics#4
+Ephemeral Shields#3
+Stoke the Flames#4
+Mystic Monastery#3
+Shivan Reef#2
+Battlefield Forge#2
+Terramorphic Expanse#3
+Hidden Strings#3
+Vanguard of Brimaz#2
