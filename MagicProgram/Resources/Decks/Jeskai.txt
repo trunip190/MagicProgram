@@ -3,12 +3,12 @@ Mountain#6
 Plains#5
 Favored Hoplite#4
 Akroan Crusader#4
-Battlefield Thaumaturge#4
 Jeskai Ascendancy#4
 Stoke the Flames#4
 Triton Tactics#4
 Coordinated Assault#4
 Launch the Fleet#4
-Sliver Hive#4
 Obelisk of Urd#3
 Satyr Hoplite#4
+Mystic Monastery#4
+Raise the Alarm#4

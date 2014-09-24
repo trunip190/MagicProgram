@@ -525,6 +525,15 @@ namespace MagicProgram
                     }
                 }
                 # endregion
+                # region Enchant Artifact
+                else if (mc.Text.ToLower().Contains("enchant artifact"))
+                {
+                    if (playerTurn)
+                    {
+                        cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_AuraCard);
+                    }
+                }
+                # endregion
                 # region Equipment
                 else if (mc.Type.Contains("Equipment"))
                 {
