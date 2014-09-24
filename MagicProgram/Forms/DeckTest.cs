@@ -420,7 +420,9 @@ namespace MagicProgram
                     # region Launch the Fleet
                     case "Launch the Fleet":
                         tempCard = mc;
-                        cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_LaunchTheFleet);
+						cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsChosen_LaunchTheFleet);
+						cardAreaPlay.ChooseCards();
+						targets = mc.Targets;
                         break;
                     # endregion
 
@@ -438,7 +440,6 @@ namespace MagicProgram
 
                     # region TwinFlame
                     case "Twinflame":
-                        //cardAreaPlay.CardClicked += new CardArea.CardChosen(CardEvent_MakeToken);
                         cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsChosen_Twinflame);
                         cardAreaPlay.ChooseCards();
                         targets = mc.Targets;
@@ -2129,18 +2130,24 @@ namespace MagicProgram
         }
         # endregion
 
-        void CardClicked_LaunchTheFleet(MagicCard mc, MouseEventArgs e)
-        {
-            mc.OnAttack += new PassiveEvent(OnAttack_CreateSoldier);
-            mc.callSpellCast();
-
-            tempCard.Targets--;
-            if (tempCard.Targets < 1)
-            {
-                cardAreaPlay.CardClicked -= CardClicked_LaunchTheFleet;
-            }
-        }
-
+		# region Launch The Fleet
+		void CardsChosen_LaunchTheFleet(List<MagicCard> cards)
+		{
+			if (cards.count > targets)
+			{
+				return;
+			}
+			
+			foreach (MagicCard mc in cards)
+			{
+				mc.OnAttack += new PassiveEvent(OnAttack_CreateSoldier);
+				mc.callSpellCast();
+			}
+			cardAreaPlay.CardsChosen -= CardsChosen_LaunchTheFleet;			
+            update_listViewPlay();
+		}
+		# endregion
+		
         void OnAttack_CreateSoldier(MagicCard mc)
         {
             MagicCard mct = new MagicCard
