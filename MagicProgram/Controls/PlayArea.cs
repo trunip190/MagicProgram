@@ -295,7 +295,8 @@ namespace MagicProgram.Controls
                         }
                         break;
                 }
-                _lands.cards.Add(mc);
+                //_lands.cards.Add(mc);
+                _lands.Add(mc);
                 mc.Location = "Play";
                 _lands.index();
             }
@@ -434,7 +435,8 @@ namespace MagicProgram.Controls
                     mc.Sick = true;
                 }
 
-                _play.cards.Add(mc);
+                //_play.cards.Add(mc);
+                _play.Add(mc);
 
                 mc.Location = "Play";
                 _play.index();

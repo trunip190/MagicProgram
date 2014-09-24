@@ -188,6 +188,7 @@ namespace MagicProgram
         protected void callCardDeleted()
         {
             MagicCardViewerEvent handler = CardDeleted;
+            //doesn't seem to get linked for some reason...
             if (handler != null)
             {
                 handler(this);
@@ -196,6 +197,7 @@ namespace MagicProgram
         # endregion
         # endregion
 
+        # region Methods
         public MagicCardViewer()
         {
             InitializeComponent();
@@ -603,5 +605,6 @@ namespace MagicProgram
                 numericUpDown1.Value = 0;
             }
         }
+        # endregion
     }
 }

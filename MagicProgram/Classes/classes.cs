@@ -5729,1846 +5729,2798 @@ namespace MagicProgram
                 # endregion
 
                 # region Mirrodin
-                    # region AEther Spellbomb
-case "AEther Spellbomb":
-mcn = new AEtherSpellbombMR();
-break;
-# endregion
-
-# region Alpha Myr
-case "Alpha Myr":
-mcn = new AlphaMyrMR();
-break;
-# endregion
-
-# region Altar of Shadows
-case "Altar of Shadows":
-mcn = new AltarofShadowsMR();
-break;
-# endregion
-
-# region Altar's Light
-case "Altar's Light":
-mcn = new AltarsLightMR();
-break;
-# endregion
-
-# region Ancient Den
-case "Ancient Den":
-mcn = new AncientDenMR();
-break;
-# endregion
-
-# region Annul
-case "Annul":
-mcn = new AnnulMR();
-break;
-# endregion
-
-# region Arc-Slogger
-case "Arc-Slogger":
-mcn = new ArcSloggerMR();
-break;
-# endregion
-
-# region Arrest
-case "Arrest":
-mcn = new ArrestMR();
-break;
-# endregion
-
-# region Assert Authority
-case "Assert Authority":
-mcn = new AssertAuthorityMR();
-break;
-# endregion
-
-# region Atog
-case "Atog":
-mcn = new AtogMR();
-break;
-# endregion
-
-# region Auriok Bladewarden
-case "Auriok Bladewarden":
-mcn = new AuriokBladewardenMR();
-break;
-# endregion
-
-# region Auriok Steelshaper
-case "Auriok Steelshaper":
-mcn = new AuriokSteelshaperMR();
-break;
-# endregion
-
-# region Auriok Transfixer
-case "Auriok Transfixer":
-mcn = new AuriokTransfixerMR();
-break;
-# endregion
-
-# region Awe Strike
-case "Awe Strike":
-mcn = new AweStrikeMR();
-break;
-# endregion
-
-# region Banshee's Blade
-case "Banshee's Blade":
-mcn = new BansheesBladeMR();
-break;
-# endregion
-
-# region Barter in Blood
-case "Barter in Blood":
-mcn = new BarterinBloodMR();
-break;
-# endregion
-
-# region Battlegrowth
-case "Battlegrowth":
-mcn = new BattlegrowthMR();
-break;
-# endregion
-
-# region Betrayal of Flesh
-case "Betrayal of Flesh":
-mcn = new BetrayalofFleshMR();
-break;
-# endregion
-
-# region Blinding Beam
-case "Blinding Beam":
-mcn = new BlindingBeamMR();
-break;
-# endregion
-
-# region Blinkmoth Urn
-case "Blinkmoth Urn":
-mcn = new BlinkmothUrnMR();
-break;
-# endregion
-
-# region Blinkmoth Well
-case "Blinkmoth Well":
-mcn = new BlinkmothWellMR();
-break;
-# endregion
-
-# region Bloodscent
-case "Bloodscent":
-mcn = new BloodscentMR();
-break;
-# endregion
-
-# region Bonesplitter
-case "Bonesplitter":
-mcn = new BonesplitterMR();
-break;
-# endregion
-
-# region Bosh, Iron Golem
-case "Bosh, Iron Golem":
-mcn = new BoshIronGolemMR();
-break;
-# endregion
-
-# region Bottle Gnomes
-case "Bottle Gnomes":
-mcn = new BottleGnomesMR();
-break;
-# endregion
-
-# region Broodstar
-case "Broodstar":
-mcn = new BroodstarMR();
-break;
-# endregion
-
-# region Brown Ouphe
-case "Brown Ouphe":
-mcn = new BrownOupheMR();
-break;
-# endregion
-
-# region Cathodion
-case "Cathodion":
-mcn = new CathodionMR();
-break;
-# endregion
-
-# region Chalice of the Void
-case "Chalice of the Void":
-mcn = new ChaliceoftheVoidMR();
-break;
-# endregion
-
-# region Chimney Imp
-case "Chimney Imp":
-mcn = new ChimneyImpMR();
-break;
-# endregion
-
-# region Chromatic Sphere
-case "Chromatic Sphere":
-mcn = new ChromaticSphereMR();
-break;
-# endregion
-
-# region Chrome Mox
-case "Chrome Mox":
-mcn = new ChromeMoxMR();
-break;
-# endregion
-
-# region Clockwork Beetle
-case "Clockwork Beetle":
-mcn = new ClockworkBeetleMR();
-break;
-# endregion
-
-# region Clockwork Condor
-case "Clockwork Condor":
-mcn = new ClockworkCondorMR();
-break;
-# endregion
-
-# region Clockwork Dragon
-case "Clockwork Dragon":
-mcn = new ClockworkDragonMR();
-break;
-# endregion
-
-# region Clockwork Vorrac
-case "Clockwork Vorrac":
-mcn = new ClockworkVorracMR();
-break;
-# endregion
-
-# region Cloudpost
-case "Cloudpost":
-mcn = new CloudpostMR();
-break;
-# endregion
-
-# region Cobalt Golem
-case "Cobalt Golem":
-mcn = new CobaltGolemMR();
-break;
-# endregion
-
-# region Confusion in the Ranks
-case "Confusion in the Ranks":
-mcn = new ConfusionintheRanksMR();
-break;
-# endregion
-
-# region Consume Spirit
-case "Consume Spirit":
-mcn = new ConsumeSpiritMR();
-break;
-# endregion
-
-# region Contaminated Bond
-case "Contaminated Bond":
-mcn = new ContaminatedBondMR();
-break;
-# endregion
-
-# region Copper Myr
-case "Copper Myr":
-mcn = new CopperMyrMR();
-break;
-# endregion
-
-# region Copperhoof Vorrac
-case "Copperhoof Vorrac":
-mcn = new CopperhoofVorracMR();
-break;
-# endregion
-
-# region Creeping Mold
-case "Creeping Mold":
-mcn = new CreepingMoldMR();
-break;
-# endregion
-
-# region Crystal Shard
-case "Crystal Shard":
-mcn = new CrystalShardMR();
-break;
-# endregion
-
-# region Culling Scales
-case "Culling Scales":
-mcn = new CullingScalesMR();
-break;
-# endregion
-
-# region Damping Matrix
-case "Damping Matrix":
-mcn = new DampingMatrixMR();
-break;
-# endregion
-
-# region Dead-Iron Sledge
-case "Dead-Iron Sledge":
-mcn = new DeadIronSledgeMR();
-break;
-# endregion
-
-# region Deconstruct
-case "Deconstruct":
-mcn = new DeconstructMR();
-break;
-# endregion
-
-# region Detonate
-case "Detonate":
-mcn = new DetonateMR();
-break;
-# endregion
-
-# region Disarm
-case "Disarm":
-mcn = new DisarmMR();
-break;
-# endregion
-
-# region Disciple of the Vault
-case "Disciple of the Vault":
-mcn = new DiscipleoftheVaultMR();
-break;
-# endregion
-
-# region Domineer
-case "Domineer":
-mcn = new DomineerMR();
-break;
-# endregion
-
-# region Dragon Blood
-case "Dragon Blood":
-mcn = new DragonBloodMR();
-break;
-# endregion
-
-# region Dream's Grip
-case "Dream's Grip":
-mcn = new DreamsGripMR();
-break;
-# endregion
-
-# region Dross Harvester
-case "Dross Harvester":
-mcn = new DrossHarvesterMR();
-break;
-# endregion
-
-# region Dross Prowler
-case "Dross Prowler":
-mcn = new DrossProwlerMR();
-break;
-# endregion
-
-# region Dross Scorpion
-case "Dross Scorpion":
-mcn = new DrossScorpionMR();
-break;
-# endregion
-
-# region Duplicant
-case "Duplicant":
-mcn = new DuplicantMR();
-break;
-# endregion
-
-# region Duskworker
-case "Duskworker":
-mcn = new DuskworkerMR();
-break;
-# endregion
-
-# region Electrostatic Bolt
-case "Electrostatic Bolt":
-mcn = new ElectrostaticBoltMR();
-break;
-# endregion
-
-# region Elf Replica
-case "Elf Replica":
-mcn = new ElfReplicaMR();
-break;
-# endregion
-
-# region Empyrial Plate
-case "Empyrial Plate":
-mcn = new EmpyrialPlateMR();
-break;
-# endregion
-
-# region Extraplanar Lens
-case "Extraplanar Lens":
-mcn = new ExtraplanarLensMR();
-break;
-# endregion
-
-# region Fabricate
-case "Fabricate":
-mcn = new FabricateMR();
-break;
-# endregion
-
-# region Fangren Hunter
-case "Fangren Hunter":
-mcn = new FangrenHunterMR();
-break;
-# endregion
-
-# region Farsight Mask
-case "Farsight Mask":
-mcn = new FarsightMaskMR();
-break;
-# endregion
-
-# region Fatespinner
-case "Fatespinner":
-mcn = new FatespinnerMR();
-break;
-# endregion
-
-# region Fiery Gambit
-case "Fiery Gambit":
-mcn = new FieryGambitMR();
-break;
-# endregion
-
-# region Fireshrieker
-case "Fireshrieker":
-mcn = new FireshriekerMR();
-break;
-# endregion
-
-# region Fists of the Anvil
-case "Fists of the Anvil":
-mcn = new FistsoftheAnvilMR();
-break;
-# endregion
-
-# region Flayed Nim
-case "Flayed Nim":
-mcn = new FlayedNimMR();
-break;
-# endregion
-
-//# region Forest 
-//case "Forest ":
-//mcn = new ForestMR();
-//break;
-//# endregion
-
-//# region Forest 
-//case "Forest ":
-//mcn = new ForestMR();
-//break;
-//# endregion
-
-//# region Forest 
-//case "Forest ":
-//mcn = new ForestMR();
-//break;
-//# endregion
-
-//# region Forest 
-//case "Forest ":
-//mcn = new ForestMR();
-//break;
-//# endregion
-
-# region Forge Armor
-case "Forge Armor":
-mcn = new ForgeArmorMR();
-break;
-# endregion
-
-# region Fractured Loyalty
-case "Fractured Loyalty":
-mcn = new FracturedLoyaltyMR();
-break;
-# endregion
-
-# region Frogmite
-case "Frogmite":
-mcn = new FrogmiteMR();
-break;
-# endregion
-
-# region Galvanic Key
-case "Galvanic Key":
-mcn = new GalvanicKeyMR();
-break;
-# endregion
-
-# region Gate to the AEther
-case "Gate to the AEther":
-mcn = new GatetotheAEtherMR();
-break;
-# endregion
-
-# region Gilded Lotus
-case "Gilded Lotus":
-mcn = new GildedLotusMR();
-break;
-# endregion
-
-# region Glimmervoid
-case "Glimmervoid":
-mcn = new GlimmervoidMR();
-break;
-# endregion
-
-# region Glissa Sunseeker
-case "Glissa Sunseeker":
-mcn = new GlissaSunseekerMR();
-break;
-# endregion
-
-# region Goblin Charbelcher
-case "Goblin Charbelcher":
-mcn = new GoblinCharbelcherMR();
-break;
-# endregion
-
-# region Goblin Dirigible
-case "Goblin Dirigible":
-mcn = new GoblinDirigibleMR();
-break;
-# endregion
-
-# region Goblin Replica
-case "Goblin Replica":
-mcn = new GoblinReplicaMR();
-break;
-# endregion
-
-# region Goblin Striker
-case "Goblin Striker":
-mcn = new GoblinStrikerMR();
-break;
-# endregion
-
-# region Goblin War Wagon
-case "Goblin War Wagon":
-mcn = new GoblinWarWagonMR();
-break;
-# endregion
-
-# region Gold Myr
-case "Gold Myr":
-mcn = new GoldMyrMR();
-break;
-# endregion
-
-# region Golem-Skin Gauntlets
-case "Golem-Skin Gauntlets":
-mcn = new GolemSkinGauntletsMR();
-break;
-# endregion
-
-# region Grab the Reins
-case "Grab the Reins":
-mcn = new GrabtheReinsMR();
-break;
-# endregion
-
-# region Granite Shard
-case "Granite Shard":
-mcn = new GraniteShardMR();
-break;
-# endregion
-
-# region Great Furnace
-case "Great Furnace":
-mcn = new GreatFurnaceMR();
-break;
-# endregion
-
-# region Grid Monitor
-case "Grid Monitor":
-mcn = new GridMonitorMR();
-break;
-# endregion
-
-# region Grim Reminder
-case "Grim Reminder":
-mcn = new GrimReminderMR();
-break;
-# endregion
-
-# region Groffskithur
-case "Groffskithur":
-mcn = new GroffskithurMR();
-break;
-# endregion
-
-# region Heartwood Shard
-case "Heartwood Shard":
-mcn = new HeartwoodShardMR();
-break;
-# endregion
-
-# region Hematite Golem
-case "Hematite Golem":
-mcn = new HematiteGolemMR();
-break;
-# endregion
-
-# region Hum of the Radix
-case "Hum of the Radix":
-mcn = new HumoftheRadixMR();
-break;
-# endregion
-
-//# region Icy Manipulator
-//case "Icy Manipulator":
-//mcn = new IcyManipulatorMR();
-//break;
-//# endregion
-
-# region Incite War
-case "Incite War":
-mcn = new InciteWarMR();
-break;
-# endregion
-
-# region Inertia Bubble
-case "Inertia Bubble":
-mcn = new InertiaBubbleMR();
-break;
-# endregion
-
-# region Iron Myr
-case "Iron Myr":
-mcn = new IronMyrMR();
-break;
-# endregion
-
-# region Irradiate
-case "Irradiate":
-mcn = new IrradiateMR();
-break;
-# endregion
-
-//# region Island 
-//case "Island ":
-//mcn = new IslandMR();
-//break;
-//# endregion
-
-//# region Island 
-//case "Island ":
-//mcn = new IslandMR();
-//break;
-//# endregion
-
-//# region Island 
-//case "Island ":
-//mcn = new IslandMR();
-//break;
-//# endregion
-
-//# region Island 
-//case "Island ":
-//mcn = new IslandMR();
-//break;
-//# endregion
-
-# region Isochron Scepter
-case "Isochron Scepter":
-mcn = new IsochronScepterMR();
-break;
-# endregion
-
-# region Jinxed Choker
-case "Jinxed Choker":
-mcn = new JinxedChokerMR();
-break;
-# endregion
-
-# region Journey of Discovery
-case "Journey of Discovery":
-mcn = new JourneyofDiscoveryMR();
-break;
-# endregion
-
-# region Krark-Clan Grunt
-case "Krark-Clan Grunt":
-mcn = new KrarkClanGruntMR();
-break;
-# endregion
-
-# region Krark-Clan Shaman
-case "Krark-Clan Shaman":
-mcn = new KrarkClanShamanMR();
-break;
-# endregion
-
-# region Krark's Thumb
-case "Krark's Thumb":
-mcn = new KrarksThumbMR();
-break;
-# endregion
-
-# region Leaden Myr
-case "Leaden Myr":
-mcn = new LeadenMyrMR();
-break;
-# endregion
-
-# region Leonin Abunas
-case "Leonin Abunas":
-mcn = new LeoninAbunasMR();
-break;
-# endregion
-
-# region Leonin Bladetrap
-case "Leonin Bladetrap":
-mcn = new LeoninBladetrapMR();
-break;
-# endregion
-
-# region Leonin Den-Guard
-case "Leonin Den-Guard":
-mcn = new LeoninDenGuardMR();
-break;
-# endregion
-
-# region Leonin Elder
-case "Leonin Elder":
-mcn = new LeoninElderMR();
-break;
-# endregion
-
-# region Leonin Scimitar
-case "Leonin Scimitar":
-mcn = new LeoninScimitarMR();
-break;
-# endregion
-
-# region Leonin Skyhunter
-case "Leonin Skyhunter":
-mcn = new LeoninSkyhunterMR();
-break;
-# endregion
-
-# region Leonin Sun Standard
-case "Leonin Sun Standard":
-mcn = new LeoninSunStandardMR();
-break;
-# endregion
-
-# region Leveler
-case "Leveler":
-mcn = new LevelerMR();
-break;
-# endregion
-
-# region Liar's Pendulum
-case "Liar's Pendulum":
-mcn = new LiarsPendulumMR();
-break;
-# endregion
-
-# region Lifespark Spellbomb
-case "Lifespark Spellbomb":
-mcn = new LifesparkSpellbombMR();
-break;
-# endregion
-
-# region Lightning Coils
-case "Lightning Coils":
-mcn = new LightningCoilsMR();
-break;
-# endregion
-
-# region Lightning Greaves
-case "Lightning Greaves":
-mcn = new LightningGreavesMR();
-break;
-# endregion
-
-# region Living Hive
-case "Living Hive":
-mcn = new LivingHiveMR();
-break;
-# endregion
-
-# region Lodestone Myr
-case "Lodestone Myr":
-mcn = new LodestoneMyrMR();
-break;
-# endregion
-
-# region Looming Hoverguard
-case "Looming Hoverguard":
-mcn = new LoomingHoverguardMR();
-break;
-# endregion
-
-# region Loxodon Mender
-case "Loxodon Mender":
-mcn = new LoxodonMenderMR();
-break;
-# endregion
-
-# region Loxodon Peacekeeper
-case "Loxodon Peacekeeper":
-mcn = new LoxodonPeacekeeperMR();
-break;
-# endregion
-
-# region Loxodon Punisher
-case "Loxodon Punisher":
-mcn = new LoxodonPunisherMR();
-break;
-# endregion
-
-# region Loxodon Warhammer
-case "Loxodon Warhammer":
-mcn = new LoxodonWarhammerMR();
-break;
-# endregion
-
-# region Lumengrid Augur
-case "Lumengrid Augur":
-mcn = new LumengridAugurMR();
-break;
-# endregion
-
-# region Lumengrid Sentinel
-case "Lumengrid Sentinel":
-mcn = new LumengridSentinelMR();
-break;
-# endregion
-
-# region Lumengrid Warden
-case "Lumengrid Warden":
-mcn = new LumengridWardenMR();
-break;
-# endregion
-
-# region Luminous Angel
-case "Luminous Angel":
-mcn = new LuminousAngelMR();
-break;
-# endregion
-
-# region Malachite Golem
-case "Malachite Golem":
-mcn = new MalachiteGolemMR();
-break;
-# endregion
-
-# region March of the Machines
-case "March of the Machines":
-mcn = new MarchoftheMachinesMR();
-break;
-# endregion
-
-# region Mask of Memory
-case "Mask of Memory":
-mcn = new MaskofMemoryMR();
-break;
-# endregion
-
-# region Mass Hysteria
-case "Mass Hysteria":
-mcn = new MassHysteriaMR();
-break;
-# endregion
-
-# region Megatog
-case "Megatog":
-mcn = new MegatogMR();
-break;
-# endregion
-
-# region Mesmeric Orb
-case "Mesmeric Orb":
-mcn = new MesmericOrbMR();
-break;
-# endregion
-
-# region Mind's Eye
-case "Mind's Eye":
-mcn = new MindsEyeMR();
-break;
-# endregion
-
-# region Mindslaver
-case "Mindslaver":
-mcn = new MindslaverMR();
-break;
-# endregion
-
-# region Mindstorm Crown
-case "Mindstorm Crown":
-mcn = new MindstormCrownMR();
-break;
-# endregion
-
-# region Mirror Golem
-case "Mirror Golem":
-mcn = new MirrorGolemMR();
-break;
-# endregion
-
-# region Molder Slug
-case "Molder Slug":
-mcn = new MolderSlugMR();
-break;
-# endregion
-
-# region Molten Rain
-case "Molten Rain":
-mcn = new MoltenRainMR();
-break;
-# endregion
-
-# region Moriok Scavenger
-case "Moriok Scavenger":
-mcn = new MoriokScavengerMR();
-break;
-# endregion
-
-//# region Mountain 
-//case "Mountain ":
-//mcn = new MountainMR();
-//break;
-//# endregion
-
-//# region Mountain 
-//case "Mountain ":
-//mcn = new MountainMR();
-//break;
-//# endregion
-
-//# region Mountain 
-//case "Mountain ":
-//mcn = new MountainMR();
-//break;
-//# endregion
-
-//# region Mountain 
-//case "Mountain ":
-//mcn = new MountainMR();
-//break;
-//# endregion
-
-# region Mourner's Shield
-case "Mourner's Shield":
-mcn = new MournersShieldMR();
-break;
-# endregion
-
-# region Myr Adapter
-case "Myr Adapter":
-mcn = new MyrAdapterMR();
-break;
-# endregion
-
-# region Myr Enforcer
-case "Myr Enforcer":
-mcn = new MyrEnforcerMR();
-break;
-# endregion
-
-# region Myr Incubator
-case "Myr Incubator":
-mcn = new MyrIncubatorMR();
-break;
-# endregion
-
-# region Myr Mindservant
-case "Myr Mindservant":
-mcn = new MyrMindservantMR();
-break;
-# endregion
-
-# region Myr Prototype
-case "Myr Prototype":
-mcn = new MyrPrototypeMR();
-break;
-# endregion
-
-# region Myr Retriever
-case "Myr Retriever":
-mcn = new MyrRetrieverMR();
-break;
-# endregion
-
-# region Necrogen Mists
-case "Necrogen Mists":
-mcn = new NecrogenMistsMR();
-break;
-# endregion
-
-# region Necrogen Spellbomb
-case "Necrogen Spellbomb":
-mcn = new NecrogenSpellbombMR();
-break;
-# endregion
-
-# region Needlebug
-case "Needlebug":
-mcn = new NeedlebugMR();
-break;
-# endregion
-
-# region Neurok Familiar
-case "Neurok Familiar":
-mcn = new NeurokFamiliarMR();
-break;
-# endregion
-
-# region Neurok Hoversail
-case "Neurok Hoversail":
-mcn = new NeurokHoversailMR();
-break;
-# endregion
-
-# region Neurok Spy
-case "Neurok Spy":
-mcn = new NeurokSpyMR();
-break;
-# endregion
-
-# region Nightmare Lash
-case "Nightmare Lash":
-mcn = new NightmareLashMR();
-break;
-# endregion
-
-# region Nim Devourer
-case "Nim Devourer":
-mcn = new NimDevourerMR();
-break;
-# endregion
-
-# region Nim Lasher
-case "Nim Lasher":
-mcn = new NimLasherMR();
-break;
-# endregion
-
-# region Nim Replica
-case "Nim Replica":
-mcn = new NimReplicaMR();
-break;
-# endregion
-
-# region Nim Shambler
-case "Nim Shambler":
-mcn = new NimShamblerMR();
-break;
-# endregion
-
-# region Nim Shrieker
-case "Nim Shrieker":
-mcn = new NimShriekerMR();
-break;
-# endregion
-
-# region Nuisance Engine
-case "Nuisance Engine":
-mcn = new NuisanceEngineMR();
-break;
-# endregion
-
-# region Oblivion Stone
-case "Oblivion Stone":
-mcn = new OblivionStoneMR();
-break;
-# endregion
-
-# region Ogre Leadfoot
-case "Ogre Leadfoot":
-mcn = new OgreLeadfootMR();
-break;
-# endregion
-
-# region Omega Myr
-case "Omega Myr":
-mcn = new OmegaMyrMR();
-break;
-# endregion
-
-# region One Dozen Eyes
-case "One Dozen Eyes":
-mcn = new OneDozenEyesMR();
-break;
-# endregion
-
-# region Ornithopter
-case "Ornithopter":
-mcn = new OrnithopterMR();
-break;
-# endregion
-
-# region Override
-case "Override":
-mcn = new OverrideMR();
-break;
-# endregion
-
-# region Pearl Shard
-case "Pearl Shard":
-mcn = new PearlShardMR();
-break;
-# endregion
-
-# region Pentavus
-case "Pentavus":
-mcn = new PentavusMR();
-break;
-# endregion
-
-# region Pewter Golem
-case "Pewter Golem":
-mcn = new PewterGolemMR();
-break;
-# endregion
-
-//# region Plains 
-//case "Plains ":
-//mcn = new PlainsMR();
-//break;
-//# endregion
-
-//# region Plains 
-//case "Plains ":
-//mcn = new PlainsMR();
-//break;
-//# endregion
-
-//# region Plains 
-//case "Plains ":
-//mcn = new PlainsMR();
-//break;
-//# endregion
-
-//# region Plains 
-//case "Plains ":
-//mcn = new PlainsMR();
-//break;
-//# endregion
-
-# region Plated Slagwurm
-case "Plated Slagwurm":
-mcn = new PlatedSlagwurmMR();
-break;
-# endregion
-
-# region Platinum Angel
-case "Platinum Angel":
-mcn = new PlatinumAngelMR();
-break;
-# endregion
-
-# region Power Conduit
-case "Power Conduit":
-mcn = new PowerConduitMR();
-break;
-# endregion
-
-# region Predator's Strike
-case "Predator's Strike":
-mcn = new PredatorsStrikeMR();
-break;
-# endregion
-
-# region Promise of Power
-case "Promise of Power":
-mcn = new PromiseofPowerMR();
-break;
-# endregion
-
-# region Proteus Staff
-case "Proteus Staff":
-mcn = new ProteusStaffMR();
-break;
-# endregion
-
-# region Psychic Membrane
-case "Psychic Membrane":
-mcn = new PsychicMembraneMR();
-break;
-# endregion
-
-# region Psychogenic Probe
-case "Psychogenic Probe":
-mcn = new PsychogenicProbeMR();
-break;
-# endregion
-
-# region Pyrite Spellbomb
-case "Pyrite Spellbomb":
-mcn = new PyriteSpellbombMR();
-break;
-# endregion
-
-# region Quicksilver Elemental
-case "Quicksilver Elemental":
-mcn = new QuicksilverElementalMR();
-break;
-# endregion
-
-# region Quicksilver Fountain
-case "Quicksilver Fountain":
-mcn = new QuicksilverFountainMR();
-break;
-# endregion
-
-# region Raise the Alarm
-case "Raise the Alarm":
-mcn = new RaisetheAlarmMR();
-break;
-# endregion
-
-# region Razor Barrier
-case "Razor Barrier":
-mcn = new RazorBarrierMR();
-break;
-# endregion
-
-# region Regress
-case "Regress":
-mcn = new RegressMR();
-break;
-# endregion
-
-# region Reiver Demon
-case "Reiver Demon":
-mcn = new ReiverDemonMR();
-break;
-# endregion
-
-# region Relic Bane
-case "Relic Bane":
-mcn = new RelicBaneMR();
-break;
-# endregion
-
-# region Roar of the Kha
-case "Roar of the Kha":
-mcn = new RoaroftheKhaMR();
-break;
-# endregion
-
-# region Rule of Law
-case "Rule of Law":
-mcn = new RuleofLawMR();
-break;
-# endregion
-
-# region Rust Elemental
-case "Rust Elemental":
-mcn = new RustElementalMR();
-break;
-# endregion
-
-# region Rustmouth Ogre
-case "Rustmouth Ogre":
-mcn = new RustmouthOgreMR();
-break;
-# endregion
-
-# region Rustspore Ram
-case "Rustspore Ram":
-mcn = new RustsporeRamMR();
-break;
-# endregion
-
-# region Scale of Chiss-Goria
-case "Scale of Chiss-Goria":
-mcn = new ScaleofChissGoriaMR();
-break;
-# endregion
-
-# region Scrabbling Claws
-case "Scrabbling Claws":
-mcn = new ScrabblingClawsMR();
-break;
-# endregion
-
-# region Sculpting Steel
-case "Sculpting Steel":
-mcn = new SculptingSteelMR();
-break;
-# endregion
-
-# region Scythe of the Wretched
-case "Scythe of the Wretched":
-mcn = new ScytheoftheWretchedMR();
-break;
-# endregion
-
-# region Seat of the Synod
-case "Seat of the Synod":
-mcn = new SeatoftheSynodMR();
-break;
-# endregion
-
-# region Second Sunrise
-case "Second Sunrise":
-mcn = new SecondSunriseMR();
-break;
-# endregion
-
-# region Seething Song
-case "Seething Song":
-mcn = new SeethingSongMR();
-break;
-# endregion
-
-# region Serum Tank
-case "Serum Tank":
-mcn = new SerumTankMR();
-break;
-# endregion
-
-# region Shared Fate
-case "Shared Fate":
-mcn = new SharedFateMR();
-break;
-# endregion
-
-//# region Shatter
-//case "Shatter":
-//mcn = new ShatterMR();
-//break;
-//# endregion
-
-# region Shrapnel Blast
-case "Shrapnel Blast":
-mcn = new ShrapnelBlastMR();
-break;
-# endregion
-
-# region Silver Myr
-case "Silver Myr":
-mcn = new SilverMyrMR();
-break;
-# endregion
-
-# region Skeleton Shard
-case "Skeleton Shard":
-mcn = new SkeletonShardMR();
-break;
-# endregion
-
-# region Skyhunter Cub
-case "Skyhunter Cub":
-mcn = new SkyhunterCubMR();
-break;
-# endregion
-
-# region Skyhunter Patrol
-case "Skyhunter Patrol":
-mcn = new SkyhunterPatrolMR();
-break;
-# endregion
-
-# region Slagwurm Armor
-case "Slagwurm Armor":
-mcn = new SlagwurmArmorMR();
-break;
-# endregion
-
-# region Slith Ascendant
-case "Slith Ascendant":
-mcn = new SlithAscendantMR();
-break;
-# endregion
-
-# region Slith Bloodletter
-case "Slith Bloodletter":
-mcn = new SlithBloodletterMR();
-break;
-# endregion
-
-# region Slith Firewalker
-case "Slith Firewalker":
-mcn = new SlithFirewalkerMR();
-break;
-# endregion
-
-# region Slith Predator
-case "Slith Predator":
-mcn = new SlithPredatorMR();
-break;
-# endregion
-
-# region Slith Strider
-case "Slith Strider":
-mcn = new SlithStriderMR();
-break;
-# endregion
-
-# region Solar Tide
-case "Solar Tide":
-mcn = new SolarTideMR();
-break;
-# endregion
-
-# region Soldier Replica
-case "Soldier Replica":
-mcn = new SoldierReplicaMR();
-break;
-# endregion
-
-# region Solemn Simulacrum
-case "Solemn Simulacrum":
-mcn = new SolemnSimulacrumMR();
-break;
-# endregion
-
-# region Somber Hoverguard
-case "Somber Hoverguard":
-mcn = new SomberHoverguardMR();
-break;
-# endregion
-
-# region Soul Foundry
-case "Soul Foundry":
-mcn = new SoulFoundryMR();
-break;
-# endregion
-
-# region Soul Nova
-case "Soul Nova":
-mcn = new SoulNovaMR();
-break;
-# endregion
-
-# region Spellweaver Helix
-case "Spellweaver Helix":
-mcn = new SpellweaverHelixMR();
-break;
-# endregion
-
-# region Sphere of Purity
-case "Sphere of Purity":
-mcn = new SphereofPurityMR();
-break;
-# endregion
-
-# region Spikeshot Goblin
-case "Spikeshot Goblin":
-mcn = new SpikeshotGoblinMR();
-break;
-# endregion
-
-# region Spoils of the Vault
-case "Spoils of the Vault":
-mcn = new SpoilsoftheVaultMR();
-break;
-# endregion
-
-# region Stalking Stones
-case "Stalking Stones":
-mcn = new StalkingStonesMR();
-break;
-# endregion
-
-# region Steel Wall
-case "Steel Wall":
-mcn = new SteelWallMR();
-break;
-# endregion
-
-# region Sun Droplet
-case "Sun Droplet":
-mcn = new SunDropletMR();
-break;
-# endregion
-
-# region Sunbeam Spellbomb
-case "Sunbeam Spellbomb":
-mcn = new SunbeamSpellbombMR();
-break;
-# endregion
-
-//# region Swamp 
-//case "Swamp ":
-//mcn = new SwampMR();
-//break;
-//# endregion
-
-//# region Swamp 
-//case "Swamp ":
-//mcn = new SwampMR();
-//break;
-//# endregion
-
-//# region Swamp 
-//case "Swamp ":
-//mcn = new SwampMR();
-//break;
-//# endregion
-
-//# region Swamp 
-//case "Swamp ":
-//mcn = new SwampMR();
-//break;
-//# endregion
-
-# region Sword of Kaldra
-case "Sword of Kaldra":
-mcn = new SwordofKaldraMR();
-break;
-# endregion
-
-# region Sylvan Scrying
-case "Sylvan Scrying":
-mcn = new SylvanScryingMR();
-break;
-# endregion
-
-# region Synod Sanctum
-case "Synod Sanctum":
-mcn = new SynodSanctumMR();
-break;
-# endregion
-
-# region Taj-Nar Swordsmith
-case "Taj-Nar Swordsmith":
-mcn = new TajNarSwordsmithMR();
-break;
-# endregion
-
-# region Talisman of Dominance
-case "Talisman of Dominance":
-mcn = new TalismanofDominanceMR();
-break;
-# endregion
-
-# region Talisman of Impulse
-case "Talisman of Impulse":
-mcn = new TalismanofImpulseMR();
-break;
-# endregion
-
-# region Talisman of Indulgence
-case "Talisman of Indulgence":
-mcn = new TalismanofIndulgenceMR();
-break;
-# endregion
-
-# region Talisman of Progress
-case "Talisman of Progress":
-mcn = new TalismanofProgressMR();
-break;
-# endregion
-
-# region Talisman of Unity
-case "Talisman of Unity":
-mcn = new TalismanofUnityMR();
-break;
-# endregion
-
-# region Tanglebloom
-case "Tanglebloom":
-mcn = new TanglebloomMR();
-break;
-# endregion
-
-# region Tangleroot
-case "Tangleroot":
-mcn = new TanglerootMR();
-break;
-# endregion
-
-# region Tel-Jilad Archers
-case "Tel-Jilad Archers":
-mcn = new TelJiladArchersMR();
-break;
-# endregion
-
-# region Tel-Jilad Chosen
-case "Tel-Jilad Chosen":
-mcn = new TelJiladChosenMR();
-break;
-# endregion
-
-# region Tel-Jilad Exile
-case "Tel-Jilad Exile":
-mcn = new TelJiladExileMR();
-break;
-# endregion
-
-# region Tel-Jilad Stylus
-case "Tel-Jilad Stylus":
-mcn = new TelJiladStylusMR();
-break;
-# endregion
-
-# region Tempest of Light
-case "Tempest of Light":
-mcn = new TempestofLightMR();
-break;
-# endregion
-
-# region Temporal Cascade
-case "Temporal Cascade":
-mcn = new TemporalCascadeMR();
-break;
-# endregion
-
-//# region Terror
-//case "Terror":
-//mcn = new TerrorMR();
-//break;
-//# endregion
-
-# region Thirst for Knowledge
-case "Thirst for Knowledge":
-mcn = new ThirstforKnowledgeMR();
-break;
-# endregion
-
-# region Thought Prison
-case "Thought Prison":
-mcn = new ThoughtPrisonMR();
-break;
-# endregion
-
-# region Thoughtcast
-case "Thoughtcast":
-mcn = new ThoughtcastMR();
-break;
-# endregion
-
-# region Timesifter
-case "Timesifter":
-mcn = new TimesifterMR();
-break;
-# endregion
-
-# region Titanium Golem
-case "Titanium Golem":
-mcn = new TitaniumGolemMR();
-break;
-# endregion
-
-# region Tooth and Nail
-case "Tooth and Nail":
-mcn = new ToothandNailMR();
-break;
-# endregion
-
-# region Tooth of Chiss-Goria
-case "Tooth of Chiss-Goria":
-mcn = new ToothofChissGoriaMR();
-break;
-# endregion
-
-# region Tower of Champions
-case "Tower of Champions":
-mcn = new TowerofChampionsMR();
-break;
-# endregion
-
-# region Tower of Eons
-case "Tower of Eons":
-mcn = new TowerofEonsMR();
-break;
-# endregion
-
-# region Tower of Fortunes
-case "Tower of Fortunes":
-mcn = new TowerofFortunesMR();
-break;
-# endregion
-
-# region Tower of Murmurs
-case "Tower of Murmurs":
-mcn = new TowerofMurmursMR();
-break;
-# endregion
-
-# region Trash for Treasure
-case "Trash for Treasure":
-mcn = new TrashforTreasureMR();
-break;
-# endregion
-
-# region Tree of Tales
-case "Tree of Tales":
-mcn = new TreeofTalesMR();
-break;
-# endregion
-
-# region Triskelion
-case "Triskelion":
-mcn = new TriskelionMR();
-break;
-# endregion
-
-# region Troll Ascetic
-case "Troll Ascetic":
-mcn = new TrollAsceticMR();
-break;
-# endregion
-
-# region Trolls of Tel-Jilad
-case "Trolls of Tel-Jilad":
-mcn = new TrollsofTelJiladMR();
-break;
-# endregion
-
-# region Turn to Dust
-case "Turn to Dust":
-mcn = new TurntoDustMR();
-break;
-# endregion
-
-# region Vault of Whispers
-case "Vault of Whispers":
-mcn = new VaultofWhispersMR();
-break;
-# endregion
-
-# region Vedalken Archmage
-case "Vedalken Archmage":
-mcn = new VedalkenArchmageMR();
-break;
-# endregion
-
-# region Vermiculos
-case "Vermiculos":
-mcn = new VermiculosMR();
-break;
-# endregion
-
-# region Viridian Joiner
-case "Viridian Joiner":
-mcn = new ViridianJoinerMR();
-break;
-# endregion
-
-# region Viridian Longbow
-case "Viridian Longbow":
-mcn = new ViridianLongbowMR();
-break;
-# endregion
-
-# region Viridian Shaman
-case "Viridian Shaman":
-mcn = new ViridianShamanMR();
-break;
-# endregion
-
-# region Vorrac Battlehorns
-case "Vorrac Battlehorns":
-mcn = new VorracBattlehornsMR();
-break;
-# endregion
-
-# region Vulshok Battlegear
-case "Vulshok Battlegear":
-mcn = new VulshokBattlegearMR();
-break;
-# endregion
-
-# region Vulshok Battlemaster
-case "Vulshok Battlemaster":
-mcn = new VulshokBattlemasterMR();
-break;
-# endregion
-
-# region Vulshok Berserker
-case "Vulshok Berserker":
-mcn = new VulshokBerserkerMR();
-break;
-# endregion
-
-# region Vulshok Gauntlets
-case "Vulshok Gauntlets":
-mcn = new VulshokGauntletsMR();
-break;
-# endregion
-
-# region Wail of the Nim
-case "Wail of the Nim":
-mcn = new WailoftheNimMR();
-break;
-# endregion
-
-# region Wall of Blood
-case "Wall of Blood":
-mcn = new WallofBloodMR();
-break;
-# endregion
-
-# region Wanderguard Sentry
-case "Wanderguard Sentry":
-mcn = new WanderguardSentryMR();
-break;
-# endregion
-
-# region War Elemental
-case "War Elemental":
-mcn = new WarElementalMR();
-break;
-# endregion
-
-# region Welding Jar
-case "Welding Jar":
-mcn = new WeldingJarMR();
-break;
-# endregion
-
-# region Wizard Replica
-case "Wizard Replica":
-mcn = new WizardReplicaMR();
-break;
-# endregion
-
-# region Woebearer
-case "Woebearer":
-mcn = new WoebearerMR();
-break;
-# endregion
-
-# region Worldslayer
-case "Worldslayer":
-mcn = new WorldslayerMR();
-break;
-# endregion
-
-# region Wrench Mind
-case "Wrench Mind":
-mcn = new WrenchMindMR();
-break;
-# endregion
-
-# region Wurmskin Forger
-case "Wurmskin Forger":
-mcn = new WurmskinForgerMR();
-break;
-# endregion
-
-# region Yotian Soldier
-case "Yotian Soldier":
-mcn = new YotianSoldierMR();
-break;
-# endregion
+                # region AEther Spellbomb
+                case "AEther Spellbomb":
+                    mcn = new AEtherSpellbombMR();
+                    break;
+                # endregion
+
+                # region Alpha Myr
+                case "Alpha Myr":
+                    mcn = new AlphaMyrMR();
+                    break;
+                # endregion
+
+                # region Altar of Shadows
+                case "Altar of Shadows":
+                    mcn = new AltarofShadowsMR();
+                    break;
+                # endregion
+
+                # region Altar's Light
+                case "Altar's Light":
+                    mcn = new AltarsLightMR();
+                    break;
+                # endregion
+
+                # region Ancient Den
+                case "Ancient Den":
+                    mcn = new AncientDenMR();
+                    break;
+                # endregion
+
+                # region Annul
+                case "Annul":
+                    mcn = new AnnulMR();
+                    break;
+                # endregion
+
+                # region Arc-Slogger
+                case "Arc-Slogger":
+                    mcn = new ArcSloggerMR();
+                    break;
+                # endregion
+
+                # region Arrest
+                case "Arrest":
+                    mcn = new ArrestMR();
+                    break;
+                # endregion
+
+                # region Assert Authority
+                case "Assert Authority":
+                    mcn = new AssertAuthorityMR();
+                    break;
+                # endregion
+
+                # region Atog
+                case "Atog":
+                    mcn = new AtogMR();
+                    break;
+                # endregion
+
+                # region Auriok Bladewarden
+                case "Auriok Bladewarden":
+                    mcn = new AuriokBladewardenMR();
+                    break;
+                # endregion
+
+                # region Auriok Steelshaper
+                case "Auriok Steelshaper":
+                    mcn = new AuriokSteelshaperMR();
+                    break;
+                # endregion
+
+                # region Auriok Transfixer
+                case "Auriok Transfixer":
+                    mcn = new AuriokTransfixerMR();
+                    break;
+                # endregion
+
+                # region Awe Strike
+                case "Awe Strike":
+                    mcn = new AweStrikeMR();
+                    break;
+                # endregion
+
+                # region Banshee's Blade
+                case "Banshee's Blade":
+                    mcn = new BansheesBladeMR();
+                    break;
+                # endregion
+
+                # region Barter in Blood
+                case "Barter in Blood":
+                    mcn = new BarterinBloodMR();
+                    break;
+                # endregion
+
+                # region Battlegrowth
+                case "Battlegrowth":
+                    mcn = new BattlegrowthMR();
+                    break;
+                # endregion
+
+                # region Betrayal of Flesh
+                case "Betrayal of Flesh":
+                    mcn = new BetrayalofFleshMR();
+                    break;
+                # endregion
+
+                # region Blinding Beam
+                case "Blinding Beam":
+                    mcn = new BlindingBeamMR();
+                    break;
+                # endregion
+
+                # region Blinkmoth Urn
+                case "Blinkmoth Urn":
+                    mcn = new BlinkmothUrnMR();
+                    break;
+                # endregion
+
+                # region Blinkmoth Well
+                case "Blinkmoth Well":
+                    mcn = new BlinkmothWellMR();
+                    break;
+                # endregion
+
+                # region Bloodscent
+                case "Bloodscent":
+                    mcn = new BloodscentMR();
+                    break;
+                # endregion
+
+                # region Bonesplitter
+                case "Bonesplitter":
+                    mcn = new BonesplitterMR();
+                    break;
+                # endregion
+
+                # region Bosh, Iron Golem
+                case "Bosh, Iron Golem":
+                    mcn = new BoshIronGolemMR();
+                    break;
+                # endregion
+
+                # region Bottle Gnomes
+                case "Bottle Gnomes":
+                    mcn = new BottleGnomesMR();
+                    break;
+                # endregion
+
+                # region Broodstar
+                case "Broodstar":
+                    mcn = new BroodstarMR();
+                    break;
+                # endregion
+
+                # region Brown Ouphe
+                case "Brown Ouphe":
+                    mcn = new BrownOupheMR();
+                    break;
+                # endregion
+
+                # region Cathodion
+                case "Cathodion":
+                    mcn = new CathodionMR();
+                    break;
+                # endregion
+
+                # region Chalice of the Void
+                case "Chalice of the Void":
+                    mcn = new ChaliceoftheVoidMR();
+                    break;
+                # endregion
+
+                # region Chimney Imp
+                case "Chimney Imp":
+                    mcn = new ChimneyImpMR();
+                    break;
+                # endregion
+
+                # region Chromatic Sphere
+                case "Chromatic Sphere":
+                    mcn = new ChromaticSphereMR();
+                    break;
+                # endregion
+
+                # region Chrome Mox
+                case "Chrome Mox":
+                    mcn = new ChromeMoxMR();
+                    break;
+                # endregion
+
+                # region Clockwork Beetle
+                case "Clockwork Beetle":
+                    mcn = new ClockworkBeetleMR();
+                    break;
+                # endregion
+
+                # region Clockwork Condor
+                case "Clockwork Condor":
+                    mcn = new ClockworkCondorMR();
+                    break;
+                # endregion
+
+                # region Clockwork Dragon
+                case "Clockwork Dragon":
+                    mcn = new ClockworkDragonMR();
+                    break;
+                # endregion
+
+                # region Clockwork Vorrac
+                case "Clockwork Vorrac":
+                    mcn = new ClockworkVorracMR();
+                    break;
+                # endregion
+
+                # region Cloudpost
+                case "Cloudpost":
+                    mcn = new CloudpostMR();
+                    break;
+                # endregion
+
+                # region Cobalt Golem
+                case "Cobalt Golem":
+                    mcn = new CobaltGolemMR();
+                    break;
+                # endregion
+
+                # region Confusion in the Ranks
+                case "Confusion in the Ranks":
+                    mcn = new ConfusionintheRanksMR();
+                    break;
+                # endregion
+
+                # region Consume Spirit
+                case "Consume Spirit":
+                    mcn = new ConsumeSpiritMR();
+                    break;
+                # endregion
+
+                # region Contaminated Bond
+                case "Contaminated Bond":
+                    mcn = new ContaminatedBondMR();
+                    break;
+                # endregion
+
+                # region Copper Myr
+                case "Copper Myr":
+                    mcn = new CopperMyrMR();
+                    break;
+                # endregion
+
+                # region Copperhoof Vorrac
+                case "Copperhoof Vorrac":
+                    mcn = new CopperhoofVorracMR();
+                    break;
+                # endregion
+
+                # region Creeping Mold
+                case "Creeping Mold":
+                    mcn = new CreepingMoldMR();
+                    break;
+                # endregion
+
+                # region Crystal Shard
+                case "Crystal Shard":
+                    mcn = new CrystalShardMR();
+                    break;
+                # endregion
+
+                # region Culling Scales
+                case "Culling Scales":
+                    mcn = new CullingScalesMR();
+                    break;
+                # endregion
+
+                # region Damping Matrix
+                case "Damping Matrix":
+                    mcn = new DampingMatrixMR();
+                    break;
+                # endregion
+
+                # region Dead-Iron Sledge
+                case "Dead-Iron Sledge":
+                    mcn = new DeadIronSledgeMR();
+                    break;
+                # endregion
+
+                # region Deconstruct
+                case "Deconstruct":
+                    mcn = new DeconstructMR();
+                    break;
+                # endregion
+
+                # region Detonate
+                case "Detonate":
+                    mcn = new DetonateMR();
+                    break;
+                # endregion
+
+                # region Disarm
+                case "Disarm":
+                    mcn = new DisarmMR();
+                    break;
+                # endregion
+
+                # region Disciple of the Vault
+                case "Disciple of the Vault":
+                    mcn = new DiscipleoftheVaultMR();
+                    break;
+                # endregion
+
+                # region Domineer
+                case "Domineer":
+                    mcn = new DomineerMR();
+                    break;
+                # endregion
+
+                # region Dragon Blood
+                case "Dragon Blood":
+                    mcn = new DragonBloodMR();
+                    break;
+                # endregion
+
+                # region Dream's Grip
+                case "Dream's Grip":
+                    mcn = new DreamsGripMR();
+                    break;
+                # endregion
+
+                # region Dross Harvester
+                case "Dross Harvester":
+                    mcn = new DrossHarvesterMR();
+                    break;
+                # endregion
+
+                # region Dross Prowler
+                case "Dross Prowler":
+                    mcn = new DrossProwlerMR();
+                    break;
+                # endregion
+
+                # region Dross Scorpion
+                case "Dross Scorpion":
+                    mcn = new DrossScorpionMR();
+                    break;
+                # endregion
+
+                # region Duplicant
+                case "Duplicant":
+                    mcn = new DuplicantMR();
+                    break;
+                # endregion
+
+                # region Duskworker
+                case "Duskworker":
+                    mcn = new DuskworkerMR();
+                    break;
+                # endregion
+
+                # region Electrostatic Bolt
+                case "Electrostatic Bolt":
+                    mcn = new ElectrostaticBoltMR();
+                    break;
+                # endregion
+
+                # region Elf Replica
+                case "Elf Replica":
+                    mcn = new ElfReplicaMR();
+                    break;
+                # endregion
+
+                # region Empyrial Plate
+                case "Empyrial Plate":
+                    mcn = new EmpyrialPlateMR();
+                    break;
+                # endregion
+
+                # region Extraplanar Lens
+                case "Extraplanar Lens":
+                    mcn = new ExtraplanarLensMR();
+                    break;
+                # endregion
+
+                # region Fabricate
+                case "Fabricate":
+                    mcn = new FabricateMR();
+                    break;
+                # endregion
+
+                # region Fangren Hunter
+                case "Fangren Hunter":
+                    mcn = new FangrenHunterMR();
+                    break;
+                # endregion
+
+                # region Farsight Mask
+                case "Farsight Mask":
+                    mcn = new FarsightMaskMR();
+                    break;
+                # endregion
+
+                # region Fatespinner
+                case "Fatespinner":
+                    mcn = new FatespinnerMR();
+                    break;
+                # endregion
+
+                # region Fiery Gambit
+                case "Fiery Gambit":
+                    mcn = new FieryGambitMR();
+                    break;
+                # endregion
+
+                # region Fireshrieker
+                case "Fireshrieker":
+                    mcn = new FireshriekerMR();
+                    break;
+                # endregion
+
+                # region Fists of the Anvil
+                case "Fists of the Anvil":
+                    mcn = new FistsoftheAnvilMR();
+                    break;
+                # endregion
+
+                # region Flayed Nim
+                case "Flayed Nim":
+                    mcn = new FlayedNimMR();
+                    break;
+                # endregion
+
+                //# region Forest 
+                //case "Forest ":
+                //mcn = new ForestMR();
+                //break;
+                //# endregion
+
+                //# region Forest 
+                //case "Forest ":
+                //mcn = new ForestMR();
+                //break;
+                //# endregion
+
+                //# region Forest 
+                //case "Forest ":
+                //mcn = new ForestMR();
+                //break;
+                //# endregion
+
+                //# region Forest 
+                //case "Forest ":
+                //mcn = new ForestMR();
+                //break;
+                //# endregion
+
+                # region Forge Armor
+                case "Forge Armor":
+                    mcn = new ForgeArmorMR();
+                    break;
+                # endregion
+
+                # region Fractured Loyalty
+                case "Fractured Loyalty":
+                    mcn = new FracturedLoyaltyMR();
+                    break;
+                # endregion
+
+                # region Frogmite
+                case "Frogmite":
+                    mcn = new FrogmiteMR();
+                    break;
+                # endregion
+
+                # region Galvanic Key
+                case "Galvanic Key":
+                    mcn = new GalvanicKeyMR();
+                    break;
+                # endregion
+
+                # region Gate to the AEther
+                case "Gate to the AEther":
+                    mcn = new GatetotheAEtherMR();
+                    break;
+                # endregion
+
+                # region Gilded Lotus
+                case "Gilded Lotus":
+                    mcn = new GildedLotusMR();
+                    break;
+                # endregion
+
+                # region Glimmervoid
+                case "Glimmervoid":
+                    mcn = new GlimmervoidMR();
+                    break;
+                # endregion
+
+                # region Glissa Sunseeker
+                case "Glissa Sunseeker":
+                    mcn = new GlissaSunseekerMR();
+                    break;
+                # endregion
+
+                # region Goblin Charbelcher
+                case "Goblin Charbelcher":
+                    mcn = new GoblinCharbelcherMR();
+                    break;
+                # endregion
+
+                # region Goblin Dirigible
+                case "Goblin Dirigible":
+                    mcn = new GoblinDirigibleMR();
+                    break;
+                # endregion
+
+                # region Goblin Replica
+                case "Goblin Replica":
+                    mcn = new GoblinReplicaMR();
+                    break;
+                # endregion
+
+                # region Goblin Striker
+                case "Goblin Striker":
+                    mcn = new GoblinStrikerMR();
+                    break;
+                # endregion
+
+                # region Goblin War Wagon
+                case "Goblin War Wagon":
+                    mcn = new GoblinWarWagonMR();
+                    break;
+                # endregion
+
+                # region Gold Myr
+                case "Gold Myr":
+                    mcn = new GoldMyrMR();
+                    break;
+                # endregion
+
+                # region Golem-Skin Gauntlets
+                case "Golem-Skin Gauntlets":
+                    mcn = new GolemSkinGauntletsMR();
+                    break;
+                # endregion
+
+                # region Grab the Reins
+                case "Grab the Reins":
+                    mcn = new GrabtheReinsMR();
+                    break;
+                # endregion
+
+                # region Granite Shard
+                case "Granite Shard":
+                    mcn = new GraniteShardMR();
+                    break;
+                # endregion
+
+                # region Great Furnace
+                case "Great Furnace":
+                    mcn = new GreatFurnaceMR();
+                    break;
+                # endregion
+
+                # region Grid Monitor
+                case "Grid Monitor":
+                    mcn = new GridMonitorMR();
+                    break;
+                # endregion
+
+                # region Grim Reminder
+                case "Grim Reminder":
+                    mcn = new GrimReminderMR();
+                    break;
+                # endregion
+
+                # region Groffskithur
+                case "Groffskithur":
+                    mcn = new GroffskithurMR();
+                    break;
+                # endregion
+
+                # region Heartwood Shard
+                case "Heartwood Shard":
+                    mcn = new HeartwoodShardMR();
+                    break;
+                # endregion
+
+                # region Hematite Golem
+                case "Hematite Golem":
+                    mcn = new HematiteGolemMR();
+                    break;
+                # endregion
+
+                # region Hum of the Radix
+                case "Hum of the Radix":
+                    mcn = new HumoftheRadixMR();
+                    break;
+                # endregion
+
+                //# region Icy Manipulator
+                //case "Icy Manipulator":
+                //mcn = new IcyManipulatorMR();
+                //break;
+                //# endregion
+
+                # region Incite War
+                case "Incite War":
+                    mcn = new InciteWarMR();
+                    break;
+                # endregion
+
+                # region Inertia Bubble
+                case "Inertia Bubble":
+                    mcn = new InertiaBubbleMR();
+                    break;
+                # endregion
+
+                # region Iron Myr
+                case "Iron Myr":
+                    mcn = new IronMyrMR();
+                    break;
+                # endregion
+
+                # region Irradiate
+                case "Irradiate":
+                    mcn = new IrradiateMR();
+                    break;
+                # endregion
+
+                //# region Island 
+                //case "Island ":
+                //mcn = new IslandMR();
+                //break;
+                //# endregion
+
+                //# region Island 
+                //case "Island ":
+                //mcn = new IslandMR();
+                //break;
+                //# endregion
+
+                //# region Island 
+                //case "Island ":
+                //mcn = new IslandMR();
+                //break;
+                //# endregion
+
+                //# region Island 
+                //case "Island ":
+                //mcn = new IslandMR();
+                //break;
+                //# endregion
+
+                # region Isochron Scepter
+                case "Isochron Scepter":
+                    mcn = new IsochronScepterMR();
+                    break;
+                # endregion
+
+                # region Jinxed Choker
+                case "Jinxed Choker":
+                    mcn = new JinxedChokerMR();
+                    break;
+                # endregion
+
+                # region Journey of Discovery
+                case "Journey of Discovery":
+                    mcn = new JourneyofDiscoveryMR();
+                    break;
+                # endregion
+
+                # region Krark-Clan Grunt
+                case "Krark-Clan Grunt":
+                    mcn = new KrarkClanGruntMR();
+                    break;
+                # endregion
+
+                # region Krark-Clan Shaman
+                case "Krark-Clan Shaman":
+                    mcn = new KrarkClanShamanMR();
+                    break;
+                # endregion
+
+                # region Krark's Thumb
+                case "Krark's Thumb":
+                    mcn = new KrarksThumbMR();
+                    break;
+                # endregion
+
+                # region Leaden Myr
+                case "Leaden Myr":
+                    mcn = new LeadenMyrMR();
+                    break;
+                # endregion
+
+                # region Leonin Abunas
+                case "Leonin Abunas":
+                    mcn = new LeoninAbunasMR();
+                    break;
+                # endregion
+
+                # region Leonin Bladetrap
+                case "Leonin Bladetrap":
+                    mcn = new LeoninBladetrapMR();
+                    break;
+                # endregion
+
+                # region Leonin Den-Guard
+                case "Leonin Den-Guard":
+                    mcn = new LeoninDenGuardMR();
+                    break;
+                # endregion
+
+                # region Leonin Elder
+                case "Leonin Elder":
+                    mcn = new LeoninElderMR();
+                    break;
+                # endregion
+
+                # region Leonin Scimitar
+                case "Leonin Scimitar":
+                    mcn = new LeoninScimitarMR();
+                    break;
+                # endregion
+
+                # region Leonin Skyhunter
+                case "Leonin Skyhunter":
+                    mcn = new LeoninSkyhunterMR();
+                    break;
+                # endregion
+
+                # region Leonin Sun Standard
+                case "Leonin Sun Standard":
+                    mcn = new LeoninSunStandardMR();
+                    break;
+                # endregion
+
+                # region Leveler
+                case "Leveler":
+                    mcn = new LevelerMR();
+                    break;
+                # endregion
+
+                # region Liar's Pendulum
+                case "Liar's Pendulum":
+                    mcn = new LiarsPendulumMR();
+                    break;
+                # endregion
+
+                # region Lifespark Spellbomb
+                case "Lifespark Spellbomb":
+                    mcn = new LifesparkSpellbombMR();
+                    break;
+                # endregion
+
+                # region Lightning Coils
+                case "Lightning Coils":
+                    mcn = new LightningCoilsMR();
+                    break;
+                # endregion
+
+                # region Lightning Greaves
+                case "Lightning Greaves":
+                    mcn = new LightningGreavesMR();
+                    break;
+                # endregion
+
+                # region Living Hive
+                case "Living Hive":
+                    mcn = new LivingHiveMR();
+                    break;
+                # endregion
+
+                # region Lodestone Myr
+                case "Lodestone Myr":
+                    mcn = new LodestoneMyrMR();
+                    break;
+                # endregion
+
+                # region Looming Hoverguard
+                case "Looming Hoverguard":
+                    mcn = new LoomingHoverguardMR();
+                    break;
+                # endregion
+
+                # region Loxodon Mender
+                case "Loxodon Mender":
+                    mcn = new LoxodonMenderMR();
+                    break;
+                # endregion
+
+                # region Loxodon Peacekeeper
+                case "Loxodon Peacekeeper":
+                    mcn = new LoxodonPeacekeeperMR();
+                    break;
+                # endregion
+
+                # region Loxodon Punisher
+                case "Loxodon Punisher":
+                    mcn = new LoxodonPunisherMR();
+                    break;
+                # endregion
+
+                # region Loxodon Warhammer
+                case "Loxodon Warhammer":
+                    mcn = new LoxodonWarhammerMR();
+                    break;
+                # endregion
+
+                # region Lumengrid Augur
+                case "Lumengrid Augur":
+                    mcn = new LumengridAugurMR();
+                    break;
+                # endregion
+
+                # region Lumengrid Sentinel
+                case "Lumengrid Sentinel":
+                    mcn = new LumengridSentinelMR();
+                    break;
+                # endregion
+
+                # region Lumengrid Warden
+                case "Lumengrid Warden":
+                    mcn = new LumengridWardenMR();
+                    break;
+                # endregion
+
+                # region Luminous Angel
+                case "Luminous Angel":
+                    mcn = new LuminousAngelMR();
+                    break;
+                # endregion
+
+                # region Malachite Golem
+                case "Malachite Golem":
+                    mcn = new MalachiteGolemMR();
+                    break;
+                # endregion
+
+                # region March of the Machines
+                case "March of the Machines":
+                    mcn = new MarchoftheMachinesMR();
+                    break;
+                # endregion
+
+                # region Mask of Memory
+                case "Mask of Memory":
+                    mcn = new MaskofMemoryMR();
+                    break;
+                # endregion
+
+                # region Mass Hysteria
+                case "Mass Hysteria":
+                    mcn = new MassHysteriaMR();
+                    break;
+                # endregion
+
+                # region Megatog
+                case "Megatog":
+                    mcn = new MegatogMR();
+                    break;
+                # endregion
+
+                # region Mesmeric Orb
+                case "Mesmeric Orb":
+                    mcn = new MesmericOrbMR();
+                    break;
+                # endregion
+
+                # region Mind's Eye
+                case "Mind's Eye":
+                    mcn = new MindsEyeMR();
+                    break;
+                # endregion
+
+                # region Mindslaver
+                case "Mindslaver":
+                    mcn = new MindslaverMR();
+                    break;
+                # endregion
+
+                # region Mindstorm Crown
+                case "Mindstorm Crown":
+                    mcn = new MindstormCrownMR();
+                    break;
+                # endregion
+
+                # region Mirror Golem
+                case "Mirror Golem":
+                    mcn = new MirrorGolemMR();
+                    break;
+                # endregion
+
+                # region Molder Slug
+                case "Molder Slug":
+                    mcn = new MolderSlugMR();
+                    break;
+                # endregion
+
+                # region Molten Rain
+                case "Molten Rain":
+                    mcn = new MoltenRainMR();
+                    break;
+                # endregion
+
+                # region Moriok Scavenger
+                case "Moriok Scavenger":
+                    mcn = new MoriokScavengerMR();
+                    break;
+                # endregion
+
+                //# region Mountain 
+                //case "Mountain ":
+                //mcn = new MountainMR();
+                //break;
+                //# endregion
+
+                //# region Mountain 
+                //case "Mountain ":
+                //mcn = new MountainMR();
+                //break;
+                //# endregion
+
+                //# region Mountain 
+                //case "Mountain ":
+                //mcn = new MountainMR();
+                //break;
+                //# endregion
+
+                //# region Mountain 
+                //case "Mountain ":
+                //mcn = new MountainMR();
+                //break;
+                //# endregion
+
+                # region Mourner's Shield
+                case "Mourner's Shield":
+                    mcn = new MournersShieldMR();
+                    break;
+                # endregion
+
+                # region Myr Adapter
+                case "Myr Adapter":
+                    mcn = new MyrAdapterMR();
+                    break;
+                # endregion
+
+                # region Myr Enforcer
+                case "Myr Enforcer":
+                    mcn = new MyrEnforcerMR();
+                    break;
+                # endregion
+
+                # region Myr Incubator
+                case "Myr Incubator":
+                    mcn = new MyrIncubatorMR();
+                    break;
+                # endregion
+
+                # region Myr Mindservant
+                case "Myr Mindservant":
+                    mcn = new MyrMindservantMR();
+                    break;
+                # endregion
+
+                # region Myr Prototype
+                case "Myr Prototype":
+                    mcn = new MyrPrototypeMR();
+                    break;
+                # endregion
+
+                # region Myr Retriever
+                case "Myr Retriever":
+                    mcn = new MyrRetrieverMR();
+                    break;
+                # endregion
+
+                # region Necrogen Mists
+                case "Necrogen Mists":
+                    mcn = new NecrogenMistsMR();
+                    break;
+                # endregion
+
+                # region Necrogen Spellbomb
+                case "Necrogen Spellbomb":
+                    mcn = new NecrogenSpellbombMR();
+                    break;
+                # endregion
+
+                # region Needlebug
+                case "Needlebug":
+                    mcn = new NeedlebugMR();
+                    break;
+                # endregion
+
+                # region Neurok Familiar
+                case "Neurok Familiar":
+                    mcn = new NeurokFamiliarMR();
+                    break;
+                # endregion
+
+                # region Neurok Hoversail
+                case "Neurok Hoversail":
+                    mcn = new NeurokHoversailMR();
+                    break;
+                # endregion
+
+                # region Neurok Spy
+                case "Neurok Spy":
+                    mcn = new NeurokSpyMR();
+                    break;
+                # endregion
+
+                # region Nightmare Lash
+                case "Nightmare Lash":
+                    mcn = new NightmareLashMR();
+                    break;
+                # endregion
+
+                # region Nim Devourer
+                case "Nim Devourer":
+                    mcn = new NimDevourerMR();
+                    break;
+                # endregion
+
+                # region Nim Lasher
+                case "Nim Lasher":
+                    mcn = new NimLasherMR();
+                    break;
+                # endregion
+
+                # region Nim Replica
+                case "Nim Replica":
+                    mcn = new NimReplicaMR();
+                    break;
+                # endregion
+
+                # region Nim Shambler
+                case "Nim Shambler":
+                    mcn = new NimShamblerMR();
+                    break;
+                # endregion
+
+                # region Nim Shrieker
+                case "Nim Shrieker":
+                    mcn = new NimShriekerMR();
+                    break;
+                # endregion
+
+                # region Nuisance Engine
+                case "Nuisance Engine":
+                    mcn = new NuisanceEngineMR();
+                    break;
+                # endregion
+
+                # region Oblivion Stone
+                case "Oblivion Stone":
+                    mcn = new OblivionStoneMR();
+                    break;
+                # endregion
+
+                # region Ogre Leadfoot
+                case "Ogre Leadfoot":
+                    mcn = new OgreLeadfootMR();
+                    break;
+                # endregion
+
+                # region Omega Myr
+                case "Omega Myr":
+                    mcn = new OmegaMyrMR();
+                    break;
+                # endregion
+
+                # region One Dozen Eyes
+                case "One Dozen Eyes":
+                    mcn = new OneDozenEyesMR();
+                    break;
+                # endregion
+
+                # region Ornithopter
+                case "Ornithopter":
+                    mcn = new OrnithopterMR();
+                    break;
+                # endregion
+
+                # region Override
+                case "Override":
+                    mcn = new OverrideMR();
+                    break;
+                # endregion
+
+                # region Pearl Shard
+                case "Pearl Shard":
+                    mcn = new PearlShardMR();
+                    break;
+                # endregion
+
+                # region Pentavus
+                case "Pentavus":
+                    mcn = new PentavusMR();
+                    break;
+                # endregion
+
+                # region Pewter Golem
+                case "Pewter Golem":
+                    mcn = new PewterGolemMR();
+                    break;
+                # endregion
+
+                //# region Plains 
+                //case "Plains ":
+                //mcn = new PlainsMR();
+                //break;
+                //# endregion
+
+                //# region Plains 
+                //case "Plains ":
+                //mcn = new PlainsMR();
+                //break;
+                //# endregion
+
+                //# region Plains 
+                //case "Plains ":
+                //mcn = new PlainsMR();
+                //break;
+                //# endregion
+
+                //# region Plains 
+                //case "Plains ":
+                //mcn = new PlainsMR();
+                //break;
+                //# endregion
+
+                # region Plated Slagwurm
+                case "Plated Slagwurm":
+                    mcn = new PlatedSlagwurmMR();
+                    break;
+                # endregion
+
+                # region Platinum Angel
+                case "Platinum Angel":
+                    mcn = new PlatinumAngelMR();
+                    break;
+                # endregion
+
+                # region Power Conduit
+                case "Power Conduit":
+                    mcn = new PowerConduitMR();
+                    break;
+                # endregion
+
+                # region Predator's Strike
+                case "Predator's Strike":
+                    mcn = new PredatorsStrikeMR();
+                    break;
+                # endregion
+
+                # region Promise of Power
+                case "Promise of Power":
+                    mcn = new PromiseofPowerMR();
+                    break;
+                # endregion
+
+                # region Proteus Staff
+                case "Proteus Staff":
+                    mcn = new ProteusStaffMR();
+                    break;
+                # endregion
+
+                # region Psychic Membrane
+                case "Psychic Membrane":
+                    mcn = new PsychicMembraneMR();
+                    break;
+                # endregion
+
+                # region Psychogenic Probe
+                case "Psychogenic Probe":
+                    mcn = new PsychogenicProbeMR();
+                    break;
+                # endregion
+
+                # region Pyrite Spellbomb
+                case "Pyrite Spellbomb":
+                    mcn = new PyriteSpellbombMR();
+                    break;
+                # endregion
+
+                # region Quicksilver Elemental
+                case "Quicksilver Elemental":
+                    mcn = new QuicksilverElementalMR();
+                    break;
+                # endregion
+
+                # region Quicksilver Fountain
+                case "Quicksilver Fountain":
+                    mcn = new QuicksilverFountainMR();
+                    break;
+                # endregion
+
+                # region Raise the Alarm
+                case "Raise the Alarm":
+                    mcn = new RaisetheAlarmMR();
+                    break;
+                # endregion
+
+                # region Razor Barrier
+                case "Razor Barrier":
+                    mcn = new RazorBarrierMR();
+                    break;
+                # endregion
+
+                # region Regress
+                case "Regress":
+                    mcn = new RegressMR();
+                    break;
+                # endregion
+
+                # region Reiver Demon
+                case "Reiver Demon":
+                    mcn = new ReiverDemonMR();
+                    break;
+                # endregion
+
+                # region Relic Bane
+                case "Relic Bane":
+                    mcn = new RelicBaneMR();
+                    break;
+                # endregion
+
+                # region Roar of the Kha
+                case "Roar of the Kha":
+                    mcn = new RoaroftheKhaMR();
+                    break;
+                # endregion
+
+                # region Rule of Law
+                case "Rule of Law":
+                    mcn = new RuleofLawMR();
+                    break;
+                # endregion
+
+                # region Rust Elemental
+                case "Rust Elemental":
+                    mcn = new RustElementalMR();
+                    break;
+                # endregion
+
+                # region Rustmouth Ogre
+                case "Rustmouth Ogre":
+                    mcn = new RustmouthOgreMR();
+                    break;
+                # endregion
+
+                # region Rustspore Ram
+                case "Rustspore Ram":
+                    mcn = new RustsporeRamMR();
+                    break;
+                # endregion
+
+                # region Scale of Chiss-Goria
+                case "Scale of Chiss-Goria":
+                    mcn = new ScaleofChissGoriaMR();
+                    break;
+                # endregion
+
+                # region Scrabbling Claws
+                case "Scrabbling Claws":
+                    mcn = new ScrabblingClawsMR();
+                    break;
+                # endregion
+
+                # region Sculpting Steel
+                case "Sculpting Steel":
+                    mcn = new SculptingSteelMR();
+                    break;
+                # endregion
+
+                # region Scythe of the Wretched
+                case "Scythe of the Wretched":
+                    mcn = new ScytheoftheWretchedMR();
+                    break;
+                # endregion
+
+                # region Seat of the Synod
+                case "Seat of the Synod":
+                    mcn = new SeatoftheSynodMR();
+                    break;
+                # endregion
+
+                # region Second Sunrise
+                case "Second Sunrise":
+                    mcn = new SecondSunriseMR();
+                    break;
+                # endregion
+
+                # region Seething Song
+                case "Seething Song":
+                    mcn = new SeethingSongMR();
+                    break;
+                # endregion
+
+                # region Serum Tank
+                case "Serum Tank":
+                    mcn = new SerumTankMR();
+                    break;
+                # endregion
+
+                # region Shared Fate
+                case "Shared Fate":
+                    mcn = new SharedFateMR();
+                    break;
+                # endregion
+
+                //# region Shatter
+                //case "Shatter":
+                //mcn = new ShatterMR();
+                //break;
+                //# endregion
+
+                # region Shrapnel Blast
+                case "Shrapnel Blast":
+                    mcn = new ShrapnelBlastMR();
+                    break;
+                # endregion
+
+                # region Silver Myr
+                case "Silver Myr":
+                    mcn = new SilverMyrMR();
+                    break;
+                # endregion
+
+                # region Skeleton Shard
+                case "Skeleton Shard":
+                    mcn = new SkeletonShardMR();
+                    break;
+                # endregion
+
+                # region Skyhunter Cub
+                case "Skyhunter Cub":
+                    mcn = new SkyhunterCubMR();
+                    break;
+                # endregion
+
+                # region Skyhunter Patrol
+                case "Skyhunter Patrol":
+                    mcn = new SkyhunterPatrolMR();
+                    break;
+                # endregion
+
+                # region Slagwurm Armor
+                case "Slagwurm Armor":
+                    mcn = new SlagwurmArmorMR();
+                    break;
+                # endregion
+
+                # region Slith Ascendant
+                case "Slith Ascendant":
+                    mcn = new SlithAscendantMR();
+                    break;
+                # endregion
+
+                # region Slith Bloodletter
+                case "Slith Bloodletter":
+                    mcn = new SlithBloodletterMR();
+                    break;
+                # endregion
+
+                # region Slith Firewalker
+                case "Slith Firewalker":
+                    mcn = new SlithFirewalkerMR();
+                    break;
+                # endregion
+
+                # region Slith Predator
+                case "Slith Predator":
+                    mcn = new SlithPredatorMR();
+                    break;
+                # endregion
+
+                # region Slith Strider
+                case "Slith Strider":
+                    mcn = new SlithStriderMR();
+                    break;
+                # endregion
+
+                # region Solar Tide
+                case "Solar Tide":
+                    mcn = new SolarTideMR();
+                    break;
+                # endregion
+
+                # region Soldier Replica
+                case "Soldier Replica":
+                    mcn = new SoldierReplicaMR();
+                    break;
+                # endregion
+
+                # region Solemn Simulacrum
+                case "Solemn Simulacrum":
+                    mcn = new SolemnSimulacrumMR();
+                    break;
+                # endregion
+
+                # region Somber Hoverguard
+                case "Somber Hoverguard":
+                    mcn = new SomberHoverguardMR();
+                    break;
+                # endregion
+
+                # region Soul Foundry
+                case "Soul Foundry":
+                    mcn = new SoulFoundryMR();
+                    break;
+                # endregion
+
+                # region Soul Nova
+                case "Soul Nova":
+                    mcn = new SoulNovaMR();
+                    break;
+                # endregion
+
+                # region Spellweaver Helix
+                case "Spellweaver Helix":
+                    mcn = new SpellweaverHelixMR();
+                    break;
+                # endregion
+
+                # region Sphere of Purity
+                case "Sphere of Purity":
+                    mcn = new SphereofPurityMR();
+                    break;
+                # endregion
+
+                # region Spikeshot Goblin
+                case "Spikeshot Goblin":
+                    mcn = new SpikeshotGoblinMR();
+                    break;
+                # endregion
+
+                # region Spoils of the Vault
+                case "Spoils of the Vault":
+                    mcn = new SpoilsoftheVaultMR();
+                    break;
+                # endregion
+
+                # region Stalking Stones
+                case "Stalking Stones":
+                    mcn = new StalkingStonesMR();
+                    break;
+                # endregion
+
+                # region Steel Wall
+                case "Steel Wall":
+                    mcn = new SteelWallMR();
+                    break;
+                # endregion
+
+                # region Sun Droplet
+                case "Sun Droplet":
+                    mcn = new SunDropletMR();
+                    break;
+                # endregion
+
+                # region Sunbeam Spellbomb
+                case "Sunbeam Spellbomb":
+                    mcn = new SunbeamSpellbombMR();
+                    break;
+                # endregion
+
+                //# region Swamp 
+                //case "Swamp ":
+                //mcn = new SwampMR();
+                //break;
+                //# endregion
+
+                //# region Swamp 
+                //case "Swamp ":
+                //mcn = new SwampMR();
+                //break;
+                //# endregion
+
+                //# region Swamp 
+                //case "Swamp ":
+                //mcn = new SwampMR();
+                //break;
+                //# endregion
+
+                //# region Swamp 
+                //case "Swamp ":
+                //mcn = new SwampMR();
+                //break;
+                //# endregion
+
+                # region Sword of Kaldra
+                case "Sword of Kaldra":
+                    mcn = new SwordofKaldraMR();
+                    break;
+                # endregion
+
+                # region Sylvan Scrying
+                case "Sylvan Scrying":
+                    mcn = new SylvanScryingMR();
+                    break;
+                # endregion
+
+                # region Synod Sanctum
+                case "Synod Sanctum":
+                    mcn = new SynodSanctumMR();
+                    break;
+                # endregion
+
+                # region Taj-Nar Swordsmith
+                case "Taj-Nar Swordsmith":
+                    mcn = new TajNarSwordsmithMR();
+                    break;
+                # endregion
+
+                # region Talisman of Dominance
+                case "Talisman of Dominance":
+                    mcn = new TalismanofDominanceMR();
+                    break;
+                # endregion
+
+                # region Talisman of Impulse
+                case "Talisman of Impulse":
+                    mcn = new TalismanofImpulseMR();
+                    break;
+                # endregion
+
+                # region Talisman of Indulgence
+                case "Talisman of Indulgence":
+                    mcn = new TalismanofIndulgenceMR();
+                    break;
+                # endregion
+
+                # region Talisman of Progress
+                case "Talisman of Progress":
+                    mcn = new TalismanofProgressMR();
+                    break;
+                # endregion
+
+                # region Talisman of Unity
+                case "Talisman of Unity":
+                    mcn = new TalismanofUnityMR();
+                    break;
+                # endregion
+
+                # region Tanglebloom
+                case "Tanglebloom":
+                    mcn = new TanglebloomMR();
+                    break;
+                # endregion
+
+                # region Tangleroot
+                case "Tangleroot":
+                    mcn = new TanglerootMR();
+                    break;
+                # endregion
+
+                # region Tel-Jilad Archers
+                case "Tel-Jilad Archers":
+                    mcn = new TelJiladArchersMR();
+                    break;
+                # endregion
+
+                # region Tel-Jilad Chosen
+                case "Tel-Jilad Chosen":
+                    mcn = new TelJiladChosenMR();
+                    break;
+                # endregion
+
+                # region Tel-Jilad Exile
+                case "Tel-Jilad Exile":
+                    mcn = new TelJiladExileMR();
+                    break;
+                # endregion
+
+                # region Tel-Jilad Stylus
+                case "Tel-Jilad Stylus":
+                    mcn = new TelJiladStylusMR();
+                    break;
+                # endregion
+
+                # region Tempest of Light
+                case "Tempest of Light":
+                    mcn = new TempestofLightMR();
+                    break;
+                # endregion
+
+                # region Temporal Cascade
+                case "Temporal Cascade":
+                    mcn = new TemporalCascadeMR();
+                    break;
+                # endregion
+
+                //# region Terror
+                //case "Terror":
+                //mcn = new TerrorMR();
+                //break;
+                //# endregion
+
+                # region Thirst for Knowledge
+                case "Thirst for Knowledge":
+                    mcn = new ThirstforKnowledgeMR();
+                    break;
+                # endregion
+
+                # region Thought Prison
+                case "Thought Prison":
+                    mcn = new ThoughtPrisonMR();
+                    break;
+                # endregion
+
+                # region Thoughtcast
+                case "Thoughtcast":
+                    mcn = new ThoughtcastMR();
+                    break;
+                # endregion
+
+                # region Timesifter
+                case "Timesifter":
+                    mcn = new TimesifterMR();
+                    break;
+                # endregion
+
+                # region Titanium Golem
+                case "Titanium Golem":
+                    mcn = new TitaniumGolemMR();
+                    break;
+                # endregion
+
+                # region Tooth and Nail
+                case "Tooth and Nail":
+                    mcn = new ToothandNailMR();
+                    break;
+                # endregion
+
+                # region Tooth of Chiss-Goria
+                case "Tooth of Chiss-Goria":
+                    mcn = new ToothofChissGoriaMR();
+                    break;
+                # endregion
+
+                # region Tower of Champions
+                case "Tower of Champions":
+                    mcn = new TowerofChampionsMR();
+                    break;
+                # endregion
+
+                # region Tower of Eons
+                case "Tower of Eons":
+                    mcn = new TowerofEonsMR();
+                    break;
+                # endregion
+
+                # region Tower of Fortunes
+                case "Tower of Fortunes":
+                    mcn = new TowerofFortunesMR();
+                    break;
+                # endregion
+
+                # region Tower of Murmurs
+                case "Tower of Murmurs":
+                    mcn = new TowerofMurmursMR();
+                    break;
+                # endregion
+
+                # region Trash for Treasure
+                case "Trash for Treasure":
+                    mcn = new TrashforTreasureMR();
+                    break;
+                # endregion
+
+                # region Tree of Tales
+                case "Tree of Tales":
+                    mcn = new TreeofTalesMR();
+                    break;
+                # endregion
+
+                # region Triskelion
+                case "Triskelion":
+                    mcn = new TriskelionMR();
+                    break;
+                # endregion
+
+                # region Troll Ascetic
+                case "Troll Ascetic":
+                    mcn = new TrollAsceticMR();
+                    break;
+                # endregion
+
+                # region Trolls of Tel-Jilad
+                case "Trolls of Tel-Jilad":
+                    mcn = new TrollsofTelJiladMR();
+                    break;
+                # endregion
+
+                # region Turn to Dust
+                case "Turn to Dust":
+                    mcn = new TurntoDustMR();
+                    break;
+                # endregion
+
+                # region Vault of Whispers
+                case "Vault of Whispers":
+                    mcn = new VaultofWhispersMR();
+                    break;
+                # endregion
+
+                # region Vedalken Archmage
+                case "Vedalken Archmage":
+                    mcn = new VedalkenArchmageMR();
+                    break;
+                # endregion
+
+                # region Vermiculos
+                case "Vermiculos":
+                    mcn = new VermiculosMR();
+                    break;
+                # endregion
+
+                # region Viridian Joiner
+                case "Viridian Joiner":
+                    mcn = new ViridianJoinerMR();
+                    break;
+                # endregion
+
+                # region Viridian Longbow
+                case "Viridian Longbow":
+                    mcn = new ViridianLongbowMR();
+                    break;
+                # endregion
+
+                # region Viridian Shaman
+                case "Viridian Shaman":
+                    mcn = new ViridianShamanMR();
+                    break;
+                # endregion
+
+                # region Vorrac Battlehorns
+                case "Vorrac Battlehorns":
+                    mcn = new VorracBattlehornsMR();
+                    break;
+                # endregion
+
+                # region Vulshok Battlegear
+                case "Vulshok Battlegear":
+                    mcn = new VulshokBattlegearMR();
+                    break;
+                # endregion
+
+                # region Vulshok Battlemaster
+                case "Vulshok Battlemaster":
+                    mcn = new VulshokBattlemasterMR();
+                    break;
+                # endregion
+
+                # region Vulshok Berserker
+                case "Vulshok Berserker":
+                    mcn = new VulshokBerserkerMR();
+                    break;
+                # endregion
+
+                # region Vulshok Gauntlets
+                case "Vulshok Gauntlets":
+                    mcn = new VulshokGauntletsMR();
+                    break;
+                # endregion
+
+                # region Wail of the Nim
+                case "Wail of the Nim":
+                    mcn = new WailoftheNimMR();
+                    break;
+                # endregion
+
+                # region Wall of Blood
+                case "Wall of Blood":
+                    mcn = new WallofBloodMR();
+                    break;
+                # endregion
+
+                # region Wanderguard Sentry
+                case "Wanderguard Sentry":
+                    mcn = new WanderguardSentryMR();
+                    break;
+                # endregion
+
+                # region War Elemental
+                case "War Elemental":
+                    mcn = new WarElementalMR();
+                    break;
+                # endregion
+
+                # region Welding Jar
+                case "Welding Jar":
+                    mcn = new WeldingJarMR();
+                    break;
+                # endregion
+
+                # region Wizard Replica
+                case "Wizard Replica":
+                    mcn = new WizardReplicaMR();
+                    break;
+                # endregion
+
+                # region Woebearer
+                case "Woebearer":
+                    mcn = new WoebearerMR();
+                    break;
+                # endregion
+
+                # region Worldslayer
+                case "Worldslayer":
+                    mcn = new WorldslayerMR();
+                    break;
+                # endregion
+
+                # region Wrench Mind
+                case "Wrench Mind":
+                    mcn = new WrenchMindMR();
+                    break;
+                # endregion
+
+                # region Wurmskin Forger
+                case "Wurmskin Forger":
+                    mcn = new WurmskinForgerMR();
+                    break;
+                # endregion
+
+                # region Yotian Soldier
+                case "Yotian Soldier":
+                    mcn = new YotianSoldierMR();
+                    break;
+                # endregion
 
 
                 # endregion
 
                 # region Innistrad
+
+                # endregion
+
+                # region Dark Ascension
+                # region Afflicted Deserter/Werewolf Ransacker
+                case "Afflicted Deserter/Werewolf Ransacker":
+                    mcn = new AfflictedDeserterWerewolfRansackerDKA();
+                    break;
+                # endregion
+
+                # region Alpha Brawl
+                case "Alpha Brawl":
+                    mcn = new AlphaBrawlDKA();
+                    break;
+                # endregion
+
+                # region Altar of the Lost
+                case "Altar of the Lost":
+                    mcn = new AltaroftheLostDKA();
+                    break;
+                # endregion
+
+                # region Archangel's Light
+                case "Archangel's Light":
+                    mcn = new ArchangelsLightDKA();
+                    break;
+                # endregion
+
+                # region Artful Dodge
+                case "Artful Dodge":
+                    mcn = new ArtfulDodgeDKA();
+                    break;
+                # endregion
+
+                # region Avacyn's Collar
+                case "Avacyn's Collar":
+                    mcn = new AvacynsCollarDKA();
+                    break;
+                # endregion
+
+                # region Bar the Door
+                case "Bar the Door":
+                    mcn = new BartheDoorDKA();
+                    break;
+                # endregion
+
+                # region Beguiler of Wills
+                case "Beguiler of Wills":
+                    mcn = new BeguilerofWillsDKA();
+                    break;
+                # endregion
+
+                # region Black Cat
+                case "Black Cat":
+                    mcn = new BlackCatDKA();
+                    break;
+                # endregion
+
+                # region Blood Feud
+                case "Blood Feud":
+                    mcn = new BloodFeudDKA();
+                    break;
+                # endregion
+
+                # region Bone to Ash
+                case "Bone to Ash":
+                    mcn = new BonetoAshDKA();
+                    break;
+                # endregion
+
+                # region Break of Day
+                case "Break of Day":
+                    mcn = new BreakofDayDKA();
+                    break;
+                # endregion
+
+                # region Briarpack Alpha
+                case "Briarpack Alpha":
+                    mcn = new BriarpackAlphaDKA();
+                    break;
+                # endregion
+
+                # region Burden of Guilt
+                case "Burden of Guilt":
+                    mcn = new BurdenofGuiltDKA();
+                    break;
+                # endregion
+
+                # region Burning Oil
+                case "Burning Oil":
+                    mcn = new BurningOilDKA();
+                    break;
+                # endregion
+
+                # region Call to the Kindred
+                case "Call to the Kindred":
+                    mcn = new CalltotheKindredDKA();
+                    break;
+                # endregion
+
+                # region Chalice of Life/Chalice of Death
+                case "Chalice of Life/Chalice of Death":
+                    mcn = new ChaliceofLifeChaliceofDeathDKA();
+                    break;
+                # endregion
+
+                # region Chant of the Skifsang
+                case "Chant of the Skifsang":
+                    mcn = new ChantoftheSkifsangDKA();
+                    break;
+                # endregion
+
+                # region Chill of Foreboding
+                case "Chill of Foreboding":
+                    mcn = new ChillofForebodingDKA();
+                    break;
+                # endregion
+
+                # region Chosen of Markov/Markov's Servant
+                case "Chosen of Markov/Markov's Servant":
+                    mcn = new ChosenofMarkovMarkovsServantDKA();
+                    break;
+                # endregion
+
+                # region Clinging Mists
+                case "Clinging Mists":
+                    mcn = new ClingingMistsDKA();
+                    break;
+                # endregion
+
+                # region Counterlash
+                case "Counterlash":
+                    mcn = new CounterlashDKA();
+                    break;
+                # endregion
+
+                # region Crushing Vines
+                case "Crushing Vines":
+                    mcn = new CrushingVinesDKA();
+                    break;
+                # endregion
+
+                # region Curse of Bloodletting
+                case "Curse of Bloodletting":
+                    mcn = new CurseofBloodlettingDKA();
+                    break;
+                # endregion
+
+                # region Curse of Echoes
+                case "Curse of Echoes":
+                    mcn = new CurseofEchoesDKA();
+                    break;
+                # endregion
+
+                # region Curse of Exhaustion
+                case "Curse of Exhaustion":
+                    mcn = new CurseofExhaustionDKA();
+                    break;
+                # endregion
+
+                # region Curse of Misfortunes
+                case "Curse of Misfortunes":
+                    mcn = new CurseofMisfortunesDKA();
+                    break;
+                # endregion
+
+                # region Curse of Thirst
+                case "Curse of Thirst":
+                    mcn = new CurseofThirstDKA();
+                    break;
+                # endregion
+
+                # region Dawntreader Elk
+                case "Dawntreader Elk":
+                    mcn = new DawntreaderElkDKA();
+                    break;
+                # endregion
+
+                # region Deadly Allure
+                case "Deadly Allure":
+                    mcn = new DeadlyAllureDKA();
+                    break;
+                # endregion
+
+                # region Death's Caress
+                case "Death's Caress":
+                    mcn = new DeathsCaressDKA();
+                    break;
+                # endregion
+
+                # region Deranged Outcast
+                case "Deranged Outcast":
+                    mcn = new DerangedOutcastDKA();
+                    break;
+                # endregion
+
+                # region Diregraf Captain
+                case "Diregraf Captain":
+                    mcn = new DiregrafCaptainDKA();
+                    break;
+                # endregion
+
+                # region Divination
+                case "Divination":
+                    mcn = new DivinationDKA();
+                    break;
+                # endregion
+
+                # region Drogskol Captain
+                case "Drogskol Captain":
+                    mcn = new DrogskolCaptainDKA();
+                    break;
+                # endregion
+
+                # region Drogskol Reaver
+                case "Drogskol Reaver":
+                    mcn = new DrogskolReaverDKA();
+                    break;
+                # endregion
+
+                # region Dungeon Geists
+                case "Dungeon Geists":
+                    mcn = new DungeonGeistsDKA();
+                    break;
+                # endregion
+
+                # region Elbrus, the Binding Blade/Withengar Unbound
+                case "Elbrus, the Binding Blade/Withengar Unbound":
+                    mcn = new ElbrustheBindingBladeWithengarUnboundDKA();
+                    break;
+                # endregion
+
+                # region Elgaud Inquisitor
+                case "Elgaud Inquisitor":
+                    mcn = new ElgaudInquisitorDKA();
+                    break;
+                # endregion
+
+                # region Erdwal Ripper
+                case "Erdwal Ripper":
+                    mcn = new ErdwalRipperDKA();
+                    break;
+                # endregion
+
+                # region Evolving Wilds
+                case "Evolving Wilds":
+                    mcn = new EvolvingWildsDKA();
+                    break;
+                # endregion
+
+                # region Executioner's Hood
+                case "Executioner's Hood":
+                    mcn = new ExecutionersHoodDKA();
+                    break;
+                # endregion
+
+                # region Faithless Looting
+                case "Faithless Looting":
+                    mcn = new FaithlessLootingDKA();
+                    break;
+                # endregion
+
+                # region Faith's Shield
+                case "Faith's Shield":
+                    mcn = new FaithsShieldDKA();
+                    break;
+                # endregion
+
+                # region Falkenrath Aristocrat
+                case "Falkenrath Aristocrat":
+                    mcn = new FalkenrathAristocratDKA();
+                    break;
+                # endregion
+
+                # region Falkenrath Torturer
+                case "Falkenrath Torturer":
+                    mcn = new FalkenrathTorturerDKA();
+                    break;
+                # endregion
+
+                # region Farbog Boneflinger
+                case "Farbog Boneflinger":
+                    mcn = new FarbogBoneflingerDKA();
+                    break;
+                # endregion
+
+                # region Favor of the Woods
+                case "Favor of the Woods":
+                    mcn = new FavoroftheWoodsDKA();
+                    break;
+                # endregion
+
+                # region Feed the Pack
+                case "Feed the Pack":
+                    mcn = new FeedthePackDKA();
+                    break;
+                # endregion
+
+                # region Fiend of the Shadows
+                case "Fiend of the Shadows":
+                    mcn = new FiendoftheShadowsDKA();
+                    break;
+                # endregion
+
+                # region Fires of Undeath
+                case "Fires of Undeath":
+                    mcn = new FiresofUndeathDKA();
+                    break;
+                # endregion
+
+                # region Flayer of the Hatebound
+                case "Flayer of the Hatebound":
+                    mcn = new FlayeroftheHateboundDKA();
+                    break;
+                # endregion
+
+                # region Fling
+                case "Fling":
+                    mcn = new FlingDKA();
+                    break;
+                # endregion
+
+                # region Forge Devil
+                case "Forge Devil":
+                    mcn = new ForgeDevilDKA();
+                    break;
+                # endregion
+
+                # region Gather the Townsfolk
+                case "Gather the Townsfolk":
+                    mcn = new GathertheTownsfolkDKA();
+                    break;
+                # endregion
+
+                # region Gavony Ironwright
+                case "Gavony Ironwright":
+                    mcn = new GavonyIronwrightDKA();
+                    break;
+                # endregion
+
+                # region Geralf's Messenger
+                case "Geralf's Messenger":
+                    mcn = new GeralfsMessengerDKA();
+                    break;
+                # endregion
+
+                # region Geralf's Mindcrusher
+                case "Geralf's Mindcrusher":
+                    mcn = new GeralfsMindcrusherDKA();
+                    break;
+                # endregion
+
+                # region Ghoultree
+                case "Ghoultree":
+                    mcn = new GhoultreeDKA();
+                    break;
+                # endregion
+
+                # region Grafdigger's Cage
+                case "Grafdigger's Cage":
+                    mcn = new GrafdiggersCageDKA();
+                    break;
+                # endregion
+
+                # region Gravecrawler
+                case "Gravecrawler":
+                    mcn = new GravecrawlerDKA();
+                    break;
+                # endregion
+
+                # region Gravepurge
+                case "Gravepurge":
+                    mcn = new GravepurgeDKA();
+                    break;
+                # endregion
+
+                # region Gravetiller Wurm
+                case "Gravetiller Wurm":
+                    mcn = new GravetillerWurmDKA();
+                    break;
+                # endregion
+
+                # region Grim Backwoods
+                case "Grim Backwoods":
+                    mcn = new GrimBackwoodsDKA();
+                    break;
+                # endregion
+
+                # region Grim Flowering
+                case "Grim Flowering":
+                    mcn = new GrimFloweringDKA();
+                    break;
+                # endregion
+
+                # region Griptide
+                case "Griptide":
+                    mcn = new GriptideDKA();
+                    break;
+                # endregion
+
+                # region Gruesome Discovery
+                case "Gruesome Discovery":
+                    mcn = new GruesomeDiscoveryDKA();
+                    break;
+                # endregion
+
+                # region Harrowing Journey
+                case "Harrowing Journey":
+                    mcn = new HarrowingJourneyDKA();
+                    break;
+                # endregion
+
+                # region Haunted Fengraf
+                case "Haunted Fengraf":
+                    mcn = new HauntedFengrafDKA();
+                    break;
+                # endregion
+
+                # region Havengul Lich
+                case "Havengul Lich":
+                    mcn = new HavengulLichDKA();
+                    break;
+                # endregion
+
+                # region Havengul Runebinder
+                case "Havengul Runebinder":
+                    mcn = new HavengulRunebinderDKA();
+                    break;
+                # endregion
+
+                # region Headless Skaab
+                case "Headless Skaab":
+                    mcn = new HeadlessSkaabDKA();
+                    break;
+                # endregion
+
+                # region Heavy Mattock
+                case "Heavy Mattock":
+                    mcn = new HeavyMattockDKA();
+                    break;
+                # endregion
+
+                # region Heckling Fiends
+                case "Heckling Fiends":
+                    mcn = new HecklingFiendsDKA();
+                    break;
+                # endregion
+
+                # region Hellrider
+                case "Hellrider":
+                    mcn = new HellriderDKA();
+                    break;
+                # endregion
+
+                # region Helvault
+                case "Helvault":
+                    mcn = new HelvaultDKA();
+                    break;
+                # endregion
+
+                # region Highborn Ghoul
+                case "Highborn Ghoul":
+                    mcn = new HighbornGhoulDKA();
+                    break;
+                # endregion
+
+                # region Hinterland Hermit/Hinterland Scourge
+                case "Hinterland Hermit/Hinterland Scourge":
+                    mcn = new HinterlandHermitHinterlandScourgeDKA();
+                    break;
+                # endregion
+
+                # region Hollowhenge Beast
+                case "Hollowhenge Beast":
+                    mcn = new HollowhengeBeastDKA();
+                    break;
+                # endregion
+
+                # region Hollowhenge Spirit
+                case "Hollowhenge Spirit":
+                    mcn = new HollowhengeSpiritDKA();
+                    break;
+                # endregion
+
+                # region Hunger of the Howlpack
+                case "Hunger of the Howlpack":
+                    mcn = new HungeroftheHowlpackDKA();
+                    break;
+                # endregion
+
+                # region Huntmaster of the Fells/Ravager of the Fells
+                case "Huntmaster of the Fells/Ravager of the Fells":
+                    mcn = new HuntmasteroftheFellsRavageroftheFellsDKA();
+                    break;
+                # endregion
+
+                # region Immerwolf
+                case "Immerwolf":
+                    mcn = new ImmerwolfDKA();
+                    break;
+                # endregion
+
+                # region Increasing Ambition
+                case "Increasing Ambition":
+                    mcn = new IncreasingAmbitionDKA();
+                    break;
+                # endregion
+
+                # region Increasing Confusion
+                case "Increasing Confusion":
+                    mcn = new IncreasingConfusionDKA();
+                    break;
+                # endregion
+
+                # region Increasing Devotion
+                case "Increasing Devotion":
+                    mcn = new IncreasingDevotionDKA();
+                    break;
+                # endregion
+
+                # region Increasing Savagery
+                case "Increasing Savagery":
+                    mcn = new IncreasingSavageryDKA();
+                    break;
+                # endregion
+
+                # region Increasing Vengeance
+                case "Increasing Vengeance":
+                    mcn = new IncreasingVengeanceDKA();
+                    break;
+                # endregion
+
+                # region Jar of Eyeballs
+                case "Jar of Eyeballs":
+                    mcn = new JarofEyeballsDKA();
+                    break;
+                # endregion
+
+                # region Kessig Recluse
+                case "Kessig Recluse":
+                    mcn = new KessigRecluseDKA();
+                    break;
+                # endregion
+
+                # region Lambholt Elder/Silverpelt Werewolf
+                case "Lambholt Elder/Silverpelt Werewolf":
+                    mcn = new LambholtElderSilverpeltWerewolfDKA();
+                    break;
+                # endregion
+
+                # region Lingering Souls
+                case "Lingering Souls":
+                    mcn = new LingeringSoulsDKA();
+                    break;
+                # endregion
+
+                # region Lost in the Woods
+                case "Lost in the Woods":
+                    mcn = new LostintheWoodsDKA();
+                    break;
+                # endregion
+
+                # region Loyal Cathar/Unhallowed Cathar
+                case "Loyal Cathar/Unhallowed Cathar":
+                    mcn = new LoyalCatharUnhallowedCatharDKA();
+                    break;
+                # endregion
+
+                # region Markov Blademaster
+                case "Markov Blademaster":
+                    mcn = new MarkovBlademasterDKA();
+                    break;
+                # endregion
+
+                # region Markov Warlord
+                case "Markov Warlord":
+                    mcn = new MarkovWarlordDKA();
+                    break;
+                # endregion
+
+                # region Midnight Guard
+                case "Midnight Guard":
+                    mcn = new MidnightGuardDKA();
+                    break;
+                # endregion
+
+                # region Mikaeus, the Unhallowed
+                case "Mikaeus, the Unhallowed":
+                    mcn = new MikaeustheUnhallowedDKA();
+                    break;
+                # endregion
+
+                # region Mondronen Shaman/Tovolar's Magehunter
+                case "Mondronen Shaman/Tovolar's Magehunter":
+                    mcn = new MondronenShamanTovolarsMagehunterDKA();
+                    break;
+                # endregion
+
+                # region Moonveil Dragon
+                case "Moonveil Dragon":
+                    mcn = new MoonveilDragonDKA();
+                    break;
+                # endregion
+
+                # region Mystic Retrieval
+                case "Mystic Retrieval":
+                    mcn = new MysticRetrievalDKA();
+                    break;
+                # endregion
+
+                # region Nearheath Stalker
+                case "Nearheath Stalker":
+                    mcn = new NearheathStalkerDKA();
+                    break;
+                # endregion
+
+                # region Nephalia Seakite
+                case "Nephalia Seakite":
+                    mcn = new NephaliaSeakiteDKA();
+                    break;
+                # endregion
+
+                # region Niblis of the Breath
+                case "Niblis of the Breath":
+                    mcn = new NiblisoftheBreathDKA();
+                    break;
+                # endregion
+
+                # region Niblis of the Mist
+                case "Niblis of the Mist":
+                    mcn = new NiblisoftheMistDKA();
+                    break;
+                # endregion
+
+                # region Niblis of the Urn
+                case "Niblis of the Urn":
+                    mcn = new NiblisoftheUrnDKA();
+                    break;
+                # endregion
+
+                # region Predator Ooze
+                case "Predator Ooze":
+                    mcn = new PredatorOozeDKA();
+                    break;
+                # endregion
+
+                # region Pyreheart Wolf
+                case "Pyreheart Wolf":
+                    mcn = new PyreheartWolfDKA();
+                    break;
+                # endregion
+
+                # region Ravenous Demon/Archdemon of Greed
+                case "Ravenous Demon/Archdemon of Greed":
+                    mcn = new RavenousDemonArchdemonofGreedDKA();
+                    break;
+                # endregion
+
+                # region Ray of Revelation
+                case "Ray of Revelation":
+                    mcn = new RayofRevelationDKA();
+                    break;
+                # endregion
+
+                # region Reap the Seagraf
+                case "Reap the Seagraf":
+                    mcn = new ReaptheSeagrafDKA();
+                    break;
+                # endregion
+
+                # region Relentless Skaabs
+                case "Relentless Skaabs":
+                    mcn = new RelentlessSkaabsDKA();
+                    break;
+                # endregion
+
+                # region Requiem Angel
+                case "Requiem Angel":
+                    mcn = new RequiemAngelDKA();
+                    break;
+                # endregion
+
+                # region Russet Wolves
+                case "Russet Wolves":
+                    mcn = new RussetWolvesDKA();
+                    break;
+                # endregion
+
+                # region Sanctuary Cat
+                case "Sanctuary Cat":
+                    mcn = new SanctuaryCatDKA();
+                    break;
+                # endregion
+
+                # region Saving Grasp
+                case "Saving Grasp":
+                    mcn = new SavingGraspDKA();
+                    break;
+                # endregion
+
+                # region Scorch the Fields
+                case "Scorch the Fields":
+                    mcn = new ScorchtheFieldsDKA();
+                    break;
+                # endregion
+
+                # region Scorned Villager/Moonscarred Werewolf
+                case "Scorned Villager/Moonscarred Werewolf":
+                    mcn = new ScornedVillagerMoonscarredWerewolfDKA();
+                    break;
+                # endregion
+
+                # region Screeching Skaab
+                case "Screeching Skaab":
+                    mcn = new ScreechingSkaabDKA();
+                    break;
+                # endregion
+
+                # region Seance
+                case "Seance":
+                    mcn = new SeanceDKA();
+                    break;
+                # endregion
+
+                # region Secrets of the Dead
+                case "Secrets of the Dead":
+                    mcn = new SecretsoftheDeadDKA();
+                    break;
+                # endregion
+
+                # region Shattered Perception
+                case "Shattered Perception":
+                    mcn = new ShatteredPerceptionDKA();
+                    break;
+                # endregion
+
+                # region Shriekgeist
+                case "Shriekgeist":
+                    mcn = new ShriekgeistDKA();
+                    break;
+                # endregion
+
+                # region Sightless Ghoul
+                case "Sightless Ghoul":
+                    mcn = new SightlessGhoulDKA();
+                    break;
+                # endregion
+
+                # region Silverclaw Griffin
+                case "Silverclaw Griffin":
+                    mcn = new SilverclawGriffinDKA();
+                    break;
+                # endregion
+
+                # region Skillful Lunge
+                case "Skillful Lunge":
+                    mcn = new SkillfulLungeDKA();
+                    break;
+                # endregion
+
+                # region Skirsdag Flayer
+                case "Skirsdag Flayer":
+                    mcn = new SkirsdagFlayerDKA();
+                    break;
+                # endregion
+
+                # region Somberwald Dryad
+                case "Somberwald Dryad":
+                    mcn = new SomberwaldDryadDKA();
+                    break;
+                # endregion
+
+                # region Sorin, Lord of Innistrad
+                case "Sorin, Lord of Innistrad":
+                    mcn = new SorinLordofInnistradDKA();
+                    break;
+                # endregion
+
+                # region Soul Seizer/Ghastly Haunting
+                case "Soul Seizer/Ghastly Haunting":
+                    mcn = new SoulSeizerGhastlyHauntingDKA();
+                    break;
+                # endregion
+
+                # region Spiteful Shadows
+                case "Spiteful Shadows":
+                    mcn = new SpitefulShadowsDKA();
+                    break;
+                # endregion
+
+                # region Stormbound Geist
+                case "Stormbound Geist":
+                    mcn = new StormboundGeistDKA();
+                    break;
+                # endregion
+
+                # region Strangleroot Geist
+                case "Strangleroot Geist":
+                    mcn = new StranglerootGeistDKA();
+                    break;
+                # endregion
+
+                # region Stromkirk Captain
+                case "Stromkirk Captain":
+                    mcn = new StromkirkCaptainDKA();
+                    break;
+                # endregion
+
+                # region Sudden Disappearance
+                case "Sudden Disappearance":
+                    mcn = new SuddenDisappearanceDKA();
+                    break;
+                # endregion
+
+                # region Talons of Falkenrath
+                case "Talons of Falkenrath":
+                    mcn = new TalonsofFalkenrathDKA();
+                    break;
+                # endregion
+
+                # region Thalia, Guardian of Thraben
+                case "Thalia, Guardian of Thraben":
+                    mcn = new ThaliaGuardianofThrabenDKA();
+                    break;
+                # endregion
+
+                # region Thought Scour
+                case "Thought Scour":
+                    mcn = new ThoughtScourDKA();
+                    break;
+                # endregion
+
+                # region Thraben Doomsayer
+                case "Thraben Doomsayer":
+                    mcn = new ThrabenDoomsayerDKA();
+                    break;
+                # endregion
+
+                # region Thraben Heretic
+                case "Thraben Heretic":
+                    mcn = new ThrabenHereticDKA();
+                    break;
+                # endregion
+
+                # region Torch Fiend
+                case "Torch Fiend":
+                    mcn = new TorchFiendDKA();
+                    break;
+                # endregion
+
+                # region Tower Geist
+                case "Tower Geist":
+                    mcn = new TowerGeistDKA();
+                    break;
+                # endregion
+
+                # region Tracker's Instincts
+                case "Tracker's Instincts":
+                    mcn = new TrackersInstinctsDKA();
+                    break;
+                # endregion
+
+                # region Tragic Slip
+                case "Tragic Slip":
+                    mcn = new TragicSlipDKA();
+                    break;
+                # endregion
+
+                # region Ulvenwald Bear
+                case "Ulvenwald Bear":
+                    mcn = new UlvenwaldBearDKA();
+                    break;
+                # endregion
+
+                # region Undying Evil
+                case "Undying Evil":
+                    mcn = new UndyingEvilDKA();
+                    break;
+                # endregion
+
+                # region Vault of the Archangel
+                case "Vault of the Archangel":
+                    mcn = new VaultoftheArchangelDKA();
+                    break;
+                # endregion
+
+                # region Vengeful Vampire
+                case "Vengeful Vampire":
+                    mcn = new VengefulVampireDKA();
+                    break;
+                # endregion
+
+                # region Village Survivors
+                case "Village Survivors":
+                    mcn = new VillageSurvivorsDKA();
+                    break;
+                # endregion
+
+                # region Vorapede
+                case "Vorapede":
+                    mcn = new VorapedeDKA();
+                    break;
+                # endregion
+
+                # region Wakedancer
+                case "Wakedancer":
+                    mcn = new WakedancerDKA();
+                    break;
+                # endregion
+
+                # region Warden of the Wall
+                case "Warden of the Wall":
+                    mcn = new WardenoftheWallDKA();
+                    break;
+                # endregion
+
+                # region Wild Hunger
+                case "Wild Hunger":
+                    mcn = new WildHungerDKA();
+                    break;
+                # endregion
+
+                # region Wolfbitten Captive/Krallenhorde Killer
+                case "Wolfbitten Captive/Krallenhorde Killer":
+                    mcn = new WolfbittenCaptiveKrallenhordeKillerDKA();
+                    break;
+                # endregion
+
+                # region Wolfhunter's Quiver
+                case "Wolfhunter's Quiver":
+                    mcn = new WolfhuntersQuiverDKA();
+                    break;
+                # endregion
+
+                # region Wrack with Madness
+                case "Wrack with Madness":
+                    mcn = new WrackwithMadnessDKA();
+                    break;
+                # endregion
+
+                # region Young Wolf
+                case "Young Wolf":
+                    mcn = new YoungWolfDKA();
+                    break;
+                # endregion
+
+                # region Zombie Apocalypse
+                case "Zombie Apocalypse":
+                    mcn = new ZombieApocalypseDKA();
+                    break;
+                # endregion
+
 
                 # endregion
 
@@ -9099,9 +10051,9 @@ break;
                     mcn = new DeepwaterHypnotist();
                     break;
 
-                case "Divination":
-                    mcn = new Divination();
-                    break;
+                //case "Divination":
+                //    mcn = new Divination();
+                //    break;
 
                 case "Drown in Sorrow":
                     mcn = new DrowninSorrow();
@@ -10635,9 +11587,9 @@ break;
                     mcn = new GrayMerchantofAsphodel();
                     break;
 
-                case "Griptide":
-                    mcn = new Griptide();
-                    break;
+                //case "Griptide":
+                //    mcn = new Griptide();
+                //    break;
 
                 case "Guardians of Meletis":
                     mcn = new GuardiansofMeletis();
@@ -15349,11 +16301,11 @@ break;
                     break;
                 # endregion
 
-                # region Briarpack Alpha
-                case "Briarpack Alpha":
-                    mcn = new BriarpackAlpha();
-                    break;
-                # endregion
+                //# region Briarpack Alpha
+                //case "Briarpack Alpha":
+                //    mcn = new BriarpackAlpha();
+                //    break;
+                //# endregion
 
                 # region Brindle Boar
                 case "Brindle Boar":
@@ -15985,11 +16937,11 @@ break;
                     break;
                 # endregion
 
-                # region Nephalia Seakite
-                case "Nephalia Seakite":
-                    mcn = new NephaliaSeakite();
-                    break;
-                # endregion
+                //# region Nephalia Seakite
+                //case "Nephalia Seakite":
+                //    mcn = new NephaliaSeakite();
+                //    break;
+                //# endregion
 
                 //# region Nightmare
                 //case "Nightmare":
@@ -16690,11 +17642,11 @@ break;
                     break;
                 # endregion
 
-                # region Black Cat
-                case "Black Cat":
-                    mcn = new BlackCat15();
-                    break;
-                # endregion
+                //# region Black Cat
+                //case "Black Cat":
+                //    mcn = new BlackCat15();
+                //    break;
+                //# endregion
 
                 # region Blastfire Bolt
                 case "Blastfire Bolt":
@@ -16972,11 +17924,11 @@ break;
                     break;
                 # endregion
 
-                # region Evolving Wilds
-                case "Evolving Wilds":
-                    mcn = new EvolvingWilds15();
-                    break;
-                # endregion
+                //# region Evolving Wilds
+                //case "Evolving Wilds":
+                //    mcn = new EvolvingWilds15();
+                //    break;
+                //# endregion
 
                 # region Feast on the Fallen
                 case "Feast on the Fallen":
@@ -17014,11 +17966,11 @@ break;
                 //    break;
                 //# endregion
 
-                # region Forge Devil
-                case "Forge Devil":
-                    mcn = new ForgeDevil15();
-                    break;
-                # endregion
+                //# region Forge Devil
+                //case "Forge Devil":
+                //    mcn = new ForgeDevil15();
+                //    break;
+                //# endregion
 
                 //# region Foundry Street Denizen
                 //case"Foundry Street Denizen":
@@ -17404,11 +18356,11 @@ break;
                     break;
                 # endregion
 
-                # region Midnight Guard
-                case "Midnight Guard":
-                    mcn = new MidnightGuard15();
-                    break;
-                # endregion
+                //# region Midnight Guard
+                //case "Midnight Guard":
+                //    mcn = new MidnightGuard15();
+                //    break;
+                //# endregion
 
                 # region Might Makes Right
                 case "Might Makes Right":
@@ -18028,11 +18980,11 @@ break;
                     break;
                 # endregion
 
-                # region Torch Fiend
-                case "Torch Fiend":
-                    mcn = new TorchFiend15();
-                    break;
-                # endregion
+                //# region Torch Fiend
+                //case "Torch Fiend":
+                //    mcn = new TorchFiend15();
+                //    break;
+                //# endregion
 
                 # region Tormod's Crypt
                 case "Tormod's Crypt":

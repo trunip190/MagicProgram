@@ -5,6 +5,2893 @@ using System.Text;
 
 namespace MagicProgram
 {
+    # region Innistrad
+
+    # endregion
+
+    # region Dark Ascension
+    # region Afflicted Deserter/Werewolf Ransacker
+    public class AfflictedDeserterWerewolfRansackerDKA : MagicCard
+    {
+        public AfflictedDeserterWerewolfRansackerDKA()
+        {
+            Name = "Afflicted Deserter/Werewolf Ransacker";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "R";
+            Cost = "3R";
+            PT = "3/2|5/";
+            Type = "Creature - Human Werewolf/Creature - Werewolf";
+            Text = "At the beginning of each upkeep, if no spells were cast last turn, transform Afflicted Deserter.;^//;^Whenever this creature transforms into Werewolf Ransacker, you may destroy target artifact. If that artifact is put into a graveyard this way, Werewolf Ransacker deals 3 damage to that artifact�s controller.;^At the beginning of each upkeep, if a player cast two or more spells last turn, transform Werewolf Ransacker.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Alpha Brawl
+    public class AlphaBrawlDKA : MagicCard
+    {
+        public AlphaBrawlDKA()
+        {
+            Name = "Alpha Brawl";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "R";
+            Cost = "6RR";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target creature an opponent controls deals damage equal to its power to each other creature that player controls, then each of those creatures deals damage equal to its power to that creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Altar of the Lost
+    public class AltaroftheLostDKA : MagicCard
+    {
+        public AltaroftheLostDKA()
+        {
+            Name = "Altar of the Lost";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "3";
+            PT = "";
+            Type = "Artifact";
+            Text = "Altar of the Lost enters the battlefield tapped.;^%T: Add two mana in any combination of colors to your mana pool. Spend this mana only to cast spells with flashback from a graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Archangel's Light
+    public class ArchangelsLightDKA : MagicCard
+    {
+        public ArchangelsLightDKA()
+        {
+            Name = "Archangel's Light";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "W";
+            Cost = "7W";
+            PT = "";
+            Type = "Sorcery";
+            Text = "You gain 2 life for each card in your graveyard, then shuffle your graveyard into your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Artful Dodge
+    public class ArtfulDodgeDKA : MagicCard
+    {
+        public ArtfulDodgeDKA()
+        {
+            Name = "Artful Dodge";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "U";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target creature can�t be blocked this turn.;^Flashback %U @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Avacyn's Collar
+    public class AvacynsCollarDKA : MagicCard
+    {
+        public AvacynsCollarDKA()
+        {
+            Name = "Avacyn's Collar";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "1";
+            PT = "";
+            Type = "Artifact - Equipment";
+            Text = "Equipped creature gets +1/+0 and has vigilance.;^Whenever equipped creature dies, if it was a Human, put a 1/1 white Spirit creature token with flying onto the battlefield.;^Equip %2";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Bar the Door
+    public class BartheDoorDKA : MagicCard
+    {
+        public BartheDoorDKA()
+        {
+            Name = "Bar the Door";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "2W";
+            PT = "";
+            Type = "Instant";
+            Text = "Creatures you control get +0/+4 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Beguiler of Wills
+    public class BeguilerofWillsDKA : MagicCard
+    {
+        public BeguilerofWillsDKA()
+        {
+            Name = "Beguiler of Wills";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "U";
+            Cost = "3UU";
+            PT = "1/1";
+            Type = "Creature - Human Wizard";
+            Text = "%T: Gain control of target creature with power less than or equal to the number of creatures you control.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Black Cat
+    public class BlackCatDKA : MagicCard
+    {
+        public BlackCatDKA()
+        {
+            Name = "Black Cat";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "1B";
+            PT = "1/1";
+            Type = "Creature - Zombie Cat";
+            Text = "When Black Cat dies, target opponent discards a card at random.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Blood Feud
+    public class BloodFeudDKA : MagicCard
+    {
+        public BloodFeudDKA()
+        {
+            Name = "Blood Feud";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "R";
+            Cost = "4RR";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target creature fights another target creature. @(Each deals damage equal to its power to the other.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Bone to Ash
+    public class BonetoAshDKA : MagicCard
+    {
+        public BonetoAshDKA()
+        {
+            Name = "Bone to Ash";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "2UU";
+            PT = "";
+            Type = "Instant";
+            Text = "Counter target creature spell.;^Draw a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Break of Day
+    public class BreakofDayDKA : MagicCard
+    {
+        public BreakofDayDKA()
+        {
+            Name = "Break of Day";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "1W";
+            PT = "";
+            Type = "Instant";
+            Text = "Creatures you control get +1/+1 until end of turn.;^@Fateful hour@ � If you have 5 or less life, those creatures gain indestructible until end of turn. @(Damage and effects that say �destroy� don�t destroy them.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Briarpack Alpha
+    public class BriarpackAlphaDKA : MagicCard
+    {
+        public BriarpackAlphaDKA()
+        {
+            Name = "Briarpack Alpha";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "G";
+            Cost = "3G";
+            PT = "3/3";
+            Type = "Creature - Wolf";
+            Text = "Flash @(You may cast this spell any time you could cast an instant.)@;^When Briarpack Alpha enters the battlefield, target creature gets +2/+2 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Burden of Guilt
+    public class BurdenofGuiltDKA : MagicCard
+    {
+        public BurdenofGuiltDKA()
+        {
+            Name = "Burden of Guilt";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "W";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^%1: Tap enchanted creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Burning Oil
+    public class BurningOilDKA : MagicCard
+    {
+        public BurningOilDKA()
+        {
+            Name = "Burning Oil";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "R";
+            Cost = "1R";
+            PT = "";
+            Type = "Instant";
+            Text = "Burning Oil deals 3 damage to target attacking or blocking creature.;^Flashback %3%W @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Call to the Kindred
+    public class CalltotheKindredDKA : MagicCard
+    {
+        public CalltotheKindredDKA()
+        {
+            Name = "Call to the Kindred";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "U";
+            Cost = "3U";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^At the beginning of your upkeep, you may look at the top five cards of your library. If you do, you may put a creature card that shares a creature type with enchanted creature from among them onto the battlefield, then you put the rest of those cards on the bottom of your library in any order.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Chalice of Life/Chalice of Death
+    public class ChaliceofLifeChaliceofDeathDKA : MagicCard
+    {
+        public ChaliceofLifeChaliceofDeathDKA()
+        {
+            Name = "Chalice of Life/Chalice of Death";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "3";
+            PT = "";
+            Type = "Artifact/Artifact";
+            Text = "%T: You gain 1 life. Then if you have at least 10 life more than your starting life total, transform Chalice of Life.;^//;^%T: Target player loses 5 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Chant of the Skifsang
+    public class ChantoftheSkifsangDKA : MagicCard
+    {
+        public ChantoftheSkifsangDKA()
+        {
+            Name = "Chant of the Skifsang";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "2U";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Enchanted creature gets -13/-0.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Chill of Foreboding
+    public class ChillofForebodingDKA : MagicCard
+    {
+        public ChillofForebodingDKA()
+        {
+            Name = "Chill of Foreboding";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "U";
+            Cost = "2U";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Each player puts the top five cards of his or her library into his or her graveyard.;^Flashback %7%U @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Chosen of Markov/Markov's Servant
+    public class ChosenofMarkovMarkovsServantDKA : MagicCard
+    {
+        public ChosenofMarkovMarkovsServantDKA()
+        {
+            Name = "Chosen of Markov/Markov's Servant";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "2B";
+            PT = "2/2|4/";
+            Type = "Creature - Human/Creature - Vampire";
+            Text = "%T, Tap an untapped Vampire you control: Transform Chosen of Markov.;^//";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Clinging Mists
+    public class ClingingMistsDKA : MagicCard
+    {
+        public ClingingMistsDKA()
+        {
+            Name = "Clinging Mists";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2G";
+            PT = "";
+            Type = "Instant";
+            Text = "Prevent all combat damage that would be dealt this turn.;^@Fateful hour@ � If you have 5 or less life, tap all attacking creatures. Those creatures don�t untap during their controller�s next untap step.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Counterlash
+    public class CounterlashDKA : MagicCard
+    {
+        public CounterlashDKA()
+        {
+            Name = "Counterlash";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "U";
+            Cost = "4UU";
+            PT = "";
+            Type = "Instant";
+            Text = "Counter target spell. You may cast a nonland card in your hand that shares a card type with that spell without paying its mana cost.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Crushing Vines
+    public class CrushingVinesDKA : MagicCard
+    {
+        public CrushingVinesDKA()
+        {
+            Name = "Crushing Vines";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2G";
+            PT = "";
+            Type = "Instant";
+            Text = "Choose one � Destroy target creature with flying; or destroy target artifact.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Curse of Bloodletting
+    public class CurseofBloodlettingDKA : MagicCard
+    {
+        public CurseofBloodlettingDKA()
+        {
+            Name = "Curse of Bloodletting";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "R";
+            Cost = "3RR";
+            PT = "";
+            Type = "Enchantment - Aura Curse";
+            Text = "Enchant player;^If a source would deal damage to enchanted player, it deals double that damage to that player instead.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Curse of Echoes
+    public class CurseofEchoesDKA : MagicCard
+    {
+        public CurseofEchoesDKA()
+        {
+            Name = "Curse of Echoes";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "U";
+            Cost = "4U";
+            PT = "";
+            Type = "Enchantment - Aura Curse";
+            Text = "Enchant player;^Whenever enchanted player casts an instant or sorcery spell, each other player may copy that spell and may choose new targets for the copy he or she controls.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Curse of Exhaustion
+    public class CurseofExhaustionDKA : MagicCard
+    {
+        public CurseofExhaustionDKA()
+        {
+            Name = "Curse of Exhaustion";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "W";
+            Cost = "2WW";
+            PT = "";
+            Type = "Enchantment - Aura Curse";
+            Text = "Enchant player;^Enchanted player can�t cast more than one spell each turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Curse of Misfortunes
+    public class CurseofMisfortunesDKA : MagicCard
+    {
+        public CurseofMisfortunesDKA()
+        {
+            Name = "Curse of Misfortunes";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "B";
+            Cost = "4B";
+            PT = "";
+            Type = "Enchantment - Aura Curse";
+            Text = "Enchant player;^At the beginning of your upkeep, you may search your library for a Curse card that doesn�t have the same name as a Curse attached to enchanted player, put it onto the battlefield attached to that player, then shuffle your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Curse of Thirst
+    public class CurseofThirstDKA : MagicCard
+    {
+        public CurseofThirstDKA()
+        {
+            Name = "Curse of Thirst";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "B";
+            Cost = "4B";
+            PT = "";
+            Type = "Enchantment - Aura Curse";
+            Text = "Enchant player;^At the beginning of enchanted player�s upkeep, Curse of Thirst deals damage to that player equal to the number of Curses attached to him or her.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Dawntreader Elk
+    public class DawntreaderElkDKA : MagicCard
+    {
+        public DawntreaderElkDKA()
+        {
+            Name = "Dawntreader Elk";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "1G";
+            PT = "2/2";
+            Type = "Creature - Elk";
+            Text = "%G, Sacrifice Dawntreader Elk: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Deadly Allure
+    public class DeadlyAllureDKA : MagicCard
+    {
+        public DeadlyAllureDKA()
+        {
+            Name = "Deadly Allure";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "B";
+            Cost = "B";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target creature gains deathtouch until end of turn and must be blocked this turn if able.;^Flashback %G @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Death's Caress
+    public class DeathsCaressDKA : MagicCard
+    {
+        public DeathsCaressDKA()
+        {
+            Name = "Death's Caress";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "3BB";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Destroy target creature. If that creature was a Human, you gain life equal to its toughness.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Deranged Outcast
+    public class DerangedOutcastDKA : MagicCard
+    {
+        public DerangedOutcastDKA()
+        {
+            Name = "Deranged Outcast";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "G";
+            Cost = "1G";
+            PT = "2/1";
+            Type = "Creature - Human Rogue";
+            Text = "%1%G, Sacrifice a Human: Put two +1/+1 counters on target creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Diregraf Captain
+    public class DiregrafCaptainDKA : MagicCard
+    {
+        public DiregrafCaptainDKA()
+        {
+            Name = "Diregraf Captain";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "Gld";
+            Cost = "1UB";
+            PT = "2/2";
+            Type = "Creature - Zombie Soldier";
+            Text = "Deathtouch;^Other Zombie creatures you control get +1/+1.;^Whenever another Zombie you control dies, target opponent loses 1 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Divination
+    public class DivinationDKA : MagicCard
+    {
+        public DivinationDKA()
+        {
+            Name = "Divination";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "2U";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Draw two cards.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Drogskol Captain
+    public class DrogskolCaptainDKA : MagicCard
+    {
+        public DrogskolCaptainDKA()
+        {
+            Name = "Drogskol Captain";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "Gld";
+            Cost = "1WU";
+            PT = "2/2";
+            Type = "Creature - Spirit Soldier";
+            Text = "Flying;^Other Spirit creatures you control get +1/+1 and have hexproof. @(They can�t be the targets of spells or abilities your opponents control.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Drogskol Reaver
+    public class DrogskolReaverDKA : MagicCard
+    {
+        public DrogskolReaverDKA()
+        {
+            Name = "Drogskol Reaver";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "Gld";
+            Cost = "5WU";
+            PT = "3/5";
+            Type = "Creature - Spirit";
+            Text = "Flying, double strike, lifelink;^Whenever you gain life, draw a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Dungeon Geists
+    public class DungeonGeistsDKA : MagicCard
+    {
+        public DungeonGeistsDKA()
+        {
+            Name = "Dungeon Geists";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "U";
+            Cost = "2UU";
+            PT = "3/3";
+            Type = "Creature - Spirit";
+            Text = "Flying;^When Dungeon Geists enters the battlefield, tap target creature an opponent controls. That creature doesn�t untap during its controller�s untap step for as long as you control Dungeon Geists.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Elbrus, the Binding Blade/Withengar Unbound
+    public class ElbrustheBindingBladeWithengarUnboundDKA : MagicCard
+    {
+        public ElbrustheBindingBladeWithengarUnboundDKA()
+        {
+            Name = "Elbrus, the Binding Blade/Withengar Unbound";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "Gld";
+            Cost = "7";
+            PT = "|13/13";
+            Type = "Legendary Artifact - Equipment/Legendary Creature - Demon";
+            Text = "Equipped creature gets +1/+0.;^When equipped creature deals combat damage to a player, unattach Elbrus, the Binding Blade, then transform it.;^Equip %1;^//;^Flying, intimidate, trample;^Whenever a player loses the game, put thirteen +1/+1 counters on Withengar Unbound.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Elgaud Inquisitor
+    public class ElgaudInquisitorDKA : MagicCard
+    {
+        public ElgaudInquisitorDKA()
+        {
+            Name = "Elgaud Inquisitor";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "3W";
+            PT = "2/2";
+            Type = "Creature - Human Cleric";
+            Text = "Lifelink @(Damage dealt by this creature also causes you to gain that much life.)@;^When Elgaud Inquisitor dies, put a 1/1 white Spirit creature token with flying onto the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Erdwal Ripper
+    public class ErdwalRipperDKA : MagicCard
+    {
+        public ErdwalRipperDKA()
+        {
+            Name = "Erdwal Ripper";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1RR";
+            PT = "2/1";
+            Type = "Creature - Vampire";
+            Text = "Haste;^Whenever Erdwal Ripper deals combat damage to a player, put a +1/+1 counter on it.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Evolving Wilds
+    public class EvolvingWildsDKA : MagicCard
+    {
+        public EvolvingWildsDKA()
+        {
+            Name = "Evolving Wilds";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Land";
+            Text = "%T, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.";
+            Flavor = "";
+        }
+
+        public override bool TryActivate(int i)
+        {
+            if (PArea == null)
+            {
+                return false;
+            }
+
+            callSacrifice();
+            List<MagicCard> list = PArea._stack.cards.Where(o => o.Type.Contains("Basic Land")).ToList();
+            PArea.callPickCards(list);
+
+            return true;
+        }
+    }
+    # endregion
+
+    # region Executioner's Hood
+    public class ExecutionersHoodDKA : MagicCard
+    {
+        public ExecutionersHoodDKA()
+        {
+            Name = "Executioner's Hood";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "Art";
+            Cost = "2";
+            PT = "";
+            Type = "Artifact - Equipment";
+            Text = "Equipped creature has intimidate. @(This creature can�t be blocked except by artifact creatures and/or creatures that share a color with it.)@;^Equip %2 @(%2: Attach to target creature you control. Equip only as a sorcery.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Faithless Looting
+    public class FaithlessLootingDKA : MagicCard
+    {
+        public FaithlessLootingDKA()
+        {
+            Name = "Faithless Looting";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "R";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Draw two cards, then discard two cards.;^Flashback %2%R @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Faith's Shield
+    public class FaithsShieldDKA : MagicCard
+    {
+        public FaithsShieldDKA()
+        {
+            Name = "Faith's Shield";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "W";
+            Cost = "W";
+            PT = "";
+            Type = "Instant";
+            Text = "Target permanent you control gains protection from the color of your choice until end of turn.;^@Fateful hour@ � If you have 5 or less life, instead you and each permanent you control gain protection from the color of your choice until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Falkenrath Aristocrat
+    public class FalkenrathAristocratDKA : MagicCard
+    {
+        public FalkenrathAristocratDKA()
+        {
+            Name = "Falkenrath Aristocrat";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "Gld";
+            Cost = "2BR";
+            PT = "4/1";
+            Type = "Creature - Vampire";
+            Text = "Flying, haste;^Sacrifice a creature: Falkenrath Aristocrat gains indestructible until end of turn. If the sacrificed creature was a Human, put a +1/+1 counter on Falkenrath Aristocrat.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Falkenrath Torturer
+    public class FalkenrathTorturerDKA : MagicCard
+    {
+        public FalkenrathTorturerDKA()
+        {
+            Name = "Falkenrath Torturer";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "2B";
+            PT = "2/1";
+            Type = "Creature - Vampire";
+            Text = "Sacrifice a creature: Falkenrath Torturer gains flying until end of turn. If the sacrificed creature was a Human, put a +1/+1 counter on Falkenrath Torturer.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Farbog Boneflinger
+    public class FarbogBoneflingerDKA : MagicCard
+    {
+        public FarbogBoneflingerDKA()
+        {
+            Name = "Farbog Boneflinger";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "B";
+            Cost = "4B";
+            PT = "2/2";
+            Type = "Creature - Zombie";
+            Text = "When Farbog Boneflinger enters the battlefield, target creature gets -2/-2 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Favor of the Woods
+    public class FavoroftheWoodsDKA : MagicCard
+    {
+        public FavoroftheWoodsDKA()
+        {
+            Name = "Favor of the Woods";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2G";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Whenever enchanted creature blocks, you gain 3 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Feed the Pack
+    public class FeedthePackDKA : MagicCard
+    {
+        public FeedthePackDKA()
+        {
+            Name = "Feed the Pack";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "G";
+            Cost = "5G";
+            PT = "";
+            Type = "Enchantment";
+            Text = "At the beginning of your end step, you may sacrifice a nontoken creature. If you do, put X 2/2 green Wolf creature tokens onto the battlefield, where X is the sacrificed creature�s toughness.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Fiend of the Shadows
+    public class FiendoftheShadowsDKA : MagicCard
+    {
+        public FiendoftheShadowsDKA()
+        {
+            Name = "Fiend of the Shadows";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "B";
+            Cost = "3BB";
+            PT = "3/3";
+            Type = "Creature - Vampire Wizard";
+            Text = "Flying;^Whenever Fiend of the Shadows deals combat damage to a player, that player exiles a card from his or her hand. You may play that card for as long as it remains exiled.;^Sacrifice a Human: Regenerate Fiend of the Shadows.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Fires of Undeath
+    public class FiresofUndeathDKA : MagicCard
+    {
+        public FiresofUndeathDKA()
+        {
+            Name = "Fires of Undeath";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "2R";
+            PT = "";
+            Type = "Instant";
+            Text = "Fires of Undeath deals 2 damage to target creature or player.;^Flashback %5%B @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Flayer of the Hatebound
+    public class FlayeroftheHateboundDKA : MagicCard
+    {
+        public FlayeroftheHateboundDKA()
+        {
+            Name = "Flayer of the Hatebound";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "R";
+            Cost = "5R";
+            PT = "4/2";
+            Type = "Creature - Devil";
+            Text = "Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@;^Whenever Flayer of the Hatebound or another creature enters the battlefield from your graveyard, that creature deals damage equal to its power to target creature or player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Fling
+    public class FlingDKA : MagicCard
+    {
+        public FlingDKA()
+        {
+            Name = "Fling";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1R";
+            PT = "";
+            Type = "Instant";
+            Text = "As an additional cost to cast Fling, sacrifice a creature.;^Fling deals damage equal to the sacrificed creature�s power to target creature or player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Forge Devil
+    public class ForgeDevilDKA : MagicCard
+    {
+        public ForgeDevilDKA()
+        {
+            Name = "Forge Devil";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "R";
+            PT = "1/1";
+            Type = "Creature - Devil";
+            Text = "When Forge Devil enters the battlefield, it deals 1 damage to target creature and 1 damage to you.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gather the Townsfolk
+    public class GathertheTownsfolkDKA : MagicCard
+    {
+        public GathertheTownsfolkDKA()
+        {
+            Name = "Gather the Townsfolk";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "1W";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Put two 1/1 white Human creature tokens onto the battlefield.;^@Fateful hour@ � If you have 5 or less life, put five of those tokens onto the battlefield instead.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gavony Ironwright
+    public class GavonyIronwrightDKA : MagicCard
+    {
+        public GavonyIronwrightDKA()
+        {
+            Name = "Gavony Ironwright";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "W";
+            Cost = "2W";
+            PT = "1/4";
+            Type = "Creature - Human Soldier";
+            Text = "@Fateful hour@ � As long as you have 5 or less life, other creatures you control get +1/+4.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Geralf's Messenger
+    public class GeralfsMessengerDKA : MagicCard
+    {
+        public GeralfsMessengerDKA()
+        {
+            Name = "Geralf's Messenger";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "B";
+            Cost = "BBB";
+            PT = "3/2";
+            Type = "Creature - Zombie";
+            Text = "Geralf�s Messenger enters the battlefield tapped.;^When Geralf�s Messenger enters the battlefield, target opponent loses 2 life.;^Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Geralf's Mindcrusher
+    public class GeralfsMindcrusherDKA : MagicCard
+    {
+        public GeralfsMindcrusherDKA()
+        {
+            Name = "Geralf's Mindcrusher";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "U";
+            Cost = "4UU";
+            PT = "5/5";
+            Type = "Creature - Zombie Horror";
+            Text = "When Geralf�s Mindcrusher enters the battlefield, target player puts the top five cards of his or her library into his or her graveyard.;^Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Ghoultree
+    public class GhoultreeDKA : MagicCard
+    {
+        public GhoultreeDKA()
+        {
+            Name = "Ghoultree";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "G";
+            Cost = "7G";
+            PT = "10/10";
+            Type = "Creature - Zombie Treefolk";
+            Text = "Ghoultree costs %1 less to cast for each creature card in your graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Grafdigger's Cage
+    public class GrafdiggersCageDKA : MagicCard
+    {
+        public GrafdiggersCageDKA()
+        {
+            Name = "Grafdigger's Cage";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "Art";
+            Cost = "1";
+            PT = "";
+            Type = "Artifact";
+            Text = "Creature cards can�t enter the battlefield from graveyards or libraries.;^Players can�t cast cards in graveyards or libraries.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gravecrawler
+    public class GravecrawlerDKA : MagicCard
+    {
+        public GravecrawlerDKA()
+        {
+            Name = "Gravecrawler";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "B";
+            Cost = "B";
+            PT = "2/1";
+            Type = "Creature - Zombie";
+            Text = "Gravecrawler can�t block.;^You may cast Gravecrawler from your graveyard as long as you control a Zombie.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gravepurge
+    public class GravepurgeDKA : MagicCard
+    {
+        public GravepurgeDKA()
+        {
+            Name = "Gravepurge";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "2B";
+            PT = "";
+            Type = "Instant";
+            Text = "Put any number of target creature cards from your graveyard on top of your library.;^Draw a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gravetiller Wurm
+    public class GravetillerWurmDKA : MagicCard
+    {
+        public GravetillerWurmDKA()
+        {
+            Name = "Gravetiller Wurm";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "G";
+            Cost = "5G";
+            PT = "4/4";
+            Type = "Creature - Wurm";
+            Text = "Trample;^@Morbid@ � Gravetiller Wurm enters the battlefield with four +1/+1 counters on it if a creature died this turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Grim Backwoods
+    public class GrimBackwoodsDKA : MagicCard
+    {
+        public GrimBackwoodsDKA()
+        {
+            Name = "Grim Backwoods";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Land";
+            Text = "%T: Add %1 to your mana pool.;^%2%B%G, %T, Sacrifice a creature: Draw a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Grim Flowering
+    public class GrimFloweringDKA : MagicCard
+    {
+        public GrimFloweringDKA()
+        {
+            Name = "Grim Flowering";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "G";
+            Cost = "5G";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Draw a card for each creature card in your graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Griptide
+    public class GriptideDKA : MagicCard
+    {
+        public GriptideDKA()
+        {
+            Name = "Griptide";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "3U";
+            PT = "";
+            Type = "Instant";
+            Text = "Put target creature on top of its owner�s library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gruesome Discovery
+    public class GruesomeDiscoveryDKA : MagicCard
+    {
+        public GruesomeDiscoveryDKA()
+        {
+            Name = "Gruesome Discovery";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "2BB";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target player discards two cards.;^@Morbid@ � If a creature died this turn, instead that player reveals his or her hand, you choose two cards from it, then that player discards those cards.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Harrowing Journey
+    public class HarrowingJourneyDKA : MagicCard
+    {
+        public HarrowingJourneyDKA()
+        {
+            Name = "Harrowing Journey";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "B";
+            Cost = "4B";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target player draws three cards and loses 3 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Haunted Fengraf
+    public class HauntedFengrafDKA : MagicCard
+    {
+        public HauntedFengrafDKA()
+        {
+            Name = "Haunted Fengraf";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Land";
+            Text = "%T: Add %1 to your mana pool.;^%3, %T, Sacrifice Haunted Fengraf: Return a creature card at random from your graveyard to your hand.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Havengul Lich
+    public class HavengulLichDKA : MagicCard
+    {
+        public HavengulLichDKA()
+        {
+            Name = "Havengul Lich";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "Gld";
+            Cost = "3UB";
+            PT = "4/4";
+            Type = "Creature - Zombie Wizard";
+            Text = "%1: You may cast target creature card in a graveyard this turn. When you cast that card this turn, Havengul Lich gains all activated abilities of that card until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Havengul Runebinder
+    public class HavengulRunebinderDKA : MagicCard
+    {
+        public HavengulRunebinderDKA()
+        {
+            Name = "Havengul Runebinder";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "U";
+            Cost = "2UU";
+            PT = "2/2";
+            Type = "Creature - Human Wizard";
+            Text = "%2%U, %T, Exile a creature card from your graveyard: Put a 2/2 black Zombie creature token onto the battlefield, then put a +1/+1 counter on each Zombie creature you control.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Headless Skaab
+    public class HeadlessSkaabDKA : MagicCard
+    {
+        public HeadlessSkaabDKA()
+        {
+            Name = "Headless Skaab";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "2U";
+            PT = "3/6";
+            Type = "Creature - Zombie Warrior";
+            Text = "As an additional cost to cast Headless Skaab, exile a creature card from your graveyard.;^Headless Skaab enters the battlefield tapped.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Heavy Mattock
+    public class HeavyMattockDKA : MagicCard
+    {
+        public HeavyMattockDKA()
+        {
+            Name = "Heavy Mattock";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "Art";
+            Cost = "3";
+            PT = "";
+            Type = "Artifact - Equipment";
+            Text = "Equipped creature gets +1/+1.;^As long as equipped creature is a Human, it gets an additional +1/+1.;^Equip %2 @(%2: Attach to target creature you control. Equip only as a sorcery.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Heckling Fiends
+    public class HecklingFiendsDKA : MagicCard
+    {
+        public HecklingFiendsDKA()
+        {
+            Name = "Heckling Fiends";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "R";
+            Cost = "2R";
+            PT = "2/2";
+            Type = "Creature - Devil";
+            Text = "%2%R: Target creature attacks this turn if able.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Hellrider
+    public class HellriderDKA : MagicCard
+    {
+        public HellriderDKA()
+        {
+            Name = "Hellrider";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "R";
+            Cost = "2RR";
+            PT = "3/3";
+            Type = "Creature - Devil";
+            Text = "Haste;^Whenever a creature you control attacks, Hellrider deals 1 damage to defending player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Helvault
+    public class HelvaultDKA : MagicCard
+    {
+        public HelvaultDKA()
+        {
+            Name = "Helvault";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "Art";
+            Cost = "3";
+            PT = "";
+            Type = "Legendary Artifact";
+            Text = "%1, %T: Exile target creature you control.;^%7, %T: Exile target creature you don�t control.;^When Helvault is put into a graveyard from the battlefield, return all cards exiled with it to the battlefield under their owners� control.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Highborn Ghoul
+    public class HighbornGhoulDKA : MagicCard
+    {
+        public HighbornGhoulDKA()
+        {
+            Name = "Highborn Ghoul";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "BB";
+            PT = "2/1";
+            Type = "Creature - Zombie";
+            Text = "Intimidate @(This creature can�t be blocked except by artifact creatures and/or creatures that share a color with it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Hinterland Hermit/Hinterland Scourge
+    public class HinterlandHermitHinterlandScourgeDKA : MagicCard
+    {
+        public HinterlandHermitHinterlandScourgeDKA()
+        {
+            Name = "Hinterland Hermit/Hinterland Scourge";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1R";
+            PT = "2/1|3/";
+            Type = "Creature - Human Werewolf/Creature - Werewolf";
+            Text = "At the beginning of each upkeep, if no spells were cast last turn, transform Hinterland Hermit.;^//;^Hinterland Scourge must be blocked if able.;^At the beginning of each upkeep, if a player cast two or more spells last turn, transform Hinterland Scourge.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Hollowhenge Beast
+    public class HollowhengeBeastDKA : MagicCard
+    {
+        public HollowhengeBeastDKA()
+        {
+            Name = "Hollowhenge Beast";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "3GG";
+            PT = "5/5";
+            Type = "Creature - Beast";
+            Text = "";
+            Flavor = "In a world of monsters, it�s the stuff of nightmares.";
+        }
+    }
+    # endregion
+
+    # region Hollowhenge Spirit
+    public class HollowhengeSpiritDKA : MagicCard
+    {
+        public HollowhengeSpiritDKA()
+        {
+            Name = "Hollowhenge Spirit";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "W";
+            Cost = "3W";
+            PT = "2/2";
+            Type = "Creature - Spirit";
+            Text = "Flash @(You may cast this spell any time you could cast an instant.)@;^Flying;^When Hollowhenge Spirit enters the battlefield, remove target attacking or blocking creature from combat.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Hunger of the Howlpack
+    public class HungeroftheHowlpackDKA : MagicCard
+    {
+        public HungeroftheHowlpackDKA()
+        {
+            Name = "Hunger of the Howlpack";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "G";
+            PT = "";
+            Type = "Instant";
+            Text = "Put a +1/+1 counter on target creature.;^@Morbid@ � Put three +1/+1 counters on that creature instead if a creature died this turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Huntmaster of the Fells/Ravager of the Fells
+    public class HuntmasteroftheFellsRavageroftheFellsDKA : MagicCard
+    {
+        public HuntmasteroftheFellsRavageroftheFellsDKA()
+        {
+            Name = "Huntmaster of the Fells/Ravager of the Fells";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "Gld";
+            Cost = "2RG";
+            PT = "2/2|4/";
+            Type = "Creature - Human Werewolf/Creature - Werewolf";
+            Text = "Whenever this creature enters the battlefield or transforms into Huntmaster of the Fells, put a 2/2 green Wolf creature token onto the battlefield and you gain 2 life.;^At the beginning of each upkeep, if no spells were cast last turn, transform Huntmaster of the Fells.;^//;^Trample;^Whenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent and 2 damage to up to one target creature that player controls.;^At the beginning of each upkeep, if a player cast two or more spells last turn, transform Ravager of the Fells.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Immerwolf
+    public class ImmerwolfDKA : MagicCard
+    {
+        public ImmerwolfDKA()
+        {
+            Name = "Immerwolf";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "Gld";
+            Cost = "1RG";
+            PT = "2/2";
+            Type = "Creature - Wolf";
+            Text = "Intimidate @(This creature can�t be blocked except by artifact creatures and/or creatures that share a color with it.)@;^Each other creature you control that�s a Wolf or a Werewolf gets +1/+1.;^Non-Human Werewolves you control can�t transform.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Increasing Ambition
+    public class IncreasingAmbitionDKA : MagicCard
+    {
+        public IncreasingAmbitionDKA()
+        {
+            Name = "Increasing Ambition";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "B";
+            Cost = "4B";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Search your library for a card and put that card into your hand. If Increasing Ambition was cast from a graveyard, instead search your library for two cards and put those cards into your hand. Then shuffle your library.;^Flashback %7%B @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Increasing Confusion
+    public class IncreasingConfusionDKA : MagicCard
+    {
+        public IncreasingConfusionDKA()
+        {
+            Name = "Increasing Confusion";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "U";
+            Cost = "XU";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target player puts the top X cards of his or her library into his or her graveyard. If Increasing Confusion was cast from a graveyard, that player puts twice that many cards into his or her graveyard instead.;^Flashback %X%U @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Increasing Devotion
+    public class IncreasingDevotionDKA : MagicCard
+    {
+        public IncreasingDevotionDKA()
+        {
+            Name = "Increasing Devotion";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "W";
+            Cost = "3WW";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Put five 1/1 white Human creature tokens onto the battlefield. If Increasing Devotion was cast from a graveyard, put ten of those tokens onto the battlefield instead.;^Flashback %7%W%W @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Increasing Savagery
+    public class IncreasingSavageryDKA : MagicCard
+    {
+        public IncreasingSavageryDKA()
+        {
+            Name = "Increasing Savagery";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "G";
+            Cost = "2GG";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Put five +1/+1 counters on target creature. If Increasing Savagery was cast from a graveyard, put ten +1/+1 counters on that creature instead.;^Flashback %5%G%G @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Increasing Vengeance
+    public class IncreasingVengeanceDKA : MagicCard
+    {
+        public IncreasingVengeanceDKA()
+        {
+            Name = "Increasing Vengeance";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "R";
+            Cost = "RR";
+            PT = "";
+            Type = "Instant";
+            Text = "Copy target instant or sorcery spell you control. If Increasing Vengeance was cast from a graveyard, copy that spell twice instead. You may choose new targets for the copies.;^Flashback %3%R%R @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Jar of Eyeballs
+    public class JarofEyeballsDKA : MagicCard
+    {
+        public JarofEyeballsDKA()
+        {
+            Name = "Jar of Eyeballs";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "Art";
+            Cost = "3";
+            PT = "";
+            Type = "Artifact";
+            Text = "Whenever a creature you control dies, put two eyeball counters on Jar of Eyeballs.;^%3, %T, Remove all eyeball counters from Jar of Eyeballs: Look at the top X cards of your library, where X is the number of eyeball counters removed this way. Put one of them into your hand and the rest on the bottom of your library in any order.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Kessig Recluse
+    public class KessigRecluseDKA : MagicCard
+    {
+        public KessigRecluseDKA()
+        {
+            Name = "Kessig Recluse";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2GG";
+            PT = "2/3";
+            Type = "Creature - Spider";
+            Text = "Reach @(This creature can block creatures with flying.)@;^Deathtouch @(Any amount of damage this deals to a creature is enough to destroy it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Lambholt Elder/Silverpelt Werewolf
+    public class LambholtElderSilverpeltWerewolfDKA : MagicCard
+    {
+        public LambholtElderSilverpeltWerewolfDKA()
+        {
+            Name = "Lambholt Elder/Silverpelt Werewolf";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "G";
+            Cost = "2G";
+            PT = "1/2|4/";
+            Type = "Creature - Human Werewolf/Creature - Werewolf";
+            Text = "At the beginning of each upkeep, if no spells were cast last turn, transform Lambholt Elder.;^//;^Whenever Silverpelt Werewolf deals combat damage to a player, draw a card.;^At the beginning of each upkeep, if a player cast two or more spells last turn, transform Silverpelt Werewolf.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Lingering Souls
+    public class LingeringSoulsDKA : MagicCard
+    {
+        public LingeringSoulsDKA()
+        {
+            Name = "Lingering Souls";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "W";
+            Cost = "2W";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Put two 1/1 white Spirit creature tokens with flying onto the battlefield.;^Flashback %1%B @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+
+        public override void Resolve()
+        {
+            if (PArea == null)
+            {
+                return;
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+                MagicCard mc = new MagicCard
+                {
+                    Name = "Spirit",
+                    Type = "Creature - Spirit",
+                    PT = "1/1",
+                    Power = 1,
+                    Toughness = 1,
+                    Text = "Flying",
+                    Token = true,
+                };
+                PArea.PlayToken(mc);
+            }
+        }
+    }
+    # endregion
+
+    # region Lost in the Woods
+    public class LostintheWoodsDKA : MagicCard
+    {
+        public LostintheWoodsDKA()
+        {
+            Name = "Lost in the Woods";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "G";
+            Cost = "3GG";
+            PT = "";
+            Type = "Enchantment";
+            Text = "Whenever a creature attacks you or a planeswalker you control, reveal the top card of your library. If it�s a Forest card, remove that creature from combat. Then put the revealed card on the bottom of your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Loyal Cathar/Unhallowed Cathar
+    public class LoyalCatharUnhallowedCatharDKA : MagicCard
+    {
+        public LoyalCatharUnhallowedCatharDKA()
+        {
+            Name = "Loyal Cathar/Unhallowed Cathar";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "Gld";
+            Cost = "WW";
+            PT = "2/2|2/";
+            Type = "Creature - Human Soldier/Creature - Zombie Soldier";
+            Text = "Vigilance;^When Loyal Cathar dies, return it to the battlefield transformed under your control at the beginning of the next end step.;^//;^Unhallowed Cathar can�t block.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Markov Blademaster
+    public class MarkovBlademasterDKA : MagicCard
+    {
+        public MarkovBlademasterDKA()
+        {
+            Name = "Markov Blademaster";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "R";
+            Cost = "1RR";
+            PT = "1/1";
+            Type = "Creature - Vampire Warrior";
+            Text = "Double strike;^Whenever Markov Blademaster deals combat damage to a player, put a +1/+1 counter on it.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Markov Warlord
+    public class MarkovWarlordDKA : MagicCard
+    {
+        public MarkovWarlordDKA()
+        {
+            Name = "Markov Warlord";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "R";
+            Cost = "5R";
+            PT = "4/4";
+            Type = "Creature - Vampire Warrior";
+            Text = "Haste;^When Markov Warlord enters the battlefield, up to two target creatures can�t block this turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Midnight Guard
+    public class MidnightGuardDKA : MagicCard
+    {
+        public MidnightGuardDKA()
+        {
+            Name = "Midnight Guard";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "2W";
+            PT = "2/3";
+            Type = "Creature - Human Soldier";
+            Text = "Whenever another creature enters the battlefield, untap Midnight Guard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Mikaeus, the Unhallowed
+    public class MikaeustheUnhallowedDKA : MagicCard
+    {
+        public MikaeustheUnhallowedDKA()
+        {
+            Name = "Mikaeus, the Unhallowed";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "B";
+            Cost = "3BBB";
+            PT = "5/5";
+            Type = "Legendary Creature - Zombie Cleric";
+            Text = "Intimidate;^Whenever a Human deals damage to you, destroy it.;^Other non-Human creatures you control get +1/+1 and have undying. @(When a creature with undying dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Mondronen Shaman/Tovolar's Magehunter
+    public class MondronenShamanTovolarsMagehunterDKA : MagicCard
+    {
+        public MondronenShamanTovolarsMagehunterDKA()
+        {
+            Name = "Mondronen Shaman/Tovolar's Magehunter";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "R";
+            Cost = "3R";
+            PT = "3/2|5/";
+            Type = "Creature - Human Werewolf Shaman/Creature - Werewolf";
+            Text = "At the beginning of each upkeep, if no spells were cast last turn, transform Mondronen Shaman.;^//;^Whenever an opponent casts a spell, Tovolar�s Magehunter deals 2 damage to that player.;^At the beginning of each upkeep, if a player cast two or more spells last turn, transform Tovolar�s Magehunter.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Moonveil Dragon
+    public class MoonveilDragonDKA : MagicCard
+    {
+        public MoonveilDragonDKA()
+        {
+            Name = "Moonveil Dragon";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "R";
+            Cost = "3RRR";
+            PT = "5/5";
+            Type = "Creature - Dragon";
+            Text = "Flying;^%R: Each creature you control gets +1/+0 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Mystic Retrieval
+    public class MysticRetrievalDKA : MagicCard
+    {
+        public MysticRetrievalDKA()
+        {
+            Name = "Mystic Retrieval";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "U";
+            Cost = "3U";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Return target instant or sorcery card from your graveyard to your hand.;^Flashback %2%R @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Nearheath Stalker
+    public class NearheathStalkerDKA : MagicCard
+    {
+        public NearheathStalkerDKA()
+        {
+            Name = "Nearheath Stalker";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "4R";
+            PT = "4/1";
+            Type = "Creature - Vampire Rogue";
+            Text = "Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Nephalia Seakite
+    public class NephaliaSeakiteDKA : MagicCard
+    {
+        public NephaliaSeakiteDKA()
+        {
+            Name = "Nephalia Seakite";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "3U";
+            PT = "2/3";
+            Type = "Creature - Bird";
+            Text = "Flash @(You may cast this spell any time you could cast an instant.)@;^Flying";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Niblis of the Breath
+    public class NiblisoftheBreathDKA : MagicCard
+    {
+        public NiblisoftheBreathDKA()
+        {
+            Name = "Niblis of the Breath";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "U";
+            Cost = "2U";
+            PT = "2/1";
+            Type = "Creature - Spirit";
+            Text = "Flying;^%U, %T: You may tap or untap target creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Niblis of the Mist
+    public class NiblisoftheMistDKA : MagicCard
+    {
+        public NiblisoftheMistDKA()
+        {
+            Name = "Niblis of the Mist";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "2W";
+            PT = "2/1";
+            Type = "Creature - Spirit";
+            Text = "Flying;^When Niblis of the Mist enters the battlefield, you may tap target creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Niblis of the Urn
+    public class NiblisoftheUrnDKA : MagicCard
+    {
+        public NiblisoftheUrnDKA()
+        {
+            Name = "Niblis of the Urn";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "W";
+            Cost = "1W";
+            PT = "1/1";
+            Type = "Creature - Spirit";
+            Text = "Flying;^Whenever Niblis of the Urn attacks, you may tap target creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Predator Ooze
+    public class PredatorOozeDKA : MagicCard
+    {
+        public PredatorOozeDKA()
+        {
+            Name = "Predator Ooze";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "G";
+            Cost = "GGG";
+            PT = "1/1";
+            Type = "Creature - Ooze";
+            Text = "Indestructible;^Whenever Predator Ooze attacks, put a +1/+1 counter on it.;^Whenever a creature dealt damage by Predator Ooze this turn dies, put a +1/+1 counter on Predator Ooze.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Pyreheart Wolf
+    public class PyreheartWolfDKA : MagicCard
+    {
+        public PyreheartWolfDKA()
+        {
+            Name = "Pyreheart Wolf";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "R";
+            Cost = "2R";
+            PT = "1/1";
+            Type = "Creature - Wolf";
+            Text = "Whenever Pyreheart Wolf attacks, each creature you control can�t be blocked this turn except by two or more creatures.;^Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Ravenous Demon/Archdemon of Greed
+    public class RavenousDemonArchdemonofGreedDKA : MagicCard
+    {
+        public RavenousDemonArchdemonofGreedDKA()
+        {
+            Name = "Ravenous Demon/Archdemon of Greed";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "B";
+            Cost = "3BB";
+            PT = "4/4|9/";
+            Type = "Creature - Demon/Creature - Demon";
+            Text = "Sacrifice a Human: Transform Ravenous Demon. Activate this ability only any time you could cast a sorcery.;^//;^Flying, trample;^At the beginning of your upkeep, sacrifice a Human. If you can�t, tap Archdemon of Greed and it deals 9 damage to you.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Ray of Revelation
+    public class RayofRevelationDKA : MagicCard
+    {
+        public RayofRevelationDKA()
+        {
+            Name = "Ray of Revelation";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "1W";
+            PT = "";
+            Type = "Instant";
+            Text = "Destroy target enchantment.;^Flashback %G @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Reap the Seagraf
+    public class ReaptheSeagrafDKA : MagicCard
+    {
+        public ReaptheSeagrafDKA()
+        {
+            Name = "Reap the Seagraf";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "2B";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Put a 2/2 black Zombie creature token onto the battlefield.;^Flashback %4%U @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Relentless Skaabs
+    public class RelentlessSkaabsDKA : MagicCard
+    {
+        public RelentlessSkaabsDKA()
+        {
+            Name = "Relentless Skaabs";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "U";
+            Cost = "3UU";
+            PT = "4/4";
+            Type = "Creature - Zombie";
+            Text = "As an additional cost to cast Relentless Skaabs, exile a creature card from your graveyard.;^Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Requiem Angel
+    public class RequiemAngelDKA : MagicCard
+    {
+        public RequiemAngelDKA()
+        {
+            Name = "Requiem Angel";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "W";
+            Cost = "5W";
+            PT = "5/5";
+            Type = "Creature - Angel";
+            Text = "Flying;^Whenever another non-Spirit creature you control dies, put a 1/1 white Spirit creature token with flying onto the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Russet Wolves
+    public class RussetWolvesDKA : MagicCard
+    {
+        public RussetWolvesDKA()
+        {
+            Name = "Russet Wolves";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "3R";
+            PT = "3/3";
+            Type = "Creature - Wolf";
+            Text = "";
+            Flavor = "�The wolves of our valley are bred to detest the scent of ghouls. For centuries they have kept our estates clear of such carrion.�;^�Olivia Voldaren";
+        }
+    }
+    # endregion
+
+    # region Sanctuary Cat
+    public class SanctuaryCatDKA : MagicCard
+    {
+        public SanctuaryCatDKA()
+        {
+            Name = "Sanctuary Cat";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "W";
+            PT = "1/2";
+            Type = "Creature - Cat";
+            Text = "";
+            Flavor = "Cats prowl the corridors of Avacyn�s churches in search of devils or signs of their mischief.";
+        }
+    }
+    # endregion
+
+    # region Saving Grasp
+    public class SavingGraspDKA : MagicCard
+    {
+        public SavingGraspDKA()
+        {
+            Name = "Saving Grasp";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "U";
+            PT = "";
+            Type = "Instant";
+            Text = "Return target creature you own to your hand.;^Flashback %W @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Scorch the Fields
+    public class ScorchtheFieldsDKA : MagicCard
+    {
+        public ScorchtheFieldsDKA()
+        {
+            Name = "Scorch the Fields";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "4R";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Destroy target land. Scorch the Fields deals 1 damage to each Human creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Scorned Villager/Moonscarred Werewolf
+    public class ScornedVillagerMoonscarredWerewolfDKA : MagicCard
+    {
+        public ScornedVillagerMoonscarredWerewolfDKA()
+        {
+            Name = "Scorned Villager/Moonscarred Werewolf";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "1G";
+            PT = "1/1|2/";
+            Type = "Creature - Human Werewolf/Creature - Werewolf";
+            Text = "%T: Add %G to your mana pool.;^At the beginning of each upkeep, if no spells were cast last turn, transform Scorned Villager.;^//;^Vigilance;^%T: Add %G%G to your mana pool.;^At the beginning of each upkeep, if a player cast two or more spells last turn, transform Moonscarred Werewolf.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Screeching Skaab
+    public class ScreechingSkaabDKA : MagicCard
+    {
+        public ScreechingSkaabDKA()
+        {
+            Name = "Screeching Skaab";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1U";
+            PT = "2/1";
+            Type = "Creature - Zombie";
+            Text = "When Screeching Skaab enters the battlefield, put the top two cards of your library into your graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Seance
+    public class SeanceDKA : MagicCard
+    {
+        public SeanceDKA()
+        {
+            Name = "Seance";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "W";
+            Cost = "2WW";
+            PT = "";
+            Type = "Enchantment";
+            Text = "At the beginning of each upkeep, you may exile target creature card from your graveyard. If you do, put a token onto the battlefield that�s a copy of that card except it�s a Spirit in addition to its other types. Exile it at the beginning of the next end step.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Secrets of the Dead
+    public class SecretsoftheDeadDKA : MagicCard
+    {
+        public SecretsoftheDeadDKA()
+        {
+            Name = "Secrets of the Dead";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "U";
+            Cost = "2U";
+            PT = "";
+            Type = "Enchantment";
+            Text = "Whenever you cast a spell from your graveyard, draw a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Shattered Perception
+    public class ShatteredPerceptionDKA : MagicCard
+    {
+        public ShatteredPerceptionDKA()
+        {
+            Name = "Shattered Perception";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "R";
+            Cost = "2R";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Discard all the cards in your hand, then draw that many cards.;^Flashback %5%R @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Shriekgeist
+    public class ShriekgeistDKA : MagicCard
+    {
+        public ShriekgeistDKA()
+        {
+            Name = "Shriekgeist";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1U";
+            PT = "1/1";
+            Type = "Creature - Spirit";
+            Text = "Flying;^Whenever Shriekgeist deals combat damage to a player, that player puts the top two cards of his or her library into his or her graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sightless Ghoul
+    public class SightlessGhoulDKA : MagicCard
+    {
+        public SightlessGhoulDKA()
+        {
+            Name = "Sightless Ghoul";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "3B";
+            PT = "2/2";
+            Type = "Creature - Zombie Soldier";
+            Text = "Sightless Ghoul can�t block.;^Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Silverclaw Griffin
+    public class SilverclawGriffinDKA : MagicCard
+    {
+        public SilverclawGriffinDKA()
+        {
+            Name = "Silverclaw Griffin";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "3WW";
+            PT = "3/2";
+            Type = "Creature - Griffin";
+            Text = "Flying, first strike";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Skillful Lunge
+    public class SkillfulLungeDKA : MagicCard
+    {
+        public SkillfulLungeDKA()
+        {
+            Name = "Skillful Lunge";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "W";
+            Cost = "1W";
+            PT = "";
+            Type = "Instant";
+            Text = "Target creature gets +2/+0 and gains first strike until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Skirsdag Flayer
+    public class SkirsdagFlayerDKA : MagicCard
+    {
+        public SkirsdagFlayerDKA()
+        {
+            Name = "Skirsdag Flayer";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "B";
+            Cost = "1B";
+            PT = "1/1";
+            Type = "Creature - Human Cleric";
+            Text = "%3%B, %T, Sacrifice a Human: Destroy target creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Somberwald Dryad
+    public class SomberwaldDryadDKA : MagicCard
+    {
+        public SomberwaldDryadDKA()
+        {
+            Name = "Somberwald Dryad";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "1G";
+            PT = "2/2";
+            Type = "Creature - Dryad";
+            Text = "Forestwalk @(This creature can�t be blocked as long as defending player controls a Forest.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sorin, Lord of Innistrad
+    public class SorinLordofInnistradDKA : MagicCard
+    {
+        public SorinLordofInnistradDKA()
+        {
+            Name = "Sorin, Lord of Innistrad";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "Gld";
+            Cost = "2WB";
+            PT = "%3/";
+            Type = "Planeswalker - Sorin";
+            Text = "+1: Put a 1/1 black Vampire creature token with lifelink onto the battlefield.;^-2: You get an emblem with �Creatures you control get +1/+0.�;^-6: Destroy up to three target creatures and/or other planeswalkers. Return each card put into a graveyard this way to the battlefield under your control.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Soul Seizer/Ghastly Haunting
+    public class SoulSeizerGhastlyHauntingDKA : MagicCard
+    {
+        public SoulSeizerGhastlyHauntingDKA()
+        {
+            Name = "Soul Seizer/Ghastly Haunting";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "U";
+            Cost = "3UU";
+            PT = "1/3|";
+            Type = "Creature - Spirit/Enchantment - Aura";
+            Text = "Flying;^When Soul Seizer deals combat damage to a player, you may transform it. If you do, attach it to target creature that player controls.;^//;^Enchant creature;^You control enchanted creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Spiteful Shadows
+    public class SpitefulShadowsDKA : MagicCard
+    {
+        public SpitefulShadowsDKA()
+        {
+            Name = "Spiteful Shadows";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "1B";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Whenever enchanted creature is dealt damage, it deals that much damage to its controller.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Stormbound Geist
+    public class StormboundGeistDKA : MagicCard
+    {
+        public StormboundGeistDKA()
+        {
+            Name = "Stormbound Geist";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1UU";
+            PT = "2/2";
+            Type = "Creature - Spirit";
+            Text = "Flying;^Stormbound Geist can block only creatures with flying.;^Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Strangleroot Geist
+    public class StranglerootGeistDKA : MagicCard
+    {
+        public StranglerootGeistDKA()
+        {
+            Name = "Strangleroot Geist";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "G";
+            Cost = "GG";
+            PT = "2/1";
+            Type = "Creature - Spirit";
+            Text = "Haste;^Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Stromkirk Captain
+    public class StromkirkCaptainDKA : MagicCard
+    {
+        public StromkirkCaptainDKA()
+        {
+            Name = "Stromkirk Captain";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "Gld";
+            Cost = "1BR";
+            PT = "2/2";
+            Type = "Creature - Vampire Soldier";
+            Text = "First strike;^Other Vampire creatures you control get +1/+1 and have first strike.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sudden Disappearance
+    public class SuddenDisappearanceDKA : MagicCard
+    {
+        public SuddenDisappearanceDKA()
+        {
+            Name = "Sudden Disappearance";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "W";
+            Cost = "5W";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Exile all nonland permanents target player controls. Return the exiled cards to the battlefield under their owner�s control at the beginning of the next end step.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Talons of Falkenrath
+    public class TalonsofFalkenrathDKA : MagicCard
+    {
+        public TalonsofFalkenrathDKA()
+        {
+            Name = "Talons of Falkenrath";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1R";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Flash @(You may cast this spell any time you could cast an instant.)@;^Enchant creature;^Enchanted creature has �%1%R: This creature gets +2/+0 until end of turn.�";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Thalia, Guardian of Thraben
+    public class ThaliaGuardianofThrabenDKA : MagicCard
+    {
+        public ThaliaGuardianofThrabenDKA()
+        {
+            Name = "Thalia, Guardian of Thraben";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "W";
+            Cost = "1W";
+            PT = "2/1";
+            Type = "Legendary Creature - Human Soldier";
+            Text = "First strike;^Noncreature spells cost %1 more to cast.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Thought Scour
+    public class ThoughtScourDKA : MagicCard
+    {
+        public ThoughtScourDKA()
+        {
+            Name = "Thought Scour";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "U";
+            Cost = "U";
+            PT = "";
+            Type = "Instant";
+            Text = "Target player puts the top two cards of his or her library into his or her graveyard.;^Draw a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Thraben Doomsayer
+    public class ThrabenDoomsayerDKA : MagicCard
+    {
+        public ThrabenDoomsayerDKA()
+        {
+            Name = "Thraben Doomsayer";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "W";
+            Cost = "1WW";
+            PT = "2/2";
+            Type = "Creature - Human Cleric";
+            Text = "%T: Put a 1/1 white Human creature token onto the battlefield.;^@Fateful hour@ � As long as you have 5 or less life, other creatures you control get +2/+2.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Thraben Heretic
+    public class ThrabenHereticDKA : MagicCard
+    {
+        public ThrabenHereticDKA()
+        {
+            Name = "Thraben Heretic";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "W";
+            Cost = "1W";
+            PT = "2/2";
+            Type = "Creature - Human Wizard";
+            Text = "%T: Exile target creature card from a graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Torch Fiend
+    public class TorchFiendDKA : MagicCard
+    {
+        public TorchFiendDKA()
+        {
+            Name = "Torch Fiend";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1R";
+            PT = "2/1";
+            Type = "Creature - Devil";
+            Text = "%R, Sacrifice Torch Fiend: Destroy target artifact.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Tower Geist
+    public class TowerGeistDKA : MagicCard
+    {
+        public TowerGeistDKA()
+        {
+            Name = "Tower Geist";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "U";
+            Cost = "3U";
+            PT = "2/2";
+            Type = "Creature - Spirit";
+            Text = "Flying;^When Tower Geist enters the battlefield, look at the top two cards of your library. Put one of them into your hand and the other into your graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Tracker's Instincts
+    public class TrackersInstinctsDKA : MagicCard
+    {
+        public TrackersInstinctsDKA()
+        {
+            Name = "Tracker's Instincts";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "G";
+            Cost = "1G";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Reveal the top four cards of your library. Put a creature card from among them into your hand and the rest into your graveyard.;^Flashback %2%U @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Tragic Slip
+    public class TragicSlipDKA : MagicCard
+    {
+        public TragicSlipDKA()
+        {
+            Name = "Tragic Slip";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "B";
+            PT = "";
+            Type = "Instant";
+            Text = "Target creature gets -1/-1 until end of turn.;^@Morbid@ � That creature gets -13/-13 until end of turn instead if a creature died this turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Ulvenwald Bear
+    public class UlvenwaldBearDKA : MagicCard
+    {
+        public UlvenwaldBearDKA()
+        {
+            Name = "Ulvenwald Bear";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2G";
+            PT = "2/2";
+            Type = "Creature - Bear";
+            Text = "@Morbid@ � When Ulvenwald Bear enters the battlefield, if a creature died this turn, put two +1/+1 counters on target creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Undying Evil
+    public class UndyingEvilDKA : MagicCard
+    {
+        public UndyingEvilDKA()
+        {
+            Name = "Undying Evil";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "B";
+            Cost = "B";
+            PT = "";
+            Type = "Instant";
+            Text = "Target creature gains undying until end of turn. @(When it dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Vault of the Archangel
+    public class VaultoftheArchangelDKA : MagicCard
+    {
+        public VaultoftheArchangelDKA()
+        {
+            Name = "Vault of the Archangel";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Land";
+            Text = "%T: Add %1 to your mana pool.;^%2%W%B, %T: Creatures you control gain deathtouch and lifelink until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Vengeful Vampire
+    public class VengefulVampireDKA : MagicCard
+    {
+        public VengefulVampireDKA()
+        {
+            Name = "Vengeful Vampire";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "B";
+            Cost = "4BB";
+            PT = "3/2";
+            Type = "Creature - Vampire";
+            Text = "Flying;^Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Village Survivors
+    public class VillageSurvivorsDKA : MagicCard
+    {
+        public VillageSurvivorsDKA()
+        {
+            Name = "Village Survivors";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "G";
+            Cost = "4G";
+            PT = "4/5";
+            Type = "Creature - Human";
+            Text = "Vigilance;^@Fateful hour@ � As long as you have 5 or less life, other creatures you control have vigilance.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Vorapede
+    public class VorapedeDKA : MagicCard
+    {
+        public VorapedeDKA()
+        {
+            Name = "Vorapede";
+            Edition = "DKA";
+            Rarity = "M";
+            Color = "G";
+            Cost = "2GGG";
+            PT = "5/4";
+            Type = "Creature - Insect";
+            Text = "Vigilance, trample;^Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Wakedancer
+    public class WakedancerDKA : MagicCard
+    {
+        public WakedancerDKA()
+        {
+            Name = "Wakedancer";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "B";
+            Cost = "2B";
+            PT = "2/2";
+            Type = "Creature - Human Shaman";
+            Text = "@Morbid@ � When Wakedancer enters the battlefield, if a creature died this turn, put a 2/2 black Zombie creature token onto the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Warden of the Wall
+    public class WardenoftheWallDKA : MagicCard
+    {
+        public WardenoftheWallDKA()
+        {
+            Name = "Warden of the Wall";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "3";
+            PT = "";
+            Type = "Artifact";
+            Text = "Warden of the Wall enters the battlefield tapped.;^%T: Add %1 to your mana pool.;^As long as it�s not your turn, Warden of the Wall is a 2/3 Gargoyle artifact creature with flying.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Wild Hunger
+    public class WildHungerDKA : MagicCard
+    {
+        public WildHungerDKA()
+        {
+            Name = "Wild Hunger";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2G";
+            PT = "";
+            Type = "Instant";
+            Text = "Target creature gets +3/+1 and gains trample until end of turn.;^Flashback %3%R @(You may cast this card from your graveyard for its flashback cost. Then exile it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Wolfbitten Captive/Krallenhorde Killer
+    public class WolfbittenCaptiveKrallenhordeKillerDKA : MagicCard
+    {
+        public WolfbittenCaptiveKrallenhordeKillerDKA()
+        {
+            Name = "Wolfbitten Captive/Krallenhorde Killer";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "G";
+            Cost = "G";
+            PT = "1/1|2/";
+            Type = "Creature - Human Werewolf/Creature - Werewolf";
+            Text = "%1%G: Wolfbitten Captive gets +2/+2 until end of turn. Activate this ability only once each turn.;^At the beginning of each upkeep, if no spells were cast last turn, transform Wolfbitten Captive.;^//;^%3%G: Krallenhorde Killer gets +4/+4 until end of turn. Activate this ability only once each turn.;^At the beginning of each upkeep, if a player cast two or more spells last turn, transform Krallenhorde Killer.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Wolfhunter's Quiver
+    public class WolfhuntersQuiverDKA : MagicCard
+    {
+        public WolfhuntersQuiverDKA()
+        {
+            Name = "Wolfhunter's Quiver";
+            Edition = "DKA";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "1";
+            PT = "";
+            Type = "Artifact - Equipment";
+            Text = "Equipped creature has �%T: This creature deals 1 damage to target creature or player� and �%T: This creature deals 3 damage to target Werewolf creature.�;^Equip %5";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Wrack with Madness
+    public class WrackwithMadnessDKA : MagicCard
+    {
+        public WrackwithMadnessDKA()
+        {
+            Name = "Wrack with Madness";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "R";
+            Cost = "3R";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target creature deals damage to itself equal to its power.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Young Wolf
+    public class YoungWolfDKA : MagicCard
+    {
+        public YoungWolfDKA()
+        {
+            Name = "Young Wolf";
+            Edition = "DKA";
+            Rarity = "C";
+            Color = "G";
+            Cost = "G";
+            PT = "1/1";
+            Type = "Creature - Wolf";
+            Text = "Undying @(When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner�s control with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Zombie Apocalypse
+    public class ZombieApocalypseDKA : MagicCard
+    {
+        public ZombieApocalypseDKA()
+        {
+            Name = "Zombie Apocalypse";
+            Edition = "DKA";
+            Rarity = "R";
+            Color = "B";
+            Cost = "3BBB";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Return all Zombie creature cards from your graveyard to the battlefield tapped, then destroy all Humans.";
+            Flavor = "";
+        }
+    }
+    # endregion
+    # endregion
+
     # region Avacyn Restored
     # region Abundant Growth
     public class AbundantGrowthAVR : MagicCard
@@ -4235,5 +7122,4 @@ namespace MagicProgram
     }
     # endregion
     # endregion
-
 }

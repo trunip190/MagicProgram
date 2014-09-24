@@ -147,7 +147,11 @@ namespace MagicProgram
         public bool Paused = false;
         public MagicCard CurrentCard;
 
-        public CardCollection Cards = new CardCollection();
+        # region Cards
+        [Browsable(true), Description("Cards linked to this control")]
+        public CardCollection Cards { get { return _cards; } set { _cards = value; } }
+        private CardCollection _cards = new CardCollection();
+        # endregion
         # endregion
 
         # region private attributes
@@ -159,7 +163,7 @@ namespace MagicProgram
         public delegate void CardChosen(MagicCard mc, MouseEventArgs e);
         public delegate void CountersChosen(int value, Dictionary<MagicCard, int> sources);
         public delegate void CardsChosen(List<MagicCard> sources);
-
+                
         public event CardChosen CardClicked;
         public event CardChosen CardDoubleClicked;
         public event PassiveEvent ChoseCard;
@@ -326,8 +330,8 @@ namespace MagicProgram
             foreach (MagicCardViewer mcv in mControls)
             {
                 mcv.DrawQuantity();
-                mcv.CardDeleted -= mcv_CardDeleted;
-                mcv.CardDeleted += new MagicCardViewer.MagicCardViewerEvent(mcv_CardDeleted);
+                //mcv.CardDeleted -= mcv_CardDeleted;
+                //mcv.CardDeleted += new MagicCardViewer.MagicCardViewerEvent(mcv_CardDeleted);
 
                 SetIndAction(mcv);
             }
@@ -337,6 +341,7 @@ namespace MagicProgram
         {
             CardDict.Clear();
             int i = 0;
+            Debug.WriteLine("Card deleted in {0}", Name);
             foreach (MagicCardViewer mcvs in mControls)
             {
                 foreach (MagicCard mc in mcvs.cards)
@@ -413,12 +418,21 @@ namespace MagicProgram
 
             for (int i = 0; i < mControls.Count; i++)
             {
-                if (mControls[i].mc == card)
+                MagicCardViewer mcv = mControls[i];
+                if (mcv.mc == card)
                 {
-                    mControls[i].RemoveCard(card);
-                    mControls[i].Dispose();
-                    mControls.RemoveAt(i);
+                    mcv.RemoveCard(card);
+                    mcv.Dispose();
+                    mControls.Remove(mcv);
+                    
+                    //remove all handlers
+                    mcv.MouseClick += new MouseEventHandler(mcv_MouseClick);
+                    mcv.MouseDoubleClick += new MouseEventHandler(mcv_MouseDoubleClick);
+                    mcv.CardChanged += new MagicCardViewer.MagicCardViewerEvent(mcv_CardChanged);
+                    mcv.CardChosen += new PassiveEvent(callChoseCard);
+                    mcv.CardDeleted -= mcv_CardDeleted;
                     break;
+                    //continue;
                 }
             }
 
@@ -519,14 +533,35 @@ namespace MagicProgram
             mcv.cards.Add(mc);
             mcv.LoadCard(mc);
 
+            string str = this.Name + mc.Name;
+            # region link events
+            mcv.MouseClick -= (mcv_MouseClick);
             mcv.MouseClick += new MouseEventHandler(mcv_MouseClick);
+
+            mcv.MouseDoubleClick -= (mcv_MouseDoubleClick);
             mcv.MouseDoubleClick += new MouseEventHandler(mcv_MouseDoubleClick);
+
+            mcv.CardChanged -= (mcv_CardChanged);
             mcv.CardChanged += new MagicCardViewer.MagicCardViewerEvent(mcv_CardChanged);
+
+            mcv.CardChosen -= (callChoseCard);
             mcv.CardChosen += new PassiveEvent(callChoseCard);
+
+            mcv.CardDeleted -= mcv_CardDeleted;
+            mcv.CardDeleted += new MagicCardViewer.MagicCardViewerEvent(mcv_CardDeleted);
+
+            mcv.cards[0].Destroyed += new PassiveEvent(CardArea_Destroyed);
+            # endregion
+
             Controls.Add(mcv);
             mControls.Add(mcv);
             mcv.BringToFront();
             return mcv;
+        }
+
+        void CardArea_Destroyed(MagicCard mc)
+        {
+            //throw new NotImplementedException();
         }
         # endregion
 
@@ -697,9 +732,12 @@ namespace MagicProgram
                 else
                 {
                     callCardClicked(mcv.mc, e);
+                    //TODO remove this line
+                    mcv.cards[0].callSacrifice();
                     BringToFront();
                 }
             }
+
 
         }
 

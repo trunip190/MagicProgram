@@ -561,6 +561,19 @@ namespace MagicProgram
             Text = "Put a 3/3 green Centaur creature token onto the battlefield.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            MagicCard mc = new MagicCard
+            {
+                Name = "Centaur",
+                Type = "Creature - Centaur",
+                PT = "3/3",
+                Color = "Green",
+                Token = true,
+            };
+            PArea.PlayToken(mc);
+        }
     }
     # endregion
 
