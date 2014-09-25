@@ -1622,7 +1622,7 @@ namespace MagicProgram
         public override void Resolve()
         {
             List<MagicCard> cards = PArea._stack.cards.Where(o => o.Type.Contains("Basic Land") || o.Type.Contains("Gate")).ToList();
-            PArea.callPickCards(cards);
+            PArea.callPickCardsHands(cards);
         }
     }
     # endregion

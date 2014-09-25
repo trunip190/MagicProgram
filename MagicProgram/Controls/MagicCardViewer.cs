@@ -188,7 +188,7 @@ namespace MagicProgram
         protected void callCardDeleted()
         {
             MagicCardViewerEvent handler = CardDeleted;
-            //doesn't seem to get linked for some reason...
+            //seems to get unlinked for some reason.
             if (handler != null)
             {
                 handler(this);
@@ -250,9 +250,15 @@ namespace MagicProgram
 
         void card_Destroyed(MagicCard mc)
         {
+            if (cards.Contains(mc))
+            {
+                cards.Remove(mc);
+            }
+
             if (cards.Count < 1)
             {
                 callCardDeleted();
+                Dispose();
             }
         }
 

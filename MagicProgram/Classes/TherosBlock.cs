@@ -8154,7 +8154,7 @@ namespace MagicProgram
         public override void Resolve()
         {
             List<MagicCard> cards = PArea._graveyard.cards.Where(o => o.Type.Contains("Instant") || o.Type.Contains("Sorcery")).ToList();
-            PArea.callPickCards(cards);
+            PArea.callPickCardsHands(cards);
         }
     }
     # endregion

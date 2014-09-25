@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeckTest));
             MagicProgram.ColourCost colourCost1 = new MagicProgram.ColourCost();
             MagicProgram.ColourCost colourCost2 = new MagicProgram.ColourCost();
+            MagicProgram.CardCollection cardCollection1 = new MagicProgram.CardCollection();
+            MagicProgram.CardCollection cardCollection2 = new MagicProgram.CardCollection();
+            MagicProgram.CardCollection cardCollection3 = new MagicProgram.CardCollection();
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Murmuring Phantasm (0,5) (0)");
             this.imageListHand = new System.Windows.Forms.ImageList(this.components);
             this.imageListPlay = new System.Windows.Forms.ImageList(this.components);
@@ -726,6 +729,7 @@
             this.cardAreaPlay.AutoScroll = true;
             this.cardAreaPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cardAreaPlay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cardAreaPlay.Cards = cardCollection1;
             this.cardAreaPlay.CardSize = MagicProgram.CSize.Small;
             this.cardAreaPlay.ChooseCard = true;
             this.cardAreaPlay.Discard = false;
@@ -760,6 +764,7 @@
             this.cardAreaLand.AutoScroll = true;
             this.cardAreaLand.BackColor = System.Drawing.Color.White;
             this.cardAreaLand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cardAreaLand.Cards = cardCollection2;
             this.cardAreaLand.CardSize = MagicProgram.CSize.vSmall;
             this.cardAreaLand.ChooseCard = false;
             this.cardAreaLand.Discard = false;
@@ -860,6 +865,7 @@
             this.cardAreaHand.AutoScroll = true;
             this.cardAreaHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cardAreaHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cardAreaHand.Cards = cardCollection3;
             this.cardAreaHand.CardSize = MagicProgram.CSize.Small;
             this.cardAreaHand.ChooseCard = true;
             this.cardAreaHand.ChooseCardString = "Play";
@@ -1028,7 +1034,8 @@
             this.PlArea.CardUsed += new MagicProgram.PassiveEvent(this.PlArea_CardUsed);
             this.PlArea.CardDrawn += new MagicProgram.PassiveEvent(this.PlArea_CardDrawn);
             this.PlArea.onScry += new MagicProgram.Controls.PlayArea.ValueEvent(this.PlArea_onScry);
-            this.PlArea.onPickCards += new MagicProgram.Controls.PlayArea.CardsPicked(this.PlArea_onPickCards);
+            this.PlArea.onPickCardsHand += new MagicProgram.Controls.PlayArea.CardsPicked(this.PlArea_onPickCardsHand);
+            this.PlArea.onPickCardsUse += new MagicProgram.Controls.PlayArea.CardsPicked(this.PlArea_onPickCardsUse);
             // 
             // OppArea
             // 

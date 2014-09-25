@@ -1,24 +1,25 @@
-Doomed Traveler#2
-Vitu-Ghazi Guildmage#2
 Champion of Lambholt#1
-Wayfaring Temple#1
-Odric, Master Tactician#1
-Geist-Honored Monk#1
-Rancor#2
-Wake the Reflections#4
+Doomed Traveler#2
 Intangible Virtue#4
-Call of the Conclave#4
-Selesnya Charm#4
-Lingering Souls#3
-Rootborn Defenses#3
-Parallel Lives#1
+Wake the Reflections#3
 Advent of the Wurm#1
-Growing Ranks#1
+Alive/Well#3
+Lingering Souls#3
 Increasing Devotion#1
-Evolving Wilds#4
 Godless Shrine#1
-Grove of the Guardian#1
-Selesnya Guildgate#4
+Geist-Honored Monk#1
+Parallel Lives#1
 Plains#7
 Swamp#1
 Forest#6
+Odric, Master Tactician#1
+Evolving Wilds#4
+Vitu-Ghazi Guildmage#2
+Wayfaring Temple#1
+Call of the Conclave#3
+Selesnya Charm#4
+Rootborn Defenses#2
+Growing Ranks#1
+Grove of the Guardian#1
+Selesnya Guildgate#4
+Rancor#2

@@ -155,6 +155,7 @@ namespace MagicProgram
             string st = card.Name.ToUpper().Trim();
             index();
 
+            # region already in link
             if (link.ContainsKey(st))
             {
                 int i = link[st];
@@ -173,11 +174,14 @@ namespace MagicProgram
                     result = true;
                 }
             }
+            # endregion
+            # region 
             else
             {
                 link.Add(st, cards.Count);
                 cards.Add(card);
             }
+            # endregion
 
             callCardAdded(card);
             index();

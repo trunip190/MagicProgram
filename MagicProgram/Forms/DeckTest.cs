@@ -3402,7 +3402,7 @@ namespace MagicProgram
             Scry(value);
         }
 
-        private void PlArea_onPickCards(List<MagicCard> cards)
+        private void PlArea_onPickCardsHand(List<MagicCard> cards)
         {
             comboCardPicker_Fill(cards);
             CardChosen += new PassiveEvent(CardChosen_ToHand);
@@ -3417,6 +3417,12 @@ namespace MagicProgram
                 update_listViewHand();
             }
             CardChosen -= CardChosen_ToHand;
+        }
+
+        private void PlArea_onPickCardsUse(List<MagicCard> cards)
+        {
+            comboCardPicker_Fill(cards);
+            CardChosen += new PassiveEvent(CardChosen_Play);
         }
     }
 

@@ -108,7 +108,8 @@ namespace MagicProgram.Controls
         public event PassiveEvent CreatureEntered;
         public event ValueChanged onDamageOpponent;
         public event ValueEvent onScry;
-		public event CardsPicked onPickCards;
+        public event CardsPicked onPickCardsHand;
+        public event CardsPicked onPickCardsUse;
         # endregion
 
         # region handlers
@@ -190,14 +191,22 @@ namespace MagicProgram.Controls
                 handler(mc, value);
             }
         }
-        public void callPickCards(List<MagicCard> cards)
+        public void callPickCardsHands(List<MagicCard> cards)
 		{
-			CardsPicked handler = onPickCards;
+			CardsPicked handler = onPickCardsHand;
 			if ( handler != null )
 			{
 				handler(cards);
 			}
 		}
+        public void callPickCardsUse(List<MagicCard> cards)
+        {
+            CardsPicked handler = onPickCardsUse;
+            if (handler != null)
+            {
+                handler(cards);
+            }
+        }
 		# endregion
         # endregion
 

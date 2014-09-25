@@ -755,7 +755,7 @@ namespace MagicProgram
 
             callSacrifice();
             List<MagicCard> list = PArea._stack.cards.Where(o => o.Type.Contains("Basic Land")).ToList();
-            PArea.callPickCards(list);
+            PArea.callPickCardsUse(list);
 
             return true;
         }

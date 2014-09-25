@@ -257,6 +257,8 @@ namespace MagicProgram
                 return;
             }
 
+            Debug.WriteLine("updating all", Name);
+
             # region preparation
             Cards.cards = CardMethods.SplitCardList(Cards.cards);
 
@@ -330,6 +332,7 @@ namespace MagicProgram
             foreach (MagicCardViewer mcv in mControls)
             {
                 mcv.DrawQuantity();
+                LinkEvents(mcv);
                 //mcv.CardDeleted -= mcv_CardDeleted;
                 //mcv.CardDeleted += new MagicCardViewer.MagicCardViewerEvent(mcv_CardDeleted);
 
@@ -535,6 +538,17 @@ namespace MagicProgram
 
             string str = this.Name + mc.Name;
             # region link events
+            LinkEvents(mcv);
+            # endregion
+
+            Controls.Add(mcv);
+            mControls.Add(mcv);
+            mcv.BringToFront();
+            return mcv;
+        }
+
+        private void LinkEvents(MagicCardViewer mcv)
+        {
             mcv.MouseClick -= (mcv_MouseClick);
             mcv.MouseClick += new MouseEventHandler(mcv_MouseClick);
 
@@ -549,19 +563,6 @@ namespace MagicProgram
 
             mcv.CardDeleted -= mcv_CardDeleted;
             mcv.CardDeleted += new MagicCardViewer.MagicCardViewerEvent(mcv_CardDeleted);
-
-            mcv.cards[0].Destroyed += new PassiveEvent(CardArea_Destroyed);
-            # endregion
-
-            Controls.Add(mcv);
-            mControls.Add(mcv);
-            mcv.BringToFront();
-            return mcv;
-        }
-
-        void CardArea_Destroyed(MagicCard mc)
-        {
-            //throw new NotImplementedException();
         }
         # endregion
 
@@ -762,7 +763,14 @@ namespace MagicProgram
 
         private void LandArea_MouseClick(object sender, MouseEventArgs e)
         {
+            if (e.Button == MouseButtons.Right)
+            {
+                DrawAllCards();
+                foreach (MagicCard mc in Cards.cards)
+                {
 
+                }
+            }
         }
 
         private void CardArea_KeyUp(object sender, KeyEventArgs e)
