@@ -333,8 +333,6 @@ namespace MagicProgram
             {
                 mcv.DrawQuantity();
                 LinkEvents(mcv);
-                //mcv.CardDeleted -= mcv_CardDeleted;
-                //mcv.CardDeleted += new MagicCardViewer.MagicCardViewerEvent(mcv_CardDeleted);
 
                 SetIndAction(mcv);
             }
@@ -733,8 +731,6 @@ namespace MagicProgram
                 else
                 {
                     callCardClicked(mcv.mc, e);
-                    //TODO remove this line
-                    mcv.cards[0].callSacrifice();
                     BringToFront();
                 }
             }

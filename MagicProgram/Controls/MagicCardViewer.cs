@@ -188,7 +188,6 @@ namespace MagicProgram
         protected void callCardDeleted()
         {
             MagicCardViewerEvent handler = CardDeleted;
-            //seems to get unlinked for some reason.
             if (handler != null)
             {
                 handler(this);

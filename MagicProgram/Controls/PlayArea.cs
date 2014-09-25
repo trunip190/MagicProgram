@@ -483,8 +483,15 @@ namespace MagicProgram.Controls
             callSpellRes(mc);
 
             mc.Activating += new MagicCard.ValueAbility(mc_Activating);
-            mc.Discard += new PassiveEvent(Play_Discard);
-            mc.Destroyed += new PassiveEvent(Play_Destroyed);
+            if (_play.cards.Contains(mc))
+            {
+                mc.Discard += new PassiveEvent(Play_Discard);
+                mc.Destroyed += new PassiveEvent(Play_Destroyed);
+            }
+            if (_lands.cards.Contains(mc))
+            {
+                mc.Destroyed += new PassiveEvent(Land_Destroyed);
+            }
 
             if (mc.Type.Contains("Creature"))
             {
@@ -560,7 +567,7 @@ namespace MagicProgram.Controls
 
         void mc_OnEquip(MagicCard mc)
         {
-            _play.cards.Remove(mc);
+            _play.Remove(mc);
             mc.OnEquip -= mc_OnEquip;
         }
 
@@ -569,6 +576,7 @@ namespace MagicProgram.Controls
             PlayCard(mc);
         }
 
+        # region Card events
         void Play_Destroyed(MagicCard mc)
         {
             foreach (MagicCard mca in mc.attachedCards)
@@ -577,40 +585,18 @@ namespace MagicProgram.Controls
             }
             CheckGrave(mc);
 
-            _play.cards.Remove(mc);
+            _play.Remove(mc);
         }
 
-        private bool CheckGrave(MagicCard mc)
+        void Land_Destroyed(MagicCard mc)
         {
-            bool toGrave = true;
-            if (mc.Name == "Rancor")
+            foreach (MagicCard mca in mc.attachedCards)
             {
-                MagicCard mcv = new MagicCard(mc);
-                _hand.cards.Add(mcv);
-                mcv.Location = "Hand";
-                toGrave = false;
+                CheckGrave(mca);    //place card in appropriate place                
             }
-            if (mc.Type.Contains("Equipment"))
-            {
-                _play.Add(mc);
-                mc.OnEquip += new PassiveEvent(mc_OnEquip);
-                toGrave = false;
-            }
-            if (mc.Text.Contains("Bestow") && mc.Type.Contains("Aura"))
-            {
-                _play.Add(mc);
-                mc.Type = "Enchantment Creature";
-                mc.Text = mc.Text.Replace("\r\nEnchant creature", "");
-                toGrave = false;
-            }
+            CheckGrave(mc);
 
-            if (toGrave)
-            {
-                _graveyard.Add(mc.Copy());
-                toGrave = true;
-            }
-
-            return toGrave;
+            _lands.Remove(mc);
         }
 
         void Play_Discard(MagicCard mc)
@@ -621,7 +607,7 @@ namespace MagicProgram.Controls
             }
             CheckGrave(mc);
 
-            _play.cards.Remove(mc);
+            _play.Remove(mc);
 
             mc.callDie();
         }
@@ -675,6 +661,40 @@ namespace MagicProgram.Controls
             mana.Subtract(c);
 
             mc.callActivate(index);
+        }
+        # endregion
+
+        private bool CheckGrave(MagicCard mc)
+        {
+            bool toGrave = true;
+            if (mc.Name == "Rancor")
+            {
+                MagicCard mcv = new MagicCard(mc);
+                _hand.cards.Add(mcv);
+                mcv.Location = "Hand";
+                toGrave = false;
+            }
+            if (mc.Type.Contains("Equipment"))
+            {
+                _play.Add(mc);
+                mc.OnEquip += new PassiveEvent(mc_OnEquip);
+                toGrave = false;
+            }
+            if (mc.Text.Contains("Bestow") && mc.Type.Contains("Aura"))
+            {
+                _play.Add(mc);
+                mc.Type = "Enchantment Creature";
+                mc.Text = mc.Text.Replace("\r\nEnchant creature", "");
+                toGrave = false;
+            }
+
+            if (toGrave)
+            {
+                _graveyard.Add(mc.Copy());
+                toGrave = true;
+            }
+
+            return toGrave;
         }
 
         private bool CheckLandType(string type, int count)

@@ -3250,6 +3250,8 @@ namespace MagicProgram
     # region Rootborn Defenses
     public class RootbornDefenses : MagicCard
     {
+        public MagicCard target = new MagicCard();
+
         public RootbornDefenses()
         {
             Name = "Rootborn Defenses";
@@ -3261,6 +3263,14 @@ namespace MagicProgram
             Type = "Instant";
             Text = "Populate. Creatures you control gain indestructible until end of turn. @(To populate, put a token onto the battlefield that's a copy of a creature token you control. Damage and effects that say 'destroy' don't destroy creatures with indestructible.)@";
             Flavor = "";
+        }
+
+        public override void Resolve()
+        {
+            MagicCard mct = CardMethods.GetClass(target);
+            mct.Token = true;
+
+            PArea.PlayToken(mct);
         }
     }
     # endregion
@@ -3405,6 +3415,24 @@ namespace MagicProgram
             Type = "Instant";
             Text = "Choose one ' Target creature gets +2/+2 and gains trample until end of turn; or exile target creature with power 5 or greater; or put a 2/2 white Knight creature token with vigilance onto the battlefield.";
             Flavor = "";
+        }
+
+        public override void Resolve()
+        {
+            if (PArea == null)
+            {
+                return;
+            }
+
+            MagicCard mc = new MagicCard
+            {
+                Name = "Knight",
+                Type = "Creature - Knight",
+                PT = "2/2",
+                Color = "W",
+                Token = true,
+            };
+            PArea.PlayToken(mc);
         }
     }
     # endregion

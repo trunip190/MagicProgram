@@ -85,6 +85,7 @@
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportDeckListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.convertSavesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.largeIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smallIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,7 +100,7 @@
             this.testDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.convertSavesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateImagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.collapsablePanel2.WorkingArea.SuspendLayout();
             this.collapsablePanel2.SuspendLayout();
@@ -626,6 +627,13 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // convertSavesToolStripMenuItem
+            // 
+            this.convertSavesToolStripMenuItem.Name = "convertSavesToolStripMenuItem";
+            this.convertSavesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.convertSavesToolStripMenuItem.Text = "Convert Saves";
+            this.convertSavesToolStripMenuItem.Click += new System.EventHandler(this.convertSavesToolStripMenuItem_Click);
+            // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -678,7 +686,8 @@
             this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setImageLocationToolStripMenuItem,
             this.updateCardImagesToolStripMenuItem,
-            this.updateDatabaseToolStripMenuItem});
+            this.updateDatabaseToolStripMenuItem,
+            this.updateImagesToolStripMenuItem});
             this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
             this.databaseToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.databaseToolStripMenuItem.Text = "Settings";
@@ -735,12 +744,12 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // convertSavesToolStripMenuItem
+            // updateImagesToolStripMenuItem
             // 
-            this.convertSavesToolStripMenuItem.Name = "convertSavesToolStripMenuItem";
-            this.convertSavesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.convertSavesToolStripMenuItem.Text = "Convert Saves";
-            this.convertSavesToolStripMenuItem.Click += new System.EventHandler(this.convertSavesToolStripMenuItem_Click);
+            this.updateImagesToolStripMenuItem.Name = "updateImagesToolStripMenuItem";
+            this.updateImagesToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.updateImagesToolStripMenuItem.Text = "Update Images";
+            this.updateImagesToolStripMenuItem.Click += new System.EventHandler(this.updateImagesToolStripMenuItem_Click_1);
             // 
             // Form1
             // 
@@ -843,6 +852,7 @@
         private CollapsiblePanel collapsablePanel2;
         private CollapsiblePanel collapsablePanel1;
         private System.Windows.Forms.ToolStripMenuItem convertSavesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateImagesToolStripMenuItem;
     }
 }
 

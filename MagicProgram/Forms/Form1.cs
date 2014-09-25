@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
@@ -936,14 +937,12 @@ namespace MagicProgram
                     foreach (string s in Directory.GetFiles(p))
                     {
                         string filename = Path.GetFileNameWithoutExtension(s).ToUpper();
-                        //filename = filename.Replace(p.ToUpper(), "");
                         filename = filename.Replace("’", "'");
-                        //filename = filename.Replace(".JPG", "");
                         filename = filename.Replace("\\", "");
 
                         if (!Lib.image.ContainsKey(filename))
                         {
-                            Lib.image.Add(filename, s);    //add filename to List<string> image
+                            Lib.image.Add(filename, s);
                         }
                     }
                 }
@@ -1017,13 +1016,59 @@ namespace MagicProgram
                     mc.set(fetchImage(mc.Name));
                 }
             }
+
+            List<MagicCard> missing = new List<MagicCard>();
             foreach (MagicCard mc in Deck.cards)
             {
                 if (!File.Exists(mc.imgLoc))
                 {
-                    mc.set(fetchImage(mc.Name));
+                    string s = fetchImage(mc.Name);
+                    if (!File.Exists(s))
+                    {
+                        missing.Add(mc);
+                    }
+                    mc.set(s);
                 }
             }
+
+            foreach (MagicCard mct in missing)
+            {
+                DownloadImage(mct);
+            }
+        }
+
+        private void DownloadImage(MagicCard mct)
+        {
+            WebClient client = new WebClient();
+
+            //get location of file to download
+            string lnk = "http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+[" + mct.Name.Replace(" ", "%20") + "]";
+            string str = client.DownloadString(lnk);
+            string[] split = str.Split(new string[] { "Details.aspx?multiverseid=", "\" id=\"aspnetForm\"" }, StringSplitOptions.RemoveEmptyEntries);
+            str = "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + split[1].Trim() + "&type=card";
+
+            //set and check download location
+
+            string location = Properties.Settings.Default.ImageLoc + "\\" + mct.Edition + "\\";
+            string fileLoc = location + mct.Name + ".jpg";
+            //string location = @"c:\users\soi\downloads\magic cards\" + mct.Edition + "\\";
+
+            if (!Directory.Exists(location))
+            {
+                Directory.CreateDirectory(location);
+            }
+
+            try
+            {
+                client.DownloadFile(str, fileLoc);
+                Debug.WriteLine(str);
+
+                if (!Lib.image.ContainsKey(mct.Name))
+                {
+                    Lib.image.Add(mct.Name, fileLoc);
+                }
+            }
+            catch { }
         }
         # endregion
 
@@ -1546,6 +1591,11 @@ namespace MagicProgram
             {
                 ConvertSaves(fbd.SelectedPath);
             }
+        }
+
+        private void updateImagesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            LoadImages();
         }
     }
 }
