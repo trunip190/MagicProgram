@@ -10634,6 +10634,18 @@ namespace MagicProgram
             Text = "Enchant artifact^Enchanted artifact is a creature with base power and toughness 5/5 in addition to its other types.";
             Flavor = "";
         }
+
+        public override List<string> getStats()
+        {
+            List<string> result = new List<string>();
+
+            if (Parent != null)
+            {
+                Parent.PT = "5/5";
+            }
+
+            return result;
+        }
     }
     # endregion
 

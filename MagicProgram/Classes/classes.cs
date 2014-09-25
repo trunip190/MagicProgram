@@ -3082,7 +3082,7 @@ namespace MagicProgram
         /// Returns a string list of all the enchancements that the card provides when attached
         /// </summary>
         /// <returns>The enhancements it provides when attached to another card</returns>
-        public List<string> getStats()
+        public virtual List<string> getStats()
         {
             List<string> result = new List<string>();
 

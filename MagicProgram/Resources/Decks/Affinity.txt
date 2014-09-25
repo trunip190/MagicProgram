@@ -1,15 +1,16 @@
-Sol Ring#3
-Cranial Plating#4
 Memnite#4
-Frogmite#4
-Vault Skirge#4
-Plague Myr#4
-Arcbound Slith#3
 Ornithopter#4
 Darksteel Citadel#4
 Seat of the Synod#4
-Island#7
-Mountain#4
-Ensoul Artifact#4
+Island#4
+Great Furnace#4
+Vault of Whispers#3
+Sol Ring#3
 Galvanic Blast#3
+Cranial Plating#4
+Plague Myr#4
+Arcbound Slith#3
+Ensoul Artifact#4
+Vault Skirge#4
+Frogmite#4
 Thoughtcast#4
