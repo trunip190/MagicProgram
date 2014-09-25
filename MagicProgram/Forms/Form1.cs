@@ -1037,38 +1037,46 @@ namespace MagicProgram
             }
         }
 
-        private void DownloadImage(MagicCard mct)
+        private void DownloadImage(MagicCard mc)
         {
-            WebClient client = new WebClient();
+            MagicCard mct = CardMethods.GetClass(mc);
 
             //get location of file to download
             string lnk = "http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+[" + mct.Name.Replace(" ", "%20") + "]";
-            string str = client.DownloadString(lnk);
-            string[] split = str.Split(new string[] { "Details.aspx?multiverseid=", "\" id=\"aspnetForm\"" }, StringSplitOptions.RemoveEmptyEntries);
-            str = "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + split[1].Trim() + "&type=card";
 
-            //set and check download location
-
-            string location = Properties.Settings.Default.ImageLoc + "\\" + mct.Edition + "\\";
-            string fileLoc = location + mct.Name + ".jpg";
-            //string location = @"c:\users\soi\downloads\magic cards\" + mct.Edition + "\\";
-
-            if (!Directory.Exists(location))
+            using (WebClient client = new WebClient())
             {
-                Directory.CreateDirectory(location);
-            }
-
-            try
-            {
-                client.DownloadFile(str, fileLoc);
-                Debug.WriteLine(str);
-
-                if (!Lib.image.ContainsKey(mct.Name))
+                try
                 {
-                    Lib.image.Add(mct.Name, fileLoc);
+                    # region download page details
+                    string str = client.DownloadString(lnk);
+                    string[] split = str.Split(new string[] { "Details.aspx?multiverseid=", "\" id=\"aspnetForm\"" }, StringSplitOptions.RemoveEmptyEntries);
+                    str = "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + split[1].Trim() + "&type=card";
+                    # endregion
+
+                    # region set and check download location
+                    string location = Properties.Settings.Default.ImageLoc + "\\" + mct.Edition + "\\";
+                    string fileLoc = location + mct.Name + ".jpg";
+                    # endregion
+
+                    # region Make sure directory exists
+                    if (!Directory.Exists(location))
+                    {
+                        Directory.CreateDirectory(location);
+                    }
+                    # endregion
+
+                    # region Download & add to image library
+                    client.DownloadFile(str, fileLoc);
+                    if (!Lib.image.ContainsKey(mct.Name))
+                    {
+                        Lib.image.Add(mct.Name, fileLoc);
+                    }
+                    # endregion
+
                 }
+                catch { }
             }
-            catch { }
         }
         # endregion
 

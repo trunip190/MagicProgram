@@ -1304,7 +1304,7 @@
 		<Cost />
 		<PT />
 		<Type>Basic Land - Forest</Type>
-		<Text>G</Text>
+		<Text>%T: Add G to your mana pool</Text>
 		<Flavor />
 		<Token>false</Token>
 		<quantity>1</quantity>
@@ -1676,7 +1676,7 @@
 		<Cost />
 		<PT />
 		<Type>Basic Land — Island</Type>
-		<Text />
+		<Text>%T: Add U to your mana pool</Text>
 		<Flavor />
 		<Token>false</Token>
 		<quantity>1</quantity>
@@ -2370,7 +2370,7 @@
 		<Cost />
 		<PT />
 		<Type>Basic Land - Mountain</Type>
-		<Text>R</Text>
+		<Text>%T: Add R to your mana pool</Text>
 		<Flavor />
 		<Token>false</Token>
 		<quantity>1</quantity>
@@ -2553,7 +2553,7 @@
 		<Cost />
 		<PT />
 		<Type>Basic Land - Plains</Type>
-		<Text>W</Text>
+		<Text>%T: Add W to your mana pool</Text>
 		<Flavor />
 		<Token>false</Token>
 		<quantity>1</quantity>
@@ -3516,7 +3516,7 @@
 		<Cost />
 		<PT />
 		<Type>Basic Land - Swamp</Type>
-		<Text>B</Text>
+		<Text>%T: Add B to your mana pool</Text>
 		<Flavor />
 		<Token>false</Token>
 		<quantity>1</quantity>

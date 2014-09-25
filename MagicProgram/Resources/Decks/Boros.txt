@@ -1,15 +1,15 @@
 Mountain#9
 Plains#12
+Temple of Triumph#3
+Satyr Hoplite#4
+Ajani's Presence#4
+Blinding Flare#1
+Hammerhand#4
+Launch the Fleet#4
 Vanguard of Brimaz#4
 Boros Mastiff#3
-Satyr Hoplite#4
-Armament of Nyx#2
 Mogis's Warhound#4
-Ajani's Presence#4
-Rouse the Mob#4
-Boros Guildgate#3
+Desperate Stand#2
+Armament of Nyx#2
 Odric, Master Tactician#2
 Tajic, Blade of the Legion#2
-Blinding Flare#1
-Desperate Stand#2
-Inferno Fist#4
