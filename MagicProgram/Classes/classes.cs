@@ -175,7 +175,7 @@ namespace MagicProgram
                 }
             }
             # endregion
-            # region 
+            # region
             else
             {
                 link.Add(st, cards.Count);
@@ -2919,7 +2919,10 @@ namespace MagicProgram
 
             string net = SplitString.convertFrom(imgLoc);
 
-            if (net != "" && File.Exists(net)) { img = Image.FromFile(net); }
+            if (net != "" && File.Exists(net))
+            {
+                img = Image.FromFile(net);                
+            }
             else
             {
                 img = Properties.Resources.mr224_back;
@@ -2942,6 +2945,7 @@ namespace MagicProgram
         public virtual void UpkeepCard()
         {
             callOnUpkeep();
+            # region TODO move to hard code
             switch (Name)
             {
                 case "Primordial Hydra":
@@ -2963,6 +2967,11 @@ namespace MagicProgram
 
                     PArea.PlayToken(mct);
                     break;
+            }
+            # endregion
+            foreach (MagicCard mc in attachedCards)
+            {
+                mc.UpkeepCard();
             }
         }
 
@@ -3053,24 +3062,6 @@ namespace MagicProgram
         public virtual void DoActivate(int i)
         {
             callActivate(i);
-        }
-
-        public virtual bool Evolve(int p, int t)
-        {
-            checkPT();
-            bool result = false;
-
-            if (Text.Contains("Evolve"))
-            {
-                if (p > Power || t > Toughness)
-                {
-                    counters++;
-                    callEvolve();
-                    result = true;
-                }
-            }
-
-            return result;
         }
 
         public virtual void Attack()
@@ -21417,9 +21408,929 @@ namespace MagicProgram
                 # endregion
 
                 # region Khans of Tarkir uncomplete
-                case "Mystic Monastery":
-                    mcn = new MysticMonastery();
+                # region Abomination of Gudul
+                case "Abomination of Gudul":
+                    mcn = new AbominationofGudulKTK();
                     break;
+                # endregion
+
+                # region Abzan Ascendancy
+                case "Abzan Ascendancy":
+                    mcn = new AbzanAscendancyKTK();
+                    break;
+                # endregion
+
+                # region Abzan Banner
+                case "Abzan Banner":
+                    mcn = new AbzanBannerKTK();
+                    break;
+                # endregion
+
+                # region Abzan Battle Priest
+                case "Abzan Battle Priest":
+                    mcn = new AbzanBattlePriestKTK();
+                    break;
+                # endregion
+
+                # region Abzan Charm
+                case "Abzan Charm":
+                    mcn = new AbzanCharmKTK();
+                    break;
+                # endregion
+
+                # region Abzan Falconer
+                case "Abzan Falconer":
+                    mcn = new AbzanFalconerKTK();
+                    break;
+                # endregion
+
+                # region Abzan Guide
+                case "Abzan Guide":
+                    mcn = new AbzanGuideKTK();
+                    break;
+                # endregion
+
+                //# region Act of Treason
+                //case "Act of Treason":
+                //    mcn = new ActofTreasonKTK();
+                //    break;
+                //# endregion
+
+                # region Ainok Bond-Kin
+                case "Ainok Bond-Kin":
+                    mcn = new AinokBondKinKTK();
+                    break;
+                # endregion
+
+                # region Ainok Tracker
+                case "Ainok Tracker":
+                    mcn = new AinokTrackerKTK();
+                    break;
+                # endregion
+
+                # region Alabaster Kirin
+                case "Alabaster Kirin":
+                    mcn = new AlabasterKirinKTK();
+                    break;
+                # endregion
+
+                # region Alpine Grizzly
+                case "Alpine Grizzly":
+                    mcn = new AlpineGrizzlyKTK();
+                    break;
+                # endregion
+
+                # region Altar of the Brood
+                case "Altar of the Brood":
+                    mcn = new AltaroftheBroodKTK();
+                    break;
+                # endregion
+
+                # region Anafenza, the Foremost
+                case "Anafenza, the Foremost":
+                    mcn = new AnafenzatheForemostKTK();
+                    break;
+                # endregion
+
+                # region Ankle Shanker
+                case "Ankle Shanker":
+                    mcn = new AnkleShankerKTK();
+                    break;
+                # endregion
+
+                # region Arc Lightning
+                case "Arc Lightning":
+                    mcn = new ArcLightningKTK();
+                    break;
+                # endregion
+
+                # region Archers' Parapet
+                case "Archers' Parapet":
+                    mcn = new ArchersParapetKTK();
+                    break;
+                # endregion
+
+                # region Armament Corps
+                case "Armament Corps":
+                    mcn = new ArmamentCorpsKTK();
+                    break;
+                # endregion
+
+                # region Arrow Storm
+                case "Arrow Storm":
+                    mcn = new ArrowStormKTK();
+                    break;
+                # endregion
+
+                # region Ashcloud Phoenix
+                case "Ashcloud Phoenix":
+                    mcn = new AshcloudPhoenixKTK();
+                    break;
+                # endregion
+
+                # region Avalanche Tusker
+                case "Avalanche Tusker":
+                    mcn = new AvalancheTuskerKTK();
+                    break;
+                # endregion
+
+                # region Awaken the Bear
+                case "Awaken the Bear":
+                    mcn = new AwakentheBearKTK();
+                    break;
+                # endregion
+
+                # region Barrage of Boulders
+                case "Barrage of Boulders":
+                    mcn = new BarrageofBouldersKTK();
+                    break;
+                # endregion
+
+                # region Bear's Companion
+                case "Bear's Companion":
+                    mcn = new BearsCompanionKTK();
+                    break;
+                # endregion
+
+                # region Become Immense
+                case "Become Immense":
+                    mcn = new BecomeImmenseKTK();
+                    break;
+                # endregion
+
+                # region Bellowing Saddlebrute
+                case "Bellowing Saddlebrute":
+                    mcn = new BellowingSaddlebruteKTK();
+                    break;
+                # endregion
+
+                # region Bitter Revelation
+                case "Bitter Revelation":
+                    mcn = new BitterRevelationKTK();
+                    break;
+                # endregion
+
+                # region Blinding Spray
+                case "Blinding Spray":
+                    mcn = new BlindingSprayKTK();
+                    break;
+                # endregion
+
+                # region Bloodfell Caves
+                case "Bloodfell Caves":
+                    mcn = new BloodfellCavesKTK();
+                    break;
+                # endregion
+
+                # region Bloodfire Expert
+                case "Bloodfire Expert":
+                    mcn = new BloodfireExpertKTK();
+                    break;
+                # endregion
+
+                # region Bloodfire Mentor
+                case "Bloodfire Mentor":
+                    mcn = new BloodfireMentorKTK();
+                    break;
+                # endregion
+
+                # region Bloodsoaked Champion
+                case "Bloodsoaked Champion":
+                    mcn = new BloodsoakedChampionKTK();
+                    break;
+                # endregion
+
+                # region Bloodstained Mire
+                case "Bloodstained Mire":
+                    mcn = new BloodstainedMireKTK();
+                    break;
+                # endregion
+
+                # region Blossoming Sands
+                case "Blossoming Sands":
+                    mcn = new BlossomingSandsKTK();
+                    break;
+                # endregion
+
+                # region Brave the Sands
+                case "Brave the Sands":
+                    mcn = new BravetheSandsKTK();
+                    break;
+                # endregion
+
+                # region Briber's Purse
+                case "Briber's Purse":
+                    mcn = new BribersPurseKTK();
+                    break;
+                # endregion
+
+                # region Bring Low
+                case "Bring Low":
+                    mcn = new BringLowKTK();
+                    break;
+                # endregion
+
+                # region Burn Away
+                case "Burn Away":
+                    mcn = new BurnAwayKTK();
+                    break;
+                # endregion
+
+                # region Butcher of the Horde
+                case "Butcher of the Horde":
+                    mcn = new ButcheroftheHordeKTK();
+                    break;
+                # endregion
+
+                //# region Cancel
+                //case "Cancel":
+                //    mcn = new CancelKTK();
+                //    break;
+                //# endregion
+
+                # region Canyon Lurkers
+                case "Canyon Lurkers":
+                    mcn = new CanyonLurkersKTK();
+                    break;
+                # endregion
+
+                # region Chief of the Edge
+                case "Chief of the Edge":
+                    mcn = new ChiefoftheEdgeKTK();
+                    break;
+                # endregion
+
+                # region Chief of the Scale
+                case "Chief of the Scale":
+                    mcn = new ChiefoftheScaleKTK();
+                    break;
+                # endregion
+
+                # region Clever Impersonator
+                case "Clever Impersonator":
+                    mcn = new CleverImpersonatorKTK();
+                    break;
+                # endregion
+
+                # region Crackling Doom
+                case "Crackling Doom":
+                    mcn = new CracklingDoomKTK();
+                    break;
+                # endregion
+
+                # region Cranial Archive
+                case "Cranial Archive":
+                    mcn = new CranialArchiveKTK();
+                    break;
+                # endregion
+
+                # region Crater's Claws
+                case "Crater's Claws":
+                    mcn = new CratersClawsKTK();
+                    break;
+                # endregion
+
+                //# region Crippling Chill
+                //case "Crippling Chill":
+                //    mcn = new CripplingChillKTK();
+                //    break;
+                //# endregion
+
+                # region Dazzling Ramparts
+                case "Dazzling Ramparts":
+                    mcn = new DazzlingRampartsKTK();
+                    break;
+                # endregion
+
+                # region Dead Drop
+                case "Dead Drop":
+                    mcn = new DeadDropKTK();
+                    break;
+                # endregion
+
+                # region Death Frenzy
+                case "Death Frenzy":
+                    mcn = new DeathFrenzyKTK();
+                    break;
+                # endregion
+
+                # region Debilitating Injury
+                case "Debilitating Injury":
+                    mcn = new DebilitatingInjuryKTK();
+                    break;
+                # endregion
+
+                # region Defiant Strike
+                case "Defiant Strike":
+                    mcn = new DefiantStrikeKTK();
+                    break;
+                # endregion
+
+                # region Deflecting Palm
+                case "Deflecting Palm":
+                    mcn = new DeflectingPalmKTK();
+                    break;
+                # endregion
+
+                # region Despise
+                case "Despise":
+                    mcn = new DespiseKTK();
+                    break;
+                # endregion
+
+                # region Dig Through Time
+                case "Dig Through Time":
+                    mcn = new DigThroughTimeKTK();
+                    break;
+                # endregion
+
+                # region Disdainful Stroke
+                case "Disdainful Stroke":
+                    mcn = new DisdainfulStrokeKTK();
+                    break;
+                # endregion
+
+                # region Dismal Backwater
+                case "Dismal Backwater":
+                    mcn = new DismalBackwaterKTK();
+                    break;
+                # endregion
+
+                # region Disowned Ancestor
+                case "Disowned Ancestor":
+                    mcn = new DisownedAncestorKTK();
+                    break;
+                # endregion
+
+                # region Dragon Grip
+                case "Dragon Grip":
+                    mcn = new DragonGripKTK();
+                    break;
+                # endregion
+
+                # region Dragon Throne of Tarkir
+                case "Dragon Throne of Tarkir":
+                    mcn = new DragonThroneofTarkirKTK();
+                    break;
+                # endregion
+
+                # region Dragon's Eye Savants
+                case "Dragon's Eye Savants":
+                    mcn = new DragonsEyeSavantsKTK();
+                    break;
+                # endregion
+
+                # region Dragonscale Boon
+                case "Dragonscale Boon":
+                    mcn = new DragonscaleBoonKTK();
+                    break;
+                # endregion
+
+                # region Dragon-Style Twins
+                case "Dragon-Style Twins":
+                    mcn = new DragonStyleTwinsKTK();
+                    break;
+                # endregion
+
+                # region Duneblast
+                case "Duneblast":
+                    mcn = new DuneblastKTK();
+                    break;
+                # endregion
+
+                # region Dutiful Return
+                case "Dutiful Return":
+                    mcn = new DutifulReturnKTK();
+                    break;
+                # endregion
+
+                # region Efreet Weaponmaster
+                case "Efreet Weaponmaster":
+                    mcn = new EfreetWeaponmasterKTK();
+                    break;
+                # endregion
+
+                # region Embodiment of Spring
+                case "Embodiment of Spring":
+                    mcn = new EmbodimentofSpringKTK();
+                    break;
+                # endregion
+
+                # region Empty the Pits
+                case "Empty the Pits":
+                    mcn = new EmptythePitsKTK();
+                    break;
+                # endregion
+
+                # region End Hostilities
+                case "End Hostilities":
+                    mcn = new EndHostilitiesKTK();
+                    break;
+                # endregion
+
+                # region Erase
+                case "Erase":
+                    mcn = new EraseKTK();
+                    break;
+                # endregion
+
+                # region Feat of Resistance
+                case "Feat of Resistance":
+                    mcn = new FeatofResistanceKTK();
+                    break;
+                # endregion
+
+                # region Feed the Clan
+                case "Feed the Clan":
+                    mcn = new FeedtheClanKTK();
+                    break;
+                # endregion
+
+                # region Firehoof Cavalry
+                case "Firehoof Cavalry":
+                    mcn = new FirehoofCavalryKTK();
+                    break;
+                # endregion
+
+                # region Flooded Strand
+                case "Flooded Strand":
+                    mcn = new FloodedStrandKTK();
+                    break;
+                # endregion
+
+                # region Flying Crane Technique
+                case "Flying Crane Technique":
+                    mcn = new FlyingCraneTechniqueKTK();
+                    break;
+                # endregion
+
+                # region Force Away
+                case "Force Away":
+                    mcn = new ForceAwayKTK();
+                    break;
+                # endregion
+
+                //# region Forest
+                //case "Forest":
+                //    mcn = new ForestKTK();
+                //    break;
+                //# endregion
+
+                # region Frontier Bivouac
+                case "Frontier Bivouac":
+                    mcn = new FrontierBivouacKTK();
+                    break;
+                # endregion
+
+                # region Ghostfire Blade
+                case "Ghostfire Blade":
+                    mcn = new GhostfireBladeKTK();
+                    break;
+                # endregion
+
+                # region Glacial Stalker
+                case "Glacial Stalker":
+                    mcn = new GlacialStalkerKTK();
+                    break;
+                # endregion
+
+                # region Goblinslide
+                case "Goblinslide":
+                    mcn = new GoblinslideKTK();
+                    break;
+                # endregion
+
+                # region Grim Haruspex
+                case "Grim Haruspex":
+                    mcn = new GrimHaruspexKTK();
+                    break;
+                # endregion
+
+                # region Gurmag Swiftwing
+                case "Gurmag Swiftwing":
+                    mcn = new GurmagSwiftwingKTK();
+                    break;
+                # endregion
+
+                # region Hardened Scales
+                case "Hardened Scales":
+                    mcn = new HardenedScalesKTK();
+                    break;
+                # endregion
+
+                # region Heart-Piercer Bow
+                case "Heart-Piercer Bow":
+                    mcn = new HeartPiercerBowKTK();
+                    break;
+                # endregion
+
+                # region Heir of the Wilds
+                case "Heir of the Wilds":
+                    mcn = new HeiroftheWildsKTK();
+                    break;
+                # endregion
+
+                # region Herald of Anafenza
+                case "Herald of Anafenza":
+                    mcn = new HeraldofAnafenzaKTK();
+                    break;
+                # endregion
+
+                # region High Sentinels of Arashin
+                case "High Sentinels of Arashin":
+                    mcn = new HighSentinelsofArashinKTK();
+                    break;
+                # endregion
+
+                # region Highland Game
+                case "Highland Game":
+                    mcn = new HighlandGameKTK();
+                    break;
+                # endregion
+
+                # region Highspire Mantis
+                case "Highspire Mantis":
+                    mcn = new HighspireMantisKTK();
+                    break;
+                # endregion
+
+                # region Hooded Hydra
+                case "Hooded Hydra":
+                    mcn = new HoodedHydraKTK();
+                    break;
+                # endregion
+
+                # region Hooting Mandrills
+                case "Hooting Mandrills":
+                    mcn = new HootingMandrillsKTK();
+                    break;
+                # endregion
+
+                # region Horde Ambusher
+                case "Horde Ambusher":
+                    mcn = new HordeAmbusherKTK();
+                    break;
+                # endregion
+
+                # region Hordeling Outburst
+                case "Hordeling Outburst":
+                    mcn = new HordelingOutburstKTK();
+                    break;
+                # endregion
+
+                # region Howl of the Horde
+                case "Howl of the Horde":
+                    mcn = new HowloftheHordeKTK();
+                    break;
+                # endregion
+
+                # region Icefeather Aven
+                case "Icefeather Aven":
+                    mcn = new IcefeatherAvenKTK();
+                    break;
+                # endregion
+
+                # region Icy Blast
+                case "Icy Blast":
+                    mcn = new IcyBlastKTK();
+                    break;
+                # endregion
+
+                # region Incremental Growth
+                case "Incremental Growth":
+                    mcn = new IncrementalGrowthKTK();
+                    break;
+                # endregion
+
+                //# region Island
+                //case "Island":
+                //    mcn = new IslandKTK();
+                //    break;
+                //# endregion
+
+                # region Ivorytusk Fortress
+                case "Ivorytusk Fortress":
+                    mcn = new IvorytuskFortressKTK();
+                    break;
+                # endregion
+
+                # region Jeering Instigator
+                case "Jeering Instigator":
+                    mcn = new JeeringInstigatorKTK();
+                    break;
+                # endregion
+
+                # region Jeskai Ascendancy
+                case "Jeskai Ascendancy":
+                    mcn = new JeskaiAscendancyKTK();
+                    break;
+                # endregion
+
+                # region Jeskai Banner
+                case "Jeskai Banner":
+                    mcn = new JeskaiBannerKTK();
+                    break;
+                # endregion
+
+                # region Jeskai Charm
+                case "Jeskai Charm":
+                    mcn = new JeskaiCharmKTK();
+                    break;
+                # endregion
+
+                # region Jeskai Elder
+                case "Jeskai Elder":
+                    mcn = new JeskaiElderKTK();
+                    break;
+                # endregion
+
+                # region Jeskai Student
+                case "Jeskai Student":
+                    mcn = new JeskaiStudentKTK();
+                    break;
+                # endregion
+
+                # region Jeskai Windscout
+                case "Jeskai Windscout":
+                    mcn = new JeskaiWindscoutKTK();
+                    break;
+                # endregion
+
+                # region Jungle Hollow
+                case "Jungle Hollow":
+                    mcn = new JungleHollowKTK();
+                    break;
+                # endregion
+
+                # region Kheru Bloodsucker
+                case "Kheru Bloodsucker":
+                    mcn = new KheruBloodsuckerKTK();
+                    break;
+                # endregion
+
+                # region Kheru Dreadmaw
+                case "Kheru Dreadmaw":
+                    mcn = new KheruDreadmawKTK();
+                    break;
+                # endregion
+
+                # region Kheru Lich Lord
+                case "Kheru Lich Lord":
+                    mcn = new KheruLichLordKTK();
+                    break;
+                # endregion
+
+                # region Kheru Spellsnatcher
+                case "Kheru Spellsnatcher":
+                    mcn = new KheruSpellsnatcherKTK();
+                    break;
+                # endregion
+
+                # region Kill Shot
+                case "Kill Shot":
+                    mcn = new KillShotKTK();
+                    break;
+                # endregion
+
+                # region Kin-Tree Invocation
+                case "Kin-Tree Invocation":
+                    mcn = new KinTreeInvocationKTK();
+                    break;
+                # endregion
+
+                # region Kin-Tree Warden
+                case "Kin-Tree Warden":
+                    mcn = new KinTreeWardenKTK();
+                    break;
+                # endregion
+
+                # region Krumar Bond-Kin
+                case "Krumar Bond-Kin":
+                    mcn = new KrumarBondKinKTK();
+                    break;
+                # endregion
+
+                # region Leaping Master
+                case "Leaping Master":
+                    mcn = new LeapingMasterKTK();
+                    break;
+                # endregion
+
+                # region Lens of Clarity
+                case "Lens of Clarity":
+                    mcn = new LensofClarityKTK();
+                    break;
+                # endregion
+
+                # region Longshot Squad
+                case "Longshot Squad":
+                    mcn = new LongshotSquadKTK();
+                    break;
+                # endregion
+
+                # region Mantis Rider
+                case "Mantis Rider":
+                    mcn = new MantisRiderKTK();
+                    break;
+                # endregion
+
+                # region Mardu Ascendancy
+                case "Mardu Ascendancy":
+                    mcn = new MarduAscendancyKTK();
+                    break;
+                # endregion
+
+                # region Mardu Banner
+                case "Mardu Banner":
+                    mcn = new MarduBannerKTK();
+                    break;
+                # endregion
+
+                # region Mardu Blazebringer
+                case "Mardu Blazebringer":
+                    mcn = new MarduBlazebringerKTK();
+                    break;
+                # endregion
+
+                # region Mardu Charm
+                case "Mardu Charm":
+                    mcn = new MarduCharmKTK();
+                    break;
+                # endregion
+
+                # region Mardu Hateblade
+                case "Mardu Hateblade":
+                    mcn = new MarduHatebladeKTK();
+                    break;
+                # endregion
+
+                # region Mardu Heart-Piercer
+                case "Mardu Heart-Piercer":
+                    mcn = new MarduHeartPiercerKTK();
+                    break;
+                # endregion
+
+                # region Mardu Hordechief
+                case "Mardu Hordechief":
+                    mcn = new MarduHordechiefKTK();
+                    break;
+                # endregion
+
+                # region Mardu Roughrider
+                case "Mardu Roughrider":
+                    mcn = new MarduRoughriderKTK();
+                    break;
+                # endregion
+
+                # region Mardu Skullhunter
+                case "Mardu Skullhunter":
+                    mcn = new MarduSkullhunterKTK();
+                    break;
+                # endregion
+
+                # region Mardu Warshrieker
+                case "Mardu Warshrieker":
+                    mcn = new MarduWarshriekerKTK();
+                    break;
+                # endregion
+
+                # region Master of Pearls
+                case "Master of Pearls":
+                    mcn = new MasterofPearlsKTK();
+                    break;
+                # endregion
+
+                # region Master the Way
+                case "Master the Way":
+                    mcn = new MastertheWayKTK();
+                    break;
+                # endregion
+
+                # region Meandering Towershell
+                case "Meandering Towershell":
+                    mcn = new MeanderingTowershellKTK();
+                    break;
+                # endregion
+
+                # region Mer-Ek Nightblade
+                case "Mer-Ek Nightblade":
+                    mcn = new MerEkNightbladeKTK();
+                    break;
+                # endregion
+
+                # region Mindswipe
+                case "Mindswipe":
+                    mcn = new MindswipeKTK();
+                    break;
+                # endregion
+
+                # region Mistfire Weaver
+                case "Mistfire Weaver":
+                    mcn = new MistfireWeaverKTK();
+                    break;
+                # endregion
+
+                # region Molting Snakeskin
+                case "Molting Snakeskin":
+                    mcn = new MoltingSnakeskinKTK();
+                    break;
+                # endregion
+
+                # region Monastery Flock
+                case "Monastery Flock":
+                    mcn = new MonasteryFlockKTK();
+                    break;
+                # endregion
+
+                # region Monastery Swiftspear
+                case "Monastery Swiftspear":
+                    mcn = new MonasterySwiftspearKTK();
+                    break;
+                # endregion
+
+                //# region Mountain
+                //case "Mountain":
+                //    mcn = new MountainKTK();
+                //    break;
+                //# endregion
+
+                # region Murderous Cut
+                case "Murderous Cut":
+                    mcn = new MurderousCutKTK();
+                    break;
+                # endregion
+
+                # region Mystic Monastery
+                case "Mystic Monastery":
+                    mcn = new MysticMonasteryKTK();
+                    break;
+                # endregion
+
+                # region Mystic of the Hidden Way
+                case "Mystic of the Hidden Way":
+                    mcn = new MysticoftheHiddenWayKTK();
+                    break;
+                # endregion
+
+                # region Narset, Enlightened Master
+                case "Narset, Enlightened Master":
+                    mcn = new NarsetEnlightenedMasterKTK();
+                    break;
+                # endregion
+
+                //# region Naturalize
+                //case "Naturalize":
+                //    mcn = new NaturalizeKTK();
+                //    break;
+                //# endregion
+
+                # region Necropolis Fiend
+                case "Necropolis Fiend":
+                    mcn = new NecropolisFiendKTK();
+                    break;
+                # endregion
+
+                # region Nomad Outpost
+                case "Nomad Outpost":
+                    mcn = new NomadOutpostKTK();
+                    break;
+                # endregion
+
+                # region Opulent Palace
+                case "Opulent Palace":
+                    mcn = new OpulentPalaceKTK();
+                    break;
+                # endregion
+
+                # region Pearl Lake Ancient
+                case "Pearl Lake Ancient":
+                    mcn = new PearlLakeAncientKTK();
+                    break;
+                # endregion
+
+                # region Pine Walker
+                case "Pine Walker":
+                    mcn = new PineWalkerKTK();
+                    break;
+                # endregion
+
+                //# region Plains
+                //case "Plains":
+                //    mcn = new PlainsKTK();
+                //    break;
+                //# endregion
+
+                # region Polluted Delta
+                case "Polluted Delta":
+                    mcn = new PollutedDeltaKTK();
+                    break;
+                # endregion
+
+                # region Ponyback Brigade
+                case "Ponyback Brigade":
+                    mcn = new PonybackBrigadeKTK();
+                    break;
+                # endregion
                 # endregion
 
                 default:

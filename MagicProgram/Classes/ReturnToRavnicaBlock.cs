@@ -4662,6 +4662,24 @@ namespace MagicProgram
             Text = "Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@";
             Flavor = "";
         }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
+        }
     }
     # endregion
 
@@ -5328,6 +5346,24 @@ namespace MagicProgram
             Text = "Defender;^Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@";
             Flavor = "";
         }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
+        }
     }
     # endregion
 
@@ -5345,6 +5381,24 @@ namespace MagicProgram
             Type = "Creature - Bird Mutant";
             Text = "Flying;^Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@";
             Flavor = "";
+        }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
         }
     }
     # endregion
@@ -5471,6 +5525,24 @@ namespace MagicProgram
             Type = "Creature - Crocodile Frog";
             Text = "Reach @(This creature can block creatures with flying.)@;^Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@";
             Flavor = "";
+        }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
         }
     }
     # endregion
@@ -5850,6 +5922,24 @@ namespace MagicProgram
             Text = "Elusive Krasis can't be blocked.;^Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@";
             Flavor = "";
         }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
+        }
     }
     # endregion
 
@@ -5922,6 +6012,24 @@ namespace MagicProgram
             Text = "Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@;^Remove two +1/+1 counters from Experiment One: Regenerate Experiment One.";
             Flavor = "";
         }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
+        }
     }
     # endregion
 
@@ -5941,6 +6049,24 @@ namespace MagicProgram
             Flavor = "";
 
             CountersChanged += new ValueChanged(FathomMage_CountersChanged);
+        }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
         }
 
         void FathomMage_CountersChanged(int value)
@@ -6498,6 +6624,41 @@ namespace MagicProgram
             Type = "Creature - Elf Druid";
             Text = "Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@;^%T: Add %G to your mana pool for each +1/+1 counter on Gyre Sage.";
             Flavor = "";
+        }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
+        }
+
+        public override bool TryActivate(int i)
+        {
+            if (Tapped)
+            {
+                return false;
+            }
+
+            Tap(true, false);
+            DoActivate(i);
+            return true;
+        }
+
+        public override void DoActivate(int i)
+        {
+            PArea.mana.green += counters;
         }
     }
     # endregion
@@ -8047,6 +8208,24 @@ namespace MagicProgram
             Text = "Flash @(You may cast this spell any time you could cast an instant.)@;^Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@";
             Flavor = "";
         }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
+        }
     }
     # endregion
 
@@ -8137,6 +8316,24 @@ namespace MagicProgram
             Text = "Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@;^%1%U, %T: Move a +1/+1 counter from Simic Fluxmage onto target creature.";
             Flavor = "";
         }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
+        }
     }
     # endregion
 
@@ -8190,6 +8387,24 @@ namespace MagicProgram
             Type = "Creature - Mutant Wizard";
             Text = "Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@;^%T, Remove one or more +1/+1 counters from Simic Manipulator: Gain control of target creature with power less than or equal to the number of +1/+1 counters removed this way.";
             Flavor = "";
+        }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
         }
     }
     # endregion
@@ -9328,6 +9543,24 @@ namespace MagicProgram
             Type = "Creature - Fish Beast";
             Text = "Trample;^Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@";
             Flavor = "";
+        }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
         }
     }
     # endregion
@@ -11039,6 +11272,25 @@ namespace MagicProgram
             Text = "Evolve @(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)@;^Whenever Renegade Krasis evolves, put a +1/+1 counter on each other creature you control with a +1/+1 counter on it.";
             Flavor = "";
         }
+
+        /// <summary>
+        /// Evolve version
+        /// </summary>
+        /// <param name="mc">Creature entering play</param>
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            checkPT();
+
+            if (mc.Type.Contains("Creature") && mc.PArea == PArea)
+            {
+                if (mc.Power > Power || mc.Toughness > Toughness)
+                {
+                    counters++;
+                    callEvolve();
+                }
+            }
+        }
+
     }
     # endregion
 

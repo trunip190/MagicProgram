@@ -356,10 +356,6 @@ namespace MagicProgram.Controls
                             mstc.counters++;
                             break;
 
-                        case "Soul Warden":
-
-                            break;
-
                         case "Foundry Street Denizen":
                             mstc.PBonus += 1;
                             break;
@@ -374,10 +370,6 @@ namespace MagicProgram.Controls
                         mc.Activating += new MagicCard.ValueAbility(Activate_VorelHullClade);
                         break;
 
-                    case "Gyre Sage":
-                        mc.Activate += new MagicCard.ValueAbility(Activate_GyreSage);
-                        break;
-
                     case "Overgrown Battlement":
                         mc.Activate += new MagicCard.ValueAbility(Activate_OvergrownBattlement);
                         break;
@@ -387,14 +379,10 @@ namespace MagicProgram.Controls
                         break;
 
                     case "Opal Lake Gatekeepers":
-                        if (CheckLandType("gate", 2))
+                        if (_lands.cards.Count(o => o.Type.Contains("Gate")) >= 2)
                         {
                             drawCards(1);
                         }
-                        break;
-
-                    case "Nyx-Fleece Ram":
-                        mc.OnUpkeep += new PassiveEvent(mc_OnUpkeepNyxbornFleese);
                         break;
 
                     case "Leech Bonder":
@@ -433,10 +421,10 @@ namespace MagicProgram.Controls
                 # endregion
 
                 mc.checkPT();
-                foreach (MagicCard mcs in _play.cards)
-                {
-                    mcs.Evolve(mc.Power, mc.Toughness);
-                }
+                //foreach (MagicCard mcs in _play.cards)
+                //{
+                //    mcs.Evolve(mc.Power, mc.Toughness);
+                //}
 
                 //TODO need to expand this to actually check.
                 if (!mc.Text.Contains("Haste"))
@@ -559,12 +547,7 @@ namespace MagicProgram.Controls
             mc.Tap(true, false);
 
         }
-
-        void mc_OnUpkeepNyxbornFleese(MagicCard mc)
-        {
-            HP++;
-        }
-
+        
         void mc_OnEquip(MagicCard mc)
         {
             _play.Remove(mc);
@@ -794,15 +777,6 @@ namespace MagicProgram.Controls
                 }
             }
 
-        }
-
-        void Activate_GyreSage(MagicCard mc, int index)
-        {
-            if (mc.counters > 0)
-            {
-                mana.green += mc.counters;
-                mc.Tap(true, true);
-            }
         }
 
         void Activate_VorelHullClade(MagicCard mc, int index)

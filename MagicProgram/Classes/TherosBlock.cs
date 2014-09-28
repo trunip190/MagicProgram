@@ -4795,6 +4795,12 @@ namespace MagicProgram
             Text = "At the beginning of your upkeep, you gain 1 life.";
             Flavor = "";
         }
+
+        public override void UpkeepCard()
+        {
+            PArea.HP++;
+            base.UpkeepCard();
+        }
     }
     # endregion
 

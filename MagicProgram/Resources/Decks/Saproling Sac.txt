@@ -1,13 +1,14 @@
+Mountain#6
 Forest#12
+Gruul Guildgate#2
 Arbor Elf#4
 Thallid#4
 Essence Warden#4
 Elvish Farmer#4
-Mycoloth#4
+Fists of Ironwood#3
 Chord of Calling#4
-Fungal Sprouting#4
+Purphoros, God of the Forge#4
+Fungal Sprouting#2
 Life and Limb#4
-Goblin Bombardment#4
-Mountain#6
-Gruul Guildgate#2
-Parallel Lives#4
+Parallel Lives#3
+Mycoloth#4

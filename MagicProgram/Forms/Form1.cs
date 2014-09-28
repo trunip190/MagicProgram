@@ -286,8 +286,8 @@ namespace MagicProgram
         # region Settings
         private void updateImagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            updateCardImages();
             updateDeckDetails();
+            updateCardImages();
             listView2_refresh();
         }
 
@@ -979,6 +979,33 @@ namespace MagicProgram
             return result;
         }
 
+        private string fetchImage(MagicCard mc)
+        {
+            string result = "";
+
+            string temp = mc.Name.ToUpper().Replace("/", " & ");  //adjust for 'fuse' cards.
+
+            temp = Properties.Settings.Default.ImageLoc + "\\" + mc.Edition + "\\" + mc.Name + ".jpg";
+
+            if (File.Exists(temp))
+            {
+                result = temp;
+            }
+            else
+            {
+                if (mc.Edition != "")
+                {
+                    DownloadImage(mc);
+                }
+                else
+                {
+                    fetchImage(mc.Name);
+                }
+            }
+
+            return result;
+        }
+
         private void imageList_Load()
         {
             imageListLarge.Images.Clear();
@@ -1003,6 +1030,7 @@ namespace MagicProgram
                 if (!File.Exists(Database.cards[i].imgLoc))
                 {
                     Database.cards[i].imgLoc = fetchImage(Database.cards[i].Name);
+                    
                 }
             }
         }
@@ -1014,6 +1042,7 @@ namespace MagicProgram
                 if (!File.Exists(mc.imgLoc))
                 {
                     mc.set(fetchImage(mc.Name));
+                    
                 }
             }
 
@@ -1022,18 +1051,13 @@ namespace MagicProgram
             {
                 if (!File.Exists(mc.imgLoc))
                 {
-                    string s = fetchImage(mc.Name);
+                    string s = fetchImage(mc);
                     if (!File.Exists(s))
                     {
                         missing.Add(mc);
                     }
                     mc.set(s);
                 }
-            }
-
-            foreach (MagicCard mct in missing)
-            {
-                DownloadImage(mct);
             }
         }
 
@@ -1070,7 +1094,7 @@ namespace MagicProgram
                     client.DownloadFile(str, fileLoc);
                     if (!Lib.image.ContainsKey(mct.Name))
                     {
-                        Lib.image.Add(mct.Name, fileLoc);
+                        Lib.image.Add(mct.Name.ToUpper(), fileLoc);
                     }
                     # endregion
 
@@ -1286,7 +1310,8 @@ namespace MagicProgram
                         # region set up image etc
                         if (temp.imgLoc.Length < 1)
                         {
-                            temp.set(fetchImage(card[a].ToUpper()));
+                            //temp.set(fetchImage(card[a].ToUpper()));
+                            temp.set(fetchImage(card[a]));
                         }
                         # endregion
 

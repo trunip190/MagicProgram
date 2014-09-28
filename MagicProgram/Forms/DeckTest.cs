@@ -408,9 +408,9 @@ namespace MagicProgram
                     # region Launch the Fleet
                     case "Launch the Fleet":
                         tempCard = mc;
-						cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsChosen_LaunchTheFleet);
-						cardAreaPlay.ChooseCards();
-						targets = mc.Targets;
+                        cardAreaPlay.CardsPicked += new CardArea.CardsChosen(CardsChosen_LaunchTheFleet);
+                        cardAreaPlay.ChooseCards();
+                        targets = mc.Targets;
                         break;
                     # endregion
 
@@ -587,8 +587,6 @@ namespace MagicProgram
 
             mc.Resolve();
             mc.callOnPlay();
-
-            string s = mc.GetType().ToString();
 
             return true;
         }
@@ -905,7 +903,7 @@ namespace MagicProgram
         public void PrePlay(MagicCard mc)
         {
             //MagicCard mcn = CardMethods.GetClass(mc);
-            MagicCard mcn = mc;
+            MagicCard mcn = CardMethods.GetClass(mc);
 
             mcn.setMana();
             ColourCost cc = mcn.manaCost;
@@ -1150,7 +1148,8 @@ namespace MagicProgram
 
         private void cardAreaHand_ChoseCard(MagicCard mc)
         {
-            mc.OnPlay += new PassiveEvent(temp_OnPlay);
+            //mc.OnPlay += new PassiveEvent(temp_OnPlay);
+            temp_OnPlay(mc);
 
             PrePlay(mc);
         }
@@ -2134,24 +2133,24 @@ namespace MagicProgram
         }
         # endregion
 
-		# region Launch The Fleet
-		void CardsChosen_LaunchTheFleet(List<MagicCard> sources)
-		{
+        # region Launch The Fleet
+        void CardsChosen_LaunchTheFleet(List<MagicCard> sources)
+        {
             if (sources.Count > targets)
-			{
-				return;
-			}
+            {
+                return;
+            }
 
             foreach (MagicCard mc in sources)
-			{
-				mc.OnAttack += new PassiveEvent(OnAttack_CreateSoldier);
-				mc.callSpellCast();
-			}
-			cardAreaPlay.CardsPicked -= CardsChosen_LaunchTheFleet;			
+            {
+                mc.OnAttack += new PassiveEvent(OnAttack_CreateSoldier);
+                mc.callSpellCast();
+            }
+            cardAreaPlay.CardsPicked -= CardsChosen_LaunchTheFleet;
             update_listViewPlay();
-		}
-		# endregion
-		
+        }
+        # endregion
+
         void OnAttack_CreateSoldier(MagicCard mc)
         {
             MagicCard mct = new MagicCard
@@ -2998,7 +2997,7 @@ namespace MagicProgram
 
             return mct;
         }
-        
+
         void CardsChosen_Twinflame(List<MagicCard> sources)
         {
             if (sources.Count > targets)
