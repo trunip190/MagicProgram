@@ -6073,7 +6073,7 @@ namespace MagicProgram
         {
             if (PArea != null & value > 0)
             {
-                PArea.drawCards(value);
+                PArea.drawCards(1);
             }
         }
     }

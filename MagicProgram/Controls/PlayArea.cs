@@ -86,6 +86,8 @@ namespace MagicProgram.Controls
         public int MaxHand = 7;
         int shuffles = 0;
 
+        public int ExtraTurns = 0;
+
         public int seed = 0;
         private Random r = new Random();
 
@@ -147,6 +149,10 @@ namespace MagicProgram.Controls
             foreach (MagicCard mcp in list)
             {
                 mcp.SpellResolved(mc);
+                if (mc.Type.Contains("Creature"))
+                {
+                    mcp.CreatureEnteredPlay(mc);
+                }
             }
 
             if (handler != null)
@@ -168,19 +174,6 @@ namespace MagicProgram.Controls
             if (handler != null)
             {
                 handler(i);
-            }
-        }
-        protected void callCreatureEntered(MagicCard mc)
-        {
-            PassiveEvent handler = CreatureEntered;
-            if (handler != null)
-            {
-                handler(mc);
-            }
-
-            foreach (MagicCard mct in _play.cards)
-            {
-                mct.CreatureEnteredPlay(mc);
             }
         }
         public void callScry(MagicCard mc, int value)
@@ -479,11 +472,6 @@ namespace MagicProgram.Controls
             if (_lands.cards.Contains(mc))
             {
                 mc.Destroyed += new PassiveEvent(Land_Destroyed);
-            }
-
-            if (mc.Type.Contains("Creature"))
-            {
-                callCreatureEntered(mc);
             }
 
             # region PostPlay individual card events
@@ -913,6 +901,27 @@ namespace MagicProgram.Controls
 
                 result.Add(mc);
                 callCardDrawn(mc);
+            }
+
+            return result;
+        }
+
+        public List<MagicCard> DiscardCard(int i)
+        {
+            List<MagicCard> result = new List<MagicCard>();
+            int c = i;
+            while (c > 0)
+            {
+                if (_hand.cards.Count > 0)
+                {
+                    MagicCard mc = _hand.cards[0];
+                    result.Add(mc);
+
+                    _hand.cards.Remove(mc);
+                    _graveyard.Add(mc);
+                }
+
+                c--;
             }
 
             return result;

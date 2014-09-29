@@ -93,6 +93,13 @@ namespace MagicProgram
             Text = "Flying^Heroic — Whenever you cast a spell that targets Akroan Skyguard, put a +1/+1 counter on Akroan Skyguard.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
+        }
     }
     # endregion
 
@@ -218,6 +225,13 @@ namespace MagicProgram
             Type = "Creature — Human Wizard";
             Text = "Heroic — Whenever you cast a spell that targets Ashiok's Adept, each opponent discards a card.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            OppArea.DiscardCard(1);
         }
     }
     # endregion
@@ -398,6 +412,13 @@ namespace MagicProgram
             Type = "Creature — Siren";
             Text = "Flying^Heroic — Whenever you cast a spell that targets Chorus of the Tides, scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom of your library.)";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            PArea.callScry(this, 1);
         }
     }
     # endregion
@@ -632,6 +653,13 @@ namespace MagicProgram
             Type = "Creature — Human Soldier";
             Text = "Heroic — Whenever you cast a spell that targets Elite Skirmisher, you may tap target creature.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            //tap target creature
         }
     }
     # endregion
@@ -1298,6 +1326,13 @@ namespace MagicProgram
             Type = "Creature — Human Soldier";
             Text = "Aura spells you cast cost {1} less to cast.^Heroic — Whenever you cast a spell that targets Hero of Iroas, put a +1/+1 counter on Hero of Iroas.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
         }
     }
     # endregion
@@ -2397,6 +2432,13 @@ namespace MagicProgram
             Text = "Heroic — Whenever you cast a spell that targets Setessan Oathsworn, put two +1/+1 counters on Setessan Oathsworn.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters += 2;
+        }
     }
     # endregion
 
@@ -2883,6 +2925,22 @@ namespace MagicProgram
             Text = "Vigilance^Heroic — Whenever you cast a spell that targets Vanguard of Brimaz, put a 1/1 white Cat Soldier creature token with vigilance onto the battlefield.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            MagicCard mct = new MagicCard
+            {
+                PT = "1/1",
+                Color = "W",
+                Type = "Creature - Cat Soldier",
+                Name = "Cat Soldier",
+                Token = true,
+                Text = "Vigilance",
+            };
+            PArea.PlayToken(mct);
+        }
     }
     # endregion
 
@@ -3121,6 +3179,18 @@ namespace MagicProgram
             Text = "Heroic — Whenever you cast a spell that targets Akroan Line Breaker, Akroan Line Breaker gets +2/+0 and gains intimidate until end of turn.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            PBonus += 2;
+            Abilities.Add(new TempAbility
+            {
+                Text = "Intimidate",
+                Expire = "End of Turn",
+            });
+        }
     }
     # endregion
 
@@ -3265,6 +3335,16 @@ namespace MagicProgram
             Text = "Each instant and sorcery spell you cast costs {1} less to cast for each creature it targets.^Heroic — Whenever you cast a spell that targets Battlefield Thaumaturge, Battlefield Thaumaturge gains hexproof until end of turn.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            Abilities.Add (new TempAbility{
+                Name = "Hexproof",
+                Expire = "End of Turn",
+            });
+        }
     }
     # endregion
 
@@ -3336,6 +3416,13 @@ namespace MagicProgram
             Type = "Creature — Human Soldier";
             Text = "Heroic — Whenever you cast a spell that targets Bloodcrazed Hoplite, put a +1/+1 counter on it.^Whenever a +1/+1 counter is placed on Bloodcrazed Hoplite, remove a +1/+1 counter from target creature an opponent controls.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
         }
     }
     # endregion
@@ -3427,6 +3514,7 @@ namespace MagicProgram
             Text = "Strive — Colossal Heroics costs {1}{G} more to cast for each target beyond the first.^Any number of target creatures each get +2/+2 until end of turn. Untap those creatures.";
             Flavor = "";
         }
+
     }
     # endregion
 
@@ -4543,6 +4631,13 @@ namespace MagicProgram
             Text = "Heroic — Whenever you cast a spell that targets Lagonna-Band Trailblazer, put a +1/+1 counter on Lagonna-Band Trailblazer.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
+        }
     }
     # endregion
 
@@ -4578,6 +4673,13 @@ namespace MagicProgram
             Type = "Creature — Cat Monk";
             Text = "Heroic — Whenever you cast a spell that targets Leonin Iconoclast, destroy target enchantment creature an opponent controls.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            //"Destroy target enchantment creature");
         }
     }
     # endregion
@@ -4945,6 +5047,13 @@ namespace MagicProgram
             Text = "Heroic — Whenever you cast a spell that targets Pheres-Band Thunderhoof, put two +1/+1 counters on Pheres-Band Thunderhoof.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters += 2;
+        }
     }
     # endregion
 
@@ -5305,6 +5414,29 @@ namespace MagicProgram
             Text = "Heroic — Whenever you cast a spell that targets Sage of Hours, put a +1/+1 counter on it.^Remove all +1/+1 counters from Sage of Hours: For each five counters removed this way, take an extra turn after this one.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
+        }
+
+        public override bool TryActivate(int i)
+        {
+            base.TryActivate(i);
+            DoActivate(i);
+            return true;
+        }
+
+        public override void DoActivate(int i)
+        {
+            int j = counters / 5;
+            counters = 0;
+            PArea.ExtraTurns = j;
+
+            base.DoActivate(i);
+        }
     }
     # endregion
 
@@ -5340,6 +5472,13 @@ namespace MagicProgram
             Type = "Creature — Satyr Soldier";
             Text = "Heroic — Whenever you cast a spell that targets Satyr Hoplite, put a +1/+1 counter on Satyr Hoplite.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
         }
     }
     # endregion
@@ -5767,6 +5906,14 @@ namespace MagicProgram
             Text = "Heroic — Whenever you cast a spell that targets Tethmos High Priest, return target creature card with converted mana cost 2 or less from your graveyard to the battlefield.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            List<MagicCard> list = PArea._graveyard.cards.Where(o => o.Type.Contains("Creature") && o.CMC <= 2).ToList();
+            PArea.callPickCardsHands(list);
+        }
     }
     # endregion
 
@@ -5857,6 +6004,13 @@ namespace MagicProgram
             Text = "Heroic — Whenever you cast a spell that targets Triton Cavalry, you may return target enchantment to its owner's hand.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            //return target enchantment to its owner's hand
+        }
     }
     # endregion
 
@@ -5928,6 +6082,13 @@ namespace MagicProgram
             Type = "Creature — Siren Soldier";
             Text = "Flying^Heroic — Whenever you cast a spell that targets War-Wing Siren, put a +1/+1 counter on War-Wing Siren.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
         }
     }
     # endregion
@@ -6039,6 +6200,13 @@ namespace MagicProgram
             Text = "Deathtouch^Heroic - Whenever you cast a spell that targets Agent of the Fates, each opponent sacrifices a creature.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            //each opponent sacrifices a creature
+        }
     }
     # endregion
 
@@ -6056,6 +6224,23 @@ namespace MagicProgram
             Type = "Creature - Human Soldier";
             Text = "Heroic - Whenever you cast a spell that targets Akroan Crusader, put a 1/1 red Soldier creature token with haste onto the battlefield.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            MagicCard mct = new MagicCard
+            {
+                Name = "Soldier",
+                Type = "Creature - Soldier",
+                Text = "Haste",
+                PT = "1/1",
+                Token = true,
+                PArea = this.PArea,
+                OppArea = this.OppArea
+            };
+            PArea.PlayToken(mct);
         }
     }
     # endregion
@@ -6111,6 +6296,22 @@ namespace MagicProgram
             Text = "First Strike, vigilance^Heroic - Whenever you cast a spell that targets Anax and Cymede, creatures you control get +1/+1 and gain trample until end of turn.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            foreach (MagicCard mct in PArea._play.cards)
+            {
+                mct.PBonus++;
+                mct.TBonus++;
+                mct.Abilities.Add(new TempAbility
+                {
+                    Text = "Trample",
+                    Expire = "End of Turn",
+                });
+            }
+        }
     }
     # endregion
 
@@ -6164,6 +6365,13 @@ namespace MagicProgram
             Type = "Legendary Creature - Human Warrior";
             Text = "Heroic - Whenever you cast a spell that targets Anthousa, Setessan Hero, up to three target lands you control each become 2/2 Warrior creatures until end of turn. They're still lands.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            //up to three lands each become 2/2 warrior lands
         }
     }
     # endregion
@@ -6236,6 +6444,13 @@ namespace MagicProgram
             Edition = "THS";
             Rarity = "U";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            //target creature an opponent controls can't block this turn.
+        }
     }
     # endregion
 
@@ -6253,6 +6468,13 @@ namespace MagicProgram
             Type = "Creature - Human Wizard";
             Text = "Heroic - Whenever you cast a spell that targets Artisan of Forms, you may have Artisan of Forms become a copy of target creature and gain this ability.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            //artisan of forms becomes a copy of target creature.
         }
     }
     # endregion
@@ -6361,6 +6583,13 @@ namespace MagicProgram
             Type = "Creature - Human Soldier";
             Text = "Heroic - Whenever you cast a spell that targets Battlewise Hoplite, put a +1/+1 counter on Battlewise Hoplite, then scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom of your library.)";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
         }
     }
     # endregion
@@ -6650,6 +6879,13 @@ namespace MagicProgram
             Text = "Heroic - Whenever you cast a spell that targets Centaur Battlemaster, put three +1/+1 counters on Centaur Battlemaster.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters += 3;
+        }
     }
     # endregion
 
@@ -6796,16 +7032,16 @@ namespace MagicProgram
             Targets = 2;
         }
 
-	public void SpellResolve(MagicCard mc)
-	{
-		mc.PBonus += 1;
-		CardAbility abi = new TempAbility
-		{
-			Name = "First Strike",
-			Expire = "Turn",
-		};
-		mc.Abilities.Add(abi);
-	}
+        public void SpellResolve(MagicCard mc)
+        {
+            mc.PBonus += 1;
+            CardAbility abi = new TempAbility
+            {
+                Name = "First Strike",
+                Expire = "Turn",
+            };
+            mc.Abilities.Add(abi);
+        }
     }
     # endregion
 
@@ -7202,6 +7438,13 @@ namespace MagicProgram
             Text = "Double strike^Heroic — Whenever you cast a spell that targets Fabled Hero, put a +1/+1 counter on Fabled Hero.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
+        }
     }
     # endregion
 
@@ -7273,6 +7516,18 @@ namespace MagicProgram
             Type = "Creature - Human Soldier";
             Text = "Heroic - Whenever you cast a spell that targets Favored Hoplite, put a +1/+1 counter on Favored Hoplite and prevent all damage that would be dealt to it this turn.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
+            Abilities.Add(new TempAbility
+            {
+                Text = "Prevent all damage that would be dealt to Favored Hoplite",
+                Expire = "End of turn",
+            });
         }
     }
     # endregion
@@ -7849,6 +8104,14 @@ namespace MagicProgram
             Type = "Creature - Human Warrior";
             Text = "Heroic - Whenever you cast a spell that targets Labyrinth Champion, Labyrinth Champion deals 2 damage to target creature or player.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            //TODO change to creature or player.
+            callPingOpponent(2);
         }
     }
     # endregion
@@ -8540,6 +8803,16 @@ namespace MagicProgram
             Text = "Heroic - Whenever you cast a spell that targets Phalanx Leader, put a +1/+1 counter on each creature you control.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            foreach (MagicCard mct in PArea._play.cards)
+            {
+                mct.counters++;
+            }
+        }
     }
     # endregion
 
@@ -9178,6 +9451,13 @@ namespace MagicProgram
             Text = "Heroic - Whenever you cast a spell that targets Setessan Battle Priest, you gain 2 life.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            PArea.HP += 2;
+        }
     }
     # endregion
 
@@ -9393,6 +9673,13 @@ namespace MagicProgram
             Type = "Creature - Human Warrior";
             Text = "Heroic - Whenever you cast a spell that targets Staunch-Hearted Warrior, put two +1/+1 counters on Staunch-Hearted Warrior.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters += 2;
         }
     }
     # endregion
@@ -9766,6 +10053,14 @@ namespace MagicProgram
             Text = "Tormented Hero enters the battlefield tapped.^Heroic - Whenever you cast a spell that targets Tormented Hero, each opponent loses 1 life. You gain life equal to the life lost this way.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            OppArea.HP--;
+            PArea.HP += 1;
+        }
     }
     # endregion
 
@@ -9837,6 +10132,13 @@ namespace MagicProgram
             Type = "Creature - Merfolk Soldier";
             Text = "Heroic - Whenever you cast a spell that targets Triton Fortune Hunter, draw a card.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            PArea.drawCards(1);
         }
     }
     # endregion
@@ -10090,6 +10392,13 @@ namespace MagicProgram
             Text = "Heroic - Whenever you cast a spell that targets Wavecrash Triton, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.";
             Flavor = "";
         }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            //tap target creature an opponent controls.
+        }
     }
     # endregion
 
@@ -10143,6 +10452,13 @@ namespace MagicProgram
             Type = "Creature - Human Knight";
             Text = "Flying^Heroic - Whenever you cast a spell that targets Wingsteed Rider, put a +1/+1 counter on Wingsteed Rider.";
             Flavor = "";
+        }
+
+        public override void SpellTarget()
+        {
+            base.SpellTarget();
+
+            counters++;
         }
     }
     # endregion

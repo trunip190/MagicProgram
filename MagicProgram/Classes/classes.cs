@@ -2480,7 +2480,7 @@ namespace MagicProgram
             }
         }
 
-        public void callSpellCast()
+        private void callSpellCast()
         {
             PassiveEvent handler = onSpellCast;
             if (handler != null)
@@ -3203,6 +3203,11 @@ namespace MagicProgram
                     }
                     break;
             }
+        }
+
+        public virtual void SpellTarget()
+        {
+            callSpellCast();
         }
 
         public virtual void CreatureEnteredPlay(MagicCard mc)

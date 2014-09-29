@@ -593,7 +593,7 @@ namespace MagicProgram
 
         void CardClicked_Null(MagicCard mc, MouseEventArgs e)
         {
-            mc.callSpellCast();
+            mc.SpellTarget(); //callSpellCast();
             cardAreaPlay.CardClicked -= CardClicked_Null;
         }
 
@@ -615,7 +615,7 @@ namespace MagicProgram
             {
                 Name = "Indestructable",
             });
-            mc.callSpellCast();
+            mc.SpellTarget();
             # endregion
 
             if (targets < 1)
@@ -654,7 +654,7 @@ namespace MagicProgram
         void CardClicked_RouseTheMob(MagicCard mc, MouseEventArgs e)
         {
             mc.PBonus += 2;
-            mc.callSpellCast();
+            mc.SpellTarget();
             cardAreaPlay.CardClicked -= CardClicked_RouseTheMob;
         }
         # endregion
@@ -722,7 +722,7 @@ namespace MagicProgram
         {
             mc.PBonus += 3;
             mc.TBonus += 1;
-            mc.callSpellCast();
+            mc.SpellTarget();
             Scry(1);
             cardAreaPlay.CardClicked -= CardClicked_TitansStrength;
         }
@@ -1075,7 +1075,7 @@ namespace MagicProgram
         {
             mc.AttachCard(tempCard);
             mc.checkPT();
-            mc.callSpellCast();
+            mc.SpellTarget();
             tempCard = null;
             cardAreaPlay.CardClicked -= cardAreaPlay_AuraCard;
         }
@@ -2144,7 +2144,7 @@ namespace MagicProgram
             foreach (MagicCard mc in sources)
             {
                 mc.OnAttack += new PassiveEvent(OnAttack_CreateSoldier);
-                mc.callSpellCast();
+                mc.SpellTarget();
             }
             cardAreaPlay.CardsPicked -= CardsChosen_LaunchTheFleet;
             update_listViewPlay();
@@ -2252,12 +2252,6 @@ namespace MagicProgram
                     break;
                 #endregion
 
-                # region Vanguard of Brimaz
-                case "Vanguard of Brimaz":
-                    mc.onSpellCast += new PassiveEvent(Heroic_VanguardBrimaz);
-                    break;
-                # endregion
-
                 # region Doomed Traveler
                 case "Doomed Traveler":
                     mc.onDie += new PassiveEvent(Discard_DoomedTraveler);
@@ -2275,48 +2269,12 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Triton Fortune Hunter
-                case "Triton Fortune Hunter":
-                    mc.onSpellCast += new PassiveEvent(HeroicDrawCard);
-                    break;
-                # endregion
-
-                # region Sage of Hours
-                case "Sage of Hours":
-                    mc.onSpellCast += new PassiveEvent(Heroic_One);
-                    break;
-                # endregion
-
-                # region Phalanx Leader
-                case "Phalanx Leader":
-                    mc.onSpellCast += new PassiveEvent(Heroic_PhalanxLeader);
-                    break;
-                # endregion
-
-                # region Tethmos High Priest
-                case "Tethmos High Priest":
-                    mc.onSpellCast += new PassiveEvent(Heroic_TethmosHighPriest);
-                    break;
-                # endregion
-
-                # region Hero of Iroas
-                case "Hero of Iroas":
-                    mc.onSpellCast += new PassiveEvent(Heroic_One);
-                    break;
-                # endregion
-
                 # region Brood Keeper
                 case "Brood Keeper":
                     mc.onAuraAdded += new PassiveEvent(AuraAdded_BroodKeeper);
                     break;
                 # endregion
-
-                # region Akroan Crusader
-                case "Akroan Crusader":
-                    mc.onSpellCast += new PassiveEvent(Heroic_Soldier);
-                    break;
-                # endregion
-
+                    
                 # region Guttersnipe
                 case "Guttersnipe":
                     area.SpellRes += new PassiveEvent(SpellCast_Guttersnipe);
@@ -2356,12 +2314,6 @@ namespace MagicProgram
                     mc.Activating += new MagicCard.ValueAbility(Activating_JadeMage);
                     break;
                 # endregion
-
-                # region Satyr Hoplite
-                case "Satyr Hoplite":
-                    mc.onSpellCast += new PassiveEvent(Heroic_One);
-                    break;
-                # endregion
             }
             # endregion
 
@@ -2379,21 +2331,6 @@ namespace MagicProgram
             area.PlayCard(mc);
 
             update_listViewPlay();
-        }
-
-        void Heroic_Soldier(MagicCard mc)
-        {
-            MagicCard mct = new MagicCard
-            {
-                Name = "Soldier",
-                Type = "Creature - Soldier",
-                Text = "Haste",
-                PT = "1/1",
-                Token = true,
-                PArea = mc.PArea,
-                OppArea = mc.OppArea
-            };
-            PlayCard(mct);
         }
 
         void CardClicked_WakeReflections(MagicCard mc, MouseEventArgs e)
@@ -2529,7 +2466,7 @@ namespace MagicProgram
         {
             if (mc.Type.Contains("Creature"))
             {
-                mc.callSpellCast();
+                mc.SpellTarget();
                 mc.Color = "U";
                 mc.Tap(false, false);
                 DrawCard(1);
@@ -2541,7 +2478,7 @@ namespace MagicProgram
         {
             if (mc.Type.Contains("Creature"))
             {
-                mc.callSpellCast();
+                mc.SpellTarget();
                 MagicCard nmc = new MagicCard(mc);
                 nmc.Token = true;
                 PlayCreature(nmc, mc.PArea);
@@ -3036,7 +2973,7 @@ namespace MagicProgram
         {
             if (PlArea._play.cards.Contains(mc))
             {
-                mc.callSpellCast();
+                mc.SpellTarget();
                 mc.Tap(false, false);
                 mc.TBonus += 3;
                 mc.checkPT();
@@ -3199,9 +3136,18 @@ namespace MagicProgram
         void DeckTest_PlEndStep()
         {
             PhaseChanged -= DeckTest_PlEndStep;
-            PhaseChanged += new Phase(DeckTest_OppStart);
-            PhaseName = "Player - End Step";
 
+            if (PlArea.ExtraTurns > 0)
+            {
+                PhaseChanged += new Phase(DeckTest_PlTurnStart);
+                PlArea.ExtraTurns--;
+            }
+            else
+            {
+                PhaseChanged += new Phase(DeckTest_OppStart);
+            }
+
+            PhaseName = "Player - End Step";
             PlArea.EndStep();
 
             PlArea.mana.Clear();

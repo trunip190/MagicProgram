@@ -12738,7 +12738,7 @@ namespace MagicProgram
     # endregion
 
     # region Raise the Alarm
-    public class RaisetheAlarm15 : MagicCard
+    public class RaisetheAlarm15 : RaisetheAlarmMR
     {
         public RaisetheAlarm15()
         {

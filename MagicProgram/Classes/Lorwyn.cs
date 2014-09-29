@@ -8759,6 +8759,38 @@ namespace MagicProgram
             Text = "%T: Add %G to your mana pool.;^Put a -1/-1 counter on Devoted Druid: Untap Devoted Druid.";
             Flavor = "";
         }
+
+        public override bool TryActivate(int i)
+        {
+            if ( Tapped)
+            {
+                return false;
+            }
+
+            if (i == 0)
+            {
+                DoActivate(i);
+                return true;
+            }
+            else
+            {
+                return base.TryActivate(i);
+            }
+        }
+
+        public override void DoActivate(int i)
+        {
+            if (i == 0)
+            {
+                PArea.mana.green++;
+                Tap(true, false);
+            }
+            else if (i == 1)
+            {
+                counters--;
+                Tap(false, false);
+            }
+        }
     }
     # endregion
 

@@ -5,40 +5,6 @@ using System.Text;
 
 namespace MagicProgram
 {
-    class MysticMonastery : MagicCard
-    {
-        public MysticMonastery()
-        {
-            Name = "Mystic Monastery";
-            Edition = "KTK";
-            Rarity = "U";
-            Color = "";
-            Cost = "";
-            PT = "";
-            Type = "Land";
-            Text = "Mystic Monastery enters the battlefield tapped.	Tap: Add Blue, Red, or White to your mana pool.";
-            Flavor = "";
-            _Tapped = true;
-        }
-
-        public override bool TryActivate(int i)
-        {
-            if (!Tapped)
-            {
-                DoActivate(i);
-                Tap(true, false);
-                return true;
-            }
-
-            return false;
-        }
-
-        public override void DoActivate(int i)
-        {
-            PArea.mw.ShowWheel("URW");
-        }
-    }
-
     # region Khans of Tarkir
     # region Abomination of Gudul
     public class AbominationofGudulKTK : MagicCard
@@ -1891,6 +1857,19 @@ namespace MagicProgram
             Text = "Whenever you cast a noncreature spell, creatures you control get +1/+1 until end of turn. Untap those creatures.Whenever you cast a noncreature spell, you may draw a card. If you do, discard a card.";
             Flavor = "";
         }
+
+        public override void CreatureEnteredPlay(MagicCard mc)
+        {
+            if (!mc.Type.Contains("Creature"))
+            {
+                foreach (MagicCard mct in PArea._play.cards)
+                {
+                    mct.Tap(false, false);
+                    mct.PBonus++;
+                    mct.TBonus++;
+                }
+            }
+        }
     }
     # endregion
 
@@ -2610,6 +2589,23 @@ namespace MagicProgram
             Type = "Land";
             Text = "Mystic Monastery enters the battlefield tapped.Tap: Add Blue, Red, or White to your mana pool.";
             Flavor = "";
+        }
+
+        public override bool TryActivate(int i)
+        {
+            if (!Tapped)
+            {
+                DoActivate(i);
+                Tap(true, false);
+                return true;
+            }
+
+            return false;
+        }
+
+        public override void DoActivate(int i)
+        {
+            PArea.mw.ShowWheel("URW");
         }
     }
     # endregion

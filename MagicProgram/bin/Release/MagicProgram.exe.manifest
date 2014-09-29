@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MagicProgram.exe" size="7594496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MagicProgram.exe" size="7596544">
       <assemblyIdentity name="MagicProgram" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>TY63g0C8T9c2ypfZKhmodTbfpLo=</dsig:DigestValue>
+        <dsig:DigestValue>+39HlwjjeznROEgs2b5soad4v5o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

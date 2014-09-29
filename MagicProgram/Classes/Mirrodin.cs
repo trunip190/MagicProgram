@@ -3621,6 +3621,23 @@ namespace MagicProgram
             Text = "Put two 1/1 white Soldier creature tokens onto the battlefield.";
             Flavor = "";
         }
+        
+        public override void Resolve()
+        {
+            base.Resolve();
+
+            for (int i = 0; i < 2; i++)
+            {
+                MagicCard mc = new MagicCard
+                {
+                    Name = "Soldier",
+                    Type = "Creature - Soldier",
+                    PT = "1/1",
+                    Token = true,
+                };
+                PArea.PlayToken(mc);
+            }
+        }
     }
     # endregion
 
