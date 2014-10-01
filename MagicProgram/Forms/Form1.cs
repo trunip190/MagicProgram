@@ -306,6 +306,11 @@ namespace MagicProgram
 
             listView1_refresh();
         }
+
+        private void updateImagesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            LoadImages();
+        }
         # endregion
 
         # region Deck
@@ -332,6 +337,30 @@ namespace MagicProgram
         {
             deckStats1.LoadCard(Deck.cards);
             deckStats1.Show();
+        }
+
+        private void sealedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string s = textBox1.Text;
+            AddFromSealed(s);
+        }
+
+        private void AddFromSealed(string s)
+        {
+            List<MagicCard> list = Database.cards.Where(o => o.Edition == s).ToList();
+            //LibCards.cards.Clear();
+
+            for (int i = 0; i < 3; i++)
+            {
+                List<MagicCard> pack = CardMethods.CreateSealed(list);
+
+                foreach (MagicCard mc in pack)
+                {
+                    LibCards.Add(mc);
+                }
+            }
+            LibCards.index();
+            listView1_refresh();
         }
         # endregion
 
@@ -878,7 +907,8 @@ namespace MagicProgram
                 else
                 {
                     # region new item
-                    MagicCard temp = LibCards.getCard(o.Text).Clone() as MagicCard;
+                    //MagicCard temp = LibCards.getCard(o.Text).Clone() as MagicCard;
+                    MagicCard temp = CardMethods.GetClass(o.Text);
 
                     if (!all)
                     {
@@ -1624,11 +1654,6 @@ namespace MagicProgram
             {
                 ConvertSaves(fbd.SelectedPath);
             }
-        }
-
-        private void updateImagesToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            LoadImages();
         }
     }
 }

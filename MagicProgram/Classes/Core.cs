@@ -9534,13 +9534,13 @@ namespace MagicProgram
     # endregion
 
     # region Act on Impulse
-    public class ActonImpulse15 : MagicCard
+    public class ActonImpulseM15 : MagicCard
     {
-        public ActonImpulse15()
+        public ActonImpulseM15()
         {
             Name = "Act on Impulse";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2R";
             PT = "";
@@ -9552,13 +9552,13 @@ namespace MagicProgram
     # endregion
 
     # region Aegis Angel
-    public class AegisAngel15 : MagicCard
+    public class AegisAngelM15 : MagicCard
     {
-        public AegisAngel15()
+        public AegisAngelM15()
         {
             Name = "Aegis Angel";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4WW";
             PT = "5/5";
@@ -9570,9 +9570,9 @@ namespace MagicProgram
     # endregion
 
     # region Aeronaut Tinkerer
-    public class AeronautTinkerer15 : MagicCard
+    public class AeronautTinkererM15 : MagicCard
     {
-        public AeronautTinkerer15()
+        public AeronautTinkererM15()
         {
             Name = "Aeronaut Tinkerer";
             Edition = "M15";
@@ -9588,13 +9588,13 @@ namespace MagicProgram
     # endregion
 
     # region AEtherspouts
-    public class AEtherspouts15 : MagicCard
+    public class AEtherspoutsM15 : MagicCard
     {
-        public AEtherspouts15()
+        public AEtherspoutsM15()
         {
             Name = "AEtherspouts";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "3UU";
             PT = "";
@@ -9606,13 +9606,13 @@ namespace MagicProgram
     # endregion
 
     # region Aggressive Mining
-    public class AggressiveMining15 : MagicCard
+    public class AggressiveMiningM15 : MagicCard
     {
-        public AggressiveMining15()
+        public AggressiveMiningM15()
         {
             Name = "Aggressive Mining";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "3R";
             PT = "";
@@ -9624,31 +9624,31 @@ namespace MagicProgram
     # endregion
 
     # region Ajani Steadfast
-    public class AjaniSteadfast15 : MagicCard
+    public class AjaniSteadfastM15 : MagicCard
     {
-        public AjaniSteadfast15()
+        public AjaniSteadfastM15()
         {
             Name = "Ajani Steadfast";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "3W";
             PT = "4";
             Type = "Planeswalker - Ajani";
-            Text = "+1: Until end of turn, up to one target creature gets +1/+1 and gains first strike, vigilance, and lifelink.^-2: Put a +1/+1 counter on each creature you control and a loyalty counter on each other planeswalker you control.^-7: You get an emblem with 'If a source would deal damage to you or a planeswalker you control, prevent all but 1 of that damage.'";
+            Text = "+1: Until end of turn, up to one target creature gets +1/+1 and gains first strike, vigilance, and lifelink.^-2: Put a +1/+1 counter on each creature you control and a loyalty counter on each other planeswalker you control.^-7: You get an emblem with ^If a source would deal damage to you or a planeswalker you control, prevent all but 1 of that damage.^";
             Flavor = "";
         }
     }
     # endregion
 
     # region Ajani's Pridemate
-    public class AjanisPridemate15 : MagicCard
+    public class AjanisPridemateM15 : MagicCard
     {
-        public AjanisPridemate15()
+        public AjanisPridemateM15()
         {
             Name = "Ajani's Pridemate";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1W";
             PT = "2/2";
@@ -9660,13 +9660,13 @@ namespace MagicProgram
     # endregion
 
     # region Altac Bloodseeker
-    public class AltacBloodseeker15 : MagicCard
+    public class AltacBloodseekerM15 : MagicCard
     {
-        public AltacBloodseeker15()
+        public AltacBloodseekerM15()
         {
             Name = "Altac Bloodseeker";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1R";
             PT = "2/1";
@@ -9678,9 +9678,9 @@ namespace MagicProgram
     # endregion
 
     # region Amphin Pathmage
-    public class AmphinPathmage15 : MagicCard
+    public class AmphinPathmageM15 : MagicCard
     {
-        public AmphinPathmage15()
+        public AmphinPathmageM15()
         {
             Name = "Amphin Pathmage";
             Edition = "M15";
@@ -9696,13 +9696,13 @@ namespace MagicProgram
     # endregion
 
     # region Ancient Silverback
-    public class AncientSilverback15 : MagicCard
+    public class AncientSilverbackM15 : MagicCard
     {
-        public AncientSilverback15()
+        public AncientSilverbackM15()
         {
             Name = "Ancient Silverback";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "4GG";
             PT = "6/5";
@@ -9714,13 +9714,13 @@ namespace MagicProgram
     # endregion
 
     # region Avacyn, Guardian Angel
-    public class AvacynGuardianAngel15 : MagicCard
+    public class AvacynGuardianAngelM15 : MagicCard
     {
-        public AvacynGuardianAngel15()
+        public AvacynGuardianAngelM15()
         {
             Name = "Avacyn, Guardian Angel";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "2WWW";
             PT = "5/4";
@@ -9732,31 +9732,31 @@ namespace MagicProgram
     # endregion
 
     # region Avarice Amulet
-    public class AvariceAmulet15 : MagicCard
+    public class AvariceAmuletM15 : MagicCard
     {
-        public AvariceAmulet15()
+        public AvariceAmuletM15()
         {
             Name = "Avarice Amulet";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4";
             PT = "";
             Type = "Artifact - Equipment";
-            Text = "Equipped creature gets +2/+0 and has vigilance and 'At the beginning of your upkeep, draw a card.'^When equipped creature dies, target opponent gains control of Avarice Amulet.^Equip 2";
+            Text = "Equipped creature gets +2/+0 and has vigilance and ^At the beginning of your upkeep, draw a card.^^When equipped creature dies, target opponent gains control of Avarice Amulet.^Equip 2";
             Flavor = "";
         }
     }
     # endregion
 
     # region Back to Nature
-    public class BacktoNature15 : MagicCard
+    public class BacktoNatureM15 : MagicCard
     {
-        public BacktoNature15()
+        public BacktoNatureM15()
         {
             Name = "Back to Nature";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1G";
             PT = "";
@@ -9768,13 +9768,13 @@ namespace MagicProgram
     # endregion
 
     # region Battle Mastery
-    public class BattleMastery15 : MagicCard
+    public class BattleMasteryM15 : MagicCard
     {
-        public BattleMastery15()
+        public BattleMasteryM15()
         {
             Name = "Battle Mastery";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2W";
             PT = "";
@@ -9786,13 +9786,13 @@ namespace MagicProgram
     # endregion
 
     # region Battlefield Forge
-    public class BattlefieldForge15 : MagicCard
+    public class BattlefieldForgeM15 : MagicCard
     {
-        public BattlefieldForge15()
+        public BattlefieldForgeM15()
         {
             Name = "Battlefield Forge";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "";
             PT = "";
@@ -9804,27 +9804,27 @@ namespace MagicProgram
     # endregion
 
     # region Belligerent Sliver
-    public class BelligerentSliver15 : MagicCard
+    public class BelligerentSliverM15 : MagicCard
     {
-        public BelligerentSliver15()
+        public BelligerentSliverM15()
         {
             Name = "Belligerent Sliver";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2R";
             PT = "2/2";
             Type = "Creature - Sliver";
-            Text = "Sliver creatures you control have 'This creature can't be blocked except by two or more creatures.'";
+            Text = "Sliver creatures you control have ^This creature can't be blocked except by two or more creatures.^";
             Flavor = "";
         }
     }
     # endregion
 
     # region Black Cat
-    public class BlackCat15 : MagicCard
+    public class BlackCatM15 : MagicCard
     {
-        public BlackCat15()
+        public BlackCatM15()
         {
             Name = "Black Cat";
             Edition = "M15";
@@ -9840,9 +9840,9 @@ namespace MagicProgram
     # endregion
 
     # region Blastfire Bolt
-    public class BlastfireBolt15 : MagicCard
+    public class BlastfireBoltM15 : MagicCard
     {
-        public BlastfireBolt15()
+        public BlastfireBoltM15()
         {
             Name = "Blastfire Bolt";
             Edition = "M15";
@@ -9858,13 +9858,13 @@ namespace MagicProgram
     # endregion
 
     # region Blood Host
-    public class BloodHost15 : MagicCard
+    public class BloodHostM15 : MagicCard
     {
-        public BloodHost15()
+        public BloodHostM15()
         {
             Name = "Blood Host";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3BB";
             PT = "3/3";
@@ -9876,13 +9876,13 @@ namespace MagicProgram
     # endregion
 
     # region Boonweaver Giant
-    public class BoonweaverGiant15 : MagicCard
+    public class BoonweaverGiantM15 : MagicCard
     {
-        public BoonweaverGiant15()
+        public BoonweaverGiantM15()
         {
             Name = "Boonweaver Giant";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "6W";
             PT = "4/4";
@@ -9894,9 +9894,9 @@ namespace MagicProgram
     # endregion
 
     # region Borderland Marauder
-    public class BorderlandMarauder15 : MagicCard
+    public class BorderlandMarauderM15 : MagicCard
     {
-        public BorderlandMarauder15()
+        public BorderlandMarauderM15()
         {
             Name = "Borderland Marauder";
             Edition = "M15";
@@ -9912,13 +9912,13 @@ namespace MagicProgram
     # endregion
 
     # region Brawler's Plate
-    public class BrawlersPlate15 : MagicCard
+    public class BrawlersPlateM15 : MagicCard
     {
-        public BrawlersPlate15()
+        public BrawlersPlateM15()
         {
             Name = "Brawler's Plate";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3";
             PT = "";
@@ -9948,45 +9948,45 @@ namespace MagicProgram
     # endregion
 
     # region Brood Keeper
-    public class BroodKeeper15 : MagicCard
+    public class BroodKeeperM15 : MagicCard
     {
-        public BroodKeeper15()
+        public BroodKeeperM15()
         {
             Name = "Brood Keeper";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3R";
             PT = "2/3";
             Type = "Creature - Human Shaman";
-            Text = "Whenever an Aura becomes attached to Brood Keeper, put a 2/2 red Dragon creature token with flying onto the battlefield. It has 'R: This creature gets +1/+0 until end of turn.'";
+            Text = "Whenever an Aura becomes attached to Brood Keeper, put a 2/2 red Dragon creature token with flying onto the battlefield. It has ^R: This creature gets +1/+0 until end of turn.^";
             Flavor = "";
         }
     }
     # endregion
 
     # region Burning Anger
-    public class BurningAnger15 : MagicCard
+    public class BurningAngerM15 : MagicCard
     {
-        public BurningAnger15()
+        public BurningAngerM15()
         {
             Name = "Burning Anger";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4R";
             PT = "";
             Type = "Enchantment - Aura";
-            Text = "Enchant creature^Enchanted creature has 'T: This creature deals damage equal to its power to target creature or player.'";
+            Text = "Enchant creature^Enchanted creature has ^T: This creature deals damage equal to its power to target creature or player.^";
             Flavor = "";
         }
     }
     # endregion
 
     # region Cancel
-    public class Cancel15 : MagicCard
+    public class CancelM15 : MagicCard
     {
-        public Cancel15()
+        public CancelM15()
         {
             Name = "Cancel";
             Edition = "M15";
@@ -10002,9 +10002,9 @@ namespace MagicProgram
     # endregion
 
     # region Carnivorous Moss-Beast
-    public class CarnivorousMossBeast15 : MagicCard
+    public class CarnivorousMossBeastM15 : MagicCard
     {
-        public CarnivorousMossBeast15()
+        public CarnivorousMossBeastM15()
         {
             Name = "Carnivorous Moss-Beast";
             Edition = "M15";
@@ -10020,9 +10020,9 @@ namespace MagicProgram
     # endregion
 
     # region Carrion Crow
-    public class CarrionCrow15 : MagicCard
+    public class CarrionCrowM15 : MagicCard
     {
-        public CarrionCrow15()
+        public CarrionCrowM15()
         {
             Name = "Carrion Crow";
             Edition = "M15";
@@ -10038,31 +10038,31 @@ namespace MagicProgram
     # endregion
 
     # region Caustic Tar
-    public class CausticTar15 : MagicCard
+    public class CausticTarM15 : MagicCard
     {
-        public CausticTar15()
+        public CausticTarM15()
         {
             Name = "Caustic Tar";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "4BB";
             PT = "";
             Type = "Enchantment - Aura";
-            Text = "Enchant land^Enchanted land has 'T: Target player loses 3 life.'";
+            Text = "Enchant land^Enchanted land has ^T: Target player loses 3 life.^";
             Flavor = "";
         }
     }
     # endregion
 
     # region Caves of Koilos
-    public class CavesofKoilos15 : MagicCard
+    public class CavesofKoilosM15 : MagicCard
     {
-        public CavesofKoilos15()
+        public CavesofKoilosM15()
         {
             Name = "Caves of Koilos";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "";
             PT = "";
@@ -10074,9 +10074,9 @@ namespace MagicProgram
     # endregion
 
     # region Centaur Courser
-    public class CentaurCourser15 : MagicCard
+    public class CentaurCourserM15 : MagicCard
     {
-        public CentaurCourser15()
+        public CentaurCourserM15()
         {
             Name = "Centaur Courser";
             Edition = "M15";
@@ -10098,7 +10098,7 @@ namespace MagicProgram
         {
             Name = "Chandra, Pyromaster";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "2RR";
             PT = "/4";
@@ -10110,9 +10110,9 @@ namespace MagicProgram
     # endregion
 
     # region Charging Rhino
-    public class ChargingRhino15 : MagicCard
+    public class ChargingRhinoM15 : MagicCard
     {
-        public ChargingRhino15()
+        public ChargingRhinoM15()
         {
             Name = "Charging Rhino";
             Edition = "M15";
@@ -10128,13 +10128,13 @@ namespace MagicProgram
     # endregion
 
     # region Chasm Skulker
-    public class ChasmSkulker15 : MagicCard
+    public class ChasmSkulkerM15 : MagicCard
     {
-        public ChasmSkulker15()
+        public ChasmSkulkerM15()
         {
             Name = "Chasm Skulker";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "2U";
             PT = "1/1";
@@ -10146,13 +10146,13 @@ namespace MagicProgram
     # endregion
 
     # region Chief Engineer
-    public class ChiefEngineer15 : MagicCard
+    public class ChiefEngineerM15 : MagicCard
     {
-        public ChiefEngineer15()
+        public ChiefEngineerM15()
         {
             Name = "Chief Engineer";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "1U";
             PT = "1/3";
@@ -10182,13 +10182,13 @@ namespace MagicProgram
     # endregion
 
     # region Chord of Calling
-    public class ChordofCalling15 : MagicCard
+    public class ChordofCallingM15 : MagicCard
     {
-        public ChordofCalling15()
+        public ChordofCallingM15()
         {
             Name = "Chord of Calling";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "XGGG";
             PT = "";
@@ -10200,9 +10200,9 @@ namespace MagicProgram
     # endregion
 
     # region Chronostutter
-    public class Chronostutter15 : MagicCard
+    public class ChronostutterM15 : MagicCard
     {
-        public Chronostutter15()
+        public ChronostutterM15()
         {
             Name = "Chronostutter";
             Edition = "M15";
@@ -10218,13 +10218,13 @@ namespace MagicProgram
     # endregion
 
     # region Circle of Flame
-    public class CircleofFlame15 : MagicCard
+    public class CircleofFlameM15 : MagicCard
     {
-        public CircleofFlame15()
+        public CircleofFlameM15()
         {
             Name = "Circle of Flame";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1R";
             PT = "";
@@ -10236,9 +10236,9 @@ namespace MagicProgram
     # endregion
 
     # region Clear a Path
-    public class ClearaPath15 : MagicCard
+    public class ClearaPathM15 : MagicCard
     {
-        public ClearaPath15()
+        public ClearaPathM15()
         {
             Name = "Clear a Path";
             Edition = "M15";
@@ -10254,13 +10254,13 @@ namespace MagicProgram
     # endregion
 
     # region Cone of Flame
-    public class ConeofFlame15 : MagicCard
+    public class ConeofFlameM15 : MagicCard
     {
-        public ConeofFlame15()
+        public ConeofFlameM15()
         {
             Name = "Cone of Flame";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3RR";
             PT = "";
@@ -10278,7 +10278,7 @@ namespace MagicProgram
         {
             Name = "Congregate";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3W";
             PT = "";
@@ -10290,27 +10290,27 @@ namespace MagicProgram
     # endregion
 
     # region Constricting Sliver
-    public class ConstrictingSliver15 : MagicCard
+    public class ConstrictingSliverM15 : MagicCard
     {
-        public ConstrictingSliver15()
+        public ConstrictingSliverM15()
         {
             Name = "Constricting Sliver";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "5W";
             PT = "3/3";
             Type = "Creature - Sliver";
-            Text = "Sliver creatures you control have 'When this creature enters the battlefield, you may exile target creature an opponent controls until this creature leaves the battlefield.'";
+            Text = "Sliver creatures you control have ^When this creature enters the battlefield, you may exile target creature an opponent controls until this creature leaves the battlefield.^";
             Flavor = "";
         }
     }
     # endregion
 
     # region Coral Barrier
-    public class CoralBarrier15 : MagicCard
+    public class CoralBarrierM15 : MagicCard
     {
-        public CoralBarrier15()
+        public CoralBarrierM15()
         {
             Name = "Coral Barrier";
             Edition = "M15";
@@ -10326,9 +10326,9 @@ namespace MagicProgram
     # endregion
 
     # region Covenant of Blood
-    public class CovenantofBlood15 : MagicCard
+    public class CovenantofBloodM15 : MagicCard
     {
-        public CovenantofBlood15()
+        public CovenantofBloodM15()
         {
             Name = "Covenant of Blood";
             Edition = "M15";
@@ -10344,9 +10344,9 @@ namespace MagicProgram
     # endregion
 
     # region Crippling Blight
-    public class CripplingBlight15 : MagicCard
+    public class CripplingBlightM15 : MagicCard
     {
-        public CripplingBlight15()
+        public CripplingBlightM15()
         {
             Name = "Crippling Blight";
             Edition = "M15";
@@ -10362,9 +10362,9 @@ namespace MagicProgram
     # endregion
 
     # region Crowd's Favor
-    public class CrowdsFavor15 : MagicCard
+    public class CrowdsFavorM15 : MagicCard
     {
-        public CrowdsFavor15()
+        public CrowdsFavorM15()
         {
             Name = "Crowd's Favor";
             Edition = "M15";
@@ -10380,13 +10380,13 @@ namespace MagicProgram
     # endregion
 
     # region Crucible of Fire
-    public class CrucibleofFire15 : MagicCard
+    public class CrucibleofFireM15 : MagicCard
     {
-        public CrucibleofFire15()
+        public CrucibleofFireM15()
         {
             Name = "Crucible of Fire";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "3R";
             PT = "";
@@ -10398,13 +10398,13 @@ namespace MagicProgram
     # endregion
 
     # region Cruel Sadist
-    public class CruelSadist15 : MagicCard
+    public class CruelSadistM15 : MagicCard
     {
-        public CruelSadist15()
+        public CruelSadistM15()
         {
             Name = "Cruel Sadist";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "B";
             PT = "1/1";
@@ -10416,13 +10416,13 @@ namespace MagicProgram
     # endregion
 
     # region Darksteel Citadel
-    public class DarksteelCitadel15 : MagicCard
+    public class DarksteelCitadelM15 : MagicCard
     {
-        public DarksteelCitadel15()
+        public DarksteelCitadelM15()
         {
             Name = "Darksteel Citadel";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "";
             PT = "";
@@ -10430,23 +10430,17 @@ namespace MagicProgram
             Text = "Indestructible^T: Add 1 to your mana pool.";
             Flavor = "";
         }
-
-        public override void DoActivate(int i)
-        {
-            PArea.mana.grey += 1;
-            Tap(true, false);
-        }
     }
     # endregion
 
     # region Dauntless River Marshal
-    public class DauntlessRiverMarshal15 : MagicCard
+    public class DauntlessRiverMarshalM15 : MagicCard
     {
-        public DauntlessRiverMarshal15()
+        public DauntlessRiverMarshalM15()
         {
             Name = "Dauntless River Marshal";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1W";
             PT = "2/1";
@@ -10458,13 +10452,13 @@ namespace MagicProgram
     # endregion
 
     # region Devouring Light
-    public class DevouringLight15 : MagicCard
+    public class DevouringLightM15 : MagicCard
     {
-        public DevouringLight15()
+        public DevouringLightM15()
         {
             Name = "Devouring Light";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1WW";
             PT = "";
@@ -10476,13 +10470,13 @@ namespace MagicProgram
     # endregion
 
     # region Diffusion Sliver
-    public class DiffusionSliver15 : MagicCard
+    public class DiffusionSliverM15 : MagicCard
     {
-        public DiffusionSliver15()
+        public DiffusionSliverM15()
         {
             Name = "Diffusion Sliver";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1U";
             PT = "1/1";
@@ -10494,13 +10488,13 @@ namespace MagicProgram
     # endregion
 
     # region Dissipate
-    public class Dissipate15 : MagicCard
+    public class DissipateM15 : MagicCard
     {
-        public Dissipate15()
+        public DissipateM15()
         {
             Name = "Dissipate";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1UU";
             PT = "";
@@ -10512,9 +10506,9 @@ namespace MagicProgram
     # endregion
 
     # region Divination
-    public class Divination15 : MagicCard
+    public class DivinationM15 : MagicCard
     {
-        public Divination15()
+        public DivinationM15()
         {
             Name = "Divination";
             Edition = "M15";
@@ -10530,9 +10524,9 @@ namespace MagicProgram
     # endregion
 
     # region Divine Favor
-    public class DivineFavor15 : MagicCard
+    public class DivineFavorM15 : MagicCard
     {
-        public DivineFavor15()
+        public DivineFavorM15()
         {
             Name = "Divine Favor";
             Edition = "M15";
@@ -10548,9 +10542,9 @@ namespace MagicProgram
     # endregion
 
     # region Divine Verdict
-    public class DivineVerdict15 : MagicCard
+    public class DivineVerdictM15 : MagicCard
     {
-        public DivineVerdict15()
+        public DivineVerdictM15()
         {
             Name = "Divine Verdict";
             Edition = "M15";
@@ -10566,9 +10560,9 @@ namespace MagicProgram
     # endregion
 
     # region Elvish Mystic
-    public class ElvishMystic15 : MagicCard
+    public class ElvishMysticM15 : MagicCard
     {
-        public ElvishMystic15()
+        public ElvishMysticM15()
         {
             Name = "Elvish Mystic";
             Edition = "M15";
@@ -10584,9 +10578,9 @@ namespace MagicProgram
     # endregion
 
     # region Encrust
-    public class Encrust15 : MagicCard
+    public class EncrustM15 : MagicCard
     {
-        public Encrust15()
+        public EncrustM15()
         {
             Name = "Encrust";
             Edition = "M15";
@@ -10602,13 +10596,13 @@ namespace MagicProgram
     # endregion
 
     # region Endless Obedience
-    public class EndlessObedience15 : MagicCard
+    public class EndlessObedienceM15 : MagicCard
     {
-        public EndlessObedience15()
+        public EndlessObedienceM15()
         {
             Name = "Endless Obedience";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "4BB";
             PT = "";
@@ -10620,13 +10614,13 @@ namespace MagicProgram
     # endregion
 
     # region Ensoul Artifact
-    public class EnsoulArtifact15 : MagicCard
+    public class EnsoulArtifactM15 : MagicCard
     {
-        public EnsoulArtifact15()
+        public EnsoulArtifactM15()
         {
             Name = "Ensoul Artifact";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1U";
             PT = "";
@@ -10650,9 +10644,9 @@ namespace MagicProgram
     # endregion
 
     # region Ephemeral Shields
-    public class EphemeralShields15 : MagicCard
+    public class EphemeralShieldsM15 : MagicCard
     {
-        public EphemeralShields15()
+        public EphemeralShieldsM15()
         {
             Name = "Ephemeral Shields";
             Edition = "M15";
@@ -10668,9 +10662,9 @@ namespace MagicProgram
     # endregion
 
     # region Eternal Thirst
-    public class EternalThirst15 : MagicCard
+    public class EternalThirstM15 : MagicCard
     {
-        public EternalThirst15()
+        public EternalThirstM15()
         {
             Name = "Eternal Thirst";
             Edition = "M15";
@@ -10679,16 +10673,16 @@ namespace MagicProgram
             Cost = "1B";
             PT = "";
             Type = "Enchantment - Aura";
-            Text = "Enchant creature^Enchanted creature has lifelink and 'Whenever a creature an opponent controls dies, put a +1/+1 counter on this creature.'";
+            Text = "Enchant creature^Enchanted creature has lifelink and ^Whenever a creature an opponent controls dies, put a +1/+1 counter on this creature.^";
             Flavor = "";
         }
     }
     # endregion
 
     # region Evolving Wilds
-    public class EvolvingWilds15 : MagicCard
+    public class EvolvingWildsM15 : MagicCard
     {
-        public EvolvingWilds15()
+        public EvolvingWildsM15()
         {
             Name = "Evolving Wilds";
             Edition = "M15";
@@ -10704,13 +10698,13 @@ namespace MagicProgram
     # endregion
 
     # region Feast on the Fallen
-    public class FeastontheFallen15 : MagicCard
+    public class FeastontheFallenM15 : MagicCard
     {
-        public FeastontheFallen15()
+        public FeastontheFallenM15()
         {
             Name = "Feast on the Fallen";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2B";
             PT = "";
@@ -10722,13 +10716,13 @@ namespace MagicProgram
     # endregion
 
     # region Feral Incarnation
-    public class FeralIncarnation15 : MagicCard
+    public class FeralIncarnationM15 : MagicCard
     {
-        public FeralIncarnation15()
+        public FeralIncarnationM15()
         {
             Name = "Feral Incarnation";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "8G";
             PT = "";
@@ -10740,9 +10734,9 @@ namespace MagicProgram
     # endregion
 
     # region Festergloom
-    public class Festergloom15 : MagicCard
+    public class FestergloomM15 : MagicCard
     {
-        public Festergloom15()
+        public FestergloomM15()
         {
             Name = "Festergloom";
             Edition = "M15";
@@ -10758,13 +10752,13 @@ namespace MagicProgram
     # endregion
 
     # region First Response
-    public class FirstResponse15 : MagicCard
+    public class FirstResponseM15 : MagicCard
     {
-        public FirstResponse15()
+        public FirstResponseM15()
         {
             Name = "First Response";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3W";
             PT = "";
@@ -10776,9 +10770,9 @@ namespace MagicProgram
     # endregion
 
     # region Flesh to Dust
-    public class FleshtoDust15 : MagicCard
+    public class FleshtoDustM15 : MagicCard
     {
-        public FleshtoDust15()
+        public FleshtoDustM15()
         {
             Name = "Flesh to Dust";
             Edition = "M15";
@@ -10794,9 +10788,9 @@ namespace MagicProgram
     # endregion
 
     # region Forest
-    public class Forest15 : MagicCard
+    public class ForestM15 : MagicCard
     {
-        public Forest15()
+        public ForestM15()
         {
             Name = "Forest";
             Edition = "M15";
@@ -10812,9 +10806,9 @@ namespace MagicProgram
     # endregion
 
     # region Forge Devil
-    public class ForgeDevil15 : MagicCard
+    public class ForgeDevilM15 : MagicCard
     {
-        public ForgeDevil15()
+        public ForgeDevilM15()
         {
             Name = "Forge Devil";
             Edition = "M15";
@@ -10830,9 +10824,9 @@ namespace MagicProgram
     # endregion
 
     # region Foundry Street Denizen
-    public class FoundryStreetDenizen15 : MagicCard
+    public class FoundryStreetDenizenM15 : MagicCard
     {
-        public FoundryStreetDenizen15()
+        public FoundryStreetDenizenM15()
         {
             Name = "Foundry Street Denizen";
             Edition = "M15";
@@ -10848,13 +10842,13 @@ namespace MagicProgram
     # endregion
 
     # region Frenzied Goblin
-    public class FrenziedGoblin15 : MagicCard
+    public class FrenziedGoblinM15 : MagicCard
     {
-        public FrenziedGoblin15()
+        public FrenziedGoblinM15()
         {
             Name = "Frenzied Goblin";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "R";
             PT = "1/1";
@@ -10866,9 +10860,9 @@ namespace MagicProgram
     # endregion
 
     # region Frost Lynx
-    public class FrostLynx15 : MagicCard
+    public class FrostLynxM15 : MagicCard
     {
-        public FrostLynx15()
+        public FrostLynxM15()
         {
             Name = "Frost Lynx";
             Edition = "M15";
@@ -10884,9 +10878,9 @@ namespace MagicProgram
     # endregion
 
     # region Fugitive Wizard
-    public class FugitiveWizard15 : MagicCard
+    public class FugitiveWizardM15 : MagicCard
     {
-        public FugitiveWizard15()
+        public FugitiveWizardM15()
         {
             Name = "Fugitive Wizard";
             Edition = "M15";
@@ -10902,13 +10896,13 @@ namespace MagicProgram
     # endregion
 
     # region Furnace Whelp
-    public class FurnaceWhelp15 : MagicCard
+    public class FurnaceWhelpM15 : MagicCard
     {
-        public FurnaceWhelp15()
+        public FurnaceWhelpM15()
         {
             Name = "Furnace Whelp";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2RR";
             PT = "2/2";
@@ -10920,13 +10914,13 @@ namespace MagicProgram
     # endregion
 
     # region Gargoyle Sentinel
-    public class GargoyleSentinel15 : MagicCard
+    public class GargoyleSentinelM15 : MagicCard
     {
-        public GargoyleSentinel15()
+        public GargoyleSentinelM15()
         {
             Name = "Gargoyle Sentinel";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3";
             PT = "3/3";
@@ -10938,31 +10932,31 @@ namespace MagicProgram
     # endregion
 
     # region Garruk, Apex Predator
-    public class GarrukApexPredator15 : MagicCard
+    public class GarrukApexPredatorM15 : MagicCard
     {
-        public GarrukApexPredator15()
+        public GarrukApexPredatorM15()
         {
             Name = "Garruk, Apex Predator";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "5BG";
             PT = "/5";
             Type = "Planeswalker - Garruk";
-            Text = "+1: Destroy another target planeswalker.^+1: Put a 3/3 black Beast creature token with deathtouch onto the battlefield.^-3: Destroy target creature. You gain life equal to its toughness.^-8: Target opponent gets an emblem with 'Whenever a creature attacks you, it gets +5/+5 and gains trample until end of turn.'";
+            Text = "+1: Destroy another target planeswalker.^+1: Put a 3/3 black Beast creature token with deathtouch onto the battlefield.^-3: Destroy target creature. You gain life equal to its toughness.^-8: Target opponent gets an emblem with ^Whenever a creature attacks you, it gets +5/+5 and gains trample until end of turn.^";
             Flavor = "";
         }
     }
     # endregion
 
     # region Garruk's Packleader
-    public class GarruksPackleader15 : MagicCard
+    public class GarruksPackleaderM15 : MagicCard
     {
-        public GarruksPackleader15()
+        public GarruksPackleaderM15()
         {
             Name = "Garruk's Packleader";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "4G";
             PT = "4/4";
@@ -10974,13 +10968,13 @@ namespace MagicProgram
     # endregion
 
     # region Gather Courage
-    public class GatherCourage15 : MagicCard
+    public class GatherCourageM15 : MagicCard
     {
-        public GatherCourage15()
+        public GatherCourageM15()
         {
             Name = "Gather Courage";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "G";
             PT = "";
@@ -10992,13 +10986,13 @@ namespace MagicProgram
     # endregion
 
     # region Geist of the Moors
-    public class GeistoftheMoors15 : MagicCard
+    public class GeistoftheMoorsM15 : MagicCard
     {
-        public GeistoftheMoors15()
+        public GeistoftheMoorsM15()
         {
             Name = "Geist of the Moors";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1WW";
             PT = "3/1";
@@ -11010,9 +11004,9 @@ namespace MagicProgram
     # endregion
 
     # region Generator Servant
-    public class GeneratorServant15 : MagicCard
+    public class GeneratorServantM15 : MagicCard
     {
-        public GeneratorServant15()
+        public GeneratorServantM15()
         {
             Name = "Generator Servant";
             Edition = "M15";
@@ -11028,13 +11022,13 @@ namespace MagicProgram
     # endregion
 
     # region Genesis Hydra
-    public class GenesisHydra15 : MagicCard
+    public class GenesisHydraM15 : MagicCard
     {
-        public GenesisHydra15()
+        public GenesisHydraM15()
         {
             Name = "Genesis Hydra";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "XGG";
             PT = "0/0";
@@ -11046,9 +11040,9 @@ namespace MagicProgram
     # endregion
 
     # region Glacial Crasher
-    public class GlacialCrasher15 : MagicCard
+    public class GlacialCrasherM15 : MagicCard
     {
-        public GlacialCrasher15()
+        public GlacialCrasherM15()
         {
             Name = "Glacial Crasher";
             Edition = "M15";
@@ -11064,31 +11058,31 @@ namespace MagicProgram
     # endregion
 
     # region Goblin Kaboomist
-    public class GoblinKaboomist15 : MagicCard
+    public class GoblinKaboomistM15 : MagicCard
     {
-        public GoblinKaboomist15()
+        public GoblinKaboomistM15()
         {
             Name = "Goblin Kaboomist";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "1R";
             PT = "1/2";
             Type = "Creature - Goblin Warrior";
-            Text = "At the beginning of your upkeep, put a colorless artifact token named Land Mine onto the battlefield with 'R, Sacrifice this artifact: This artifact deals 2 damage to target attacking creature without flying.' Then flip a coin. If you lose the flip, Goblin Kaboomist deals 2 damage to itself.";
+            Text = "At the beginning of your upkeep, put a colorless artifact token named Land Mine onto the battlefield with ^R, Sacrifice this artifact: This artifact deals 2 damage to target attacking creature without flying.^ Then flip a coin. If you lose the flip, Goblin Kaboomist deals 2 damage to itself.";
             Flavor = "";
         }
     }
     # endregion
 
     # region Goblin Rabblemaster
-    public class GoblinRabblemaster15 : MagicCard
+    public class GoblinRabblemasterM15 : MagicCard
     {
-        public GoblinRabblemaster15()
+        public GoblinRabblemasterM15()
         {
             Name = "Goblin Rabblemaster";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "2R";
             PT = "2/2";
@@ -11100,9 +11094,9 @@ namespace MagicProgram
     # endregion
 
     # region Goblin Roughrider
-    public class GoblinRoughrider15 : MagicCard
+    public class GoblinRoughriderM15 : MagicCard
     {
-        public GoblinRoughrider15()
+        public GoblinRoughriderM15()
         {
             Name = "Goblin Roughrider";
             Edition = "M15";
@@ -11118,13 +11112,13 @@ namespace MagicProgram
     # endregion
 
     # region Gravedigger
-    public class Gravedigger15 : MagicCard
+    public class GravediggerM15 : MagicCard
     {
-        public Gravedigger15()
+        public GravediggerM15()
         {
             Name = "Gravedigger";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3B";
             PT = "2/2";
@@ -11136,13 +11130,13 @@ namespace MagicProgram
     # endregion
 
     # region Grindclock
-    public class Grindclock15 : MagicCard
+    public class GrindclockM15 : MagicCard
     {
-        public Grindclock15()
+        public GrindclockM15()
         {
             Name = "Grindclock";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "2";
             PT = "";
@@ -11154,9 +11148,9 @@ namespace MagicProgram
     # endregion
 
     # region Hammerhand
-    public class Hammerhand15 : MagicCard
+    public class HammerhandM15 : MagicCard
     {
-        public Hammerhand15()
+        public HammerhandM15()
         {
             Name = "Hammerhand";
             Edition = "M15";
@@ -11172,13 +11166,13 @@ namespace MagicProgram
     # endregion
 
     # region Haunted Plate Mail
-    public class HauntedPlateMail15 : MagicCard
+    public class HauntedPlateMailM15 : MagicCard
     {
-        public HauntedPlateMail15()
+        public HauntedPlateMailM15()
         {
             Name = "Haunted Plate Mail";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4";
             PT = "";
@@ -11190,13 +11184,13 @@ namespace MagicProgram
     # endregion
 
     # region Heat Ray
-    public class HeatRay15 : MagicCard
+    public class HeatRayM15 : MagicCard
     {
-        public HeatRay15()
+        public HeatRayM15()
         {
             Name = "Heat Ray";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "XR";
             PT = "";
@@ -11208,9 +11202,9 @@ namespace MagicProgram
     # endregion
 
     # region Heliod's Pilgrim
-    public class HeliodsPilgrim15 : MagicCard
+    public class HeliodsPilgrimM15 : MagicCard
     {
-        public HeliodsPilgrim15()
+        public HeliodsPilgrimM15()
         {
             Name = "Heliod's Pilgrim";
             Edition = "M15";
@@ -11226,13 +11220,13 @@ namespace MagicProgram
     # endregion
 
     # region Hoarding Dragon
-    public class HoardingDragon15 : MagicCard
+    public class HoardingDragonM15 : MagicCard
     {
-        public HoardingDragon15()
+        public HoardingDragonM15()
         {
             Name = "Hoarding Dragon";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "3RR";
             PT = "4/4";
@@ -11244,13 +11238,13 @@ namespace MagicProgram
     # endregion
 
     # region Hornet Nest
-    public class HornetNest15 : MagicCard
+    public class HornetNestM15 : MagicCard
     {
-        public HornetNest15()
+        public HornetNestM15()
         {
             Name = "Hornet Nest";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "2G";
             PT = "0/2";
@@ -11262,13 +11256,13 @@ namespace MagicProgram
     # endregion
 
     # region Hornet Queen
-    public class HornetQueen15 : MagicCard
+    public class HornetQueenM15 : MagicCard
     {
-        public HornetQueen15()
+        public HornetQueenM15()
         {
             Name = "Hornet Queen";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4GGG";
             PT = "2/2";
@@ -11280,13 +11274,13 @@ namespace MagicProgram
     # endregion
 
     # region Hot Soup
-    public class HotSoup15 : MagicCard
+    public class HotSoupM15 : MagicCard
     {
-        public HotSoup15()
+        public HotSoupM15()
         {
             Name = "Hot Soup";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1";
             PT = "";
@@ -11298,9 +11292,9 @@ namespace MagicProgram
     # endregion
 
     # region Hunt the Weak
-    public class HunttheWeak15 : MagicCard
+    public class HunttheWeakM15 : MagicCard
     {
-        public HunttheWeak15()
+        public HunttheWeakM15()
         {
             Name = "Hunt the Weak";
             Edition = "M15";
@@ -11316,9 +11310,9 @@ namespace MagicProgram
     # endregion
 
     # region Hunter's Ambush
-    public class HuntersAmbush15 : MagicCard
+    public class HuntersAmbushM15 : MagicCard
     {
-        public HuntersAmbush15()
+        public HuntersAmbushM15()
         {
             Name = "Hunter's Ambush";
             Edition = "M15";
@@ -11334,13 +11328,13 @@ namespace MagicProgram
     # endregion
 
     # region Hushwing Gryff
-    public class HushwingGryff15 : MagicCard
+    public class HushwingGryffM15 : MagicCard
     {
-        public HushwingGryff15()
+        public HushwingGryffM15()
         {
             Name = "Hushwing Gryff";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "2W";
             PT = "2/1";
@@ -11352,9 +11346,9 @@ namespace MagicProgram
     # endregion
 
     # region Hydrosurge
-    public class Hydrosurge15 : MagicCard
+    public class HydrosurgeM15 : MagicCard
     {
-        public Hydrosurge15()
+        public HydrosurgeM15()
         {
             Name = "Hydrosurge";
             Edition = "M15";
@@ -11370,13 +11364,13 @@ namespace MagicProgram
     # endregion
 
     # region Illusory Angel
-    public class IllusoryAngel15 : MagicCard
+    public class IllusoryAngelM15 : MagicCard
     {
-        public IllusoryAngel15()
+        public IllusoryAngelM15()
         {
             Name = "Illusory Angel";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2U";
             PT = "4/4";
@@ -11388,13 +11382,13 @@ namespace MagicProgram
     # endregion
 
     # region In Garruk's Wake
-    public class InGarruksWake15 : MagicCard
+    public class InGarruksWakeM15 : MagicCard
     {
-        public InGarruksWake15()
+        public InGarruksWakeM15()
         {
             Name = "In Garruk's Wake";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "7BB";
             PT = "";
@@ -11406,13 +11400,13 @@ namespace MagicProgram
     # endregion
 
     # region Indulgent Tormentor
-    public class IndulgentTormentor15 : MagicCard
+    public class IndulgentTormentorM15 : MagicCard
     {
-        public IndulgentTormentor15()
+        public IndulgentTormentorM15()
         {
             Name = "Indulgent Tormentor";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "3BB";
             PT = "5/3";
@@ -11424,9 +11418,9 @@ namespace MagicProgram
     # endregion
 
     # region Inferno Fist
-    public class InfernoFist15 : MagicCard
+    public class InfernoFistM15 : MagicCard
     {
-        public InfernoFist15()
+        public InfernoFistM15()
         {
             Name = "Inferno Fist";
             Edition = "M15";
@@ -11442,9 +11436,9 @@ namespace MagicProgram
     # endregion
 
     # region Inspired Charge
-    public class InspiredCharge15 : MagicCard
+    public class InspiredChargeM15 : MagicCard
     {
-        public InspiredCharge15()
+        public InspiredChargeM15()
         {
             Name = "Inspired Charge";
             Edition = "M15";
@@ -11460,13 +11454,13 @@ namespace MagicProgram
     # endregion
 
     # region Into the Void
-    public class IntotheVoid15 : MagicCard
+    public class IntotheVoidM15 : MagicCard
     {
-        public IntotheVoid15()
+        public IntotheVoidM15()
         {
             Name = "Into the Void";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3U";
             PT = "";
@@ -11478,9 +11472,9 @@ namespace MagicProgram
     # endregion
 
     # region Invasive Species
-    public class InvasiveSpecies15 : MagicCard
+    public class InvasiveSpeciesM15 : MagicCard
     {
-        public InvasiveSpecies15()
+        public InvasiveSpeciesM15()
         {
             Name = "Invasive Species";
             Edition = "M15";
@@ -11496,9 +11490,9 @@ namespace MagicProgram
     # endregion
 
     # region Invisibility
-    public class Invisibility15 : MagicCard
+    public class InvisibilityM15 : MagicCard
     {
-        public Invisibility15()
+        public InvisibilityM15()
         {
             Name = "Invisibility";
             Edition = "M15";
@@ -11514,9 +11508,9 @@ namespace MagicProgram
     # endregion
 
     # region Island
-    public class Island15 : MagicCard
+    public class IslandM15 : MagicCard
     {
-        public Island15()
+        public IslandM15()
         {
             Name = "Island";
             Edition = "M15";
@@ -11532,13 +11526,13 @@ namespace MagicProgram
     # endregion
 
     # region Jace, the Living Guildpact
-    public class JacetheLivingGuildpact15 : MagicCard
+    public class JacetheLivingGuildpactM15 : MagicCard
     {
-        public JacetheLivingGuildpact15()
+        public JacetheLivingGuildpactM15()
         {
             Name = "Jace, the Living Guildpact";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "2UU";
             PT = "/5";
@@ -11550,13 +11544,13 @@ namespace MagicProgram
     # endregion
 
     # region Jace's Ingenuity
-    public class JacesIngenuity15 : MagicCard
+    public class JacesIngenuityM15 : MagicCard
     {
-        public JacesIngenuity15()
+        public JacesIngenuityM15()
         {
             Name = "Jace's Ingenuity";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3UU";
             PT = "";
@@ -11568,13 +11562,13 @@ namespace MagicProgram
     # endregion
 
     # region Jalira, Master Polymorphist
-    public class JaliraMasterPolymorphist15 : MagicCard
+    public class JaliraMasterPolymorphistM15 : MagicCard
     {
-        public JaliraMasterPolymorphist15()
+        public JaliraMasterPolymorphistM15()
         {
             Name = "Jalira, Master Polymorphist";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "3U";
             PT = "2/2";
@@ -11586,13 +11580,13 @@ namespace MagicProgram
     # endregion
 
     # region Jorubai Murk Lurker
-    public class JorubaiMurkLurker15 : MagicCard
+    public class JorubaiMurkLurkerM15 : MagicCard
     {
-        public JorubaiMurkLurker15()
+        public JorubaiMurkLurkerM15()
         {
             Name = "Jorubai Murk Lurker";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2U";
             PT = "1/3";
@@ -11604,13 +11598,13 @@ namespace MagicProgram
     # endregion
 
     # region Juggernaut
-    public class Juggernaut15 : MagicCard
+    public class JuggernautM15 : MagicCard
     {
-        public Juggernaut15()
+        public JuggernautM15()
         {
             Name = "Juggernaut";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "4";
             PT = "5/3";
@@ -11622,31 +11616,31 @@ namespace MagicProgram
     # endregion
 
     # region Kalonian Twingrove
-    public class KalonianTwingrove15 : MagicCard
+    public class KalonianTwingroveM15 : MagicCard
     {
-        public KalonianTwingrove15()
+        public KalonianTwingroveM15()
         {
             Name = "Kalonian Twingrove";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "5G";
             PT = "*/*";
             Type = "Creature - Treefolk Warrior";
-            Text = "Kalonian Twingrove's power and toughness are each equal to the number of Forests you control.^When Kalonian Twingrove enters the battlefield, put a green Treefolk Warrior creature token onto the battlefield with 'This creature's power and toughness are each equal to the number of Forests you control.'";
+            Text = "Kalonian Twingrove's power and toughness are each equal to the number of Forests you control.^When Kalonian Twingrove enters the battlefield, put a green Treefolk Warrior creature token onto the battlefield with ^This creature's power and toughness are each equal to the number of Forests you control.^";
             Flavor = "";
         }
     }
     # endregion
 
     # region Kapsho Kitefins
-    public class KapshoKitefins15 : MagicCard
+    public class KapshoKitefinsM15 : MagicCard
     {
-        public KapshoKitefins15()
+        public KapshoKitefinsM15()
         {
             Name = "Kapsho Kitefins";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "4UU";
             PT = "3/3";
@@ -11658,9 +11652,9 @@ namespace MagicProgram
     # endregion
 
     # region Kinsbaile Skirmisher
-    public class KinsbaileSkirmisher15 : MagicCard
+    public class KinsbaileSkirmisherM15 : MagicCard
     {
-        public KinsbaileSkirmisher15()
+        public KinsbaileSkirmisherM15()
         {
             Name = "Kinsbaile Skirmisher";
             Edition = "M15";
@@ -11676,13 +11670,13 @@ namespace MagicProgram
     # endregion
 
     # region Kird Chieftain
-    public class KirdChieftain15 : MagicCard
+    public class KirdChieftainM15 : MagicCard
     {
-        public KirdChieftain15()
+        public KirdChieftainM15()
         {
             Name = "Kird Chieftain";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3R";
             PT = "3/3";
@@ -11694,13 +11688,13 @@ namespace MagicProgram
     # endregion
 
     # region Krenko's Enforcer
-    public class KrenkosEnforcer15 : MagicCard
+    public class KrenkosEnforcerM15 : MagicCard
     {
-        public KrenkosEnforcer15()
+        public KrenkosEnforcerM15()
         {
             Name = "Krenko's Enforcer";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "c";
             Color = "";
             Cost = "1RR";
             PT = "2/2";
@@ -11712,13 +11706,13 @@ namespace MagicProgram
     # endregion
 
     # region Kurkesh, Onakke Ancient
-    public class KurkeshOnakkeAncient15 : MagicCard
+    public class KurkeshOnakkeAncientM15 : MagicCard
     {
-        public KurkeshOnakkeAncient15()
+        public KurkeshOnakkeAncientM15()
         {
             Name = "Kurkesh, Onakke Ancient";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "2RR";
             PT = "4/3";
@@ -11730,9 +11724,9 @@ namespace MagicProgram
     # endregion
 
     # region Lava Axe
-    public class LavaAxe15 : MagicCard
+    public class LavaAxeM15 : MagicCard
     {
-        public LavaAxe15()
+        public LavaAxeM15()
         {
             Name = "Lava Axe";
             Edition = "M15";
@@ -11748,13 +11742,13 @@ namespace MagicProgram
     # endregion
 
     # region Leeching Sliver
-    public class LeechingSliver15 : MagicCard
+    public class LeechingSliverM15 : MagicCard
     {
-        public LeechingSliver15()
+        public LeechingSliverM15()
         {
             Name = "Leeching Sliver";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1B";
             PT = "1/1";
@@ -11766,13 +11760,13 @@ namespace MagicProgram
     # endregion
 
     # region Life's Legacy
-    public class LifesLegacy15 : MagicCard
+    public class LifesLegacyM15 : MagicCard
     {
-        public LifesLegacy15()
+        public LifesLegacyM15()
         {
             Name = "Life's Legacy";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "1G";
             PT = "";
@@ -11784,9 +11778,9 @@ namespace MagicProgram
     # endregion
 
     # region Lightning Strike
-    public class LightningStrike15 : MagicCard
+    public class LightningStrikeM15 : MagicCard
     {
-        public LightningStrike15()
+        public LightningStrikeM15()
         {
             Name = "Lightning Strike";
             Edition = "M15";
@@ -11802,13 +11796,13 @@ namespace MagicProgram
     # endregion
 
     # region Liliana Vess
-    public class LilianaVess15 : MagicCard
+    public class LilianaVessM15 : MagicCard
     {
-        public LilianaVess15()
+        public LilianaVessM15()
         {
             Name = "Liliana Vess";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "3BB";
             PT = "/5";
@@ -11820,9 +11814,9 @@ namespace MagicProgram
     # endregion
 
     # region Living Totem
-    public class LivingTotem15 : MagicCard
+    public class LivingTotemM15 : MagicCard
     {
-        public LivingTotem15()
+        public LivingTotemM15()
         {
             Name = "Living Totem";
             Edition = "M15";
@@ -11838,13 +11832,13 @@ namespace MagicProgram
     # endregion
 
     # region Llanowar Wastes
-    public class LlanowarWastes15 : MagicCard
+    public class LlanowarWastesM15 : MagicCard
     {
-        public LlanowarWastes15()
+        public LlanowarWastesM15()
         {
             Name = "Llanowar Wastes";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "";
             PT = "";
@@ -11856,13 +11850,13 @@ namespace MagicProgram
     # endregion
 
     # region Mahamoti Djinn
-    public class MahamotiDjinn15 : MagicCard
+    public class MahamotiDjinnM15 : MagicCard
     {
-        public MahamotiDjinn15()
+        public MahamotiDjinnM15()
         {
             Name = "Mahamoti Djinn";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4UU";
             PT = "5/6";
@@ -11874,9 +11868,9 @@ namespace MagicProgram
     # endregion
 
     # region Marked by Honor
-    public class MarkedbyHonor15 : MagicCard
+    public class MarkedbyHonorM15 : MagicCard
     {
-        public MarkedbyHonor15()
+        public MarkedbyHonorM15()
         {
             Name = "Marked by Honor";
             Edition = "M15";
@@ -11892,13 +11886,13 @@ namespace MagicProgram
     # endregion
 
     # region Mass Calcify
-    public class MassCalcify15 : MagicCard
+    public class MassCalcifyM15 : MagicCard
     {
-        public MassCalcify15()
+        public MassCalcifyM15()
         {
             Name = "Mass Calcify";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "5WW";
             PT = "";
@@ -11910,13 +11904,13 @@ namespace MagicProgram
     # endregion
 
     # region Master of Predicaments
-    public class MasterofPredicaments15 : MagicCard
+    public class MasterofPredicamentsM15 : MagicCard
     {
-        public MasterofPredicaments15()
+        public MasterofPredicamentsM15()
         {
             Name = "Master of Predicaments";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "3UU";
             PT = "4/4";
@@ -11928,9 +11922,9 @@ namespace MagicProgram
     # endregion
 
     # region Meditation Puzzle
-    public class MeditationPuzzle15 : MagicCard
+    public class MeditationPuzzleM15 : MagicCard
     {
-        public MeditationPuzzle15()
+        public MeditationPuzzleM15()
         {
             Name = "Meditation Puzzle";
             Edition = "M15";
@@ -11946,31 +11940,31 @@ namespace MagicProgram
     # endregion
 
     # region Mercurial Pretender
-    public class MercurialPretender15 : MagicCard
+    public class MercurialPretenderM15 : MagicCard
     {
-        public MercurialPretender15()
+        public MercurialPretenderM15()
         {
             Name = "Mercurial Pretender";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4U";
             PT = "0/0";
             Type = "Creature - Shapeshifter";
-            Text = "You may have Mercurial Pretender enter the battlefield as a copy of any creature you control except it gains '2UU: Return this creature to its owner's hand.'";
+            Text = "You may have Mercurial Pretender enter the battlefield as a copy of any creature you control except it gains ^2UU: Return this creature to its owner's hand.^";
             Flavor = "";
         }
     }
     # endregion
 
     # region Meteorite
-    public class Meteorite15 : MagicCard
+    public class MeteoriteM15 : MagicCard
     {
-        public Meteorite15()
+        public MeteoriteM15()
         {
             Name = "Meteorite";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "5";
             PT = "";
@@ -11982,9 +11976,9 @@ namespace MagicProgram
     # endregion
 
     # region Midnight Guard
-    public class MidnightGuard15 : MagicCard
+    public class MidnightGuardM15 : MagicCard
     {
-        public MidnightGuard15()
+        public MidnightGuardM15()
         {
             Name = "Midnight Guard";
             Edition = "M15";
@@ -12000,13 +11994,13 @@ namespace MagicProgram
     # endregion
 
     # region Might Makes Right
-    public class MightMakesRight15 : MagicCard
+    public class MightMakesRightM15 : MagicCard
     {
-        public MightMakesRight15()
+        public MightMakesRightM15()
         {
             Name = "Might Makes Right";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "5R";
             PT = "";
@@ -12018,13 +12012,13 @@ namespace MagicProgram
     # endregion
 
     # region Military Intelligence
-    public class MilitaryIntelligence15 : MagicCard
+    public class MilitaryIntelligenceM15 : MagicCard
     {
-        public MilitaryIntelligence15()
+        public MilitaryIntelligenceM15()
         {
             Name = "Military Intelligence";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1U";
             PT = "";
@@ -12036,9 +12030,9 @@ namespace MagicProgram
     # endregion
 
     # region Mind Rot
-    public class MindRot15 : MagicCard
+    public class MindRotM15 : MagicCard
     {
-        public MindRot15()
+        public MindRotM15()
         {
             Name = "Mind Rot";
             Edition = "M15";
@@ -12054,9 +12048,9 @@ namespace MagicProgram
     # endregion
 
     # region Mind Sculpt
-    public class MindSculpt15 : MagicCard
+    public class MindSculptM15 : MagicCard
     {
-        public MindSculpt15()
+        public MindSculptM15()
         {
             Name = "Mind Sculpt";
             Edition = "M15";
@@ -12072,9 +12066,9 @@ namespace MagicProgram
     # endregion
 
     # region Miner's Bane
-    public class MinersBane15 : MagicCard
+    public class MinersBaneM15 : MagicCard
     {
-        public MinersBane15()
+        public MinersBaneM15()
         {
             Name = "Miner's Bane";
             Edition = "M15";
@@ -12090,9 +12084,9 @@ namespace MagicProgram
     # endregion
 
     # region Mountain
-    public class Mountain15 : MagicCard
+    public class MountainM15 : MagicCard
     {
-        public Mountain15()
+        public MountainM15()
         {
             Name = "Mountain";
             Edition = "M15";
@@ -12108,9 +12102,9 @@ namespace MagicProgram
     # endregion
 
     # region Naturalize
-    public class Naturalize15 : MagicCard
+    public class NaturalizeM15 : MagicCard
     {
-        public Naturalize15()
+        public NaturalizeM15()
         {
             Name = "Naturalize";
             Edition = "M15";
@@ -12126,9 +12120,9 @@ namespace MagicProgram
     # endregion
 
     # region Necrobite
-    public class Necrobite15 : MagicCard
+    public class NecrobiteM15 : MagicCard
     {
-        public Necrobite15()
+        public NecrobiteM15()
         {
             Name = "Necrobite";
             Edition = "M15";
@@ -12144,13 +12138,13 @@ namespace MagicProgram
     # endregion
 
     # region Necrogen Scudder
-    public class NecrogenScudder15 : MagicCard
+    public class NecrogenScudderM15 : MagicCard
     {
-        public NecrogenScudder15()
+        public NecrogenScudderM15()
         {
             Name = "Necrogen Scudder";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2B";
             PT = "3/3";
@@ -12162,9 +12156,9 @@ namespace MagicProgram
     # endregion
 
     # region Necromancer's Assistant
-    public class NecromancersAssistant15 : MagicCard
+    public class NecromancersAssistantM15 : MagicCard
     {
-        public NecromancersAssistant15()
+        public NecromancersAssistantM15()
         {
             Name = "Necromancer's Assistant";
             Edition = "M15";
@@ -12180,13 +12174,13 @@ namespace MagicProgram
     # endregion
 
     # region Necromancer's Stockpile
-    public class NecromancersStockpile15 : MagicCard
+    public class NecromancersStockpileM15 : MagicCard
     {
-        public NecromancersStockpile15()
+        public NecromancersStockpileM15()
         {
             Name = "Necromancer's Stockpile";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "1B";
             PT = "";
@@ -12198,9 +12192,9 @@ namespace MagicProgram
     # endregion
 
     # region Negate
-    public class Negate15 : MagicCard
+    public class NegateM15 : MagicCard
     {
-        public Negate15()
+        public NegateM15()
         {
             Name = "Negate";
             Edition = "M15";
@@ -12216,9 +12210,9 @@ namespace MagicProgram
     # endregion
 
     # region Netcaster Spider
-    public class NetcasterSpider15 : MagicCard
+    public class NetcasterSpiderM15 : MagicCard
     {
-        public NetcasterSpider15()
+        public NetcasterSpiderM15()
         {
             Name = "Netcaster Spider";
             Edition = "M15";
@@ -12234,13 +12228,13 @@ namespace MagicProgram
     # endregion
 
     # region Nightfire Giant
-    public class NightfireGiant15 : MagicCard
+    public class NightfireGiantM15 : MagicCard
     {
-        public NightfireGiant15()
+        public NightfireGiantM15()
         {
             Name = "Nightfire Giant";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "4B";
             PT = "4/3";
@@ -12252,13 +12246,13 @@ namespace MagicProgram
     # endregion
 
     # region Nightmare
-    public class Nightmare15 : MagicCard
+    public class NightmareM15 : MagicCard
     {
-        public Nightmare15()
+        public NightmareM15()
         {
             Name = "Nightmare";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "5B";
             PT = "*/*";
@@ -12270,9 +12264,9 @@ namespace MagicProgram
     # endregion
 
     # region Nimbus of the Isles
-    public class NimbusoftheIsles15 : MagicCard
+    public class NimbusoftheIslesM15 : MagicCard
     {
-        public NimbusoftheIsles15()
+        public NimbusoftheIslesM15()
         {
             Name = "Nimbus of the Isles";
             Edition = "M15";
@@ -12288,13 +12282,13 @@ namespace MagicProgram
     # endregion
 
     # region Nissa, Worldwaker
-    public class NissaWorldwaker15 : MagicCard
+    public class NissaWorldwakerM15 : MagicCard
     {
-        public NissaWorldwaker15()
+        public NissaWorldwakerM15()
         {
             Name = "Nissa, Worldwaker";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "3GG";
             PT = "/3";
@@ -12306,13 +12300,13 @@ namespace MagicProgram
     # endregion
 
     # region Nissa's Expedition
-    public class NissasExpedition15 : MagicCard
+    public class NissasExpeditionM15 : MagicCard
     {
-        public NissasExpedition15()
+        public NissasExpeditionM15()
         {
             Name = "Nissa's Expedition";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "4G";
             PT = "";
@@ -12324,13 +12318,13 @@ namespace MagicProgram
     # endregion
 
     # region Ob Nixilis, Unshackled
-    public class ObNixilisUnshackled15 : MagicCard
+    public class ObNixilisUnshackledM15 : MagicCard
     {
-        public ObNixilisUnshackled15()
+        public ObNixilisUnshackledM15()
         {
             Name = "Ob Nixilis, Unshackled";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "4BB";
             PT = "4/4";
@@ -12342,13 +12336,13 @@ namespace MagicProgram
     # endregion
 
     # region Obelisk of Urd
-    public class ObeliskofUrd15 : MagicCard
+    public class ObeliskofUrdM15 : MagicCard
     {
-        public ObeliskofUrd15()
+        public ObeliskofUrdM15()
         {
             Name = "Obelisk of Urd";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "6";
             PT = "";
@@ -12360,9 +12354,9 @@ namespace MagicProgram
     # endregion
 
     # region Oppressive Rays
-    public class OppressiveRays15 : MagicCard
+    public class OppressiveRaysM15 : MagicCard
     {
-        public OppressiveRays15()
+        public OppressiveRaysM15()
         {
             Name = "Oppressive Rays";
             Edition = "M15";
@@ -12378,9 +12372,9 @@ namespace MagicProgram
     # endregion
 
     # region Oreskos Swiftclaw
-    public class OreskosSwiftclaw15 : MagicCard
+    public class OreskosSwiftclawM15 : MagicCard
     {
-        public OreskosSwiftclaw15()
+        public OreskosSwiftclawM15()
         {
             Name = "Oreskos Swiftclaw";
             Edition = "M15";
@@ -12396,9 +12390,9 @@ namespace MagicProgram
     # endregion
 
     # region Ornithopter
-    public class Ornithopter15 : MagicCard
+    public class OrnithopterM15 : MagicCard
     {
-        public Ornithopter15()
+        public OrnithopterM15()
         {
             Name = "Ornithopter";
             Edition = "M15";
@@ -12414,13 +12408,13 @@ namespace MagicProgram
     # endregion
 
     # region Overwhelm
-    public class Overwhelm15 : MagicCard
+    public class OverwhelmM15 : MagicCard
     {
-        public Overwhelm15()
+        public OverwhelmM15()
         {
             Name = "Overwhelm";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "5GG";
             PT = "";
@@ -12432,13 +12426,13 @@ namespace MagicProgram
     # endregion
 
     # region Paragon of Eternal Wilds
-    public class ParagonofEternalWilds15 : MagicCard
+    public class ParagonofEternalWildsM15 : MagicCard
     {
-        public ParagonofEternalWilds15()
+        public ParagonofEternalWildsM15()
         {
             Name = "Paragon of Eternal Wilds";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3G";
             PT = "2/2";
@@ -12450,13 +12444,13 @@ namespace MagicProgram
     # endregion
 
     # region Paragon of Fierce Defiance
-    public class ParagonofFierceDefiance15 : MagicCard
+    public class ParagonofFierceDefianceM15 : MagicCard
     {
-        public ParagonofFierceDefiance15()
+        public ParagonofFierceDefianceM15()
         {
             Name = "Paragon of Fierce Defiance";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3R";
             PT = "2/2";
@@ -12468,13 +12462,13 @@ namespace MagicProgram
     # endregion
 
     # region Paragon of Gathering Mists
-    public class ParagonofGatheringMists15 : MagicCard
+    public class ParagonofGatheringMistsM15 : MagicCard
     {
-        public ParagonofGatheringMists15()
+        public ParagonofGatheringMistsM15()
         {
             Name = "Paragon of Gathering Mists";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3U";
             PT = "2/2";
@@ -12486,13 +12480,13 @@ namespace MagicProgram
     # endregion
 
     # region Paragon of New Dawns
-    public class ParagonofNewDawns15 : MagicCard
+    public class ParagonofNewDawnsM15 : MagicCard
     {
-        public ParagonofNewDawns15()
+        public ParagonofNewDawnsM15()
         {
             Name = "Paragon of New Dawns";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3W";
             PT = "2/2";
@@ -12504,13 +12498,13 @@ namespace MagicProgram
     # endregion
 
     # region Paragon of Open Graves
-    public class ParagonofOpenGraves15 : MagicCard
+    public class ParagonofOpenGravesM15 : MagicCard
     {
-        public ParagonofOpenGraves15()
+        public ParagonofOpenGravesM15()
         {
             Name = "Paragon of Open Graves";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3B";
             PT = "2/2";
@@ -12522,9 +12516,9 @@ namespace MagicProgram
     # endregion
 
     # region Peel from Reality
-    public class PeelfromReality15 : MagicCard
+    public class PeelfromRealityM15 : MagicCard
     {
-        public PeelfromReality15()
+        public PeelfromRealityM15()
         {
             Name = "Peel from Reality";
             Edition = "M15";
@@ -12540,13 +12534,13 @@ namespace MagicProgram
     # endregion
 
     # region Perilous Vault
-    public class PerilousVault15 : MagicCard
+    public class PerilousVaultM15 : MagicCard
     {
-        public PerilousVault15()
+        public PerilousVaultM15()
         {
             Name = "Perilous Vault";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4";
             PT = "";
@@ -12558,13 +12552,13 @@ namespace MagicProgram
     # endregion
 
     # region Phyrexian Revoker
-    public class PhyrexianRevoker15 : MagicCard
+    public class PhyrexianRevokerM15 : MagicCard
     {
-        public PhyrexianRevoker15()
+        public PhyrexianRevokerM15()
         {
             Name = "Phyrexian Revoker";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "2";
             PT = "2/1";
@@ -12576,13 +12570,13 @@ namespace MagicProgram
     # endregion
 
     # region Phytotitan
-    public class Phytotitan15 : MagicCard
+    public class PhytotitanM15 : MagicCard
     {
-        public Phytotitan15()
+        public PhytotitanM15()
         {
             Name = "Phytotitan";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4GG";
             PT = "7/2";
@@ -12594,9 +12588,9 @@ namespace MagicProgram
     # endregion
 
     # region Pillar of Light
-    public class PillarofLight15 : MagicCard
+    public class PillarofLightM15 : MagicCard
     {
-        public PillarofLight15()
+        public PillarofLightM15()
         {
             Name = "Pillar of Light";
             Edition = "M15";
@@ -12612,9 +12606,9 @@ namespace MagicProgram
     # endregion
 
     # region Plains
-    public class Plains15 : MagicCard
+    public class PlainsM15 : MagicCard
     {
-        public Plains15()
+        public PlainsM15()
         {
             Name = "Plains";
             Edition = "M15";
@@ -12630,9 +12624,9 @@ namespace MagicProgram
     # endregion
 
     # region Plummet
-    public class Plummet15 : MagicCard
+    public class PlummetM15 : MagicCard
     {
-        public Plummet15()
+        public PlummetM15()
         {
             Name = "Plummet";
             Edition = "M15";
@@ -12648,13 +12642,13 @@ namespace MagicProgram
     # endregion
 
     # region Polymorphist's Jest
-    public class PolymorphistsJest15 : MagicCard
+    public class PolymorphistsJestM15 : MagicCard
     {
-        public PolymorphistsJest15()
+        public PolymorphistsJestM15()
         {
             Name = "Polymorphist's Jest";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "1UU";
             PT = "";
@@ -12666,13 +12660,13 @@ namespace MagicProgram
     # endregion
 
     # region Preeminent Captain
-    public class PreeminentCaptain15 : MagicCard
+    public class PreeminentCaptainM15 : MagicCard
     {
-        public PreeminentCaptain15()
+        public PreeminentCaptainM15()
         {
             Name = "Preeminent Captain";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "2W";
             PT = "2/2";
@@ -12684,13 +12678,13 @@ namespace MagicProgram
     # endregion
 
     # region Profane Memento
-    public class ProfaneMemento15 : MagicCard
+    public class ProfaneMementoM15 : MagicCard
     {
-        public ProfaneMemento15()
+        public ProfaneMementoM15()
         {
             Name = "Profane Memento";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1";
             PT = "";
@@ -12702,13 +12696,13 @@ namespace MagicProgram
     # endregion
 
     # region Quickling
-    public class Quickling15 : MagicCard
+    public class QuicklingM15 : MagicCard
     {
-        public Quickling15()
+        public QuicklingM15()
         {
             Name = "Quickling";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1U";
             PT = "2/2";
@@ -12720,9 +12714,9 @@ namespace MagicProgram
     # endregion
 
     # region Radiant Fountain
-    public class RadiantFountain15 : MagicCard
+    public class RadiantFountainM15 : MagicCard
     {
-        public RadiantFountain15()
+        public RadiantFountainM15()
         {
             Name = "Radiant Fountain";
             Edition = "M15";
@@ -12738,9 +12732,9 @@ namespace MagicProgram
     # endregion
 
     # region Raise the Alarm
-    public class RaisetheAlarm15 : RaisetheAlarmMR
+    public class RaisetheAlarmM15 : MagicCard
     {
-        public RaisetheAlarm15()
+        public RaisetheAlarmM15()
         {
             Name = "Raise the Alarm";
             Edition = "M15";
@@ -12756,9 +12750,9 @@ namespace MagicProgram
     # endregion
 
     # region Ranger's Guile
-    public class RangersGuile15 : MagicCard
+    public class RangersGuileM15 : MagicCard
     {
-        public RangersGuile15()
+        public RangersGuileM15()
         {
             Name = "Ranger's Guile";
             Edition = "M15";
@@ -12774,9 +12768,9 @@ namespace MagicProgram
     # endregion
 
     # region Razorfoot Griffin
-    public class RazorfootGriffin15 : MagicCard
+    public class RazorfootGriffinM15 : MagicCard
     {
-        public RazorfootGriffin15()
+        public RazorfootGriffinM15()
         {
             Name = "Razorfoot Griffin";
             Edition = "M15";
@@ -12792,13 +12786,13 @@ namespace MagicProgram
     # endregion
 
     # region Reclamation Sage
-    public class ReclamationSage15 : MagicCard
+    public class ReclamationSageM15 : MagicCard
     {
-        public ReclamationSage15()
+        public ReclamationSageM15()
         {
             Name = "Reclamation Sage";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2G";
             PT = "2/1";
@@ -12810,9 +12804,9 @@ namespace MagicProgram
     # endregion
 
     # region Research Assistant
-    public class ResearchAssistant15 : MagicCard
+    public class ResearchAssistantM15 : MagicCard
     {
-        public ResearchAssistant15()
+        public ResearchAssistantM15()
         {
             Name = "Research Assistant";
             Edition = "M15";
@@ -12828,13 +12822,13 @@ namespace MagicProgram
     # endregion
 
     # region Resolute Archangel
-    public class ResoluteArchangel15 : MagicCard
+    public class ResoluteArchangelM15 : MagicCard
     {
-        public ResoluteArchangel15()
+        public ResoluteArchangelM15()
         {
             Name = "Resolute Archangel";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "5WW";
             PT = "4/4";
@@ -12846,13 +12840,13 @@ namespace MagicProgram
     # endregion
 
     # region Restock
-    public class Restock15 : MagicCard
+    public class RestockM15 : MagicCard
     {
-        public Restock15()
+        public RestockM15()
         {
             Name = "Restock";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3GG";
             PT = "";
@@ -12864,13 +12858,13 @@ namespace MagicProgram
     # endregion
 
     # region Return to the Ranks
-    public class ReturntotheRanks15 : MagicCard
+    public class ReturntotheRanksM15 : MagicCard
     {
-        public ReturntotheRanks15()
+        public ReturntotheRanksM15()
         {
             Name = "Return to the Ranks";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "XWW";
             PT = "";
@@ -12882,13 +12876,13 @@ namespace MagicProgram
     # endregion
 
     # region Roaring Primadox
-    public class RoaringPrimadox15 : MagicCard
+    public class RoaringPrimadoxM15 : MagicCard
     {
-        public RoaringPrimadox15()
+        public RoaringPrimadoxM15()
         {
             Name = "Roaring Primadox";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3G";
             PT = "4/4";
@@ -12900,13 +12894,13 @@ namespace MagicProgram
     # endregion
 
     # region Rogue's Gloves
-    public class RoguesGloves15 : MagicCard
+    public class RoguesGlovesM15 : MagicCard
     {
-        public RoguesGloves15()
+        public RoguesGlovesM15()
         {
             Name = "Rogue's Gloves";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2";
             PT = "";
@@ -12918,9 +12912,9 @@ namespace MagicProgram
     # endregion
 
     # region Rotfeaster Maggot
-    public class RotfeasterMaggot15 : MagicCard
+    public class RotfeasterMaggotM15 : MagicCard
     {
-        public RotfeasterMaggot15()
+        public RotfeasterMaggotM15()
         {
             Name = "Rotfeaster Maggot";
             Edition = "M15";
@@ -12936,9 +12930,9 @@ namespace MagicProgram
     # endregion
 
     # region Rummaging Goblin
-    public class RummagingGoblin15 : MagicCard
+    public class RummagingGoblinM15 : MagicCard
     {
-        public RummagingGoblin15()
+        public RummagingGoblinM15()
         {
             Name = "Rummaging Goblin";
             Edition = "M15";
@@ -12954,9 +12948,9 @@ namespace MagicProgram
     # endregion
 
     # region Runeclaw Bear
-    public class RuneclawBear15 : MagicCard
+    public class RuneclawBearM15 : MagicCard
     {
-        public RuneclawBear15()
+        public RuneclawBearM15()
         {
             Name = "Runeclaw Bear";
             Edition = "M15";
@@ -12972,13 +12966,13 @@ namespace MagicProgram
     # endregion
 
     # region Sacred Armory
-    public class SacredArmory15 : MagicCard
+    public class SacredArmoryM15 : MagicCard
     {
-        public SacredArmory15()
+        public SacredArmoryM15()
         {
             Name = "Sacred Armory";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2";
             PT = "";
@@ -12990,9 +12984,9 @@ namespace MagicProgram
     # endregion
 
     # region Sanctified Charge
-    public class SanctifiedCharge15 : MagicCard
+    public class SanctifiedChargeM15 : MagicCard
     {
-        public SanctifiedCharge15()
+        public SanctifiedChargeM15()
         {
             Name = "Sanctified Charge";
             Edition = "M15";
@@ -13008,9 +13002,9 @@ namespace MagicProgram
     # endregion
 
     # region Satyr Wayfinder
-    public class SatyrWayfinder15 : MagicCard
+    public class SatyrWayfinderM15 : MagicCard
     {
-        public SatyrWayfinder15()
+        public SatyrWayfinderM15()
         {
             Name = "Satyr Wayfinder";
             Edition = "M15";
@@ -13026,9 +13020,9 @@ namespace MagicProgram
     # endregion
 
     # region Scrapyard Mongrel
-    public class ScrapyardMongrel15 : MagicCard
+    public class ScrapyardMongrelM15 : MagicCard
     {
-        public ScrapyardMongrel15()
+        public ScrapyardMongrelM15()
         {
             Name = "Scrapyard Mongrel";
             Edition = "M15";
@@ -13044,13 +13038,13 @@ namespace MagicProgram
     # endregion
 
     # region Scuttling Doom Engine
-    public class ScuttlingDoomEngine15 : MagicCard
+    public class ScuttlingDoomEngineM15 : MagicCard
     {
-        public ScuttlingDoomEngine15()
+        public ScuttlingDoomEngineM15()
         {
             Name = "Scuttling Doom Engine";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "6";
             PT = "6/6";
@@ -13062,9 +13056,9 @@ namespace MagicProgram
     # endregion
 
     # region Seismic Strike
-    public class SeismicStrike15 : MagicCard
+    public class SeismicStrikeM15 : MagicCard
     {
-        public SeismicStrike15()
+        public SeismicStrikeM15()
         {
             Name = "Seismic Strike";
             Edition = "M15";
@@ -13080,9 +13074,9 @@ namespace MagicProgram
     # endregion
 
     # region Selfless Cathar
-    public class SelflessCathar15 : MagicCard
+    public class SelflessCatharM15 : MagicCard
     {
-        public SelflessCathar15()
+        public SelflessCatharM15()
         {
             Name = "Selfless Cathar";
             Edition = "M15";
@@ -13098,13 +13092,13 @@ namespace MagicProgram
     # endregion
 
     # region Sengir Vampire
-    public class SengirVampire15 : MagicCard
+    public class SengirVampireM15 : MagicCard
     {
-        public SengirVampire15()
+        public SengirVampireM15()
         {
             Name = "Sengir Vampire";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3BB";
             PT = "4/4";
@@ -13116,13 +13110,13 @@ namespace MagicProgram
     # endregion
 
     # region Seraph of the Masses
-    public class SeraphoftheMasses15 : MagicCard
+    public class SeraphoftheMassesM15 : MagicCard
     {
-        public SeraphoftheMasses15()
+        public SeraphoftheMassesM15()
         {
             Name = "Seraph of the Masses";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "5WW";
             PT = "*/*";
@@ -13134,13 +13128,13 @@ namespace MagicProgram
     # endregion
 
     # region Serra Angel
-    public class SerraAngel15 : MagicCard
+    public class SerraAngelM15 : MagicCard
     {
-        public SerraAngel15()
+        public SerraAngelM15()
         {
             Name = "Serra Angel";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3WW";
             PT = "4/4";
@@ -13152,9 +13146,9 @@ namespace MagicProgram
     # endregion
 
     # region Shadowcloak Vampire
-    public class ShadowcloakVampire15 : MagicCard
+    public class ShadowcloakVampireM15 : MagicCard
     {
-        public ShadowcloakVampire15()
+        public ShadowcloakVampireM15()
         {
             Name = "Shadowcloak Vampire";
             Edition = "M15";
@@ -13170,9 +13164,9 @@ namespace MagicProgram
     # endregion
 
     # region Shaman of Spring
-    public class ShamanofSpring15 : MagicCard
+    public class ShamanofSpringM15 : MagicCard
     {
-        public ShamanofSpring15()
+        public ShamanofSpringM15()
         {
             Name = "Shaman of Spring";
             Edition = "M15";
@@ -13188,13 +13182,13 @@ namespace MagicProgram
     # endregion
 
     # region Shield of the Avatar
-    public class ShieldoftheAvatar15 : MagicCard
+    public class ShieldoftheAvatarM15 : MagicCard
     {
-        public ShieldoftheAvatar15()
+        public ShieldoftheAvatarM15()
         {
             Name = "Shield of the Avatar";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "1";
             PT = "";
@@ -13206,13 +13200,13 @@ namespace MagicProgram
     # endregion
 
     # region Shivan Dragon
-    public class ShivanDragon15 : MagicCard
+    public class ShivanDragonM15 : MagicCard
     {
-        public ShivanDragon15()
+        public ShivanDragonM15()
         {
             Name = "Shivan Dragon";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4RR";
             PT = "5/5";
@@ -13224,13 +13218,13 @@ namespace MagicProgram
     # endregion
 
     # region Shivan Reef
-    public class ShivanReef15 : MagicCard
+    public class ShivanReefM15 : MagicCard
     {
-        public ShivanReef15()
+        public ShivanReefM15()
         {
             Name = "Shivan Reef";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "";
             PT = "";
@@ -13242,13 +13236,13 @@ namespace MagicProgram
     # endregion
 
     # region Shrapnel Blast
-    public class ShrapnelBlast15 : MagicCard
+    public class ShrapnelBlastM15 : MagicCard
     {
-        public ShrapnelBlast15()
+        public ShrapnelBlastM15()
         {
             Name = "Shrapnel Blast";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1R";
             PT = "";
@@ -13260,13 +13254,13 @@ namespace MagicProgram
     # endregion
 
     # region Siege Dragon
-    public class SiegeDragon15 : MagicCard
+    public class SiegeDragonM15 : MagicCard
     {
-        public SiegeDragon15()
+        public SiegeDragonM15()
         {
             Name = "Siege Dragon";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "5RR";
             PT = "5/5";
@@ -13278,9 +13272,9 @@ namespace MagicProgram
     # endregion
 
     # region Siege Wurm
-    public class SiegeWurm15 : MagicCard
+    public class SiegeWurmM15 : MagicCard
     {
-        public SiegeWurm15()
+        public SiegeWurmM15()
         {
             Name = "Siege Wurm";
             Edition = "M15";
@@ -13296,9 +13290,9 @@ namespace MagicProgram
     # endregion
 
     # region Sign in Blood
-    public class SigninBlood15 : MagicCard
+    public class SigninBloodM15 : MagicCard
     {
-        public SigninBlood15()
+        public SigninBloodM15()
         {
             Name = "Sign in Blood";
             Edition = "M15";
@@ -13314,13 +13308,13 @@ namespace MagicProgram
     # endregion
 
     # region Sliver Hive
-    public class SliverHive15 : MagicCard
+    public class SliverHiveM15 : MagicCard
     {
-        public SliverHive15()
+        public SliverHiveM15()
         {
             Name = "Sliver Hive";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "";
             PT = "";
@@ -13328,41 +13322,17 @@ namespace MagicProgram
             Text = "T: Add 1 to your mana pool.^T: Add one mana of any color to your mana pool. Spend this mana only to cast a Sliver spell.^5, T: Put a 1/1 colorless Sliver creature token onto the battlefield. Activate this ability only if you control a Sliver.";
             Flavor = "";
         }
-
-        public override bool TryActivate(int i)
-        {
-            if (Tapped)
-            {
-                return false;
-            }
-
-            Tap(true, false);
-            DoActivate(i);
-            return true;
-        }
-
-        public override void DoActivate(int i)
-        {
-            if (i == 0)
-            {
-                PArea.mana.grey += 1;
-            }
-            if (i == 1)
-            {
-                PArea.mw.ShowWheel("BGURW");
-            }
-        }
     }
     # endregion
 
     # region Sliver Hivelord
-    public class SliverHivelord15 : MagicCard
+    public class SliverHivelordM15 : MagicCard
     {
-        public SliverHivelord15()
+        public SliverHivelordM15()
         {
             Name = "Sliver Hivelord";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "WUBRG";
             PT = "5/5";
@@ -13374,9 +13344,9 @@ namespace MagicProgram
     # endregion
 
     # region Solemn Offering
-    public class SolemnOffering15 : MagicCard
+    public class SolemnOfferingM15 : MagicCard
     {
-        public SolemnOffering15()
+        public SolemnOfferingM15()
         {
             Name = "Solemn Offering";
             Edition = "M15";
@@ -13392,13 +13362,13 @@ namespace MagicProgram
     # endregion
 
     # region Soul of Innistrad
-    public class SoulofInnistrad15 : MagicCard
+    public class SoulofInnistradM15 : MagicCard
     {
-        public SoulofInnistrad15()
+        public SoulofInnistradM15()
         {
             Name = "Soul of Innistrad";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "4BB";
             PT = "6/6";
@@ -13410,13 +13380,13 @@ namespace MagicProgram
     # endregion
 
     # region Soul of New Phyrexia
-    public class SoulofNewPhyrexia15 : MagicCard
+    public class SoulofNewPhyrexiaM15 : MagicCard
     {
-        public SoulofNewPhyrexia15()
+        public SoulofNewPhyrexiaM15()
         {
             Name = "Soul of New Phyrexia";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "6";
             PT = "6/6";
@@ -13428,13 +13398,13 @@ namespace MagicProgram
     # endregion
 
     # region Soul of Ravnica
-    public class SoulofRavnica15 : MagicCard
+    public class SoulofRavnicaM15 : MagicCard
     {
-        public SoulofRavnica15()
+        public SoulofRavnicaM15()
         {
             Name = "Soul of Ravnica";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "4UU";
             PT = "6/6";
@@ -13446,13 +13416,13 @@ namespace MagicProgram
     # endregion
 
     # region Soul of Shandalar
-    public class SoulofShandalar15 : MagicCard
+    public class SoulofShandalarM15 : MagicCard
     {
-        public SoulofShandalar15()
+        public SoulofShandalarM15()
         {
             Name = "Soul of Shandalar";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "4RR";
             PT = "6/6";
@@ -13464,13 +13434,13 @@ namespace MagicProgram
     # endregion
 
     # region Soul of Theros
-    public class SoulofTheros15 : MagicCard
+    public class SoulofTherosM15 : MagicCard
     {
-        public SoulofTheros15()
+        public SoulofTherosM15()
         {
             Name = "Soul of Theros";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "4WW";
             PT = "6/6";
@@ -13482,13 +13452,13 @@ namespace MagicProgram
     # endregion
 
     # region Soul of Zendikar
-    public class SoulofZendikar15 : MagicCard
+    public class SoulofZendikarM15 : MagicCard
     {
-        public SoulofZendikar15()
+        public SoulofZendikarM15()
         {
             Name = "Soul of Zendikar";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "4GG";
             PT = "6/6";
@@ -13500,9 +13470,9 @@ namespace MagicProgram
     # endregion
 
     # region Soulmender
-    public class Soulmender15 : MagicCard
+    public class SoulmenderM15 : MagicCard
     {
-        public Soulmender15()
+        public SoulmenderM15()
         {
             Name = "Soulmender";
             Edition = "M15";
@@ -13518,13 +13488,13 @@ namespace MagicProgram
     # endregion
 
     # region Spectra Ward
-    public class SpectraWard15 : MagicCard
+    public class SpectraWardM15 : MagicCard
     {
-        public SpectraWard15()
+        public SpectraWardM15()
         {
             Name = "Spectra Ward";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "3WW";
             PT = "";
@@ -13536,13 +13506,13 @@ namespace MagicProgram
     # endregion
 
     # region Spirit Bonds
-    public class SpiritBonds15 : MagicCard
+    public class SpiritBondsM15 : MagicCard
     {
-        public SpiritBonds15()
+        public SpiritBondsM15()
         {
             Name = "Spirit Bonds";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "1W";
             PT = "";
@@ -13554,13 +13524,13 @@ namespace MagicProgram
     # endregion
 
     # region Stab Wound
-    public class StabWound15 : MagicCard
+    public class StabWoundM15 : MagicCard
     {
-        public StabWound15()
+        public StabWoundM15()
         {
             Name = "Stab Wound";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2B";
             PT = "";
@@ -13572,13 +13542,13 @@ namespace MagicProgram
     # endregion
 
     # region Staff of the Death Magus
-    public class StaffoftheDeathMagus15 : MagicCard
+    public class StaffoftheDeathMagusM15 : MagicCard
     {
-        public StaffoftheDeathMagus15()
+        public StaffoftheDeathMagusM15()
         {
             Name = "Staff of the Death Magus";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3";
             PT = "";
@@ -13590,13 +13560,13 @@ namespace MagicProgram
     # endregion
 
     # region Staff of the Flame Magus
-    public class StaffoftheFlameMagus15 : MagicCard
+    public class StaffoftheFlameMagusM15 : MagicCard
     {
-        public StaffoftheFlameMagus15()
+        public StaffoftheFlameMagusM15()
         {
             Name = "Staff of the Flame Magus";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3";
             PT = "";
@@ -13608,13 +13578,13 @@ namespace MagicProgram
     # endregion
 
     # region Staff of the Mind Magus
-    public class StaffoftheMindMagus15 : MagicCard
+    public class StaffoftheMindMagusM15 : MagicCard
     {
-        public StaffoftheMindMagus15()
+        public StaffoftheMindMagusM15()
         {
             Name = "Staff of the Mind Magus";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3";
             PT = "";
@@ -13626,13 +13596,13 @@ namespace MagicProgram
     # endregion
 
     # region Staff of the Sun Magus
-    public class StaffoftheSunMagus15 : MagicCard
+    public class StaffoftheSunMagusM15 : MagicCard
     {
-        public StaffoftheSunMagus15()
+        public StaffoftheSunMagusM15()
         {
             Name = "Staff of the Sun Magus";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3";
             PT = "";
@@ -13644,13 +13614,13 @@ namespace MagicProgram
     # endregion
 
     # region Staff of the Wild Magus
-    public class StaffoftheWildMagus15 : MagicCard
+    public class StaffoftheWildMagusM15 : MagicCard
     {
-        public StaffoftheWildMagus15()
+        public StaffoftheWildMagusM15()
         {
             Name = "Staff of the Wild Magus";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "3";
             PT = "";
@@ -13662,13 +13632,13 @@ namespace MagicProgram
     # endregion
 
     # region Stain the Mind
-    public class StaintheMind15 : MagicCard
+    public class StaintheMindM15 : MagicCard
     {
-        public StaintheMind15()
+        public StaintheMindM15()
         {
             Name = "Stain the Mind";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "4B";
             PT = "";
@@ -13680,9 +13650,9 @@ namespace MagicProgram
     # endregion
 
     # region Statute of Denial
-    public class StatuteofDenial15 : MagicCard
+    public class StatuteofDenialM15 : MagicCard
     {
-        public StatuteofDenial15()
+        public StatuteofDenialM15()
         {
             Name = "Statute of Denial";
             Edition = "M15";
@@ -13698,13 +13668,13 @@ namespace MagicProgram
     # endregion
 
     # region Stoke the Flames
-    public class StoketheFlames15 : MagicCard
+    public class StoketheFlamesM15 : MagicCard
     {
-        public StoketheFlames15()
+        public StoketheFlamesM15()
         {
             Name = "Stoke the Flames";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2RR";
             PT = "";
@@ -13716,13 +13686,13 @@ namespace MagicProgram
     # endregion
 
     # region Stormtide Leviathan
-    public class StormtideLeviathan15 : MagicCard
+    public class StormtideLeviathanM15 : MagicCard
     {
-        public StormtideLeviathan15()
+        public StormtideLeviathanM15()
         {
             Name = "Stormtide Leviathan";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "5UUU";
             PT = "8/8";
@@ -13734,13 +13704,13 @@ namespace MagicProgram
     # endregion
 
     # region Sunblade Elf
-    public class SunbladeElf15 : MagicCard
+    public class SunbladeElfM15 : MagicCard
     {
-        public SunbladeElf15()
+        public SunbladeElfM15()
         {
             Name = "Sunblade Elf";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "G";
             PT = "1/1";
@@ -13752,9 +13722,9 @@ namespace MagicProgram
     # endregion
 
     # region Sungrace Pegasus
-    public class SungracePegasus15 : MagicCard
+    public class SungracePegasusM15 : MagicCard
     {
-        public SungracePegasus15()
+        public SungracePegasusM15()
         {
             Name = "Sungrace Pegasus";
             Edition = "M15";
@@ -13770,9 +13740,9 @@ namespace MagicProgram
     # endregion
 
     # region Swamp
-    public class Swamp15 : MagicCard
+    public class SwampM15 : MagicCard
     {
-        public Swamp15()
+        public SwampM15()
         {
             Name = "Swamp";
             Edition = "M15";
@@ -13788,13 +13758,13 @@ namespace MagicProgram
     # endregion
 
     # region Terra Stomper
-    public class TerraStomper15 : MagicCard
+    public class TerraStomperM15 : MagicCard
     {
-        public TerraStomper15()
+        public TerraStomperM15()
         {
             Name = "Terra Stomper";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "3GGG";
             PT = "8/8";
@@ -13806,13 +13776,13 @@ namespace MagicProgram
     # endregion
 
     # region The Chain Veil
-    public class TheChainVeil15 : MagicCard
+    public class TheChainVeilM15 : MagicCard
     {
-        public TheChainVeil15()
+        public TheChainVeilM15()
         {
             Name = "The Chain Veil";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "M";
             Color = "";
             Cost = "4";
             PT = "";
@@ -13824,9 +13794,9 @@ namespace MagicProgram
     # endregion
 
     # region Thundering Giant
-    public class ThunderingGiant15 : MagicCard
+    public class ThunderingGiantM15 : MagicCard
     {
-        public ThunderingGiant15()
+        public ThunderingGiantM15()
         {
             Name = "Thundering Giant";
             Edition = "M15";
@@ -13842,9 +13812,9 @@ namespace MagicProgram
     # endregion
 
     # region Tireless Missionaries
-    public class TirelessMissionaries15 : MagicCard
+    public class TirelessMissionariesM15 : MagicCard
     {
-        public TirelessMissionaries15()
+        public TirelessMissionariesM15()
         {
             Name = "Tireless Missionaries";
             Edition = "M15";
@@ -13860,9 +13830,9 @@ namespace MagicProgram
     # endregion
 
     # region Titanic Growth
-    public class TitanicGrowth15 : MagicCard
+    public class TitanicGrowthM15 : MagicCard
     {
-        public TitanicGrowth15()
+        public TitanicGrowthM15()
         {
             Name = "Titanic Growth";
             Edition = "M15";
@@ -13878,9 +13848,9 @@ namespace MagicProgram
     # endregion
 
     # region Torch Fiend
-    public class TorchFiend15 : MagicCard
+    public class TorchFiendM15 : MagicCard
     {
-        public TorchFiend15()
+        public TorchFiendM15()
         {
             Name = "Torch Fiend";
             Edition = "M15";
@@ -13896,13 +13866,13 @@ namespace MagicProgram
     # endregion
 
     # region Tormod's Crypt
-    public class TormodsCrypt15 : MagicCard
+    public class TormodsCryptM15 : MagicCard
     {
-        public TormodsCrypt15()
+        public TormodsCryptM15()
         {
             Name = "Tormod's Crypt";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "0";
             PT = "";
@@ -13914,9 +13884,9 @@ namespace MagicProgram
     # endregion
 
     # region Triplicate Spirits
-    public class TriplicateSpirits15 : MagicCard
+    public class TriplicateSpiritsM15 : MagicCard
     {
-        public TriplicateSpirits15()
+        public TriplicateSpiritsM15()
         {
             Name = "Triplicate Spirits";
             Edition = "M15";
@@ -13932,13 +13902,13 @@ namespace MagicProgram
     # endregion
 
     # region Turn to Frog
-    public class TurntoFrog15 : MagicCard
+    public class TurntoFrogM15 : MagicCard
     {
-        public TurntoFrog15()
+        public TurntoFrogM15()
         {
             Name = "Turn to Frog";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1U";
             PT = "";
@@ -13950,9 +13920,9 @@ namespace MagicProgram
     # endregion
 
     # region Typhoid Rats
-    public class TyphoidRats15 : MagicCard
+    public class TyphoidRatsM15 : MagicCard
     {
-        public TyphoidRats15()
+        public TyphoidRatsM15()
         {
             Name = "Typhoid Rats";
             Edition = "M15";
@@ -13968,9 +13938,9 @@ namespace MagicProgram
     # endregion
 
     # region Tyrant's Machine
-    public class TyrantsMachine15 : MagicCard
+    public class TyrantsMachineM15 : MagicCard
     {
-        public TyrantsMachine15()
+        public TyrantsMachineM15()
         {
             Name = "Tyrant's Machine";
             Edition = "M15";
@@ -13986,13 +13956,13 @@ namespace MagicProgram
     # endregion
 
     # region Ulcerate
-    public class Ulcerate15 : MagicCard
+    public class UlcerateM15 : MagicCard
     {
-        public Ulcerate15()
+        public UlcerateM15()
         {
             Name = "Ulcerate";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "B";
             PT = "";
@@ -14004,9 +13974,9 @@ namespace MagicProgram
     # endregion
 
     # region Undergrowth Scavenger
-    public class UndergrowthScavenger15 : MagicCard
+    public class UndergrowthScavengerM15 : MagicCard
     {
-        public UndergrowthScavenger15()
+        public UndergrowthScavengerM15()
         {
             Name = "Undergrowth Scavenger";
             Edition = "M15";
@@ -14022,9 +13992,9 @@ namespace MagicProgram
     # endregion
 
     # region Unmake the Graves
-    public class UnmaketheGraves15 : MagicCard
+    public class UnmaketheGravesM15 : MagicCard
     {
-        public UnmaketheGraves15()
+        public UnmaketheGravesM15()
         {
             Name = "Unmake the Graves";
             Edition = "M15";
@@ -14040,13 +14010,13 @@ namespace MagicProgram
     # endregion
 
     # region Urborg, Tomb of Yawgmoth
-    public class UrborgTombofYawgmoth15 : MagicCard
+    public class UrborgTombofYawgmothM15 : MagicCard
     {
-        public UrborgTombofYawgmoth15()
+        public UrborgTombofYawgmothM15()
         {
             Name = "Urborg, Tomb of Yawgmoth";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "";
             PT = "";
@@ -14058,13 +14028,13 @@ namespace MagicProgram
     # endregion
 
     # region Venom Sliver
-    public class VenomSliver15 : MagicCard
+    public class VenomSliverM15 : MagicCard
     {
-        public VenomSliver15()
+        public VenomSliverM15()
         {
             Name = "Venom Sliver";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1G";
             PT = "1/1";
@@ -14076,9 +14046,9 @@ namespace MagicProgram
     # endregion
 
     # region Verdant Haven
-    public class VerdantHaven15 : MagicCard
+    public class VerdantHavenM15 : MagicCard
     {
-        public VerdantHaven15()
+        public VerdantHavenM15()
         {
             Name = "Verdant Haven";
             Edition = "M15";
@@ -14094,9 +14064,9 @@ namespace MagicProgram
     # endregion
 
     # region Vineweft
-    public class Vineweft15 : MagicCard
+    public class VineweftM15 : MagicCard
     {
-        public Vineweft15()
+        public VineweftM15()
         {
             Name = "Vineweft";
             Edition = "M15";
@@ -14112,9 +14082,9 @@ namespace MagicProgram
     # endregion
 
     # region Void Snare
-    public class VoidSnare15 : MagicCard
+    public class VoidSnareM15 : MagicCard
     {
-        public VoidSnare15()
+        public VoidSnareM15()
         {
             Name = "Void Snare";
             Edition = "M15";
@@ -14130,9 +14100,9 @@ namespace MagicProgram
     # endregion
 
     # region Walking Corpse
-    public class WalkingCorpse15 : MagicCard
+    public class WalkingCorpseM15 : MagicCard
     {
-        public WalkingCorpse15()
+        public WalkingCorpseM15()
         {
             Name = "Walking Corpse";
             Edition = "M15";
@@ -14148,13 +14118,13 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Essence
-    public class WallofEssence15 : MagicCard
+    public class WallofEssenceM15 : MagicCard
     {
-        public WallofEssence15()
+        public WallofEssenceM15()
         {
             Name = "Wall of Essence";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1W";
             PT = "0/4";
@@ -14166,9 +14136,9 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Fire
-    public class WallofFire15 : MagicCard
+    public class WallofFireM15 : MagicCard
     {
-        public WallofFire15()
+        public WallofFireM15()
         {
             Name = "Wall of Fire";
             Edition = "M15";
@@ -14184,13 +14154,13 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Frost
-    public class WallofFrost15 : MagicCard
+    public class WallofFrostM15 : MagicCard
     {
-        public WallofFrost15()
+        public WallofFrostM15()
         {
             Name = "Wall of Frost";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1UU";
             PT = "0/7";
@@ -14202,13 +14172,13 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Limbs
-    public class WallofLimbs15 : MagicCard
+    public class WallofLimbsM15 : MagicCard
     {
-        public WallofLimbs15()
+        public WallofLimbsM15()
         {
             Name = "Wall of Limbs";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2B";
             PT = "0/3";
@@ -14220,13 +14190,13 @@ namespace MagicProgram
     # endregion
 
     # region Wall of Mulch
-    public class WallofMulch15 : MagicCard
+    public class WallofMulchM15 : MagicCard
     {
-        public WallofMulch15()
+        public WallofMulchM15()
         {
             Name = "Wall of Mulch";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "1G";
             PT = "0/4";
@@ -14238,13 +14208,13 @@ namespace MagicProgram
     # endregion
 
     # region Warden of the Beyond
-    public class WardenoftheBeyond15 : MagicCard
+    public class WardenoftheBeyondM15 : MagicCard
     {
-        public WardenoftheBeyond15()
+        public WardenoftheBeyondM15()
         {
             Name = "Warden of the Beyond";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2W";
             PT = "2/2";
@@ -14256,13 +14226,13 @@ namespace MagicProgram
     # endregion
 
     # region Waste Not
-    public class WasteNot15 : MagicCard
+    public class WasteNotM15 : MagicCard
     {
-        public WasteNot15()
+        public WasteNotM15()
         {
             Name = "Waste Not";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "1B";
             PT = "";
@@ -14274,9 +14244,9 @@ namespace MagicProgram
     # endregion
 
     # region Welkin Tern
-    public class WelkinTern15 : MagicCard
+    public class WelkinTernM15 : MagicCard
     {
-        public WelkinTern15()
+        public WelkinTernM15()
         {
             Name = "Welkin Tern";
             Edition = "M15";
@@ -14292,9 +14262,9 @@ namespace MagicProgram
     # endregion
 
     # region Will-Forged Golem
-    public class WillForgedGolem15 : MagicCard
+    public class WillForgedGolemM15 : MagicCard
     {
-        public WillForgedGolem15()
+        public WillForgedGolemM15()
         {
             Name = "Will-Forged Golem";
             Edition = "M15";
@@ -14310,9 +14280,9 @@ namespace MagicProgram
     # endregion
 
     # region Witch's Familiar
-    public class WitchsFamiliar15 : MagicCard
+    public class WitchsFamiliarM15 : MagicCard
     {
-        public WitchsFamiliar15()
+        public WitchsFamiliarM15()
         {
             Name = "Witch's Familiar";
             Edition = "M15";
@@ -14328,13 +14298,13 @@ namespace MagicProgram
     # endregion
 
     # region Xathrid Slyblade
-    public class XathridSlyblade15 : MagicCard
+    public class XathridSlybladeM15 : MagicCard
     {
-        public XathridSlyblade15()
+        public XathridSlybladeM15()
         {
             Name = "Xathrid Slyblade";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "U";
             Color = "";
             Cost = "2B";
             PT = "2/1";
@@ -14346,13 +14316,13 @@ namespace MagicProgram
     # endregion
 
     # region Yavimaya Coast
-    public class YavimayaCoast15 : MagicCard
+    public class YavimayaCoastM15 : MagicCard
     {
-        public YavimayaCoast15()
+        public YavimayaCoastM15()
         {
             Name = "Yavimaya Coast";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "";
             PT = "";
@@ -14364,13 +14334,13 @@ namespace MagicProgram
     # endregion
 
     # region Yisan, the Wanderer Bard
-    public class YisantheWandererBard15 : MagicCard
+    public class YisantheWandererBardM15 : MagicCard
     {
-        public YisantheWandererBard15()
+        public YisantheWandererBardM15()
         {
             Name = "Yisan, the Wanderer Bard";
             Edition = "M15";
-            Rarity = "C";
+            Rarity = "R";
             Color = "";
             Cost = "2G";
             PT = "2/3";
@@ -14382,9 +14352,9 @@ namespace MagicProgram
     # endregion
 
     # region Zof Shade
-    public class ZofShade15 : MagicCard
+    public class ZofShadeM15 : MagicCard
     {
-        public ZofShade15()
+        public ZofShadeM15()
         {
             Name = "Zof Shade";
             Edition = "M15";

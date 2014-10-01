@@ -113,7 +113,12 @@ namespace MagicProgram
                     break;
 
                 case 3:
-                    cards = cards.OrderBy(o => o.Rarity).ToList();
+                    List<MagicCard> temp = new List<MagicCard>();
+                    temp.AddRange(cards.Where(o => o.Rarity == "M"));
+                    temp.AddRange(cards.Where(o => o.Rarity == "R"));
+                    temp.AddRange(cards.Where(o => o.Rarity == "U"));
+                    temp.AddRange(cards.Where(o => o.Rarity == "C"));
+                    cards = temp;
                     break;
 
                 case 4:
@@ -2921,7 +2926,7 @@ namespace MagicProgram
 
             if (net != "" && File.Exists(net))
             {
-                img = Image.FromFile(net);                
+                img = Image.FromFile(net);
             }
             else
             {
@@ -3947,6 +3952,8 @@ namespace MagicProgram
 
     public class CardMethods
     {
+        static Random r = new Random();
+
         public static List<MagicCard> SplitCardList(List<MagicCard> List)
         {
             List<MagicCard> results = new List<MagicCard>();
@@ -17548,1609 +17555,1609 @@ namespace MagicProgram
 
                 # region Act on Impulse
                 case "Act on Impulse":
-                    mcn = new ActonImpulse15();
+                    mcn = new ActonImpulseM15();
                     break;
                 # endregion
 
                 # region Aegis Angel
                 case "Aegis Angel":
-                    mcn = new AegisAngel15();
+                    mcn = new AegisAngelM15();
                     break;
                 # endregion
 
                 # region Aeronaut Tinkerer
                 case "Aeronaut Tinkerer":
-                    mcn = new AeronautTinkerer15();
+                    mcn = new AeronautTinkererM15();
                     break;
                 # endregion
 
                 # region AEtherspouts
                 case "AEtherspouts":
-                    mcn = new AEtherspouts15();
+                    mcn = new AEtherspoutsM15();
                     break;
                 # endregion
 
                 # region Aggressive Mining
                 case "Aggressive Mining":
-                    mcn = new AggressiveMining15();
+                    mcn = new AggressiveMiningM15();
                     break;
                 # endregion
 
                 # region Ajani Steadfast
                 case "Ajani Steadfast":
-                    mcn = new AjaniSteadfast15();
+                    mcn = new AjaniSteadfastM15();
                     break;
                 # endregion
 
                 # region Ajani's Pridemate
                 case "Ajani's Pridemate":
-                    mcn = new AjanisPridemate15();
+                    mcn = new AjanisPridemateM15();
                     break;
                 # endregion
 
                 # region Altac Bloodseeker
                 case "Altac Bloodseeker":
-                    mcn = new AltacBloodseeker15();
+                    mcn = new AltacBloodseekerM15();
                     break;
                 # endregion
 
                 # region Amphin Pathmage
                 case "Amphin Pathmage":
-                    mcn = new AmphinPathmage15();
+                    mcn = new AmphinPathmageM15();
                     break;
                 # endregion
 
                 # region Ancient Silverback
                 case "Ancient Silverback":
-                    mcn = new AncientSilverback15();
+                    mcn = new AncientSilverbackM15();
                     break;
                 # endregion
 
                 # region Avacyn, Guardian Angel
                 case "Avacyn, Guardian Angel":
-                    mcn = new AvacynGuardianAngel15();
+                    mcn = new AvacynGuardianAngelM15();
                     break;
                 # endregion
 
                 # region Avarice Amulet
                 case "Avarice Amulet":
-                    mcn = new AvariceAmulet15();
+                    mcn = new AvariceAmuletM15();
                     break;
                 # endregion
 
                 # region Back to Nature
                 case "Back to Nature":
-                    mcn = new BacktoNature15();
+                    mcn = new BacktoNatureM15();
                     break;
                 # endregion
 
                 # region Battle Mastery
                 case "Battle Mastery":
-                    mcn = new BattleMastery15();
+                    mcn = new BattleMasteryM15();
                     break;
                 # endregion
 
                 # region Battlefield Forge
                 case "Battlefield Forge":
-                    mcn = new BattlefieldForge15();
+                    mcn = new BattlefieldForgeM15();
                     break;
                 # endregion
 
                 # region Belligerent Sliver
                 case "Belligerent Sliver":
-                    mcn = new BelligerentSliver15();
+                    mcn = new BelligerentSliverM15();
                     break;
                 # endregion
 
                 //# region Black Cat
                 //case "Black Cat":
-                //    mcn = new BlackCat15();
+                //    mcn = new BlackCatM15();
                 //    break;
                 //# endregion
 
                 # region Blastfire Bolt
                 case "Blastfire Bolt":
-                    mcn = new BlastfireBolt15();
+                    mcn = new BlastfireBoltM15();
                     break;
                 # endregion
 
                 # region Blood Host
                 case "Blood Host":
-                    mcn = new BloodHost15();
+                    mcn = new BloodHostM15();
                     break;
                 # endregion
 
                 # region Boonweaver Giant
                 case "Boonweaver Giant":
-                    mcn = new BoonweaverGiant15();
+                    mcn = new BoonweaverGiantM15();
                     break;
                 # endregion
 
                 # region Borderland Marauder
                 case "Borderland Marauder":
-                    mcn = new BorderlandMarauder15();
+                    mcn = new BorderlandMarauderM15();
                     break;
                 # endregion
 
                 # region Brawler's Plate
                 case "Brawler's Plate":
-                    mcn = new BrawlersPlate15();
+                    mcn = new BrawlersPlateM15();
                     break;
                 # endregion
 
                 //# region Bronze Sable
                 //case"Bronze Sable":
-                //    mcn = new BronzeSableM15();
+                //    mcn = new BronzeSableMM15();
                 //    break;
                 //# endregion
 
                 # region Brood Keeper
                 case "Brood Keeper":
-                    mcn = new BroodKeeper15();
+                    mcn = new BroodKeeperM15();
                     break;
                 # endregion
 
                 # region Burning Anger
                 case "Burning Anger":
-                    mcn = new BurningAnger15();
+                    mcn = new BurningAngerM15();
                     break;
                 # endregion
 
                 //# region Cancel
                 //case"Cancel":
-                //    mcn = new Cancel15();
+                //    mcn = new CancelM15();
                 //    break;
                 //# endregion
 
                 # region Carnivorous Moss-Beast
                 case "Carnivorous Moss-Beast":
-                    mcn = new CarnivorousMossBeast15();
+                    mcn = new CarnivorousMossBeastM15();
                     break;
                 # endregion
 
                 # region Carrion Crow
                 case "Carrion Crow":
-                    mcn = new CarrionCrow15();
+                    mcn = new CarrionCrowM15();
                     break;
                 # endregion
 
                 # region Caustic Tar
                 case "Caustic Tar":
-                    mcn = new CausticTar15();
+                    mcn = new CausticTarM15();
                     break;
                 # endregion
 
                 # region Caves of Koilos
                 case "Caves of Koilos":
-                    mcn = new CavesofKoilos15();
+                    mcn = new CavesofKoilosM15();
                     break;
                 # endregion
 
                 # region Centaur Courser
                 case "Centaur Courser":
-                    mcn = new CentaurCourser15();
+                    mcn = new CentaurCourserM15();
                     break;
                 # endregion
 
                 //# region Chandra, Pyromaster
                 //case"Chandra, Pyromaster":
-                //    mcn = new ChandraPyromasterM15();
+                //    mcn = new ChandraPyromasterMM15();
                 //    break;
                 //# endregion
 
                 # region Charging Rhino
                 case "Charging Rhino":
-                    mcn = new ChargingRhino15();
+                    mcn = new ChargingRhinoM15();
                     break;
                 # endregion
 
                 # region Chasm Skulker
                 case "Chasm Skulker":
-                    mcn = new ChasmSkulker15();
+                    mcn = new ChasmSkulkerM15();
                     break;
                 # endregion
 
                 # region Chief Engineer
                 case "Chief Engineer":
-                    mcn = new ChiefEngineer15();
+                    mcn = new ChiefEngineerM15();
                     break;
                 # endregion
 
                 //# region Child of Night
                 //case"Child of Night":
-                //    mcn = new ChildofNightM15();
+                //    mcn = new ChildofNightMM15();
                 //    break;
                 //# endregion
 
                 # region Chord of Calling
                 case "Chord of Calling":
-                    mcn = new ChordofCalling15();
+                    mcn = new ChordofCallingM15();
                     break;
                 # endregion
 
                 # region Chronostutter
                 case "Chronostutter":
-                    mcn = new Chronostutter15();
+                    mcn = new ChronostutterM15();
                     break;
                 # endregion
 
                 # region Circle of Flame
                 case "Circle of Flame":
-                    mcn = new CircleofFlame15();
+                    mcn = new CircleofFlameM15();
                     break;
                 # endregion
 
                 //# region Clear a Path
                 //case"Clear a Path":
-                //    mcn = new ClearaPath15();
+                //    mcn = new ClearaPathM15();
                 //    break;
                 //# endregion
 
                 # region Cone of Flame
                 case "Cone of Flame":
-                    mcn = new ConeofFlame15();
+                    mcn = new ConeofFlameM15();
                     break;
                 # endregion
 
                 //# region Congregate
                 //case"Congregate":
-                //    mcn = new CongregateM15();
+                //    mcn = new CongregateMM15();
                 //    break;
                 //# endregion
 
                 # region Constricting Sliver
                 case "Constricting Sliver":
-                    mcn = new ConstrictingSliver15();
+                    mcn = new ConstrictingSliverM15();
                     break;
                 # endregion
 
                 # region Coral Barrier
                 case "Coral Barrier":
-                    mcn = new CoralBarrier15();
+                    mcn = new CoralBarrierM15();
                     break;
                 # endregion
 
                 # region Covenant of Blood
                 case "Covenant of Blood":
-                    mcn = new CovenantofBlood15();
+                    mcn = new CovenantofBloodM15();
                     break;
                 # endregion
 
                 # region Crippling Blight
                 case "Crippling Blight":
-                    mcn = new CripplingBlight15();
+                    mcn = new CripplingBlightM15();
                     break;
                 # endregion
 
                 # region Crowd's Favor
                 case "Crowd's Favor":
-                    mcn = new CrowdsFavor15();
+                    mcn = new CrowdsFavorM15();
                     break;
                 # endregion
 
                 # region Crucible of Fire
                 case "Crucible of Fire":
-                    mcn = new CrucibleofFire15();
+                    mcn = new CrucibleofFireM15();
                     break;
                 # endregion
 
                 # region Cruel Sadist
                 case "Cruel Sadist":
-                    mcn = new CruelSadist15();
+                    mcn = new CruelSadistM15();
                     break;
                 # endregion
 
                 # region Darksteel Citadel
                 case "Darksteel Citadel":
-                    mcn = new DarksteelCitadel15();
+                    mcn = new DarksteelCitadelM15();
                     break;
                 # endregion
 
                 # region Dauntless River Marshal
                 case "Dauntless River Marshal":
-                    mcn = new DauntlessRiverMarshal15();
+                    mcn = new DauntlessRiverMarshalM15();
                     break;
                 # endregion
 
                 # region Devouring Light
                 case "Devouring Light":
-                    mcn = new DevouringLight15();
+                    mcn = new DevouringLightM15();
                     break;
                 # endregion
 
                 # region Diffusion Sliver
                 case "Diffusion Sliver":
-                    mcn = new DiffusionSliver15();
+                    mcn = new DiffusionSliverM15();
                     break;
                 # endregion
 
                 # region Dissipate
                 case "Dissipate":
-                    mcn = new Dissipate15();
+                    mcn = new DissipateM15();
                     break;
                 # endregion
 
                 //# region Divination
                 //case"Divination":
-                //    mcn = new Divination15();
+                //    mcn = new DivinationM15();
                 //    break;
                 //# endregion
 
                 //# region Divine Favor
                 //case"Divine Favor":
-                //    mcn = new DivineFavor15();
+                //    mcn = new DivineFavorM15();
                 //    break;
                 //# endregion
 
                 //# region Divine Verdict
                 //case"Divine Verdict":
-                //    mcn = new DivineVerdict15();
+                //    mcn = new DivineVerdictM15();
                 //    break;
                 //# endregion
 
                 //# region Elvish Mystic
                 //case"Elvish Mystic":
-                //    mcn = new ElvishMystic15();
+                //    mcn = new ElvishMysticM15();
                 //    break;
                 //# endregion
 
                 # region Encrust
                 case "Encrust":
-                    mcn = new Encrust15();
+                    mcn = new EncrustM15();
                     break;
                 # endregion
 
                 # region Endless Obedience
                 case "Endless Obedience":
-                    mcn = new EndlessObedience15();
+                    mcn = new EndlessObedienceM15();
                     break;
                 # endregion
 
                 # region Ensoul Artifact
                 case "Ensoul Artifact":
-                    mcn = new EnsoulArtifact15();
+                    mcn = new EnsoulArtifactM15();
                     break;
                 # endregion
 
                 # region Ephemeral Shields
                 case "Ephemeral Shields":
-                    mcn = new EphemeralShields15();
+                    mcn = new EphemeralShieldsM15();
                     break;
                 # endregion
 
                 # region Eternal Thirst
                 case "Eternal Thirst":
-                    mcn = new EternalThirst15();
+                    mcn = new EternalThirstM15();
                     break;
                 # endregion
 
                 //# region Evolving Wilds
                 //case "Evolving Wilds":
-                //    mcn = new EvolvingWilds15();
+                //    mcn = new EvolvingWildsM15();
                 //    break;
                 //# endregion
 
                 # region Feast on the Fallen
                 case "Feast on the Fallen":
-                    mcn = new FeastontheFallen15();
+                    mcn = new FeastontheFallenM15();
                     break;
                 # endregion
 
                 # region Feral Incarnation
                 case "Feral Incarnation":
-                    mcn = new FeralIncarnation15();
+                    mcn = new FeralIncarnationM15();
                     break;
                 # endregion
 
                 # region Festergloom
                 case "Festergloom":
-                    mcn = new Festergloom15();
+                    mcn = new FestergloomM15();
                     break;
                 # endregion
 
                 # region First Response
                 case "First Response":
-                    mcn = new FirstResponse15();
+                    mcn = new FirstResponseM15();
                     break;
                 # endregion
 
                 # region Flesh to Dust
                 case "Flesh to Dust":
-                    mcn = new FleshtoDust15();
+                    mcn = new FleshtoDustM15();
                     break;
                 # endregion
 
                 //# region Forest
                 //case"Forest":
-                //    mcn = new Forest15();
+                //    mcn = new ForestM15();
                 //    break;
                 //# endregion
 
                 //# region Forge Devil
                 //case "Forge Devil":
-                //    mcn = new ForgeDevil15();
+                //    mcn = new ForgeDevilM15();
                 //    break;
                 //# endregion
 
                 //# region Foundry Street Denizen
                 //case"Foundry Street Denizen":
-                //    mcn = new FoundryStreetDenizen15();
+                //    mcn = new FoundryStreetDenizenM15();
                 //    break;
                 //# endregion
 
                 # region Frenzied Goblin
                 case "Frenzied Goblin":
-                    mcn = new FrenziedGoblin15();
+                    mcn = new FrenziedGoblinM15();
                     break;
                 # endregion
 
                 # region Frost Lynx
                 case "Frost Lynx":
-                    mcn = new FrostLynx15();
+                    mcn = new FrostLynxM15();
                     break;
                 # endregion
 
                 # region Fugitive Wizard
                 case "Fugitive Wizard":
-                    mcn = new FugitiveWizard15();
+                    mcn = new FugitiveWizardM15();
                     break;
                 # endregion
 
                 # region Furnace Whelp
                 case "Furnace Whelp":
-                    mcn = new FurnaceWhelp15();
+                    mcn = new FurnaceWhelpM15();
                     break;
                 # endregion
 
                 # region Gargoyle Sentinel
                 case "Gargoyle Sentinel":
-                    mcn = new GargoyleSentinel15();
+                    mcn = new GargoyleSentinelM15();
                     break;
                 # endregion
 
                 # region Garruk, Apex Predator
                 case "Garruk, Apex Predator":
-                    mcn = new GarrukApexPredator15();
+                    mcn = new GarrukApexPredatorM15();
                     break;
                 # endregion
 
                 # region Garruk's Packleader
                 case "Garruk's Packleader":
-                    mcn = new GarruksPackleader15();
+                    mcn = new GarruksPackleaderM15();
                     break;
                 # endregion
 
                 # region Gather Courage
                 case "Gather Courage":
-                    mcn = new GatherCourage15();
+                    mcn = new GatherCourageM15();
                     break;
                 # endregion
 
                 # region Geist of the Moors
                 case "Geist of the Moors":
-                    mcn = new GeistoftheMoors15();
+                    mcn = new GeistoftheMoorsM15();
                     break;
                 # endregion
 
                 # region Generator Servant
                 case "Generator Servant":
-                    mcn = new GeneratorServant15();
+                    mcn = new GeneratorServantM15();
                     break;
                 # endregion
 
                 # region Genesis Hydra
                 case "Genesis Hydra":
-                    mcn = new GenesisHydra15();
+                    mcn = new GenesisHydraM15();
                     break;
                 # endregion
 
                 # region Glacial Crasher
                 case "Glacial Crasher":
-                    mcn = new GlacialCrasher15();
+                    mcn = new GlacialCrasherM15();
                     break;
                 # endregion
 
                 # region Goblin Kaboomist
                 case "Goblin Kaboomist":
-                    mcn = new GoblinKaboomist15();
+                    mcn = new GoblinKaboomistM15();
                     break;
                 # endregion
 
                 # region Goblin Rabblemaster
                 case "Goblin Rabblemaster":
-                    mcn = new GoblinRabblemaster15();
+                    mcn = new GoblinRabblemasterM15();
                     break;
                 # endregion
 
                 # region Goblin Roughrider
                 case "Goblin Roughrider":
-                    mcn = new GoblinRoughrider15();
+                    mcn = new GoblinRoughriderM15();
                     break;
                 # endregion
 
                 # region Gravedigger
                 case "Gravedigger":
-                    mcn = new Gravedigger15();
+                    mcn = new GravediggerM15();
                     break;
                 # endregion
 
                 # region Grindclock
                 case "Grindclock":
-                    mcn = new Grindclock15();
+                    mcn = new GrindclockM15();
                     break;
                 # endregion
 
                 # region Hammerhand
                 case "Hammerhand":
-                    mcn = new Hammerhand15();
+                    mcn = new HammerhandM15();
                     break;
                 # endregion
 
                 //# region Haunted Plate Mail
                 //case"Haunted Plate Mail":
-                //    mcn = new HauntedPlateMail15();
+                //    mcn = new HauntedPlateMailM15();
                 //    break;
                 //# endregion
 
                 # region Heat Ray
                 case "Heat Ray":
-                    mcn = new HeatRay15();
+                    mcn = new HeatRayM15();
                     break;
                 # endregion
 
                 # region Heliod's Pilgrim
                 case "Heliod's Pilgrim":
-                    mcn = new HeliodsPilgrim15();
+                    mcn = new HeliodsPilgrimM15();
                     break;
                 # endregion
 
                 # region Hoarding Dragon
                 case "Hoarding Dragon":
-                    mcn = new HoardingDragon15();
+                    mcn = new HoardingDragonM15();
                     break;
                 # endregion
 
                 # region Hornet Nest
                 case "Hornet Nest":
-                    mcn = new HornetNest15();
+                    mcn = new HornetNestM15();
                     break;
                 # endregion
 
                 # region Hornet Queen
                 case "Hornet Queen":
-                    mcn = new HornetQueen15();
+                    mcn = new HornetQueenM15();
                     break;
                 # endregion
 
                 # region Hot Soup
                 case "Hot Soup":
-                    mcn = new HotSoup15();
+                    mcn = new HotSoupM15();
                     break;
                 # endregion
 
                 //# region Hunt the Weak
                 //case"Hunt the Weak":
-                //    mcn = new HunttheWeak15();
+                //    mcn = new HunttheWeakM15();
                 //    break;
                 //# endregion
 
                 # region Hunter's Ambush
                 case "Hunter's Ambush":
-                    mcn = new HuntersAmbush15();
+                    mcn = new HuntersAmbushM15();
                     break;
                 # endregion
 
                 # region Hushwing Gryff
                 case "Hushwing Gryff":
-                    mcn = new HushwingGryff15();
+                    mcn = new HushwingGryffM15();
                     break;
                 # endregion
 
                 # region Hydrosurge
                 case "Hydrosurge":
-                    mcn = new Hydrosurge15();
+                    mcn = new HydrosurgeM15();
                     break;
                 # endregion
 
                 # region Illusory Angel
                 case "Illusory Angel":
-                    mcn = new IllusoryAngel15();
+                    mcn = new IllusoryAngelM15();
                     break;
                 # endregion
 
                 # region In Garruk's Wake
                 case "In Garruk's Wake":
-                    mcn = new InGarruksWake15();
+                    mcn = new InGarruksWakeM15();
                     break;
                 # endregion
 
                 # region Indulgent Tormentor
                 case "Indulgent Tormentor":
-                    mcn = new IndulgentTormentor15();
+                    mcn = new IndulgentTormentorM15();
                     break;
                 # endregion
 
                 # region Inferno Fist
                 case "Inferno Fist":
-                    mcn = new InfernoFist15();
+                    mcn = new InfernoFistM15();
                     break;
                 # endregion
 
                 # region Inspired Charge
                 case "Inspired Charge":
-                    mcn = new InspiredCharge15();
+                    mcn = new InspiredChargeM15();
                     break;
                 # endregion
 
                 //# region Into the Void
                 //case"Into the Void":
-                //    mcn = new IntotheVoid15();
+                //    mcn = new IntotheVoidM15();
                 //    break;
                 //# endregion
 
                 # region Invasive Species
                 case "Invasive Species":
-                    mcn = new InvasiveSpecies15();
+                    mcn = new InvasiveSpeciesM15();
                     break;
                 # endregion
 
                 //# region Invisibility
                 //case "Invisibility":
-                //    mcn = new Invisibility15();
+                //    mcn = new InvisibilityM15();
                 //    break;
                 //# endregion
 
                 //# region Island
                 //case"Island":
-                //    mcn = new Island15();
+                //    mcn = new IslandM15();
                 //    break;
                 //# endregion
 
                 # region Jace, the Living Guildpact
                 case "Jace, the Living Guildpact":
-                    mcn = new JacetheLivingGuildpact15();
+                    mcn = new JacetheLivingGuildpactM15();
                     break;
                 # endregion
 
                 # region Jace's Ingenuity
                 case "Jace's Ingenuity":
-                    mcn = new JacesIngenuity15();
+                    mcn = new JacesIngenuityM15();
                     break;
                 # endregion
 
                 # region Jalira, Master Polymorphist
                 case "Jalira, Master Polymorphist":
-                    mcn = new JaliraMasterPolymorphist15();
+                    mcn = new JaliraMasterPolymorphistM15();
                     break;
                 # endregion
 
                 # region Jorubai Murk Lurker
                 case "Jorubai Murk Lurker":
-                    mcn = new JorubaiMurkLurker15();
+                    mcn = new JorubaiMurkLurkerM15();
                     break;
                 # endregion
 
                 //# region Juggernaut
                 //case "Juggernaut":
-                //    mcn = new Juggernaut15();
+                //    mcn = new JuggernautM15();
                 //    break;
                 //# endregion
 
                 # region Kalonian Twingrove
                 case "Kalonian Twingrove":
-                    mcn = new KalonianTwingrove15();
+                    mcn = new KalonianTwingroveM15();
                     break;
                 # endregion
 
                 # region Kapsho Kitefins
                 case "Kapsho Kitefins":
-                    mcn = new KapshoKitefins15();
+                    mcn = new KapshoKitefinsM15();
                     break;
                 # endregion
 
                 # region Kinsbaile Skirmisher
                 case "Kinsbaile Skirmisher":
-                    mcn = new KinsbaileSkirmisher15();
+                    mcn = new KinsbaileSkirmisherM15();
                     break;
                 # endregion
 
                 # region Kird Chieftain
                 case "Kird Chieftain":
-                    mcn = new KirdChieftain15();
+                    mcn = new KirdChieftainM15();
                     break;
                 # endregion
 
                 # region Krenko's Enforcer
                 case "Krenko's Enforcer":
-                    mcn = new KrenkosEnforcer15();
+                    mcn = new KrenkosEnforcerM15();
                     break;
                 # endregion
 
                 # region Kurkesh, Onakke Ancient
                 case "Kurkesh, Onakke Ancient":
-                    mcn = new KurkeshOnakkeAncient15();
+                    mcn = new KurkeshOnakkeAncientM15();
                     break;
                 # endregion
 
                 //# region Lava Axe
                 //case"Lava Axe":
-                //    mcn = new LavaAxe15();
+                //    mcn = new LavaAxeM15();
                 //    break;
                 //# endregion
 
                 # region Leeching Sliver
                 case "Leeching Sliver":
-                    mcn = new LeechingSliver15();
+                    mcn = new LeechingSliverM15();
                     break;
                 # endregion
 
                 # region Life's Legacy
                 case "Life's Legacy":
-                    mcn = new LifesLegacy15();
+                    mcn = new LifesLegacyM15();
                     break;
                 # endregion
 
                 //# region Lightning Strike
                 //case"Lightning Strike":
-                //    mcn = new LightningStrike15();
+                //    mcn = new LightningStrikeM15();
                 //    break;
                 //# endregion
 
                 # region Liliana Vess
                 case "Liliana Vess":
-                    mcn = new LilianaVess15();
+                    mcn = new LilianaVessM15();
                     break;
                 # endregion
 
                 # region Living Totem
                 case "Living Totem":
-                    mcn = new LivingTotem15();
+                    mcn = new LivingTotemM15();
                     break;
                 # endregion
 
                 # region Llanowar Wastes
                 case "Llanowar Wastes":
-                    mcn = new LlanowarWastes15();
+                    mcn = new LlanowarWastesM15();
                     break;
                 # endregion
 
                 //# region Mahamoti Djinn
                 //case "Mahamoti Djinn":
-                //    mcn = new MahamotiDjinn15();
+                //    mcn = new MahamotiDjinnM15();
                 //    break;
                 //# endregion
 
                 # region Marked by Honor
                 case "Marked by Honor":
-                    mcn = new MarkedbyHonor15();
+                    mcn = new MarkedbyHonorM15();
                     break;
                 # endregion
 
                 # region Mass Calcify
                 case "Mass Calcify":
-                    mcn = new MassCalcify15();
+                    mcn = new MassCalcifyM15();
                     break;
                 # endregion
 
                 # region Master of Predicaments
                 case "Master of Predicaments":
-                    mcn = new MasterofPredicaments15();
+                    mcn = new MasterofPredicamentsM15();
                     break;
                 # endregion
 
                 # region Meditation Puzzle
                 case "Meditation Puzzle":
-                    mcn = new MeditationPuzzle15();
+                    mcn = new MeditationPuzzleM15();
                     break;
                 # endregion
 
                 # region Mercurial Pretender
                 case "Mercurial Pretender":
-                    mcn = new MercurialPretender15();
+                    mcn = new MercurialPretenderM15();
                     break;
                 # endregion
 
                 # region Meteorite
                 case "Meteorite":
-                    mcn = new Meteorite15();
+                    mcn = new MeteoriteM15();
                     break;
                 # endregion
 
                 //# region Midnight Guard
                 //case "Midnight Guard":
-                //    mcn = new MidnightGuard15();
+                //    mcn = new MidnightGuardM15();
                 //    break;
                 //# endregion
 
                 # region Might Makes Right
                 case "Might Makes Right":
-                    mcn = new MightMakesRight15();
+                    mcn = new MightMakesRightM15();
                     break;
                 # endregion
 
                 # region Military Intelligence
                 case "Military Intelligence":
-                    mcn = new MilitaryIntelligence15();
+                    mcn = new MilitaryIntelligenceM15();
                     break;
                 # endregion
 
                 //# region Mind Rot
                 //case"Mind Rot":
-                //    mcn = new MindRot15();
+                //    mcn = new MindRotM15();
                 //    break;
                 //# endregion
 
                 # region Mind Sculpt
                 case "Mind Sculpt":
-                    mcn = new MindSculpt15();
+                    mcn = new MindSculptM15();
                     break;
                 # endregion
 
                 # region Miner's Bane
                 case "Miner's Bane":
-                    mcn = new MinersBane15();
+                    mcn = new MinersBaneM15();
                     break;
                 # endregion
 
                 //# region Mountain
                 //case"Mountain":
-                //    mcn = new Mountain15();
+                //    mcn = new MountainM15();
                 //    break;
                 //# endregion
 
                 //# region Naturalize
                 //case"Naturalize":
-                //    mcn = new Naturalize15();
+                //    mcn = new NaturalizeM15();
                 //    break;
                 //# endregion
 
                 //# region Necrobite
                 //case"Necrobite":
-                //    mcn = new Necrobite15();
+                //    mcn = new NecrobiteM15();
                 //    break;
                 //# endregion
 
                 # region Necrogen Scudder
                 case "Necrogen Scudder":
-                    mcn = new NecrogenScudder15();
+                    mcn = new NecrogenScudderM15();
                     break;
                 # endregion
 
                 # region Necromancer's Assistant
                 case "Necromancer's Assistant":
-                    mcn = new NecromancersAssistant15();
+                    mcn = new NecromancersAssistantM15();
                     break;
                 # endregion
 
                 # region Necromancer's Stockpile
                 case "Necromancer's Stockpile":
-                    mcn = new NecromancersStockpile15();
+                    mcn = new NecromancersStockpileM15();
                     break;
                 # endregion
 
                 //# region Negate
                 //case"Negate":
-                //    mcn = new Negate15();
+                //    mcn = new NegateM15();
                 //    break;
                 //# endregion
 
                 # region Netcaster Spider
                 case "Netcaster Spider":
-                    mcn = new NetcasterSpider15();
+                    mcn = new NetcasterSpiderM15();
                     break;
                 # endregion
 
                 # region Nightfire Giant
                 case "Nightfire Giant":
-                    mcn = new NightfireGiant15();
+                    mcn = new NightfireGiantM15();
                     break;
                 # endregion
 
                 //# region Nightmare
                 //case"Nightmare":
-                //    mcn = new Nightmare15();
+                //    mcn = new NightmareM15();
                 //    break;
                 //# endregion
 
                 # region Nimbus of the Isles
                 case "Nimbus of the Isles":
-                    mcn = new NimbusoftheIsles15();
+                    mcn = new NimbusoftheIslesM15();
                     break;
                 # endregion
 
                 # region Nissa, Worldwaker
                 case "Nissa, Worldwaker":
-                    mcn = new NissaWorldwaker15();
+                    mcn = new NissaWorldwakerM15();
                     break;
                 # endregion
 
                 # region Nissa's Expedition
                 case "Nissa's Expedition":
-                    mcn = new NissasExpedition15();
+                    mcn = new NissasExpeditionM15();
                     break;
                 # endregion
 
                 # region Ob Nixilis, Unshackled
                 case "Ob Nixilis, Unshackled":
-                    mcn = new ObNixilisUnshackled15();
+                    mcn = new ObNixilisUnshackledM15();
                     break;
                 # endregion
 
                 # region Obelisk of Urd
                 case "Obelisk of Urd":
-                    mcn = new ObeliskofUrd15();
+                    mcn = new ObeliskofUrdM15();
                     break;
                 # endregion
 
                 //# region Oppressive Rays
                 //case"Oppressive Rays":
-                //    mcn = new OppressiveRays15();
+                //    mcn = new OppressiveRaysM15();
                 //    break;
                 //# endregion
 
                 //# region Oreskos Swiftclaw
                 //case"Oreskos Swiftclaw":
-                //    mcn = new OreskosSwiftclaw15();
+                //    mcn = new OreskosSwiftclawM15();
                 //    break;
                 //# endregion
 
                 //# region Ornithopter
                 //case "Ornithopter":
-                //    mcn = new Ornithopter15();
+                //    mcn = new OrnithopterM15();
                 //    break;
                 //# endregion
 
                 # region Overwhelm
                 case "Overwhelm":
-                    mcn = new Overwhelm15();
+                    mcn = new OverwhelmM15();
                     break;
                 # endregion
 
                 # region Paragon of Eternal Wilds
                 case "Paragon of Eternal Wilds":
-                    mcn = new ParagonofEternalWilds15();
+                    mcn = new ParagonofEternalWildsM15();
                     break;
                 # endregion
 
                 # region Paragon of Fierce Defiance
                 case "Paragon of Fierce Defiance":
-                    mcn = new ParagonofFierceDefiance15();
+                    mcn = new ParagonofFierceDefianceM15();
                     break;
                 # endregion
 
                 # region Paragon of Gathering Mists
                 case "Paragon of Gathering Mists":
-                    mcn = new ParagonofGatheringMists15();
+                    mcn = new ParagonofGatheringMistsM15();
                     break;
                 # endregion
 
                 # region Paragon of New Dawns
                 case "Paragon of New Dawns":
-                    mcn = new ParagonofNewDawns15();
+                    mcn = new ParagonofNewDawnsM15();
                     break;
                 # endregion
 
                 # region Paragon of Open Graves
                 case "Paragon of Open Graves":
-                    mcn = new ParagonofOpenGraves15();
+                    mcn = new ParagonofOpenGravesM15();
                     break;
                 # endregion
 
                 //# region Peel from Reality
                 //case"Peel from Reality":
-                //    mcn = new PeelfromReality15();
+                //    mcn = new PeelfromRealityM15();
                 //    break;
                 //# endregion
 
                 # region Perilous Vault
                 case "Perilous Vault":
-                    mcn = new PerilousVault15();
+                    mcn = new PerilousVaultM15();
                     break;
                 # endregion
 
                 # region Phyrexian Revoker
                 case "Phyrexian Revoker":
-                    mcn = new PhyrexianRevoker15();
+                    mcn = new PhyrexianRevokerM15();
                     break;
                 # endregion
 
                 # region Phytotitan
                 case "Phytotitan":
-                    mcn = new Phytotitan15();
+                    mcn = new PhytotitanM15();
                     break;
                 # endregion
 
                 # region Pillar of Light
                 case "Pillar of Light":
-                    mcn = new PillarofLight15();
+                    mcn = new PillarofLightM15();
                     break;
                 # endregion
 
                 //# region Plains
                 //case"Plains":
-                //    mcn = new Plains15();
+                //    mcn = new PlainsM15();
                 //    break;
                 //# endregion
 
                 //# region Plummet
                 //case"Plummet":
-                //    mcn = new Plummet15();
+                //    mcn = new PlummetM15();
                 //    break;
                 //# endregion
 
                 # region Polymorphist's Jest
                 case "Polymorphist's Jest":
-                    mcn = new PolymorphistsJest15();
+                    mcn = new PolymorphistsJestM15();
                     break;
                 # endregion
 
                 # region Preeminent Captain
                 case "Preeminent Captain":
-                    mcn = new PreeminentCaptain15();
+                    mcn = new PreeminentCaptainM15();
                     break;
                 # endregion
 
                 # region Profane Memento
                 case "Profane Memento":
-                    mcn = new ProfaneMemento15();
+                    mcn = new ProfaneMementoM15();
                     break;
                 # endregion
 
                 # region Quickling
                 case "Quickling":
-                    mcn = new Quickling15();
+                    mcn = new QuicklingM15();
                     break;
                 # endregion
 
                 # region Radiant Fountain
                 case "Radiant Fountain":
-                    mcn = new RadiantFountain15();
+                    mcn = new RadiantFountainM15();
                     break;
                 # endregion
 
                 //# region Raise the Alarm
                 //case "Raise the Alarm":
-                //    mcn = new RaisetheAlarm15();
+                //    mcn = new RaisetheAlarmM15();
                 //    break;
                 //# endregion
 
                 //# region Ranger's Guile
                 //case"Ranger's Guile":
-                //    mcn = new RangersGuile15();
+                //    mcn = new RangersGuileM15();
                 //    break;
                 //# endregion
 
                 # region Razorfoot Griffin
                 case "Razorfoot Griffin":
-                    mcn = new RazorfootGriffin15();
+                    mcn = new RazorfootGriffinM15();
                     break;
                 # endregion
 
                 # region Reclamation Sage
                 case "Reclamation Sage":
-                    mcn = new ReclamationSage15();
+                    mcn = new ReclamationSageM15();
                     break;
                 # endregion
 
                 # region Research Assistant
                 case "Research Assistant":
-                    mcn = new ResearchAssistant15();
+                    mcn = new ResearchAssistantM15();
                     break;
                 # endregion
 
                 # region Resolute Archangel
                 case "Resolute Archangel":
-                    mcn = new ResoluteArchangel15();
+                    mcn = new ResoluteArchangelM15();
                     break;
                 # endregion
 
                 # region Restock
                 case "Restock":
-                    mcn = new Restock15();
+                    mcn = new RestockM15();
                     break;
                 # endregion
 
                 # region Return to the Ranks
                 case "Return to the Ranks":
-                    mcn = new ReturntotheRanks15();
+                    mcn = new ReturntotheRanksM15();
                     break;
                 # endregion
 
                 # region Roaring Primadox
                 case "Roaring Primadox":
-                    mcn = new RoaringPrimadox15();
+                    mcn = new RoaringPrimadoxM15();
                     break;
                 # endregion
 
                 # region Rogue's Gloves
                 case "Rogue's Gloves":
-                    mcn = new RoguesGloves15();
+                    mcn = new RoguesGlovesM15();
                     break;
                 # endregion
 
                 # region Rotfeaster Maggot
                 case "Rotfeaster Maggot":
-                    mcn = new RotfeasterMaggot15();
+                    mcn = new RotfeasterMaggotM15();
                     break;
                 # endregion
 
                 # region Rummaging Goblin
                 case "Rummaging Goblin":
-                    mcn = new RummagingGoblin15();
+                    mcn = new RummagingGoblinM15();
                     break;
                 # endregion
 
                 # region Runeclaw Bear
                 case "Runeclaw Bear":
-                    mcn = new RuneclawBear15();
+                    mcn = new RuneclawBearM15();
                     break;
                 # endregion
 
                 # region Sacred Armory
                 case "Sacred Armory":
-                    mcn = new SacredArmory15();
+                    mcn = new SacredArmoryM15();
                     break;
                 # endregion
 
                 # region Sanctified Charge
                 case "Sanctified Charge":
-                    mcn = new SanctifiedCharge15();
+                    mcn = new SanctifiedChargeM15();
                     break;
                 # endregion
 
                 //# region Satyr Wayfinder
                 //case"Satyr Wayfinder":
-                //    mcn = new SatyrWayfinder15();
+                //    mcn = new SatyrWayfinderM15();
                 //    break;
                 //# endregion
 
                 # region Scrapyard Mongrel
                 case "Scrapyard Mongrel":
-                    mcn = new ScrapyardMongrel15();
+                    mcn = new ScrapyardMongrelM15();
                     break;
                 # endregion
 
                 # region Scuttling Doom Engine
                 case "Scuttling Doom Engine":
-                    mcn = new ScuttlingDoomEngine15();
+                    mcn = new ScuttlingDoomEngineM15();
                     break;
                 # endregion
 
                 # region Seismic Strike
                 case "Seismic Strike":
-                    mcn = new SeismicStrike15();
+                    mcn = new SeismicStrikeM15();
                     break;
                 # endregion
 
                 # region Selfless Cathar
                 case "Selfless Cathar":
-                    mcn = new SelflessCathar15();
+                    mcn = new SelflessCatharM15();
                     break;
                 # endregion
 
                 //# region Sengir Vampire
                 //case"Sengir Vampire":
-                //    mcn = new SengirVampire15();
+                //    mcn = new SengirVampireM15();
                 //    break;
                 //# endregion
 
                 # region Seraph of the Masses
                 case "Seraph of the Masses":
-                    mcn = new SeraphoftheMasses15();
+                    mcn = new SeraphoftheMassesM15();
                     break;
                 # endregion
 
                 //# region Serra Angel
                 //case"Serra Angel":
-                //    mcn = new SerraAngel15();
+                //    mcn = new SerraAngelM15();
                 //    break;
                 //# endregion
 
                 # region Shadowcloak Vampire
                 case "Shadowcloak Vampire":
-                    mcn = new ShadowcloakVampire15();
+                    mcn = new ShadowcloakVampireM15();
                     break;
                 # endregion
 
                 # region Shaman of Spring
                 case "Shaman of Spring":
-                    mcn = new ShamanofSpring15();
+                    mcn = new ShamanofSpringM15();
                     break;
                 # endregion
 
                 # region Shield of the Avatar
                 case "Shield of the Avatar":
-                    mcn = new ShieldoftheAvatar15();
+                    mcn = new ShieldoftheAvatarM15();
                     break;
                 # endregion
 
                 //# region Shivan Dragon
                 //case"Shivan Dragon":
-                //    mcn = new ShivanDragon15();
+                //    mcn = new ShivanDragonM15();
                 //    break;
                 //# endregion
 
                 # region Shivan Reef
                 case "Shivan Reef":
-                    mcn = new ShivanReef15();
+                    mcn = new ShivanReefM15();
                     break;
                 # endregion
 
                 //# region Shrapnel Blast
                 //case "Shrapnel Blast":
-                //    mcn = new ShrapnelBlast15();
+                //    mcn = new ShrapnelBlastM15();
                 //    break;
                 //# endregion
 
                 # region Siege Dragon
                 case "Siege Dragon":
-                    mcn = new SiegeDragon15();
+                    mcn = new SiegeDragonM15();
                     break;
                 # endregion
 
                 # region Siege Wurm
                 case "Siege Wurm":
-                    mcn = new SiegeWurm15();
+                    mcn = new SiegeWurmM15();
                     break;
                 # endregion
 
                 # region Sign in Blood
                 case "Sign in Blood":
-                    mcn = new SigninBlood15();
+                    mcn = new SigninBloodM15();
                     break;
                 # endregion
 
                 # region Sliver Hive
                 case "Sliver Hive":
-                    mcn = new SliverHive15();
+                    mcn = new SliverHiveM15();
                     break;
                 # endregion
 
                 # region Sliver Hivelord
                 case "Sliver Hivelord":
-                    mcn = new SliverHivelord15();
+                    mcn = new SliverHivelordM15();
                     break;
                 # endregion
 
                 //# region Solemn Offering
                 //case"Solemn Offering":
-                //    mcn = new SolemnOffering15();
+                //    mcn = new SolemnOfferingM15();
                 //    break;
                 //# endregion
 
                 # region Soul of Innistrad
                 case "Soul of Innistrad":
-                    mcn = new SoulofInnistrad15();
+                    mcn = new SoulofInnistradM15();
                     break;
                 # endregion
 
                 # region Soul of New Phyrexia
                 case "Soul of New Phyrexia":
-                    mcn = new SoulofNewPhyrexia15();
+                    mcn = new SoulofNewPhyrexiaM15();
                     break;
                 # endregion
 
                 # region Soul of Ravnica
                 case "Soul of Ravnica":
-                    mcn = new SoulofRavnica15();
+                    mcn = new SoulofRavnicaM15();
                     break;
                 # endregion
 
                 # region Soul of Shandalar
                 case "Soul of Shandalar":
-                    mcn = new SoulofShandalar15();
+                    mcn = new SoulofShandalarM15();
                     break;
                 # endregion
 
                 # region Soul of Theros
                 case "Soul of Theros":
-                    mcn = new SoulofTheros15();
+                    mcn = new SoulofTherosM15();
                     break;
                 # endregion
 
                 # region Soul of Zendikar
                 case "Soul of Zendikar":
-                    mcn = new SoulofZendikar15();
+                    mcn = new SoulofZendikarM15();
                     break;
                 # endregion
 
                 //# region Soulmender
                 //case"Soulmender":
-                //    mcn = new Soulmender15();
+                //    mcn = new SoulmenderM15();
                 //    break;
                 //# endregion
 
                 # region Spectra Ward
                 case "Spectra Ward":
-                    mcn = new SpectraWard15();
+                    mcn = new SpectraWardM15();
                     break;
                 # endregion
 
                 # region Spirit Bonds
                 case "Spirit Bonds":
-                    mcn = new SpiritBonds15();
+                    mcn = new SpiritBondsM15();
                     break;
                 # endregion
 
                 //# region Stab Wound
                 //case"Stab Wound":
-                //    mcn = new StabWound15();
+                //    mcn = new StabWoundM15();
                 //    break;
                 //# endregion
 
                 //# region Staff of the Death Magus
                 //case"Staff of the Death Magus":
-                //    mcn = new StaffoftheDeathMagus15();
+                //    mcn = new StaffoftheDeathMagusM15();
                 //    break;
                 //# endregion
 
                 //# region Staff of the Flame Magus
                 //case"Staff of the Flame Magus":
-                //    mcn = new StaffoftheFlameMagus15();
+                //    mcn = new StaffoftheFlameMagusM15();
                 //    break;
                 //# endregion
 
                 //# region Staff of the Mind Magus
                 //case"Staff of the Mind Magus":
-                //    mcn = new StaffoftheMindMagus15();
+                //    mcn = new StaffoftheMindMagusM15();
                 //    break;
                 //# endregion
 
                 //# region Staff of the Sun Magus
                 //case"Staff of the Sun Magus":
-                //    mcn = new StaffoftheSunMagus15();
+                //    mcn = new StaffoftheSunMagusM15();
                 //    break;
                 //# endregion
 
                 //# region Staff of the Wild Magus
                 //case"Staff of the Wild Magus":
-                //    mcn = new StaffoftheWildMagus15();
+                //    mcn = new StaffoftheWildMagusM15();
                 //    break;
                 //# endregion
 
                 # region Stain the Mind
                 case "Stain the Mind":
-                    mcn = new StaintheMind15();
+                    mcn = new StaintheMindM15();
                     break;
                 # endregion
 
                 # region Statute of Denial
                 case "Statute of Denial":
-                    mcn = new StatuteofDenial15();
+                    mcn = new StatuteofDenialM15();
                     break;
                 # endregion
 
                 # region Stoke the Flames
                 case "Stoke the Flames":
-                    mcn = new StoketheFlames15();
+                    mcn = new StoketheFlamesM15();
                     break;
                 # endregion
 
                 # region Stormtide Leviathan
                 case "Stormtide Leviathan":
-                    mcn = new StormtideLeviathan15();
+                    mcn = new StormtideLeviathanM15();
                     break;
                 # endregion
 
                 # region Sunblade Elf
                 case "Sunblade Elf":
-                    mcn = new SunbladeElf15();
+                    mcn = new SunbladeElfM15();
                     break;
                 # endregion
 
                 # region Sungrace Pegasus
                 case "Sungrace Pegasus":
-                    mcn = new SungracePegasus15();
+                    mcn = new SungracePegasusM15();
                     break;
                 # endregion
 
                 //# region Swamp
                 //case"Swamp":
-                //    mcn = new Swamp15();
+                //    mcn = new SwampM15();
                 //    break;
                 //# endregion
 
                 # region Terra Stomper
                 case "Terra Stomper":
-                    mcn = new TerraStomper15();
+                    mcn = new TerraStomperM15();
                     break;
                 # endregion
 
                 # region The Chain Veil
                 case "The Chain Veil":
-                    mcn = new TheChainVeil15();
+                    mcn = new TheChainVeilM15();
                     break;
                 # endregion
 
                 # region Thundering Giant
                 case "Thundering Giant":
-                    mcn = new ThunderingGiant15();
+                    mcn = new ThunderingGiantM15();
                     break;
                 # endregion
 
                 # region Tireless Missionaries
                 case "Tireless Missionaries":
-                    mcn = new TirelessMissionaries15();
+                    mcn = new TirelessMissionariesM15();
                     break;
                 # endregion
 
                 # region Titanic Growth
                 case "Titanic Growth":
-                    mcn = new TitanicGrowth15();
+                    mcn = new TitanicGrowthM15();
                     break;
                 # endregion
 
                 //# region Torch Fiend
                 //case "Torch Fiend":
-                //    mcn = new TorchFiend15();
+                //    mcn = new TorchFiendM15();
                 //    break;
                 //# endregion
 
                 # region Tormod's Crypt
                 case "Tormod's Crypt":
-                    mcn = new TormodsCrypt15();
+                    mcn = new TormodsCryptM15();
                     break;
                 # endregion
 
                 # region Triplicate Spirits
                 case "Triplicate Spirits":
-                    mcn = new TriplicateSpirits15();
+                    mcn = new TriplicateSpiritsM15();
                     break;
                 # endregion
 
                 # region Turn to Frog
                 case "Turn to Frog":
-                    mcn = new TurntoFrog15();
+                    mcn = new TurntoFrogM15();
                     break;
                 # endregion
 
                 # region Typhoid Rats
                 case "Typhoid Rats":
-                    mcn = new TyphoidRats15();
+                    mcn = new TyphoidRatsM15();
                     break;
                 # endregion
 
                 # region Tyrant's Machine
                 case "Tyrant's Machine":
-                    mcn = new TyrantsMachine15();
+                    mcn = new TyrantsMachineM15();
                     break;
                 # endregion
 
                 # region Ulcerate
                 case "Ulcerate":
-                    mcn = new Ulcerate15();
+                    mcn = new UlcerateM15();
                     break;
                 # endregion
 
                 # region Undergrowth Scavenger
                 case "Undergrowth Scavenger":
-                    mcn = new UndergrowthScavenger15();
+                    mcn = new UndergrowthScavengerM15();
                     break;
                 # endregion
 
                 # region Unmake the Graves
                 case "Unmake the Graves":
-                    mcn = new UnmaketheGraves15();
+                    mcn = new UnmaketheGravesM15();
                     break;
                 # endregion
 
                 # region Urborg, Tomb of Yawgmoth
                 case "Urborg, Tomb of Yawgmoth":
-                    mcn = new UrborgTombofYawgmoth15();
+                    mcn = new UrborgTombofYawgmothM15();
                     break;
                 # endregion
 
                 # region Venom Sliver
                 case "Venom Sliver":
-                    mcn = new VenomSliver15();
+                    mcn = new VenomSliverM15();
                     break;
                 # endregion
 
                 //# region Verdant Haven
                 //case"Verdant Haven":
-                //    mcn = new VerdantHaven15();
+                //    mcn = new VerdantHavenM15();
                 //    break;
                 //# endregion
 
                 # region Vineweft
                 case "Vineweft":
-                    mcn = new Vineweft15();
+                    mcn = new VineweftM15();
                     break;
                 # endregion
 
                 # region Void Snare
                 case "Void Snare":
-                    mcn = new VoidSnare15();
+                    mcn = new VoidSnareM15();
                     break;
                 # endregion
 
                 # region Walking Corpse
                 case "Walking Corpse":
-                    mcn = new WalkingCorpse15();
+                    mcn = new WalkingCorpseM15();
                     break;
                 # endregion
 
                 # region Wall of Essence
                 case "Wall of Essence":
-                    mcn = new WallofEssence15();
+                    mcn = new WallofEssenceM15();
                     break;
                 # endregion
 
                 //# region Wall of Fire
                 //case "Wall of Fire":
-                //    mcn = new WallofFire15();
+                //    mcn = new WallofFireM15();
                 //    break;
                 //# endregion
 
                 //# region Wall of Frost
                 //case"Wall of Frost":
-                //    mcn = new WallofFrost15();
+                //    mcn = new WallofFrostM15();
                 //    break;
                 //# endregion
 
                 # region Wall of Limbs
                 case "Wall of Limbs":
-                    mcn = new WallofLimbs15();
+                    mcn = new WallofLimbsM15();
                     break;
                 # endregion
 
                 # region Wall of Mulch
                 case "Wall of Mulch":
-                    mcn = new WallofMulch15();
+                    mcn = new WallofMulchM15();
                     break;
                 # endregion
 
                 # region Warden of the Beyond
                 case "Warden of the Beyond":
-                    mcn = new WardenoftheBeyond15();
+                    mcn = new WardenoftheBeyondM15();
                     break;
                 # endregion
 
                 # region Waste Not
                 case "Waste Not":
-                    mcn = new WasteNot15();
+                    mcn = new WasteNotM15();
                     break;
                 # endregion
 
                 # region Welkin Tern
                 case "Welkin Tern":
-                    mcn = new WelkinTern15();
+                    mcn = new WelkinTernM15();
                     break;
                 # endregion
 
                 # region Will-Forged Golem
                 case "Will-Forged Golem":
-                    mcn = new WillForgedGolem15();
+                    mcn = new WillForgedGolemM15();
                     break;
                 # endregion
 
                 # region Witch's Familiar
                 case "Witch's Familiar":
-                    mcn = new WitchsFamiliar15();
+                    mcn = new WitchsFamiliarM15();
                     break;
                 # endregion
 
                 # region Xathrid Slyblade
                 case "Xathrid Slyblade":
-                    mcn = new XathridSlyblade15();
+                    mcn = new XathridSlybladeM15();
                     break;
                 # endregion
 
                 # region Yavimaya Coast
                 case "Yavimaya Coast":
-                    mcn = new YavimayaCoast15();
+                    mcn = new YavimayaCoastM15();
                     break;
                 # endregion
 
                 # region Yisan, the Wanderer Bard
                 case "Yisan, the Wanderer Bard":
-                    mcn = new YisantheWandererBard15();
+                    mcn = new YisantheWandererBardM15();
                     break;
                 # endregion
 
                 # region Zof Shade
                 case "Zof Shade":
-                    mcn = new ZofShade15();
+                    mcn = new ZofShadeM15();
                     break;
                 # endregion
 
@@ -22345,6 +22352,58 @@ namespace MagicProgram
             }
 
             return mcn;
+        }
+
+        public static List<MagicCard> CreateSealed(List<MagicCard> source)
+        {
+            List<MagicCard> result = new List<MagicCard>();
+
+            List<MagicCard> MythicRare = source.Where(o => o.Rarity == "M" || o.Rarity == "R").ToList();
+            List<MagicCard> Uncommon = source.Where(o => o.Rarity == "U").ToList();
+            List<MagicCard> Common = source.Where(o => o.Rarity == "C" ).ToList();
+            List<MagicCard> Land = source.Where(o => o.Type.Contains("Basic Land")).ToList();
+
+            for (int i = 0; i < 15; i++)
+            {
+                # region Mythic or Rare
+                if (i == 0 && MythicRare.Count > 0)
+                {
+                    int j = r.Next(0, MythicRare.Count);
+                    MagicCard mc = CardMethods.GetClass(MythicRare[j]);
+                    result.Add(mc);
+                    MythicRare.RemoveAt(j);
+                }
+                # endregion
+                # region Uncommon
+                else if (i <= 3 && Uncommon.Count > 0)
+                {
+                    int j = r.Next(0, Uncommon.Count);
+                    MagicCard mc = CardMethods.GetClass(Uncommon[j]);
+                    result.Add(mc);
+                    Uncommon.RemoveAt(j);
+                }
+                # endregion
+                # region Common
+                else if (i <= 13 && Common.Count > 0)
+                {
+                    int j = r.Next(0, Common.Count);
+                    MagicCard mc = CardMethods.GetClass(Common[j]);
+                    result.Add(mc);
+                    Common.RemoveAt(j);
+                }
+                # endregion
+                # region Land
+                else if ( Land.Count > 0)
+                {
+                    int j = r.Next(0, Land.Count);
+                    MagicCard mc = CardMethods.GetClass(Land[j]);
+                    result.Add(mc);
+                    Land.RemoveAt(j);
+                }
+                # endregion
+            }
+
+            return result;
         }
     }
 

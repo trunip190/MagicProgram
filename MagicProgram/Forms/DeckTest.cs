@@ -924,6 +924,7 @@ namespace MagicProgram
             }
             # endregion
 
+
             # region cycle through cost reduction
             foreach (MagicCard mcna in PlArea._play.cards)
             {
@@ -956,6 +957,7 @@ namespace MagicProgram
                 return;
             }
 
+            temp_OnPlay(mc);
             mcn.callPrePlay();
             string cost = mcn.Cost.ToUpper();
 
@@ -1149,7 +1151,6 @@ namespace MagicProgram
         private void cardAreaHand_ChoseCard(MagicCard mc)
         {
             //mc.OnPlay += new PassiveEvent(temp_OnPlay);
-            temp_OnPlay(mc);
 
             PrePlay(mc);
         }

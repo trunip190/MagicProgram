@@ -1635,7 +1635,7 @@ Enchanted creature gets +2/+2 as long as it's an enchantment. Otherwise, it gets
     <counters>0</counters>
   </Card>
   <Card>
-    <Name> Weaver</Name>
+    <Name>Nyx Weaver</Name>
     <Edition>JOU</Edition>
     <Rarity>U</Rarity>
     <Color />
@@ -1644,7 +1644,7 @@ Enchanted creature gets +2/+2 as long as it's an enchantment. Otherwise, it gets
     <Type>Enchantment Creature — Spider</Type>
     <Text>Reach
 At the beginning of your upkeep, put the top two cards of your library into your graveyard.
-{1}{B}{G}, Exile  Weaver: Return target card from your graveyard to your hand.</Text>
+{1}{B}{G}, Exile Nyx Weaver: Return target card from your graveyard to your hand.</Text>
     <Flavor />
     <Token>false</Token>
     <quantity>1</quantity>
