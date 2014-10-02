@@ -1,14 +1,14 @@
 Forest#8
-Island#11
-Breeding Pool#1
-Simic Guildgate#4
-Multani's Harmony#4
+Island#10
+Breeding Pool#4
+Simic Guildgate#2
 Protean Hydra#4
 Karametra's Favor#4
-Devoted Druid#3
-Gyre Sage#3
+Devoted Druid#4
+Gyre Sage#2
 Leech Bonder#4
 Divination#4
 Rendclaw Trow#3
-Triskelion#3
 Hardened Scales#4
+Sage of Hours#3
+Counterspell#4
