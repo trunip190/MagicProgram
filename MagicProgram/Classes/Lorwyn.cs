@@ -8762,8 +8762,6 @@ namespace MagicProgram
 
         public override bool TryActivate(int i)
         {
-            
-
             if (i == 0)
             {
                 if (Tapped)
@@ -8775,18 +8773,20 @@ namespace MagicProgram
             }
             else
             {
-                ParseText();
-
-                bool result = false;
-
-                if (Abilities.Count > i)
-                {
-                    result = true;
-                }
-
                 base.callActivating(i);
 
-                return result;
+                if (!Tapped || Sick)
+                {
+                    return false;
+                }
+                else
+                {
+                    Tap(false, false);
+                }
+
+                DoActivate(i);
+
+                return true;
             }
         }
 
@@ -8802,6 +8802,7 @@ namespace MagicProgram
                 counters--;
                 Tap(false, false);
             }
+            callActivate(i);
         }
     }
     # endregion
