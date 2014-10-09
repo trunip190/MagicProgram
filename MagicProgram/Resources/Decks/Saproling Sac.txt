@@ -2,7 +2,6 @@ Mountain#6
 Forest#12
 Gruul Guildgate#2
 Thallid#4
-Essence Warden#4
 Elvish Farmer#4
 Fists of Ironwood#3
 Goblin Sharpshooter#3
@@ -12,3 +11,5 @@ Purphoros, God of the Forge#4
 Life and Limb#4
 Mycoloth#2
 Elvish Mystic#4
+Essence Warden#1
+Jund Battlemage#3
