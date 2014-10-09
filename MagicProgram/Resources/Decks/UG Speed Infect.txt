@@ -8,7 +8,7 @@ Devoted Druid#4
 Gyre Sage#2
 Leech Bonder#4
 Divination#4
-Rendclaw Trow#3
 Hardened Scales#4
 Sage of Hours#3
-Counterspell#4
+Counterspell#3
+Ponder#4

@@ -115,6 +115,7 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PlArea = new MagicProgram.Controls.PlayArea();
             this.OppArea = new MagicProgram.Controls.PlayArea();
+            this.buttonCardCancel = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -608,6 +609,7 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.buttonCardCancel);
             this.panel6.Controls.Add(this.comboCardPicker);
             this.panel6.Controls.Add(this.buttonCardChoose);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -630,9 +632,9 @@
             // 
             // buttonCardChoose
             // 
-            this.buttonCardChoose.Location = new System.Drawing.Point(30, 32);
+            this.buttonCardChoose.Location = new System.Drawing.Point(8, 32);
             this.buttonCardChoose.Name = "buttonCardChoose";
-            this.buttonCardChoose.Size = new System.Drawing.Size(75, 23);
+            this.buttonCardChoose.Size = new System.Drawing.Size(57, 23);
             this.buttonCardChoose.TabIndex = 1;
             this.buttonCardChoose.Text = "Choose";
             this.buttonCardChoose.UseVisualStyleBackColor = true;
@@ -1044,6 +1046,15 @@
             this.OppArea.CardUsed += new MagicProgram.PassiveEvent(this.OppArea_CardUsed);
             this.OppArea.CardDrawn += new MagicProgram.PassiveEvent(this.OppArea_CardDrawn);
             // 
+            // buttonCardCancel
+            // 
+            this.buttonCardCancel.Location = new System.Drawing.Point(69, 32);
+            this.buttonCardCancel.Name = "buttonCardCancel";
+            this.buttonCardCancel.Size = new System.Drawing.Size(57, 23);
+            this.buttonCardCancel.TabIndex = 2;
+            this.buttonCardCancel.Text = "Cancel";
+            this.buttonCardCancel.UseVisualStyleBackColor = true;
+            // 
             // DeckTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1186,5 +1197,6 @@
         private System.Windows.Forms.ToolStripMenuItem manaWheelToolStripMenuItem;
         private MagicProgram.Controls.PlayArea PlArea;
         private MagicProgram.Controls.PlayArea OppArea;
+        private System.Windows.Forms.Button buttonCardCancel;
     }
 }

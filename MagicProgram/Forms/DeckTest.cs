@@ -2371,9 +2371,18 @@ namespace MagicProgram
                 PlArea._stack.cards.Remove(mc);
                 PlArea._stack.cards.Add(mc);
                 mc.Location = "Library";
-
-                onCancel -= OnCancel_ToBottom;
-                CardChosen -= CardChosen_ToBottom;
+                PickList.Remove(mc);
+                
+                //testing
+                if (PickList.Count > 0)
+                {
+                    comboCardPicker_Fill(PickList);
+                }
+                else
+                {
+                    onCancel -= OnCancel_ToBottom;
+                    CardChosen -= CardChosen_ToBottom;
+                }
             }
         }
 
@@ -3314,12 +3323,14 @@ namespace MagicProgram
         {
             PickList = cards;
             comboCardPicker.Items.Clear();
+
             foreach (MagicCard mc in PickList)
             {
                 comboCardPicker.Items.Add(mc);
             }
 
             cPanelControls.Show();
+
             buttonCardChoose.Visible = true;
             comboCardPicker.Visible = true;
         }

@@ -3985,6 +3985,28 @@ namespace MagicProgram
             MagicCard mcn;
             switch (s)
             {
+                # region Basic Lands
+                case "Forest":
+                    mcn = new Forest();
+                    break;
+
+                case "Mountain":
+                    mcn = new Mountain();
+                    break;
+
+                case "Plains":
+                    mcn = new Plains();
+                    break;
+
+                case "Swamp":
+                    mcn = new Swamp();
+                    break;
+
+                case "Island":
+                    mcn = new Island();
+                    break;
+                # endregion
+
                 # region Alpha
                 # region Air Elemental
                 case "Air Elemental":
@@ -8128,11 +8150,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Forest
-                case "Forest":
-                    mcn = new ForestLRW();
-                    break;
-                # endregion
+                //# region Forest
+                //case "Forest":
+                //    mcn = new ForestLRW();
+                //    break;
+                //# endregion
 
                 # region Gaddock Teeg
                 case "Gaddock Teeg":
@@ -8392,11 +8414,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Island
-                case "Island":
-                    mcn = new IslandLRW();
-                    break;
-                # endregion
+                //# region Island
+                //case "Island":
+                //    mcn = new IslandLRW();
+                //    break;
+                //# endregion
 
                 # region Jace Beleren
                 case "Jace Beleren":
@@ -8608,11 +8630,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Mountain
-                case "Mountain":
-                    mcn = new MountainLRW();
-                    break;
-                # endregion
+                //# region Mountain
+                //case "Mountain":
+                //    mcn = new MountainLRW();
+                //    break;
+                //# endregion
 
                 # region Mournwhelk
                 case "Mournwhelk":
@@ -8734,11 +8756,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Plains
-                case "Plains":
-                    mcn = new PlainsLRW();
-                    break;
-                # endregion
+                //# region Plains
+                //case "Plains":
+                //    mcn = new PlainsLRW();
+                //    break;
+                //# endregion
 
                 # region Plover Knights
                 case "Plover Knights":
@@ -9022,11 +9044,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Swamp
-                case "Swamp":
-                    mcn = new SwampLRW();
-                    break;
-                # endregion
+                //# region Swamp
+                //case "Swamp":
+                //    mcn = new SwampLRW();
+                //    break;
+                //# endregion
 
                 # region Sygg, River Guide
                 case "Sygg, River Guide":
@@ -9298,1721 +9320,1721 @@ namespace MagicProgram
                 # endregion
 
                 # region Shadowmoor
-                    # region Advice from the Fae
-case "Advice from the Fae":
-mcn = new AdvicefromtheFaeSHM();
-break;
-# endregion
-
-# region AEthertow
-case "AEthertow":
-mcn = new AEthertowSHM();
-break;
-# endregion
-
-# region Aphotic Wisps
-case "Aphotic Wisps":
-mcn = new AphoticWispsSHM();
-break;
-# endregion
-
-# region Apothecary Initiate
-case "Apothecary Initiate":
-mcn = new ApothecaryInitiateSHM();
-break;
-# endregion
-
-# region Armored Ascension
-case "Armored Ascension":
-mcn = new ArmoredAscensionSHM();
-break;
-# endregion
-
-# region Ashenmoor Cohort
-case "Ashenmoor Cohort":
-mcn = new AshenmoorCohortSHM();
-break;
-# endregion
-
-# region Ashenmoor Gouger
-case "Ashenmoor Gouger":
-mcn = new AshenmoorGougerSHM();
-break;
-# endregion
-
-# region Ashenmoor Liege
-case "Ashenmoor Liege":
-mcn = new AshenmoorLiegeSHM();
-break;
-# endregion
-
-# region Augury Adept
-case "Augury Adept":
-mcn = new AuguryAdeptSHM();
-break;
-# endregion
-
-# region Ballynock Cohort
-case "Ballynock Cohort":
-mcn = new BallynockCohortSHM();
-break;
-# endregion
-
-# region Barkshell Blessing
-case "Barkshell Blessing":
-mcn = new BarkshellBlessingSHM();
-break;
-# endregion
-
-# region Barrenton Cragtreads
-case "Barrenton Cragtreads":
-mcn = new BarrentonCragtreadsSHM();
-break;
-# endregion
-
-# region Barrenton Medic
-case "Barrenton Medic":
-mcn = new BarrentonMedicSHM();
-break;
-# endregion
-
-# region Beseech the Queen
-case "Beseech the Queen":
-mcn = new BeseechtheQueenSHM();
-break;
-# endregion
-
-# region Biting Tether
-case "Biting Tether":
-mcn = new BitingTetherSHM();
-break;
-# endregion
-
-# region Blazethorn Scarecrow
-case "Blazethorn Scarecrow":
-mcn = new BlazethornScarecrowSHM();
-break;
-# endregion
-
-# region Blight Sickle
-case "Blight Sickle":
-mcn = new BlightSickleSHM();
-break;
-# endregion
-
-# region Blistering Dieflyn
-case "Blistering Dieflyn":
-mcn = new BlisteringDieflynSHM();
-break;
-# endregion
-
-# region Bloodmark Mentor
-case "Bloodmark Mentor":
-mcn = new BloodmarkMentorSHM();
-break;
-# endregion
-
-# region Bloodshed Fever
-case "Bloodshed Fever":
-mcn = new BloodshedFeverSHM();
-break;
-# endregion
-
-# region Blowfly Infestation
-case "Blowfly Infestation":
-mcn = new BlowflyInfestationSHM();
-break;
-# endregion
-
-# region Boartusk Liege
-case "Boartusk Liege":
-mcn = new BoartuskLiegeSHM();
-break;
-# endregion
-
-# region Boggart Arsonists
-case "Boggart Arsonists":
-mcn = new BoggartArsonistsSHM();
-break;
-# endregion
-
-# region Boggart Ram-Gang
-case "Boggart Ram-Gang":
-mcn = new BoggartRamGangSHM();
-break;
-# endregion
-
-# region Boon Reflection
-case "Boon Reflection":
-mcn = new BoonReflectionSHM();
-break;
-# endregion
-
-# region Briarberry Cohort
-case "Briarberry Cohort":
-mcn = new BriarberryCohortSHM();
-break;
-# endregion
-
-# region Burn Trail
-case "Burn Trail":
-mcn = new BurnTrailSHM();
-break;
-# endregion
-
-# region Cauldron of Souls
-case "Cauldron of Souls":
-mcn = new CauldronofSoulsSHM();
-break;
-# endregion
-
-# region Cemetery Puca
-case "Cemetery Puca":
-mcn = new CemeteryPucaSHM();
-break;
-# endregion
-
-# region Cerulean Wisps
-case "Cerulean Wisps":
-mcn = new CeruleanWispsSHM();
-break;
-# endregion
-
-# region Chainbreaker
-case "Chainbreaker":
-mcn = new ChainbreakerSHM();
-break;
-# endregion
-
-# region Cinderbones
-case "Cinderbones":
-mcn = new CinderbonesSHM();
-break;
-# endregion
-
-# region Cinderhaze Wretch
-case "Cinderhaze Wretch":
-mcn = new CinderhazeWretchSHM();
-break;
-# endregion
-
-# region Consign to Dream
-case "Consign to Dream":
-mcn = new ConsigntoDreamSHM();
-break;
-# endregion
-
-# region Corrosive Mentor
-case "Corrosive Mentor":
-mcn = new CorrosiveMentorSHM();
-break;
-# endregion
-
-# region Corrupt
-case "Corrupt":
-mcn = new CorruptSHM();
-break;
-# endregion
-
-# region Counterbore
-case "Counterbore":
-mcn = new CounterboreSHM();
-break;
-# endregion
-
-# region Crabapple Cohort
-case "Crabapple Cohort":
-mcn = new CrabappleCohortSHM();
-break;
-# endregion
-
-# region Cragganwick Cremator
-case "Cragganwick Cremator":
-mcn = new CragganwickCrematorSHM();
-break;
-# endregion
-
-# region Crimson Wisps
-case "Crimson Wisps":
-mcn = new CrimsonWispsSHM();
-break;
-# endregion
-
-# region Crowd of Cinders
-case "Crowd of Cinders":
-mcn = new CrowdofCindersSHM();
-break;
-# endregion
-
-# region Cultbrand Cinder
-case "Cultbrand Cinder":
-mcn = new CultbrandCinderSHM();
-break;
-# endregion
-
-# region Curse of Chains
-case "Curse of Chains":
-mcn = new CurseofChainsSHM();
-break;
-# endregion
-
-# region Cursecatcher
-case "Cursecatcher":
-mcn = new CursecatcherSHM();
-break;
-# endregion
-
-# region Dawnglow Infusion
-case "Dawnglow Infusion":
-mcn = new DawnglowInfusionSHM();
-break;
-# endregion
-
-# region Deepchannel Mentor
-case "Deepchannel Mentor":
-mcn = new DeepchannelMentorSHM();
-break;
-# endregion
-
-# region Deep-Slumber Titan
-case "Deep-Slumber Titan":
-mcn = new DeepSlumberTitanSHM();
-break;
-# endregion
-
-# region Demigod of Revenge
-case "Demigod of Revenge":
-mcn = new DemigodofRevengeSHM();
-break;
-# endregion
-
-# region Deus of Calamity
-case "Deus of Calamity":
-mcn = new DeusofCalamitySHM();
-break;
-# endregion
-
-# region Devoted Druid
-case "Devoted Druid":
-mcn = new DevotedDruidSHM();
-break;
-# endregion
-
-# region Din of the Fireherd
-case "Din of the Fireherd":
-mcn = new DinoftheFireherdSHM();
-break;
-# endregion
-
-# region Dire Undercurrents
-case "Dire Undercurrents":
-mcn = new DireUndercurrentsSHM();
-break;
-# endregion
-
-# region Disturbing Plot
-case "Disturbing Plot":
-mcn = new DisturbingPlotSHM();
-break;
-# endregion
-
-# region Dramatic Entrance
-case "Dramatic Entrance":
-mcn = new DramaticEntranceSHM();
-break;
-# endregion
-
-# region Dream Salvage
-case "Dream Salvage":
-mcn = new DreamSalvageSHM();
-break;
-# endregion
-
-# region Drove of Elves
-case "Drove of Elves":
-mcn = new DroveofElvesSHM();
-break;
-# endregion
-
-# region Drowner Initiate
-case "Drowner Initiate":
-mcn = new DrownerInitiateSHM();
-break;
-# endregion
-
-# region Dusk Urchins
-case "Dusk Urchins":
-mcn = new DuskUrchinsSHM();
-break;
-# endregion
-
-# region Elemental Mastery
-case "Elemental Mastery":
-mcn = new ElementalMasterySHM();
-break;
-# endregion
-
-# region Elsewhere Flask
-case "Elsewhere Flask":
-mcn = new ElsewhereFlaskSHM();
-break;
-# endregion
-
-# region Elvish Hexhunter
-case "Elvish Hexhunter":
-mcn = new ElvishHexhunterSHM();
-break;
-# endregion
-
-# region Ember Gale
-case "Ember Gale":
-mcn = new EmberGaleSHM();
-break;
-# endregion
-
-# region Emberstrike Duo
-case "Emberstrike Duo":
-mcn = new EmberstrikeDuoSHM();
-break;
-# endregion
-
-# region Enchanted Evening
-case "Enchanted Evening":
-mcn = new EnchantedEveningSHM();
-break;
-# endregion
-
-# region Everlasting Torment
-case "Everlasting Torment":
-mcn = new EverlastingTormentSHM();
-break;
-# endregion
-
-# region Faerie Macabre
-case "Faerie Macabre":
-mcn = new FaerieMacabreSHM();
-break;
-# endregion
-
-# region Faerie Swarm
-case "Faerie Swarm":
-mcn = new FaerieSwarmSHM();
-break;
-# endregion
-
-# region Farhaven Elf
-case "Farhaven Elf":
-mcn = new FarhavenElfSHM();
-break;
-# endregion
-
-# region Fate Transfer
-case "Fate Transfer":
-mcn = new FateTransferSHM();
-break;
-# endregion
-
-# region Fire-Lit Thicket
-case "Fire-Lit Thicket":
-mcn = new FireLitThicketSHM();
-break;
-# endregion
-
-# region Firespout
-case "Firespout":
-mcn = new FirespoutSHM();
-break;
-# endregion
-
-# region Fists of the Demigod
-case "Fists of the Demigod":
-mcn = new FistsoftheDemigodSHM();
-break;
-# endregion
-
-# region Flame Javelin
-case "Flame Javelin":
-mcn = new FlameJavelinSHM();
-break;
-# endregion
-
-# region Flourishing Defenses
-case "Flourishing Defenses":
-mcn = new FlourishingDefensesSHM();
-break;
-# endregion
-
-# region Flow of Ideas
-case "Flow of Ideas":
-mcn = new FlowofIdeasSHM();
-break;
-# endregion
-
-//# region Forest
-//case "Forest":
-//mcn = new ForestSHM();
-//break;
-//# endregion
-
-# region Fossil Find
-case "Fossil Find":
-mcn = new FossilFindSHM();
-break;
-# endregion
-
-# region Foxfire Oak
-case "Foxfire Oak":
-mcn = new FoxfireOakSHM();
-break;
-# endregion
-
-# region Fracturing Gust
-case "Fracturing Gust":
-mcn = new FracturingGustSHM();
-break;
-# endregion
-
-# region Fulminator Mage
-case "Fulminator Mage":
-mcn = new FulminatorMageSHM();
-break;
-# endregion
-
-# region Furystoke Giant
-case "Furystoke Giant":
-mcn = new FurystokeGiantSHM();
-break;
-# endregion
-
-# region Ghastlord of Fugue
-case "Ghastlord of Fugue":
-mcn = new GhastlordofFugueSHM();
-break;
-# endregion
-
-# region Ghastly Discovery
-case "Ghastly Discovery":
-mcn = new GhastlyDiscoverySHM();
-break;
-# endregion
-
-# region Giantbaiting
-case "Giantbaiting":
-mcn = new GiantbaitingSHM();
-break;
-# endregion
-
-# region Glamer Spinners
-case "Glamer Spinners":
-mcn = new GlamerSpinnersSHM();
-break;
-# endregion
-
-# region Gleeful Sabotage
-case "Gleeful Sabotage":
-mcn = new GleefulSabotageSHM();
-break;
-# endregion
-
-# region Glen Elendra Liege
-case "Glen Elendra Liege":
-mcn = new GlenElendraLiegeSHM();
-break;
-# endregion
-
-# region Gloomlance
-case "Gloomlance":
-mcn = new GloomlanceSHM();
-break;
-# endregion
-
-# region Gloomwidow
-case "Gloomwidow":
-mcn = new GloomwidowSHM();
-break;
-# endregion
-
-# region Gloomwidow's Feast
-case "Gloomwidow's Feast":
-mcn = new GloomwidowsFeastSHM();
-break;
-# endregion
-
-# region Gnarled Effigy
-case "Gnarled Effigy":
-mcn = new GnarledEffigySHM();
-break;
-# endregion
-
-# region Godhead of Awe
-case "Godhead of Awe":
-mcn = new GodheadofAweSHM();
-break;
-# endregion
-
-# region Goldenglow Moth
-case "Goldenglow Moth":
-mcn = new GoldenglowMothSHM();
-break;
-# endregion
-
-# region Gravelgill Axeshark
-case "Gravelgill Axeshark":
-mcn = new GravelgillAxesharkSHM();
-break;
-# endregion
-
-# region Gravelgill Duo
-case "Gravelgill Duo":
-mcn = new GravelgillDuoSHM();
-break;
-# endregion
-
-# region Graven Cairns
-case "Graven Cairns":
-mcn = new GravenCairnsSHM();
-break;
-# endregion
-
-# region Greater Auramancy
-case "Greater Auramancy":
-mcn = new GreaterAuramancySHM();
-break;
-# endregion
-
-# region Grief Tyrant
-case "Grief Tyrant":
-mcn = new GriefTyrantSHM();
-break;
-# endregion
-
-# region Grim Poppet
-case "Grim Poppet":
-mcn = new GrimPoppetSHM();
-break;
-# endregion
-
-# region Guttural Response
-case "Guttural Response":
-mcn = new GutturalResponseSHM();
-break;
-# endregion
-
-# region Heap Doll
-case "Heap Doll":
-mcn = new HeapDollSHM();
-break;
-# endregion
-
-# region Heartmender
-case "Heartmender":
-mcn = new HeartmenderSHM();
-break;
-# endregion
-
-# region Helm of the Ghastlord
-case "Helm of the Ghastlord":
-mcn = new HelmoftheGhastlordSHM();
-break;
-# endregion
-
-# region Hollowborn Barghest
-case "Hollowborn Barghest":
-mcn = new HollowbornBarghestSHM();
-break;
-# endregion
-
-# region Hollowsage
-case "Hollowsage":
-mcn = new HollowsageSHM();
-break;
-# endregion
-
-# region Horde of Boggarts
-case "Horde of Boggarts":
-mcn = new HordeofBoggartsSHM();
-break;
-# endregion
-
-# region Howl of the Night Pack
-case "Howl of the Night Pack":
-mcn = new HowloftheNightPackSHM();
-break;
-# endregion
-
-# region Hungry Spriggan
-case "Hungry Spriggan":
-mcn = new HungrySprigganSHM();
-break;
-# endregion
-
-# region Illuminated Folio
-case "Illuminated Folio":
-mcn = new IlluminatedFolioSHM();
-break;
-# endregion
-
-# region Impromptu Raid
-case "Impromptu Raid":
-mcn = new ImpromptuRaidSHM();
-break;
-# endregion
-
-# region Incremental Blight
-case "Incremental Blight":
-mcn = new IncrementalBlightSHM();
-break;
-# endregion
-
-# region Inescapable Brute
-case "Inescapable Brute":
-mcn = new InescapableBruteSHM();
-break;
-# endregion
-
-# region Inkfathom Infiltrator
-case "Inkfathom Infiltrator":
-mcn = new InkfathomInfiltratorSHM();
-break;
-# endregion
-
-# region Inkfathom Witch
-case "Inkfathom Witch":
-mcn = new InkfathomWitchSHM();
-break;
-# endregion
-
-# region Inquisitor's Snare
-case "Inquisitor's Snare":
-mcn = new InquisitorsSnareSHM();
-break;
-# endregion
-
-# region Intimidator Initiate
-case "Intimidator Initiate":
-mcn = new IntimidatorInitiateSHM();
-break;
-# endregion
-
-//# region Island
-//case "Island":
-//mcn = new IslandSHM();
-//break;
-//# endregion
-
-# region Isleback Spawn
-case "Isleback Spawn":
-mcn = new IslebackSpawnSHM();
-break;
-# endregion
-
-# region Jaws of Stone
-case "Jaws of Stone":
-mcn = new JawsofStoneSHM();
-break;
-# endregion
-
-# region Juvenile Gloomwidow
-case "Juvenile Gloomwidow":
-mcn = new JuvenileGloomwidowSHM();
-break;
-# endregion
-
-# region Kinscaer Harpoonist
-case "Kinscaer Harpoonist":
-mcn = new KinscaerHarpoonistSHM();
-break;
-# endregion
-
-# region Kitchen Finks
-case "Kitchen Finks":
-mcn = new KitchenFinksSHM();
-break;
-# endregion
-
-# region Kithkin Rabble
-case "Kithkin Rabble":
-mcn = new KithkinRabbleSHM();
-break;
-# endregion
-
-# region Kithkin Shielddare
-case "Kithkin Shielddare":
-mcn = new KithkinShielddareSHM();
-break;
-# endregion
-
-# region Knacksaw Clique
-case "Knacksaw Clique":
-mcn = new KnacksawCliqueSHM();
-break;
-# endregion
-
-# region Knollspine Dragon
-case "Knollspine Dragon":
-mcn = new KnollspineDragonSHM();
-break;
-# endregion
-
-# region Knollspine Invocation
-case "Knollspine Invocation":
-mcn = new KnollspineInvocationSHM();
-break;
-# endregion
-
-# region Kulrath Knight
-case "Kulrath Knight":
-mcn = new KulrathKnightSHM();
-break;
-# endregion
-
-# region Last Breath
-case "Last Breath":
-mcn = new LastBreathSHM();
-break;
-# endregion
-
-# region Leech Bonder
-case "Leech Bonder":
-mcn = new LeechBonderSHM();
-break;
-# endregion
-
-# region Leechridden Swamp
-case "Leechridden Swamp":
-mcn = new LeechriddenSwampSHM();
-break;
-# endregion
-
-# region Loamdragger Giant
-case "Loamdragger Giant":
-mcn = new LoamdraggerGiantSHM();
-break;
-# endregion
-
-# region Loch Korrigan
-case "Loch Korrigan":
-mcn = new LochKorriganSHM();
-break;
-# endregion
-
-# region Lockjaw Snapper
-case "Lockjaw Snapper":
-mcn = new LockjawSnapperSHM();
-break;
-# endregion
-
-# region Lurebound Scarecrow
-case "Lurebound Scarecrow":
-mcn = new LureboundScarecrowSHM();
-break;
-# endregion
-
-# region Madblind Mountain
-case "Madblind Mountain":
-mcn = new MadblindMountainSHM();
-break;
-# endregion
-
-# region Mana Reflection
-case "Mana Reflection":
-mcn = new ManaReflectionSHM();
-break;
-# endregion
-
-# region Manaforge Cinder
-case "Manaforge Cinder":
-mcn = new ManaforgeCinderSHM();
-break;
-# endregion
-
-# region Manamorphose
-case "Manamorphose":
-mcn = new ManamorphoseSHM();
-break;
-# endregion
-
-# region Mass Calcify
-case "Mass Calcify":
-mcn = new MassCalcifySHM();
-break;
-# endregion
-
-# region Medicine Runner
-case "Medicine Runner":
-mcn = new MedicineRunnerSHM();
-break;
-# endregion
-
-# region Memory Plunder
-case "Memory Plunder":
-mcn = new MemoryPlunderSHM();
-break;
-# endregion
-
-# region Memory Sluice
-case "Memory Sluice":
-mcn = new MemorySluiceSHM();
-break;
-# endregion
-
-# region Mercy Killing
-case "Mercy Killing":
-mcn = new MercyKillingSHM();
-break;
-# endregion
-
-# region Merrow Grimeblotter
-case "Merrow Grimeblotter":
-mcn = new MerrowGrimeblotterSHM();
-break;
-# endregion
-
-# region Merrow Wavebreakers
-case "Merrow Wavebreakers":
-mcn = new MerrowWavebreakersSHM();
-break;
-# endregion
-
-# region Midnight Banshee
-case "Midnight Banshee":
-mcn = new MidnightBansheeSHM();
-break;
-# endregion
-
-# region Mine Excavation
-case "Mine Excavation":
-mcn = new MineExcavationSHM();
-break;
-# endregion
-
-# region Mirrorweave
-case "Mirrorweave":
-mcn = new MirrorweaveSHM();
-break;
-# endregion
-
-# region Mistmeadow Skulk
-case "Mistmeadow Skulk":
-mcn = new MistmeadowSkulkSHM();
-break;
-# endregion
-
-# region Mistmeadow Witch
-case "Mistmeadow Witch":
-mcn = new MistmeadowWitchSHM();
-break;
-# endregion
-
-# region Mistveil Plains
-case "Mistveil Plains":
-mcn = new MistveilPlainsSHM();
-break;
-# endregion
-
-# region Moonring Island
-case "Moonring Island":
-mcn = new MoonringIslandSHM();
-break;
-# endregion
-
-# region Morselhoarder
-case "Morselhoarder":
-mcn = new MorselhoarderSHM();
-break;
-# endregion
-
-# region Mossbridge Troll
-case "Mossbridge Troll":
-mcn = new MossbridgeTrollSHM();
-break;
-# endregion
-
-//# region Mountain
-//case "Mountain":
-//mcn = new MountainSHM();
-//break;
-//# endregion
-
-# region Mudbrawler Cohort
-case "Mudbrawler Cohort":
-mcn = new MudbrawlerCohortSHM();
-break;
-# endregion
-
-# region Mudbrawler Raiders
-case "Mudbrawler Raiders":
-mcn = new MudbrawlerRaidersSHM();
-break;
-# endregion
-
-# region Murderous Redcap
-case "Murderous Redcap":
-mcn = new MurderousRedcapSHM();
-break;
-# endregion
-
-# region Mystic Gate
-case "Mystic Gate":
-mcn = new MysticGateSHM();
-break;
-# endregion
-
-# region Niveous Wisps
-case "Niveous Wisps":
-mcn = new NiveousWispsSHM();
-break;
-# endregion
-
-# region Nurturer Initiate
-case "Nurturer Initiate":
-mcn = new NurturerInitiateSHM();
-break;
-# endregion
-
-# region Old Ghastbark
-case "Old Ghastbark":
-mcn = new OldGhastbarkSHM();
-break;
-# endregion
-
-# region Oona, Queen of the Fae
-case "Oona, Queen of the Fae":
-mcn = new OonaQueenoftheFaeSHM();
-break;
-# endregion
-
-# region Oona's Gatewarden
-case "Oona's Gatewarden":
-mcn = new OonasGatewardenSHM();
-break;
-# endregion
-
-# region Oracle of Nectars
-case "Oracle of Nectars":
-mcn = new OracleofNectarsSHM();
-break;
-# endregion
-
-# region Order of Whiteclay
-case "Order of Whiteclay":
-mcn = new OrderofWhiteclaySHM();
-break;
-# endregion
-
-# region Oversoul of Dusk
-case "Oversoul of Dusk":
-mcn = new OversoulofDuskSHM();
-break;
-# endregion
-
-# region Painter's Servant
-case "Painter's Servant":
-mcn = new PaintersServantSHM();
-break;
-# endregion
-
-# region Pale Wayfarer
-case "Pale Wayfarer":
-mcn = new PaleWayfarerSHM();
-break;
-# endregion
-
-# region Parapet Watchers
-case "Parapet Watchers":
-mcn = new ParapetWatchersSHM();
-break;
-# endregion
-
-# region Pili-Pala
-case "Pili-Pala":
-mcn = new PiliPalaSHM();
-break;
-# endregion
-
-# region Plague of Vermin
-case "Plague of Vermin":
-mcn = new PlagueofVerminSHM();
-break;
-# endregion
-
-//# region Plains
-//case "Plains":
-//mcn = new PlainsSHM();
-//break;
-//# endregion
-
-# region Plumeveil
-case "Plumeveil":
-mcn = new PlumeveilSHM();
-break;
-# endregion
-
-# region Poison the Well
-case "Poison the Well":
-mcn = new PoisontheWellSHM();
-break;
-# endregion
-
-# region Polluted Bonds
-case "Polluted Bonds":
-mcn = new PollutedBondsSHM();
-break;
-# endregion
-
-# region Power of Fire
-case "Power of Fire":
-mcn = new PowerofFireSHM();
-break;
-# endregion
-
-# region Presence of Gond
-case "Presence of Gond":
-mcn = new PresenceofGondSHM();
-break;
-# endregion
-
-# region Prismatic Omen
-case "Prismatic Omen":
-mcn = new PrismaticOmenSHM();
-break;
-# endregion
-
-# region Prismwake Merrow
-case "Prismwake Merrow":
-mcn = new PrismwakeMerrowSHM();
-break;
-# endregion
-
-# region Prison Term
-case "Prison Term":
-mcn = new PrisonTermSHM();
-break;
-# endregion
-
-# region Puca's Mischief
-case "Puca's Mischief":
-mcn = new PucasMischiefSHM();
-break;
-# endregion
-
-# region Puncture Bolt
-case "Puncture Bolt":
-mcn = new PunctureBoltSHM();
-break;
-# endregion
-
-# region Puppeteer Clique
-case "Puppeteer Clique":
-mcn = new PuppeteerCliqueSHM();
-break;
-# endregion
-
-# region Puresight Merrow
-case "Puresight Merrow":
-mcn = new PuresightMerrowSHM();
-break;
-# endregion
-
-# region Put Away
-case "Put Away":
-mcn = new PutAwaySHM();
-break;
-# endregion
-
-# region Pyre Charger
-case "Pyre Charger":
-mcn = new PyreChargerSHM();
-break;
-# endregion
-
-# region Rage Reflection
-case "Rage Reflection":
-mcn = new RageReflectionSHM();
-break;
-# endregion
-
-# region Raking Canopy
-case "Raking Canopy":
-mcn = new RakingCanopySHM();
-break;
-# endregion
-
-# region Rattleblaze Scarecrow
-case "Rattleblaze Scarecrow":
-mcn = new RattleblazeScarecrowSHM();
-break;
-# endregion
-
-# region Raven's Run Dragoon
-case "Raven's Run Dragoon":
-mcn = new RavensRunDragoonSHM();
-break;
-# endregion
-
-# region Reaper King
-case "Reaper King":
-mcn = new ReaperKingSHM();
-break;
-# endregion
-
-# region Reflecting Pool
-case "Reflecting Pool":
-mcn = new ReflectingPoolSHM();
-break;
-# endregion
-
-# region Reknit
-case "Reknit":
-mcn = new ReknitSHM();
-break;
-# endregion
-
-# region Repel Intruders
-case "Repel Intruders":
-mcn = new RepelIntrudersSHM();
-break;
-# endregion
-
-# region Resplendent Mentor
-case "Resplendent Mentor":
-mcn = new ResplendentMentorSHM();
-break;
-# endregion
-
-# region Revelsong Horn
-case "Revelsong Horn":
-mcn = new RevelsongHornSHM();
-break;
-# endregion
-
-# region Rhys the Redeemed
-case "Rhys the Redeemed":
-mcn = new RhystheRedeemedSHM();
-break;
-# endregion
-
-# region Rite of Consumption
-case "Rite of Consumption":
-mcn = new RiteofConsumptionSHM();
-break;
-# endregion
-
-# region River Kelpie
-case "River Kelpie":
-mcn = new RiverKelpieSHM();
-break;
-# endregion
-
-# region River's Grasp
-case "River's Grasp":
-mcn = new RiversGraspSHM();
-break;
-# endregion
-
-# region Rosheen Meanderer
-case "Rosheen Meanderer":
-mcn = new RosheenMeandererSHM();
-break;
-# endregion
-
-# region Roughshod Mentor
-case "Roughshod Mentor":
-mcn = new RoughshodMentorSHM();
-break;
-# endregion
-
-# region Rune-Cervin Rider
-case "Rune-Cervin Rider":
-mcn = new RuneCervinRiderSHM();
-break;
-# endregion
-
-# region Runed Halo
-case "Runed Halo":
-mcn = new RunedHaloSHM();
-break;
-# endregion
-
-# region Runes of the Deus
-case "Runes of the Deus":
-mcn = new RunesoftheDeusSHM();
-break;
-# endregion
-
-# region Rustrazor Butcher
-case "Rustrazor Butcher":
-mcn = new RustrazorButcherSHM();
-break;
-# endregion
-
-# region Safehold Duo
-case "Safehold Duo":
-mcn = new SafeholdDuoSHM();
-break;
-# endregion
-
-# region Safehold Elite
-case "Safehold Elite":
-mcn = new SafeholdEliteSHM();
-break;
-# endregion
-
-# region Safehold Sentry
-case "Safehold Sentry":
-mcn = new SafeholdSentrySHM();
-break;
-# endregion
-
-# region Safewright Quest
-case "Safewright Quest":
-mcn = new SafewrightQuestSHM();
-break;
-# endregion
-
-# region Sapseep Forest
-case "Sapseep Forest":
-mcn = new SapseepForestSHM();
-break;
-# endregion
-
-# region Savor the Moment
-case "Savor the Moment":
-mcn = new SavortheMomentSHM();
-break;
-# endregion
-
-# region Scar
-case "Scar":
-mcn = new ScarSHM();
-break;
-# endregion
-
-# region Scarscale Ritual
-case "Scarscale Ritual":
-mcn = new ScarscaleRitualSHM();
-break;
-# endregion
-
-# region Scrapbasket
-case "Scrapbasket":
-mcn = new ScrapbasketSHM();
-break;
-# endregion
-
-# region Scuttlemutt
-case "Scuttlemutt":
-mcn = new ScuttlemuttSHM();
-break;
-# endregion
-
-# region Scuzzback Marauders
-case "Scuzzback Marauders":
-mcn = new ScuzzbackMaraudersSHM();
-break;
-# endregion
-
-# region Scuzzback Scrapper
-case "Scuzzback Scrapper":
-mcn = new ScuzzbackScrapperSHM();
-break;
-# endregion
-
-# region Seedcradle Witch
-case "Seedcradle Witch":
-mcn = new SeedcradleWitchSHM();
-break;
-# endregion
-
-# region Shield of the Oversoul
-case "Shield of the Oversoul":
-mcn = new ShieldoftheOversoulSHM();
-break;
-# endregion
-
-# region Sickle Ripper
-case "Sickle Ripper":
-mcn = new SickleRipperSHM();
-break;
-# endregion
-
-# region Silkbind Faerie
-case "Silkbind Faerie":
-mcn = new SilkbindFaerieSHM();
-break;
-# endregion
-
-# region Sinking Feeling
-case "Sinking Feeling":
-mcn = new SinkingFeelingSHM();
-break;
-# endregion
-
-# region Slinking Giant
-case "Slinking Giant":
-mcn = new SlinkingGiantSHM();
-break;
-# endregion
-
-# region Smash to Smithereens
-case "Smash to Smithereens":
-mcn = new SmashtoSmithereensSHM();
-break;
-# endregion
-
-# region Smolder Initiate
-case "Smolder Initiate":
-mcn = new SmolderInitiateSHM();
-break;
-# endregion
-
-# region Somnomancer
-case "Somnomancer":
-mcn = new SomnomancerSHM();
-break;
-# endregion
-
-# region Sootstoke Kindler
-case "Sootstoke Kindler":
-mcn = new SootstokeKindlerSHM();
-break;
-# endregion
-
-# region Sootwalkers
-case "Sootwalkers":
-mcn = new SootwalkersSHM();
-break;
-# endregion
-
-# region Spawnwrithe
-case "Spawnwrithe":
-mcn = new SpawnwritheSHM();
-break;
-# endregion
-
-# region Spectral Procession
-case "Spectral Procession":
-mcn = new SpectralProcessionSHM();
-break;
-# endregion
-
-# region Spell Syphon
-case "Spell Syphon":
-mcn = new SpellSyphonSHM();
-break;
-# endregion
-
-# region Spiteflame Witch
-case "Spiteflame Witch":
-mcn = new SpiteflameWitchSHM();
-break;
-# endregion
-
-# region Spiteful Visions
-case "Spiteful Visions":
-mcn = new SpitefulVisionsSHM();
-break;
-# endregion
-
-# region Splitting Headache
-case "Splitting Headache":
-mcn = new SplittingHeadacheSHM();
-break;
-# endregion
-
-# region Steel of the Godhead
-case "Steel of the Godhead":
-mcn = new SteeloftheGodheadSHM();
-break;
-# endregion
-
-# region Strip Bare
-case "Strip Bare":
-mcn = new StripBareSHM();
-break;
-# endregion
-
-# region Sunken Ruins
-case "Sunken Ruins":
-mcn = new SunkenRuinsSHM();
-break;
-# endregion
-
-//# region Swamp
-//case "Swamp":
-//mcn = new SwampSHM();
-//break;
-//# endregion
-
-# region Swans of Bryn Argoll
-case "Swans of Bryn Argoll":
-mcn = new SwansofBrynArgollSHM();
-break;
-# endregion
-
-# region Sygg, River Cutthroat
-case "Sygg, River Cutthroat":
-mcn = new SyggRiverCutthroatSHM();
-break;
-# endregion
-
-# region Tatterkite
-case "Tatterkite":
-mcn = new TatterkiteSHM();
-break;
-# endregion
-
-# region Tattermunge Duo
-case "Tattermunge Duo":
-mcn = new TattermungeDuoSHM();
-break;
-# endregion
-
-# region Tattermunge Maniac
-case "Tattermunge Maniac":
-mcn = new TattermungeManiacSHM();
-break;
-# endregion
-
-# region Tattermunge Witch
-case "Tattermunge Witch":
-mcn = new TattermungeWitchSHM();
-break;
-# endregion
-
-# region Thistledown Duo
-case "Thistledown Duo":
-mcn = new ThistledownDuoSHM();
-break;
-# endregion
-
-# region Thistledown Liege
-case "Thistledown Liege":
-mcn = new ThistledownLiegeSHM();
-break;
-# endregion
-
-# region Thornwatch Scarecrow
-case "Thornwatch Scarecrow":
-mcn = new ThornwatchScarecrowSHM();
-break;
-# endregion
-
-# region Thought Reflection
-case "Thought Reflection":
-mcn = new ThoughtReflectionSHM();
-break;
-# endregion
-
-# region Thoughtweft Gambit
-case "Thoughtweft Gambit":
-mcn = new ThoughtweftGambitSHM();
-break;
-# endregion
-
-# region Toil to Renown
-case "Toil to Renown":
-mcn = new ToiltoRenownSHM();
-break;
-# endregion
-
-# region Torpor Dust
-case "Torpor Dust":
-mcn = new TorporDustSHM();
-break;
-# endregion
-
-# region Torrent of Souls
-case "Torrent of Souls":
-mcn = new TorrentofSoulsSHM();
-break;
-# endregion
-
-# region Torture
-case "Torture":
-mcn = new TortureSHM();
-break;
-# endregion
-
-# region Tower Above
-case "Tower Above":
-mcn = new TowerAboveSHM();
-break;
-# endregion
-
-# region Traitor's Roar
-case "Traitor's Roar":
-mcn = new TraitorsRoarSHM();
-break;
-# endregion
-
-# region Trip Noose
-case "Trip Noose":
-mcn = new TripNooseSHM();
-break;
-# endregion
-
-# region Turn to Mist
-case "Turn to Mist":
-mcn = new TurntoMistSHM();
-break;
-# endregion
-
-# region Twilight Shepherd
-case "Twilight Shepherd":
-mcn = new TwilightShepherdSHM();
-break;
-# endregion
-
-# region Tyrannize
-case "Tyrannize":
-mcn = new TyrannizeSHM();
-break;
-# endregion
-
-# region Umbral Mantle
-case "Umbral Mantle":
-mcn = new UmbralMantleSHM();
-break;
-# endregion
-
-# region Valleymaker
-case "Valleymaker":
-mcn = new ValleymakerSHM();
-break;
-# endregion
-
-# region Vexing Shusher
-case "Vexing Shusher":
-mcn = new VexingShusherSHM();
-break;
-# endregion
-
-# region Viridescent Wisps
-case "Viridescent Wisps":
-mcn = new ViridescentWispsSHM();
-break;
-# endregion
-
-# region Wanderbrine Rootcutters
-case "Wanderbrine Rootcutters":
-mcn = new WanderbrineRootcuttersSHM();
-break;
-# endregion
-
-# region Wasp Lancer
-case "Wasp Lancer":
-mcn = new WaspLancerSHM();
-break;
-# endregion
-
-# region Watchwing Scarecrow
-case "Watchwing Scarecrow":
-mcn = new WatchwingScarecrowSHM();
-break;
-# endregion
-
-# region Wheel of Sun and Moon
-case "Wheel of Sun and Moon":
-mcn = new WheelofSunandMoonSHM();
-break;
-# endregion
-
-# region Whimwader
-case "Whimwader":
-mcn = new WhimwaderSHM();
-break;
-# endregion
-
-# region Wicker Warcrawler
-case "Wicker Warcrawler":
-mcn = new WickerWarcrawlerSHM();
-break;
-# endregion
-
-# region Wild Swing
-case "Wild Swing":
-mcn = new WildSwingSHM();
-break;
-# endregion
-
-# region Wildslayer Elves
-case "Wildslayer Elves":
-mcn = new WildslayerElvesSHM();
-break;
-# endregion
-
-# region Wilt-Leaf Cavaliers
-case "Wilt-Leaf Cavaliers":
-mcn = new WiltLeafCavaliersSHM();
-break;
-# endregion
-
-# region Wilt-Leaf Liege
-case "Wilt-Leaf Liege":
-mcn = new WiltLeafLiegeSHM();
-break;
-# endregion
-
-# region Windbrisk Raptor
-case "Windbrisk Raptor":
-mcn = new WindbriskRaptorSHM();
-break;
-# endregion
-
-# region Wingrattle Scarecrow
-case "Wingrattle Scarecrow":
-mcn = new WingrattleScarecrowSHM();
-break;
-# endregion
-
-# region Witherscale Wurm
-case "Witherscale Wurm":
-mcn = new WitherscaleWurmSHM();
-break;
-# endregion
-
-# region Woeleecher
-case "Woeleecher":
-mcn = new WoeleecherSHM();
-break;
-# endregion
-
-# region Wooded Bastion
-case "Wooded Bastion":
-mcn = new WoodedBastionSHM();
-break;
-# endregion
-
-# region Woodfall Primus
-case "Woodfall Primus":
-mcn = new WoodfallPrimusSHM();
-break;
-# endregion
-
-# region Worldpurge
-case "Worldpurge":
-mcn = new WorldpurgeSHM();
-break;
-# endregion
-
-# region Wort, the Raidmother
-case "Wort, the Raidmother":
-mcn = new WorttheRaidmotherSHM();
-break;
-# endregion
-
-# region Wound Reflection
-case "Wound Reflection":
-mcn = new WoundReflectionSHM();
-break;
-# endregion
-
-# region Zealous Guardian
-case "Zealous Guardian":
-mcn = new ZealousGuardianSHM();
-break;
-# endregion
+                # region Advice from the Fae
+                case "Advice from the Fae":
+                    mcn = new AdvicefromtheFaeSHM();
+                    break;
+                # endregion
+
+                # region AEthertow
+                case "AEthertow":
+                    mcn = new AEthertowSHM();
+                    break;
+                # endregion
+
+                # region Aphotic Wisps
+                case "Aphotic Wisps":
+                    mcn = new AphoticWispsSHM();
+                    break;
+                # endregion
+
+                # region Apothecary Initiate
+                case "Apothecary Initiate":
+                    mcn = new ApothecaryInitiateSHM();
+                    break;
+                # endregion
+
+                # region Armored Ascension
+                case "Armored Ascension":
+                    mcn = new ArmoredAscensionSHM();
+                    break;
+                # endregion
+
+                # region Ashenmoor Cohort
+                case "Ashenmoor Cohort":
+                    mcn = new AshenmoorCohortSHM();
+                    break;
+                # endregion
+
+                # region Ashenmoor Gouger
+                case "Ashenmoor Gouger":
+                    mcn = new AshenmoorGougerSHM();
+                    break;
+                # endregion
+
+                # region Ashenmoor Liege
+                case "Ashenmoor Liege":
+                    mcn = new AshenmoorLiegeSHM();
+                    break;
+                # endregion
+
+                # region Augury Adept
+                case "Augury Adept":
+                    mcn = new AuguryAdeptSHM();
+                    break;
+                # endregion
+
+                # region Ballynock Cohort
+                case "Ballynock Cohort":
+                    mcn = new BallynockCohortSHM();
+                    break;
+                # endregion
+
+                # region Barkshell Blessing
+                case "Barkshell Blessing":
+                    mcn = new BarkshellBlessingSHM();
+                    break;
+                # endregion
+
+                # region Barrenton Cragtreads
+                case "Barrenton Cragtreads":
+                    mcn = new BarrentonCragtreadsSHM();
+                    break;
+                # endregion
+
+                # region Barrenton Medic
+                case "Barrenton Medic":
+                    mcn = new BarrentonMedicSHM();
+                    break;
+                # endregion
+
+                # region Beseech the Queen
+                case "Beseech the Queen":
+                    mcn = new BeseechtheQueenSHM();
+                    break;
+                # endregion
+
+                # region Biting Tether
+                case "Biting Tether":
+                    mcn = new BitingTetherSHM();
+                    break;
+                # endregion
+
+                # region Blazethorn Scarecrow
+                case "Blazethorn Scarecrow":
+                    mcn = new BlazethornScarecrowSHM();
+                    break;
+                # endregion
+
+                # region Blight Sickle
+                case "Blight Sickle":
+                    mcn = new BlightSickleSHM();
+                    break;
+                # endregion
+
+                # region Blistering Dieflyn
+                case "Blistering Dieflyn":
+                    mcn = new BlisteringDieflynSHM();
+                    break;
+                # endregion
+
+                # region Bloodmark Mentor
+                case "Bloodmark Mentor":
+                    mcn = new BloodmarkMentorSHM();
+                    break;
+                # endregion
+
+                # region Bloodshed Fever
+                case "Bloodshed Fever":
+                    mcn = new BloodshedFeverSHM();
+                    break;
+                # endregion
+
+                # region Blowfly Infestation
+                case "Blowfly Infestation":
+                    mcn = new BlowflyInfestationSHM();
+                    break;
+                # endregion
+
+                # region Boartusk Liege
+                case "Boartusk Liege":
+                    mcn = new BoartuskLiegeSHM();
+                    break;
+                # endregion
+
+                # region Boggart Arsonists
+                case "Boggart Arsonists":
+                    mcn = new BoggartArsonistsSHM();
+                    break;
+                # endregion
+
+                # region Boggart Ram-Gang
+                case "Boggart Ram-Gang":
+                    mcn = new BoggartRamGangSHM();
+                    break;
+                # endregion
+
+                # region Boon Reflection
+                case "Boon Reflection":
+                    mcn = new BoonReflectionSHM();
+                    break;
+                # endregion
+
+                # region Briarberry Cohort
+                case "Briarberry Cohort":
+                    mcn = new BriarberryCohortSHM();
+                    break;
+                # endregion
+
+                # region Burn Trail
+                case "Burn Trail":
+                    mcn = new BurnTrailSHM();
+                    break;
+                # endregion
+
+                # region Cauldron of Souls
+                case "Cauldron of Souls":
+                    mcn = new CauldronofSoulsSHM();
+                    break;
+                # endregion
+
+                # region Cemetery Puca
+                case "Cemetery Puca":
+                    mcn = new CemeteryPucaSHM();
+                    break;
+                # endregion
+
+                # region Cerulean Wisps
+                case "Cerulean Wisps":
+                    mcn = new CeruleanWispsSHM();
+                    break;
+                # endregion
+
+                # region Chainbreaker
+                case "Chainbreaker":
+                    mcn = new ChainbreakerSHM();
+                    break;
+                # endregion
+
+                # region Cinderbones
+                case "Cinderbones":
+                    mcn = new CinderbonesSHM();
+                    break;
+                # endregion
+
+                # region Cinderhaze Wretch
+                case "Cinderhaze Wretch":
+                    mcn = new CinderhazeWretchSHM();
+                    break;
+                # endregion
+
+                # region Consign to Dream
+                case "Consign to Dream":
+                    mcn = new ConsigntoDreamSHM();
+                    break;
+                # endregion
+
+                # region Corrosive Mentor
+                case "Corrosive Mentor":
+                    mcn = new CorrosiveMentorSHM();
+                    break;
+                # endregion
+
+                # region Corrupt
+                case "Corrupt":
+                    mcn = new CorruptSHM();
+                    break;
+                # endregion
+
+                # region Counterbore
+                case "Counterbore":
+                    mcn = new CounterboreSHM();
+                    break;
+                # endregion
+
+                # region Crabapple Cohort
+                case "Crabapple Cohort":
+                    mcn = new CrabappleCohortSHM();
+                    break;
+                # endregion
+
+                # region Cragganwick Cremator
+                case "Cragganwick Cremator":
+                    mcn = new CragganwickCrematorSHM();
+                    break;
+                # endregion
+
+                # region Crimson Wisps
+                case "Crimson Wisps":
+                    mcn = new CrimsonWispsSHM();
+                    break;
+                # endregion
+
+                # region Crowd of Cinders
+                case "Crowd of Cinders":
+                    mcn = new CrowdofCindersSHM();
+                    break;
+                # endregion
+
+                # region Cultbrand Cinder
+                case "Cultbrand Cinder":
+                    mcn = new CultbrandCinderSHM();
+                    break;
+                # endregion
+
+                # region Curse of Chains
+                case "Curse of Chains":
+                    mcn = new CurseofChainsSHM();
+                    break;
+                # endregion
+
+                # region Cursecatcher
+                case "Cursecatcher":
+                    mcn = new CursecatcherSHM();
+                    break;
+                # endregion
+
+                # region Dawnglow Infusion
+                case "Dawnglow Infusion":
+                    mcn = new DawnglowInfusionSHM();
+                    break;
+                # endregion
+
+                # region Deepchannel Mentor
+                case "Deepchannel Mentor":
+                    mcn = new DeepchannelMentorSHM();
+                    break;
+                # endregion
+
+                # region Deep-Slumber Titan
+                case "Deep-Slumber Titan":
+                    mcn = new DeepSlumberTitanSHM();
+                    break;
+                # endregion
+
+                # region Demigod of Revenge
+                case "Demigod of Revenge":
+                    mcn = new DemigodofRevengeSHM();
+                    break;
+                # endregion
+
+                # region Deus of Calamity
+                case "Deus of Calamity":
+                    mcn = new DeusofCalamitySHM();
+                    break;
+                # endregion
+
+                # region Devoted Druid
+                case "Devoted Druid":
+                    mcn = new DevotedDruidSHM();
+                    break;
+                # endregion
+
+                # region Din of the Fireherd
+                case "Din of the Fireherd":
+                    mcn = new DinoftheFireherdSHM();
+                    break;
+                # endregion
+
+                # region Dire Undercurrents
+                case "Dire Undercurrents":
+                    mcn = new DireUndercurrentsSHM();
+                    break;
+                # endregion
+
+                # region Disturbing Plot
+                case "Disturbing Plot":
+                    mcn = new DisturbingPlotSHM();
+                    break;
+                # endregion
+
+                # region Dramatic Entrance
+                case "Dramatic Entrance":
+                    mcn = new DramaticEntranceSHM();
+                    break;
+                # endregion
+
+                # region Dream Salvage
+                case "Dream Salvage":
+                    mcn = new DreamSalvageSHM();
+                    break;
+                # endregion
+
+                # region Drove of Elves
+                case "Drove of Elves":
+                    mcn = new DroveofElvesSHM();
+                    break;
+                # endregion
+
+                # region Drowner Initiate
+                case "Drowner Initiate":
+                    mcn = new DrownerInitiateSHM();
+                    break;
+                # endregion
+
+                # region Dusk Urchins
+                case "Dusk Urchins":
+                    mcn = new DuskUrchinsSHM();
+                    break;
+                # endregion
+
+                # region Elemental Mastery
+                case "Elemental Mastery":
+                    mcn = new ElementalMasterySHM();
+                    break;
+                # endregion
+
+                # region Elsewhere Flask
+                case "Elsewhere Flask":
+                    mcn = new ElsewhereFlaskSHM();
+                    break;
+                # endregion
+
+                # region Elvish Hexhunter
+                case "Elvish Hexhunter":
+                    mcn = new ElvishHexhunterSHM();
+                    break;
+                # endregion
+
+                # region Ember Gale
+                case "Ember Gale":
+                    mcn = new EmberGaleSHM();
+                    break;
+                # endregion
+
+                # region Emberstrike Duo
+                case "Emberstrike Duo":
+                    mcn = new EmberstrikeDuoSHM();
+                    break;
+                # endregion
+
+                # region Enchanted Evening
+                case "Enchanted Evening":
+                    mcn = new EnchantedEveningSHM();
+                    break;
+                # endregion
+
+                # region Everlasting Torment
+                case "Everlasting Torment":
+                    mcn = new EverlastingTormentSHM();
+                    break;
+                # endregion
+
+                # region Faerie Macabre
+                case "Faerie Macabre":
+                    mcn = new FaerieMacabreSHM();
+                    break;
+                # endregion
+
+                # region Faerie Swarm
+                case "Faerie Swarm":
+                    mcn = new FaerieSwarmSHM();
+                    break;
+                # endregion
+
+                # region Farhaven Elf
+                case "Farhaven Elf":
+                    mcn = new FarhavenElfSHM();
+                    break;
+                # endregion
+
+                # region Fate Transfer
+                case "Fate Transfer":
+                    mcn = new FateTransferSHM();
+                    break;
+                # endregion
+
+                # region Fire-Lit Thicket
+                case "Fire-Lit Thicket":
+                    mcn = new FireLitThicketSHM();
+                    break;
+                # endregion
+
+                # region Firespout
+                case "Firespout":
+                    mcn = new FirespoutSHM();
+                    break;
+                # endregion
+
+                # region Fists of the Demigod
+                case "Fists of the Demigod":
+                    mcn = new FistsoftheDemigodSHM();
+                    break;
+                # endregion
+
+                # region Flame Javelin
+                case "Flame Javelin":
+                    mcn = new FlameJavelinSHM();
+                    break;
+                # endregion
+
+                # region Flourishing Defenses
+                case "Flourishing Defenses":
+                    mcn = new FlourishingDefensesSHM();
+                    break;
+                # endregion
+
+                # region Flow of Ideas
+                case "Flow of Ideas":
+                    mcn = new FlowofIdeasSHM();
+                    break;
+                # endregion
+
+                //# region Forest
+                //case "Forest":
+                //mcn = new ForestSHM();
+                //break;
+                //# endregion
+
+                # region Fossil Find
+                case "Fossil Find":
+                    mcn = new FossilFindSHM();
+                    break;
+                # endregion
+
+                # region Foxfire Oak
+                case "Foxfire Oak":
+                    mcn = new FoxfireOakSHM();
+                    break;
+                # endregion
+
+                # region Fracturing Gust
+                case "Fracturing Gust":
+                    mcn = new FracturingGustSHM();
+                    break;
+                # endregion
+
+                # region Fulminator Mage
+                case "Fulminator Mage":
+                    mcn = new FulminatorMageSHM();
+                    break;
+                # endregion
+
+                # region Furystoke Giant
+                case "Furystoke Giant":
+                    mcn = new FurystokeGiantSHM();
+                    break;
+                # endregion
+
+                # region Ghastlord of Fugue
+                case "Ghastlord of Fugue":
+                    mcn = new GhastlordofFugueSHM();
+                    break;
+                # endregion
+
+                # region Ghastly Discovery
+                case "Ghastly Discovery":
+                    mcn = new GhastlyDiscoverySHM();
+                    break;
+                # endregion
+
+                # region Giantbaiting
+                case "Giantbaiting":
+                    mcn = new GiantbaitingSHM();
+                    break;
+                # endregion
+
+                # region Glamer Spinners
+                case "Glamer Spinners":
+                    mcn = new GlamerSpinnersSHM();
+                    break;
+                # endregion
+
+                # region Gleeful Sabotage
+                case "Gleeful Sabotage":
+                    mcn = new GleefulSabotageSHM();
+                    break;
+                # endregion
+
+                # region Glen Elendra Liege
+                case "Glen Elendra Liege":
+                    mcn = new GlenElendraLiegeSHM();
+                    break;
+                # endregion
+
+                # region Gloomlance
+                case "Gloomlance":
+                    mcn = new GloomlanceSHM();
+                    break;
+                # endregion
+
+                # region Gloomwidow
+                case "Gloomwidow":
+                    mcn = new GloomwidowSHM();
+                    break;
+                # endregion
+
+                # region Gloomwidow's Feast
+                case "Gloomwidow's Feast":
+                    mcn = new GloomwidowsFeastSHM();
+                    break;
+                # endregion
+
+                # region Gnarled Effigy
+                case "Gnarled Effigy":
+                    mcn = new GnarledEffigySHM();
+                    break;
+                # endregion
+
+                # region Godhead of Awe
+                case "Godhead of Awe":
+                    mcn = new GodheadofAweSHM();
+                    break;
+                # endregion
+
+                # region Goldenglow Moth
+                case "Goldenglow Moth":
+                    mcn = new GoldenglowMothSHM();
+                    break;
+                # endregion
+
+                # region Gravelgill Axeshark
+                case "Gravelgill Axeshark":
+                    mcn = new GravelgillAxesharkSHM();
+                    break;
+                # endregion
+
+                # region Gravelgill Duo
+                case "Gravelgill Duo":
+                    mcn = new GravelgillDuoSHM();
+                    break;
+                # endregion
+
+                # region Graven Cairns
+                case "Graven Cairns":
+                    mcn = new GravenCairnsSHM();
+                    break;
+                # endregion
+
+                # region Greater Auramancy
+                case "Greater Auramancy":
+                    mcn = new GreaterAuramancySHM();
+                    break;
+                # endregion
+
+                # region Grief Tyrant
+                case "Grief Tyrant":
+                    mcn = new GriefTyrantSHM();
+                    break;
+                # endregion
+
+                # region Grim Poppet
+                case "Grim Poppet":
+                    mcn = new GrimPoppetSHM();
+                    break;
+                # endregion
+
+                # region Guttural Response
+                case "Guttural Response":
+                    mcn = new GutturalResponseSHM();
+                    break;
+                # endregion
+
+                # region Heap Doll
+                case "Heap Doll":
+                    mcn = new HeapDollSHM();
+                    break;
+                # endregion
+
+                # region Heartmender
+                case "Heartmender":
+                    mcn = new HeartmenderSHM();
+                    break;
+                # endregion
+
+                # region Helm of the Ghastlord
+                case "Helm of the Ghastlord":
+                    mcn = new HelmoftheGhastlordSHM();
+                    break;
+                # endregion
+
+                # region Hollowborn Barghest
+                case "Hollowborn Barghest":
+                    mcn = new HollowbornBarghestSHM();
+                    break;
+                # endregion
+
+                # region Hollowsage
+                case "Hollowsage":
+                    mcn = new HollowsageSHM();
+                    break;
+                # endregion
+
+                # region Horde of Boggarts
+                case "Horde of Boggarts":
+                    mcn = new HordeofBoggartsSHM();
+                    break;
+                # endregion
+
+                # region Howl of the Night Pack
+                case "Howl of the Night Pack":
+                    mcn = new HowloftheNightPackSHM();
+                    break;
+                # endregion
+
+                # region Hungry Spriggan
+                case "Hungry Spriggan":
+                    mcn = new HungrySprigganSHM();
+                    break;
+                # endregion
+
+                # region Illuminated Folio
+                case "Illuminated Folio":
+                    mcn = new IlluminatedFolioSHM();
+                    break;
+                # endregion
+
+                # region Impromptu Raid
+                case "Impromptu Raid":
+                    mcn = new ImpromptuRaidSHM();
+                    break;
+                # endregion
+
+                # region Incremental Blight
+                case "Incremental Blight":
+                    mcn = new IncrementalBlightSHM();
+                    break;
+                # endregion
+
+                # region Inescapable Brute
+                case "Inescapable Brute":
+                    mcn = new InescapableBruteSHM();
+                    break;
+                # endregion
+
+                # region Inkfathom Infiltrator
+                case "Inkfathom Infiltrator":
+                    mcn = new InkfathomInfiltratorSHM();
+                    break;
+                # endregion
+
+                # region Inkfathom Witch
+                case "Inkfathom Witch":
+                    mcn = new InkfathomWitchSHM();
+                    break;
+                # endregion
+
+                # region Inquisitor's Snare
+                case "Inquisitor's Snare":
+                    mcn = new InquisitorsSnareSHM();
+                    break;
+                # endregion
+
+                # region Intimidator Initiate
+                case "Intimidator Initiate":
+                    mcn = new IntimidatorInitiateSHM();
+                    break;
+                # endregion
+
+                //# region Island
+                //case "Island":
+                //mcn = new IslandSHM();
+                //break;
+                //# endregion
+
+                # region Isleback Spawn
+                case "Isleback Spawn":
+                    mcn = new IslebackSpawnSHM();
+                    break;
+                # endregion
+
+                # region Jaws of Stone
+                case "Jaws of Stone":
+                    mcn = new JawsofStoneSHM();
+                    break;
+                # endregion
+
+                # region Juvenile Gloomwidow
+                case "Juvenile Gloomwidow":
+                    mcn = new JuvenileGloomwidowSHM();
+                    break;
+                # endregion
+
+                # region Kinscaer Harpoonist
+                case "Kinscaer Harpoonist":
+                    mcn = new KinscaerHarpoonistSHM();
+                    break;
+                # endregion
+
+                # region Kitchen Finks
+                case "Kitchen Finks":
+                    mcn = new KitchenFinksSHM();
+                    break;
+                # endregion
+
+                # region Kithkin Rabble
+                case "Kithkin Rabble":
+                    mcn = new KithkinRabbleSHM();
+                    break;
+                # endregion
+
+                # region Kithkin Shielddare
+                case "Kithkin Shielddare":
+                    mcn = new KithkinShielddareSHM();
+                    break;
+                # endregion
+
+                # region Knacksaw Clique
+                case "Knacksaw Clique":
+                    mcn = new KnacksawCliqueSHM();
+                    break;
+                # endregion
+
+                # region Knollspine Dragon
+                case "Knollspine Dragon":
+                    mcn = new KnollspineDragonSHM();
+                    break;
+                # endregion
+
+                # region Knollspine Invocation
+                case "Knollspine Invocation":
+                    mcn = new KnollspineInvocationSHM();
+                    break;
+                # endregion
+
+                # region Kulrath Knight
+                case "Kulrath Knight":
+                    mcn = new KulrathKnightSHM();
+                    break;
+                # endregion
+
+                # region Last Breath
+                case "Last Breath":
+                    mcn = new LastBreathSHM();
+                    break;
+                # endregion
+
+                # region Leech Bonder
+                case "Leech Bonder":
+                    mcn = new LeechBonderSHM();
+                    break;
+                # endregion
+
+                # region Leechridden Swamp
+                case "Leechridden Swamp":
+                    mcn = new LeechriddenSwampSHM();
+                    break;
+                # endregion
+
+                # region Loamdragger Giant
+                case "Loamdragger Giant":
+                    mcn = new LoamdraggerGiantSHM();
+                    break;
+                # endregion
+
+                # region Loch Korrigan
+                case "Loch Korrigan":
+                    mcn = new LochKorriganSHM();
+                    break;
+                # endregion
+
+                # region Lockjaw Snapper
+                case "Lockjaw Snapper":
+                    mcn = new LockjawSnapperSHM();
+                    break;
+                # endregion
+
+                # region Lurebound Scarecrow
+                case "Lurebound Scarecrow":
+                    mcn = new LureboundScarecrowSHM();
+                    break;
+                # endregion
+
+                # region Madblind Mountain
+                case "Madblind Mountain":
+                    mcn = new MadblindMountainSHM();
+                    break;
+                # endregion
+
+                # region Mana Reflection
+                case "Mana Reflection":
+                    mcn = new ManaReflectionSHM();
+                    break;
+                # endregion
+
+                # region Manaforge Cinder
+                case "Manaforge Cinder":
+                    mcn = new ManaforgeCinderSHM();
+                    break;
+                # endregion
+
+                # region Manamorphose
+                case "Manamorphose":
+                    mcn = new ManamorphoseSHM();
+                    break;
+                # endregion
+
+                # region Mass Calcify
+                case "Mass Calcify":
+                    mcn = new MassCalcifySHM();
+                    break;
+                # endregion
+
+                # region Medicine Runner
+                case "Medicine Runner":
+                    mcn = new MedicineRunnerSHM();
+                    break;
+                # endregion
+
+                # region Memory Plunder
+                case "Memory Plunder":
+                    mcn = new MemoryPlunderSHM();
+                    break;
+                # endregion
+
+                # region Memory Sluice
+                case "Memory Sluice":
+                    mcn = new MemorySluiceSHM();
+                    break;
+                # endregion
+
+                # region Mercy Killing
+                case "Mercy Killing":
+                    mcn = new MercyKillingSHM();
+                    break;
+                # endregion
+
+                # region Merrow Grimeblotter
+                case "Merrow Grimeblotter":
+                    mcn = new MerrowGrimeblotterSHM();
+                    break;
+                # endregion
+
+                # region Merrow Wavebreakers
+                case "Merrow Wavebreakers":
+                    mcn = new MerrowWavebreakersSHM();
+                    break;
+                # endregion
+
+                # region Midnight Banshee
+                case "Midnight Banshee":
+                    mcn = new MidnightBansheeSHM();
+                    break;
+                # endregion
+
+                # region Mine Excavation
+                case "Mine Excavation":
+                    mcn = new MineExcavationSHM();
+                    break;
+                # endregion
+
+                # region Mirrorweave
+                case "Mirrorweave":
+                    mcn = new MirrorweaveSHM();
+                    break;
+                # endregion
+
+                # region Mistmeadow Skulk
+                case "Mistmeadow Skulk":
+                    mcn = new MistmeadowSkulkSHM();
+                    break;
+                # endregion
+
+                # region Mistmeadow Witch
+                case "Mistmeadow Witch":
+                    mcn = new MistmeadowWitchSHM();
+                    break;
+                # endregion
+
+                # region Mistveil Plains
+                case "Mistveil Plains":
+                    mcn = new MistveilPlainsSHM();
+                    break;
+                # endregion
+
+                # region Moonring Island
+                case "Moonring Island":
+                    mcn = new MoonringIslandSHM();
+                    break;
+                # endregion
+
+                # region Morselhoarder
+                case "Morselhoarder":
+                    mcn = new MorselhoarderSHM();
+                    break;
+                # endregion
+
+                # region Mossbridge Troll
+                case "Mossbridge Troll":
+                    mcn = new MossbridgeTrollSHM();
+                    break;
+                # endregion
+
+                //# region Mountain
+                //case "Mountain":
+                //mcn = new MountainSHM();
+                //break;
+                //# endregion
+
+                # region Mudbrawler Cohort
+                case "Mudbrawler Cohort":
+                    mcn = new MudbrawlerCohortSHM();
+                    break;
+                # endregion
+
+                # region Mudbrawler Raiders
+                case "Mudbrawler Raiders":
+                    mcn = new MudbrawlerRaidersSHM();
+                    break;
+                # endregion
+
+                # region Murderous Redcap
+                case "Murderous Redcap":
+                    mcn = new MurderousRedcapSHM();
+                    break;
+                # endregion
+
+                # region Mystic Gate
+                case "Mystic Gate":
+                    mcn = new MysticGateSHM();
+                    break;
+                # endregion
+
+                # region Niveous Wisps
+                case "Niveous Wisps":
+                    mcn = new NiveousWispsSHM();
+                    break;
+                # endregion
+
+                # region Nurturer Initiate
+                case "Nurturer Initiate":
+                    mcn = new NurturerInitiateSHM();
+                    break;
+                # endregion
+
+                # region Old Ghastbark
+                case "Old Ghastbark":
+                    mcn = new OldGhastbarkSHM();
+                    break;
+                # endregion
+
+                # region Oona, Queen of the Fae
+                case "Oona, Queen of the Fae":
+                    mcn = new OonaQueenoftheFaeSHM();
+                    break;
+                # endregion
+
+                # region Oona's Gatewarden
+                case "Oona's Gatewarden":
+                    mcn = new OonasGatewardenSHM();
+                    break;
+                # endregion
+
+                # region Oracle of Nectars
+                case "Oracle of Nectars":
+                    mcn = new OracleofNectarsSHM();
+                    break;
+                # endregion
+
+                # region Order of Whiteclay
+                case "Order of Whiteclay":
+                    mcn = new OrderofWhiteclaySHM();
+                    break;
+                # endregion
+
+                # region Oversoul of Dusk
+                case "Oversoul of Dusk":
+                    mcn = new OversoulofDuskSHM();
+                    break;
+                # endregion
+
+                # region Painter's Servant
+                case "Painter's Servant":
+                    mcn = new PaintersServantSHM();
+                    break;
+                # endregion
+
+                # region Pale Wayfarer
+                case "Pale Wayfarer":
+                    mcn = new PaleWayfarerSHM();
+                    break;
+                # endregion
+
+                # region Parapet Watchers
+                case "Parapet Watchers":
+                    mcn = new ParapetWatchersSHM();
+                    break;
+                # endregion
+
+                # region Pili-Pala
+                case "Pili-Pala":
+                    mcn = new PiliPalaSHM();
+                    break;
+                # endregion
+
+                # region Plague of Vermin
+                case "Plague of Vermin":
+                    mcn = new PlagueofVerminSHM();
+                    break;
+                # endregion
+
+                //# region Plains
+                //case "Plains":
+                //mcn = new PlainsSHM();
+                //break;
+                //# endregion
+
+                # region Plumeveil
+                case "Plumeveil":
+                    mcn = new PlumeveilSHM();
+                    break;
+                # endregion
+
+                # region Poison the Well
+                case "Poison the Well":
+                    mcn = new PoisontheWellSHM();
+                    break;
+                # endregion
+
+                # region Polluted Bonds
+                case "Polluted Bonds":
+                    mcn = new PollutedBondsSHM();
+                    break;
+                # endregion
+
+                # region Power of Fire
+                case "Power of Fire":
+                    mcn = new PowerofFireSHM();
+                    break;
+                # endregion
+
+                # region Presence of Gond
+                case "Presence of Gond":
+                    mcn = new PresenceofGondSHM();
+                    break;
+                # endregion
+
+                # region Prismatic Omen
+                case "Prismatic Omen":
+                    mcn = new PrismaticOmenSHM();
+                    break;
+                # endregion
+
+                # region Prismwake Merrow
+                case "Prismwake Merrow":
+                    mcn = new PrismwakeMerrowSHM();
+                    break;
+                # endregion
+
+                # region Prison Term
+                case "Prison Term":
+                    mcn = new PrisonTermSHM();
+                    break;
+                # endregion
+
+                # region Puca's Mischief
+                case "Puca's Mischief":
+                    mcn = new PucasMischiefSHM();
+                    break;
+                # endregion
+
+                # region Puncture Bolt
+                case "Puncture Bolt":
+                    mcn = new PunctureBoltSHM();
+                    break;
+                # endregion
+
+                # region Puppeteer Clique
+                case "Puppeteer Clique":
+                    mcn = new PuppeteerCliqueSHM();
+                    break;
+                # endregion
+
+                # region Puresight Merrow
+                case "Puresight Merrow":
+                    mcn = new PuresightMerrowSHM();
+                    break;
+                # endregion
+
+                # region Put Away
+                case "Put Away":
+                    mcn = new PutAwaySHM();
+                    break;
+                # endregion
+
+                # region Pyre Charger
+                case "Pyre Charger":
+                    mcn = new PyreChargerSHM();
+                    break;
+                # endregion
+
+                # region Rage Reflection
+                case "Rage Reflection":
+                    mcn = new RageReflectionSHM();
+                    break;
+                # endregion
+
+                # region Raking Canopy
+                case "Raking Canopy":
+                    mcn = new RakingCanopySHM();
+                    break;
+                # endregion
+
+                # region Rattleblaze Scarecrow
+                case "Rattleblaze Scarecrow":
+                    mcn = new RattleblazeScarecrowSHM();
+                    break;
+                # endregion
+
+                # region Raven's Run Dragoon
+                case "Raven's Run Dragoon":
+                    mcn = new RavensRunDragoonSHM();
+                    break;
+                # endregion
+
+                # region Reaper King
+                case "Reaper King":
+                    mcn = new ReaperKingSHM();
+                    break;
+                # endregion
+
+                # region Reflecting Pool
+                case "Reflecting Pool":
+                    mcn = new ReflectingPoolSHM();
+                    break;
+                # endregion
+
+                # region Reknit
+                case "Reknit":
+                    mcn = new ReknitSHM();
+                    break;
+                # endregion
+
+                # region Repel Intruders
+                case "Repel Intruders":
+                    mcn = new RepelIntrudersSHM();
+                    break;
+                # endregion
+
+                # region Resplendent Mentor
+                case "Resplendent Mentor":
+                    mcn = new ResplendentMentorSHM();
+                    break;
+                # endregion
+
+                # region Revelsong Horn
+                case "Revelsong Horn":
+                    mcn = new RevelsongHornSHM();
+                    break;
+                # endregion
+
+                # region Rhys the Redeemed
+                case "Rhys the Redeemed":
+                    mcn = new RhystheRedeemedSHM();
+                    break;
+                # endregion
+
+                # region Rite of Consumption
+                case "Rite of Consumption":
+                    mcn = new RiteofConsumptionSHM();
+                    break;
+                # endregion
+
+                # region River Kelpie
+                case "River Kelpie":
+                    mcn = new RiverKelpieSHM();
+                    break;
+                # endregion
+
+                # region River's Grasp
+                case "River's Grasp":
+                    mcn = new RiversGraspSHM();
+                    break;
+                # endregion
+
+                # region Rosheen Meanderer
+                case "Rosheen Meanderer":
+                    mcn = new RosheenMeandererSHM();
+                    break;
+                # endregion
+
+                # region Roughshod Mentor
+                case "Roughshod Mentor":
+                    mcn = new RoughshodMentorSHM();
+                    break;
+                # endregion
+
+                # region Rune-Cervin Rider
+                case "Rune-Cervin Rider":
+                    mcn = new RuneCervinRiderSHM();
+                    break;
+                # endregion
+
+                # region Runed Halo
+                case "Runed Halo":
+                    mcn = new RunedHaloSHM();
+                    break;
+                # endregion
+
+                # region Runes of the Deus
+                case "Runes of the Deus":
+                    mcn = new RunesoftheDeusSHM();
+                    break;
+                # endregion
+
+                # region Rustrazor Butcher
+                case "Rustrazor Butcher":
+                    mcn = new RustrazorButcherSHM();
+                    break;
+                # endregion
+
+                # region Safehold Duo
+                case "Safehold Duo":
+                    mcn = new SafeholdDuoSHM();
+                    break;
+                # endregion
+
+                # region Safehold Elite
+                case "Safehold Elite":
+                    mcn = new SafeholdEliteSHM();
+                    break;
+                # endregion
+
+                # region Safehold Sentry
+                case "Safehold Sentry":
+                    mcn = new SafeholdSentrySHM();
+                    break;
+                # endregion
+
+                # region Safewright Quest
+                case "Safewright Quest":
+                    mcn = new SafewrightQuestSHM();
+                    break;
+                # endregion
+
+                # region Sapseep Forest
+                case "Sapseep Forest":
+                    mcn = new SapseepForestSHM();
+                    break;
+                # endregion
+
+                # region Savor the Moment
+                case "Savor the Moment":
+                    mcn = new SavortheMomentSHM();
+                    break;
+                # endregion
+
+                # region Scar
+                case "Scar":
+                    mcn = new ScarSHM();
+                    break;
+                # endregion
+
+                # region Scarscale Ritual
+                case "Scarscale Ritual":
+                    mcn = new ScarscaleRitualSHM();
+                    break;
+                # endregion
+
+                # region Scrapbasket
+                case "Scrapbasket":
+                    mcn = new ScrapbasketSHM();
+                    break;
+                # endregion
+
+                # region Scuttlemutt
+                case "Scuttlemutt":
+                    mcn = new ScuttlemuttSHM();
+                    break;
+                # endregion
+
+                # region Scuzzback Marauders
+                case "Scuzzback Marauders":
+                    mcn = new ScuzzbackMaraudersSHM();
+                    break;
+                # endregion
+
+                # region Scuzzback Scrapper
+                case "Scuzzback Scrapper":
+                    mcn = new ScuzzbackScrapperSHM();
+                    break;
+                # endregion
+
+                # region Seedcradle Witch
+                case "Seedcradle Witch":
+                    mcn = new SeedcradleWitchSHM();
+                    break;
+                # endregion
+
+                # region Shield of the Oversoul
+                case "Shield of the Oversoul":
+                    mcn = new ShieldoftheOversoulSHM();
+                    break;
+                # endregion
+
+                # region Sickle Ripper
+                case "Sickle Ripper":
+                    mcn = new SickleRipperSHM();
+                    break;
+                # endregion
+
+                # region Silkbind Faerie
+                case "Silkbind Faerie":
+                    mcn = new SilkbindFaerieSHM();
+                    break;
+                # endregion
+
+                # region Sinking Feeling
+                case "Sinking Feeling":
+                    mcn = new SinkingFeelingSHM();
+                    break;
+                # endregion
+
+                # region Slinking Giant
+                case "Slinking Giant":
+                    mcn = new SlinkingGiantSHM();
+                    break;
+                # endregion
+
+                # region Smash to Smithereens
+                case "Smash to Smithereens":
+                    mcn = new SmashtoSmithereensSHM();
+                    break;
+                # endregion
+
+                # region Smolder Initiate
+                case "Smolder Initiate":
+                    mcn = new SmolderInitiateSHM();
+                    break;
+                # endregion
+
+                # region Somnomancer
+                case "Somnomancer":
+                    mcn = new SomnomancerSHM();
+                    break;
+                # endregion
+
+                # region Sootstoke Kindler
+                case "Sootstoke Kindler":
+                    mcn = new SootstokeKindlerSHM();
+                    break;
+                # endregion
+
+                # region Sootwalkers
+                case "Sootwalkers":
+                    mcn = new SootwalkersSHM();
+                    break;
+                # endregion
+
+                # region Spawnwrithe
+                case "Spawnwrithe":
+                    mcn = new SpawnwritheSHM();
+                    break;
+                # endregion
+
+                # region Spectral Procession
+                case "Spectral Procession":
+                    mcn = new SpectralProcessionSHM();
+                    break;
+                # endregion
+
+                # region Spell Syphon
+                case "Spell Syphon":
+                    mcn = new SpellSyphonSHM();
+                    break;
+                # endregion
+
+                # region Spiteflame Witch
+                case "Spiteflame Witch":
+                    mcn = new SpiteflameWitchSHM();
+                    break;
+                # endregion
+
+                # region Spiteful Visions
+                case "Spiteful Visions":
+                    mcn = new SpitefulVisionsSHM();
+                    break;
+                # endregion
+
+                # region Splitting Headache
+                case "Splitting Headache":
+                    mcn = new SplittingHeadacheSHM();
+                    break;
+                # endregion
+
+                # region Steel of the Godhead
+                case "Steel of the Godhead":
+                    mcn = new SteeloftheGodheadSHM();
+                    break;
+                # endregion
+
+                # region Strip Bare
+                case "Strip Bare":
+                    mcn = new StripBareSHM();
+                    break;
+                # endregion
+
+                # region Sunken Ruins
+                case "Sunken Ruins":
+                    mcn = new SunkenRuinsSHM();
+                    break;
+                # endregion
+
+                //# region Swamp
+                //case "Swamp":
+                //mcn = new SwampSHM();
+                //break;
+                //# endregion
+
+                # region Swans of Bryn Argoll
+                case "Swans of Bryn Argoll":
+                    mcn = new SwansofBrynArgollSHM();
+                    break;
+                # endregion
+
+                # region Sygg, River Cutthroat
+                case "Sygg, River Cutthroat":
+                    mcn = new SyggRiverCutthroatSHM();
+                    break;
+                # endregion
+
+                # region Tatterkite
+                case "Tatterkite":
+                    mcn = new TatterkiteSHM();
+                    break;
+                # endregion
+
+                # region Tattermunge Duo
+                case "Tattermunge Duo":
+                    mcn = new TattermungeDuoSHM();
+                    break;
+                # endregion
+
+                # region Tattermunge Maniac
+                case "Tattermunge Maniac":
+                    mcn = new TattermungeManiacSHM();
+                    break;
+                # endregion
+
+                # region Tattermunge Witch
+                case "Tattermunge Witch":
+                    mcn = new TattermungeWitchSHM();
+                    break;
+                # endregion
+
+                # region Thistledown Duo
+                case "Thistledown Duo":
+                    mcn = new ThistledownDuoSHM();
+                    break;
+                # endregion
+
+                # region Thistledown Liege
+                case "Thistledown Liege":
+                    mcn = new ThistledownLiegeSHM();
+                    break;
+                # endregion
+
+                # region Thornwatch Scarecrow
+                case "Thornwatch Scarecrow":
+                    mcn = new ThornwatchScarecrowSHM();
+                    break;
+                # endregion
+
+                # region Thought Reflection
+                case "Thought Reflection":
+                    mcn = new ThoughtReflectionSHM();
+                    break;
+                # endregion
+
+                # region Thoughtweft Gambit
+                case "Thoughtweft Gambit":
+                    mcn = new ThoughtweftGambitSHM();
+                    break;
+                # endregion
+
+                # region Toil to Renown
+                case "Toil to Renown":
+                    mcn = new ToiltoRenownSHM();
+                    break;
+                # endregion
+
+                # region Torpor Dust
+                case "Torpor Dust":
+                    mcn = new TorporDustSHM();
+                    break;
+                # endregion
+
+                # region Torrent of Souls
+                case "Torrent of Souls":
+                    mcn = new TorrentofSoulsSHM();
+                    break;
+                # endregion
+
+                # region Torture
+                case "Torture":
+                    mcn = new TortureSHM();
+                    break;
+                # endregion
+
+                # region Tower Above
+                case "Tower Above":
+                    mcn = new TowerAboveSHM();
+                    break;
+                # endregion
+
+                # region Traitor's Roar
+                case "Traitor's Roar":
+                    mcn = new TraitorsRoarSHM();
+                    break;
+                # endregion
+
+                # region Trip Noose
+                case "Trip Noose":
+                    mcn = new TripNooseSHM();
+                    break;
+                # endregion
+
+                # region Turn to Mist
+                case "Turn to Mist":
+                    mcn = new TurntoMistSHM();
+                    break;
+                # endregion
+
+                # region Twilight Shepherd
+                case "Twilight Shepherd":
+                    mcn = new TwilightShepherdSHM();
+                    break;
+                # endregion
+
+                # region Tyrannize
+                case "Tyrannize":
+                    mcn = new TyrannizeSHM();
+                    break;
+                # endregion
+
+                # region Umbral Mantle
+                case "Umbral Mantle":
+                    mcn = new UmbralMantleSHM();
+                    break;
+                # endregion
+
+                # region Valleymaker
+                case "Valleymaker":
+                    mcn = new ValleymakerSHM();
+                    break;
+                # endregion
+
+                # region Vexing Shusher
+                case "Vexing Shusher":
+                    mcn = new VexingShusherSHM();
+                    break;
+                # endregion
+
+                # region Viridescent Wisps
+                case "Viridescent Wisps":
+                    mcn = new ViridescentWispsSHM();
+                    break;
+                # endregion
+
+                # region Wanderbrine Rootcutters
+                case "Wanderbrine Rootcutters":
+                    mcn = new WanderbrineRootcuttersSHM();
+                    break;
+                # endregion
+
+                # region Wasp Lancer
+                case "Wasp Lancer":
+                    mcn = new WaspLancerSHM();
+                    break;
+                # endregion
+
+                # region Watchwing Scarecrow
+                case "Watchwing Scarecrow":
+                    mcn = new WatchwingScarecrowSHM();
+                    break;
+                # endregion
+
+                # region Wheel of Sun and Moon
+                case "Wheel of Sun and Moon":
+                    mcn = new WheelofSunandMoonSHM();
+                    break;
+                # endregion
+
+                # region Whimwader
+                case "Whimwader":
+                    mcn = new WhimwaderSHM();
+                    break;
+                # endregion
+
+                # region Wicker Warcrawler
+                case "Wicker Warcrawler":
+                    mcn = new WickerWarcrawlerSHM();
+                    break;
+                # endregion
+
+                # region Wild Swing
+                case "Wild Swing":
+                    mcn = new WildSwingSHM();
+                    break;
+                # endregion
+
+                # region Wildslayer Elves
+                case "Wildslayer Elves":
+                    mcn = new WildslayerElvesSHM();
+                    break;
+                # endregion
+
+                # region Wilt-Leaf Cavaliers
+                case "Wilt-Leaf Cavaliers":
+                    mcn = new WiltLeafCavaliersSHM();
+                    break;
+                # endregion
+
+                # region Wilt-Leaf Liege
+                case "Wilt-Leaf Liege":
+                    mcn = new WiltLeafLiegeSHM();
+                    break;
+                # endregion
+
+                # region Windbrisk Raptor
+                case "Windbrisk Raptor":
+                    mcn = new WindbriskRaptorSHM();
+                    break;
+                # endregion
+
+                # region Wingrattle Scarecrow
+                case "Wingrattle Scarecrow":
+                    mcn = new WingrattleScarecrowSHM();
+                    break;
+                # endregion
+
+                # region Witherscale Wurm
+                case "Witherscale Wurm":
+                    mcn = new WitherscaleWurmSHM();
+                    break;
+                # endregion
+
+                # region Woeleecher
+                case "Woeleecher":
+                    mcn = new WoeleecherSHM();
+                    break;
+                # endregion
+
+                # region Wooded Bastion
+                case "Wooded Bastion":
+                    mcn = new WoodedBastionSHM();
+                    break;
+                # endregion
+
+                # region Woodfall Primus
+                case "Woodfall Primus":
+                    mcn = new WoodfallPrimusSHM();
+                    break;
+                # endregion
+
+                # region Worldpurge
+                case "Worldpurge":
+                    mcn = new WorldpurgeSHM();
+                    break;
+                # endregion
+
+                # region Wort, the Raidmother
+                case "Wort, the Raidmother":
+                    mcn = new WorttheRaidmotherSHM();
+                    break;
+                # endregion
+
+                # region Wound Reflection
+                case "Wound Reflection":
+                    mcn = new WoundReflectionSHM();
+                    break;
+                # endregion
+
+                # region Zealous Guardian
+                case "Zealous Guardian":
+                    mcn = new ZealousGuardianSHM();
+                    break;
+                # endregion
 
 
                 # endregion
@@ -22609,26 +22631,10 @@ break;
 
                 # endregion
 
-                # region Basic Lands
-                //case"Forest":
-                //    mcn = new Forest();
-                //    break;
-
-                //case"Mountain":
-                //    mcn = new Mountain();
-                //    break;
-
-                //case"Plains":
-                //    mcn = new Plains();
-                //    break;
-
-                //case"Swamp":
-                //    mcn = new Swamp();
-                //    break;
-
-                //case"Island":
-                //    mcn = new Island();
-                //    break;
+                # region Commander 2011
+                case "Fists of Ironwood":
+                    mcn = new FistsofIronwoodC11();
+                    break;
                 # endregion
 
                 # region Ice Age

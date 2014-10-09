@@ -1,11 +1,12 @@
-Forest#22
-Protean Hydra#4
-Nature's Lore#4
-Mistcutter Hydra#4
+Nature's Lore#3
+Bioshift#3
+Kalonian Hydra#3
+Hydra Broodmaster#3
+Forced Adaptation#4
+Mistcutter Hydra#3
 Gyre Sage#4
 Primordial Hydra#4
 Vastwood Hydra#4
-Kalonian Hydra#4
-Hydra Broodmaster#4
-Explore#3
-Bioshift#3
+Hardened Scales#4
+Forest#22
+Solidarity of Heroes#3

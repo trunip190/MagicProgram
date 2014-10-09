@@ -3549,6 +3549,11 @@ namespace MagicProgram
             Text = "Look at the top three cards of your library, then put them back in any order. You may shuffle your library.;^Draw a card.";
             Flavor = "";
         }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 3);
+        }
     }
     # endregion
 

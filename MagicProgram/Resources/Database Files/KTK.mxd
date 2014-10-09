@@ -1300,7 +1300,7 @@
 		<Name>Forest</Name>
 		<Edition>KTK</Edition>
 		<Rarity />
-		<Color>Lnd</Color>
+		<Color />
 		<Cost />
 		<PT />
 		<Type>Basic Land - Forest</Type>
@@ -1671,7 +1671,7 @@
 	<Card>
 		<Name>Island</Name>
 		<Edition>KTK</Edition>
-		<Rarity>Land</Rarity>
+		<Rarity />
 		<Color />
 		<Cost />
 		<PT />
@@ -2365,7 +2365,7 @@
 	<Card>
 		<Name>Mountain</Name>
 		<Edition>KTK</Edition>
-		<Rarity>Land</Rarity>
+		<Rarity />
 		<Color />
 		<Cost />
 		<PT />
@@ -3511,7 +3511,7 @@
 	<Card>
 		<Name>Swamp</Name>
 		<Edition>KTK</Edition>
-		<Rarity>Land</Rarity>
+		<Rarity />
 		<Color />
 		<Cost />
 		<PT />

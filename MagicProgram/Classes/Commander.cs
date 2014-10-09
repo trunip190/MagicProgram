@@ -39,4 +39,47 @@ namespace MagicProgram
         }
     }
     # endregion
+
+    # region Fists of Ironwood
+    class FistsofIronwoodC11 : MagicCard
+    {
+        public FistsofIronwoodC11()
+        {
+            Name = "Fists of Ironwood";
+            Edition = "C11";
+            Rarity = "C";
+            Color = "G";
+            Cost = "1G";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant Creature\r\nWhen Fists of Ironwood enters the battlefield, put two 1/1 green Saproling creature tokens onto the battlefield.\r\nEnchanted creature has trample.";
+            Flavor = "Saprolings add the three and the four to the 'one-two punch.'";
+        }
+
+        public override void Resolve()
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                MagicCard mcn = new MagicCard
+                {
+                    Name = "Saproling",
+                    Type = "Creature - Saproling",
+                    Color = "G",
+                    PT = "1/1",
+                    Token = true,
+                };
+                PArea.PlayToken(mcn);
+            }
+        }
+
+        public override List<string> getStats()
+        {
+            List<string> results = new List<string>();
+
+            results.Add("Ability#Trample");
+
+            return results;
+        }
+    }
+    # endregion
 }
