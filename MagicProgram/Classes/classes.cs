@@ -3333,7 +3333,7 @@ namespace MagicProgram
                 _docs.RemoveAt(i);          //remove string from old list.
             }
 
-            temp.Add(netPath);                    //add string to first position.
+            temp.Add(netPath);              //add string to first position.
 
             foreach (string old in _docs)
                 temp.Add(old);
@@ -25793,6 +25793,1382 @@ namespace MagicProgram
                 # region Ponyback Brigade
                 case "Ponyback Brigade":
                     mcn = new PonybackBrigadeKTK();
+                    break;
+                # endregion
+                # endregion
+
+                # region Modern Masters
+                # region Absorb Vis
+                case "Absorb Vis":
+                    mcn = new AbsorbVisMMA();
+                    break;
+                # endregion
+
+                # region Academy Ruins
+                case "Academy Ruins":
+                    mcn = new AcademyRuinsMMA();
+                    break;
+                # endregion
+
+                # region Adarkar Valkyrie
+                case "Adarkar Valkyrie":
+                    mcn = new AdarkarValkyrieMMA();
+                    break;
+                # endregion
+
+                //# region AEther Spellbomb
+                //case "AEther Spellbomb":
+                //    mcn = new AEtherSpellbombMMA();
+                //    break;
+                //# endregion
+
+                # region AEther Vial
+                case "AEther Vial":
+                    mcn = new AEtherVialMMA();
+                    break;
+                # endregion
+
+                //# region AEthersnipe
+                //case "AEthersnipe":
+                //    mcn = new AEthersnipeMMA();
+                //    break;
+                //# endregion
+
+                # region Amrou Scout
+                case "Amrou Scout":
+                    mcn = new AmrouScoutMMA();
+                    break;
+                # endregion
+
+                # region Amrou Seekers
+                case "Amrou Seekers":
+                    mcn = new AmrouSeekersMMA();
+                    break;
+                # endregion
+
+                # region Angel's Grace
+                case "Angel's Grace":
+                    mcn = new AngelsGraceMMA();
+                    break;
+                # endregion
+
+                # region Arcbound Ravager
+                case "Arcbound Ravager":
+                    mcn = new ArcboundRavagerMMA();
+                    break;
+                # endregion
+
+                # region Arcbound Stinger
+                case "Arcbound Stinger":
+                    mcn = new ArcboundStingerMMA();
+                    break;
+                # endregion
+
+                # region Arcbound Wanderer
+                case "Arcbound Wanderer":
+                    mcn = new ArcboundWandererMMA();
+                    break;
+                # endregion
+
+                # region Arcbound Worker
+                case "Arcbound Worker":
+                    mcn = new ArcboundWorkerMMA();
+                    break;
+                # endregion
+
+                # region Auntie's Snitch
+                case "Auntie's Snitch":
+                    mcn = new AuntiesSnitchMMA();
+                    break;
+                # endregion
+
+                # region Auriok Salvagers
+                case "Auriok Salvagers":
+                    mcn = new AuriokSalvagersMMA();
+                    break;
+                # endregion
+
+                //# region Avian Changeling
+                //case "Avian Changeling":
+                //    mcn = new AvianChangelingMMA();
+                //    break;
+                //# endregion
+
+                # region Blightspeaker
+                case "Blightspeaker":
+                    mcn = new BlightspeakerMMA();
+                    break;
+                # endregion
+
+                //# region Blinding Beam
+                //case "Blinding Beam":
+                //    mcn = new BlindingBeamMMA();
+                //    break;
+                //# endregion
+
+                //# region Blind-Spot Giant
+                //case "Blind-Spot Giant":
+                //    mcn = new BlindSpotGiantMMA();
+                //    break;
+                //# endregion
+
+                # region Blinkmoth Nexus
+                case "Blinkmoth Nexus":
+                    mcn = new BlinkmothNexusMMA();
+                    break;
+                # endregion
+
+                # region Blood Moon
+                case "Blood Moon":
+                    mcn = new BloodMoonMMA();
+                    break;
+                # endregion
+
+                //# region Bonesplitter
+                //case "Bonesplitter":
+                //    mcn = new BonesplitterMMA();
+                //    break;
+                //# endregion
+
+                # region Bound in Silence
+                case "Bound in Silence":
+                    mcn = new BoundinSilenceMMA();
+                    break;
+                # endregion
+
+                # region Bridge from Below
+                case "Bridge from Below":
+                    mcn = new BridgefromBelowMMA();
+                    break;
+                # endregion
+
+                # region Brute Force
+                case "Brute Force":
+                    mcn = new BruteForceMMA();
+                    break;
+                # endregion
+
+                # region Careful Consideration
+                case "Careful Consideration":
+                    mcn = new CarefulConsiderationMMA();
+                    break;
+                # endregion
+
+                # region Cenn's Enlistment
+                case "Cenn's Enlistment":
+                    mcn = new CennsEnlistmentMMA();
+                    break;
+                # endregion
+
+                //# region Chalice of the Void
+                //case "Chalice of the Void":
+                //    mcn = new ChaliceoftheVoidMMA();
+                //    break;
+                //# endregion
+
+                # region Citanul Woodreaders
+                case "Citanul Woodreaders":
+                    mcn = new CitanulWoodreadersMMA();
+                    break;
+                # endregion
+
+                # region City of Brass
+                case "City of Brass":
+                    mcn = new CityofBrassMMA();
+                    break;
+                # endregion
+
+                //# region Cloudgoat Ranger
+                //case "Cloudgoat Ranger":
+                //    mcn = new CloudgoatRangerMMA();
+                //    break;
+                //# endregion
+
+                # region Cold-Eyed Selkie
+                case "Cold-Eyed Selkie":
+                    mcn = new ColdEyedSelkieMMA();
+                    break;
+                # endregion
+
+                # region Countryside Crusher
+                case "Countryside Crusher":
+                    mcn = new CountrysideCrusherMMA();
+                    break;
+                # endregion
+
+                # region Court Homunculus
+                case "Court Homunculus":
+                    mcn = new CourtHomunculusMMA();
+                    break;
+                # endregion
+
+                //# region Crush Underfoot
+                //case "Crush Underfoot":
+                //    mcn = new CrushUnderfootMMA();
+                //    break;
+                //# endregion
+
+                //# region Cryptic Command
+                //case "Cryptic Command":
+                //    mcn = new CrypticCommandMMA();
+                //    break;
+                //# endregion
+
+                # region Dakmor Salvage
+                case "Dakmor Salvage":
+                    mcn = new DakmorSalvageMMA();
+                    break;
+                # endregion
+
+                # region Dampen Thought
+                case "Dampen Thought":
+                    mcn = new DampenThoughtMMA();
+                    break;
+                # endregion
+
+                # region Dark Confidant
+                case "Dark Confidant":
+                    mcn = new DarkConfidantMMA();
+                    break;
+                # endregion
+
+                # region Death Cloud
+                case "Death Cloud":
+                    mcn = new DeathCloudMMA();
+                    break;
+                # endregion
+
+                # region Death Denied
+                case "Death Denied":
+                    mcn = new DeathDeniedMMA();
+                    break;
+                # endregion
+
+                # region Death Rattle
+                case "Death Rattle":
+                    mcn = new DeathRattleMMA();
+                    break;
+                # endregion
+
+                # region Deepcavern Imp
+                case "Deepcavern Imp":
+                    mcn = new DeepcavernImpMMA();
+                    break;
+                # endregion
+
+                //# region Demigod of Revenge
+                //case "Demigod of Revenge":
+                //    mcn = new DemigodofRevengeMMA();
+                //    break;
+                //# endregion
+
+                # region Desperate Ritual
+                case "Desperate Ritual":
+                    mcn = new DesperateRitualMMA();
+                    break;
+                # endregion
+
+                # region Dispeller's Capsule
+                case "Dispeller's Capsule":
+                    mcn = new DispellersCapsuleMMA();
+                    break;
+                # endregion
+
+                # region Divinity of Pride
+                case "Divinity of Pride":
+                    mcn = new DivinityofPrideMMA();
+                    break;
+                # endregion
+
+                # region Doubling Season
+                case "Doubling Season":
+                    mcn = new DoublingSeasonMMA();
+                    break;
+                # endregion
+
+                # region Drag Down
+                case "Drag Down":
+                    mcn = new DragDownMMA();
+                    break;
+                # endregion
+
+                # region Dragonstorm
+                case "Dragonstorm":
+                    mcn = new DragonstormMMA();
+                    break;
+                # endregion
+
+                //# region Dreamspoiler Witches
+                //case "Dreamspoiler Witches":
+                //    mcn = new DreamspoilerWitchesMMA();
+                //    break;
+                //# endregion
+
+                # region Durkwood Baloth
+                case "Durkwood Baloth":
+                    mcn = new DurkwoodBalothMMA();
+                    break;
+                # endregion
+
+                # region Earwig Squad
+                case "Earwig Squad":
+                    mcn = new EarwigSquadMMA();
+                    break;
+                # endregion
+
+                # region Echoing Courage
+                case "Echoing Courage":
+                    mcn = new EchoingCourageMMA();
+                    break;
+                # endregion
+
+                # region Echoing Truth
+                case "Echoing Truth":
+                    mcn = new EchoingTruthMMA();
+                    break;
+                # endregion
+
+                # region Electrolyze
+                case "Electrolyze":
+                    mcn = new ElectrolyzeMMA();
+                    break;
+                # endregion
+
+                # region Elspeth, Knight-Errant
+                case "Elspeth, Knight-Errant":
+                    mcn = new ElspethKnightErrantMMA();
+                    break;
+                # endregion
+
+                # region Empty the Warrens
+                case "Empty the Warrens":
+                    mcn = new EmptytheWarrensMMA();
+                    break;
+                # endregion
+
+                # region Engineered Explosives
+                case "Engineered Explosives":
+                    mcn = new EngineeredExplosivesMMA();
+                    break;
+                # endregion
+
+                # region Epochrasite
+                case "Epochrasite":
+                    mcn = new EpochrasiteMMA();
+                    break;
+                # endregion
+
+                # region Errant Ephemeron
+                case "Errant Ephemeron":
+                    mcn = new ErrantEphemeronMMA();
+                    break;
+                # endregion
+
+                # region Erratic Mutation
+                case "Erratic Mutation":
+                    mcn = new ErraticMutationMMA();
+                    break;
+                # endregion
+
+                # region Esperzoa
+                case "Esperzoa":
+                    mcn = new EsperzoaMMA();
+                    break;
+                # endregion
+
+                # region Etched Oracle
+                case "Etched Oracle":
+                    mcn = new EtchedOracleMMA();
+                    break;
+                # endregion
+
+                # region Eternal Witness
+                case "Eternal Witness":
+                    mcn = new EternalWitnessMMA();
+                    break;
+                # endregion
+
+                # region Etherium Sculptor
+                case "Etherium Sculptor":
+                    mcn = new EtheriumSculptorMMA();
+                    break;
+                # endregion
+
+                # region Ethersworn Canonist
+                case "Ethersworn Canonist":
+                    mcn = new EtherswornCanonistMMA();
+                    break;
+                # endregion
+
+                # region Executioner's Capsule
+                case "Executioner's Capsule":
+                    mcn = new ExecutionersCapsuleMMA();
+                    break;
+                # endregion
+
+                # region Extirpate
+                case "Extirpate":
+                    mcn = new ExtirpateMMA();
+                    break;
+                # endregion
+
+                //# region Facevaulter
+                //case "Facevaulter":
+                //    mcn = new FacevaulterMMA();
+                //    break;
+                //# endregion
+
+                //# region Faerie Macabre
+                //case "Faerie Macabre":
+                //    mcn = new FaerieMacabreMMA();
+                //    break;
+                //# endregion
+
+                # region Faerie Mechanist
+                case "Faerie Mechanist":
+                    mcn = new FaerieMechanistMMA();
+                    break;
+                # endregion
+
+                # region Festering Goblin
+                case "Festering Goblin":
+                    mcn = new FesteringGoblinMMA();
+                    break;
+                # endregion
+
+                # region Feudkiller's Verdict
+                case "Feudkiller's Verdict":
+                    mcn = new FeudkillersVerdictMMA();
+                    break;
+                # endregion
+
+                # region Fiery Fall
+                case "Fiery Fall":
+                    mcn = new FieryFallMMA();
+                    break;
+                # endregion
+
+                # region Figure of Destiny
+                case "Figure of Destiny":
+                    mcn = new FigureofDestinyMMA();
+                    break;
+                # endregion
+
+                # region Flickerwisp
+                case "Flickerwisp":
+                    mcn = new FlickerwispMMA();
+                    break;
+                # endregion
+
+                //# region Frogmite
+                //case "Frogmite":
+                //    mcn = new FrogmiteMMA();
+                //    break;
+                //# endregion
+
+                # region Fury Charm
+                case "Fury Charm":
+                    mcn = new FuryCharmMMA();
+                    break;
+                # endregion
+
+                # region Giant Dustwasp
+                case "Giant Dustwasp":
+                    mcn = new GiantDustwaspMMA();
+                    break;
+                # endregion
+
+                # region Gifts Ungiven
+                case "Gifts Ungiven":
+                    mcn = new GiftsUngivenMMA();
+                    break;
+                # endregion
+
+                # region Glacial Ray
+                case "Glacial Ray":
+                    mcn = new GlacialRayMMA();
+                    break;
+                # endregion
+
+                # region Gleam of Resistance
+                case "Gleam of Resistance":
+                    mcn = new GleamofResistanceMMA();
+                    break;
+                # endregion
+
+                # region Glen Elendra Archmage
+                case "Glen Elendra Archmage":
+                    mcn = new GlenElendraArchmageMMA();
+                    break;
+                # endregion
+
+                //# region Glimmervoid
+                //case "Glimmervoid":
+                //    mcn = new GlimmervoidMMA();
+                //    break;
+                //# endregion
+
+                # region Grand Arbiter Augustin IV
+                case "Grand Arbiter Augustin IV":
+                    mcn = new GrandArbiterAugustinIVMMA();
+                    break;
+                # endregion
+
+                # region Grapeshot
+                case "Grapeshot":
+                    mcn = new GrapeshotMMA();
+                    break;
+                # endregion
+
+                # region Greater Gargadon
+                case "Greater Gargadon":
+                    mcn = new GreaterGargadonMMA();
+                    break;
+                # endregion
+
+                # region Greater Mossdog
+                case "Greater Mossdog":
+                    mcn = new GreaterMossdogMMA();
+                    break;
+                # endregion
+
+                # region Grinning Ignus
+                case "Grinning Ignus":
+                    mcn = new GrinningIgnusMMA();
+                    break;
+                # endregion
+
+                # region Hammerheim Deadeye
+                case "Hammerheim Deadeye":
+                    mcn = new HammerheimDeadeyeMMA();
+                    break;
+                # endregion
+
+                # region Hana Kami
+                case "Hana Kami":
+                    mcn = new HanaKamiMMA();
+                    break;
+                # endregion
+
+                //# region Hillcomber Giant
+                //case "Hillcomber Giant":
+                //    mcn = new HillcomberGiantMMA();
+                //    break;
+                //# endregion
+
+                # region Horobi's Whisper
+                case "Horobi's Whisper":
+                    mcn = new HorobisWhisperMMA();
+                    break;
+                # endregion
+
+                # region Imperiosaur
+                case "Imperiosaur":
+                    mcn = new ImperiosaurMMA();
+                    break;
+                # endregion
+
+                //# region Incremental Growth
+                //case "Incremental Growth":
+                //    mcn = new IncrementalGrowthMMA();
+                //    break;
+                //# endregion
+
+                # region Ivory Giant
+                case "Ivory Giant":
+                    mcn = new IvoryGiantMMA();
+                    break;
+                # endregion
+
+                # region Jhoira of the Ghitu
+                case "Jhoira of the Ghitu":
+                    mcn = new JhoiraoftheGhituMMA();
+                    break;
+                # endregion
+
+                # region Jugan, the Rising Star
+                case "Jugan, the Rising Star":
+                    mcn = new JugantheRisingStarMMA();
+                    break;
+                # endregion
+
+                # region Kataki, War's Wage
+                case "Kataki, War's Wage":
+                    mcn = new KatakiWarsWageMMA();
+                    break;
+                # endregion
+
+                # region Keiga, the Tide Star
+                case "Keiga, the Tide Star":
+                    mcn = new KeigatheTideStarMMA();
+                    break;
+                # endregion
+
+                # region Kiki-Jiki, Mirror Breaker
+                case "Kiki-Jiki, Mirror Breaker":
+                    mcn = new KikiJikiMirrorBreakerMMA();
+                    break;
+                # endregion
+
+                # region Kira, Great Glass-Spinner
+                case "Kira, Great Glass-Spinner":
+                    mcn = new KiraGreatGlassSpinnerMMA();
+                    break;
+                # endregion
+
+                //# region Kitchen Finks
+                //case "Kitchen Finks":
+                //    mcn = new KitchenFinksMMA();
+                //    break;
+                //# endregion
+
+                //# region Kithkin Greatheart
+                //case "Kithkin Greatheart":
+                //    mcn = new KithkinGreatheartMMA();
+                //    break;
+                //# endregion
+
+                # region Knight of the Reliquary
+                case "Knight of the Reliquary":
+                    mcn = new KnightoftheReliquaryMMA();
+                    break;
+                # endregion
+
+                # region Kodama's Reach
+                case "Kodama's Reach":
+                    mcn = new KodamasReachMMA();
+                    break;
+                # endregion
+
+                # region Kokusho, the Evening Star
+                case "Kokusho, the Evening Star":
+                    mcn = new KokushotheEveningStarMMA();
+                    break;
+                # endregion
+
+                # region Krosan Grip
+                case "Krosan Grip":
+                    mcn = new KrosanGripMMA();
+                    break;
+                # endregion
+
+                # region Latchkey Faerie
+                case "Latchkey Faerie":
+                    mcn = new LatchkeyFaerieMMA();
+                    break;
+                # endregion
+
+                # region Lava Spike
+                case "Lava Spike":
+                    mcn = new LavaSpikeMMA();
+                    break;
+                # endregion
+
+                # region Life from the Loam
+                case "Life from the Loam":
+                    mcn = new LifefromtheLoamMMA();
+                    break;
+                # endregion
+
+                # region Lightning Helix
+                case "Lightning Helix":
+                    mcn = new LightningHelixMMA();
+                    break;
+                # endregion
+
+                # region Logic Knot
+                case "Logic Knot":
+                    mcn = new LogicKnotMMA();
+                    break;
+                # endregion
+
+                # region Lotus Bloom
+                case "Lotus Bloom":
+                    mcn = new LotusBloomMMA();
+                    break;
+                # endregion
+
+                //# region Mad Auntie
+                //case "Mad Auntie":
+                //    mcn = new MadAuntieMMA();
+                //    break;
+                //# endregion
+
+                # region Maelstrom Pulse
+                case "Maelstrom Pulse":
+                    mcn = new MaelstromPulseMMA();
+                    break;
+                # endregion
+
+                //# region Manamorphose
+                //case "Manamorphose":
+                //    mcn = new ManamorphoseMMA();
+                //    break;
+                //# endregion
+
+                //# region Marsh Flitter
+                //case "Marsh Flitter":
+                //    mcn = new MarshFlitterMMA();
+                //    break;
+                //# endregion
+
+                //# region Masked Admirers
+                //case "Masked Admirers":
+                //    mcn = new MaskedAdmirersMMA();
+                //    break;
+                //# endregion
+
+                # region Meadowboon
+                case "Meadowboon":
+                    mcn = new MeadowboonMMA();
+                    break;
+                # endregion
+
+                # region Meloku the Clouded Mirror
+                case "Meloku the Clouded Mirror":
+                    mcn = new MelokutheCloudedMirrorMMA();
+                    break;
+                # endregion
+
+                # region Mind Funeral
+                case "Mind Funeral":
+                    mcn = new MindFuneralMMA();
+                    break;
+                # endregion
+
+                # region Mogg War Marshal
+                case "Mogg War Marshal":
+                    mcn = new MoggWarMarshalMMA();
+                    break;
+                # endregion
+
+                # region Moldervine Cloak
+                case "Moldervine Cloak":
+                    mcn = new MoldervineCloakMMA();
+                    break;
+                # endregion
+
+                # region Molten Disaster
+                case "Molten Disaster":
+                    mcn = new MoltenDisasterMMA();
+                    break;
+                # endregion
+
+                # region Mothdust Changeling
+                case "Mothdust Changeling":
+                    mcn = new MothdustChangelingMMA();
+                    break;
+                # endregion
+
+                //# region Mulldrifter
+                //case "Mulldrifter":
+                //    mcn = new MulldrifterMMA();
+                //    break;
+                //# endregion
+
+                //# region Murderous Redcap
+                //case "Murderous Redcap":
+                //    mcn = new MurderousRedcapMMA();
+                //    break;
+                //# endregion
+
+                //# region Myr Enforcer
+                //case "Myr Enforcer":
+                //    mcn = new MyrEnforcerMMA();
+                //    break;
+                //# endregion
+
+                //# region Myr Retriever
+                //case "Myr Retriever":
+                //    mcn = new MyrRetrieverMMA();
+                //    break;
+                //# endregion
+
+                # region Nantuko Shaman
+                case "Nantuko Shaman":
+                    mcn = new NantukoShamanMMA();
+                    break;
+                # endregion
+
+                # region Narcomoeba
+                case "Narcomoeba":
+                    mcn = new NarcomoebaMMA();
+                    break;
+                # endregion
+
+                //# region Oona, Queen of the Fae
+                //case "Oona, Queen of the Fae":
+                //    mcn = new OonaQueenoftheFaeMMA();
+                //    break;
+                //# endregion
+
+                # region Otherworldly Journey
+                case "Otherworldly Journey":
+                    mcn = new OtherworldlyJourneyMMA();
+                    break;
+                # endregion
+
+                # region Pact of Negation
+                case "Pact of Negation":
+                    mcn = new PactofNegationMMA();
+                    break;
+                # endregion
+
+                # region Pallid Mycoderm
+                case "Pallid Mycoderm":
+                    mcn = new PallidMycodermMMA();
+                    break;
+                # endregion
+
+                # region Paradise Mantle
+                case "Paradise Mantle":
+                    mcn = new ParadiseMantleMMA();
+                    break;
+                # endregion
+
+                # region Pardic Dragon
+                case "Pardic Dragon":
+                    mcn = new PardicDragonMMA();
+                    break;
+                # endregion
+
+                # region Path to Exile
+                case "Path to Exile":
+                    mcn = new PathtoExileMMA();
+                    break;
+                # endregion
+
+                # region Peer Through Depths
+                case "Peer Through Depths":
+                    mcn = new PeerThroughDepthsMMA();
+                    break;
+                # endregion
+
+                # region Penumbra Spider
+                case "Penumbra Spider":
+                    mcn = new PenumbraSpiderMMA();
+                    break;
+                # endregion
+
+                //# region Peppersmoke
+                //case "Peppersmoke":
+                //    mcn = new PeppersmokeMMA();
+                //    break;
+                //# endregion
+
+                # region Perilous Research
+                case "Perilous Research":
+                    mcn = new PerilousResearchMMA();
+                    break;
+                # endregion
+
+                //# region Pestermite
+                //case "Pestermite":
+                //    mcn = new PestermiteMMA();
+                //    break;
+                //# endregion
+
+                # region Petals of Insight
+                case "Petals of Insight":
+                    mcn = new PetalsofInsightMMA();
+                    break;
+                # endregion
+
+                # region Phthisis
+                case "Phthisis":
+                    mcn = new PhthisisMMA();
+                    break;
+                # endregion
+
+                //# region Plumeveil
+                //case "Plumeveil":
+                //    mcn = new PlumeveilMMA();
+                //    break;
+                //# endregion
+
+                # region Progenitus
+                case "Progenitus":
+                    mcn = new ProgenitusMMA();
+                    break;
+                # endregion
+
+                //# region Pyrite Spellbomb
+                //case "Pyrite Spellbomb":
+                //    mcn = new PyriteSpellbombMMA();
+                //    break;
+                //# endregion
+
+                # region Pyromancer's Swath
+                case "Pyromancer's Swath":
+                    mcn = new PyromancersSwathMMA();
+                    break;
+                # endregion
+
+                # region Rathi Trapper
+                case "Rathi Trapper":
+                    mcn = new RathiTrapperMMA();
+                    break;
+                # endregion
+
+                # region Raven's Crime
+                case "Raven's Crime":
+                    mcn = new RavensCrimeMMA();
+                    break;
+                # endregion
+
+                # region Reach of Branches
+                case "Reach of Branches":
+                    mcn = new ReachofBranchesMMA();
+                    break;
+                # endregion
+
+                # region Reach Through Mists
+                case "Reach Through Mists":
+                    mcn = new ReachThroughMistsMMA();
+                    break;
+                # endregion
+
+                # region Relic of Progenitus
+                case "Relic of Progenitus":
+                    mcn = new RelicofProgenitusMMA();
+                    break;
+                # endregion
+
+                # region Reveillark
+                case "Reveillark":
+                    mcn = new ReveillarkMMA();
+                    break;
+                # endregion
+
+                # region Rift Bolt
+                case "Rift Bolt":
+                    mcn = new RiftBoltMMA();
+                    break;
+                # endregion
+
+                # region Rift Elemental
+                case "Rift Elemental":
+                    mcn = new RiftElementalMMA();
+                    break;
+                # endregion
+
+                # region Riftsweeper
+                case "Riftsweeper":
+                    mcn = new RiftsweeperMMA();
+                    break;
+                # endregion
+
+                # region Riftwing Cloudskate
+                case "Riftwing Cloudskate":
+                    mcn = new RiftwingCloudskateMMA();
+                    break;
+                # endregion
+
+                # region Rude Awakening
+                case "Rude Awakening":
+                    mcn = new RudeAwakeningMMA();
+                    break;
+                # endregion
+
+                //# region Runed Stalactite
+                //case "Runed Stalactite":
+                //    mcn = new RunedStalactiteMMA();
+                //    break;
+                //# endregion
+
+                # region Ryusei, the Falling Star
+                case "Ryusei, the Falling Star":
+                    mcn = new RyuseitheFallingStarMMA();
+                    break;
+                # endregion
+
+                # region Saltfield Recluse
+                case "Saltfield Recluse":
+                    mcn = new SaltfieldRecluseMMA();
+                    break;
+                # endregion
+
+                # region Sanctum Gargoyle
+                case "Sanctum Gargoyle":
+                    mcn = new SanctumGargoyleMMA();
+                    break;
+                # endregion
+
+                # region Sandsower
+                case "Sandsower":
+                    mcn = new SandsowerMMA();
+                    break;
+                # endregion
+
+                # region Sarkhan Vol
+                case "Sarkhan Vol":
+                    mcn = new SarkhanVolMMA();
+                    break;
+                # endregion
+
+                //# region Scion of Oona
+                //case "Scion of Oona":
+                //    mcn = new ScionofOonaMMA();
+                //    break;
+                //# endregion
+
+                # region Search for Tomorrow
+                case "Search for Tomorrow":
+                    mcn = new SearchforTomorrowMMA();
+                    break;
+                # endregion
+
+                //# region Shrapnel Blast
+                //case "Shrapnel Blast":
+                //    mcn = new ShrapnelBlastMMA();
+                //    break;
+                //# endregion
+
+                # region Skeletal Vampire
+                case "Skeletal Vampire":
+                    mcn = new SkeletalVampireMMA();
+                    break;
+                # endregion
+
+                # region Skyreach Manta
+                case "Skyreach Manta":
+                    mcn = new SkyreachMantaMMA();
+                    break;
+                # endregion
+
+                # region Slaughter Pact
+                case "Slaughter Pact":
+                    mcn = new SlaughterPactMMA();
+                    break;
+                # endregion
+
+                # region Spell Snare
+                case "Spell Snare":
+                    mcn = new SpellSnareMMA();
+                    break;
+                # endregion
+
+                //# region Spellstutter Sprite
+                //case "Spellstutter Sprite":
+                //    mcn = new SpellstutterSpriteMMA();
+                //    break;
+                //# endregion
+
+                # region Sporesower Thallid
+                case "Sporesower Thallid":
+                    mcn = new SporesowerThallidMMA();
+                    break;
+                # endregion
+
+                # region Sporoloth Ancient
+                case "Sporoloth Ancient":
+                    mcn = new SporolothAncientMMA();
+                    break;
+                # endregion
+
+                # region Squee, Goblin Nabob
+                case "Squee, Goblin Nabob":
+                    mcn = new SqueeGoblinNabobMMA();
+                    break;
+                # endregion
+
+                # region Stingscourger
+                case "Stingscourger":
+                    mcn = new StingscourgerMMA();
+                    break;
+                # endregion
+
+                //# region Stinkdrinker Daredevil
+                //case "Stinkdrinker Daredevil":
+                //    mcn = new StinkdrinkerDaredevilMMA();
+                //    break;
+                //# endregion
+
+                # region Stinkweed Imp
+                case "Stinkweed Imp":
+                    mcn = new StinkweedImpMMA();
+                    break;
+                # endregion
+
+                # region Stir the Pride
+                case "Stir the Pride":
+                    mcn = new StirthePrideMMA();
+                    break;
+                # endregion
+
+                # region Stonehewer Giant
+                case "Stonehewer Giant":
+                    mcn = new StonehewerGiantMMA();
+                    break;
+                # endregion
+
+                # region Street Wraith
+                case "Street Wraith":
+                    mcn = new StreetWraithMMA();
+                    break;
+                # endregion
+
+                # region Sudden Shock
+                case "Sudden Shock":
+                    mcn = new SuddenShockMMA();
+                    break;
+                # endregion
+
+                # region Summoner's Pact
+                case "Summoner's Pact":
+                    mcn = new SummonersPactMMA();
+                    break;
+                # endregion
+
+                # region Sword of Fire and Ice
+                case "Sword of Fire and Ice":
+                    mcn = new SwordofFireandIceMMA();
+                    break;
+                # endregion
+
+                # region Sword of Light and Shadow
+                case "Sword of Light and Shadow":
+                    mcn = new SwordofLightandShadowMMA();
+                    break;
+                # endregion
+
+                # region Sylvan Bounty
+                case "Sylvan Bounty":
+                    mcn = new SylvanBountyMMA();
+                    break;
+                # endregion
+
+                # region Syphon Life
+                case "Syphon Life":
+                    mcn = new SyphonLifeMMA();
+                    break;
+                # endregion
+
+                # region Take Possession
+                case "Take Possession":
+                    mcn = new TakePossessionMMA();
+                    break;
+                # endregion
+
+                //# region Tar Pitcher
+                //case "Tar Pitcher":
+                //    mcn = new TarPitcherMMA();
+                //    break;
+                //# endregion
+
+                # region Tarmogoyf
+                case "Tarmogoyf":
+                    mcn = new TarmogoyfMMA();
+                    break;
+                # endregion
+
+                # region Terashi's Grasp
+                case "Terashi's Grasp":
+                    mcn = new TerashisGraspMMA();
+                    break;
+                # endregion
+
+                # region Terramorphic Expanse
+                case "Terramorphic Expanse":
+                    mcn = new TerramorphicExpanseMMA();
+                    break;
+                # endregion
+
+                # region Test of Faith
+                case "Test of Faith":
+                    mcn = new TestofFaithMMA();
+                    break;
+                # endregion
+
+                # region Thallid
+                case "Thallid":
+                    mcn = new ThallidMMA();
+                    break;
+                # endregion
+
+                # region Thallid Germinator
+                case "Thallid Germinator":
+                    mcn = new ThallidGerminatorMMA();
+                    break;
+                # endregion
+
+                # region Thallid Shell-Dweller
+                case "Thallid Shell-Dweller":
+                    mcn = new ThallidShellDwellerMMA();
+                    break;
+                # endregion
+
+                //# region Thieving Sprite
+                //case "Thieving Sprite":
+                //    mcn = new ThievingSpriteMMA();
+                //    break;
+                //# endregion
+
+                //# region Thirst for Knowledge
+                //case "Thirst for Knowledge":
+                //    mcn = new ThirstforKnowledgeMMA();
+                //    break;
+                //# endregion
+
+                //# region Thundercloud Shaman
+                //case "Thundercloud Shaman":
+                //    mcn = new ThundercloudShamanMMA();
+                //    break;
+                //# endregion
+
+                //# region Thundering Giant
+                //case "Thundering Giant":
+                //    mcn = new ThunderingGiantMMA();
+                //    break;
+                //# endregion
+
+                # region Tidehollow Sculler
+                case "Tidehollow Sculler":
+                    mcn = new TidehollowScullerMMA();
+                    break;
+                # endregion
+
+                # region Tombstalker
+                case "Tombstalker":
+                    mcn = new TombstalkerMMA();
+                    break;
+                # endregion
+
+                //# region Tooth and Nail
+                //case "Tooth and Nail":
+                //    mcn = new ToothandNailMMA();
+                //    break;
+                //# endregion
+
+                # region Torrent of Stone
+                case "Torrent of Stone":
+                    mcn = new TorrentofStoneMMA();
+                    break;
+                # endregion
+
+                # region Traumatic Visions
+                case "Traumatic Visions":
+                    mcn = new TraumaticVisionsMMA();
+                    break;
+                # endregion
+
+                # region Tribal Flames
+                case "Tribal Flames":
+                    mcn = new TribalFlamesMMA();
+                    break;
+                # endregion
+
+                # region Tromp the Domains
+                case "Tromp the Domains":
+                    mcn = new TromptheDomainsMMA();
+                    break;
+                # endregion
+
+                # region Trygon Predator
+                case "Trygon Predator":
+                    mcn = new TrygonPredatorMMA();
+                    break;
+                # endregion
+
+                # region Vedalken Dismisser
+                case "Vedalken Dismisser":
+                    mcn = new VedalkenDismisserMMA();
+                    break;
+                # endregion
+
+                # region Vedalken Shackles
+                case "Vedalken Shackles":
+                    mcn = new VedalkenShacklesMMA();
+                    break;
+                # endregion
+
+                # region Vendilion Clique
+                case "Vendilion Clique":
+                    mcn = new VendilionCliqueMMA();
+                    break;
+                # endregion
+
+                # region Verdeloth the Ancient
+                case "Verdeloth the Ancient":
+                    mcn = new VerdeloththeAncientMMA();
+                    break;
+                # endregion
+
+                # region Veteran Armorer
+                case "Veteran Armorer":
+                    mcn = new VeteranArmorerMMA();
+                    break;
+                # endregion
+
+                //# region Vivid Crag
+                //case "Vivid Crag":
+                //    mcn = new VividCragMMA();
+                //    break;
+                //# endregion
+
+                //# region Vivid Creek
+                //case "Vivid Creek":
+                //    mcn = new VividCreekMMA();
+                //    break;
+                //# endregion
+
+                //# region Vivid Grove
+                //case "Vivid Grove":
+                //    mcn = new VividGroveMMA();
+                //    break;
+                //# endregion
+
+                //# region Vivid Marsh
+                //case "Vivid Marsh":
+                //    mcn = new VividMarshMMA();
+                //    break;
+                //# endregion
+
+                //# region Vivid Meadow
+                //case "Vivid Meadow":
+                //    mcn = new VividMeadowMMA();
+                //    break;
+                //# endregion
+
+                # region Walker of the Grove
+                case "Walker of the Grove":
+                    mcn = new WalkeroftheGroveMMA();
+                    break;
+                # endregion
+
+                //# region Warren Pilferers
+                //case "Warren Pilferers":
+                //    mcn = new WarrenPilferersMMA();
+                //    break;
+                //# endregion
+
+                # region Warren Weirding
+                case "Warren Weirding":
+                    mcn = new WarrenWeirdingMMA();
+                    break;
+                # endregion
+
+                # region War-Spike Changeling
+                case "War-Spike Changeling":
+                    mcn = new WarSpikeChangelingMMA();
+                    break;
+                # endregion
+
+                //# region Woodfall Primus
+                //case "Woodfall Primus":
+                //    mcn = new WoodfallPrimusMMA();
+                //    break;
+                //# endregion
+
+                # region Worm Harvest
+                case "Worm Harvest":
+                    mcn = new WormHarvestMMA();
+                    break;
+                # endregion
+
+                # region Yosei, the Morning Star
+                case "Yosei, the Morning Star":
+                    mcn = new YoseitheMorningStarMMA();
                     break;
                 # endregion
                 # endregion

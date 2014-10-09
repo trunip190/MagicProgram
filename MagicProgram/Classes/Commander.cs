@@ -41,7 +41,7 @@ namespace MagicProgram
     # endregion
 
     # region Fists of Ironwood
-    class FistsofIronwoodC11 : MagicCard
+    public class FistsofIronwoodC11 : MagicCard
     {
         public FistsofIronwoodC11()
         {

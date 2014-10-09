@@ -146,6 +146,10 @@ namespace MagicProgram.Controls
             {
                 list.Add(mcp);
             }
+            foreach (MagicCard mcp in _artEnch.cards)
+            {
+                list.Add(mcp);
+            }
             foreach (MagicCard mcp in list)
             {
                 mcp.SpellResolved(mc);

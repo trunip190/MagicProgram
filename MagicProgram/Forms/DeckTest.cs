@@ -394,7 +394,11 @@ namespace MagicProgram
 
                         for (int i = 0; i < x; i++)
                         {
-                            CreateSaproling(mc);
+                            MagicCard mcn = new Saproling();
+                            mcn.PArea = mc.PArea;
+                            mcn.OppArea = mc.OppArea;
+
+                            mc.PArea.PlayToken(mcn);
                         }
                         break;
                     # endregion
@@ -2292,7 +2296,6 @@ namespace MagicProgram
 
                 # region Thallid
                 case "Thallid":
-                    mc.OnUpkeep += new PassiveEvent(Upkeep_Fungus);
                     mc.Activating += new MagicCard.ValueAbility(Activating_Fungus);
                     break;
                 # endregion
@@ -2540,7 +2543,12 @@ namespace MagicProgram
 
         void Activating_JadeMage(MagicCard mc, int index)
         {
-            CreateSaproling(mc);
+            MagicCard mcn = new Saproling();
+            mcn.PArea = mc.PArea;
+            mcn.OppArea = mc.OppArea;
+
+            mc.PArea.PlayToken(mcn);
+
             update_listViewPlay();
         }
 
@@ -2566,7 +2574,11 @@ namespace MagicProgram
         {
             for (int i = 0; i < mc.counters; i++)
             {
-                CreateSaproling(mc);
+                MagicCard mcn = new Saproling();
+                mcn.PArea = mc.PArea;
+                mcn.OppArea = mc.OppArea;
+
+                mc.PArea.PlayToken(mcn);
             }
             update_listViewPlay();
         }
@@ -2643,23 +2655,14 @@ namespace MagicProgram
             if (index == 0 && mc.counters >= 3)
             {
                 mc.counters -= 3;
-                CreateSaproling(mc);
+
+                MagicCard mcn = new Saproling();
+                mcn.PArea = mc.PArea;
+                mcn.OppArea = mc.OppArea;
+
+                mc.PArea.PlayToken(mcn);
                 update_listViewPlay();
             }
-        }
-
-        private void CreateSaproling(MagicCard mc)
-        {
-            MagicCard mct = new MagicCard
-            {
-                Name = "Saproling",
-                Type = "Creature - Saproling",
-                Token = true,
-                PT = "1/1",
-                PArea = mc.PArea,
-                OppArea = mc.OppArea
-            };
-            PlayCreature(mct, mc.PArea);
         }
 
         void Upkeep_Fungus(MagicCard mc)

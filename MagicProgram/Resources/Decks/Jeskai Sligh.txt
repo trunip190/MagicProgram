@@ -1,0 +1,21 @@
+Island#4
+Mountain#5
+Plains#4
+Mystic Monastery#3
+Battlefield Forge#1
+Swiftwater Cliffs#1
+Wind-Scarred Crag#1
+Tranquil Cove#2
+Shivan Reef#1
+Triton Shorestalker#4
+Satyr Hoplite#3
+Crowd's Favor#3
+Akroan Crusader#4
+Triton Tactics#4
+Vanguard of Brimaz#1
+Hidden Strings#3
+Ephemeral Shields#2
+Triton Fortune Hunter#3
+Stoke the Flames#4
+Crater's Claws#3
+Jeskai Ascendancy#4

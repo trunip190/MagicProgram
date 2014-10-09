@@ -1870,6 +1870,19 @@ namespace MagicProgram
                 }
             }
         }
+
+        public override void SpellResolved(MagicCard mc)
+        {
+            if (!mc.Type.Contains("Creature"))
+            {
+                foreach (MagicCard mct in PArea._play.cards)
+                {
+                    mct.Tap(false, false);
+                    mct.PBonus++;
+                    mct.TBonus++;
+                }
+            }
+        }
     }
     # endregion
 

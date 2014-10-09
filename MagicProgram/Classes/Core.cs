@@ -291,6 +291,26 @@ namespace MagicProgram
             Text = "Flying;^%T: Add one mana of any color to your mana pool.";
             Flavor = "";
         }
+
+        public override bool TryActivate(int i)
+        {
+            if (Tapped)
+            {
+                return false;
+            }
+
+            Tap(true, false);
+
+            callActivating(i);
+            DoActivate(i);
+
+            return true;
+        }
+
+        public override void DoActivate(int i)
+        {
+            PArea.mw.ShowWheel("GUBRW");
+        }
     }
     # endregion
 
@@ -6552,6 +6572,23 @@ namespace MagicProgram
             Text = "%T: Add %G to your mana pool.";
             Flavor = "";
         }
+
+        public override bool TryActivate(int i)
+        {
+            if (Tapped)
+            {
+                return false;
+            }
+
+            DoActivate(i);
+            Tap(true, false);
+            return true;
+        }
+
+        public override void DoActivate(int i)
+        {
+            PArea.mana.green++;
+        }
     }
     # endregion
 
@@ -10560,7 +10597,7 @@ namespace MagicProgram
     # endregion
 
     # region Elvish Mystic
-    public class ElvishMysticM15 : MagicCard
+    public class ElvishMysticM15 : ElvishMystic
     {
         public ElvishMysticM15()
         {
