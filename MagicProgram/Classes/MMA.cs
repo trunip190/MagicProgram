@@ -3582,6 +3582,7 @@ namespace MagicProgram
             {
                 spores -= 3;
                 callActivating(i);
+                //DoActivate(i);      //TODO work out why the call doesn't naturally go through
                 return true;
             }
 

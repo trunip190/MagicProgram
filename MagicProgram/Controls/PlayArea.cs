@@ -635,7 +635,9 @@ namespace MagicProgram.Controls
 
             mana.Subtract(c);
 
-            mc.callActivate(index);
+            //TODO testing which call is appropriate.
+            //mc.callActivate(index);
+            mc.DoActivate(index);
         }
         # endregion
 

@@ -2294,12 +2294,6 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Thallid
-                case "Thallid":
-                    mc.Activating += new MagicCard.ValueAbility(Activating_Fungus);
-                    break;
-                # endregion
-
                 # region Elvish Farmer
                 case "Elvish Farmer":
                     mc.OnUpkeep += new PassiveEvent(Upkeep_Fungus);

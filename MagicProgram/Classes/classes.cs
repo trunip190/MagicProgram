@@ -27173,6 +27173,1000 @@ namespace MagicProgram
                 # endregion
                 # endregion
 
+                # region Fifth Dawn
+                # region Abuna's Chant
+                case "Abuna's Chant":
+                    mcn = new AbunasChantFD();
+                    break;
+                # endregion
+
+                # region Acquire
+                case "Acquire":
+                    mcn = new AcquireFD();
+                    break;
+                # endregion
+
+                # region Advanced Hoverguard
+                case "Advanced Hoverguard":
+                    mcn = new AdvancedHoverguardFD();
+                    break;
+                # endregion
+
+                # region All Suns' Dawn
+                case "All Suns' Dawn":
+                    mcn = new AllSunsDawnFD();
+                    break;
+                # endregion
+
+                # region Anodet Lurker
+                case "Anodet Lurker":
+                    mcn = new AnodetLurkerFD();
+                    break;
+                # endregion
+
+                # region Arachnoid
+                case "Arachnoid":
+                    mcn = new ArachnoidFD();
+                    break;
+                # endregion
+
+                //# region Arcbound Wanderer
+                //case "Arcbound Wanderer":
+                //    mcn = new ArcboundWandererFD();
+                //    break;
+                //# endregion
+
+                # region Armed Response
+                case "Armed Response":
+                    mcn = new ArmedResponseFD();
+                    break;
+                # endregion
+
+                # region Artificer's Intuition
+                case "Artificer's Intuition":
+                    mcn = new ArtificersIntuitionFD();
+                    break;
+                # endregion
+
+                # region Auriok Champion
+                case "Auriok Champion":
+                    mcn = new AuriokChampionFD();
+                    break;
+                # endregion
+
+                //# region Auriok Salvagers
+                //case "Auriok Salvagers":
+                //    mcn = new AuriokSalvagersFD();
+                //    break;
+                //# endregion
+
+                # region Auriok Windwalker
+                case "Auriok Windwalker":
+                    mcn = new AuriokWindwalkerFD();
+                    break;
+                # endregion
+
+                # region Avarice Totem
+                case "Avarice Totem":
+                    mcn = new AvariceTotemFD();
+                    break;
+                # endregion
+
+                # region Baton of Courage
+                case "Baton of Courage":
+                    mcn = new BatonofCourageFD();
+                    break;
+                # endregion
+
+                # region Battered Golem
+                case "Battered Golem":
+                    mcn = new BatteredGolemFD();
+                    break;
+                # endregion
+
+                # region Beacon of Creation
+                case "Beacon of Creation":
+                    mcn = new BeaconofCreationFD();
+                    break;
+                # endregion
+
+                # region Beacon of Destruction
+                case "Beacon of Destruction":
+                    mcn = new BeaconofDestructionFD();
+                    break;
+                # endregion
+
+                # region Beacon of Immortality
+                case "Beacon of Immortality":
+                    mcn = new BeaconofImmortalityFD();
+                    break;
+                # endregion
+
+                # region Beacon of Tomorrows
+                case "Beacon of Tomorrows":
+                    mcn = new BeaconofTomorrowsFD();
+                    break;
+                # endregion
+
+                # region Beacon of Unrest
+                case "Beacon of Unrest":
+                    mcn = new BeaconofUnrestFD();
+                    break;
+                # endregion
+
+                # region Blasting Station
+                case "Blasting Station":
+                    mcn = new BlastingStationFD();
+                    break;
+                # endregion
+
+                # region Blind Creeper
+                case "Blind Creeper":
+                    mcn = new BlindCreeperFD();
+                    break;
+                # endregion
+
+                # region Blinkmoth Infusion
+                case "Blinkmoth Infusion":
+                    mcn = new BlinkmothInfusionFD();
+                    break;
+                # endregion
+
+                # region Bringer of the Black Dawn
+                case "Bringer of the Black Dawn":
+                    mcn = new BringeroftheBlackDawnFD();
+                    break;
+                # endregion
+
+                # region Bringer of the Blue Dawn
+                case "Bringer of the Blue Dawn":
+                    mcn = new BringeroftheBlueDawnFD();
+                    break;
+                # endregion
+
+                # region Bringer of the Green Dawn
+                case "Bringer of the Green Dawn":
+                    mcn = new BringeroftheGreenDawnFD();
+                    break;
+                # endregion
+
+                # region Bringer of the Red Dawn
+                case "Bringer of the Red Dawn":
+                    mcn = new BringeroftheRedDawnFD();
+                    break;
+                # endregion
+
+                # region Bringer of the White Dawn
+                case "Bringer of the White Dawn":
+                    mcn = new BringeroftheWhiteDawnFD();
+                    break;
+                # endregion
+
+                # region Cackling Imp
+                case "Cackling Imp":
+                    mcn = new CacklingImpFD();
+                    break;
+                # endregion
+
+                # region Channel the Suns
+                case "Channel the Suns":
+                    mcn = new ChanneltheSunsFD();
+                    break;
+                # endregion
+
+                # region Chimeric Coils
+                case "Chimeric Coils":
+                    mcn = new ChimericCoilsFD();
+                    break;
+                # endregion
+
+                # region Circle of Protection: Artifacts
+                case "Circle of Protection: Artifacts":
+                    mcn = new CircleofProtectionArtifactsFD();
+                    break;
+                # endregion
+
+                # region Clearwater Goblet
+                case "Clearwater Goblet":
+                    mcn = new ClearwaterGobletFD();
+                    break;
+                # endregion
+
+                # region Clock of Omens
+                case "Clock of Omens":
+                    mcn = new ClockofOmensFD();
+                    break;
+                # endregion
+
+                # region Composite Golem
+                case "Composite Golem":
+                    mcn = new CompositeGolemFD();
+                    break;
+                # endregion
+
+                # region Condescend
+                case "Condescend":
+                    mcn = new CondescendFD();
+                    break;
+                # endregion
+
+                # region Conjurer's Bauble
+                case "Conjurer's Bauble":
+                    mcn = new ConjurersBaubleFD();
+                    break;
+                # endregion
+
+                # region Cosmic Larva
+                case "Cosmic Larva":
+                    mcn = new CosmicLarvaFD();
+                    break;
+                # endregion
+
+                # region Cranial Plating
+                case "Cranial Plating":
+                    mcn = new CranialPlatingFD();
+                    break;
+                # endregion
+
+                # region Crucible of Worlds
+                case "Crucible of Worlds":
+                    mcn = new CrucibleofWorldsFD();
+                    break;
+                # endregion
+
+                # region Dawn's Reflection
+                case "Dawn's Reflection":
+                    mcn = new DawnsReflectionFD();
+                    break;
+                # endregion
+
+                # region Desecration Elemental
+                case "Desecration Elemental":
+                    mcn = new DesecrationElementalFD();
+                    break;
+                # endregion
+
+                # region Devour in Shadow
+                case "Devour in Shadow":
+                    mcn = new DevourinShadowFD();
+                    break;
+                # endregion
+
+                # region Disruption Aura
+                case "Disruption Aura":
+                    mcn = new DisruptionAuraFD();
+                    break;
+                # endregion
+
+                # region Door to Nothingness
+                case "Door to Nothingness":
+                    mcn = new DoortoNothingnessFD();
+                    break;
+                # endregion
+
+                # region Doubling Cube
+                case "Doubling Cube":
+                    mcn = new DoublingCubeFD();
+                    break;
+                # endregion
+
+                # region Dross Crocodile
+                case "Dross Crocodile":
+                    mcn = new DrossCrocodileFD();
+                    break;
+                # endregion
+
+                # region Early Frost
+                case "Early Frost":
+                    mcn = new EarlyFrostFD();
+                    break;
+                # endregion
+
+                # region Ebon Drake
+                case "Ebon Drake":
+                    mcn = new EbonDrakeFD();
+                    break;
+                # endregion
+
+                # region Endless Whispers
+                case "Endless Whispers":
+                    mcn = new EndlessWhispersFD();
+                    break;
+                # endregion
+
+                # region Energy Chamber
+                case "Energy Chamber":
+                    mcn = new EnergyChamberFD();
+                    break;
+                # endregion
+
+                //# region Engineered Explosives
+                //case "Engineered Explosives":
+                //    mcn = new EngineeredExplosivesFD();
+                //    break;
+                //# endregion
+
+                # region Ensouled Scimitar
+                case "Ensouled Scimitar":
+                    mcn = new EnsouledScimitarFD();
+                    break;
+                # endregion
+
+                # region Eon Hub
+                case "Eon Hub":
+                    mcn = new EonHubFD();
+                    break;
+                # endregion
+
+                //# region Etched Oracle
+                //case "Etched Oracle":
+                //    mcn = new EtchedOracleFD();
+                //    break;
+                //# endregion
+
+                //# region Eternal Witness
+                //case "Eternal Witness":
+                //    mcn = new EternalWitnessFD();
+                //    break;
+                //# endregion
+
+                # region Eyes of the Watcher
+                case "Eyes of the Watcher":
+                    mcn = new EyesoftheWatcherFD();
+                    break;
+                # endregion
+
+                # region Fangren Pathcutter
+                case "Fangren Pathcutter":
+                    mcn = new FangrenPathcutterFD();
+                    break;
+                # endregion
+
+                # region Feedback Bolt
+                case "Feedback Bolt":
+                    mcn = new FeedbackBoltFD();
+                    break;
+                # endregion
+
+                # region Ferocious Charge
+                case "Ferocious Charge":
+                    mcn = new FerociousChargeFD();
+                    break;
+                # endregion
+
+                # region Ferropede
+                case "Ferropede":
+                    mcn = new FerropedeFD();
+                    break;
+                # endregion
+
+                # region Fill with Fright
+                case "Fill with Fright":
+                    mcn = new FillwithFrightFD();
+                    break;
+                # endregion
+
+                # region Fist of Suns
+                case "Fist of Suns":
+                    mcn = new FistofSunsFD();
+                    break;
+                # endregion
+
+                # region Fleshgrafter
+                case "Fleshgrafter":
+                    mcn = new FleshgrafterFD();
+                    break;
+                # endregion
+
+                # region Fold into AEther
+                case "Fold into AEther":
+                    mcn = new FoldintoAEtherFD();
+                    break;
+                # endregion
+
+                //# region Furnace Whelp
+                //case "Furnace Whelp":
+                //    mcn = new FurnaceWhelpFD();
+                //    break;
+                //# endregion
+
+                # region Gemstone Array
+                case "Gemstone Array":
+                    mcn = new GemstoneArrayFD();
+                    break;
+                # endregion
+
+                # region Goblin Brawler
+                case "Goblin Brawler":
+                    mcn = new GoblinBrawlerFD();
+                    break;
+                # endregion
+
+                # region Goblin Cannon
+                case "Goblin Cannon":
+                    mcn = new GoblinCannonFD();
+                    break;
+                # endregion
+
+                # region Grafted Wargear
+                case "Grafted Wargear":
+                    mcn = new GraftedWargearFD();
+                    break;
+                # endregion
+
+                # region Granulate
+                case "Granulate":
+                    mcn = new GranulateFD();
+                    break;
+                # endregion
+
+                # region Grinding Station
+                case "Grinding Station":
+                    mcn = new GrindingStationFD();
+                    break;
+                # endregion
+
+                # region Guardian Idol
+                case "Guardian Idol":
+                    mcn = new GuardianIdolFD();
+                    break;
+                # endregion
+
+                # region Healer's Headdress
+                case "Healer's Headdress":
+                    mcn = new HealersHeaddressFD();
+                    break;
+                # endregion
+
+                # region Heliophial
+                case "Heliophial":
+                    mcn = new HeliophialFD();
+                    break;
+                # endregion
+
+                # region Helm of Kaldra
+                case "Helm of Kaldra":
+                    mcn = new HelmofKaldraFD();
+                    break;
+                # endregion
+
+                # region Horned Helm
+                case "Horned Helm":
+                    mcn = new HornedHelmFD();
+                    break;
+                # endregion
+
+                # region Hoverguard Sweepers
+                case "Hoverguard Sweepers":
+                    mcn = new HoverguardSweepersFD();
+                    break;
+                # endregion
+
+                # region Infused Arrows
+                case "Infused Arrows":
+                    mcn = new InfusedArrowsFD();
+                    break;
+                # endregion
+
+                # region Into Thin Air
+                case "Into Thin Air":
+                    mcn = new IntoThinAirFD();
+                    break;
+                # endregion
+
+                # region Ion Storm
+                case "Ion Storm":
+                    mcn = new IonStormFD();
+                    break;
+                # endregion
+
+                # region Iron-Barb Hellion
+                case "Iron-Barb Hellion":
+                    mcn = new IronBarbHellionFD();
+                    break;
+                # endregion
+
+                # region Joiner Adept
+                case "Joiner Adept":
+                    mcn = new JoinerAdeptFD();
+                    break;
+                # endregion
+
+                # region Krark-Clan Engineers
+                case "Krark-Clan Engineers":
+                    mcn = new KrarkClanEngineersFD();
+                    break;
+                # endregion
+
+                # region Krark-Clan Ironworks
+                case "Krark-Clan Ironworks":
+                    mcn = new KrarkClanIronworksFD();
+                    break;
+                # endregion
+
+                # region Krark-Clan Ogre
+                case "Krark-Clan Ogre":
+                    mcn = new KrarkClanOgreFD();
+                    break;
+                # endregion
+
+                # region Lantern of Insight
+                case "Lantern of Insight":
+                    mcn = new LanternofInsightFD();
+                    break;
+                # endregion
+
+                # region Leonin Squire
+                case "Leonin Squire":
+                    mcn = new LeoninSquireFD();
+                    break;
+                # endregion
+
+                # region Lose Hope
+                case "Lose Hope":
+                    mcn = new LoseHopeFD();
+                    break;
+                # endregion
+
+                # region Loxodon Anchorite
+                case "Loxodon Anchorite":
+                    mcn = new LoxodonAnchoriteFD();
+                    break;
+                # endregion
+
+                # region Loxodon Stalwart
+                case "Loxodon Stalwart":
+                    mcn = new LoxodonStalwartFD();
+                    break;
+                # endregion
+
+                # region Lunar Avenger
+                case "Lunar Avenger":
+                    mcn = new LunarAvengerFD();
+                    break;
+                # endregion
+
+                # region Magma Giant
+                case "Magma Giant":
+                    mcn = new MagmaGiantFD();
+                    break;
+                # endregion
+
+                //# region Magma Jet
+                //case "Magma Jet":
+                //    mcn = new MagmaJetFD();
+                //    break;
+                //# endregion
+
+                # region Magnetic Theft
+                case "Magnetic Theft":
+                    mcn = new MagneticTheftFD();
+                    break;
+                # endregion
+
+                # region Mana Geyser
+                case "Mana Geyser":
+                    mcn = new ManaGeyserFD();
+                    break;
+                # endregion
+
+                # region Mephidross Vampire
+                case "Mephidross Vampire":
+                    mcn = new MephidrossVampireFD();
+                    break;
+                # endregion
+
+                # region Moriok Rigger
+                case "Moriok Rigger":
+                    mcn = new MoriokRiggerFD();
+                    break;
+                # endregion
+
+                # region Mycosynth Golem
+                case "Mycosynth Golem":
+                    mcn = new MycosynthGolemFD();
+                    break;
+                # endregion
+
+                # region Myr Quadropod
+                case "Myr Quadropod":
+                    mcn = new MyrQuadropodFD();
+                    break;
+                # endregion
+
+                # region Myr Servitor
+                case "Myr Servitor":
+                    mcn = new MyrServitorFD();
+                    break;
+                # endregion
+
+                # region Neurok Stealthsuit
+                case "Neurok Stealthsuit":
+                    mcn = new NeurokStealthsuitFD();
+                    break;
+                # endregion
+
+                # region Night's Whisper
+                case "Night's Whisper":
+                    mcn = new NightsWhisperFD();
+                    break;
+                # endregion
+
+                # region Nim Grotesque
+                case "Nim Grotesque":
+                    mcn = new NimGrotesqueFD();
+                    break;
+                # endregion
+
+                # region Opaline Bracers
+                case "Opaline Bracers":
+                    mcn = new OpalineBracersFD();
+                    break;
+                # endregion
+
+                # region Ouphe Vandals
+                case "Ouphe Vandals":
+                    mcn = new OupheVandalsFD();
+                    break;
+                # endregion
+
+                //# region Paradise Mantle
+                //case "Paradise Mantle":
+                //    mcn = new ParadiseMantleFD();
+                //    break;
+                //# endregion
+
+                # region Pentad Prism
+                case "Pentad Prism":
+                    mcn = new PentadPrismFD();
+                    break;
+                # endregion
+
+                # region Plasma Elemental
+                case "Plasma Elemental":
+                    mcn = new PlasmaElementalFD();
+                    break;
+                # endregion
+
+                # region Plunge into Darkness
+                case "Plunge into Darkness":
+                    mcn = new PlungeintoDarknessFD();
+                    break;
+                # endregion
+
+                # region Possessed Portal
+                case "Possessed Portal":
+                    mcn = new PossessedPortalFD();
+                    break;
+                # endregion
+
+                # region Qumulox
+                case "Qumulox":
+                    mcn = new QumuloxFD();
+                    break;
+                # endregion
+
+                # region Rain of Rust
+                case "Rain of Rust":
+                    mcn = new RainofRustFD();
+                    break;
+                # endregion
+
+                # region Raksha Golden Cub
+                case "Raksha Golden Cub":
+                    mcn = new RakshaGoldenCubFD();
+                    break;
+                # endregion
+
+                # region Razorgrass Screen
+                case "Razorgrass Screen":
+                    mcn = new RazorgrassScreenFD();
+                    break;
+                # endregion
+
+                # region Razormane Masticore
+                case "Razormane Masticore":
+                    mcn = new RazormaneMasticoreFD();
+                    break;
+                # endregion
+
+                # region Relentless Rats
+                case "Relentless Rats":
+                    mcn = new RelentlessRatsFD();
+                    break;
+                # endregion
+
+                # region Relic Barrier
+                case "Relic Barrier":
+                    mcn = new RelicBarrierFD();
+                    break;
+                # endregion
+
+                # region Retaliate
+                case "Retaliate":
+                    mcn = new RetaliateFD();
+                    break;
+                # endregion
+
+                # region Reversal of Fortune
+                case "Reversal of Fortune":
+                    mcn = new ReversalofFortuneFD();
+                    break;
+                # endregion
+
+                # region Rite of Passage
+                case "Rite of Passage":
+                    mcn = new RiteofPassageFD();
+                    break;
+                # endregion
+
+                # region Roar of Reclamation
+                case "Roar of Reclamation":
+                    mcn = new RoarofReclamationFD();
+                    break;
+                # endregion
+
+                //# region Rude Awakening
+                //case "Rude Awakening":
+                //    mcn = new RudeAwakeningFD();
+                //    break;
+                //# endregion
+
+                # region Salvaging Station
+                case "Salvaging Station":
+                    mcn = new SalvagingStationFD();
+                    break;
+                # endregion
+
+                # region Sawtooth Thresher
+                case "Sawtooth Thresher":
+                    mcn = new SawtoothThresherFD();
+                    break;
+                # endregion
+
+                # region Screaming Fury
+                case "Screaming Fury":
+                    mcn = new ScreamingFuryFD();
+                    break;
+                # endregion
+
+                # region Serum Visions
+                case "Serum Visions":
+                    mcn = new SerumVisionsFD();
+                    break;
+                # endregion
+
+                # region Shattered Dreams
+                case "Shattered Dreams":
+                    mcn = new ShatteredDreamsFD();
+                    break;
+                # endregion
+
+                # region Silent Arbiter
+                case "Silent Arbiter":
+                    mcn = new SilentArbiterFD();
+                    break;
+                # endregion
+
+                # region Skullcage
+                case "Skullcage":
+                    mcn = new SkullcageFD();
+                    break;
+                # endregion
+
+                # region Skyhunter Prowler
+                case "Skyhunter Prowler":
+                    mcn = new SkyhunterProwlerFD();
+                    break;
+                # endregion
+
+                # region Skyhunter Skirmisher
+                case "Skyhunter Skirmisher":
+                    mcn = new SkyhunterSkirmisherFD();
+                    break;
+                # endregion
+
+                //# region Skyreach Manta
+                //case "Skyreach Manta":
+                //    mcn = new SkyreachMantaFD();
+                //    break;
+                //# endregion
+
+                # region Solarion
+                case "Solarion":
+                    mcn = new SolarionFD();
+                    break;
+                # endregion
+
+                # region Spark Elemental
+                case "Spark Elemental":
+                    mcn = new SparkElementalFD();
+                    break;
+                # endregion
+
+                # region Sparring Collar
+                case "Sparring Collar":
+                    mcn = new SparringCollarFD();
+                    break;
+                # endregion
+
+                # region Spectral Shift
+                case "Spectral Shift":
+                    mcn = new SpectralShiftFD();
+                    break;
+                # endregion
+
+                # region Spinal Parasite
+                case "Spinal Parasite":
+                    mcn = new SpinalParasiteFD();
+                    break;
+                # endregion
+
+                # region Staff of Domination
+                case "Staff of Domination":
+                    mcn = new StaffofDominationFD();
+                    break;
+                # endregion
+
+                # region Stand Firm
+                case "Stand Firm":
+                    mcn = new StandFirmFD();
+                    break;
+                # endregion
+
+                # region Stasis Cocoon
+                case "Stasis Cocoon":
+                    mcn = new StasisCocoonFD();
+                    break;
+                # endregion
+
+                # region Steelshaper's Gift
+                case "Steelshaper's Gift":
+                    mcn = new SteelshapersGiftFD();
+                    break;
+                # endregion
+
+                # region Summoner's Egg
+                case "Summoner's Egg":
+                    mcn = new SummonersEggFD();
+                    break;
+                # endregion
+
+                # region Summoning Station
+                case "Summoning Station":
+                    mcn = new SummoningStationFD();
+                    break;
+                # endregion
+
+                # region Suncrusher
+                case "Suncrusher":
+                    mcn = new SuncrusherFD();
+                    break;
+                # endregion
+
+                # region Suntouched Myr
+                case "Suntouched Myr":
+                    mcn = new SuntouchedMyrFD();
+                    break;
+                # endregion
+
+                # region Sylvok Explorer
+                case "Sylvok Explorer":
+                    mcn = new SylvokExplorerFD();
+                    break;
+                # endregion
+
+                # region Synod Centurion
+                case "Synod Centurion":
+                    mcn = new SynodCenturionFD();
+                    break;
+                # endregion
+
+                # region Tangle Asp
+                case "Tangle Asp":
+                    mcn = new TangleAspFD();
+                    break;
+                # endregion
+
+                # region Tel-Jilad Justice
+                case "Tel-Jilad Justice":
+                    mcn = new TelJiladJusticeFD();
+                    break;
+                # endregion
+
+                # region Tel-Jilad Lifebreather
+                case "Tel-Jilad Lifebreather":
+                    mcn = new TelJiladLifebreatherFD();
+                    break;
+                # endregion
+
+                # region Thermal Navigator
+                case "Thermal Navigator":
+                    mcn = new ThermalNavigatorFD();
+                    break;
+                # endregion
+
+                # region Thought Courier
+                case "Thought Courier":
+                    mcn = new ThoughtCourierFD();
+                    break;
+                # endregion
+
+                # region Tornado Elemental
+                case "Tornado Elemental":
+                    mcn = new TornadoElementalFD();
+                    break;
+                # endregion
+
+                # region Trinket Mage
+                case "Trinket Mage":
+                    mcn = new TrinketMageFD();
+                    break;
+                # endregion
+
+                # region Tyrranax
+                case "Tyrranax":
+                    mcn = new TyrranaxFD();
+                    break;
+                # endregion
+
+                # region Vanquish
+                case "Vanquish":
+                    mcn = new VanquishFD();
+                    break;
+                # endregion
+
+                # region Vedalken Mastermind
+                case "Vedalken Mastermind":
+                    mcn = new VedalkenMastermindFD();
+                    break;
+                # endregion
+
+                # region Vedalken Orrery
+                case "Vedalken Orrery":
+                    mcn = new VedalkenOrreryFD();
+                    break;
+                # endregion
+
+                //# region Vedalken Shackles
+                //case "Vedalken Shackles":
+                //    mcn = new VedalkenShacklesFD();
+                //    break;
+                //# endregion
+
+                # region Vicious Betrayal
+                case "Vicious Betrayal":
+                    mcn = new ViciousBetrayalFD();
+                    break;
+                # endregion
+
+                # region Viridian Lorebearers
+                case "Viridian Lorebearers":
+                    mcn = new ViridianLorebearersFD();
+                    break;
+                # endregion
+
+                # region Viridian Scout
+                case "Viridian Scout":
+                    mcn = new ViridianScoutFD();
+                    break;
+                # endregion
+
+                # region Vulshok Sorcerer
+                case "Vulshok Sorcerer":
+                    mcn = new VulshokSorcererFD();
+                    break;
+                # endregion
+
+                # region Wayfarer's Bauble
+                case "Wayfarer's Bauble":
+                    mcn = new WayfarersBaubleFD();
+                    break;
+                # endregion
+
+
+                # endregion
+
                 default:
                     mcn = new MagicCard();
                     mcn.Name = s;
