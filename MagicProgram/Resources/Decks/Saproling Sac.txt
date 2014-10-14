@@ -5,11 +5,10 @@ Thallid#4
 Elvish Farmer#4
 Fists of Ironwood#3
 Goblin Sharpshooter#3
-Hissing Iguanar#4
 Chord of Calling#4
 Purphoros, God of the Forge#4
 Life and Limb#4
 Mycoloth#2
 Elvish Mystic#4
-Essence Warden#1
-Jund Battlemage#3
+Essence Warden#4
+Jund Battlemage#4

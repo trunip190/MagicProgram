@@ -80,6 +80,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Alara.cs" />
     <Compile Include="Classes\Commander.cs" />
     <Compile Include="Classes\Core.cs" />
     <Compile Include="Classes\Debug.cs" />

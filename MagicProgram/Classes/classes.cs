@@ -13405,6 +13405,1412 @@ namespace MagicProgram
                 # endregion
                 # endregion
 
+                # region Shards of Alara
+                # region Ad Nauseam
+                case "Ad Nauseam":
+                    mcn = new AdNauseamALA();
+                    break;
+                # endregion
+
+                # region Agony Warp
+                case "Agony Warp":
+                    mcn = new AgonyWarpALA();
+                    break;
+                # endregion
+
+                # region Ajani Vengeant
+                case "Ajani Vengeant":
+                    mcn = new AjaniVengeantALA();
+                    break;
+                # endregion
+
+                # region Akrasan Squire
+                case "Akrasan Squire":
+                    mcn = new AkrasanSquireALA();
+                    break;
+                # endregion
+
+                # region Algae Gharial
+                case "Algae Gharial":
+                    mcn = new AlgaeGharialALA();
+                    break;
+                # endregion
+
+                # region Angelic Benediction
+                case "Angelic Benediction":
+                    mcn = new AngelicBenedictionALA();
+                    break;
+                # endregion
+
+                # region Angel's Herald
+                case "Angel's Herald":
+                    mcn = new AngelsHeraldALA();
+                    break;
+                # endregion
+
+                # region Angelsong
+                case "Angelsong":
+                    mcn = new AngelsongALA();
+                    break;
+                # endregion
+
+                # region Arcane Sanctum
+                case "Arcane Sanctum":
+                    mcn = new ArcaneSanctumALA();
+                    break;
+                # endregion
+
+                # region Archdemon of Unx
+                case "Archdemon of Unx":
+                    mcn = new ArchdemonofUnxALA();
+                    break;
+                # endregion
+
+                # region Banewasp Affliction
+                case "Banewasp Affliction":
+                    mcn = new BanewaspAfflictionALA();
+                    break;
+                # endregion
+
+                # region Bant Battlemage
+                case "Bant Battlemage":
+                    mcn = new BantBattlemageALA();
+                    break;
+                # endregion
+
+                # region Bant Charm
+                case "Bant Charm":
+                    mcn = new BantCharmALA();
+                    break;
+                # endregion
+
+                # region Bant Panorama
+                case "Bant Panorama":
+                    mcn = new BantPanoramaALA();
+                    break;
+                # endregion
+
+                # region Battlegrace Angel
+                case "Battlegrace Angel":
+                    mcn = new BattlegraceAngelALA();
+                    break;
+                # endregion
+
+                # region Behemoth's Herald
+                case "Behemoth's Herald":
+                    mcn = new BehemothsHeraldALA();
+                    break;
+                # endregion
+
+                # region Blightning
+                case "Blightning":
+                    mcn = new BlightningALA();
+                    break;
+                # endregion
+
+                # region Blister Beetle
+                case "Blister Beetle":
+                    mcn = new BlisterBeetleALA();
+                    break;
+                # endregion
+
+                # region Blood Cultist
+                case "Blood Cultist":
+                    mcn = new BloodCultistALA();
+                    break;
+                # endregion
+
+                # region Bloodpyre Elemental
+                case "Bloodpyre Elemental":
+                    mcn = new BloodpyreElementalALA();
+                    break;
+                # endregion
+
+                # region Bloodthorn Taunter
+                case "Bloodthorn Taunter":
+                    mcn = new BloodthornTaunterALA();
+                    break;
+                # endregion
+
+                //# region Bone Splinters
+                //case "Bone Splinters":
+                //mcn = new BoneSplintersALA();
+                //break;
+                //# endregion
+
+                # region Branching Bolt
+                case "Branching Bolt":
+                    mcn = new BranchingBoltALA();
+                    break;
+                # endregion
+
+                # region Brilliant Ultimatum
+                case "Brilliant Ultimatum":
+                    mcn = new BrilliantUltimatumALA();
+                    break;
+                # endregion
+
+                # region Broodmate Dragon
+                case "Broodmate Dragon":
+                    mcn = new BroodmateDragonALA();
+                    break;
+                # endregion
+
+                # region Bull Cerodon
+                case "Bull Cerodon":
+                    mcn = new BullCerodonALA();
+                    break;
+                # endregion
+
+                # region Caldera Hellion
+                case "Caldera Hellion":
+                    mcn = new CalderaHellionALA();
+                    break;
+                # endregion
+
+                # region Call to Heel
+                case "Call to Heel":
+                    mcn = new CalltoHeelALA();
+                    break;
+                # endregion
+
+                # region Cancel
+                case "Cancel":
+                    mcn = new CancelALA();
+                    break;
+                # endregion
+
+                # region Carrion Thrash
+                case "Carrion Thrash":
+                    mcn = new CarrionThrashALA();
+                    break;
+                # endregion
+
+                # region Cathartic Adept
+                case "Cathartic Adept":
+                    mcn = new CatharticAdeptALA();
+                    break;
+                # endregion
+
+                # region Cavern Thoctar
+                case "Cavern Thoctar":
+                    mcn = new CavernThoctarALA();
+                    break;
+                # endregion
+
+                # region Clarion Ultimatum
+                case "Clarion Ultimatum":
+                    mcn = new ClarionUltimatumALA();
+                    break;
+                # endregion
+
+                # region Cloudheath Drake
+                case "Cloudheath Drake":
+                    mcn = new CloudheathDrakeALA();
+                    break;
+                # endregion
+
+                # region Coma Veil
+                case "Coma Veil":
+                    mcn = new ComaVeilALA();
+                    break;
+                # endregion
+
+                # region Corpse Connoisseur
+                case "Corpse Connoisseur":
+                    mcn = new CorpseConnoisseurALA();
+                    break;
+                # endregion
+
+                # region Courier's Capsule
+                case "Courier's Capsule":
+                    mcn = new CouriersCapsuleALA();
+                    break;
+                # endregion
+
+                # region Court Archers
+                case "Court Archers":
+                    mcn = new CourtArchersALA();
+                    break;
+                # endregion
+
+                # region Covenant of Minds
+                case "Covenant of Minds":
+                    mcn = new CovenantofMindsALA();
+                    break;
+                # endregion
+
+                # region Cradle of Vitality
+                case "Cradle of Vitality":
+                    mcn = new CradleofVitalityALA();
+                    break;
+                # endregion
+
+                # region Crucible of Fire
+                case "Crucible of Fire":
+                    mcn = new CrucibleofFireALA();
+                    break;
+                # endregion
+
+                # region Cruel Ultimatum
+                case "Cruel Ultimatum":
+                    mcn = new CruelUltimatumALA();
+                    break;
+                # endregion
+
+                # region Crumbling Necropolis
+                case "Crumbling Necropolis":
+                    mcn = new CrumblingNecropolisALA();
+                    break;
+                # endregion
+
+                # region Cunning Lethemancer
+                case "Cunning Lethemancer":
+                    mcn = new CunningLethemancerALA();
+                    break;
+                # endregion
+
+                # region Cylian Elf
+                case "Cylian Elf":
+                    mcn = new CylianElfALA();
+                    break;
+                # endregion
+
+                # region Dawnray Archer
+                case "Dawnray Archer":
+                    mcn = new DawnrayArcherALA();
+                    break;
+                # endregion
+
+                # region Death Baron
+                case "Death Baron":
+                    mcn = new DeathBaronALA();
+                    break;
+                # endregion
+
+                # region Deathgreeter
+                case "Deathgreeter":
+                    mcn = new DeathgreeterALA();
+                    break;
+                # endregion
+
+                # region Deft Duelist
+                case "Deft Duelist":
+                    mcn = new DeftDuelistALA();
+                    break;
+                # endregion
+
+                # region Demon's Herald
+                case "Demon's Herald":
+                    mcn = new DemonsHeraldALA();
+                    break;
+                # endregion
+
+                # region Dispeller's Capsule
+                case "Dispeller's Capsule":
+                    mcn = new DispellersCapsuleALA();
+                    break;
+                # endregion
+
+                # region Dragon Fodder
+                case "Dragon Fodder":
+                    mcn = new DragonFodderALA();
+                    break;
+                # endregion
+
+                # region Dragon's Herald
+                case "Dragon's Herald":
+                    mcn = new DragonsHeraldALA();
+                    break;
+                # endregion
+
+                # region Dreg Reaver
+                case "Dreg Reaver":
+                    mcn = new DregReaverALA();
+                    break;
+                # endregion
+
+                # region Dregscape Zombie
+                case "Dregscape Zombie":
+                    mcn = new DregscapeZombieALA();
+                    break;
+                # endregion
+
+                # region Druid of the Anima
+                case "Druid of the Anima":
+                    mcn = new DruidoftheAnimaALA();
+                    break;
+                # endregion
+
+                # region Drumhunter
+                case "Drumhunter":
+                    mcn = new DrumhunterALA();
+                    break;
+                # endregion
+
+                # region Elspeth, Knight-Errant
+                case "Elspeth, Knight-Errant":
+                    mcn = new ElspethKnightErrantALA();
+                    break;
+                # endregion
+
+                # region Elvish Visionary
+                case "Elvish Visionary":
+                    mcn = new ElvishVisionaryALA();
+                    break;
+                # endregion
+
+                # region Empyrial Archangel
+                case "Empyrial Archangel":
+                    mcn = new EmpyrialArchangelALA();
+                    break;
+                # endregion
+
+                # region Esper Battlemage
+                case "Esper Battlemage":
+                    mcn = new EsperBattlemageALA();
+                    break;
+                # endregion
+
+                # region Esper Charm
+                case "Esper Charm":
+                    mcn = new EsperCharmALA();
+                    break;
+                # endregion
+
+                # region Esper Panorama
+                case "Esper Panorama":
+                    mcn = new EsperPanoramaALA();
+                    break;
+                # endregion
+
+                # region Etherium Astrolabe
+                case "Etherium Astrolabe":
+                    mcn = new EtheriumAstrolabeALA();
+                    break;
+                # endregion
+
+                # region Etherium Sculptor
+                case "Etherium Sculptor":
+                    mcn = new EtheriumSculptorALA();
+                    break;
+                # endregion
+
+                # region Ethersworn Canonist
+                case "Ethersworn Canonist":
+                    mcn = new EtherswornCanonistALA();
+                    break;
+                # endregion
+
+                # region Excommunicate
+                case "Excommunicate":
+                    mcn = new ExcommunicateALA();
+                    break;
+                # endregion
+
+                # region Executioner's Capsule
+                case "Executioner's Capsule":
+                    mcn = new ExecutionersCapsuleALA();
+                    break;
+                # endregion
+
+                # region Exuberant Firestoker
+                case "Exuberant Firestoker":
+                    mcn = new ExuberantFirestokerALA();
+                    break;
+                # endregion
+
+                # region Fatestitcher
+                case "Fatestitcher":
+                    mcn = new FatestitcherALA();
+                    break;
+                # endregion
+
+                # region Feral Hydra
+                case "Feral Hydra":
+                    mcn = new FeralHydraALA();
+                    break;
+                # endregion
+
+                # region Filigree Sages
+                case "Filigree Sages":
+                    mcn = new FiligreeSagesALA();
+                    break;
+                # endregion
+
+                # region Fire-Field Ogre
+                case "Fire-Field Ogre":
+                    mcn = new FireFieldOgreALA();
+                    break;
+                # endregion
+
+                # region Flameblast Dragon
+                case "Flameblast Dragon":
+                    mcn = new FlameblastDragonALA();
+                    break;
+                # endregion
+
+                # region Fleshbag Marauder
+                case "Fleshbag Marauder":
+                    mcn = new FleshbagMarauderALA();
+                    break;
+                # endregion
+
+                //# region Forest
+                //case "Forest":
+                //mcn = new ForestALA();
+                //break;
+                //# endregion
+
+                # region Gather Specimens
+                case "Gather Specimens":
+                    mcn = new GatherSpecimensALA();
+                    break;
+                # endregion
+
+                # region Gift of the Gargantuan
+                case "Gift of the Gargantuan":
+                    mcn = new GiftoftheGargantuanALA();
+                    break;
+                # endregion
+
+                # region Glaze Fiend
+                case "Glaze Fiend":
+                    mcn = new GlazeFiendALA();
+                    break;
+                # endregion
+
+                # region Goblin Assault
+                case "Goblin Assault":
+                    mcn = new GoblinAssaultALA();
+                    break;
+                # endregion
+
+                # region Goblin Deathraiders
+                case "Goblin Deathraiders":
+                    mcn = new GoblinDeathraidersALA();
+                    break;
+                # endregion
+
+                # region Goblin Mountaineer
+                case "Goblin Mountaineer":
+                    mcn = new GoblinMountaineerALA();
+                    break;
+                # endregion
+
+                # region Godsire
+                case "Godsire":
+                    mcn = new GodsireALA();
+                    break;
+                # endregion
+
+                # region Godtoucher
+                case "Godtoucher":
+                    mcn = new GodtoucherALA();
+                    break;
+                # endregion
+
+                # region Grixis Battlemage
+                case "Grixis Battlemage":
+                    mcn = new GrixisBattlemageALA();
+                    break;
+                # endregion
+
+                # region Grixis Charm
+                case "Grixis Charm":
+                    mcn = new GrixisCharmALA();
+                    break;
+                # endregion
+
+                # region Grixis Panorama
+                case "Grixis Panorama":
+                    mcn = new GrixisPanoramaALA();
+                    break;
+                # endregion
+
+                # region Guardians of Akrasa
+                case "Guardians of Akrasa":
+                    mcn = new GuardiansofAkrasaALA();
+                    break;
+                # endregion
+
+                # region Gustrider Exuberant
+                case "Gustrider Exuberant":
+                    mcn = new GustriderExuberantALA();
+                    break;
+                # endregion
+
+                # region Hellkite Overlord
+                case "Hellkite Overlord":
+                    mcn = new HellkiteOverlordALA();
+                    break;
+                # endregion
+
+                # region Hell's Thunder
+                case "Hell's Thunder":
+                    mcn = new HellsThunderALA();
+                    break;
+                # endregion
+
+                # region Hindering Light
+                case "Hindering Light":
+                    mcn = new HinderingLightALA();
+                    break;
+                # endregion
+
+                # region Hissing Iguanar
+                case "Hissing Iguanar":
+                    mcn = new HissingIguanarALA();
+                    break;
+                # endregion
+
+                # region Immortal Coil
+                case "Immortal Coil":
+                    mcn = new ImmortalCoilALA();
+                    break;
+                # endregion
+
+                # region Incurable Ogre
+                case "Incurable Ogre":
+                    mcn = new IncurableOgreALA();
+                    break;
+                # endregion
+
+                # region Infest
+                case "Infest":
+                    mcn = new InfestALA();
+                    break;
+                # endregion
+
+                # region Invincible Hymn
+                case "Invincible Hymn":
+                    mcn = new InvincibleHymnALA();
+                    break;
+                # endregion
+
+                //# region Island
+                //case "Island":
+                //mcn = new IslandALA();
+                //break;
+                //# endregion
+
+                # region Jhessian Infiltrator
+                case "Jhessian Infiltrator":
+                    mcn = new JhessianInfiltratorALA();
+                    break;
+                # endregion
+
+                # region Jhessian Lookout
+                case "Jhessian Lookout":
+                    mcn = new JhessianLookoutALA();
+                    break;
+                # endregion
+
+                # region Jund Battlemage
+                case "Jund Battlemage":
+                    mcn = new JundBattlemageALA();
+                    break;
+                # endregion
+
+                # region Jund Charm
+                case "Jund Charm":
+                    mcn = new JundCharmALA();
+                    break;
+                # endregion
+
+                # region Jund Panorama
+                case "Jund Panorama":
+                    mcn = new JundPanoramaALA();
+                    break;
+                # endregion
+
+                # region Jungle Shrine
+                case "Jungle Shrine":
+                    mcn = new JungleShrineALA();
+                    break;
+                # endregion
+
+                # region Jungle Weaver
+                case "Jungle Weaver":
+                    mcn = new JungleWeaverALA();
+                    break;
+                # endregion
+
+                # region Kathari Screecher
+                case "Kathari Screecher":
+                    mcn = new KathariScreecherALA();
+                    break;
+                # endregion
+
+                # region Kederekt Creeper
+                case "Kederekt Creeper":
+                    mcn = new KederektCreeperALA();
+                    break;
+                # endregion
+
+                # region Kederekt Leviathan
+                case "Kederekt Leviathan":
+                    mcn = new KederektLeviathanALA();
+                    break;
+                # endregion
+
+                # region Keeper of Progenitus
+                case "Keeper of Progenitus":
+                    mcn = new KeeperofProgenitusALA();
+                    break;
+                # endregion
+
+                # region Kiss of the Amesha
+                case "Kiss of the Amesha":
+                    mcn = new KissoftheAmeshaALA();
+                    break;
+                # endregion
+
+                # region Knight of the Skyward Eye
+                case "Knight of the Skyward Eye":
+                    mcn = new KnightoftheSkywardEyeALA();
+                    break;
+                # endregion
+
+                # region Knight of the White Orchid
+                case "Knight of the White Orchid":
+                    mcn = new KnightoftheWhiteOrchidALA();
+                    break;
+                # endregion
+
+                # region Knight-Captain of Eos
+                case "Knight-Captain of Eos":
+                    mcn = new KnightCaptainofEosALA();
+                    break;
+                # endregion
+
+                # region Kresh the Bloodbraided
+                case "Kresh the Bloodbraided":
+                    mcn = new KreshtheBloodbraidedALA();
+                    break;
+                # endregion
+
+                # region Lich's Mirror
+                case "Lich's Mirror":
+                    mcn = new LichsMirrorALA();
+                    break;
+                # endregion
+
+                # region Lightning Talons
+                case "Lightning Talons":
+                    mcn = new LightningTalonsALA();
+                    break;
+                # endregion
+
+                # region Lush Growth
+                case "Lush Growth":
+                    mcn = new LushGrowthALA();
+                    break;
+                # endregion
+
+                # region Magma Spray
+                case "Magma Spray":
+                    mcn = new MagmaSprayALA();
+                    break;
+                # endregion
+
+                # region Manaplasm
+                case "Manaplasm":
+                    mcn = new ManaplasmALA();
+                    break;
+                # endregion
+
+                # region Marble Chalice
+                case "Marble Chalice":
+                    mcn = new MarbleChaliceALA();
+                    break;
+                # endregion
+
+                # region Master of Etherium
+                case "Master of Etherium":
+                    mcn = new MasterofEtheriumALA();
+                    break;
+                # endregion
+
+                # region Mayael the Anima
+                case "Mayael the Anima":
+                    mcn = new MayaeltheAnimaALA();
+                    break;
+                # endregion
+
+                # region Memory Erosion
+                case "Memory Erosion":
+                    mcn = new MemoryErosionALA();
+                    break;
+                # endregion
+
+                # region Metallurgeon
+                case "Metallurgeon":
+                    mcn = new MetallurgeonALA();
+                    break;
+                # endregion
+
+                # region Mighty Emergence
+                case "Mighty Emergence":
+                    mcn = new MightyEmergenceALA();
+                    break;
+                # endregion
+
+                # region Mindlock Orb
+                case "Mindlock Orb":
+                    mcn = new MindlockOrbALA();
+                    break;
+                # endregion
+
+                # region Minion Reflector
+                case "Minion Reflector":
+                    mcn = new MinionReflectorALA();
+                    break;
+                # endregion
+
+                # region Mosstodon
+                case "Mosstodon":
+                    mcn = new MosstodonALA();
+                    break;
+                # endregion
+
+                //# region Mountain
+                //case "Mountain":
+                //mcn = new MountainALA();
+                //break;
+                //# endregion
+
+                # region Mycoloth
+                case "Mycoloth":
+                    mcn = new MycolothALA();
+                    break;
+                # endregion
+
+                # region Naturalize
+                case "Naturalize":
+                    mcn = new NaturalizeALA();
+                    break;
+                # endregion
+
+                # region Naya Battlemage
+                case "Naya Battlemage":
+                    mcn = new NayaBattlemageALA();
+                    break;
+                # endregion
+
+                # region Naya Charm
+                case "Naya Charm":
+                    mcn = new NayaCharmALA();
+                    break;
+                # endregion
+
+                # region Naya Panorama
+                case "Naya Panorama":
+                    mcn = new NayaPanoramaALA();
+                    break;
+                # endregion
+
+                # region Necrogenesis
+                case "Necrogenesis":
+                    mcn = new NecrogenesisALA();
+                    break;
+                # endregion
+
+                # region Obelisk of Bant
+                case "Obelisk of Bant":
+                    mcn = new ObeliskofBantALA();
+                    break;
+                # endregion
+
+                # region Obelisk of Esper
+                case "Obelisk of Esper":
+                    mcn = new ObeliskofEsperALA();
+                    break;
+                # endregion
+
+                # region Obelisk of Grixis
+                case "Obelisk of Grixis":
+                    mcn = new ObeliskofGrixisALA();
+                    break;
+                # endregion
+
+                # region Obelisk of Jund
+                case "Obelisk of Jund":
+                    mcn = new ObeliskofJundALA();
+                    break;
+                # endregion
+
+                # region Obelisk of Naya
+                case "Obelisk of Naya":
+                    mcn = new ObeliskofNayaALA();
+                    break;
+                # endregion
+
+                //# region Oblivion Ring
+                //case "Oblivion Ring":
+                //    mcn = new OblivionRingALA();
+                //    break;
+                //# endregion
+
+                # region Onyx Goblet
+                case "Onyx Goblet":
+                    mcn = new OnyxGobletALA();
+                    break;
+                # endregion
+
+                # region Ooze Garden
+                case "Ooze Garden":
+                    mcn = new OozeGardenALA();
+                    break;
+                # endregion
+
+                # region Outrider of Jhess
+                case "Outrider of Jhess":
+                    mcn = new OutriderofJhessALA();
+                    break;
+                # endregion
+
+                //# region Plains
+                //case "Plains":
+                //mcn = new PlainsALA();
+                //break;
+                //# endregion
+
+                # region Predator Dragon
+                case "Predator Dragon":
+                    mcn = new PredatorDragonALA();
+                    break;
+                # endregion
+
+                # region Prince of Thralls
+                case "Prince of Thralls":
+                    mcn = new PrinceofThrallsALA();
+                    break;
+                # endregion
+
+                # region Protomatter Powder
+                case "Protomatter Powder":
+                    mcn = new ProtomatterPowderALA();
+                    break;
+                # endregion
+
+                # region Punish Ignorance
+                case "Punish Ignorance":
+                    mcn = new PunishIgnoranceALA();
+                    break;
+                # endregion
+
+                # region Puppet Conjurer
+                case "Puppet Conjurer":
+                    mcn = new PuppetConjurerALA();
+                    break;
+                # endregion
+
+                # region Qasali Ambusher
+                case "Qasali Ambusher":
+                    mcn = new QasaliAmbusherALA();
+                    break;
+                # endregion
+
+                # region Quietus Spike
+                case "Quietus Spike":
+                    mcn = new QuietusSpikeALA();
+                    break;
+                # endregion
+
+                # region Rafiq of the Many
+                case "Rafiq of the Many":
+                    mcn = new RafiqoftheManyALA();
+                    break;
+                # endregion
+
+                # region Rakeclaw Gargantuan
+                case "Rakeclaw Gargantuan":
+                    mcn = new RakeclawGargantuanALA();
+                    break;
+                # endregion
+
+                # region Ranger of Eos
+                case "Ranger of Eos":
+                    mcn = new RangerofEosALA();
+                    break;
+                # endregion
+
+                # region Realm Razer
+                case "Realm Razer":
+                    mcn = new RealmRazerALA();
+                    break;
+                # endregion
+
+                # region Relic of Progenitus
+                case "Relic of Progenitus":
+                    mcn = new RelicofProgenitusALA();
+                    break;
+                # endregion
+
+                # region Resounding Roar
+                case "Resounding Roar":
+                    mcn = new ResoundingRoarALA();
+                    break;
+                # endregion
+
+                # region Resounding Scream
+                case "Resounding Scream":
+                    mcn = new ResoundingScreamALA();
+                    break;
+                # endregion
+
+                # region Resounding Silence
+                case "Resounding Silence":
+                    mcn = new ResoundingSilenceALA();
+                    break;
+                # endregion
+
+                # region Resounding Thunder
+                case "Resounding Thunder":
+                    mcn = new ResoundingThunderALA();
+                    break;
+                # endregion
+
+                # region Resounding Wave
+                case "Resounding Wave":
+                    mcn = new ResoundingWaveALA();
+                    break;
+                # endregion
+
+                # region Rhox Charger
+                case "Rhox Charger":
+                    mcn = new RhoxChargerALA();
+                    break;
+                # endregion
+
+                # region Rhox War Monk
+                case "Rhox War Monk":
+                    mcn = new RhoxWarMonkALA();
+                    break;
+                # endregion
+
+                # region Ridge Rannet
+                case "Ridge Rannet":
+                    mcn = new RidgeRannetALA();
+                    break;
+                # endregion
+
+                # region Rip-Clan Crasher
+                case "Rip-Clan Crasher":
+                    mcn = new RipClanCrasherALA();
+                    break;
+                # endregion
+
+                # region Rockcaster Platoon
+                case "Rockcaster Platoon":
+                    mcn = new RockcasterPlatoonALA();
+                    break;
+                # endregion
+
+                # region Rockslide Elemental
+                case "Rockslide Elemental":
+                    mcn = new RockslideElementalALA();
+                    break;
+                # endregion
+
+                # region Sacellum Godspeaker
+                case "Sacellum Godspeaker":
+                    mcn = new SacellumGodspeakerALA();
+                    break;
+                # endregion
+
+                # region Salvage Titan
+                case "Salvage Titan":
+                    mcn = new SalvageTitanALA();
+                    break;
+                # endregion
+
+                # region Sanctum Gargoyle
+                case "Sanctum Gargoyle":
+                    mcn = new SanctumGargoyleALA();
+                    break;
+                # endregion
+
+                # region Sangrite Surge
+                case "Sangrite Surge":
+                    mcn = new SangriteSurgeALA();
+                    break;
+                # endregion
+
+                # region Sarkhan Vol
+                case "Sarkhan Vol":
+                    mcn = new SarkhanVolALA();
+                    break;
+                # endregion
+
+                # region Savage Hunger
+                case "Savage Hunger":
+                    mcn = new SavageHungerALA();
+                    break;
+                # endregion
+
+                # region Savage Lands
+                case "Savage Lands":
+                    mcn = new SavageLandsALA();
+                    break;
+                # endregion
+
+                # region Scavenger Drake
+                case "Scavenger Drake":
+                    mcn = new ScavengerDrakeALA();
+                    break;
+                # endregion
+
+                # region Scourge Devil
+                case "Scourge Devil":
+                    mcn = new ScourgeDevilALA();
+                    break;
+                # endregion
+
+                # region Scourglass
+                case "Scourglass":
+                    mcn = new ScourglassALA();
+                    break;
+                # endregion
+
+                # region Seaside Citadel
+                case "Seaside Citadel":
+                    mcn = new SeasideCitadelALA();
+                    break;
+                # endregion
+
+                # region Sedraxis Specter
+                case "Sedraxis Specter":
+                    mcn = new SedraxisSpecterALA();
+                    break;
+                # endregion
+
+                # region Sedris, the Traitor King
+                case "Sedris, the Traitor King":
+                    mcn = new SedristheTraitorKingALA();
+                    break;
+                # endregion
+
+                # region Shadowfeed
+                case "Shadowfeed":
+                    mcn = new ShadowfeedALA();
+                    break;
+                # endregion
+
+                # region Sharding Sphinx
+                case "Sharding Sphinx":
+                    mcn = new ShardingSphinxALA();
+                    break;
+                # endregion
+
+                # region Sharuum the Hegemon
+                case "Sharuum the Hegemon":
+                    mcn = new SharuumtheHegemonALA();
+                    break;
+                # endregion
+
+                # region Shore Snapper
+                case "Shore Snapper":
+                    mcn = new ShoreSnapperALA();
+                    break;
+                # endregion
+
+                # region Sighted-Caste Sorcerer
+                case "Sighted-Caste Sorcerer":
+                    mcn = new SightedCasteSorcererALA();
+                    break;
+                # endregion
+
+                # region Sigil Blessing
+                case "Sigil Blessing":
+                    mcn = new SigilBlessingALA();
+                    break;
+                # endregion
+
+                # region Sigil of Distinction
+                case "Sigil of Distinction":
+                    mcn = new SigilofDistinctionALA();
+                    break;
+                # endregion
+
+                # region Sigiled Paladin
+                case "Sigiled Paladin":
+                    mcn = new SigiledPaladinALA();
+                    break;
+                # endregion
+
+                # region Skeletal Kathari
+                case "Skeletal Kathari":
+                    mcn = new SkeletalKathariALA();
+                    break;
+                # endregion
+
+                # region Skeletonize
+                case "Skeletonize":
+                    mcn = new SkeletonizeALA();
+                    break;
+                # endregion
+
+                # region Skill Borrower
+                case "Skill Borrower":
+                    mcn = new SkillBorrowerALA();
+                    break;
+                # endregion
+
+                # region Skullmulcher
+                case "Skullmulcher":
+                    mcn = new SkullmulcherALA();
+                    break;
+                # endregion
+
+                # region Soul's Fire
+                case "Soul's Fire":
+                    mcn = new SoulsFireALA();
+                    break;
+                # endregion
+
+                # region Soul's Grace
+                case "Soul's Grace":
+                    mcn = new SoulsGraceALA();
+                    break;
+                # endregion
+
+                # region Soul's Might
+                case "Soul's Might":
+                    mcn = new SoulsMightALA();
+                    break;
+                # endregion
+
+                # region Spearbreaker Behemoth
+                case "Spearbreaker Behemoth":
+                    mcn = new SpearbreakerBehemothALA();
+                    break;
+                # endregion
+
+                # region Spell Snip
+                case "Spell Snip":
+                    mcn = new SpellSnipALA();
+                    break;
+                # endregion
+
+                # region Sphinx Sovereign
+                case "Sphinx Sovereign":
+                    mcn = new SphinxSovereignALA();
+                    break;
+                # endregion
+
+                # region Sphinx's Herald
+                case "Sphinx's Herald":
+                    mcn = new SphinxsHeraldALA();
+                    break;
+                # endregion
+
+                # region Sprouting Thrinax
+                case "Sprouting Thrinax":
+                    mcn = new SproutingThrinaxALA();
+                    break;
+                # endregion
+
+                # region Steelclad Serpent
+                case "Steelclad Serpent":
+                    mcn = new SteelcladSerpentALA();
+                    break;
+                # endregion
+
+                # region Steward of Valeron
+                case "Steward of Valeron":
+                    mcn = new StewardofValeronALA();
+                    break;
+                # endregion
+
+                # region Stoic Angel
+                case "Stoic Angel":
+                    mcn = new StoicAngelALA();
+                    break;
+                # endregion
+
+                # region Sunseed Nurturer
+                case "Sunseed Nurturer":
+                    mcn = new SunseedNurturerALA();
+                    break;
+                # endregion
+
+                //# region Swamp
+                //case "Swamp":
+                //mcn = new SwampALA();
+                //break;
+                //# endregion
+
+                # region Swerve
+                case "Swerve":
+                    mcn = new SwerveALA();
+                    break;
+                # endregion
+
+                # region Tar Fiend
+                case "Tar Fiend":
+                    mcn = new TarFiendALA();
+                    break;
+                # endregion
+
+                # region Tezzeret the Seeker
+                case "Tezzeret the Seeker":
+                    mcn = new TezzerettheSeekerALA();
+                    break;
+                # endregion
+
+                # region Thorn-Thrash Viashino
+                case "Thorn-Thrash Viashino":
+                    mcn = new ThornThrashViashinoALA();
+                    break;
+                # endregion
+
+                # region Thoughtcutter Agent
+                case "Thoughtcutter Agent":
+                    mcn = new ThoughtcutterAgentALA();
+                    break;
+                # endregion
+
+                # region Thunder-Thrash Elder
+                case "Thunder-Thrash Elder":
+                    mcn = new ThunderThrashElderALA();
+                    break;
+                # endregion
+
+                # region Tidehollow Sculler
+                case "Tidehollow Sculler":
+                    mcn = new TidehollowScullerALA();
+                    break;
+                # endregion
+
+                # region Tidehollow Strix
+                case "Tidehollow Strix":
+                    mcn = new TidehollowStrixALA();
+                    break;
+                # endregion
+
+                # region Titanic Ultimatum
+                case "Titanic Ultimatum":
+                    mcn = new TitanicUltimatumALA();
+                    break;
+                # endregion
+
+                # region Topan Ascetic
+                case "Topan Ascetic":
+                    mcn = new TopanAsceticALA();
+                    break;
+                # endregion
+
+                # region Tortoise Formation
+                case "Tortoise Formation":
+                    mcn = new TortoiseFormationALA();
+                    break;
+                # endregion
+
+                # region Tower Gargoyle
+                case "Tower Gargoyle":
+                    mcn = new TowerGargoyleALA();
+                    break;
+                # endregion
+
+                # region Undead Leotau
+                case "Undead Leotau":
+                    mcn = new UndeadLeotauALA();
+                    break;
+                # endregion
+
+                # region Vectis Silencers
+                case "Vectis Silencers":
+                    mcn = new VectisSilencersALA();
+                    break;
+                # endregion
+
+                # region Vein Drinker
+                case "Vein Drinker":
+                    mcn = new VeinDrinkerALA();
+                    break;
+                # endregion
+
+                # region Viashino Skeleton
+                case "Viashino Skeleton":
+                    mcn = new ViashinoSkeletonALA();
+                    break;
+                # endregion
+
+                # region Vicious Shadows
+                case "Vicious Shadows":
+                    mcn = new ViciousShadowsALA();
+                    break;
+                # endregion
+
+                # region Violent Ultimatum
+                case "Violent Ultimatum":
+                    mcn = new ViolentUltimatumALA();
+                    break;
+                # endregion
+
+                # region Viscera Dragger
+                case "Viscera Dragger":
+                    mcn = new VisceraDraggerALA();
+                    break;
+                # endregion
+
+                # region Vithian Stinger
+                case "Vithian Stinger":
+                    mcn = new VithianStingerALA();
+                    break;
+                # endregion
+
+                # region Volcanic Submersion
+                case "Volcanic Submersion":
+                    mcn = new VolcanicSubmersionALA();
+                    break;
+                # endregion
+
+                # region Waveskimmer Aven
+                case "Waveskimmer Aven":
+                    mcn = new WaveskimmerAvenALA();
+                    break;
+                # endregion
+
+                # region Welkin Guide
+                case "Welkin Guide":
+                    mcn = new WelkinGuideALA();
+                    break;
+                # endregion
+
+                # region Where Ancients Tread
+                case "Where Ancients Tread":
+                    mcn = new WhereAncientsTreadALA();
+                    break;
+                # endregion
+
+                # region Wild Nacatl
+                case "Wild Nacatl":
+                    mcn = new WildNacatlALA();
+                    break;
+                # endregion
+
+                # region Windwright Mage
+                case "Windwright Mage":
+                    mcn = new WindwrightMageALA();
+                    break;
+                # endregion
+
+                # region Woolly Thoctar
+                case "Woolly Thoctar":
+                    mcn = new WoollyThoctarALA();
+                    break;
+                # endregion
+
+                # region Yoked Plowbeast
+                case "Yoked Plowbeast":
+                    mcn = new YokedPlowbeastALA();
+                    break;
+                # endregion
+                # endregion
+
                 # region Born of the Gods
                 case "Acolyte's Reward":
                     mcn = new AcolytesReward();
@@ -14420,9 +15826,9 @@ namespace MagicProgram
                     mcn = new LightningDiadem();
                     break;
 
-                case "Magma Spray":
-                    mcn = new MagmaSpray();
-                    break;
+                //case "Magma Spray":
+                //    mcn = new MagmaSpray();
+                //    break;
 
                 case "Mana Confluence":
                     mcn = new ManaConfluence();
@@ -15834,11 +17240,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Cancel
-                case "Cancel":
-                    mcn = new Cancel();
-                    break;
-                # endregion
+                //# region Cancel
+                //case "Cancel":
+                //    mcn = new Cancel();
+                //    break;
+                //# endregion
 
                 # region Carnival Hellsteed
                 case "Carnival Hellsteed":
@@ -18062,11 +19468,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Naturalize
-                case "Naturalize":
-                    mcn = new Naturalize();
-                    break;
-                # endregion
+                //# region Naturalize
+                //case "Naturalize":
+                //    mcn = new Naturalize();
+                //    break;
+                //# endregion
 
                 # region Nav Squad Commandos
                 case "Nav Squad Commandos":
@@ -20292,11 +21698,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Lightning Talons
-                case "Lightning Talons":
-                    mcn = new LightningTalons();
-                    break;
-                # endregion
+                //# region Lightning Talons
+                //case "Lightning Talons":
+                //    mcn = new LightningTalons();
+                //    break;
+                //# endregion
 
                 # region Liliana of the Dark Realms
                 case "Liliana of the Dark Realms":
@@ -21303,11 +22709,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Crucible of Fire
-                case "Crucible of Fire":
-                    mcn = new CrucibleofFireM15();
-                    break;
-                # endregion
+                //# region Crucible of Fire
+                //case "Crucible of Fire":
+                //    mcn = new CrucibleofFireM15();
+                //    break;
+                //# endregion
 
                 # region Cruel Sadist
                 case "Cruel Sadist":
@@ -26068,11 +27474,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Dispeller's Capsule
-                case "Dispeller's Capsule":
-                    mcn = new DispellersCapsuleMMA();
-                    break;
-                # endregion
+                //# region Dispeller's Capsule
+                //case "Dispeller's Capsule":
+                //    mcn = new DispellersCapsuleMMA();
+                //    break;
+                //# endregion
 
                 # region Divinity of Pride
                 case "Divinity of Pride":
@@ -26134,11 +27540,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Elspeth, Knight-Errant
-                case "Elspeth, Knight-Errant":
-                    mcn = new ElspethKnightErrantMMA();
-                    break;
-                # endregion
+                //# region Elspeth, Knight-Errant
+                //case "Elspeth, Knight-Errant":
+                //    mcn = new ElspethKnightErrantMMA();
+                //    break;
+                //# endregion
 
                 # region Empty the Warrens
                 case "Empty the Warrens":
@@ -26188,23 +27594,23 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Etherium Sculptor
-                case "Etherium Sculptor":
-                    mcn = new EtheriumSculptorMMA();
-                    break;
-                # endregion
+                //# region Etherium Sculptor
+                //case "Etherium Sculptor":
+                //    mcn = new EtheriumSculptorMMA();
+                //    break;
+                //# endregion
 
-                # region Ethersworn Canonist
-                case "Ethersworn Canonist":
-                    mcn = new EtherswornCanonistMMA();
-                    break;
-                # endregion
+                //# region Ethersworn Canonist
+                //case "Ethersworn Canonist":
+                //    mcn = new EtherswornCanonistMMA();
+                //    break;
+                //# endregion
 
-                # region Executioner's Capsule
-                case "Executioner's Capsule":
-                    mcn = new ExecutionersCapsuleMMA();
-                    break;
-                # endregion
+                //# region Executioner's Capsule
+                //case "Executioner's Capsule":
+                //    mcn = new ExecutionersCapsuleMMA();
+                //    break;
+                //# endregion
 
                 # region Extirpate
                 case "Extirpate":
@@ -26728,11 +28134,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Relic of Progenitus
-                case "Relic of Progenitus":
-                    mcn = new RelicofProgenitusMMA();
-                    break;
-                # endregion
+                //# region Relic of Progenitus
+                //case "Relic of Progenitus":
+                //    mcn = new RelicofProgenitusMMA();
+                //    break;
+                //# endregion
 
                 # region Reveillark
                 case "Reveillark":
@@ -26788,11 +28194,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Sanctum Gargoyle
-                case "Sanctum Gargoyle":
-                    mcn = new SanctumGargoyleMMA();
-                    break;
-                # endregion
+                //# region Sanctum Gargoyle
+                //case "Sanctum Gargoyle":
+                //    mcn = new SanctumGargoyleMMA();
+                //    break;
+                //# endregion
 
                 # region Sandsower
                 case "Sandsower":
@@ -26800,11 +28206,11 @@ namespace MagicProgram
                     break;
                 # endregion
 
-                # region Sarkhan Vol
-                case "Sarkhan Vol":
-                    mcn = new SarkhanVolMMA();
-                    break;
-                # endregion
+                //# region Sarkhan Vol
+                //case "Sarkhan Vol":
+                //    mcn = new SarkhanVolMMA();
+                //    break;
+                //# endregion
 
                 //# region Scion of Oona
                 //case "Scion of Oona":
@@ -27022,11 +28428,11 @@ namespace MagicProgram
                 //    break;
                 //# endregion
 
-                # region Tidehollow Sculler
-                case "Tidehollow Sculler":
-                    mcn = new TidehollowScullerMMA();
-                    break;
-                # endregion
+                //# region Tidehollow Sculler
+                //case "Tidehollow Sculler":
+                //    mcn = new TidehollowScullerMMA();
+                //    break;
+                //# endregion
 
                 # region Tombstalker
                 case "Tombstalker":
