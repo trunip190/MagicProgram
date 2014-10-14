@@ -8,9 +8,11 @@ Protean Hydra#4
 Explore#3
 Solidarity of Heroes#2
 Favor of the Overbeing#3
-Crocanura#4
+Crocanura#3
 Predator's Rapport#2
-Master Biomancer#1
-Ooze Flux#4
-Hardened Scales#4
 Vorel of the Hull Clade#1
+Master Biomancer#1
+Ooze Flux#3
+Fathom Mage#1
+Hardened Scales#4
+Prophet of Kruphix#1
