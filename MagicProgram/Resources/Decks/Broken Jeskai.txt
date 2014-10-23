@@ -1,20 +1,21 @@
 Mana Confluence#4
-Misty Rainforest#4
-Verdant Catacombs#2
-Breeding Pool#1
-Stomping Ground#1
-Temple Garden#2
-Island#1
-Forest#1
+Verdant Catacombs#4
+Dryad Arbor#4
+Breeding Pool#2
+Stomping Ground#2
+Temple Garden#1
+Wooded Foothills#2
+Sylvan Caryatid#4
 Noble Hierarch#4
-Cerulean Wisps#4
-Crimson Wisps#2
+Birds of Paradise#4
+Arbor Elf#2
+Noxious Revival#1
+Manamorphose#3
+Cerulean Wisps#3
+Treasure Cruise#3
+Gitaxian Probe#4
+Glittering Wish#4
+Grapeshot#1
 Serum Visions#4
 Sleight of Hand#4
-Birds of Paradise#4
-Sylvan Caryatid#4
-Gitaxian Probe#4
-Glittering Wish#3
-Manamorphose#4
 Jeskai Ascendancy#3
-Treasure Cruise#4

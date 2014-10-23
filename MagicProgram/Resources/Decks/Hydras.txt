@@ -1,12 +1,13 @@
+Forest#22
+Forced Adaptation#4
 Nature's Lore#3
 Bioshift#3
-Kalonian Hydra#3
-Hydra Broodmaster#3
-Forced Adaptation#4
 Mistcutter Hydra#3
 Gyre Sage#4
-Primordial Hydra#4
-Vastwood Hydra#4
-Hardened Scales#4
-Forest#22
 Solidarity of Heroes#3
+Primordial Hydra#3
+Vastwood Hydra#4
+Kalonian Hydra#3
+Hydra Broodmaster#2
+Hardened Scales#4
+Polukranos, World Eater#2

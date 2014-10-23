@@ -1,13 +1,13 @@
 Forest#6
 Island#14
+Breeding Pool#3
+Triton Tactics#4
+Cerulean Wisps#4
+Forced Adaptation#3
 Sage of Hours#4
 Battlefield Thaumaturge#4
+Solidarity of Heroes#3
 Triton Fortune Hunter#3
 Wavecrash Triton#4
-Hardened Scales#4
-Triton Tactics#4
-Solidarity of Heroes#4
 Strength of the Tajuru#4
-Cerulean Wisps#4
-Breeding Pool#3
-Forced Adaptation#2
+Hardened Scales#4

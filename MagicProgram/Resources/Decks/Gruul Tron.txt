@@ -1,16 +1,15 @@
 Forest#10
 Mountain#10
+Temple of Abandon#4
 Copperhorn Scout#2
 Legion Loyalist#3
 Akroan Crusader#4
-Rubblebelt Raiders#2
 Rancor#2
+Keen Sense#3
+Elvish Mystic#4
 Alpha Authority#3
 Madcap Skills#4
-Bravado#3
-Keen Sense#3
-Ordeal of Purphoros#2
-Nyxborn Rollicker#2
-Temple of Abandon#4
-Bow of Nylea#3
-Elvish Mystic#3
+Rubblebelt Raiders#2
+Arc Lightning#3
+Nylea, God of the Hunt#3
+Titan's Strength#3
