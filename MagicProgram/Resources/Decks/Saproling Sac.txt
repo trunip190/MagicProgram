@@ -1,15 +1,14 @@
-Gruul Guildgate#4
-Mountain#4
+Mountain#6
 Forest#12
-Essence Warden#2
-Elvish Mystic#4
+Gruul Guildgate#2
 Thallid#4
-Fists of Ironwood#3
 Elvish Farmer#4
-Jund Battlemage#3
-Fecundity#4
+Fists of Ironwood#3
 Chord of Calling#4
-Purphoros, God of the Forge#3
-Mycoloth#3
-Nature's Lore#3
-Hissing Iguanar#3
+Purphoros, God of the Forge#4
+Mycoloth#2
+Elvish Mystic#4
+Essence Warden#3
+Jund Battlemage#4
+Fecundity#4
+Hissing Iguanar#4
