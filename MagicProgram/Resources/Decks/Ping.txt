@@ -1,14 +1,13 @@
 Island#7
 Mountain#7
-Terramorphic Expanse#4
-Forest#3
-Breeding Pool#4
 Cerulean Wisps#4
-Crimson Wisps#4
-Birds of Paradise#4
-Noble Hierarch#3
-Ponder#4
 Young Pyromancer#4
-Counterspell#4
 Guttersnipe#4
-Jeskai Ascendancy#4
+Elite Arcanist#4
+Lightning Bolt#4
+Triton Tactics#4
+Zhur-Taa Druid#4
+Forest#6
+Izzet Staticaster#3
+Counterspell#4
+Terramorphic Expanse#4

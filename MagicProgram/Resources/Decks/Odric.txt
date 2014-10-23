@@ -1,12 +1,15 @@
-Plains#20
-Doomed Traveler#4
-Soul Warden#4
-Spirit Link#4
-Ajani's Pridemate#4
-Hero of Iroas#4
-Crusader of Odric#3
-Odric, Master Tactician#3
-Path of Bravery#3
+Plains#11
+Mountain#11
+Doomed Traveler#3
+Akroan Crusader#4
+Hammerhand#3
+Titan's Strength#4
+Ajani's Pridemate#3
 Vanguard of Brimaz#4
-Gods Willing#4
-Nimbus Wings#3
+Crusader of Odric#3
+Path of Bravery#3
+Boros Keyrune#1
+Odric, Master Tactician#3
+Obelisk of Urd#3
+Boros Guildgate#1
+Crown of Fury#3
