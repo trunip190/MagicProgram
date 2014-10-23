@@ -1456,6 +1456,36 @@ namespace MagicProgram
             Text = "Enchant creature;^Enchanted creature gets +1/+1 for each enchantment you control and has first strike.";
             Flavor = "";
         }
+
+        public override List<string> getStats()
+        {
+            List<string> result = new List<string>();
+            int i = 0;
+
+            foreach (MagicCard mc in PArea._play.cards)
+            {
+                foreach (MagicCard mca in mc.attachedCards)
+                {
+                    if (mca.Type.Contains("Enchantment"))
+                    {
+                        i++;
+                    }
+                }
+            }
+
+            foreach (MagicCard mc in PArea._artEnch.cards)
+            {
+                if (mc.Type.Contains("Enchantment"))
+                {
+                    i++;
+                }
+            }
+
+            result.Add("Power#" + i.ToString());
+            result.Add("Toughness#" + i.ToString());
+
+            return result;
+        }
     }
     # endregion
 

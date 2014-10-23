@@ -922,7 +922,7 @@ namespace MagicProgram
             {
                 if (mcn.PArea.landPlayed >= mcn.PArea.landMax)
                 {
-                    MessageBox.Show("Played lands this turn (" + mcn.PArea.landPlayed.ToString() + "/" + mcn.PArea.landMax.ToString() + ")");
+                    MessageBox.Show("Played lands this turn.");
                     return;
                 }
             }

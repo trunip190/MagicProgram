@@ -11,11 +11,10 @@ Triton Shorestalker#4
 Satyr Hoplite#3
 Crowd's Favor#3
 Akroan Crusader#4
-Triton Tactics#4
-Vanguard of Brimaz#1
-Hidden Strings#3
+Cerulean Wisps#4
+Coordinated Assault#4
+Hidden Strings#4
 Ephemeral Shields#2
 Triton Fortune Hunter#3
-Stoke the Flames#4
-Crater's Claws#3
+Stoke the Flames#3
 Jeskai Ascendancy#4

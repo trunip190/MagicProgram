@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4ZMThzzlaxqlKyneY3Zn8eEOdPI=</dsig:DigestValue>
+        <dsig:DigestValue>z5uqo6MHLaP+92nqv+7OxWHbKgY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,22 +72,22 @@
       <dsig:DigestValue>zXIKHad8jMj9Uhfm0rPpM7+mHp4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="MagicProgram.exe.config" size="1103">
+  <file name="MagicProgram.exe.config" size="1082">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>j8kg6nu41uWPdc21wDtE95QVb0E=</dsig:DigestValue>
+      <dsig:DigestValue>0Kw/cKUvSd3W7V3dmU9NEarrcwM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\Load.txt" size="279">
+  <file name="Resources\Load.txt" size="263">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>xGCgwM4f1+L6uLta+18ElJoA/LM=</dsig:DigestValue>
+      <dsig:DigestValue>R9TAlIhoiW1NQxEBDSICDMrNulc=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
