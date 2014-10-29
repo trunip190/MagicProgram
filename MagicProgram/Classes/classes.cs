@@ -2256,8 +2256,8 @@ namespace MagicProgram
             get
             {
                 int result = 0;
-
-                foreach (char c in Cost)
+                string _cost = Cost.Replace("{", "").Replace("}", "").Trim();
+                foreach (char c in _cost)
                 {
                     if (Char.IsNumber(c))
                     {

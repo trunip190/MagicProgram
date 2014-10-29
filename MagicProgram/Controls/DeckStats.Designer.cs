@@ -47,6 +47,16 @@
             this.textCost4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textCost5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.labelW = new System.Windows.Forms.Label();
+            this.labelR = new System.Windows.Forms.Label();
+            this.labelG = new System.Windows.Forms.Label();
+            this.labelU = new System.Windows.Forms.Label();
+            this.labelB = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -223,10 +233,110 @@
             this.textCost5.Size = new System.Drawing.Size(38, 20);
             this.textCost5.TabIndex = 17;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 136);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(14, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "B";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(43, 136);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(15, 13);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "U";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(83, 136);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(15, 13);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "G";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(123, 136);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(15, 13);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "R";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(163, 136);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(18, 13);
+            this.label14.TabIndex = 23;
+            this.label14.Text = "W";
+            // 
+            // labelW
+            // 
+            this.labelW.AutoSize = true;
+            this.labelW.Location = new System.Drawing.Point(186, 136);
+            this.labelW.Name = "labelW";
+            this.labelW.Size = new System.Drawing.Size(18, 13);
+            this.labelW.TabIndex = 28;
+            this.labelW.Text = "W";
+            // 
+            // labelR
+            // 
+            this.labelR.AutoSize = true;
+            this.labelR.Location = new System.Drawing.Point(143, 136);
+            this.labelR.Name = "labelR";
+            this.labelR.Size = new System.Drawing.Size(15, 13);
+            this.labelR.TabIndex = 27;
+            this.labelR.Text = "R";
+            // 
+            // labelG
+            // 
+            this.labelG.AutoSize = true;
+            this.labelG.Location = new System.Drawing.Point(103, 136);
+            this.labelG.Name = "labelG";
+            this.labelG.Size = new System.Drawing.Size(15, 13);
+            this.labelG.TabIndex = 26;
+            this.labelG.Text = "G";
+            // 
+            // labelU
+            // 
+            this.labelU.AutoSize = true;
+            this.labelU.Location = new System.Drawing.Point(63, 136);
+            this.labelU.Name = "labelU";
+            this.labelU.Size = new System.Drawing.Size(15, 13);
+            this.labelU.TabIndex = 25;
+            this.labelU.Text = "U";
+            // 
+            // labelB
+            // 
+            this.labelB.AutoSize = true;
+            this.labelB.Location = new System.Drawing.Point(24, 136);
+            this.labelB.Name = "labelB";
+            this.labelB.Size = new System.Drawing.Size(14, 13);
+            this.labelB.TabIndex = 24;
+            this.labelB.Text = "B";
+            // 
             // DeckStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelW);
+            this.Controls.Add(this.labelR);
+            this.Controls.Add(this.labelG);
+            this.Controls.Add(this.labelU);
+            this.Controls.Add(this.labelB);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textCost5);
             this.Controls.Add(this.label8);
@@ -246,10 +356,10 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.MaximumSize = new System.Drawing.Size(208, 142);
-            this.MinimumSize = new System.Drawing.Size(208, 142);
+            this.MaximumSize = new System.Drawing.Size(208, 156);
+            this.MinimumSize = new System.Drawing.Size(208, 156);
             this.Name = "DeckStats";
-            this.Size = new System.Drawing.Size(208, 142);
+            this.Size = new System.Drawing.Size(208, 156);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +386,15 @@
         private System.Windows.Forms.TextBox textCost4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textCost5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelW;
+        private System.Windows.Forms.Label labelR;
+        private System.Windows.Forms.Label labelG;
+        private System.Windows.Forms.Label labelU;
+        private System.Windows.Forms.Label labelB;
     }
 }

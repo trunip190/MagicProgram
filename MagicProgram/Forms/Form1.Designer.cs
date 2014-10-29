@@ -81,6 +81,7 @@
             this.deckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sealedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.collapsablePanel2 = new MagicProgram.CollapsiblePanel();
             this.listView2 = new System.Windows.Forms.ListView();
@@ -101,7 +102,6 @@
             this.deckStats1 = new MagicProgram.DeckStats();
             this.progressDialog1 = new MagicProgram.ProgressDialog();
             this.cardViewerLarge1 = new MagicProgram.CardViewerLarge();
-            this.sealedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCount)).BeginInit();
@@ -183,9 +183,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.deckStats1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.SearchResults);
-            this.panel2.Controls.Add(this.deckStats1);
             this.panel2.Controls.Add(this.numericCount);
             this.panel2.Controls.Add(this.buttonTakeAll);
             this.panel2.Controls.Add(this.buttonAddAll);
@@ -561,16 +561,23 @@
             // testDeckToolStripMenuItem
             // 
             this.testDeckToolStripMenuItem.Name = "testDeckToolStripMenuItem";
-            this.testDeckToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.testDeckToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.testDeckToolStripMenuItem.Text = "Test deck";
             this.testDeckToolStripMenuItem.Click += new System.EventHandler(this.testDeckToolStripMenuItem_Click);
             // 
             // viewStatsToolStripMenuItem
             // 
             this.viewStatsToolStripMenuItem.Name = "viewStatsToolStripMenuItem";
-            this.viewStatsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewStatsToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.viewStatsToolStripMenuItem.Text = "View stats";
             this.viewStatsToolStripMenuItem.Click += new System.EventHandler(this.viewStatsToolStripMenuItem_Click);
+            // 
+            // sealedToolStripMenuItem
+            // 
+            this.sealedToolStripMenuItem.Name = "sealedToolStripMenuItem";
+            this.sealedToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.sealedToolStripMenuItem.Text = "Sealed";
+            this.sealedToolStripMenuItem.Click += new System.EventHandler(this.sealedToolStripMenuItem_Click);
             // 
             // backgroundWorker1
             // 
@@ -727,13 +734,13 @@
             // 
             // deckStats1
             // 
-            this.deckStats1.Location = new System.Drawing.Point(34, 126);
-            this.deckStats1.MaximumSize = new System.Drawing.Size(208, 142);
-            this.deckStats1.MinimumSize = new System.Drawing.Size(208, 142);
+            this.deckStats1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.deckStats1.Location = new System.Drawing.Point(34, 132);
+            this.deckStats1.MaximumSize = new System.Drawing.Size(208, 156);
+            this.deckStats1.MinimumSize = new System.Drawing.Size(208, 156);
             this.deckStats1.Name = "deckStats1";
-            this.deckStats1.Size = new System.Drawing.Size(208, 142);
+            this.deckStats1.Size = new System.Drawing.Size(208, 156);
             this.deckStats1.TabIndex = 7;
-            this.deckStats1.Visible = false;
             // 
             // progressDialog1
             // 
@@ -752,13 +759,6 @@
             this.cardViewerLarge1.Name = "cardViewerLarge1";
             this.cardViewerLarge1.Size = new System.Drawing.Size(265, 370);
             this.cardViewerLarge1.TabIndex = 13;
-            // 
-            // sealedToolStripMenuItem
-            // 
-            this.sealedToolStripMenuItem.Name = "sealedToolStripMenuItem";
-            this.sealedToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sealedToolStripMenuItem.Text = "Sealed";
-            this.sealedToolStripMenuItem.Click += new System.EventHandler(this.sealedToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -852,7 +852,6 @@
         private System.Windows.Forms.NumericUpDown numericCount;
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateCardImagesToolStripMenuItem;
-        private DeckStats deckStats1;
         private System.Windows.Forms.ToolStripMenuItem viewStatsToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem exportDeckListToolStripMenuItem;
@@ -863,6 +862,7 @@
         private System.Windows.Forms.ToolStripMenuItem convertSavesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateImagesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sealedToolStripMenuItem;
+        private DeckStats deckStats1;
     }
 }
 

@@ -25,6 +25,12 @@ namespace MagicProgram
         private int four = 0;
         private int five = 0;
 
+        private int Black = 0;
+        private int Blue = 0;
+        private int Green = 0;
+        private int Red = 0;
+        private int White = 0;
+
         public DeckStats()
         {
             InitializeComponent();
@@ -44,6 +50,12 @@ namespace MagicProgram
             three = 0;
             four = 0;
             five = 0;
+
+            Black = 0;
+            Blue = 0;
+            Green = 0;
+            Red = 0;
+            White = 0;
         }
 
         public void LoadCard(List<MagicCard> cards)
@@ -96,7 +108,35 @@ namespace MagicProgram
                         break;
                 }
                 # endregion
-                
+
+                # region set colours
+                foreach (char c in mc.Cost)
+                {
+                    switch (c)
+                    {
+                        case 'B':
+                            Black++;
+                            break;
+
+                        case 'U':
+                            Blue++;
+                            break;
+
+                        case 'G':
+                            Green++;
+                            break;
+
+                        case 'R':
+                            Red++;
+                            break;
+
+                        case 'W':
+                            White++;
+                            break;
+                    }
+                }
+                # endregion
+
                 # region set type
                 if (mc.Type.ToLower().Contains("creature"))
                 {
@@ -134,6 +174,14 @@ namespace MagicProgram
             textCost3.Text = three.ToString();
             textCost4.Text = four.ToString();
             textCost5.Text = five.ToString();
+            # endregion
+
+            # region Colours
+            labelB.Text = Black.ToString();
+            labelU.Text = Blue.ToString();
+            labelG.Text = Green.ToString();
+            labelR.Text = Red.ToString();
+            labelW.Text = White.ToString();
             # endregion
         }
 

@@ -309,6 +309,11 @@ namespace MagicProgram
             Text = "Defender1Black, Tap: Each opponent loses 1 life.";
             Flavor = "";
         }
+
+        public override void DoActivate(int i)
+        {
+            OppArea.HP--;
+        }
     }
     # endregion
 
@@ -1226,6 +1231,16 @@ namespace MagicProgram
             Type = "Creature — Elemental";
             Text = "1Green, Tap, Sacrifice Embodiment of Spring: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.";
             Flavor = "";
+        }
+
+        public override void DoActivate(int i)
+        {
+            //TODO move to TryActivate
+            callSacrifice();
+
+            List<MagicCard> list = PArea._stack.cards.Where(o => o.Type.Contains("Basic Land")).ToList();
+            PArea.callPickCardsUse(list);
+            base.DoActivate(i);
         }
     }
     # endregion

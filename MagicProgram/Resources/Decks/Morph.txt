@@ -1,3 +1,26 @@
-Forest#12
-Island#12
-Retribution of the Ancients#1
+Swamp#5
+Forest#5
+Island#5
+Dismal Backwater#1
+Jungle Hollow#1
+Thornwood Falls#1
+Embodiment of Spring#2
+Stubborn Denial#1
+Archers' Parapet#1
+Singing Bell Strike#2
+Secret Plans#1
+Icefeather Aven#1
+Taigam's Scheming#2
+Kin-Tree Invocation#1
+Highland Game#1
+Sultai Banner#1
+Weave Fate#1
+Mistfire Weaver#1
+Sidisi's Pet#1
+Dutiful Return#1
+Kheru Dreadmaw#1
+Murderous Cut#1
+Pine Walker#1
+Mystic of the Hidden Way#1
+Become Immense#1
+Treasure Cruise#1
