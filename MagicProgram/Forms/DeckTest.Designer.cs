@@ -83,6 +83,7 @@
             this.buttonCountDown = new System.Windows.Forms.Button();
             this.buttonCountUp = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.buttonCardCancel = new System.Windows.Forms.Button();
             this.comboCardPicker = new System.Windows.Forms.ComboBox();
             this.buttonCardChoose = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -115,7 +116,6 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PlArea = new MagicProgram.Controls.PlayArea();
             this.OppArea = new MagicProgram.Controls.PlayArea();
-            this.buttonCardCancel = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -620,6 +620,15 @@
             this.panel6.Size = new System.Drawing.Size(135, 58);
             this.panel6.TabIndex = 8;
             // 
+            // buttonCardCancel
+            // 
+            this.buttonCardCancel.Location = new System.Drawing.Point(69, 32);
+            this.buttonCardCancel.Name = "buttonCardCancel";
+            this.buttonCardCancel.Size = new System.Drawing.Size(57, 23);
+            this.buttonCardCancel.TabIndex = 2;
+            this.buttonCardCancel.Text = "Cancel";
+            this.buttonCardCancel.UseVisualStyleBackColor = true;
+            // 
             // comboCardPicker
             // 
             this.comboCardPicker.FormattingEnabled = true;
@@ -776,7 +785,7 @@
             this.cardAreaLand.Margin = new System.Windows.Forms.Padding(0);
             this.cardAreaLand.Name = "cardAreaLand";
             this.cardAreaLand.SingleChoice = false;
-            this.cardAreaLand.Size = new System.Drawing.Size(780, 113);
+            this.cardAreaLand.Size = new System.Drawing.Size(651, 113);
             this.cardAreaLand.TabIndex = 6;
             this.cardAreaLand.Tappable = true;
             this.cardAreaLand.TextSpoiler = false;
@@ -790,11 +799,11 @@
             this.cPanelArtEnch.Direction = MagicProgram.CollapsiblePanel.CollapseDirection.Left;
             this.cPanelArtEnch.Dock = System.Windows.Forms.DockStyle.Right;
             this.cPanelArtEnch.HoverEdges = true;
-            this.cPanelArtEnch.Location = new System.Drawing.Point(780, 0);
+            this.cPanelArtEnch.Location = new System.Drawing.Point(651, 0);
             this.cPanelArtEnch.Margin = new System.Windows.Forms.Padding(0);
             this.cPanelArtEnch.MinimumSize = new System.Drawing.Size(23, 23);
             this.cPanelArtEnch.Name = "cPanelArtEnch";
-            this.cPanelArtEnch.Size = new System.Drawing.Size(170, 111);
+            this.cPanelArtEnch.Size = new System.Drawing.Size(299, 111);
             this.cPanelArtEnch.TabIndex = 7;
             // 
             // cPanelArtEnch.Working Area
@@ -805,7 +814,7 @@
             this.cPanelArtEnch.WorkingArea.Location = new System.Drawing.Point(23, 0);
             this.cPanelArtEnch.WorkingArea.Margin = new System.Windows.Forms.Padding(0);
             this.cPanelArtEnch.WorkingArea.Name = "Working Area";
-            this.cPanelArtEnch.WorkingArea.Size = new System.Drawing.Size(147, 111);
+            this.cPanelArtEnch.WorkingArea.Size = new System.Drawing.Size(276, 111);
             this.cPanelArtEnch.WorkingArea.TabIndex = 4;
             // 
             // listViewArtEnch
@@ -820,11 +829,11 @@
             this.listViewArtEnch.Location = new System.Drawing.Point(0, 0);
             this.listViewArtEnch.Margin = new System.Windows.Forms.Padding(0);
             this.listViewArtEnch.Name = "listViewArtEnch";
-            this.listViewArtEnch.Size = new System.Drawing.Size(145, 109);
+            this.listViewArtEnch.Size = new System.Drawing.Size(274, 109);
             this.listViewArtEnch.SmallImageList = this.imageListPlay;
             this.listViewArtEnch.TabIndex = 17;
             this.listViewArtEnch.UseCompatibleStateImageBehavior = false;
-            this.listViewArtEnch.View = System.Windows.Forms.View.Details;
+            this.listViewArtEnch.View = System.Windows.Forms.View.List;
             this.listViewArtEnch.DoubleClick += new System.EventHandler(this.listViewArtEnch_DoubleClick);
             this.listViewArtEnch.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listViewArtEnch_MouseUp);
             // 
@@ -1045,15 +1054,6 @@
             this.OppArea.HPChanged += new System.Action(this.FoeHP_ValueChanged);
             this.OppArea.CardUsed += new MagicProgram.PassiveEvent(this.OppArea_CardUsed);
             this.OppArea.CardDrawn += new MagicProgram.PassiveEvent(this.OppArea_CardDrawn);
-            // 
-            // buttonCardCancel
-            // 
-            this.buttonCardCancel.Location = new System.Drawing.Point(69, 32);
-            this.buttonCardCancel.Name = "buttonCardCancel";
-            this.buttonCardCancel.Size = new System.Drawing.Size(57, 23);
-            this.buttonCardCancel.TabIndex = 2;
-            this.buttonCardCancel.Text = "Cancel";
-            this.buttonCardCancel.UseVisualStyleBackColor = true;
             // 
             // DeckTest
             // 

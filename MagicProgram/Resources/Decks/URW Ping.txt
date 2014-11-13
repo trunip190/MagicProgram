@@ -1,0 +1,14 @@
+Island#7
+Mountain#7
+Plains#4
+Mystic Monastery#4
+Cerulean Wisps#4
+Lightning Bolt#4
+Crimson Wisps#4
+Defiant Strike#3
+Young Pyromancer#4
+Counterspell#4
+Seeker of the Way#4
+Guttersnipe#4
+Izzet Staticaster#3
+Jeskai Ascendancy#4

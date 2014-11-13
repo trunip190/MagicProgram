@@ -1,15 +1,13 @@
 Plains#11
 Mountain#11
-Doomed Traveler#3
+Boros Guildgate#1
+Doomed Traveler#4
 Akroan Crusader#4
-Hammerhand#3
+Hammerhand#4
 Titan's Strength#4
-Ajani's Pridemate#3
 Vanguard of Brimaz#4
 Crusader of Odric#3
-Path of Bravery#3
-Boros Keyrune#1
+Path of Bravery#4
 Odric, Master Tactician#3
 Obelisk of Urd#3
-Boros Guildgate#1
-Crown of Fury#3
+Preeminent Captain#4

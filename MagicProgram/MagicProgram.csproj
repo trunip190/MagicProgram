@@ -84,6 +84,7 @@
     <Compile Include="Classes\Commander.cs" />
     <Compile Include="Classes\Core.cs" />
     <Compile Include="Classes\Debug.cs" />
+    <Compile Include="Classes\DuelDecks.cs" />
     <Compile Include="Classes\FifthDawn.cs" />
     <Compile Include="Classes\IceAge.cs" />
     <Compile Include="Classes\Innistrad.cs" />

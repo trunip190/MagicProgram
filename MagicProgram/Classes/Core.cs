@@ -5272,6 +5272,4259 @@ namespace MagicProgram
 
     # endregion
 
+    # region Magic 2012 Empty
+    # region Acidic Slime
+    public class AcidicSlimeM12 : MagicCard
+    {
+        public AcidicSlimeM12()
+        {
+            Name = "Acidic Slime";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "G";
+            Cost = "3GG";
+            PT = "2/2";
+            Type = "Creature - Ooze";
+            Text = "Deathtouch @(Any amount of damage this deals to a creature is enough to destroy it.)@;^When Acidic Slime enters the battlefield, destroy target artifact, enchantment, or land.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Act of Treason
+    public class ActofTreasonM12 : MagicCard
+    {
+        public ActofTreasonM12()
+        {
+            Name = "Act of Treason";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "2R";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. @(It can attack and %T this turn.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Adaptive Automaton
+    public class AdaptiveAutomatonM12 : MagicCard
+    {
+        public AdaptiveAutomatonM12()
+        {
+            Name = "Adaptive Automaton";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Art";
+            Cost = "3";
+            PT = "2/2";
+            Type = "Artifact Creature - Construct";
+            Text = "As Adaptive Automaton enters the battlefield, choose a creature type.;^Adaptive Automaton is the chosen type in addition to its other types.;^Other creatures you control of the chosen type get +1/+1.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Aegis Angel
+    public class AegisAngelM12 : MagicCard
+    {
+        public AegisAngelM12()
+        {
+            Name = "Aegis Angel";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "W";
+            Cost = "4WW";
+            PT = "5/5";
+            Type = "Creature - Angel";
+            Text = "Flying;^When Aegis Angel enters the battlefield, another target permanent gains indestructible for as long as you control Aegis Angel. @(Effects that say �destroy� don�t destroy it. A creature with indestructible can�t be destroyed by damage.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region AEther Adept
+    public class AEtherAdeptM12 : MagicCard
+    {
+        public AEtherAdeptM12()
+        {
+            Name = "AEther Adept";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1UU";
+            PT = "2/2";
+            Type = "Creature - Human Wizard";
+            Text = "When AEther Adept enters the battlefield, return target creature to its owner�s hand.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Alabaster Mage
+    public class AlabasterMageM12 : MagicCard
+    {
+        public AlabasterMageM12()
+        {
+            Name = "Alabaster Mage";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "W";
+            Cost = "1W";
+            PT = "2/1";
+            Type = "Creature - Human Wizard";
+            Text = "%1%W: Target creature you control gains lifelink until end of turn. @(Damage dealt by the creature also causes its controller to gain that much life.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Alluring Siren
+    public class AlluringSirenM12 : MagicCard
+    {
+        public AlluringSirenM12()
+        {
+            Name = "Alluring Siren";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "U";
+            Cost = "1U";
+            PT = "1/1";
+            Type = "Creature - Siren";
+            Text = "%T: Target creature an opponent controls attacks you this turn if able.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Amphin Cutthroat
+    public class AmphinCutthroatM12 : MagicCard
+    {
+        public AmphinCutthroatM12()
+        {
+            Name = "Amphin Cutthroat";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "3U";
+            PT = "2/4";
+            Type = "Creature - Salamander Rogue";
+            Text = "";
+            Flavor = "�The amphin have long built their society in secret. While surface dwellers squabbled over trivial borders, they patiently expanded, building their ammonite temple-caves. Now amphin priests eye the shore, and amphin hunters gird for war.�;^�Gor Muldrak, Cryptohistories";
+        }
+    }
+    # endregion
+
+    # region Angelic Destiny
+    public class AngelicDestinyM12 : MagicCard
+    {
+        public AngelicDestinyM12()
+        {
+            Name = "Angelic Destiny";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "W";
+            Cost = "2WW";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Enchanted creature gets +4/+4, has flying and first strike, and is an Angel in addition to its other types.;^When enchanted creature dies, return Angelic Destiny to its owner�s hand.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Angel's Feather
+    public class AngelsFeatherM12 : MagicCard
+    {
+        public AngelsFeatherM12()
+        {
+            Name = "Angel's Feather";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "2";
+            PT = "";
+            Type = "Artifact";
+            Text = "Whenever a player casts a white spell, you may gain 1 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Angel's Mercy
+    public class AngelsMercyM12 : MagicCard
+    {
+        public AngelsMercyM12()
+        {
+            Name = "Angel's Mercy";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "2WW";
+            PT = "";
+            Type = "Instant";
+            Text = "You gain 7 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Arachnus Spinner
+    public class ArachnusSpinnerM12 : MagicCard
+    {
+        public ArachnusSpinnerM12()
+        {
+            Name = "Arachnus Spinner";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "G";
+            Cost = "5G";
+            PT = "5/7";
+            Type = "Creature - Spider";
+            Text = "Reach @(This creature can block creatures with flying.)@;^Tap an untapped Spider you control: Search your graveyard and/or library for a card named Arachnus Web and put it onto the battlefield attached to target creature. If you search your library this way, shuffle it.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Arachnus Web
+    public class ArachnusWebM12 : MagicCard
+    {
+        public ArachnusWebM12()
+        {
+            Name = "Arachnus Web";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2G";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Enchanted creature can�t attack or block, and its activated abilities can�t be activated.;^At the beginning of the end step, if enchanted creature�s power is 4 or greater, destroy Arachnus Web.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Arbalest Elite
+    public class ArbalestEliteM12 : MagicCard
+    {
+        public ArbalestEliteM12()
+        {
+            Name = "Arbalest Elite";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "W";
+            Cost = "2WW";
+            PT = "2/3";
+            Type = "Creature - Human Archer";
+            Text = "%2%W, %T: Arbalest Elite deals 3 damage to target attacking or blocking creature. Arbalest Elite doesn�t untap during your next untap step.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Archon of Justice
+    public class ArchonofJusticeM12 : MagicCard
+    {
+        public ArchonofJusticeM12()
+        {
+            Name = "Archon of Justice";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "W";
+            Cost = "3WW";
+            PT = "4/4";
+            Type = "Creature - Archon";
+            Text = "Flying;^When Archon of Justice dies, exile target permanent.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Armored Warhorse
+    public class ArmoredWarhorseM12 : MagicCard
+    {
+        public ArmoredWarhorseM12()
+        {
+            Name = "Armored Warhorse";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "WW";
+            PT = "2/3";
+            Type = "Creature - Horse";
+            Text = "";
+            Flavor = "�When we of the Northern Verge claim a mount, no peasant�s nag will do. It must be as strong as our virtue, and must join us of its own will.�;^�Sarlena, paladin of the Northern Verge";
+        }
+    }
+    # endregion
+
+    # region Assault Griffin
+    public class AssaultGriffinM12 : MagicCard
+    {
+        public AssaultGriffinM12()
+        {
+            Name = "Assault Griffin";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "3W";
+            PT = "3/2";
+            Type = "Creature - Griffin";
+            Text = "Flying";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Auramancer
+    public class AuramancerM12 : MagicCard
+    {
+        public AuramancerM12()
+        {
+            Name = "Auramancer";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "2W";
+            PT = "2/2";
+            Type = "Creature - Human Wizard";
+            Text = "When Auramancer enters the battlefield, you may return target enchantment card from your graveyard to your hand.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Autumn's Veil
+    public class AutumnsVeilM12 : MagicCard
+    {
+        public AutumnsVeilM12()
+        {
+            Name = "Autumn's Veil";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "G";
+            Cost = "G";
+            PT = "";
+            Type = "Instant";
+            Text = "Spells you control can�t be countered by blue or black spells this turn, and creatures you control can�t be the targets of blue or black spells this turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Aven Fleetwing
+    public class AvenFleetwingM12 : MagicCard
+    {
+        public AvenFleetwingM12()
+        {
+            Name = "Aven Fleetwing";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "3U";
+            PT = "2/2";
+            Type = "Creature - Bird Soldier";
+            Text = "Flying;^Hexproof @(This creature can�t be the target of spells or abilities your opponents control.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Azure Mage
+    public class AzureMageM12 : MagicCard
+    {
+        public AzureMageM12()
+        {
+            Name = "Azure Mage";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "U";
+            Cost = "1U";
+            PT = "2/1";
+            Type = "Creature - Human Wizard";
+            Text = "%3%U: Draw a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Belltower Sphinx
+    public class BelltowerSphinxM12 : MagicCard
+    {
+        public BelltowerSphinxM12()
+        {
+            Name = "Belltower Sphinx";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "U";
+            Cost = "4U";
+            PT = "2/5";
+            Type = "Creature - Sphinx";
+            Text = "Flying;^Whenever a source deals damage to Belltower Sphinx, that source�s controller puts that many cards from the top of his or her library into his or her graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Benalish Veteran
+    public class BenalishVeteranM12 : MagicCard
+    {
+        public BenalishVeteranM12()
+        {
+            Name = "Benalish Veteran";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "2W";
+            PT = "2/2";
+            Type = "Creature - Human Soldier";
+            Text = "Whenever Benalish Veteran attacks, it gets +1/+1 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Birds of Paradise
+    public class BirdsofParadiseM12 : MagicCard
+    {
+        public BirdsofParadiseM12()
+        {
+            Name = "Birds of Paradise";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "G";
+            Cost = "G";
+            PT = "0/1";
+            Type = "Creature - Bird";
+            Text = "Flying;^%T: Add one mana of any color to your mana pool.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Blood Ogre
+    public class BloodOgreM12 : MagicCard
+    {
+        public BloodOgreM12()
+        {
+            Name = "Blood Ogre";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "2R";
+            PT = "2/2";
+            Type = "Creature - Ogre Warrior";
+            Text = "Bloodthirst 1 @(If an opponent was dealt damage this turn, this creature enters the battlefield with a +1/+1 counter on it.)@;^First strike @(This creature deals combat damage before creatures without first strike.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Blood Seeker
+    public class BloodSeekerM12 : MagicCard
+    {
+        public BloodSeekerM12()
+        {
+            Name = "Blood Seeker";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "1B";
+            PT = "1/1";
+            Type = "Creature - Vampire Shaman";
+            Text = "Whenever a creature enters the battlefield under an opponent�s control, you may have that player lose 1 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Bloodlord of Vaasgoth
+    public class BloodlordofVaasgothM12 : MagicCard
+    {
+        public BloodlordofVaasgothM12()
+        {
+            Name = "Bloodlord of Vaasgoth";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "B";
+            Cost = "3BB";
+            PT = "3/3";
+            Type = "Creature - Vampire Warrior";
+            Text = "Bloodthirst 3 @(If an opponent was dealt damage this turn, this creature enters the battlefield with three +1/+1 counters on it.)@;^Flying;^Whenever you cast a Vampire creature spell, it gains bloodthirst 3.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Bloodrage Vampire
+    public class BloodrageVampireM12 : MagicCard
+    {
+        public BloodrageVampireM12()
+        {
+            Name = "Bloodrage Vampire";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "2B";
+            PT = "3/1";
+            Type = "Creature - Vampire";
+            Text = "Bloodthirst 1 @(If an opponent was dealt damage this turn, this creature enters the battlefield with a +1/+1 counter on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Bonebreaker Giant
+    public class BonebreakerGiantM12 : MagicCard
+    {
+        public BonebreakerGiantM12()
+        {
+            Name = "Bonebreaker Giant";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "4R";
+            PT = "4/4";
+            Type = "Creature - Giant";
+            Text = "";
+            Flavor = "One thing�s for sure�his fists are harder than your skull.";
+        }
+    }
+    # endregion
+
+    # region Bountiful Harvest
+    public class BountifulHarvestM12 : MagicCard
+    {
+        public BountifulHarvestM12()
+        {
+            Name = "Bountiful Harvest";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "4G";
+            PT = "";
+            Type = "Sorcery";
+            Text = "You gain 1 life for each land you control.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Brindle Boar
+    public class BrindleBoarM12 : MagicCard
+    {
+        public BrindleBoarM12()
+        {
+            Name = "Brindle Boar";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2G";
+            PT = "2/2";
+            Type = "Creature - Boar";
+            Text = "Sacrifice Brindle Boar: You gain 4 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Brink of Disaster
+    public class BrinkofDisasterM12 : MagicCard
+    {
+        public BrinkofDisasterM12()
+        {
+            Name = "Brink of Disaster";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "2BB";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature or land;^When enchanted permanent becomes tapped, destroy it.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Buried Ruin
+    public class BuriedRuinM12 : MagicCard
+    {
+        public BuriedRuinM12()
+        {
+            Name = "Buried Ruin";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Land";
+            Text = "%T: Add %1 to your mana pool.;^%2, %T, Sacrifice Buried Ruin: Return target artifact card from your graveyard to your hand.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Call to the Grave
+    public class CalltotheGraveM12 : MagicCard
+    {
+        public CalltotheGraveM12()
+        {
+            Name = "Call to the Grave";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "B";
+            Cost = "4B";
+            PT = "";
+            Type = "Enchantment";
+            Text = "At the beginning of each player�s upkeep, that player sacrifices a non-Zombie creature.;^At the beginning of the end step, if no creatures are on the battlefield, sacrifice Call to the Grave.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Cancel
+    public class CancelM12 : MagicCard
+    {
+        public CancelM12()
+        {
+            Name = "Cancel";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1UU";
+            PT = "";
+            Type = "Instant";
+            Text = "Counter target spell.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Carnage Wurm
+    public class CarnageWurmM12 : MagicCard
+    {
+        public CarnageWurmM12()
+        {
+            Name = "Carnage Wurm";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "G";
+            Cost = "6G";
+            PT = "6/6";
+            Type = "Creature - Wurm";
+            Text = "Bloodthirst 3 @(If an opponent was dealt damage this turn, this creature enters the battlefield with three +1/+1 counters on it.)@;^Trample @(If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Celestial Purge
+    public class CelestialPurgeM12 : MagicCard
+    {
+        public CelestialPurgeM12()
+        {
+            Name = "Celestial Purge";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "W";
+            Cost = "1W";
+            PT = "";
+            Type = "Instant";
+            Text = "Exile target black or red permanent.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Cemetery Reaper
+    public class CemeteryReaperM12 : MagicCard
+    {
+        public CemeteryReaperM12()
+        {
+            Name = "Cemetery Reaper";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "B";
+            Cost = "1BB";
+            PT = "2/2";
+            Type = "Creature - Zombie";
+            Text = "Other Zombie creatures you control get +1/+1.;^%2%B, %T: Exile target creature card from a graveyard. Put a 2/2 black Zombie creature token onto the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Chandra, the Firebrand
+    public class ChandratheFirebrandM12 : MagicCard
+    {
+        public ChandratheFirebrandM12()
+        {
+            Name = "Chandra, the Firebrand";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "R";
+            Cost = "3R";
+            PT = "%3/";
+            Type = "Planeswalker - Chandra";
+            Text = "+1: Chandra, the Firebrand deals 1 damage to target creature or player.;^-2: When you cast your next instant or sorcery spell this turn, copy that spell. You may choose new targets for the copy.;^-6: Chandra, the Firebrand deals 6 damage to each of up to six target creatures and/or players.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Chandra's Outrage
+    public class ChandrasOutrageM12 : MagicCard
+    {
+        public ChandrasOutrageM12()
+        {
+            Name = "Chandra's Outrage";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "2RR";
+            PT = "";
+            Type = "Instant";
+            Text = "Chandra�s Outrage deals 4 damage to target creature and 2 damage to that creature�s controller.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Chandra's Phoenix
+    public class ChandrasPhoenixM12 : MagicCard
+    {
+        public ChandrasPhoenixM12()
+        {
+            Name = "Chandra's Phoenix";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "R";
+            Cost = "1RR";
+            PT = "2/2";
+            Type = "Creature - Phoenix";
+            Text = "Flying;^Haste @(This creature can attack and %T as soon as it comes under your control.)@;^Whenever an opponent is dealt damage by a red instant or sorcery spell you control or by a red planeswalker you control, return Chandra�s Phoenix from your graveyard to your hand.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Chasm Drake
+    public class ChasmDrakeM12 : MagicCard
+    {
+        public ChasmDrakeM12()
+        {
+            Name = "Chasm Drake";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "4U";
+            PT = "3/3";
+            Type = "Creature - Drake";
+            Text = "Flying;^Whenever Chasm Drake attacks, target creature you control gains flying until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Child of Night
+    public class ChildofNightM12 : MagicCard
+    {
+        public ChildofNightM12()
+        {
+            Name = "Child of Night";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "1B";
+            PT = "2/1";
+            Type = "Creature - Vampire";
+            Text = "Lifelink @(Damage dealt by this creature also causes you to gain that much life.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Circle of Flame
+    public class CircleofFlameM12 : MagicCard
+    {
+        public CircleofFlameM12()
+        {
+            Name = "Circle of Flame";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "R";
+            Cost = "1R";
+            PT = "";
+            Type = "Enchantment";
+            Text = "Whenever a creature without flying attacks you or a planeswalker you control, Circle of Flame deals 1 damage to that creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Combust
+    public class CombustM12 : MagicCard
+    {
+        public CombustM12()
+        {
+            Name = "Combust";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "R";
+            Cost = "1R";
+            PT = "";
+            Type = "Instant";
+            Text = "Combust can�t be countered by spells or abilities.;^Combust deals 5 damage to target white or blue creature. The damage can�t be prevented.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Consume Spirit
+    public class ConsumeSpiritM12 : MagicCard
+    {
+        public ConsumeSpiritM12()
+        {
+            Name = "Consume Spirit";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "B";
+            Cost = "X1B";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Spend only black mana on X.;^Consume Spirit deals X damage to target creature or player and you gain X life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Coral Merfolk
+    public class CoralMerfolkM12 : MagicCard
+    {
+        public CoralMerfolkM12()
+        {
+            Name = "Coral Merfolk";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1U";
+            PT = "2/1";
+            Type = "Creature - Merfolk";
+            Text = "";
+            Flavor = "Merfolk are best known for their subtle magic. But those who try to fight them in their own territory quickly realize that merfolk are hardly defenseless on the field of battle.";
+        }
+    }
+    # endregion
+
+    # region Crimson Mage
+    public class CrimsonMageM12 : MagicCard
+    {
+        public CrimsonMageM12()
+        {
+            Name = "Crimson Mage";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "R";
+            Cost = "1R";
+            PT = "2/1";
+            Type = "Creature - Human Shaman";
+            Text = "%R: Target creature you control gains haste until end of turn. @(It can attack and %T this turn.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Crown of Empires
+    public class CrownofEmpiresM12 : MagicCard
+    {
+        public CrownofEmpiresM12()
+        {
+            Name = "Crown of Empires";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "2";
+            PT = "";
+            Type = "Artifact";
+            Text = "%3, %T: Tap target creature. Gain control of that creature instead if you control artifacts named Scepter of Empires and Throne of Empires.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Crumbling Colossus
+    public class CrumblingColossusM12 : MagicCard
+    {
+        public CrumblingColossusM12()
+        {
+            Name = "Crumbling Colossus";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "5";
+            PT = "7/4";
+            Type = "Artifact Creature - Golem";
+            Text = "Trample @(If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)@;^When Crumbling Colossus attacks, sacrifice it at end of combat.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Cudgel Troll
+    public class CudgelTrollM12 : MagicCard
+    {
+        public CudgelTrollM12()
+        {
+            Name = "Cudgel Troll";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "G";
+            Cost = "2GG";
+            PT = "4/3";
+            Type = "Creature - Troll";
+            Text = "%G: Regenerate Cudgel Troll. @(The next time this creature would be destroyed this turn, it isn�t. Instead tap it, remove all damage from it, and remove it from combat.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Dark Favor
+    public class DarkFavorM12 : MagicCard
+    {
+        public DarkFavorM12()
+        {
+            Name = "Dark Favor";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "1B";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^When Dark Favor enters the battlefield, you lose 1 life.;^Enchanted creature gets +3/+1.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Day of Judgment
+    public class DayofJudgmentM12 : MagicCard
+    {
+        public DayofJudgmentM12()
+        {
+            Name = "Day of Judgment";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "W";
+            Cost = "2WW";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Destroy all creatures.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Deathmark
+    public class DeathmarkM12 : MagicCard
+    {
+        public DeathmarkM12()
+        {
+            Name = "Deathmark";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "B";
+            Cost = "B";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Destroy target green or white creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Demon's Horn
+    public class DemonsHornM12 : MagicCard
+    {
+        public DemonsHornM12()
+        {
+            Name = "Demon's Horn";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "2";
+            PT = "";
+            Type = "Artifact";
+            Text = "Whenever a player casts a black spell, you may gain 1 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Demystify
+    public class DemystifyM12 : MagicCard
+    {
+        public DemystifyM12()
+        {
+            Name = "Demystify";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "W";
+            PT = "";
+            Type = "Instant";
+            Text = "Destroy target enchantment.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Devouring Swarm
+    public class DevouringSwarmM12 : MagicCard
+    {
+        public DevouringSwarmM12()
+        {
+            Name = "Devouring Swarm";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "1BB";
+            PT = "2/1";
+            Type = "Creature - Insect";
+            Text = "Flying;^Sacrifice a creature: Devouring Swarm gets +1/+1 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Diabolic Tutor
+    public class DiabolicTutorM12 : MagicCard
+    {
+        public DiabolicTutorM12()
+        {
+            Name = "Diabolic Tutor";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "B";
+            Cost = "2BB";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Search your library for a card and put that card into your hand. Then shuffle your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Disentomb
+    public class DisentombM12 : MagicCard
+    {
+        public DisentombM12()
+        {
+            Name = "Disentomb";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "B";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Return target creature card from your graveyard to your hand.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Distress
+    public class DistressM12 : MagicCard
+    {
+        public DistressM12()
+        {
+            Name = "Distress";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "BB";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target player reveals his or her hand. You choose a nonland card from it. That player discards that card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Divination
+    public class DivinationM12 : MagicCard
+    {
+        public DivinationM12()
+        {
+            Name = "Divination";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "2U";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Draw two cards.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Divine Favor
+    public class DivineFavorM12 : MagicCard
+    {
+        public DivineFavorM12()
+        {
+            Name = "Divine Favor";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "1W";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^When Divine Favor enters the battlefield, you gain 3 life.;^Enchanted creature gets +1/+3.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Djinn of Wishes
+    public class DjinnofWishesM12 : MagicCard
+    {
+        public DjinnofWishesM12()
+        {
+            Name = "Djinn of Wishes";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "U";
+            Cost = "3UU";
+            PT = "4/4";
+            Type = "Creature - Djinn";
+            Text = "Flying;^Djinn of Wishes enters the battlefield with three wish counters on it.;^%2%U%U, Remove a wish counter from Djinn of Wishes: Reveal the top card of your library. You may play that card without paying its mana cost. If you don�t, exile it.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Doom Blade
+    public class DoomBladeM12 : MagicCard
+    {
+        public DoomBladeM12()
+        {
+            Name = "Doom Blade";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "1B";
+            PT = "";
+            Type = "Instant";
+            Text = "Destroy target nonblack creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Doubling Chant
+    public class DoublingChantM12 : MagicCard
+    {
+        public DoublingChantM12()
+        {
+            Name = "Doubling Chant";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "G";
+            Cost = "5G";
+            PT = "";
+            Type = "Sorcery";
+            Text = "For each creature you control, you may search your library for a creature card with the same name as that creature. Put those cards onto the battlefield, then shuffle your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Dragon's Claw
+    public class DragonsClawM12 : MagicCard
+    {
+        public DragonsClawM12()
+        {
+            Name = "Dragon's Claw";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "2";
+            PT = "";
+            Type = "Artifact";
+            Text = "Whenever a player casts a red spell, you may gain 1 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Dragonskull Summit
+    public class DragonskullSummitM12 : MagicCard
+    {
+        public DragonskullSummitM12()
+        {
+            Name = "Dragonskull Summit";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Land";
+            Text = "Dragonskull Summit enters the battlefield tapped unless you control a Swamp or a Mountain.;^%T: Add %B or %R to your mana pool.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Drifting Shade
+    public class DriftingShadeM12 : MagicCard
+    {
+        public DriftingShadeM12()
+        {
+            Name = "Drifting Shade";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "3B";
+            PT = "1/1";
+            Type = "Creature - Shade";
+            Text = "Flying;^%B: Drifting Shade gets +1/+1 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Drowned Catacomb
+    public class DrownedCatacombM12 : MagicCard
+    {
+        public DrownedCatacombM12()
+        {
+            Name = "Drowned Catacomb";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Land";
+            Text = "Drowned Catacomb enters the battlefield tapped unless you control an Island or a Swamp.;^%T: Add %U or %B to your mana pool.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Druidic Satchel
+    public class DruidicSatchelM12 : MagicCard
+    {
+        public DruidicSatchelM12()
+        {
+            Name = "Druidic Satchel";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Art";
+            Cost = "3";
+            PT = "";
+            Type = "Artifact";
+            Text = "%2, %T: Reveal the top card of your library. If it�s a creature card, put a 1/1 green Saproling creature token onto the battlefield. If it�s a land card, put that card onto the battlefield under your control. If it�s a noncreature, nonland card, you gain 2 life.";
+            Flavor = "";
+        }
+
+        public override bool TryActivate(int i)
+        {
+            bool result = base.TryActivate(i);
+
+            //if (result)
+            //{
+            //    Tap(true, false);
+            //    DoActivate(i);
+            //}
+
+            return result;
+        }
+
+        public override void DoActivate(int i)
+        {
+            PArea.callScry(this,1);
+            MagicCard mc = PArea._stack.cards[0];
+
+            if (mc.Type.ToLower().Contains("creature"))
+            {
+                MagicCard mct = new Saproling();
+                PArea.PlayToken(mct);
+            }
+            if (mc.Type.ToLower().Contains("land"))
+            {
+                PArea.PlayCard(mc);
+            }
+            if (!mc.Type.ToLower().Contains("creature") && !mc.Type.ToLower().Contains("land"))
+            {
+                PArea.HP += 2;
+            }
+        }
+    }
+    # endregion
+
+    # region Dungrove Elder
+    public class DungroveElderM12 : MagicCard
+    {
+        public DungroveElderM12()
+        {
+            Name = "Dungrove Elder";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "G";
+            Cost = "2G";
+            PT = "*/*";
+            Type = "Creature - Treefolk";
+            Text = "Hexproof @(This creature can�t be the target of spells or abilities your opponents control.)@;^Dungrove Elder�s power and toughness are each equal to the number of Forests you control.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Duskhunter Bat
+    public class DuskhunterBatM12 : MagicCard
+    {
+        public DuskhunterBatM12()
+        {
+            Name = "Duskhunter Bat";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "1B";
+            PT = "1/1";
+            Type = "Creature - Bat";
+            Text = "Bloodthirst 1 @(If an opponent was dealt damage this turn, this creature enters the battlefield with a +1/+1 counter on it.)@;^Flying";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Elite Vanguard
+    public class EliteVanguardM12 : MagicCard
+    {
+        public EliteVanguardM12()
+        {
+            Name = "Elite Vanguard";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "W";
+            Cost = "W";
+            PT = "2/1";
+            Type = "Creature - Human Soldier";
+            Text = "";
+            Flavor = "The vanguard is skilled at waging war alone. The enemy is often defeated before its reinforcements reach the front.";
+        }
+    }
+    # endregion
+
+    # region Elixir of Immortality
+    public class ElixirofImmortalityM12 : MagicCard
+    {
+        public ElixirofImmortalityM12()
+        {
+            Name = "Elixir of Immortality";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "1";
+            PT = "";
+            Type = "Artifact";
+            Text = "%2, %T: You gain 5 life. Shuffle Elixir of Immortality and your graveyard into their owner�s library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Elvish Archdruid
+    public class ElvishArchdruidM12 : MagicCard
+    {
+        public ElvishArchdruidM12()
+        {
+            Name = "Elvish Archdruid";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "G";
+            Cost = "1GG";
+            PT = "2/2";
+            Type = "Creature - Elf Druid";
+            Text = "Other Elf creatures you control get +1/+1.;^%T: Add %G to your mana pool for each Elf you control.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Fiery Hellhound
+    public class FieryHellhoundM12 : MagicCard
+    {
+        public FieryHellhoundM12()
+        {
+            Name = "Fiery Hellhound";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1RR";
+            PT = "2/2";
+            Type = "Creature - Elemental Hound";
+            Text = "%R: Fiery Hellhound gets +1/+0 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Fireball
+    public class FireballM12 : MagicCard
+    {
+        public FireballM12()
+        {
+            Name = "Fireball";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "R";
+            Cost = "XR";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Fireball deals X damage divided evenly, rounded down, among any number of target creatures and/or players.;^Fireball costs %1 more to cast for each target beyond the first.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Firebreathing
+    public class FirebreathingM12 : MagicCard
+    {
+        public FirebreathingM12()
+        {
+            Name = "Firebreathing";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "R";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^%R: Enchanted creature gets +1/+0 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Flameblast Dragon
+    public class FlameblastDragonM12 : MagicCard
+    {
+        public FlameblastDragonM12()
+        {
+            Name = "Flameblast Dragon";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "R";
+            Cost = "4RR";
+            PT = "5/5";
+            Type = "Creature - Dragon";
+            Text = "Flying;^Whenever Flameblast Dragon attacks, you may pay %X%R. If you do, Flameblast Dragon deals X damage to target creature or player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Flashfreeze
+    public class FlashfreezeM12 : MagicCard
+    {
+        public FlashfreezeM12()
+        {
+            Name = "Flashfreeze";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "U";
+            Cost = "1U";
+            PT = "";
+            Type = "Instant";
+            Text = "Counter target red or green spell.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Flight
+    public class FlightM12 : MagicCard
+    {
+        public FlightM12()
+        {
+            Name = "Flight";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "U";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Enchanted creature has flying.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Fling
+    public class FlingM12 : MagicCard
+    {
+        public FlingM12()
+        {
+            Name = "Fling";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1R";
+            PT = "";
+            Type = "Instant";
+            Text = "As an additional cost to cast Fling, sacrifice a creature.;^Fling deals damage equal to the sacrificed creature�s power to target creature or player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Fog
+    public class FogM12 : MagicCard
+    {
+        public FogM12()
+        {
+            Name = "Fog";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "G";
+            PT = "";
+            Type = "Instant";
+            Text = "Prevent all combat damage that would be dealt this turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Forest
+    public class ForestM12 : MagicCard
+    {
+        public ForestM12()
+        {
+            Name = "Forest";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Basic Land - Forest";
+            Text = "";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Frost Breath
+    public class FrostBreathM12 : MagicCard
+    {
+        public FrostBreathM12()
+        {
+            Name = "Frost Breath";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "2U";
+            PT = "";
+            Type = "Instant";
+            Text = "Tap up to two target creatures. Those creatures don�t untap during their controller�s next untap step.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Frost Titan
+    public class FrostTitanM12 : MagicCard
+    {
+        public FrostTitanM12()
+        {
+            Name = "Frost Titan";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "U";
+            Cost = "4UU";
+            PT = "6/6";
+            Type = "Creature - Giant";
+            Text = "Whenever Frost Titan becomes the target of a spell or ability an opponent controls, counter that spell or ability unless its controller pays %2.;^Whenever Frost Titan enters the battlefield or attacks, tap target permanent. It doesn�t untap during its controller�s next untap step.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Furyborn Hellkite
+    public class FurybornHellkiteM12 : MagicCard
+    {
+        public FurybornHellkiteM12()
+        {
+            Name = "Furyborn Hellkite";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "R";
+            Cost = "4RRR";
+            PT = "6/6";
+            Type = "Creature - Dragon";
+            Text = "Bloodthirst 6 @(If an opponent was dealt damage this turn, this creature enters the battlefield with six +1/+1 counters on it.)@;^Flying";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Garruk, Primal Hunter
+    public class GarrukPrimalHunterM12 : MagicCard
+    {
+        public GarrukPrimalHunterM12()
+        {
+            Name = "Garruk, Primal Hunter";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "G";
+            Cost = "2GGG";
+            PT = "%3/";
+            Type = "Planeswalker - Garruk";
+            Text = "+1: Put a 3/3 green Beast creature token onto the battlefield.;^-3: Draw cards equal to the greatest power among creatures you control.;^-6: Put a 6/6 green Wurm creature token onto the battlefield for each land you control.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Garruk's Companion
+    public class GarruksCompanionM12 : MagicCard
+    {
+        public GarruksCompanionM12()
+        {
+            Name = "Garruk's Companion";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "GG";
+            PT = "3/2";
+            Type = "Creature - Beast";
+            Text = "Trample @(If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Garruk's Horde
+    public class GarruksHordeM12 : MagicCard
+    {
+        public GarruksHordeM12()
+        {
+            Name = "Garruk's Horde";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "G";
+            Cost = "5GG";
+            PT = "7/7";
+            Type = "Creature - Beast";
+            Text = "Trample ;^Play with the top card of your library revealed.;^You may cast the top card of your library if it�s a creature card. @(Do this only any time you could cast that creature card. You still pay the spell�s costs.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Giant Spider
+    public class GiantSpiderM12 : MagicCard
+    {
+        public GiantSpiderM12()
+        {
+            Name = "Giant Spider";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "3G";
+            PT = "2/4";
+            Type = "Creature - Spider";
+            Text = "Reach @(This creature can block creatures with flying.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gideon Jura
+    public class GideonJuraM12 : MagicCard
+    {
+        public GideonJuraM12()
+        {
+            Name = "Gideon Jura";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "W";
+            Cost = "3WW";
+            PT = "%6/";
+            Type = "Planeswalker - Gideon";
+            Text = "+2: During target opponent�s next turn, creatures that player controls attack Gideon Jura if able.;^-2: Destroy target tapped creature.;^0: Until end of turn, Gideon Jura becomes a 6/6 Human Soldier creature that�s still a planeswalker. Prevent all damage that would be dealt to him this turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gideon's Avenger
+    public class GideonsAvengerM12 : MagicCard
+    {
+        public GideonsAvengerM12()
+        {
+            Name = "Gideon's Avenger";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "W";
+            Cost = "1WW";
+            PT = "2/2";
+            Type = "Creature - Human Soldier";
+            Text = "Whenever a creature an opponent controls becomes tapped, put a +1/+1 counter on Gideon�s Avenger.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gideon's Lawkeeper
+    public class GideonsLawkeeperM12 : MagicCard
+    {
+        public GideonsLawkeeperM12()
+        {
+            Name = "Gideon's Lawkeeper";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "W";
+            PT = "1/1";
+            Type = "Creature - Human Soldier";
+            Text = "%W, %T: Tap target creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Glacial Fortress
+    public class GlacialFortressM12 : MagicCard
+    {
+        public GlacialFortressM12()
+        {
+            Name = "Glacial Fortress";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Land";
+            Text = "Glacial Fortress enters the battlefield tapped unless you control a Plains or an Island.;^%T: Add %W or %U to your mana pool.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gladecover Scout
+    public class GladecoverScoutM12 : MagicCard
+    {
+        public GladecoverScoutM12()
+        {
+            Name = "Gladecover Scout";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "G";
+            PT = "1/1";
+            Type = "Creature - Elf Scout";
+            Text = "Hexproof @(This creature can�t be the target of spells or abilities your opponents control.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Goblin Arsonist
+    public class GoblinArsonistM12 : MagicCard
+    {
+        public GoblinArsonistM12()
+        {
+            Name = "Goblin Arsonist";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "R";
+            PT = "1/1";
+            Type = "Creature - Goblin Shaman";
+            Text = "When Goblin Arsonist dies, you may have it deal 1 damage to target creature or player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Goblin Bangchuckers
+    public class GoblinBangchuckersM12 : MagicCard
+    {
+        public GoblinBangchuckersM12()
+        {
+            Name = "Goblin Bangchuckers";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "R";
+            Cost = "2RR";
+            PT = "2/2";
+            Type = "Creature - Goblin Warrior";
+            Text = "%T: Flip a coin. If you win the flip, Goblin Bangchuckers deals 2 damage to target creature or player. If you lose the flip, Goblin Bangchuckers deals 2 damage to itself.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Goblin Chieftain
+    public class GoblinChieftainM12 : MagicCard
+    {
+        public GoblinChieftainM12()
+        {
+            Name = "Goblin Chieftain";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "R";
+            Cost = "1RR";
+            PT = "2/2";
+            Type = "Creature - Goblin";
+            Text = "Haste @(This creature can attack and %T as soon as it comes under your control.)@;^Other Goblin creatures you control get +1/+1 and have haste.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Goblin Fireslinger
+    public class GoblinFireslingerM12 : MagicCard
+    {
+        public GoblinFireslingerM12()
+        {
+            Name = "Goblin Fireslinger";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "R";
+            PT = "1/1";
+            Type = "Creature - Goblin Warrior";
+            Text = "%T: Goblin Fireslinger deals 1 damage to target player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Goblin Grenade
+    public class GoblinGrenadeM12 : MagicCard
+    {
+        public GoblinGrenadeM12()
+        {
+            Name = "Goblin Grenade";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "R";
+            Cost = "R";
+            PT = "";
+            Type = "Sorcery";
+            Text = "As an additional cost to cast Goblin Grenade, sacrifice a Goblin.;^Goblin Grenade deals 5 damage to target creature or player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Goblin Piker
+    public class GoblinPikerM12 : MagicCard
+    {
+        public GoblinPikerM12()
+        {
+            Name = "Goblin Piker";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1R";
+            PT = "2/1";
+            Type = "Creature - Goblin Warrior";
+            Text = "";
+            Flavor = "Once he�d worked out which end of the thing was sharp, he was promoted to guard duty.";
+        }
+    }
+    # endregion
+
+    # region Goblin Tunneler
+    public class GoblinTunnelerM12 : MagicCard
+    {
+        public GoblinTunnelerM12()
+        {
+            Name = "Goblin Tunneler";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1R";
+            PT = "1/1";
+            Type = "Creature - Goblin Rogue";
+            Text = "%T: Target creature with power 2 or less can�t be blocked this turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Goblin War Paint
+    public class GoblinWarPaintM12 : MagicCard
+    {
+        public GoblinWarPaintM12()
+        {
+            Name = "Goblin War Paint";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1R";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Enchanted creature gets +2/+2 and has haste. @(It can attack and %T no matter when it came under its controller�s control.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gorehorn Minotaurs
+    public class GorehornMinotaursM12 : MagicCard
+    {
+        public GorehornMinotaursM12()
+        {
+            Name = "Gorehorn Minotaurs";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "2RR";
+            PT = "3/3";
+            Type = "Creature - Minotaur Warrior";
+            Text = "Bloodthirst 2 @(If an opponent was dealt damage this turn, this creature enters the battlefield with two +1/+1 counters on it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Grand Abolisher
+    public class GrandAbolisherM12 : MagicCard
+    {
+        public GrandAbolisherM12()
+        {
+            Name = "Grand Abolisher";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "W";
+            Cost = "WW";
+            PT = "2/2";
+            Type = "Creature - Human Cleric";
+            Text = "During your turn, your opponents can�t cast spells or activate abilities of artifacts, creatures, or enchantments.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Grave Titan
+    public class GraveTitanM12 : MagicCard
+    {
+        public GraveTitanM12()
+        {
+            Name = "Grave Titan";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "B";
+            Cost = "4BB";
+            PT = "6/6";
+            Type = "Creature - Giant";
+            Text = "Deathtouch;^Whenever Grave Titan enters the battlefield or attacks, put two 2/2 black Zombie creature tokens onto the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Gravedigger
+    public class GravediggerM12 : MagicCard
+    {
+        public GravediggerM12()
+        {
+            Name = "Gravedigger";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "3B";
+            PT = "2/2";
+            Type = "Creature - Zombie";
+            Text = "When Gravedigger enters the battlefield, you may return target creature card from your graveyard to your hand.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Greater Basilisk
+    public class GreaterBasiliskM12 : MagicCard
+    {
+        public GreaterBasiliskM12()
+        {
+            Name = "Greater Basilisk";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "3GG";
+            PT = "3/5";
+            Type = "Creature - Basilisk";
+            Text = "Deathtouch @(Any amount of damage this deals to a creature is enough to destroy it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Greatsword
+    public class GreatswordM12 : MagicCard
+    {
+        public GreatswordM12()
+        {
+            Name = "Greatsword";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "3";
+            PT = "";
+            Type = "Artifact - Equipment";
+            Text = "Equipped creature gets +3/+0.;^Equip %3 @(%3: Attach to target creature you control. Equip only as a sorcery.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Griffin Rider
+    public class GriffinRiderM12 : MagicCard
+    {
+        public GriffinRiderM12()
+        {
+            Name = "Griffin Rider";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "1W";
+            PT = "1/1";
+            Type = "Creature - Human Knight";
+            Text = "As long as you control a Griffin creature, Griffin Rider gets +3/+3 and has flying.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Griffin Sentinel
+    public class GriffinSentinelM12 : MagicCard
+    {
+        public GriffinSentinelM12()
+        {
+            Name = "Griffin Sentinel";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "2W";
+            PT = "1/3";
+            Type = "Creature - Griffin";
+            Text = "Flying;^Vigilance @(Attacking doesn�t cause this creature to tap.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Grim Lavamancer
+    public class GrimLavamancerM12 : MagicCard
+    {
+        public GrimLavamancerM12()
+        {
+            Name = "Grim Lavamancer";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "R";
+            Cost = "R";
+            PT = "1/1";
+            Type = "Creature - Human Wizard";
+            Text = "%R, %T, Exile two cards from your graveyard: Grim Lavamancer deals 2 damage to target creature or player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Guardians' Pledge
+    public class GuardiansPledgeM12 : MagicCard
+    {
+        public GuardiansPledgeM12()
+        {
+            Name = "Guardians' Pledge";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "1WW";
+            PT = "";
+            Type = "Instant";
+            Text = "White creatures you control get +2/+2 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Harbor Serpent
+    public class HarborSerpentM12 : MagicCard
+    {
+        public HarborSerpentM12()
+        {
+            Name = "Harbor Serpent";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "4UU";
+            PT = "5/5";
+            Type = "Creature - Serpent";
+            Text = "Islandwalk @(This creature can�t be blocked as long as defending player controls an Island.)@;^Harbor Serpent can�t attack unless there are five or more Islands on the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Hideous Visage
+    public class HideousVisageM12 : MagicCard
+    {
+        public HideousVisageM12()
+        {
+            Name = "Hideous Visage";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "2B";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Creatures you control gain intimidate until end of turn. @(Each of those creatures can�t be blocked except by artifact creatures and/or creatures that share a color with it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Honor of the Pure
+    public class HonorofthePureM12 : MagicCard
+    {
+        public HonorofthePureM12()
+        {
+            Name = "Honor of the Pure";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "W";
+            Cost = "1W";
+            PT = "";
+            Type = "Enchantment";
+            Text = "White creatures you control get +1/+1.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Hunter's Insight
+    public class HuntersInsightM12 : MagicCard
+    {
+        public HuntersInsightM12()
+        {
+            Name = "Hunter's Insight";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "G";
+            Cost = "2G";
+            PT = "";
+            Type = "Instant";
+            Text = "Choose target creature you control. Whenever that creature deals combat damage to a player or planeswalker this turn, draw that many cards.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Ice Cage
+    public class IceCageM12 : MagicCard
+    {
+        public IceCageM12()
+        {
+            Name = "Ice Cage";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1U";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Enchanted creature can�t attack or block, and its activated abilities can�t be activated.;^When enchanted creature becomes the target of a spell or ability, destroy Ice Cage.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Incinerate
+    public class IncinerateM12 : MagicCard
+    {
+        public IncinerateM12()
+        {
+            Name = "Incinerate";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1R";
+            PT = "";
+            Type = "Instant";
+            Text = "Incinerate deals 3 damage to target creature or player. A creature dealt damage this way can�t be regenerated this turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Inferno Titan
+    public class InfernoTitanM12 : MagicCard
+    {
+        public InfernoTitanM12()
+        {
+            Name = "Inferno Titan";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "R";
+            Cost = "4RR";
+            PT = "6/6";
+            Type = "Creature - Giant";
+            Text = "%R: Inferno Titan gets +1/+0 until end of turn.;^Whenever Inferno Titan enters the battlefield or attacks, it deals 3 damage divided as you choose among one, two, or three target creatures and/or players.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Island
+    public class IslandM12 : MagicCard
+    {
+        public IslandM12()
+        {
+            Name = "Island";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Basic Land - Island";
+            Text = "";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Jace, Memory Adept
+    public class JaceMemoryAdeptM12 : MagicCard
+    {
+        public JaceMemoryAdeptM12()
+        {
+            Name = "Jace, Memory Adept";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "U";
+            Cost = "3UU";
+            PT = "%4/";
+            Type = "Planeswalker - Jace";
+            Text = "+1: Draw a card. Target player puts the top card of his or her library into his or her graveyard.;^0: Target player puts the top ten cards of his or her library into his or her graveyard.;^-7: Any number of target players each draw twenty cards.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Jace's Archivist
+    public class JacesArchivistM12 : MagicCard
+    {
+        public JacesArchivistM12()
+        {
+            Name = "Jace's Archivist";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "U";
+            Cost = "1UU";
+            PT = "2/2";
+            Type = "Creature - Vedalken Wizard";
+            Text = "%U, %T: Each player discards his or her hand, then draws cards equal to the greatest number of cards a player discarded this way.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Jace's Erasure
+    public class JacesErasureM12 : MagicCard
+    {
+        public JacesErasureM12()
+        {
+            Name = "Jace's Erasure";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1U";
+            PT = "";
+            Type = "Enchantment";
+            Text = "Whenever you draw a card, you may have target player put the top card of his or her library into his or her graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Jade Mage
+    public class JadeMageM12 : MagicCard
+    {
+        public JadeMageM12()
+        {
+            Name = "Jade Mage";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "G";
+            Cost = "1G";
+            PT = "2/1";
+            Type = "Creature - Human Shaman";
+            Text = "%2%G: Put a 1/1 green Saproling creature token onto the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Kite Shield
+    public class KiteShieldM12 : MagicCard
+    {
+        public KiteShieldM12()
+        {
+            Name = "Kite Shield";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "0";
+            PT = "";
+            Type = "Artifact - Equipment";
+            Text = "Equipped creature gets +0/+3.;^Equip %3 @(%3: Attach to target creature you control. Equip only as a sorcery.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Kraken's Eye
+    public class KrakensEyeM12 : MagicCard
+    {
+        public KrakensEyeM12()
+        {
+            Name = "Kraken's Eye";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "2";
+            PT = "";
+            Type = "Artifact";
+            Text = "Whenever a player casts a blue spell, you may gain 1 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Lava Axe
+    public class LavaAxeM12 : MagicCard
+    {
+        public LavaAxeM12()
+        {
+            Name = "Lava Axe";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "4R";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Lava Axe deals 5 damage to target player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Levitation
+    public class LevitationM12 : MagicCard
+    {
+        public LevitationM12()
+        {
+            Name = "Levitation";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "U";
+            Cost = "2UU";
+            PT = "";
+            Type = "Enchantment";
+            Text = "Creatures you control have flying.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Lifelink
+    public class LifelinkM12 : MagicCard
+    {
+        public LifelinkM12()
+        {
+            Name = "Lifelink";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "W";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Enchanted creature has lifelink. @(Damage dealt by the creature also causes its controller to gain that much life.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Lightning Elemental
+    public class LightningElementalM12 : MagicCard
+    {
+        public LightningElementalM12()
+        {
+            Name = "Lightning Elemental";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "3R";
+            PT = "4/1";
+            Type = "Creature - Elemental";
+            Text = "Haste @(This creature can attack and %T as soon as it comes under your control.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Llanowar Elves
+    public class LlanowarElvesM12 : MagicCard
+    {
+        public LlanowarElvesM12()
+        {
+            Name = "Llanowar Elves";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "G";
+            PT = "1/1";
+            Type = "Creature - Elf Druid";
+            Text = "%T: Add %G to your mana pool.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Lord of the Unreal
+    public class LordoftheUnrealM12 : MagicCard
+    {
+        public LordoftheUnrealM12()
+        {
+            Name = "Lord of the Unreal";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "U";
+            Cost = "UU";
+            PT = "2/2";
+            Type = "Creature - Human Wizard";
+            Text = "Illusion creatures you control get +1/+1 and have hexproof. @(They can�t be the targets of spells or abilities your opponents control.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Lure
+    public class LureM12 : MagicCard
+    {
+        public LureM12()
+        {
+            Name = "Lure";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "G";
+            Cost = "1GG";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^All creatures able to block enchanted creature do so.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Lurking Crocodile
+    public class LurkingCrocodileM12 : MagicCard
+    {
+        public LurkingCrocodileM12()
+        {
+            Name = "Lurking Crocodile";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2G";
+            PT = "2/2";
+            Type = "Creature - Crocodile";
+            Text = "Bloodthirst 1 @(If an opponent was dealt damage this turn, this creature enters the battlefield with a +1/+1 counter on it.)@;^Islandwalk @(This creature can�t be blocked as long as defending player controls an Island.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Mana Leak
+    public class ManaLeakM12 : MagicCard
+    {
+        public ManaLeakM12()
+        {
+            Name = "Mana Leak";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1U";
+            PT = "";
+            Type = "Instant";
+            Text = "Counter target spell unless its controller pays %3.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Manabarbs
+    public class ManabarbsM12 : MagicCard
+    {
+        public ManabarbsM12()
+        {
+            Name = "Manabarbs";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "R";
+            Cost = "3R";
+            PT = "";
+            Type = "Enchantment";
+            Text = "Whenever a player taps a land for mana, Manabarbs deals 1 damage to that player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Manalith
+    public class ManalithM12 : MagicCard
+    {
+        public ManalithM12()
+        {
+            Name = "Manalith";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "Art";
+            Cost = "3";
+            PT = "";
+            Type = "Artifact";
+            Text = "%T: Add one mana of any color to your mana pool.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Manic Vandal
+    public class ManicVandalM12 : MagicCard
+    {
+        public ManicVandalM12()
+        {
+            Name = "Manic Vandal";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "2R";
+            PT = "2/2";
+            Type = "Creature - Human Warrior";
+            Text = "When Manic Vandal enters the battlefield, destroy target artifact.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Master Thief
+    public class MasterThiefM12 : MagicCard
+    {
+        public MasterThiefM12()
+        {
+            Name = "Master Thief";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "U";
+            Cost = "2UU";
+            PT = "2/2";
+            Type = "Creature - Human Rogue";
+            Text = "When Master Thief enters the battlefield, gain control of target artifact for as long as you control Master Thief.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Merfolk Looter
+    public class MerfolkLooterM12 : MagicCard
+    {
+        public MerfolkLooterM12()
+        {
+            Name = "Merfolk Looter";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1U";
+            PT = "1/1";
+            Type = "Creature - Merfolk Rogue";
+            Text = "%T: Draw a card, then discard a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Merfolk Mesmerist
+    public class MerfolkMesmeristM12 : MagicCard
+    {
+        public MerfolkMesmeristM12()
+        {
+            Name = "Merfolk Mesmerist";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1U";
+            PT = "1/2";
+            Type = "Creature - Merfolk Wizard";
+            Text = "%U, %T: Target player puts the top two cards of his or her library into his or her graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Mesa Enchantress
+    public class MesaEnchantressM12 : MagicCard
+    {
+        public MesaEnchantressM12()
+        {
+            Name = "Mesa Enchantress";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "W";
+            Cost = "1WW";
+            PT = "0/2";
+            Type = "Creature - Human Druid";
+            Text = "Whenever you cast an enchantment spell, you may draw a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Mighty Leap
+    public class MightyLeapM12 : MagicCard
+    {
+        public MightyLeapM12()
+        {
+            Name = "Mighty Leap";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "1W";
+            PT = "";
+            Type = "Instant";
+            Text = "Target creature gets +2/+2 and gains flying until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Mind Control
+    public class MindControlM12 : MagicCard
+    {
+        public MindControlM12()
+        {
+            Name = "Mind Control";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "U";
+            Cost = "3UU";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^You control enchanted creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Mind Rot
+    public class MindRotM12 : MagicCard
+    {
+        public MindRotM12()
+        {
+            Name = "Mind Rot";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "2B";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target player discards two cards.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Mind Unbound
+    public class MindUnboundM12 : MagicCard
+    {
+        public MindUnboundM12()
+        {
+            Name = "Mind Unbound";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "U";
+            Cost = "4UU";
+            PT = "";
+            Type = "Enchantment";
+            Text = "At the beginning of your upkeep, put a lore counter on Mind Unbound, then draw a card for each lore counter on Mind Unbound.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Monomania
+    public class MonomaniaM12 : MagicCard
+    {
+        public MonomaniaM12()
+        {
+            Name = "Monomania";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "B";
+            Cost = "3BB";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Target player chooses a card in his or her hand and discards the rest.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Mountain
+    public class MountainM12 : MagicCard
+    {
+        public MountainM12()
+        {
+            Name = "Mountain";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Basic Land - Mountain";
+            Text = "";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Naturalize
+    public class NaturalizeM12 : MagicCard
+    {
+        public NaturalizeM12()
+        {
+            Name = "Naturalize";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "1G";
+            PT = "";
+            Type = "Instant";
+            Text = "Destroy target artifact or enchantment.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Negate
+    public class NegateM12 : MagicCard
+    {
+        public NegateM12()
+        {
+            Name = "Negate";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1U";
+            PT = "";
+            Type = "Instant";
+            Text = "Counter target noncreature spell.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Oblivion Ring
+    public class OblivionRingM12 : MagicCard
+    {
+        public OblivionRingM12()
+        {
+            Name = "Oblivion Ring";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "W";
+            Cost = "2W";
+            PT = "";
+            Type = "Enchantment";
+            Text = "When Oblivion Ring enters the battlefield, exile another target nonland permanent.;^When Oblivion Ring leaves the battlefield, return the exiled card to the battlefield under its owner�s control.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Onyx Mage
+    public class OnyxMageM12 : MagicCard
+    {
+        public OnyxMageM12()
+        {
+            Name = "Onyx Mage";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "B";
+            Cost = "1B";
+            PT = "2/1";
+            Type = "Creature - Human Wizard";
+            Text = "%1%B: Target creature you control gains deathtouch until end of turn. @(Any amount of damage it deals to a creature is enough to destroy it.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Overrun
+    public class OverrunM12 : MagicCard
+    {
+        public OverrunM12()
+        {
+            Name = "Overrun";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "G";
+            Cost = "2GGG";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Creatures you control get +3/+3 and gain trample until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Pacifism
+    public class PacifismM12 : MagicCard
+    {
+        public PacifismM12()
+        {
+            Name = "Pacifism";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "1W";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Enchanted creature can�t attack or block.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Pentavus
+    public class PentavusM12 : MagicCard
+    {
+        public PentavusM12()
+        {
+            Name = "Pentavus";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Art";
+            Cost = "7";
+            PT = "0/0";
+            Type = "Artifact Creature - Construct";
+            Text = "Pentavus enters the battlefield with five +1/+1 counters on it.;^%1, Remove a +1/+1 counter from Pentavus: Put a 1/1 colorless Pentavite artifact creature token with flying onto the battlefield.;^%1, Sacrifice a Pentavite: Put a +1/+1 counter on Pentavus.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Peregrine Griffin
+    public class PeregrineGriffinM12 : MagicCard
+    {
+        public PeregrineGriffinM12()
+        {
+            Name = "Peregrine Griffin";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "4W";
+            PT = "2/4";
+            Type = "Creature - Griffin";
+            Text = "Flying;^First strike @(This creature deals combat damage before creatures without first strike.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Personal Sanctuary
+    public class PersonalSanctuaryM12 : MagicCard
+    {
+        public PersonalSanctuaryM12()
+        {
+            Name = "Personal Sanctuary";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "W";
+            Cost = "2W";
+            PT = "";
+            Type = "Enchantment";
+            Text = "During your turn, prevent all damage that would be dealt to you.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Phantasmal Bear
+    public class PhantasmalBearM12 : MagicCard
+    {
+        public PhantasmalBearM12()
+        {
+            Name = "Phantasmal Bear";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "U";
+            PT = "2/2";
+            Type = "Creature - Bear Illusion";
+            Text = "When Phantasmal Bear becomes the target of a spell or ability, sacrifice it.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Phantasmal Dragon
+    public class PhantasmalDragonM12 : MagicCard
+    {
+        public PhantasmalDragonM12()
+        {
+            Name = "Phantasmal Dragon";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "U";
+            Cost = "2UU";
+            PT = "5/5";
+            Type = "Creature - Dragon Illusion";
+            Text = "Flying;^When Phantasmal Dragon becomes the target of a spell or ability, sacrifice it.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Phantasmal Image
+    public class PhantasmalImageM12 : MagicCard
+    {
+        public PhantasmalImageM12()
+        {
+            Name = "Phantasmal Image";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "U";
+            Cost = "1U";
+            PT = "0/0";
+            Type = "Creature - Illusion";
+            Text = "You may have Phantasmal Image enter the battlefield as a copy of any creature on the battlefield, except it�s an Illusion in addition to its other types and it gains �When this creature becomes the target of a spell or ability, sacrifice it.�";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Plains
+    public class PlainsM12 : MagicCard
+    {
+        public PlainsM12()
+        {
+            Name = "Plains";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Basic Land - Plains";
+            Text = "";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Plummet
+    public class PlummetM12 : MagicCard
+    {
+        public PlummetM12()
+        {
+            Name = "Plummet";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "1G";
+            PT = "";
+            Type = "Instant";
+            Text = "Destroy target creature with flying.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Ponder
+    public class PonderM12 : MagicCard
+    {
+        public PonderM12()
+        {
+            Name = "Ponder";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "U";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Look at the top three cards of your library, then put them back in any order. You may shuffle your library.;^Draw a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Pride Guardian
+    public class PrideGuardianM12 : MagicCard
+    {
+        public PrideGuardianM12()
+        {
+            Name = "Pride Guardian";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "W";
+            PT = "0/3";
+            Type = "Creature - Cat Monk";
+            Text = "Defender @(This creature can�t attack.)@;^Whenever Pride Guardian blocks, you gain 3 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Primeval Titan
+    public class PrimevalTitanM12 : MagicCard
+    {
+        public PrimevalTitanM12()
+        {
+            Name = "Primeval Titan";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "G";
+            Cost = "4GG";
+            PT = "6/6";
+            Type = "Creature - Giant";
+            Text = "Trample;^Whenever Primeval Titan enters the battlefield or attacks, you may search your library for up to two land cards, put them onto the battlefield tapped, then shuffle your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Primordial Hydra
+    public class PrimordialHydraM12 : MagicCard
+    {
+        public PrimordialHydraM12()
+        {
+            Name = "Primordial Hydra";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "G";
+            Cost = "XGG";
+            PT = "0/0";
+            Type = "Creature - Hydra";
+            Text = "Primordial Hydra enters the battlefield with X +1/+1 counters on it.;^At the beginning of your upkeep, double the number of +1/+1 counters on Primordial Hydra.;^Primordial Hydra has trample as long as it has ten or more +1/+1 counters on it.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Quicksilver Amulet
+    public class QuicksilverAmuletM12 : MagicCard
+    {
+        public QuicksilverAmuletM12()
+        {
+            Name = "Quicksilver Amulet";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Art";
+            Cost = "4";
+            PT = "";
+            Type = "Artifact";
+            Text = "%4, %T: You may put a creature card from your hand onto the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Rampant Growth
+    public class RampantGrowthM12 : MagicCard
+    {
+        public RampantGrowthM12()
+        {
+            Name = "Rampant Growth";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "1G";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Reassembling Skeleton
+    public class ReassemblingSkeletonM12 : MagicCard
+    {
+        public ReassemblingSkeletonM12()
+        {
+            Name = "Reassembling Skeleton";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "B";
+            Cost = "1B";
+            PT = "1/1";
+            Type = "Creature - Skeleton Warrior";
+            Text = "%1%B: Return Reassembling Skeleton from your graveyard to the battlefield tapped.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Reclaim
+    public class ReclaimM12 : MagicCard
+    {
+        public ReclaimM12()
+        {
+            Name = "Reclaim";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "G";
+            PT = "";
+            Type = "Instant";
+            Text = "Put target card from your graveyard on top of your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Redirect
+    public class RedirectM12 : MagicCard
+    {
+        public RedirectM12()
+        {
+            Name = "Redirect";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "U";
+            Cost = "UU";
+            PT = "";
+            Type = "Instant";
+            Text = "You may choose new targets for target spell.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Reverberate
+    public class ReverberateM12 : MagicCard
+    {
+        public ReverberateM12()
+        {
+            Name = "Reverberate";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "R";
+            Cost = "RR";
+            PT = "";
+            Type = "Instant";
+            Text = "Copy target instant or sorcery spell. You may choose new targets for the copy.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Rites of Flourishing
+    public class RitesofFlourishingM12 : MagicCard
+    {
+        public RitesofFlourishingM12()
+        {
+            Name = "Rites of Flourishing";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "G";
+            Cost = "2G";
+            PT = "";
+            Type = "Enchantment";
+            Text = "At the beginning of each player�s draw step, that player draws an additional card.;^Each player may play an additional land on each of his or her turns.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Roc Egg
+    public class RocEggM12 : MagicCard
+    {
+        public RocEggM12()
+        {
+            Name = "Roc Egg";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "W";
+            Cost = "2W";
+            PT = "0/3";
+            Type = "Creature - Bird";
+            Text = "Defender @(This creature can�t attack.)@;^When Roc Egg dies, put a 3/3 white Bird creature token with flying onto the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Rootbound Crag
+    public class RootboundCragM12 : MagicCard
+    {
+        public RootboundCragM12()
+        {
+            Name = "Rootbound Crag";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Land";
+            Text = "Rootbound Crag enters the battlefield tapped unless you control a Mountain or a Forest.;^%T: Add %R or %G to your mana pool.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Royal Assassin
+    public class RoyalAssassinM12 : MagicCard
+    {
+        public RoyalAssassinM12()
+        {
+            Name = "Royal Assassin";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "B";
+            Cost = "1BB";
+            PT = "1/1";
+            Type = "Creature - Human Assassin";
+            Text = "%T: Destroy target tapped creature.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Runeclaw Bear
+    public class RuneclawBearM12 : MagicCard
+    {
+        public RuneclawBearM12()
+        {
+            Name = "Runeclaw Bear";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "1G";
+            PT = "2/2";
+            Type = "Creature - Bear";
+            Text = "";
+            Flavor = "The only honey it wants is the sweet nectar flowing through your veins.";
+        }
+    }
+    # endregion
+
+    # region Rune-Scarred Demon
+    public class RuneScarredDemonM12 : MagicCard
+    {
+        public RuneScarredDemonM12()
+        {
+            Name = "Rune-Scarred Demon";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "B";
+            Cost = "5BB";
+            PT = "6/6";
+            Type = "Creature - Demon";
+            Text = "Flying;^When Rune-Scarred Demon enters the battlefield, search your library for a card, put it into your hand, then shuffle your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Rusted Sentinel
+    public class RustedSentinelM12 : MagicCard
+    {
+        public RustedSentinelM12()
+        {
+            Name = "Rusted Sentinel";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "4";
+            PT = "3/4";
+            Type = "Artifact Creature - Golem";
+            Text = "Rusted Sentinel enters the battlefield tapped.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sacred Wolf
+    public class SacredWolfM12 : MagicCard
+    {
+        public SacredWolfM12()
+        {
+            Name = "Sacred Wolf";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2G";
+            PT = "3/1";
+            Type = "Creature - Wolf";
+            Text = "Hexproof @(This creature can�t be the target of spells or abilities your opponents control.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Scepter of Empires
+    public class ScepterofEmpiresM12 : MagicCard
+    {
+        public ScepterofEmpiresM12()
+        {
+            Name = "Scepter of Empires";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "3";
+            PT = "";
+            Type = "Artifact";
+            Text = "%T: Scepter of Empires deals 1 damage to target player. It deals 3 damage to that player instead if you control artifacts named Crown of Empires and Throne of Empires.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Scrambleverse
+    public class ScrambleverseM12 : MagicCard
+    {
+        public ScrambleverseM12()
+        {
+            Name = "Scrambleverse";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "R";
+            Cost = "6RR";
+            PT = "";
+            Type = "Sorcery";
+            Text = "For each nonland permanent, choose a player at random. Then each player gains control of each permanent for which he or she was chosen. Untap those permanents.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sengir Vampire
+    public class SengirVampireM12 : MagicCard
+    {
+        public SengirVampireM12()
+        {
+            Name = "Sengir Vampire";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "B";
+            Cost = "3BB";
+            PT = "4/4";
+            Type = "Creature - Vampire";
+            Text = "Flying;^Whenever a creature dealt damage by Sengir Vampire this turn dies, put a +1/+1 counter on Sengir Vampire.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Serra Angel
+    public class SerraAngelM12 : MagicCard
+    {
+        public SerraAngelM12()
+        {
+            Name = "Serra Angel";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "W";
+            Cost = "3WW";
+            PT = "4/4";
+            Type = "Creature - Angel";
+            Text = "Flying;^Vigilance @(Attacking doesn�t cause this creature to tap.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Shock
+    public class ShockM12 : MagicCard
+    {
+        public ShockM12()
+        {
+            Name = "Shock";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "R";
+            PT = "";
+            Type = "Instant";
+            Text = "Shock deals 2 damage to target creature or player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Siege Mastodon
+    public class SiegeMastodonM12 : MagicCard
+    {
+        public SiegeMastodonM12()
+        {
+            Name = "Siege Mastodon";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "4W";
+            PT = "3/5";
+            Type = "Creature - Elephant";
+            Text = "";
+            Flavor = "�The walls of the wicked will fall before us. Ready the siege engines. We proceed to war!�;^�General Avitora";
+        }
+    }
+    # endregion
+
+    # region Skinshifter
+    public class SkinshifterM12 : MagicCard
+    {
+        public SkinshifterM12()
+        {
+            Name = "Skinshifter";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "G";
+            Cost = "1G";
+            PT = "1/1";
+            Type = "Creature - Human Shaman";
+            Text = "%G: Choose one � Until end of turn, Skinshifter becomes a 4/4 Rhino and gains trample; or until end of turn, Skinshifter becomes a 2/2 Bird and gains flying; or until end of turn, Skinshifter becomes a 0/8 Plant. Activate this ability only once each turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Skywinder Drake
+    public class SkywinderDrakeM12 : MagicCard
+    {
+        public SkywinderDrakeM12()
+        {
+            Name = "Skywinder Drake";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "2U";
+            PT = "3/1";
+            Type = "Creature - Drake";
+            Text = "Flying;^Skywinder Drake can block only creatures with flying.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Slaughter Cry
+    public class SlaughterCryM12 : MagicCard
+    {
+        public SlaughterCryM12()
+        {
+            Name = "Slaughter Cry";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "2R";
+            PT = "";
+            Type = "Instant";
+            Text = "Target creature gets +3/+0 and gains first strike until end of turn. @(It deals combat damage before creatures without first strike.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Smallpox
+    public class SmallpoxM12 : MagicCard
+    {
+        public SmallpoxM12()
+        {
+            Name = "Smallpox";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "B";
+            Cost = "BB";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Each player loses 1 life, discards a card, sacrifices a creature, then sacrifices a land.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Solemn Simulacrum
+    public class SolemnSimulacrumM12 : MagicCard
+    {
+        public SolemnSimulacrumM12()
+        {
+            Name = "Solemn Simulacrum";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Art";
+            Cost = "4";
+            PT = "2/2";
+            Type = "Artifact Creature - Golem";
+            Text = "When Solemn Simulacrum enters the battlefield, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle your library.;^When Solemn Simulacrum dies, you may draw a card.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sorin Markov
+    public class SorinMarkovM12 : MagicCard
+    {
+        public SorinMarkovM12()
+        {
+            Name = "Sorin Markov";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "B";
+            Cost = "3BBB";
+            PT = "%4/";
+            Type = "Planeswalker - Sorin";
+            Text = "+2: Sorin Markov deals 2 damage to target creature or player and you gain 2 life.;^-3: Target opponent�s life total becomes 10.;^-7: You control target player during that player�s next turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sorin's Thirst
+    public class SorinsThirstM12 : MagicCard
+    {
+        public SorinsThirstM12()
+        {
+            Name = "Sorin's Thirst";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "BB";
+            PT = "";
+            Type = "Instant";
+            Text = "Sorin�s Thirst deals 2 damage to target creature and you gain 2 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sorin's Vengeance
+    public class SorinsVengeanceM12 : MagicCard
+    {
+        public SorinsVengeanceM12()
+        {
+            Name = "Sorin's Vengeance";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "B";
+            Cost = "4BBB";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Sorin�s Vengeance deals 10 damage to target player and you gain 10 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sphinx of Uthuun
+    public class SphinxofUthuunM12 : MagicCard
+    {
+        public SphinxofUthuunM12()
+        {
+            Name = "Sphinx of Uthuun";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "U";
+            Cost = "5UU";
+            PT = "5/6";
+            Type = "Creature - Sphinx";
+            Text = "Flying;^When Sphinx of Uthuun enters the battlefield, reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Spirit Mantle
+    public class SpiritMantleM12 : MagicCard
+    {
+        public SpiritMantleM12()
+        {
+            Name = "Spirit Mantle";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "W";
+            Cost = "1W";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Enchanted creature gets +1/+1 and has protection from creatures.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Stampeding Rhino
+    public class StampedingRhinoM12 : MagicCard
+    {
+        public StampedingRhinoM12()
+        {
+            Name = "Stampeding Rhino";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "4G";
+            PT = "4/4";
+            Type = "Creature - Rhino";
+            Text = "Trample @(If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Stave Off
+    public class StaveOffM12 : MagicCard
+    {
+        public StaveOffM12()
+        {
+            Name = "Stave Off";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "W";
+            PT = "";
+            Type = "Instant";
+            Text = "Target creature gains protection from the color of your choice until end of turn. @(It can�t be blocked, targeted, dealt damage, or enchanted by anything of that color.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Stingerfling Spider
+    public class StingerflingSpiderM12 : MagicCard
+    {
+        public StingerflingSpiderM12()
+        {
+            Name = "Stingerfling Spider";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "G";
+            Cost = "4G";
+            PT = "2/5";
+            Type = "Creature - Spider";
+            Text = "Reach @(This creature can block creatures with flying.)@;^When Stingerfling Spider enters the battlefield, you may destroy target creature with flying.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Stonehorn Dignitary
+    public class StonehornDignitaryM12 : MagicCard
+    {
+        public StonehornDignitaryM12()
+        {
+            Name = "Stonehorn Dignitary";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "3W";
+            PT = "1/4";
+            Type = "Creature - Rhino Soldier";
+            Text = "When Stonehorn Dignitary enters the battlefield, target opponent skips his or her next combat phase.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Stormblood Berserker
+    public class StormbloodBerserkerM12 : MagicCard
+    {
+        public StormbloodBerserkerM12()
+        {
+            Name = "Stormblood Berserker";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "R";
+            Cost = "1R";
+            PT = "1/1";
+            Type = "Creature - Human Berserker";
+            Text = "Bloodthirst 2 @(If an opponent was dealt damage this turn, this creature enters the battlefield with two +1/+1 counters on it.)@;^Stormblood Berserker can�t be blocked except by two or more creatures.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Stormfront Pegasus
+    public class StormfrontPegasusM12 : MagicCard
+    {
+        public StormfrontPegasusM12()
+        {
+            Name = "Stormfront Pegasus";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "W";
+            Cost = "1W";
+            PT = "2/1";
+            Type = "Creature - Pegasus";
+            Text = "Flying";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sun Titan
+    public class SunTitanM12 : MagicCard
+    {
+        public SunTitanM12()
+        {
+            Name = "Sun Titan";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "W";
+            Cost = "4WW";
+            PT = "6/6";
+            Type = "Creature - Giant";
+            Text = "Vigilance;^Whenever Sun Titan enters the battlefield or attacks, you may return target permanent card with converted mana cost 3 or less from your graveyard to the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sundial of the Infinite
+    public class SundialoftheInfiniteM12 : MagicCard
+    {
+        public SundialoftheInfiniteM12()
+        {
+            Name = "Sundial of the Infinite";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Art";
+            Cost = "2";
+            PT = "";
+            Type = "Artifact";
+            Text = "%1, %T: End the turn. Activate this ability only during your turn. @(Exile all spells and abilities on the stack. Discard down to your maximum hand size. Damage wears off, and �this turn� and �until end of turn� effects end.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sunpetal Grove
+    public class SunpetalGroveM12 : MagicCard
+    {
+        public SunpetalGroveM12()
+        {
+            Name = "Sunpetal Grove";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Land";
+            Text = "Sunpetal Grove enters the battlefield tapped unless you control a Forest or a Plains.;^%T: Add %G or %W to your mana pool.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Sutured Ghoul
+    public class SuturedGhoulM12 : MagicCard
+    {
+        public SuturedGhoulM12()
+        {
+            Name = "Sutured Ghoul";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "B";
+            Cost = "4BBB";
+            PT = "*/*";
+            Type = "Creature - Zombie";
+            Text = "Trample;^As Sutured Ghoul enters the battlefield, exile any number of creature cards from your graveyard.;^Sutured Ghoul�s power is equal to the total power of the exiled cards and its toughness is equal to their total toughness.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Swamp
+    public class SwampM12 : MagicCard
+    {
+        public SwampM12()
+        {
+            Name = "Swamp";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "Lnd";
+            Cost = "";
+            PT = "";
+            Type = "Basic Land - Swamp";
+            Text = "";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Swiftfoot Boots
+    public class SwiftfootBootsM12 : MagicCard
+    {
+        public SwiftfootBootsM12()
+        {
+            Name = "Swiftfoot Boots";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "2";
+            PT = "";
+            Type = "Artifact - Equipment";
+            Text = "Equipped creature has hexproof and haste. @(It can�t be the target of spells or abilities your opponents control, and it can attack and %T as soon as it comes under your control.)@;^Equip %1 @(%1: Attach to target creature you control. Equip only as a sorcery.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Taste of Blood
+    public class TasteofBloodM12 : MagicCard
+    {
+        public TasteofBloodM12()
+        {
+            Name = "Taste of Blood";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "B";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Taste of Blood deals 1 damage to target player and you gain 1 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Tectonic Rift
+    public class TectonicRiftM12 : MagicCard
+    {
+        public TectonicRiftM12()
+        {
+            Name = "Tectonic Rift";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "R";
+            Cost = "3R";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Destroy target land. Creatures without flying can�t block this turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Thran Golem
+    public class ThranGolemM12 : MagicCard
+    {
+        public ThranGolemM12()
+        {
+            Name = "Thran Golem";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "5";
+            PT = "3/3";
+            Type = "Artifact Creature - Golem";
+            Text = "As long as Thran Golem is enchanted, it gets +2/+2 and has flying, first strike, and trample.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Throne of Empires
+    public class ThroneofEmpiresM12 : MagicCard
+    {
+        public ThroneofEmpiresM12()
+        {
+            Name = "Throne of Empires";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Art";
+            Cost = "4";
+            PT = "";
+            Type = "Artifact";
+            Text = "%1, %T: Put a 1/1 white Soldier creature token onto the battlefield. Put five of those tokens onto the battlefield instead if you control artifacts named Crown of Empires and Scepter of Empires.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Time Reversal
+    public class TimeReversalM12 : MagicCard
+    {
+        public TimeReversalM12()
+        {
+            Name = "Time Reversal";
+            Edition = "M12";
+            Rarity = "M";
+            Color = "U";
+            Cost = "3UU";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Each player shuffles his or her hand and graveyard into his or her library, then draws seven cards. Exile Time Reversal.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Timely Reinforcements
+    public class TimelyReinforcementsM12 : MagicCard
+    {
+        public TimelyReinforcementsM12()
+        {
+            Name = "Timely Reinforcements";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "W";
+            Cost = "2W";
+            PT = "";
+            Type = "Sorcery";
+            Text = "If you have less life than an opponent, you gain 6 life. If you control fewer creatures than an opponent, put three 1/1 white Soldier creature tokens onto the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Titanic Growth
+    public class TitanicGrowthM12 : MagicCard
+    {
+        public TitanicGrowthM12()
+        {
+            Name = "Titanic Growth";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "1G";
+            PT = "";
+            Type = "Instant";
+            Text = "Target creature gets +4/+4 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Tormented Soul
+    public class TormentedSoulM12 : MagicCard
+    {
+        public TormentedSoulM12()
+        {
+            Name = "Tormented Soul";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "B";
+            PT = "1/1";
+            Type = "Creature - Spirit";
+            Text = "Tormented Soul can�t block and can�t be blocked.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Trollhide
+    public class TrollhideM12 : MagicCard
+    {
+        public TrollhideM12()
+        {
+            Name = "Trollhide";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "2G";
+            PT = "";
+            Type = "Enchantment - Aura";
+            Text = "Enchant creature;^Enchanted creature gets +2/+2 and has �%1%G: Regenerate this creature.� @(The next time the creature would be destroyed this turn, it isn�t. Instead tap it, remove all damage from it, and remove it from combat.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Turn to Frog
+    public class TurntoFrogM12 : MagicCard
+    {
+        public TurntoFrogM12()
+        {
+            Name = "Turn to Frog";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "U";
+            Cost = "1U";
+            PT = "";
+            Type = "Instant";
+            Text = "Target creature loses all abilities and becomes a 1/1 blue Frog until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Unsummon
+    public class UnsummonM12 : MagicCard
+    {
+        public UnsummonM12()
+        {
+            Name = "Unsummon";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "U";
+            Cost = "U";
+            PT = "";
+            Type = "Instant";
+            Text = "Return target creature to its owner�s hand.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Vampire Outcasts
+    public class VampireOutcastsM12 : MagicCard
+    {
+        public VampireOutcastsM12()
+        {
+            Name = "Vampire Outcasts";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "B";
+            Cost = "2BB";
+            PT = "2/2";
+            Type = "Creature - Vampire";
+            Text = "Bloodthirst 2 @(If an opponent was dealt damage this turn, this creature enters the battlefield with two +1/+1 counters on it.)@;^Lifelink @(Damage dealt by this creature also causes you to gain that much life.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Vastwood Gorger
+    public class VastwoodGorgerM12 : MagicCard
+    {
+        public VastwoodGorgerM12()
+        {
+            Name = "Vastwood Gorger";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "G";
+            Cost = "5G";
+            PT = "5/6";
+            Type = "Creature - Wurm";
+            Text = "";
+            Flavor = "The gorger�s insect-like eyes pick up the slightest movement in any direction. Its body then whips toward its prey with startling speed, swallowing it in one engulfing gulp.";
+        }
+    }
+    # endregion
+
+    # region Vengeful Pharaoh
+    public class VengefulPharaohM12 : MagicCard
+    {
+        public VengefulPharaohM12()
+        {
+            Name = "Vengeful Pharaoh";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "B";
+            Cost = "2BBB";
+            PT = "5/4";
+            Type = "Creature - Zombie";
+            Text = "Deathtouch @(Any amount of damage this deals to a creature is enough to destroy it.)@;^Whenever combat damage is dealt to you or a planeswalker you control, if Vengeful Pharaoh is in your graveyard, destroy target attacking creature, then put Vengeful Pharaoh on top of your library.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Visions of Beyond
+    public class VisionsofBeyondM12 : MagicCard
+    {
+        public VisionsofBeyondM12()
+        {
+            Name = "Visions of Beyond";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "U";
+            Cost = "U";
+            PT = "";
+            Type = "Instant";
+            Text = "Draw a card. If a graveyard has twenty or more cards in it, draw three cards instead.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Volcanic Dragon
+    public class VolcanicDragonM12 : MagicCard
+    {
+        public VolcanicDragonM12()
+        {
+            Name = "Volcanic Dragon";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "R";
+            Cost = "4RR";
+            PT = "4/4";
+            Type = "Creature - Dragon";
+            Text = "Flying;^Haste @(This creature can attack and %T as soon as it comes under your control.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Wall of Torches
+    public class WallofTorchesM12 : MagicCard
+    {
+        public WallofTorchesM12()
+        {
+            Name = "Wall of Torches";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "R";
+            Cost = "1R";
+            PT = "4/1";
+            Type = "Creature - Wall";
+            Text = "Defender @(This creature can�t attack.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Warpath Ghoul
+    public class WarpathGhoulM12 : MagicCard
+    {
+        public WarpathGhoulM12()
+        {
+            Name = "Warpath Ghoul";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "2B";
+            PT = "3/2";
+            Type = "Creature - Zombie";
+            Text = "";
+            Flavor = "Ghouls are often found skulking on the fringes of great battles, showing themselves only to snatch the wounded and weak, dragging their victims screaming into the shadows.";
+        }
+    }
+    # endregion
+
+    # region Warstorm Surge
+    public class WarstormSurgeM12 : MagicCard
+    {
+        public WarstormSurgeM12()
+        {
+            Name = "Warstorm Surge";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "R";
+            Cost = "5R";
+            PT = "";
+            Type = "Enchantment";
+            Text = "Whenever a creature enters the battlefield under your control, it deals damage equal to its power to target creature or player.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Worldslayer
+    public class WorldslayerM12 : MagicCard
+    {
+        public WorldslayerM12()
+        {
+            Name = "Worldslayer";
+            Edition = "M12";
+            Rarity = "R";
+            Color = "Art";
+            Cost = "5";
+            PT = "";
+            Type = "Artifact - Equipment";
+            Text = "Whenever equipped creature deals combat damage to a player, destroy all permanents other than Worldslayer.;^Equip %5 @(%5: Attach to target creature you control. Equip only as a sorcery.)@";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Wring Flesh
+    public class WringFleshM12 : MagicCard
+    {
+        public WringFleshM12()
+        {
+            Name = "Wring Flesh";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "B";
+            PT = "";
+            Type = "Instant";
+            Text = "Target creature gets -3/-1 until end of turn.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Wurm's Tooth
+    public class WurmsToothM12 : MagicCard
+    {
+        public WurmsToothM12()
+        {
+            Name = "Wurm's Tooth";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "Art";
+            Cost = "2";
+            PT = "";
+            Type = "Artifact";
+            Text = "Whenever a player casts a green spell, you may gain 1 life.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+    # region Zombie Goliath
+    public class ZombieGoliathM12 : MagicCard
+    {
+        public ZombieGoliathM12()
+        {
+            Name = "Zombie Goliath";
+            Edition = "M12";
+            Rarity = "C";
+            Color = "B";
+            Cost = "4B";
+            PT = "4/3";
+            Type = "Creature - Zombie Giant";
+            Text = "";
+            Flavor = "�Removing the encumbrance of useless brain tissue grants several advantages: a slight increase in mobility, a response of revulsion and horror from the enemy, and, in the case of large specimens, room for passengers.�;^�Zul Ashur, lich lord";
+        }
+    }
+    # endregion
+
+    # region Zombie Infestation
+    public class ZombieInfestationM12 : MagicCard
+    {
+        public ZombieInfestationM12()
+        {
+            Name = "Zombie Infestation";
+            Edition = "M12";
+            Rarity = "U";
+            Color = "B";
+            Cost = "1B";
+            PT = "";
+            Type = "Enchantment";
+            Text = "Discard two cards: Put a 2/2 black Zombie creature token onto the battlefield.";
+            Flavor = "";
+        }
+    }
+    # endregion
+
+
+    # endregion
+
+    # region Magic 2013 Empty
+
+    # endregion
+
     # region Magic 2014
     # region Academy Raider
     public class AcademyRaider : MagicCard

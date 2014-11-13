@@ -13,7 +13,7 @@ namespace MagicProgram
             Type = "Creature - Saproling";
             PT = "1/1";
             Color = "G";
-            Token = true;
+            Token = true;            
         }
     }
 }

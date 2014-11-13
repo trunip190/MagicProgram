@@ -492,6 +492,7 @@ namespace MagicProgram
 
         private int ContainsCard(MagicCard card)
         {
+            //TODO work out why cards are being duplicated
             int result = -1;
 
             for (int i = 0; i < mControls.Count; i++)
@@ -499,11 +500,22 @@ namespace MagicProgram
                 if (mControls[i].cards.Count > 0)
                 {
                     MagicCard mc = mControls[i].cards[0];
-
-                    if (mc.attachedCards.Count == 0 && mc.Name == card.Name && mc.Tapped == card.Tapped)
+                    
+                    if (IndividualCard)
                     {
-                        result = i;
-                        break;
+                        if (mc == card)
+                        {
+                            result = i;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (mc.attachedCards.Count == 0 && mc.Name == card.Name && mc.Tapped == card.Tapped)                        
+                        {
+                            result = i;
+                            break;
+                        }
                     }
                 }
             }
