@@ -156,8 +156,9 @@ namespace MagicProgram
         public bool Add(MagicCard card)
         {
             bool result = false; //False means not in cards
+            //TODO card duplication happens here
 
-            string st = card.Name.ToUpper().Trim();
+            string st = (card.Name + card.Tapped + card.PT).ToUpper().Trim();
             index();
 
             # region already in link
@@ -180,7 +181,7 @@ namespace MagicProgram
                 }
             }
             # endregion
-            # region
+            # region not in list
             else
             {
                 link.Add(st, cards.Count);
@@ -25452,6 +25453,12 @@ namespace MagicProgram
                 # region Commander 2011
                 case "Fists of Ironwood":
                     mcn = new FistsofIronwoodC11();
+                    break;
+                # endregion
+
+                # region Commander 2014
+                case "Overwhelming Stampede":
+                    mcn = new OverwhelmingStampede();
                     break;
                 # endregion
 

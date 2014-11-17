@@ -82,4 +82,31 @@ namespace MagicProgram
         }
     }
     # endregion
+
+    # region Overwhelming Stampede
+    class OverwhelmingStampede : MagicCard
+    {
+        public OverwhelmingStampede()
+        {
+            Name = "Overwhelming Stampede";
+            Edition = "C14";
+            Rarity = "R";
+            Color = "G";
+            Cost = "3GG";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Until end of turn, creatures you control gain trample and get +X/+X, where X is the greatest power among creatures you control.";
+        }
+
+        public override void Resolve()
+        {
+            int value = PArea._play.cards.Max(o => o.Power);
+            foreach (MagicCard mc in PArea._play.cards)
+            {
+                mc.PBonus += value;
+                //mc.Abilities.Add(Trample);
+            }
+        }
+    }
+    # endregion
 }

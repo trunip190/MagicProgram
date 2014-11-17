@@ -2,15 +2,15 @@ Forest#10
 Island#10
 Breeding Pool#1
 Simic Guildgate#3
-Bond Beetle#4
-Cloudfin Raptor#4
-Ponder#2
-Gyre Sage#4
-Renegade Krasis#4
-Predator's Rapport#2
-Elusive Krasis#2
-Master Biomancer#1
-Fathom Mage#1
-Ooze Flux#4
-Longshot Squad#4
+Bond Beetle#3
+Cloudfin Raptor#3
+Ponder#4
 Hardened Scales#4
+Gyre Sage#4
+Renegade Krasis#3
+Predator's Rapport#2
+Elusive Krasis#3
+Master Biomancer#1
+Fathom Mage#2
+Longshot Squad#4
+Overwhelming Stampede#3

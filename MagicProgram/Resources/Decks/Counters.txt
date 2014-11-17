@@ -4,17 +4,15 @@ Island#9
 Simic Guildgate#3
 Cloudfin Raptor#4
 Hardened Scales#4
-Ponder#3
-Explore#3
+Ponder#4
+Bond Beetle#4
 Gyre Sage#4
 Protean Hydra#4
-Call to Heel#1
+Call to Heel#3
+Bioshift#2
 Crocanura#1
-Favor of the Overbeing#2
 Predator's Rapport#2
 Vorel of the Hull Clade#1
 Fathom Mage#1
 Master Biomancer#1
-Ooze Flux#3
 Prophet of Kruphix#1
-Swiftfoot Boots#1

@@ -547,9 +547,9 @@ namespace MagicProgram
             mcv.LoadCard(mc);
 
             string str = this.Name + mc.Name;
-            # region link events
+            
             LinkEvents(mcv);
-            # endregion
+            
 
             Controls.Add(mcv);
             mControls.Add(mcv);
