@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeckTest));
-            MagicProgram.ColourCost colourCost3 = new MagicProgram.ColourCost();
-            MagicProgram.ColourCost colourCost4 = new MagicProgram.ColourCost();
-            MagicProgram.CardCollection cardCollection4 = new MagicProgram.CardCollection();
-            MagicProgram.CardCollection cardCollection5 = new MagicProgram.CardCollection();
-            MagicProgram.CardCollection cardCollection6 = new MagicProgram.CardCollection();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Murmuring Phantasm (0,5) (0)");
+            MagicProgram.ColourCost colourCost1 = new MagicProgram.ColourCost();
+            MagicProgram.ColourCost colourCost2 = new MagicProgram.ColourCost();
+            MagicProgram.CardCollection cardCollection1 = new MagicProgram.CardCollection();
+            MagicProgram.CardCollection cardCollection2 = new MagicProgram.CardCollection();
+            MagicProgram.CardCollection cardCollection3 = new MagicProgram.CardCollection();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Murmuring Phantasm (0,5) (0)");
             this.imageListHand = new System.Windows.Forms.ImageList(this.components);
             this.imageListPlay = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -116,6 +116,7 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PlArea = new MagicProgram.Controls.PlayArea();
             this.OppArea = new MagicProgram.Controls.PlayArea();
+            this.playCommanderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -309,7 +310,8 @@
             // 
             this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.drawToolStripMenuItem,
-            this.turnToolStripMenuItem});
+            this.turnToolStripMenuItem,
+            this.playCommanderToolStripMenuItem});
             this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
             this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.gameToolStripMenuItem.Text = "&Game";
@@ -318,7 +320,7 @@
             // 
             this.drawToolStripMenuItem.Name = "drawToolStripMenuItem";
             this.drawToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.drawToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.drawToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.drawToolStripMenuItem.Text = "&Draw";
             this.drawToolStripMenuItem.Click += new System.EventHandler(this.buttonDraw_Click);
             // 
@@ -326,7 +328,7 @@
             // 
             this.turnToolStripMenuItem.Name = "turnToolStripMenuItem";
             this.turnToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.turnToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.turnToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.turnToolStripMenuItem.Text = "&Turn";
             this.turnToolStripMenuItem.Click += new System.EventHandler(this.buttonTurn_Click);
             // 
@@ -535,22 +537,22 @@
             // xPicker
             // 
             this.xPicker.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            colourCost3.black = 0;
-            colourCost3.blue = 0;
-            colourCost3.green = 0;
-            colourCost3.grey = 0;
-            colourCost3.red = 0;
-            colourCost3.white = 0;
-            this.xPicker.Cost = colourCost3;
+            colourCost1.black = 0;
+            colourCost1.blue = 0;
+            colourCost1.green = 0;
+            colourCost1.grey = 0;
+            colourCost1.red = 0;
+            colourCost1.white = 0;
+            this.xPicker.Cost = colourCost1;
             this.xPicker.Dock = System.Windows.Forms.DockStyle.Top;
             this.xPicker.Location = new System.Drawing.Point(0, 104);
-            colourCost4.black = 0;
-            colourCost4.blue = 0;
-            colourCost4.green = 0;
-            colourCost4.grey = 0;
-            colourCost4.red = 0;
-            colourCost4.white = 0;
-            this.xPicker.Mana = colourCost4;
+            colourCost2.black = 0;
+            colourCost2.blue = 0;
+            colourCost2.green = 0;
+            colourCost2.grey = 0;
+            colourCost2.red = 0;
+            colourCost2.white = 0;
+            this.xPicker.Mana = colourCost2;
             this.xPicker.Margin = new System.Windows.Forms.Padding(0);
             this.xPicker.Max = 0;
             this.xPicker.MaximumSize = new System.Drawing.Size(135, 105);
@@ -740,7 +742,7 @@
             this.cardAreaPlay.AutoScroll = true;
             this.cardAreaPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cardAreaPlay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardAreaPlay.Cards = cardCollection4;
+            this.cardAreaPlay.Cards = cardCollection1;
             this.cardAreaPlay.CardSize = MagicProgram.CSize.Small;
             this.cardAreaPlay.ChooseCard = true;
             this.cardAreaPlay.Discard = false;
@@ -775,7 +777,7 @@
             this.cardAreaLand.AutoScroll = true;
             this.cardAreaLand.BackColor = System.Drawing.Color.White;
             this.cardAreaLand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cardAreaLand.Cards = cardCollection5;
+            this.cardAreaLand.Cards = cardCollection2;
             this.cardAreaLand.CardSize = MagicProgram.CSize.vSmall;
             this.cardAreaLand.ChooseCard = false;
             this.cardAreaLand.Discard = false;
@@ -876,7 +878,7 @@
             this.cardAreaHand.AutoScroll = true;
             this.cardAreaHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cardAreaHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardAreaHand.Cards = cardCollection6;
+            this.cardAreaHand.Cards = cardCollection3;
             this.cardAreaHand.CardSize = MagicProgram.CSize.Small;
             this.cardAreaHand.ChooseCard = true;
             this.cardAreaHand.ChooseCardString = "Play";
@@ -950,7 +952,7 @@
             this.listViewOppCrea.ContextMenuStrip = this.contextMenuStrip1;
             this.listViewOppCrea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewOppCrea.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listViewOppCrea.LargeImageList = this.imageListPlay;
             this.listViewOppCrea.Location = new System.Drawing.Point(0, 0);
             this.listViewOppCrea.Margin = new System.Windows.Forms.Padding(0);
@@ -1054,6 +1056,13 @@
             this.OppArea.HPChanged += new System.Action(this.FoeHP_ValueChanged);
             this.OppArea.CardUsed += new MagicProgram.PassiveEvent(this.OppArea_CardUsed);
             this.OppArea.CardDrawn += new MagicProgram.PassiveEvent(this.OppArea_CardDrawn);
+            // 
+            // playCommanderToolStripMenuItem
+            // 
+            this.playCommanderToolStripMenuItem.Name = "playCommanderToolStripMenuItem";
+            this.playCommanderToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.playCommanderToolStripMenuItem.Text = "Play commander";
+            this.playCommanderToolStripMenuItem.Click += new System.EventHandler(this.playCommanderToolStripMenuItem_Click);
             // 
             // DeckTest
             // 
@@ -1198,5 +1207,6 @@
         private MagicProgram.Controls.PlayArea PlArea;
         private MagicProgram.Controls.PlayArea OppArea;
         private System.Windows.Forms.Button buttonCardCancel;
+        private System.Windows.Forms.ToolStripMenuItem playCommanderToolStripMenuItem;
     }
 }

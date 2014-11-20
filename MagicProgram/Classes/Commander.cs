@@ -104,6 +104,7 @@ namespace MagicProgram
             foreach (MagicCard mc in PArea._play.cards)
             {
                 mc.PBonus += value;
+                mc.TBonus += value;
                 //mc.Abilities.Add(Trample);
             }
         }

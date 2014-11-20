@@ -37,13 +37,16 @@ namespace MagicProgram
         # region methods
         public void LoadCard(MagicCard mc)
         {
-            nMC = mc;
+            if (mc != null)
+            {
+                nMC = mc;
 
-            //is getting assigned multiple times.
-            nMC.TapChanged -= LoadCard;
-            nMC.TapChanged += new PassiveEvent(LoadCard);
+                //is getting assigned multiple times.
+                nMC.TapChanged -= LoadCard;
+                nMC.TapChanged += new PassiveEvent(LoadCard);
 
-            LoadCard();
+                LoadCard();
+            }
         }
 
         public void LoadCard()

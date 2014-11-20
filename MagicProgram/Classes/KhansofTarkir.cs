@@ -2837,5 +2837,28 @@ namespace MagicProgram
     # endregion
 
 
+
+    # region Taigam's Scheming
+    class TaigamsScheming : MagicCard
+    {
+        public TaigamsScheming()
+        {
+            Name = "Taigam's Scheming";
+            Edition = "KTK";
+            Rarity = "C";
+            Color = "U";
+            Cost = "1U";
+            PT = "";
+            Type = "Sorcery";
+            Text = "Look at the top five cards of your library. Put any number of them into your graveyard and the rest back on top of your library in any order.";
+            Flavor = "\"The Jeskai would have me bow in restraint. So I have found a people unafraid of true power.\"";
+        }
+
+        public override void Resolve()
+        {
+            PArea.callScry(this, 5);
+        }
+    }
+    # endregion
     # endregion
 }

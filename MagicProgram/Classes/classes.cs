@@ -2766,27 +2766,31 @@ namespace MagicProgram
             }
 
             # region cycle through attached cards
+            attachedCards.Remove(null);
             foreach (MagicCard mc in attachedCards)
             {
-                List<string> temp = mc.getStats();
-
-                foreach (string s in temp)
+                if (mc != null)
                 {
-                    string[] sPart = s.Split(new string[] { "#" }, StringSplitOptions.None);
+                    List<string> temp = mc.getStats();
 
-                    switch (sPart[0])
+                    foreach (string s in temp)
                     {
-                        case "Power":
-                            Power += int.Parse(sPart[1]);
-                            break;
+                        string[] sPart = s.Split(new string[] { "#" }, StringSplitOptions.None);
 
-                        case "Toughness":
-                            Toughness += int.Parse(sPart[1]);
-                            break;
+                        switch (sPart[0])
+                        {
+                            case "Power":
+                                Power += int.Parse(sPart[1]);
+                                break;
 
-                        case "Ability":
+                            case "Toughness":
+                                Toughness += int.Parse(sPart[1]);
+                                break;
 
-                            break;
+                            case "Ability":
+
+                                break;
+                        }
                     }
                 }
             }
@@ -2903,7 +2907,10 @@ namespace MagicProgram
         {
             attachedCards.Add(mc);
             callAuraAdded(mc);
-            mc.Parent = this;
+            if (mc != null)
+            {
+                mc.Parent = this;
+            }
         }
 
         # region Image get/set
@@ -28160,7 +28167,7 @@ namespace MagicProgram
                 //# endregion
                 # endregion
 
-                # region Khans of Tarkir
+                # region Khans of Tarkir 50%
                 # region Abomination of Gudul
                 case "Abomination of Gudul":
                     mcn = new AbominationofGudulKTK();
@@ -29082,6 +29089,12 @@ namespace MagicProgram
                 # region Ponyback Brigade
                 case "Ponyback Brigade":
                     mcn = new PonybackBrigadeKTK();
+                    break;
+                # endregion
+
+                # region Taigam's Scheming
+                case "Taigam's Scheming":
+                    mcn = new TaigamsScheming();
                     break;
                 # endregion
                 # endregion

@@ -85,6 +85,8 @@ namespace MagicProgram.Controls
 
         public int MaxHand = 7;
         int shuffles = 0;
+        public MagicCard Commander = new NarsetEnlightenedMasterKTK();
+        public int CommanderCast = 0;
 
         public int ExtraTurns = 0;
 

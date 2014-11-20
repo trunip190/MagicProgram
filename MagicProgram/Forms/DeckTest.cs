@@ -514,7 +514,8 @@ namespace MagicProgram
                 {
                     if (playerTurn)
                     {
-                        cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_AuraCard);
+                        CardChosen += new PassiveEvent(CardChosen_EnchantCreature);
+                        //cardAreaPlay.CardClicked += new CardArea.CardChosen(cardAreaPlay_AuraCard);
                     }
                 }
                 # endregion
@@ -593,6 +594,15 @@ namespace MagicProgram
             mc.callOnPlay();
 
             return true;
+        }
+
+        void CardChosen_EnchantCreature(MagicCard mc)
+        {
+            mc.AttachCard(tempCard);
+            mc.checkPT();
+            mc.SpellTarget();
+            tempCard = null;
+            cardAreaPlay.CardClicked -= cardAreaPlay_AuraCard;
         }
 
         void CardClicked_Null(MagicCard mc, MouseEventArgs e)
@@ -1674,6 +1684,10 @@ namespace MagicProgram
             {
                 tempCard = mc;
             }
+            else
+            {
+                onCardChosen(mc);
+            }
 
             if (e.Button == MouseButtons.Right)
             {
@@ -2279,7 +2293,7 @@ namespace MagicProgram
                     mc.onAuraAdded += new PassiveEvent(AuraAdded_BroodKeeper);
                     break;
                 # endregion
-                    
+
                 # region Guttersnipe
                 case "Guttersnipe":
                     area.SpellRes += new PassiveEvent(SpellCast_Guttersnipe);
@@ -2369,7 +2383,7 @@ namespace MagicProgram
                 PlArea._stack.cards.Add(mc);
                 mc.Location = "Library";
                 PickList.Remove(mc);
-                
+
                 //testing
                 if (PickList.Count > 0)
                 {
@@ -3335,13 +3349,19 @@ namespace MagicProgram
 
         private void listViewOppCrea_MouseClick(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+            int i = listViewOppCrea.SelectedIndices[0];
+
+            if (i > -1 && OppArea._play.cards.Count > i)
             {
-                int i = listViewOppCrea.SelectedIndices[0];
-                if (i > -1 && OppArea._play.cards.Count > i)
+                MagicCard mc = OppArea._play.cards[i];
+
+                if (e.Button == MouseButtons.Right)
                 {
-                    MagicCard mc = OppArea._play.cards[i];
                     ViewCard(mc);
+                }
+                else
+                {
+                    onCardChosen(mc);
                 }
             }
         }
@@ -3377,6 +3397,12 @@ namespace MagicProgram
         {
             comboCardPicker_Fill(cards);
             CardChosen += new PassiveEvent(CardChosen_Play);
+        }
+
+        private void playCommanderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrePlay(PlArea.Commander);
+            PlArea.CommanderCast++;
         }
     }
 
