@@ -5,12 +5,13 @@ Seat of the Synod#4
 Island#4
 Great Furnace#4
 Vault of Whispers#3
-Sol Ring#3
+Sol Ring#1
 Galvanic Blast#3
 Cranial Plating#4
 Plague Myr#4
 Arcbound Slith#3
 Ensoul Artifact#4
 Vault Skirge#4
-Frogmite#4
+Frogmite#3
 Thoughtcast#4
+Springleaf Drum#3
