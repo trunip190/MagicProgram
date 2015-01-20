@@ -1060,7 +1060,6 @@ namespace MagicProgram
                 if (!File.Exists(Database.cards[i].imgLoc))
                 {
                     Database.cards[i].imgLoc = fetchImage(Database.cards[i].Name);
-                    
                 }
             }
         }
@@ -1072,7 +1071,7 @@ namespace MagicProgram
                 if (!File.Exists(mc.imgLoc))
                 {
                     mc.set(fetchImage(mc.Name));
-                    
+
                 }
             }
 
@@ -1095,19 +1094,10 @@ namespace MagicProgram
         {
             MagicCard mct = CardMethods.GetClass(mc);
 
-            //get location of file to download
-            string lnk = "http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+[" + mct.Name.Replace(" ", "%20") + "]";
-
             using (WebClient client = new WebClient())
             {
                 try
                 {
-                    # region download page details
-                    string str = client.DownloadString(lnk);
-                    string[] split = str.Split(new string[] { "Details.aspx?multiverseid=", "\" id=\"aspnetForm\"" }, StringSplitOptions.RemoveEmptyEntries);
-                    str = "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + split[1].Trim() + "&type=card";
-                    # endregion
-
                     # region set and check download location
                     string location = Properties.Settings.Default.ImageLoc + "\\" + mct.Edition + "\\";
                     string fileLoc = location + mct.Name + ".jpg";
@@ -1120,8 +1110,16 @@ namespace MagicProgram
                     }
                     # endregion
 
+                    string str = "http://mtgimage.com/set/" + mct.Edition + "/" + mct.Name.Replace(" ", "%20") + ".jpg";
+
                     # region Download & add to image library
+                    if (File.Exists(fileLoc))
+                    {
+                        File.Delete(fileLoc);
+                    }
+
                     client.DownloadFile(str, fileLoc);
+
                     if (!Lib.image.ContainsKey(mct.Name))
                     {
                         Lib.image.Add(mct.Name.ToUpper(), fileLoc);
@@ -1653,6 +1651,15 @@ namespace MagicProgram
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 ConvertSaves(fbd.SelectedPath);
+            }
+        }
+
+        private void downloadImageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count > 0)
+            {
+                int i = listView2.SelectedIndices[0];
+                DownloadImage(Deck.cards[i]);
             }
         }
     }

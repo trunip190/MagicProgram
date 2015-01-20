@@ -4,10 +4,10 @@ Island#9
 Simic Guildgate#3
 Cloudfin Raptor#4
 Hardened Scales#4
-Ponder#4
+Ponder#3
 Bond Beetle#4
+Serum Visions#1
 Gyre Sage#4
-Protean Hydra#4
 Call to Heel#3
 Bioshift#2
 Crocanura#1
@@ -15,4 +15,6 @@ Predator's Rapport#2
 Vorel of the Hull Clade#1
 Fathom Mage#1
 Master Biomancer#1
+Ravenous Leucrocota#2
 Prophet of Kruphix#1
+Species Gorger#2

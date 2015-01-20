@@ -82,6 +82,7 @@ namespace MagicProgram
             for (int i = 0; i < cards.Count; i++)
             {
                 st = cards[i].Name.ToUpper().Trim();
+                cards[i].Cost = cards[i].Cost.Replace("{", "").Replace("}", "");
 
                 if (!link.ContainsKey(st))
                 {
@@ -2934,7 +2935,9 @@ namespace MagicProgram
 
             if (net != "" && File.Exists(net))
             {
-                img = Image.FromFile(net);
+                var bytes = File.ReadAllBytes(net);
+                var ms = new MemoryStream(bytes);
+                img = Image.FromStream(ms);
             }
             else
             {

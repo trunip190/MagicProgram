@@ -59,6 +59,7 @@
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.turnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playCommanderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.t1 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -116,7 +117,6 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PlArea = new MagicProgram.Controls.PlayArea();
             this.OppArea = new MagicProgram.Controls.PlayArea();
-            this.playCommanderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -331,6 +331,13 @@
             this.turnToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.turnToolStripMenuItem.Text = "&Turn";
             this.turnToolStripMenuItem.Click += new System.EventHandler(this.buttonTurn_Click);
+            // 
+            // playCommanderToolStripMenuItem
+            // 
+            this.playCommanderToolStripMenuItem.Name = "playCommanderToolStripMenuItem";
+            this.playCommanderToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.playCommanderToolStripMenuItem.Text = "Play commander";
+            this.playCommanderToolStripMenuItem.Click += new System.EventHandler(this.playCommanderToolStripMenuItem_Click);
             // 
             // t1
             // 
@@ -1056,13 +1063,6 @@
             this.OppArea.HPChanged += new System.Action(this.FoeHP_ValueChanged);
             this.OppArea.CardUsed += new MagicProgram.PassiveEvent(this.OppArea_CardUsed);
             this.OppArea.CardDrawn += new MagicProgram.PassiveEvent(this.OppArea_CardDrawn);
-            // 
-            // playCommanderToolStripMenuItem
-            // 
-            this.playCommanderToolStripMenuItem.Name = "playCommanderToolStripMenuItem";
-            this.playCommanderToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.playCommanderToolStripMenuItem.Text = "Play commander";
-            this.playCommanderToolStripMenuItem.Click += new System.EventHandler(this.playCommanderToolStripMenuItem_Click);
             // 
             // DeckTest
             // 
