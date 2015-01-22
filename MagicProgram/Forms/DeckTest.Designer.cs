@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeckTest));
-            MagicProgram.ColourCost colourCost1 = new MagicProgram.ColourCost();
-            MagicProgram.ColourCost colourCost2 = new MagicProgram.ColourCost();
-            MagicProgram.CardCollection cardCollection1 = new MagicProgram.CardCollection();
-            MagicProgram.CardCollection cardCollection2 = new MagicProgram.CardCollection();
-            MagicProgram.CardCollection cardCollection3 = new MagicProgram.CardCollection();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Murmuring Phantasm (0,5) (0)");
+            MagicProgram.ColourCost colourCost3 = new MagicProgram.ColourCost();
+            MagicProgram.ColourCost colourCost4 = new MagicProgram.ColourCost();
+            MagicProgram.CardCollection cardCollection4 = new MagicProgram.CardCollection();
+            MagicProgram.CardCollection cardCollection5 = new MagicProgram.CardCollection();
+            MagicProgram.CardCollection cardCollection6 = new MagicProgram.CardCollection();
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Murmuring Phantasm (0,5) (0)");
             this.imageListHand = new System.Windows.Forms.ImageList(this.components);
             this.imageListPlay = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -544,22 +544,22 @@
             // xPicker
             // 
             this.xPicker.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            colourCost1.black = 0;
-            colourCost1.blue = 0;
-            colourCost1.green = 0;
-            colourCost1.grey = 0;
-            colourCost1.red = 0;
-            colourCost1.white = 0;
-            this.xPicker.Cost = colourCost1;
+            colourCost3.black = 0;
+            colourCost3.blue = 0;
+            colourCost3.green = 0;
+            colourCost3.grey = 0;
+            colourCost3.red = 0;
+            colourCost3.white = 0;
+            this.xPicker.Cost = colourCost3;
             this.xPicker.Dock = System.Windows.Forms.DockStyle.Top;
             this.xPicker.Location = new System.Drawing.Point(0, 104);
-            colourCost2.black = 0;
-            colourCost2.blue = 0;
-            colourCost2.green = 0;
-            colourCost2.grey = 0;
-            colourCost2.red = 0;
-            colourCost2.white = 0;
-            this.xPicker.Mana = colourCost2;
+            colourCost4.black = 0;
+            colourCost4.blue = 0;
+            colourCost4.green = 0;
+            colourCost4.grey = 0;
+            colourCost4.red = 0;
+            colourCost4.white = 0;
+            this.xPicker.Mana = colourCost4;
             this.xPicker.Margin = new System.Windows.Forms.Padding(0);
             this.xPicker.Max = 0;
             this.xPicker.MaximumSize = new System.Drawing.Size(135, 105);
@@ -749,7 +749,7 @@
             this.cardAreaPlay.AutoScroll = true;
             this.cardAreaPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cardAreaPlay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardAreaPlay.Cards = cardCollection1;
+            this.cardAreaPlay.Cards = cardCollection4;
             this.cardAreaPlay.CardSize = MagicProgram.CSize.Small;
             this.cardAreaPlay.ChooseCard = true;
             this.cardAreaPlay.Discard = false;
@@ -784,7 +784,7 @@
             this.cardAreaLand.AutoScroll = true;
             this.cardAreaLand.BackColor = System.Drawing.Color.White;
             this.cardAreaLand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cardAreaLand.Cards = cardCollection2;
+            this.cardAreaLand.Cards = cardCollection5;
             this.cardAreaLand.CardSize = MagicProgram.CSize.vSmall;
             this.cardAreaLand.ChooseCard = false;
             this.cardAreaLand.Discard = false;
@@ -885,7 +885,7 @@
             this.cardAreaHand.AutoScroll = true;
             this.cardAreaHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cardAreaHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardAreaHand.Cards = cardCollection3;
+            this.cardAreaHand.Cards = cardCollection6;
             this.cardAreaHand.CardSize = MagicProgram.CSize.Small;
             this.cardAreaHand.ChooseCard = true;
             this.cardAreaHand.ChooseCardString = "Play";
@@ -959,7 +959,7 @@
             this.listViewOppCrea.ContextMenuStrip = this.contextMenuStrip1;
             this.listViewOppCrea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewOppCrea.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listViewOppCrea.LargeImageList = this.imageListPlay;
             this.listViewOppCrea.Location = new System.Drawing.Point(0, 0);
             this.listViewOppCrea.Margin = new System.Windows.Forms.Padding(0);

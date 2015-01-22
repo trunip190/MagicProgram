@@ -14970,7 +14970,7 @@ namespace MagicProgram
     # endregion
 
     # region Evolving Wilds
-    public class EvolvingWildsM15 : MagicCard
+    public class EvolvingWildsM15 : EvolvingWildsDKA
     {
         public EvolvingWildsM15()
         {

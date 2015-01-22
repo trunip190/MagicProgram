@@ -2191,14 +2191,15 @@ namespace MagicProgram
 
         void Activating_SacSearchBasic(MagicCard mc, int index)
         {
-            mc.callDie();
-            List<MagicCard> list = mc.PArea._stack.cards.Where(o => o.Type.Contains("Basic Land")).ToList();
-            comboCardPicker_Fill(list);
-            CardChosen += new PassiveEvent(CardChosen_Play);
+            //mc.callSacrifice();
+            //List<MagicCard> list = mc.PArea._stack.cards.Where(o => o.Type.Contains("Basic Land")).ToList();
+            //comboCardPicker_Fill(list);
+            //CardChosen += new PassiveEvent(CardChosen_Play);
         }
 
         void CardChosen_Play(MagicCard mc)
         {
+            CardChosen -= CardChosen_Play;
             useCard(mc);
         }
 

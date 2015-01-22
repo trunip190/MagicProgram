@@ -1,13 +1,19 @@
-Forest#9
-Plains#9
-Selesnya Guildgate#4
-Evolving Wilds#2
+Forest#6
+Plains#5
+Island#4
 Hardened Scales#4
-Champion of the Parish#4
-Burst of Strength#4
-Warriors' Lesson#4
-Ainok Bond-Kin#4
-Tuskguard Captain#4
-Akroma's Blessing#4
-Longshot Squad#4
-Abzan Battle Priest#4
+Brave the Elements#2
+Cloudfin Raptor#4
+Elvish Mystic#3
+Ainok Bond-Kin#3
+Mikaeus, the Lunarch#3
+Brave the Sands#3
+Tuskguard Captain#3
+Vorel of the Hull Clade#2
+Longshot Squad#3
+Abzan Battle Priest#3
+Master Biomancer#2
+Bant Charm#1
+Evolving Wilds#4
+Seaside Citadel#4
+Terramorphic Expanse#1

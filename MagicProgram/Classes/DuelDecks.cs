@@ -318,7 +318,7 @@ namespace MagicProgram
     # endregion
 
     # region Evolving Wilds
-    public class EvolvingWildsDDH : MagicCard
+    public class EvolvingWildsDDH : EvolvingWildsDKA
     {
         public EvolvingWildsDDH()
         {
