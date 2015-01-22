@@ -3517,7 +3517,7 @@ namespace MagicProgram
     # endregion
 
     # region Terramorphic Expanse
-    public class TerramorphicExpanseMMA : MagicCard
+    public class TerramorphicExpanseMMA : TerramorphicExpanseDDH
     {
         public TerramorphicExpanseMMA()
         {

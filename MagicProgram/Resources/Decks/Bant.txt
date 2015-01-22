@@ -1,19 +1,20 @@
-Forest#6
-Plains#5
-Island#4
-Hardened Scales#4
-Brave the Elements#2
-Cloudfin Raptor#4
-Elvish Mystic#3
-Ainok Bond-Kin#3
-Mikaeus, the Lunarch#3
-Brave the Sands#3
-Tuskguard Captain#3
-Vorel of the Hull Clade#2
-Longshot Squad#3
-Abzan Battle Priest#3
-Master Biomancer#2
-Bant Charm#1
+Terramorphic Expanse#1
+Island#5
 Evolving Wilds#4
 Seaside Citadel#4
-Terramorphic Expanse#1
+Plains#5
+Forest#5
+Brave the Elements#3
+Elvish Mystic#3
+Hardened Scales#4
+Cloudfin Raptor#4
+Ainok Bond-Kin#2
+Mikaeus, the Lunarch#3
+Brave the Sands#3
+Vorel of the Hull Clade#2
+Bant Charm#1
+Tuskguard Captain#2
+Divination#3
+Master Biomancer#2
+Longshot Squad#2
+Abzan Battle Priest#2

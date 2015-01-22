@@ -1286,6 +1286,20 @@ namespace MagicProgram
             Text = "%T, Sacrifice Terramorphic Expanse: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.";
             Flavor = "";
         }
+
+        public override bool TryActivate(int i)
+        {
+            if (PArea == null)
+            {
+                return false;
+            }
+
+            callSacrifice();
+            List<MagicCard> list = PArea._stack.cards.Where(o => o.Type.Contains("Basic Land")).ToList();
+            PArea.callPickCardsUse(list);
+
+            return true;
+        }
     }
     # endregion
 
