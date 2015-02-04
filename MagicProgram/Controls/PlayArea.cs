@@ -962,6 +962,7 @@ namespace MagicProgram.Controls
                         mc.counters++;
                     }
                     mc.Attack();
+                    mc.Attacking = false;
                 }
             }
         }
