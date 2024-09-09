@@ -94,7 +94,7 @@ namespace MagicProgram
         {
             Value = 0;
             xCount = count;
-            int j = Mana.colourless - Cost.colours;
+            int j = Mana.Colourless - Cost.Colours;
             Max = j / count;
             Show();
         }

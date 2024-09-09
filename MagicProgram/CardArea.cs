@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Security.Policy;
 
 namespace MagicProgram
 {
@@ -152,7 +153,7 @@ namespace MagicProgram
 
         # region private attributes
         private List<MagicCardViewer> mControls = new List<MagicCardViewer>();
-        private Dictionary<MagicCard, int> CardDict = new Dictionary<MagicCard, int>();
+        //private Dictionary<MagicCard, int> CardDict = new Dictionary<MagicCard, int>();
         # endregion
 
         # region delegates/events/handlers
@@ -223,13 +224,9 @@ namespace MagicProgram
         public CardArea()
         {
             InitializeComponent();
-            MagicCard mc = new MagicCard
-            {
-                Name = "Arbor Elf",
-                imgLoc = "~\\Downloads\\Magic Cards\\M13\\Arbor Elf.jpg",
-                Tapped = false
-            };
-            Cards.cards.Add(mc);
+            //Sample Card
+            MagicCard mc = CardMethods.CreateCard("Arbor Elf");
+            Cards.Add(mc);
 
             DrawAllCards();
         }
@@ -242,10 +239,14 @@ namespace MagicProgram
                 return;
             }
 
+            Stopwatch sw = Stopwatch.StartNew();
+            Debug.WriteLine($"DrawAllCards...");
+            this.SuspendLayout();
+
             # region preparation
             Cards.cards = CardMethods.SplitCardList(Cards.cards);
 
-            CardDict.Clear();
+            //CardDict.Clear();
             ClearViewers();
 
             Cards.index();
@@ -306,7 +307,7 @@ namespace MagicProgram
                     # endregion
                 }
 
-                CardDict.Add(mc, position);
+                //CardDict.Add(mc, position);
             }
             # endregion
 
@@ -317,9 +318,14 @@ namespace MagicProgram
                 mcv.DrawQuantity();
                 mcv.CardDeleted -= mcv_CardDeleted;
                 mcv.CardDeleted += new MagicCardViewer.MagicCardViewerEvent(mcv_CardDeleted);
+                mcv.UpdateCard();
 
                 SetIndAction(mcv);
             }
+
+            this.ResumeLayout();
+            sw.Stop();
+            Debug.WriteLine($"DrawAllCards...{sw.ElapsedMilliseconds}");
         }
 
         void mcv_CardDeleted(MagicCardViewer mcv)
@@ -327,36 +333,30 @@ namespace MagicProgram
 
         }
 
-        public void AddCard(MagicCard card)
+        public void AddCard(MagicCard mc)
         {
-            //TODO adding to lands isn't getting here.
-
-            if (Paused)
-            {
-                return;
-            }
+            if (Paused) return;
 
             bool duplicate = false;
 
-            if (card.attachedCards.Count != 0 || SingleChoice)
+            if (mc.attachedCards.Count != 0 || SingleChoice)
             {
                 duplicate = false;
             }
             else
             {
-
-                int index = ContainsCard(card);
+                int index = ContainsCard(mc);
 
                 if (index > -1)
                 {
                     MagicCardViewer mcv = mControls[index];
 
-                    mcv.cards.Add(card);
-                    duplicate = true;
+                        mcv.cards.Add(mc);
+                        duplicate = true;
                     mcv.DrawQuantity();
 
-                    int p = mControls.IndexOf(mcv);
-                    CardDict.Add(card, p);
+                    //int p = mControls.IndexOf(mcv);
+                    //CardDict.Add(card, p);
                 }
 
             }
@@ -364,14 +364,14 @@ namespace MagicProgram
             if (!duplicate)
             {
                 int c = mControls.Count;
-                MagicCardViewer mcv = CreateViewer(card);
-                CardDict.Add(card, c);
+                MagicCardViewer mcv = CreateViewer(mc);
+                //CardDict.Add(card, c);
             }
 
             Controls_SetPos();
         }
 
-        public void RemoveCard(MagicCard card)
+        public void RemoveCard(MagicCard mc)
         {
             if (Paused)
             {
@@ -380,9 +380,9 @@ namespace MagicProgram
 
             for (int i = 0; i < mControls.Count; i++)
             {
-                if (mControls[i].mc == card)
+                if (mControls[i].mc == mc)
                 {
-                    mControls[i].RemoveCard(card);
+                    mControls[i].RemoveCard(mc);
                     mControls[i].Dispose();
                     mControls.RemoveAt(i);
                     break;
@@ -392,8 +392,24 @@ namespace MagicProgram
             Controls_SetPos();
         }
 
-        public void RepopulateCards()
+        public void UpdateCard(int CardID)
         {
+            if (Paused) return;
+
+            foreach ( MagicCardViewer mcv in mControls)
+            {
+                var v = mcv.cards.Find(o=>o.DeckID == CardID);
+                if (v == null) { continue; }
+
+                mcv.UpdateCard();
+                return;
+            }
+        }
+
+        public void RepopulateCards( List<MagicCard> cards)
+        {
+            Cards.cards = cards;
+
             string Name = "";
             bool tapped = false;
             List<MagicCard> attached = new List<MagicCard>();
@@ -422,6 +438,7 @@ namespace MagicProgram
             }
 
             Controls_SetPos();
+            DrawAllCards();
         }
 
         private void Controls_SetPos()
@@ -434,15 +451,22 @@ namespace MagicProgram
 
         private void ClearViewers()
         {
+            this.SuspendLayout();
             foreach (Control c in mControls)
             {
                 c.Dispose();
             }
             //Controls.Clear();
             mControls.Clear();
+            this.ResumeLayout();
         }
 
-        private int ContainsCard(MagicCard card)
+        public void CardsChanged(MagicCard[] cards)
+        {
+
+        }
+
+        private int ContainsCard(MagicCard mc)
         {
             int result = -1;
 
@@ -450,9 +474,9 @@ namespace MagicProgram
             {
                 if (mControls[i].cards.Count > 0)
                 {
-                    MagicCard mc = mControls[i].cards[0];
+                    MagicCard card = mControls[i].cards[0];
 
-                    if (mc.attachedCards.Count == 0 && mc.Name == card.Name && mc.Tapped == card.Tapped)
+                    if (card.attachedCards.Count == 0 && card.Name == mc.Name && card.Tapped == mc.Tapped)
                     {
                         result = i;
                         break;
@@ -466,13 +490,18 @@ namespace MagicProgram
         private MagicCardViewer CreateViewer(MagicCard mc)
         {
             MagicCardViewer mcv;
+            //bool CardTappable = mc.Text.ToLower().Contains("tap");
+            mc.Initialise();
+            bool CardTappable = mc.Abilities.Count > 0;
+
             if (SingleChoice)
             {
                 mcv = new MagicCardViewer(false, false, false, true);
             }
             else
             {
-                mcv = new MagicCardViewer(Tappable, Activate, Discard, ChooseCard);
+                //mcv = new MagicCardViewer(Tappable, Activate, Discard, ChooseCard);
+                mcv = new MagicCardViewer(CardTappable, Activate, Discard, ChooseCard);
             }
 
             SetIndAction(mcv);
@@ -568,60 +597,10 @@ namespace MagicProgram
         # region MagicCardViewer
         void mcv_CardChanged(MagicCardViewer mcv)
         {
-            # region failed attempt at only changing necessary cards
-            ////record card to work with
-            //MagicCard mc = mcv.cards[0];
-
-            ////remove one card
-            //mcv.cards.RemoveAt(0);
-
-            ////check if there are still cards left in viewer
-            //if (mcv.cards.Count > 0)
-            //{
-            //    //remove card[0] from carddict
-            //    CardDict.Remove(mc);
-
-            //    # region get index of matching card
-            //    //work on mcontrols instead?
-            //    int index = -1;
-            //    foreach (MagicCardViewer mcvs in mControls)
-            //    {
-            //        MagicCard mcs = mcv.cards[0];
-
-            //        //if card isn't the actual card, but matches the first card in mcvs
-            //        if (mcs != mc && mc.CompareCard(mcs))
-            //        {
-            //            index = CardDict[mcs];
-            //        }
-            //    }
-            //    # endregion
-
-            //    # region create/add to card
-            //    if (index > -1)
-            //    {
-            //        mControls[index].cards.Add(mc);
-            //        CardDict.Add(mc, index);
-
-            //        //Highlight card
-            //        mControls[index].Border = true;
-            //        mControls[index].DrawCount();
-            //    }
-            //    else
-            //    {
-            //        //either addcard or draw a new one
-            //        MagicCardViewer nmc = CreateViewer(mc);
-            //    }
-            //    # endregion
-            //}
-
-            //TidyViewers();
-            //Controls_SetPos();
-            # endregion
-
             MagicCard mc = mcv.cards[0];
 
-            mcv.cards.Remove(mc);
-            CardDict.Remove(mc);
+            //mcv.cards.Remove(mc);
+            //CardDict.Remove(mc);
 
             if (mcv.cards.Count > 0)
             {
@@ -634,21 +613,9 @@ namespace MagicProgram
                 mcv.Dispose();
             }
 
-            AddCard(mc);
+            //AddCard(mc);
 
-            //DrawAllCards();
-        }
-
-        private void TidyViewers()
-        {
-            //foreach (MagicCardViewer mcv in mControls)
-            //{
-            //    if (mcv.cards.Count < 1)
-            //    {
-            //        mControls.Remove(mcv);
-            //        mcv.Dispose();
-            //    }
-            //}
+            DrawAllCards();
         }
 
         void mcv_MouseClick(object sender, MouseEventArgs e)
@@ -656,6 +623,8 @@ namespace MagicProgram
             if (sender.GetType() == typeof(MagicCardViewer))
             {
                 MagicCardViewer mcv = sender as MagicCardViewer;
+
+                //if ( mcv)
 
                 if (e.Button == MouseButtons.Right)
                 {
@@ -689,11 +658,6 @@ namespace MagicProgram
         }
         # endregion
 
-        private void LandArea_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void CardArea_KeyUp(object sender, KeyEventArgs e)
         {
             if (CurrentCard == null)
@@ -716,7 +680,7 @@ namespace MagicProgram
                 case Keys.Delete:
                     if (CurrentCard != null)
                     {
-                        CurrentCard.callDestroyed();
+                        CurrentCard.CallDestroyed();
                         CurrentCard = null;
                         e.Handled = true;
                     }
@@ -741,7 +705,7 @@ namespace MagicProgram
             int result = 0;
             foreach (MagicCardViewer mcv in mControls)
             {
-                if (!mcv.cards[0].Sick && !mcv.cards[0].Tapped && mcv.cards[0].Power > 0)
+                if (!mcv.cards[0].Sick && !mcv.cards[0].Tapped && mcv.cards[0].PowerCalc > 0)
                 {
                     mcv.Attack = true;
                     result++;
@@ -759,7 +723,7 @@ namespace MagicProgram
         }
         # endregion
 
-        public void HightlightCards()
+        public void HighlightCards()
         {
             List<MagicCardViewer> mcv = mControls.Where(o => o.mc.Token).ToList();
 

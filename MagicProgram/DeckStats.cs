@@ -54,10 +54,9 @@ namespace MagicProgram
             {
                 for (int i = 0; i < mc.quantity; i++)
                 {
-                    MagicCard nMC = new MagicCard(mc)
-                    {
-                        quantity = 1
-                    };
+                    //MagicCard nMC = mc.Name == "Gyre Sage" ? new GyreSage(mc) : new MagicCard(mc);
+                    MagicCard nMC = CardMethods.CreateCard(mc);
+                    nMC.quantity = 1;
 
                     deck.Add(nMC);
                 }

@@ -107,7 +107,7 @@ namespace MagicProgram
             if (cc.red == 0) { buttonRed.Visible = false; }
             if (cc.white == 0) { buttonWhite.Visible = false; }
             if (cc.black == 0) { buttonBlack.Visible = false; }
-            if (cc.colourless == 0) { buttonGrey.Visible = false; }
+            if (cc.Colourless == 0) { buttonGrey.Visible = false; }
 
             bool vis = Visible;
 

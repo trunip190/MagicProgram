@@ -52,7 +52,6 @@
             this.Name = "CardArea";
             this.Size = new System.Drawing.Size(346, 167);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CardArea_KeyUp);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LandArea_MouseClick);
             this.ResumeLayout(false);
 
         }

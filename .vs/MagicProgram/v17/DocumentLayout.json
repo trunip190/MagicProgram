@@ -1,0 +1,267 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\classes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\classes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\decktest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\decktest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\magiccardviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\magiccardviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\cardarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\cardarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|c:\\users\\truni\\source\\repos\\trunip190\\magicprogram\\magicprogram\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\cardviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\cardviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\deckstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\deckstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\cardarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\cardarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\cardviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\cardviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\decktest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\decktest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\cardviewerlarge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\cardviewerlarge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\counters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\counters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\cardviewerlarge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\cardviewerlarge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\magicprogram\\decktest.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED1078F-81D5-42E0-BD43-1A8D0935B769}|MagicProgram\\MagicProgram.csproj|solutionrelative:magicprogram\\decktest.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\Form1.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\Form1.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\Form1.cs [Design]",
+              "RelativeToolTip": "MagicProgram\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T01:43:07.278Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\Form1.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\Form1.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\Form1.cs",
+              "RelativeToolTip": "MagicProgram\\Form1.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAASwFAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T01:42:40.051Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MagicCardViewer.cs",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\MagicCardViewer.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\MagicCardViewer.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\MagicCardViewer.cs",
+              "RelativeToolTip": "MagicProgram\\MagicCardViewer.cs",
+              "ViewState": "AQIAAP8AAAAAAAAAAAAjwCMBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T04:34:53.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CardArea.cs",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\CardArea.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\CardArea.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\CardArea.cs",
+              "RelativeToolTip": "MagicProgram\\CardArea.cs",
+              "ViewState": "AQIAAAUBAAAAAAAAAIAwwEABAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T18:14:19.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DeckTest.cs",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\DeckTest.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\DeckTest.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\DeckTest.cs",
+              "RelativeToolTip": "MagicProgram\\DeckTest.cs",
+              "ViewState": "AQIAAI0IAAAAAAAAAIA1wLAJAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T17:51:22.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "classes.cs",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\classes.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\classes.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\classes.cs",
+              "RelativeToolTip": "MagicProgram\\classes.cs",
+              "ViewState": "AQIAAJ0DAAAAAAAAAAD4v9MDAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T22:53:01.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CardViewer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\cardviewer.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\cardviewer.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\cardviewer.cs [Design]",
+              "RelativeToolTip": "MagicProgram\\cardviewer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T05:02:47.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CardViewer.cs",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\cardviewer.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\cardviewer.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\cardviewer.cs",
+              "RelativeToolTip": "MagicProgram\\cardviewer.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAxwCMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T01:51:18.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DeckStats.cs",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\DeckStats.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\DeckStats.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\DeckStats.cs",
+              "RelativeToolTip": "MagicProgram\\DeckStats.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwDIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T02:16:14.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CardArea.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\CardArea.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\CardArea.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\CardArea.cs [Design]",
+              "RelativeToolTip": "MagicProgram\\CardArea.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T19:57:03.357Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DeckTest.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\DeckTest.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\DeckTest.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\DeckTest.cs [Design]",
+              "RelativeToolTip": "MagicProgram\\DeckTest.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T19:26:54.339Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CardViewerLarge.cs",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\CardViewerLarge.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\CardViewerLarge.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\CardViewerLarge.cs",
+              "RelativeToolTip": "MagicProgram\\CardViewerLarge.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAMBcwCEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T03:24:30.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Counters.cs",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\Counters.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\Counters.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\Counters.cs",
+              "RelativeToolTip": "MagicProgram\\Counters.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAhwFsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T03:41:38.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CardViewerLarge.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\CardViewerLarge.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\CardViewerLarge.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\CardViewerLarge.cs [Design]",
+              "RelativeToolTip": "MagicProgram\\CardViewerLarge.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T19:34:34.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DeckTest.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\DeckTest.Designer.cs",
+              "RelativeDocumentMoniker": "MagicProgram\\DeckTest.Designer.cs",
+              "ToolTip": "C:\\Users\\truni\\source\\repos\\trunip190\\MagicProgram\\MagicProgram\\DeckTest.Designer.cs",
+              "RelativeToolTip": "MagicProgram\\DeckTest.Designer.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAABRwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T18:16:54.687Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

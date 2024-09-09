@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Card>
+    <Name>Forest</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Forest</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>10</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Island</Name>
+    <Edition>UG</Edition>
+    <Rarity>C</Rarity>
+    <Color>Lnd</Color>
+    <Cost />
+    <PT />
+    <Type>Basic Land - Island</Type>
+    <Text />
+    <Flavor />
+    <Token>false</Token>
+    <quantity>10</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Devoted Druid</Name>
+    <Edition>SHM</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>1G</Cost>
+    <PT>0/2</PT>
+    <Type>Creature - Elf Druid</Type>
+    <Text>%T: Add %G to your mana pool.;
+Put a -1/-1 counter on Devoted Druid: Untap Devoted Druid.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Leech Bonder</Name>
+    <Edition>SHM</Edition>
+    <Rarity>U</Rarity>
+    <Color>U</Color>
+    <Cost>2U</Cost>
+    <PT>3/3</PT>
+    <Type>Creature - Merfolk Soldier</Type>
+    <Text>Leech Bonder enters the battlefield with two -1/-1 counters on it.;
+%U, %C: Move a counter from target creature onto another target creature. #(%C is the untap symbol.)#</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Multani's Harmony</Name>
+    <Edition>PLS</Edition>
+    <Rarity>U</Rarity>
+    <Color>G</Color>
+    <Cost>G</Cost>
+    <PT />
+    <Type>Enchantment - Aura</Type>
+    <Text>Enchant creature;
+Enchanted creature has �%T: Add one mana of any color to your mana pool.�</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Wickerbough Elder</Name>
+    <Edition>ARC</Edition>
+    <Rarity>C</Rarity>
+    <Color>G</Color>
+    <Cost>3G</Cost>
+    <PT>4/4</PT>
+    <Type>Creature - Treefolk Shaman</Type>
+    <Text>Wickerbough Elder enters the battlefield with a -1/-1 counter on it.;
+%G, Remove a -1/-1 counter from Wickerbough Elder: Destroy target artifact or enchantment.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+  <Card>
+    <Name>Quillspike</Name>
+    <Edition>EVE</Edition>
+    <Rarity>U</Rarity>
+    <Color>Gld</Color>
+    <Cost>2%Q</Cost>
+    <PT>1/1</PT>
+    <Type>Creature - Beast</Type>
+    <Text>%Q, Remove a -1/-1 counter from a creature you control: Quillspike gets +3/+3 until end of turn.</Text>
+    <Flavor />
+    <Token>false</Token>
+    <quantity>4</quantity>
+    <Tapped>false</Tapped>
+    <counters>0</counters>
+  </Card>
+</Collection>

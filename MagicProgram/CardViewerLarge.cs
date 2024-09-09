@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MagicProgram
 {
@@ -15,6 +16,7 @@ namespace MagicProgram
     {
         Font FontText;
         Font FontFlavour;
+        bool SizeLarge = false;
 
         # region constructors
         public CardViewerLarge()
@@ -152,16 +154,48 @@ namespace MagicProgram
                 return rtb.Rtf;
             }
         }
+
+        public void ResizeControl(bool Large)
+        {
+            SizeLarge = Large;
+            CardViewer_Resize(null, EventArgs.Empty);
+        }
         # endregion
 
         # region event handlers
         private void CardViewer_Resize(object sender, EventArgs e)
         {
-            textBoxName.Top = (int)(0.0513513513513514 * this.Height);
-            richTextBoxText.Top = (int)(0.0513513513513514 * this.Height);
-            pictureBox1.Top = (int)(0.116216216216216 * this.Height);
-            textBoxType.Top = (int)(0.559459459459459 * this.Height);
-            richTextBoxText.Top = (int)(0.618918918918919 * this.Height);
+
+            this.Size = SizeLarge ? new Size(331, 462) : new Size(265, 370);
+
+            Debug.WriteLine($"{this.Name}\t{this.Width}\t{this.Height}");
+
+            foreach (Control c in panel2.Controls)
+            {
+                Debug.WriteLine($"{c.Name}\t{c.Width}\t{c.Height}");
+            }
+
+            panel1.Size = SizeLarge ? new Size(290, 210) : new Size(232, 168);
+            panel2.Size = SizeLarge ? new Size(300, 430) : new Size(232, 339);
+            panel4.Size = SizeLarge ? new Size(225, 26) : new Size(225, 20);
+
+            textBoxName.Size = SizeLarge ? new Size(166, 32) : new Size(152, 20);
+            textBoxName.Location = new Point(5,5);
+
+            richTextBoxText.Size = SizeLarge ? new Size(301, 148) : new Size(232, 108);
+            richTextBoxText.Top = 214;
+
+            pictureBox1.Size = SizeLarge ? new Size(281, 157) : new Size(230, 166);
+            pictureBox1.Top = 0;
+
+            textBoxType.Size = SizeLarge ? new Size(227, 20) : new Size(232, 20);
+            textBoxType.Top = SizeLarge ? 194 : 194;
+
+
+            foreach (Control c in panel2.Controls)
+            {
+                Debug.WriteLine($"{c.Name}\t{c.Width}\t{c.Height}");
+            }
         }
         # endregion
     }

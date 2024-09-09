@@ -276,7 +276,7 @@ namespace MagicProgram
                 return;
             }
 
-            textBox1.Text = "(" + cards[0].Power + "/" + cards[0].Toughness + ")(" + cards[0].counters + ")";
+            textBox1.Text = "(" + cards[0].PowerCalc + "/" + cards[0].ToughnessCalc + ")(" + cards[0].counters + ")";
             textBox1.Visible = TextVisible;
         }
 
@@ -377,6 +377,7 @@ namespace MagicProgram
 
         public void DrawQuantity()
         {
+            Stopwatch sw = Stopwatch.StartNew();
             Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
 
             if (cards.Count > 1)
@@ -420,6 +421,8 @@ namespace MagicProgram
 
             pictureBox1.Image = bmp;
             DrawBorder();
+            sw.Stop();
+            Debug.WriteLine($"DrawQuantity...{sw.ElapsedMilliseconds}");
         }
 
         public Image RotateImage(Image img)
@@ -480,6 +483,7 @@ namespace MagicProgram
             timer1.Interval = 500;
             timer1.Tick -= timer1_TickOn;
             timer1.Tick += new EventHandler(timer1_TickOff);
+            Debug.WriteLine(mc.Location);
         }
 
         private void MagicCardViewer_MouseEnter(object sender, EventArgs e)
@@ -524,7 +528,7 @@ namespace MagicProgram
 
         private void buttonDiscard_Click(object sender, EventArgs e)
         {
-            cards[0].callDiscard();
+            cards[0].CallDiscard();
         }
 
         private void buttonAttack_Click(object sender, EventArgs e)

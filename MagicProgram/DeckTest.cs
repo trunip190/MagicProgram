@@ -6,9 +6,11 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace MagicProgram
 {
@@ -26,7 +28,9 @@ namespace MagicProgram
         int mulligans = 0;
         Random rand = new Random();
         int games = 0;
+        public Form1 ParentForm1;
 
+        int EffectStrength = 0;
         int targets = 0;
 
         bool playerTurn = true;
@@ -67,7 +71,7 @@ namespace MagicProgram
 
             foreach (MagicCard mc in CardsProc)
             {
-                mc.callAbility();
+                mc.CallAbility(0);
             }
 
             if (handler != null)
@@ -133,7 +137,7 @@ namespace MagicProgram
 
             PlArea._deck = deck;
             PlArea.seed = rand.Next();
-            PlArea.initialise();
+            PlArea.InitialiseDeck();
             PlArea.Setup();
 
             createOppDeck();
@@ -143,6 +147,8 @@ namespace MagicProgram
             cardAreaHand.Paused = false;
 
             PhaseChanged += new Phase(DeckTest_PlMainOneEnd);
+
+            PhaseChanged += new Phase(DeckTest_PlPhaseChanged);
 
             updateAll();
         }
@@ -161,6 +167,11 @@ namespace MagicProgram
 
             PlArea.CardDrawn += new CardUse(PlArea_CardDrawn);
             OppArea.CardDrawn += new CardUse(OppArea_CardDrawn);
+
+            PlArea.SearchDeck += new SearchLocation(PlArea_SearchDeck);
+            PlArea.SearchDeck += new SearchLocation(OppArea_SearchDeck);
+            PlArea.SearchGraveyard += new SearchLocation(PlArea_SearchGraveyard);
+            PlArea.SearchGraveyard += new SearchLocation(OppArea_SearchGraveyard);
 
             Controls.Add(PlArea.mw);
             PlArea.mw.Parent = this;
@@ -186,10 +197,32 @@ namespace MagicProgram
         void PlArea_CardUsed(MagicCard mc)
         {
             updateImageLists();
-            updatePlaSide();
+            update_listViewArtEnch();
+            update_listViewHand();
+            update_listViewLand();
+            update_listViewPlay();
         }
 
+        private void PlArea_SearchDeck(string location, string type, int depth, int count)
+        {
+            List<MagicCard> cards = PlArea._library.Where(o => o.Type.ToLower().Contains(type.ToLower())).ToList();
+            comboCardPicker_Fill(cards.GetRange(0, 3));
+            targets = count;
 
+            CardChosen += new CardUse(PlArea_PlayCardFromStack);
+        }
+
+        private void OppArea_SearchDeck(string location, string type, int depth, int count) { }
+
+        private void PlArea_SearchGraveyard(string location, string type, int depth, int count)
+        {
+            List<MagicCard> cards = PlArea._graveyard.Where(o => o.Type.ToLower().Contains(type.ToLower())).ToList();
+            comboCardPicker_Fill(cards);
+
+            CardChosen += new CardUse(PlArea_PlayCardFromGraveyard);
+        }
+
+        private void OppArea_SearchGraveyard(string location, string type, int depth, int count) { }
         # endregion
 
         private void createOppDeck()
@@ -213,7 +246,7 @@ namespace MagicProgram
             }
 
             OppArea.seed = rand.Next();
-            OppArea.initialise();
+            OppArea.InitialiseDeck();
             OppArea.drawCards(7);
 
             updateOppSide();
@@ -222,17 +255,17 @@ namespace MagicProgram
 
         # region methods
         # region game
-        /// <summary>
-        /// Draws cards from Player's library
-        /// </summary>
-        /// <param name="i">Number of cards to draw</param>
         private void DrawCard(int i)
         {
             PlArea.drawCards(i);
         }
 
-        private bool useCard(MagicCard mc)
+        private bool useCard(MagicCard mct)
         {
+            MagicCard mc = PlArea.SortedDeck.cards.Find(o => o.DeckID == mct.DeckID);
+
+            mc = mc == null ? CardMethods.CreateCard(mct) : mc;
+
             # region work out if there is enough mana
             bool mana = true;
 
@@ -243,7 +276,7 @@ namespace MagicProgram
             if (mc.manaCost.green > PlArea.mana.green) { mana = false; }
             if (mc.manaCost.white > PlArea.mana.white) { mana = false; }
 
-            int g = PlArea.mana.colourless - mc.manaCost.colours;
+            int g = PlArea.mana.Colourless - mc.manaCost.Colours;
 
             if (mc.manaCost.grey > g) { mana = false; }
 
@@ -260,35 +293,31 @@ namespace MagicProgram
             }
             # endregion
 
-            mc.callOnPlay();
 
-            # region copy card
-            mc = new MagicCard(mc);
-            # endregion
+            // Copy card
+            //mc = CardMethods.CreateCard(mc);
+            mc.CallOnPlay();
 
-            # region set side to work with
-            PlayArea area = PlArea;
-            if (!playerTurn)
-            {
-                area = OppArea;
-            }
-            # endregion
+            // Set side to work with
+            PlayArea area = playerTurn ? PlArea : OppArea;
 
-            # region land
             if (mc.Type.Contains("Land"))
             {
                 area.PlayCard(mc);
+                mc.CallLocationChanged(CardLocation.Lands);
+
                 cardAreaLand.AddCard(mc);
-                //update_listViewLand();
+
+                //cardAreaLand.AddCard(mc);
+                //cardAreaHand.RemoveCard(mc);
+                update_listViewLand();
             }
-            # endregion
-            # region spells
             else if (mc.Type.Contains("Instant") || mc.Type.Contains("Sorcery"))
             {
                 switch (mc.Name)
                 {
                     case "Nature's Lore":
-                        List<MagicCard> cards = PlArea._stack.cards.Where(o => o.Type.ToUpper().Contains("FOREST")).ToList();
+                        List<MagicCard> cards = PlArea._library.Where(o => o.Type.ToUpper().Contains("FOREST")).ToList();
                         comboCardPicker_Fill(cards);
                         CardChosen += new CardUse(CardChosen_NaturesLore);
                         break;
@@ -309,7 +338,8 @@ namespace MagicProgram
                         break;
 
                     case "Strength of the Tajuru":
-                        targets = mc.Xvalue;
+                        targets = mc._XValue;
+                        EffectStrength = mc._XValue;
                         cardAreaPlay.CardClicked += new CardArea.CardChosen(CardClicked_StrengthOfTheTajuru);
                         break;
                 }
@@ -327,7 +357,8 @@ namespace MagicProgram
                         }
                         if (dr == DialogResult.No)
                         {
-                            area._graveyard.cards.Add(mc);
+                            area._graveyard.Add(mc);
+                            mc.LocationChanged(CardLocation.Graveyard);
                         }
                         else
                         {
@@ -339,9 +370,8 @@ namespace MagicProgram
                 {
                     area.PlayCard(mc);
                 }
+
             }
-            # endregion
-            # region artifacts and enchantments
             else if (mc.Type.Contains("Artifact") || mc.Type.Contains("Enchantment"))
             {
                 onSpellRes();
@@ -383,8 +413,7 @@ namespace MagicProgram
                 tempCard = mc;
                 update_listViewArtEnch();
             }
-            # endregion
-            # region creatures
+            // creatures
             else
             {
                 onCreaCast(mc);
@@ -413,6 +442,10 @@ namespace MagicProgram
                     case "Fathom Mage":
                         mc.CountersChanged += new MagicCard.ValueChanged(mc_CountersChangedFathomMage);
                         break;
+
+                        //case "Gyre Sage":
+                        //    mc.Activating += new MagicCard.Ability(Activating_GyreSage);
+                        //    break;
                 }
 
                 mc.Activate += new MagicCard.Ability(mc_ActivateCard);
@@ -425,12 +458,22 @@ namespace MagicProgram
 
                 //final resolution - add card to play.
                 area.PlayCard(mc);
+                mc.LocationChanged(CardLocation.Play);
                 update_listViewPlay();
             }
-            # endregion
 
+            if (mc.Location == CardLocation.Hand)
+                Debug.WriteLine("");
+
+            updateAll();
+            updateManaLabel();
             //updateAll();
             return true;
+        }
+
+        private void Mc_ChangeMana(ColourCost cc)
+        {
+            PlArea.mana.Add(cc);
         }
 
         void mc_CountersChangedFathomMage(int count)
@@ -443,15 +486,9 @@ namespace MagicProgram
 
         void cardAreaPlay_CountersPicked(int value, Dictionary<MagicCard, int> sources)
         {
-            MagicCard mc = new MagicCard
-            {
-                Token = true,
-                Name = "Ooze",
-                Type = "Creature - Ooze",
-                PT = value + "/" + value,
-                Power = value,
-                Toughness = value
-            };
+            MagicCard mc = CardMethods.CreateCard("Ooze");
+
+            mc.checkPT();
 
             foreach (KeyValuePair<MagicCard, int> k in sources)
             {
@@ -470,8 +507,9 @@ namespace MagicProgram
             string cost = mc.Cost.ToUpper();
             int count = cost.Count(c => c == 'X');
             ColourCost Cost = new ColourCost();
-            mc.Xvalue = 0;
-            //Debug.WriteLine("X value was {0}", mc.Xvalue);
+            mc._XValue = 0;
+            //Debug.WriteLine("X value was {0}", mc._XValue);
+            mc.Initialise();
             mc.setMana();
 
             if (!PlArea.mana.Compare(mc.manaCost))
@@ -480,7 +518,7 @@ namespace MagicProgram
                 return;
             }
 
-            mc.callPrePlay();
+            mc.CallPrePlay();
 
             if (cost.Contains("X"))
             {
@@ -495,7 +533,6 @@ namespace MagicProgram
 
                 CardStack.Add(mc);
 
-                mc.Initialise();
                 xPicker.Cost = mc.manaCost;
                 xPicker.Mana = PlArea.mana;
                 xPicker.Value = 0;
@@ -522,7 +559,7 @@ namespace MagicProgram
 
             ColourCost cc = CardStack[0].manaCost;
 
-            CardStack[0].Xvalue = value;
+            CardStack[0]._XValue = value;
             //string edited = CardStack[0].Cost.Replace("X", value.ToString());
             //CardStack[0].Cost = edited;
 
@@ -530,7 +567,9 @@ namespace MagicProgram
 
             if (PlArea.mana.Compare(cc))
             {
-                useCard(CardStack[0]);
+                MagicCard mc = new MagicCard(CardStack[0]);
+                useCard(mc);
+                Debug.WriteLine($"picker_ValuePicked {CardStack[0].Name}");
                 CardStack.RemoveAt(0);
             }
         }
@@ -578,15 +617,15 @@ namespace MagicProgram
             tempCard.checkPT();
             tempCard = null;
 
-            PlArea._hand.Remove(mc);
-            cardAreaHand.RemoveCard(mc);
+            mc.LocationChanged(CardLocation.Exiled);
+            //cardAreaHand.RemoveCard(mc);
             cardAreaHand.CardClicked -= cardAreaHand_CardClickedCipher;
 
             mc.Activate += new MagicCard.Ability(mc_ActivateEliteArcanist);
 
         }
 
-        void mc_ActivateEliteArcanist(MagicCard mc)
+        void mc_ActivateEliteArcanist(MagicCard mc, int ID)
         {
             PrePlay(mc);
         }
@@ -629,18 +668,20 @@ namespace MagicProgram
 
         private void ToHand(ListView lv)
         {
-            PlArea._play.index();
+            //PlArea._play.index();
 
             if (lv.SelectedIndices.Count > 0)
             {
                 # region clicked item
                 int i = lv.SelectedIndices[0];
+                MagicCard mc = PlArea._play[i];
 
                 if (i > -1)
                 {
-                    PlArea._play.cards[i].counters = 0;
-                    PlArea._hand.cards.Add(PlArea._play.cards[i]);
-                    PlArea._play.cards.RemoveAt(i);
+                    mc.counters = 0;
+                    mc.LocationChanged(CardLocation.Hand);
+                    //PlArea._hand.Add(mc);
+                    //PlArea._play.Remove(mc.DeckID);
                 }
                 # endregion
             }
@@ -655,9 +696,36 @@ namespace MagicProgram
                 //need to replace callActivate() with a proc method
                 //or work out how to add abilities to the stack,
                 //maybe with onResolve event.
-                CardStack[i].callActivate();
+                CardStack[i].CallActivate(-1);
 
                 CardStack.RemoveAt(i);
+            }
+        }
+
+        private void Mc_LocationChange(int CardID, CardLocation NewArea, CardLocation OldArea)
+        {
+            switch (NewArea)
+            {
+                //case CardLocation.Library: break;
+                //case CardLocation.Graveyard: break;
+                case CardLocation.Hand: cardAreaHand.UpdateCard(CardID); break;
+                //case CardLocation.Exiled          ;
+                case CardLocation.Play: cardAreaPlay.UpdateCard(CardID); break;
+                case CardLocation.Lands: cardAreaLand.UpdateCard(CardID); break;
+                    //case CardLocation.Enchantments: cardAreaPlay.UpdateCard(CardID); break;
+                    //case CardLocation.Artifacts: cardAreaPlay.UpdateCard(CardID); break;
+            }
+
+            switch (OldArea)
+            {
+                //case CardLocation.Library: break;
+                //case CardLocation.Graveyard: break;
+                case CardLocation.Hand: cardAreaHand.UpdateCard(CardID); break;
+                //case CardLocation.Exiled          ;
+                case CardLocation.Play: cardAreaPlay.UpdateCard(CardID); break;
+                case CardLocation.Lands: cardAreaLand.UpdateCard(CardID); break;
+                    //case CardLocation.Enchantments: cardAreaPlay.UpdateCard(CardID); break;
+                    //case CardLocation.Artifacts: cardAreaPlay.UpdateCard(CardID); break;
             }
         }
 
@@ -682,18 +750,20 @@ namespace MagicProgram
         private void OppPlayHand()
         {
             # region play a land
-            int i = OppArea._hand.cards.FindIndex(o => o.Type.Contains("Land"));
+            int i = OppArea._hand.FindIndex(o => o.Type.Contains("Land"));
 
             if (i > -1)
             {
-                MagicCard mc = new MagicCard(OppArea._hand.cards[i]);
+                MagicCard mc = new MagicCard(OppArea._hand[i]);
                 OppArea.PlayCard(mc);
-                OppArea._hand.cards.RemoveAt(i);
+                //OppArea._hand.Remove(mc.DeckID);
+                //OppArea._hand.cards.RemoveAt(i);
             }
             # endregion
 
             # region work out how much mana there is to play with
-            foreach (MagicCard mc in OppArea._lands.cards)
+            //foreach (MagicCard mc in OppArea._lands.cards)
+            foreach (MagicCard mc in OppArea._lands)
             {
                 switch (mc.Name)
                 {
@@ -723,8 +793,9 @@ namespace MagicProgram
             # endregion
 
             # region play a creature
-            foreach (MagicCard mc in OppArea._hand.cards)
+            for (int j = 0; j < OppArea._hand.Count; j++)
             {
+                MagicCard mc = OppArea._hand[j];
                 if (!mc.Type.ToLower().Contains("land"))
                 {
                     bool mana = true;
@@ -738,7 +809,7 @@ namespace MagicProgram
                     if (mc.manaCost.white > OppArea.mana.white) { mana = false; }
 
                     # region grey
-                    int g = OppArea.mana.colourless - mc.manaCost.colours;
+                    int g = OppArea.mana.Colourless - mc.manaCost.Colours;
 
                     if (mc.manaCost.grey > g) { mana = false; }
                     # endregion
@@ -746,9 +817,8 @@ namespace MagicProgram
                     //play card
                     if (mana)
                     {
-                        MagicCard mcs = new MagicCard(mc);
-                        OppArea.PlayCard(mcs);
-                        OppArea._hand.cards.Remove(mc);
+                        OppArea.PlayCard(mc);
+                        mc.LocationChanged(CardLocation.Play);
                         break;
                     }
                 }
@@ -761,7 +831,7 @@ namespace MagicProgram
         private void Mulligan()
         {
             mulligans++;
-            PlArea.initialise();
+            PlArea.InitialiseDeck();
             int cards = 7 - mulligans;
 
             cardAreaHand.Paused = true;
@@ -776,13 +846,13 @@ namespace MagicProgram
             clearAll();
             games++;
 
-            PlArea.initialise();
+            PlArea.InitialiseDeck();
 
             cardAreaHand.Paused = true;
             DrawCard(7);
             cardAreaHand.Paused = false;
 
-            OppArea.initialise();
+            OppArea.InitialiseDeck();
             OppArea.drawCards(7);
 
             updateAll();
@@ -818,11 +888,11 @@ namespace MagicProgram
         {
             # region Hand
             imageListHand.Images.Clear();
-            foreach (MagicCard mc in PlArea._hand.cards)
+            foreach (MagicCard mc in PlArea._hand)
             {
                 imageListHand.Images.Add(mc.Name.ToUpper(), mc.get());
             }
-            foreach (MagicCard mc in OppArea._hand.cards)
+            foreach (MagicCard mc in OppArea._hand)
             {
                 imageListHand.Images.Add(mc.Name.ToUpper(), mc.get());
             }
@@ -830,33 +900,33 @@ namespace MagicProgram
 
             # region Play
             imageListPlay.Images.Clear();
-            foreach (MagicCard mc in PlArea._play.cards)
+            foreach (MagicCard mc in PlArea._play)
             {
                 imageListPlay.Images.Add(mc.Name.ToUpper(), mc.get());
             }
-            foreach (MagicCard mc in OppArea._play.cards)
+            foreach (MagicCard mc in OppArea._play)
             {
                 imageListPlay.Images.Add(mc.Name.ToUpper(), mc.get());
             }
             # endregion
 
             # region Land
-            foreach (MagicCard mc in PlArea._lands.cards)
+            foreach (MagicCard mc in PlArea._lands)
             {
                 imageListPlay.Images.Add(mc.Name.ToUpper(), mc.get());
             }
-            foreach (MagicCard mc in OppArea._lands.cards)
+            foreach (MagicCard mc in OppArea._lands)
             {
                 imageListPlay.Images.Add(mc.Name.ToUpper(), mc.get());
             }
             # endregion
 
             # region artifacts/enchantments
-            foreach (MagicCard mc in PlArea._artEnch.cards)
+            foreach (MagicCard mc in PlArea._artEnch)
             {
                 imageListPlay.Images.Add(mc.Name.ToUpper(), mc.get());
             }
-            foreach (MagicCard mc in OppArea._artEnch.cards)
+            foreach (MagicCard mc in OppArea._artEnch)
             {
                 imageListPlay.Images.Add(mc.Name.ToUpper(), mc.get());
             }
@@ -864,13 +934,6 @@ namespace MagicProgram
         }
 
         # region player side
-        private void updatePlaSide()
-        {
-            update_listViewArtEnch();
-            update_listViewHand();
-            update_listViewLand();
-            update_listViewPlay();
-        }
 
         # region listviews
         //private void updateListViews()
@@ -884,27 +947,28 @@ namespace MagicProgram
         private void update_listViewArtEnch()
         {
             listViewArtEnch.Items.Clear();
-            foreach (MagicCard mc in PlArea._artEnch.cards)
+            //foreach (MagicCard mc in PlArea._artEnch.cards)
+            foreach (MagicCard mc in PlArea._artEnch)
             {
-                listViewArtEnch.Items.Add(mc.toListViewItem(false));
+                listViewArtEnch.Items.Add(mc.ToListViewItem(false));
             }
         }
 
         private void update_listViewPlay()
         {
-            cardAreaPlay.Cards = PlArea._play;
+            cardAreaPlay.Cards.cards = PlArea._play;
             cardAreaPlay.DrawAllCards();
         }
 
         private void update_listViewLand()
         {
-            cardAreaLand.Cards = PlArea._lands;
-            cardAreaLand.DrawAllCards();   //cardviewer version
+            cardAreaLand.Cards.cards = PlArea._lands;
+            cardAreaLand.DrawAllCards();
         }
 
         private void update_listViewHand()
         {
-            cardAreaHand.Cards = PlArea._hand;
+            cardAreaHand.Cards.cards = PlArea._hand;
             cardAreaHand.DrawAllCards();
         }
         # endregion
@@ -916,9 +980,10 @@ namespace MagicProgram
             listViewOppLand.Items.Clear();
             listViewOppLand.OwnerDraw = true;
 
-            foreach (MagicCard mc in OppArea._lands.cards)
+            //foreach (MagicCard mc in OppArea._lands.cards)
+            foreach (MagicCard mc in OppArea._lands)
             {
-                ListViewItem lvi = mc.toListViewItem(false);
+                ListViewItem lvi = mc.ToListViewItem(false);
                 listViewOppLand.Items.Add(lvi);
             }
 
@@ -926,9 +991,10 @@ namespace MagicProgram
 
             listViewOppCrea.OwnerDraw = true;
             listViewOppCrea.Items.Clear();
-            foreach (MagicCard mc in OppArea._play.cards)
+            //foreach (MagicCard mc in OppArea._play.cards)
+            foreach (MagicCard mc in OppArea._play)
             {
-                listViewOppCrea.Items.Add(mc.toListViewItem(true));
+                listViewOppCrea.Items.Add(mc.ToListViewItem(true));
             }
             listViewOppCrea.OwnerDraw = false;
 
@@ -937,7 +1003,7 @@ namespace MagicProgram
 
         private void updateManaLabel()
         {
-            label2.Text = PlArea.mana.colourless.ToString() + "_ / ";
+            label2.Text = PlArea.mana.Colourless.ToString() + "_ / ";
             label2.Text += PlArea.mana.green.ToString() + "G / ";
             label2.Text += PlArea.mana.red.ToString() + "R / ";
             label2.Text += PlArea.mana.blue.ToString() + "U / ";
@@ -965,23 +1031,22 @@ namespace MagicProgram
         # region card actions
         void temp_OnPlay(MagicCard mc)
         {
-            PlArea._hand.cards.Remove(mc);
-
             cPanelControls.Hide();
-            cardAreaHand.RemoveCard(mc);
+            //cardAreaHand.RemoveCard(mc);
+
             mc.OnPlay -= temp_OnPlay;
         }
 
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             ListView lv = listViewPlay;
-            PlArea._play.index();
+            //PlArea._play.index();
 
             if (lv.SelectedIndices.Count > 0)
             {
                 int i = lv.SelectedIndices[0];
 
-                PlArea._play.cards.RemoveAt(i);
+                PlArea._play.RemoveAt(i);
 
                 cPanelControls.Hide();
                 updateAll();
@@ -1045,7 +1110,7 @@ namespace MagicProgram
         # region listviewhand
         private void listViewHand_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PlArea._hand.index();
+            //PlArea._hand.index();
             ListView temp = sender as ListView;
 
             if (temp.SelectedIndices.Count > 0)
@@ -1055,7 +1120,7 @@ namespace MagicProgram
 
                 if (ind > -1)
                 {
-                    MagicCard mc = PlArea._hand.cards[ind];
+                    MagicCard mc = PlArea._hand[ind];
 
                     ViewCard(mc);
                 }
@@ -1071,7 +1136,7 @@ namespace MagicProgram
 
         private void listViewLand_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PlArea._lands.index();
+            //PlArea._lands.index();
             ListView temp = sender as ListView;
 
             if (temp.SelectedIndices.Count > 0)
@@ -1081,7 +1146,7 @@ namespace MagicProgram
 
                 if (ind > -1)
                 {
-                    MagicCard mc = PlArea._lands.cards[ind];
+                    MagicCard mc = PlArea._lands[ind];
                     ViewCard(mc);
                 }
                 # endregion
@@ -1108,7 +1173,7 @@ namespace MagicProgram
         # region listviewplay
         private void listViewPlay_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PlArea._play.index();
+            //PlArea._play.index();
             ListView temp = sender as ListView;
 
             if (temp.SelectedIndices.Count > 0)
@@ -1118,7 +1183,7 @@ namespace MagicProgram
 
                 if (ind > -1)
                 {
-                    MagicCard mc = PlArea._play.cards[ind];
+                    MagicCard mc = PlArea._play[ind];
                     ViewCard(mc);
                 }
                 # endregion
@@ -1145,7 +1210,7 @@ namespace MagicProgram
                 }
                 int ind = listViewPlay.SelectedItems[0].Index;
 
-                onCardChosen(PlArea._play.cards[ind]);
+                onCardChosen(PlArea._play[ind]);
             }
         }
 
@@ -1167,21 +1232,19 @@ namespace MagicProgram
 
         private void listViewArtEnch_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PlArea._artEnch.index();
+            //PlArea._deck.index();
             ListView temp = sender as ListView;
 
             if (temp.SelectedIndices.Count > 0)
             {
-                # region clicked item
-                int ind = temp.SelectedIndices[0];
+                int.TryParse(temp.SelectedItems[0].Tag.ToString(), out int DeckID);
 
-                if (ind > -1)
+                if (DeckID > -1)
                 {
-                    MagicCard mc = PlArea._artEnch.cards[ind];
+                    MagicCard mc = PlArea._artEnch.Find(o => o.DeckID == DeckID);
 
-                    ViewCard(mc);
+                    if (mc != null) ViewCard(mc);
                 }
-                # endregion
             }
             else
             {
@@ -1202,7 +1265,7 @@ namespace MagicProgram
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-            if (lvTemp.SelectedItems.Count > 0)
+            if (lvTemp != null && lvTemp.SelectedItems.Count > 0)
             {
                 e.Cancel = true;
             }
@@ -1227,7 +1290,7 @@ namespace MagicProgram
 
             }
 
-            PlArea.initialise();
+            PlArea.InitialiseDeck();
             DrawCard(7);
         }
 
@@ -1313,10 +1376,16 @@ namespace MagicProgram
         # endregion
 
         # region card events
-        void Activating_OozeFlux(MagicCard mc)
+        private void AddCardHandlers(ref MagicCard mc)
+        {
+            //mc.OnLocationChanged += new MagicCard.LocationChange(Mc_LocationChange);
+        }
+
+        void Activating_OozeFlux(MagicCard mc, int ID)
         {
             int c = 0;  //number of counters on creatures
-            foreach (MagicCard mcs in PlArea._play.cards)
+            //foreach (MagicCard mcs in PlArea._play.cards)
+            foreach (MagicCard mcs in PlArea._play)
             {
                 if (mcs.counters > 0)
                 {
@@ -1347,7 +1416,7 @@ namespace MagicProgram
             PlArea.mw.ShowWheel(c);
         }
 
-        void mc_ActivateCard(MagicCard mc)
+        void mc_ActivateCard(MagicCard mc, int ID)
         {
             switch (mc.Name)
             {
@@ -1361,6 +1430,10 @@ namespace MagicProgram
 
                 case "Elite Arcanist":
 
+                    break;
+
+                default:
+                    mc.ActivateAbility(ID);
                     break;
             }
         }
@@ -1386,22 +1459,24 @@ namespace MagicProgram
             }
         }
 
-        void CardEvent_Populate(MagicCard mc, MouseEventArgs e)
-        {
-            if (!mc.Token)
-            {
-                return;
-            }
-            else
-            {
-                MagicCard mct = new MagicCard(mc);
-                PlArea.PlayCard(mct);
-            }
-        }
+        //void CardEvent_Populate(MagicCard mc, MouseEventArgs e)
+        //{
+        //    if (!mc.Token)
+        //    {
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        //MagicCard mct = mc.Name == "Gyre Sage" ? new GyreSage(mc) : new MagicCard(mc);
+        //        MagicCard mct = CardMethods.CreateCard(mc);
+        //        PlArea.PlayCard(mct);
+        //    }
+        //}
 
         void CardChosen_TritonTactics(MagicCard mc, EventArgs e)
         {
-            if (PlArea._play.cards.Contains(mc))
+            //if (PlArea._play.cards.Contains(mc))
+            if (PlArea._hand.Contains(mc))
             {
                 mc.Tap(false, false);
                 mc.TBonus += 3;
@@ -1417,7 +1492,8 @@ namespace MagicProgram
 
         void CardChosen_CalltoHeel(MagicCard mc, EventArgs e)
         {
-            PlArea._play.cards.Remove(mc);
+            //PlArea._deck.Remove(mc.DeckID);
+            mc.LocationChanged(CardLocation.Hand); //Probably the new way of changing location.
             update_listViewPlay();
 
             PlArea._hand.Add(mc.Copy());
@@ -1434,7 +1510,7 @@ namespace MagicProgram
 
         void CardChosen_PredatorsRapport(MagicCard mc, EventArgs e)
         {
-            PlArea.HP += mc.Power + mc.Toughness;
+            PlArea.HP += mc.PowerCalc + mc.ToughnessCalc;
 
             cardAreaPlay.CardClicked -= CardChosen_PredatorsRapport;
         }
@@ -1442,9 +1518,11 @@ namespace MagicProgram
         void CardClicked_StrengthOfTheTajuru(MagicCard mc, MouseEventArgs e)
         {
             //using targets as temporary xvalue
-            mc.counters += targets;
+            mc.counters += EffectStrength;
 
-            cardAreaPlay.CardClicked -= CardClicked_StrengthOfTheTajuru;
+            targets--;
+            if (targets < 1)
+                cardAreaPlay.CardClicked -= CardClicked_StrengthOfTheTajuru;
         }
 
         void CardClick_BondBeetle(MagicCard mc, MouseEventArgs e)
@@ -1461,6 +1539,9 @@ namespace MagicProgram
         # endregion
 
         # region phase order
+        void DeckTest_PlPhaseChanged() { ReportAllCards(); }
+        void DeckTest_OppPhaseChanged() { }
+
         void DeckTest_PlTurnStart()
         {
             PhaseChanged -= DeckTest_PlTurnStart;
@@ -1676,7 +1757,24 @@ namespace MagicProgram
                 changeView(lvTemp, View.Tile);
             }
         }
-        # endregion
+        #endregion
+
+        #region CardAreas
+        public void UpdateArea(CardArea area, CardLocation location)
+        {
+            switch (location)
+            {
+                case CardLocation.Library: area.Cards.cards = PlArea._library; break;
+                case CardLocation.Graveyard: area.Cards.cards = PlArea._graveyard; break;
+                case CardLocation.Hand: area.Cards.cards = PlArea._hand; break;
+                //case CardLocation.Exiled: area.Cards.cards = PlArea.; break;
+                case CardLocation.Play: area.Cards.cards = PlArea._play; break;
+                case CardLocation.Lands: area.Cards.cards = PlArea._lands; break;
+                case CardLocation.Enchantments: area.Cards.cards = PlArea._artEnch; break;
+                case CardLocation.Artifacts: area.Cards.cards = PlArea._artEnch; break;
+            }
+        }
+        #endregion
 
         private void panel1_VisibleChanged(object sender, EventArgs e)
         {
@@ -1693,9 +1791,15 @@ namespace MagicProgram
                 case Keys.Delete:
                     if (listViewOppCrea.SelectedItems.Count > 0)
                     {
-                        int ind = listViewOppCrea.SelectedIndices[0];
-                        OppArea._play.cards[ind].callDestroyed();
-                        updateOppSide();
+                        //int ind = listViewOppCrea.SelectedIndices[0];
+                        int.TryParse(listViewOppCrea.SelectedItems[0].Tag.ToString(), out int ind);
+                        if (ind > -1)
+                        {
+                            var mc = OppArea.SortedDeck.cards.Find(o => o.DeckID == ind);
+                            mc.CallDestroyed();
+
+                            updateOppSide();
+                        }
                         e.Handled = true;
                     }
                     break;
@@ -1747,6 +1851,18 @@ namespace MagicProgram
                 MagicCard mc = PickList[i];
                 onCardChosen(mc);
             }
+            else
+            {
+                if (comboCardPicker.SelectedItem != null)
+                {
+                    var v = ParentForm1.Database.cards.Where(o => o.Name == comboCardPicker.SelectedItem.ToString());
+                    if (v.Count() > 0 && v.First() != null)
+                    {
+                        MagicCard mc = v.First();
+                        useCard(mc);
+                    }
+                }
+            }
 
             buttonCardChoose.Visible = false;
             comboCardPicker.Visible = false;
@@ -1781,14 +1897,20 @@ namespace MagicProgram
             buttonCardChoose.Visible = true;
             comboCardPicker.Visible = true;
         }
-        # endregion
+        #endregion
 
+
+        #region Pop-up card viewer
         private void button1_Click(object sender, EventArgs e)
         {
             viewCard = null;
             cPanelControls.Hide();
+
+            CardChosen -= DeckTest_CardChosen_PlayCard;
         }
 
+
+        #endregion
         private void viewDebugToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //richTextBox1.Visible = true;
@@ -1825,6 +1947,22 @@ namespace MagicProgram
             }
         }
 
+        private void ReportAllCards()
+        {
+            return;
+
+            CardReportView.BeginUpdate();
+            CardReportView.Items.Clear();
+            foreach (var v in PlArea.SortedDeck.cards.OrderBy(o => o.Location).ThenBy(o => o.Name))
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = v.Name;
+                lvi.SubItems.Add(v.Location.ToString());
+                CardReportView.Items.Add(lvi);
+            }
+            CardReportView.EndUpdate();
+        }
+
         void cv_VisibleChanged(object sender, EventArgs e)
         {
             Control ct = sender as Control;
@@ -1846,6 +1984,55 @@ namespace MagicProgram
                 progressBar1.Value = 0;
             }
         }
+
+        private void addCardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            comboCardPicker.BeginUpdate();
+            foreach (var v in ParentForm1.Database.cards)
+            {
+                //ListViewItem item = new ListViewItem(Name = v.Name);
+                //item.SubItems.Add(v.Edition);
+                comboCardPicker.Items.Add(v.Name);
+            }
+            comboCardPicker.EndUpdate();
+            comboCardPicker.Show();
+
+            CardChosen += DeckTest_CardChosen_PlayCard;
+
+            buttonCardChoose.Show();
+
+            cPanelControls.Show();
+        }
+
+        #region Play cards from location
+        private void PlArea_PlayCardFromStack(MagicCard mc)
+        {
+            //PlArea._stack.Remove(mc.DeckID);
+            useCard(mc);
+
+            targets--;
+
+            if (targets < 1)
+                CardChosen -= PlArea_PlayCardFromStack;
+        }
+
+        private void PlArea_PlayCardFromGraveyard(MagicCard mc)
+        {
+            useCard(mc);
+        }
+        #endregion
+
+        private void DeckTest_CardChosen_PlayCard(MagicCard mc)
+        {
+            temp_OnPlay(mc);
+            CardChosen -= DeckTest_CardChosen_PlayCard;
+            //throw new NotImplementedException();
+        }
+
+        private void refreshCardLocationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportAllCards();
+        }
     }
 
     public class PlayArea
@@ -1853,16 +2040,20 @@ namespace MagicProgram
         # region declarations
         # region card areas
         public CardCollection _deck;
-        public CardCollection _stack;
-        public CardCollection _graveyard;
-        public CardCollection _hand;
-        public CardCollection _artEnch;
-        public CardCollection _play;
-        public CardCollection _lands;
+        public CardCollection SortedDeck;
+        public List<MagicCard> _library => SortedDeck.cards.Where(o => o.Location == CardLocation.Library).ToList();
+        public List<MagicCard> _graveyard => SortedDeck.cards.Where(o => o.Location == CardLocation.Graveyard).ToList();
+        public List<MagicCard> _hand => SortedDeck.cards.Where(o => o.Location == CardLocation.Hand).ToList();
+        public List<MagicCard> _artEnch => SortedDeck.cards.Where(o => o.Location == CardLocation.Enchantments
+                                                               || o.Location == CardLocation.Artifacts).ToList();
+        public List<MagicCard> _play => SortedDeck.cards.Where(o => o.Location == CardLocation.Play).ToList();
+        public List<MagicCard> _lands => SortedDeck.cards.Where(o => o.Location == CardLocation.Lands).ToList();
         # endregion
 
         # region hp
         public event Action HPChanged;
+        public event SearchLocation SearchDeck;
+        public event SearchLocation SearchGraveyard;
 
         private void onHPChanged()
         {
@@ -1870,6 +2061,24 @@ namespace MagicProgram
             if (handler != null)
             {
                 handler();
+            }
+        }
+
+        private void onSearchDeck(string Type, int depth, int count)
+        {
+            SearchLocation handler = SearchDeck;
+            if (handler != null)
+            {
+                handler("Library", Type, depth, count);
+            }
+        }
+
+        private void onSearchGraveyard(String Type, int depth, int count)
+        {
+            SearchLocation handler = SearchGraveyard;
+            if (handler != null)
+            {
+                handler("Graveyard", Type, depth, count);
             }
         }
 
@@ -1891,17 +2100,20 @@ namespace MagicProgram
         public int seed = 0;
 
         public ManaWheel mw = new ManaWheel { Visible = false };
-
+        public ColourCost mana = new ColourCost();
         private List<MagicCard> CardsProc = new List<MagicCard>();
 
         public event Phase SpellRes;
+        public event CardUse CardUsed;
+        public event CardUse CardDrawn;
+
         protected void onSpellRes()
         {
             Phase handler = SpellRes;
 
             foreach (MagicCard mc in CardsProc)
             {
-                mc.callAbility();
+                mc.CallAbility(-1);
             }
 
             if (handler != null)
@@ -1909,10 +2121,6 @@ namespace MagicProgram
                 handler();
             }
         }
-
-        public event CardUse CardUsed;
-        public event CardUse CardDrawn;
-
         protected void onCardUse(MagicCard mc)
         {
             CardUse handler = CardUsed;
@@ -1930,7 +2138,6 @@ namespace MagicProgram
             }
         }
 
-        public ColourCost mana = new ColourCost();
         # endregion
 
         public void Setup()
@@ -1939,36 +2146,45 @@ namespace MagicProgram
 
         }
 
-        public void initialise()
+        public void InitialiseDeck()
         {
-            _stack = new CardCollection();
-            _hand = new CardCollection();
-            _play = new CardCollection();
-            _graveyard = new CardCollection();
-            _lands = new CardCollection();
-            _artEnch = new CardCollection();
 
+            SortedDeck = new CardCollection();
 
-            initialiseDeck();
-        }
-
-        private void initialiseDeck()
-        {
-            foreach (MagicCard mc in _deck.cards)
+            // Assign DeckID, set quantity to 0
+            for (int j = 0; j < _deck.cards.Count; j++)
             {
+                MagicCard mc = _deck.cards[j];
+
                 for (int i = 0; i < mc.quantity; i++)
                 {
-                    MagicCard newCard = mc.Clone() as MagicCard;
-                    newCard.quantity = 1;
-                    _stack.cards.Add(newCard);
+                    //MagicCard newCard = mc.Clone() as MagicCard;
+                    MagicCard NewCard = CardMethods.CreateCard(mc);
+
+                    // Set ID for searching later.
+                    NewCard.DeckID = CardMethods.CardID;
+
+                    NewCard.quantity = 1;
+                    SortedDeck.cards.Add(NewCard);
+                    NewCard.Location = CardLocation.Library;
                 }
             }
 
             Output.Write("\r\nshuffling cards\r\n");
-            _stack.cards.OrderBy(o => o.Type);
-            _stack = Shuffle(_stack, false);
-            _stack = Shuffle(_stack, false);
-            _stack = Shuffle(_stack, true);
+            //_stack.cards.OrderBy(o => o.Type);
+            _library.OrderBy(o => o.Type);
+            SortedDeck = Shuffle(SortedDeck, false);
+            SortedDeck = Shuffle(SortedDeck, false);
+            SortedDeck = Shuffle(SortedDeck, true);
+        }
+
+        public void AddCardTriggers(MagicCard mc)
+        {
+            mc.ChangeMana += Mc_ChangeMana;
+            mc.Activating += new MagicCard.Ability(mc_Activating);
+            mc.Discard += new CardUse(Play_Discard);
+            mc.Destroyed += new CardUse(Play_Destroyed);
+            mc.SearchCard += new SearchLocation(Mc_SearchCard);
         }
 
         public void PlayCard(MagicCard mc)
@@ -2013,8 +2229,9 @@ namespace MagicProgram
                         break;
                 }
                 # endregion
-                _lands.cards.Add(mc);
-                _lands.index();
+
+                mc.LocationChanged(CardLocation.Lands);
+
             }
             # endregion
             # region spells
@@ -2026,25 +2243,24 @@ namespace MagicProgram
                         break;
                 }
 
-                _graveyard.cards.Add(mc);
-                _graveyard.index();
+                mc.LocationChanged(CardLocation.Graveyard);
             }
             # endregion
             # region artifacts and enchantments
             else if (mc.Type.Contains("Artifact") || mc.Type.Contains("Enchantment"))
             {
-                _artEnch.Add(mc);
-                _artEnch.index();
+                if (mc.Type.Contains("Artifact")) mc.LocationChanged(CardLocation.Artifacts);
+                else mc.LocationChanged(CardLocation.Enchantments);
             }
             # endregion
             # region creatures
             else
             {
-                foreach (MagicCard mstc in _play.cards)
+                foreach (MagicCard mstc in _play)
                 {
                     if (mstc.Name == "Master Biomancer")
                     {
-                        mc.counters += mstc.Power;
+                        mc.counters += mstc.PowerCalc;
                     }
                 }
 
@@ -2060,13 +2276,9 @@ namespace MagicProgram
                         mc.Evolving += new MagicCard.Ability(RenegadeKrasis_Evolve);
                         break;
 
-                    case "Vorel of the Hull Clade":
-                        mc.Activating += new MagicCard.Ability(Activate_VorelHullClade);
-                        break;
-
-                    case "Gyre Sage":
-                        mc.Activate += new MagicCard.Ability(Activate_GyreSage);
-                        break;
+                    //case "Gyre Sage":
+                    //    mc.Activate += new MagicCard.Ability(Activate_GyreSage);
+                    //    break;
 
                     case "Voyaging Satyr":
                         mc.Activate += new MagicCard.Ability(Activate_VoyagingSatyr);
@@ -2087,15 +2299,15 @@ namespace MagicProgram
                         break;
 
                     case "Protean Hydra":
-                        mc.counters += mc.Xvalue;
+                        mc.counters += mc._XValue;
                         break;
 
                     case "Vastwood Hydra":
-                        mc.counters += mc.Xvalue;
+                        mc.counters += mc._XValue;
                         break;
 
                     case "Primordial Hydra":
-                        mc.counters += mc.Xvalue;
+                        mc.counters += mc._XValue;
                         break;
 
                     case "Elite Arcanist":
@@ -2104,10 +2316,12 @@ namespace MagicProgram
                 }
                 # endregion
 
+                CallCreatureEntered(mc);
+
                 mc.checkPT();
-                foreach (MagicCard mcs in _play.cards)
+                foreach (MagicCard mcs in _play)
                 {
-                    mcs.Evolve(mc.Power, mc.Toughness);
+                    mcs.Evolve(mc.PowerCalc, mc.ToughnessCalc);
                 }
 
                 onSpellRes();
@@ -2118,14 +2332,39 @@ namespace MagicProgram
                     mc.Sick = true;
                 }
 
-                _play.cards.Add(mc);
-                _play.index();
+                mc.LocationChanged(CardLocation.Play);
             }
-            # endregion
+            #endregion
 
-            mc.Activating += new MagicCard.Ability(mc_Activating);
-            mc.Discard += new CardUse(Play_Discard);
-            mc.Destroyed += new CardUse(Play_Destroyed);
+            //AddCardTriggers(mc);
+            //mc.ChangeMana += Mc_ChangeMana;
+            //mc.Activating += new MagicCard.Ability(mc_Activating);
+            //mc.Discard += new CardUse(Play_Discard);
+            //mc.Destroyed += new CardUse(Play_Destroyed);
+            //mc.SearchCard += Mc_SearchCard;
+
+
+        }
+
+        private void Mc_SearchCard(string location, string type, int depth, int count)
+        {
+            switch (location)
+            {
+                case "Library":
+                    onSearchDeck(type, depth, count); break;
+                case "Graveyard":
+                    onSearchGraveyard(type, depth, count); break;
+
+                default:
+                    Debug.WriteLine($"Searching card area {location} not programmed");
+                    break;
+            }
+        }
+
+
+        private void Mc_ChangeMana(ColourCost cc)
+        {
+            mana.Add(cc);
         }
 
         public void PlayToken(MagicCard mc)
@@ -2140,16 +2379,19 @@ namespace MagicProgram
             {
                 if (mc.Name == "Rancor")
                 {
-                    _hand.cards.Add(mc);
+                    //_hand.Add(mc);
+                    mc.LocationChanged(CardLocation.Hand);
+
                     toHand = true;
                 }
             }
 
             if (!toHand)
             {
-                _graveyard.cards.Add(mc);
+                //_graveyard.cards.Add(mc);
+                mc.LocationChanged(CardLocation.Graveyard);
             }
-            _play.cards.Remove(mc);
+
         }
 
         void Play_Discard(MagicCard mc)
@@ -2159,33 +2401,35 @@ namespace MagicProgram
             {
                 if (mc.Name == "Rancor")
                 {
-                    _hand.cards.Add(mc);
+                    //_hand.Add(mc);
+                    mc.LocationChanged(CardLocation.Hand);
+
                     toHand = true;
                 }
             }
 
             if (!toHand)
             {
-                _graveyard.cards.Add(mc);
+                //_graveyard.Add(mc);
+                mc.LocationChanged(CardLocation.Graveyard);
             }
-            _play.cards.Remove(mc);
         }
 
         void Hand_Discard(MagicCard mc)
         {
-            _graveyard.cards.Add(mc);
-            _hand.cards.Remove(mc);
+            //_graveyard.Add(mc);
+            mc.LocationChanged(CardLocation.Graveyard);
         }
 
-        void mc_Activating(MagicCard mc)
+        void mc_Activating(MagicCard mc, int ability)
         {
             if (mc.Abilities.Count == 0)
             {
                 return;
             }
 
-            ColourCost c = mc.Abilities[0].Cost;
-            bool tap = mc.Abilities[0].RawCost.Contains("%T");
+            ColourCost c = mc.Abilities[ability].Cost;
+            bool tap = mc.Abilities[ability].RawCost.Contains("%T");
 
 
             if (!mana.Compare(c))
@@ -2207,14 +2451,15 @@ namespace MagicProgram
 
             mana.Subtract(c);
 
-            mc.callActivate();
+            mc.CallActivate(ability);
         }
 
         private bool CheckLandType(string type, int count)
         {
             bool result = false;
             int c = 0;
-            foreach (MagicCard mcs in _lands.cards)
+            //foreach (MagicCard mcs in _lands.cards)
+            foreach (MagicCard mcs in _lands)
             {
                 if (mcs.Type.ToLower().Contains(type.ToLower()))
                 {
@@ -2229,16 +2474,24 @@ namespace MagicProgram
             return result;
         }
 
+        private void CallCreatureEntered(MagicCard Creature)
+        {
+            foreach (MagicCard mc in _play) if (mc.DeckID != Creature.DeckID) mc.CreatureEntered(Creature);
+            foreach (MagicCard mc in _artEnch) if (mc.DeckID != Creature.DeckID) mc.CreatureEntered(Creature);
+            foreach (MagicCard mc in _lands) if (mc.DeckID != Creature.DeckID) mc.CreatureEntered(Creature);
+        }
+
         # region individual card events
-        void RenegadeKrasis_Evolve(MagicCard mc)
+        void RenegadeKrasis_Evolve(MagicCard mc, int ID)
         {
             CardsProc.Add(mc);
             mc.Activate += new MagicCard.Ability(DeckTest_SpellRes);
         }
 
-        void DeckTest_SpellRes(MagicCard mc)
+        void DeckTest_SpellRes(MagicCard mc, int ID)
         {
-            foreach (MagicCard msc in _play.cards)
+            //foreach (MagicCard msc in _play.cards)
+            foreach (MagicCard msc in _play)
             {
                 if (msc.counters > 0 && msc != mc)
                 {
@@ -2283,48 +2536,25 @@ namespace MagicProgram
 
         }
 
-        void Activate_GyreSage(MagicCard mc)
-        {
-            if (mc.counters > 0)
-            {
-                mana.green += mc.counters;
-                mc.Tap(true, true);
-            }
-        }
-
-        void Activate_VorelHullClade(MagicCard mc)
-        {
-
-        }
-
-        void Activate_VoyagingSatyr(MagicCard mc)
+        void Activate_VoyagingSatyr(MagicCard mc, int ID)
         {
             //hook for decktest
             mc.Tap(true, true);
         }
 
-        void Activate_Gate(MagicCard mc)
-        {
-            if (mc.Tapped)
-            {
-                return;
-            }
 
-            mc.Tap(true, false);
-        }
-
-        void Activating_EliteArcanist(MagicCard mc)
+        void Activating_EliteArcanist(MagicCard mc, int ID)
         {
             if (mc.attachedCards.Count > 0)
             {
-                if (mana.colourless >= mc.attachedCards[0].manaCost.colourless)
+                if (mana.Colourless >= mc.attachedCards[0].manaCost.Colourless)
                 {
                     mc.attachedCards[0].TryActivate(0);
                     mc.Tap(true, false);
                 }
                 else
                 {
-                    string s = "Elite Arcanist: Not enough mana to activate ability (" + mana.colourless + "/" + mc.attachedCards[0].manaCost.colourless + ")";
+                    string s = "Elite Arcanist: Not enough mana to activate ability (" + mana.Colourless + "/" + mc.attachedCards[0].manaCost.Colourless + ")";
                     MessageBox.Show(s);
                 }
             }
@@ -2366,12 +2596,12 @@ namespace MagicProgram
         public void Clear()
         {
             //_deck.Clear();
-            _stack.Clear();
-            _graveyard.Clear();
-            _hand.Clear();
-            _artEnch.Clear();
-            _play.Clear();
-            _lands.Clear();
+            //_stack.Clear();
+            //_graveyard.Clear();
+            //_hand.Clear();
+            //_artEnch.Clear();
+            //_play.Clear();
+            //_lands.Clear();
 
             mana.Clear();
 
@@ -2384,18 +2614,19 @@ namespace MagicProgram
 
             for (int j = 0; j < i; j++)
             {
-                if (_stack.cards.Count < 1)
-                {
-                    break;
-                }
+                //if (_stack.cards.Count < 1) break;
+                if (_library.Count < 1) break;
 
-                MagicCard mc = _stack.cards[0];
+                MagicCard mc = _library[0];
+                //_hand.Add(mc);
+                mc.Location = CardLocation.Hand;
 
-                _hand.cards.Add(mc);
-                _stack.cards.Remove(mc);    //remove?
                 //_stack.cards.RemoveAt(0);
 
                 result.Add(mc);
+                if (mc.Name == "Ponder")
+                    Debug.WriteLine("Ponder found");
+                AddCardTriggers(mc);
                 onCardDrawn(mc);
             }
 
@@ -2406,9 +2637,10 @@ namespace MagicProgram
         {
             int result = 0;
 
-            foreach (MagicCard mc in _play.cards)
+            //foreach (MagicCard mc in _play.cards)
+            foreach (MagicCard mc in _play)
             {
-                if (!mc.Tapped && !mc.Sick && mc.Power > 0) //And not defender
+                if (!mc.Tapped && !mc.Sick && mc.PowerCalc > 0) //And not defender
                 {
                     result++;
                 }
@@ -2419,7 +2651,8 @@ namespace MagicProgram
 
         public void ProcAttack()
         {
-            foreach (MagicCard mc in _play.cards)
+            //foreach (MagicCard mc in _play.cards)
+            foreach (MagicCard mc in _play)
             {
 
                 if (mc.Attacking)
@@ -2435,19 +2668,23 @@ namespace MagicProgram
 
         public void Upkeep()
         {
-            foreach (MagicCard mc in _play.cards)
+            //foreach (MagicCard mc in _play.cards)
+            foreach (MagicCard mc in _play)
             {
                 mc.UpkeepCard();
             }
-            foreach (MagicCard mc in _artEnch.cards)
+            //foreach (MagicCard mc in _artEnch.cards)
+            foreach (MagicCard mc in _artEnch)
             {
                 mc.UpkeepCard();
             }
-            foreach (MagicCard mc in _lands.cards)
+            //foreach (MagicCard mc in _lands.cards)
+            foreach (MagicCard mc in _lands)
             {
                 mc.UpkeepCard();
             }
-            foreach (MagicCard mc in _hand.cards)
+            //foreach (MagicCard mc in _hand.cards)
+            foreach (MagicCard mc in _hand)
             {
                 mc.UpkeepCard();
             }
@@ -2455,7 +2692,8 @@ namespace MagicProgram
 
         public void EndStep()
         {
-            foreach (MagicCard mc in _play.cards)
+            //foreach (MagicCard mc in _play.cards)
+            foreach (MagicCard mc in _play)
             {
                 mc.EndStepCard();
             }
@@ -2524,5 +2762,6 @@ namespace MagicProgram
 
     public delegate void Phase();
     public delegate void CardUse(MagicCard mc);
+    public delegate void SearchLocation(string location, string type, int depth, int count);
     public delegate void CardDraw();
 }

@@ -89,7 +89,8 @@ namespace MagicProgram
                     if (p < 5)
                     {
                         area.Y = p * 32;
-                        g.DrawImage(counterImage, area);
+                        if (counterImage != null)
+                            g.DrawImage(counterImage, area);
                     }
                     else
                     {
@@ -98,8 +99,8 @@ namespace MagicProgram
                     }
                 }
             }
-            # endregion
-                        
+            #endregion
+
             Image = bmp;
         }
     }

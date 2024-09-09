@@ -1,13 +1,19 @@
-﻿using System;
+﻿// Ignore Spelling: Initialise Cloudfin Raptor Crocanura
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
+using static System.Net.Mime.MediaTypeNames;
+using Image = System.Drawing.Image;
 
 namespace MagicProgram
 {
@@ -60,17 +66,21 @@ namespace MagicProgram
             return result;
         }
 
-        public MagicCard getCard(string s)
+        public MagicCard getCard(string s, string edition = "")
         {
+            //MagicCard result = s == "Gyre Sage" ? new GyreSage() : new MagicCard { Name = "Blank" };
+            MagicCard result = CardMethods.CreateCard(s);
+
             if (link.ContainsKey(s.ToUpper()))
             {
                 int j = link[s.ToUpper()];
-                return cards[j];
+                result = cards[j];
+                if (cards[j].Edition == edition)
+                {
+                    return cards[j];
+                }
             }
-            else
-            {
-                return new MagicCard { Name = "Blank" };
-            }
+            return result;
         }
 
         public void index()
@@ -183,24 +193,6 @@ namespace MagicProgram
             return result;
         }
 
-        /// <summary>
-        /// Remove a card from the collection
-        /// </summary>
-        /// <param name="card">The card to remove if it's in the collection</param>
-        /// <returns>Whether card was in collection</returns>
-        public int Remove(MagicCard card)
-        {
-            int result = cards.FindIndex(o => o == card);
-
-            if (result > -1)
-            {
-                cards.Remove(card);
-                callCardRemoved(card);
-            }
-
-            return result;
-        }
-
         public void Clear()
         {
             cards.Clear();
@@ -208,21 +200,30 @@ namespace MagicProgram
         }
     }
 
+    #region Magic Cards
     public class MagicCard : ICloneable
     {
         # region declarations
         # region Fields
         //"Name";"Edition";"Rarity";"Color";"Cost";"P/T";"Type";"Text";"Flavor"
         # region Card parts
-        public string Name = "";
-        public string Edition = "";
-        public string Rarity = "";
-        public string Color = "";
-        public string Cost = "";
-        public string PT = "";
+        public string Name = "Temp Card";
+        public string Edition = "TPC";
+        public string Rarity = "C";
+        public string Color = "W";
+        public string Cost = "1";
+        public string PT = "1/1";
         public string Type = "Creature";
-        public string Text = "";
-        public string Flavor = "";
+        public string Text = "Temp Card";
+        public string Flavor = "Nothing to see here";
+
+        [XmlIgnore]
+        public string NameLower => Name.ToLower();
+        [XmlIgnore]
+        public string TextLower => Text.ToLower();
+        [XmlIgnore]
+        public int DeckID = 0;
+
         # endregion
 
         # region card states
@@ -236,7 +237,7 @@ namespace MagicProgram
             set
             {
                 _Tapped = value;
-                callTapChanged();
+                CallTapChanged();
             }
         }
 
@@ -245,10 +246,13 @@ namespace MagicProgram
         # endregion
 
         [XmlIgnore]
-        public int Xvalue = 0;
+        public int _XValue = 0;
 
         [XmlIgnore]
         public bool Attacking = false;
+
+        [XmlIgnore]
+        public CardLocation Location = CardLocation.Deck;
 
         [XmlIgnore]
         public int CMC
@@ -276,17 +280,25 @@ namespace MagicProgram
         # region temp parts
         [XmlIgnore]
         public ColourCost manaCost = new ColourCost();
+
         [XmlIgnore]
-        public int Power = 0;
+        private int _power = 0;
+
         [XmlIgnore]
-        public int Toughness = 0;
+        private int _toughness = 0;
+
         [XmlIgnore]
-        public string imgLoc = "";
+        public int PowerCalc => _power + PBonus;
+        [XmlIgnore]
+        public int ToughnessCalc => _toughness + TBonus;
 
         [XmlIgnore]
         public int PBonus = 0;  //temp bonus
         [XmlIgnore]
         public int TBonus = 0;  //temp bonus
+
+        [XmlIgnore]
+        public string imgLoc = "";
 
         private int countersTurn = 0;
         [XmlIgnore]
@@ -296,6 +308,7 @@ namespace MagicProgram
             get { return _counters; }
             set
             {
+                if (value == 0) return;
                 int change = value - _counters;
                 if (value < _counters && Name == "Protean Hydra")
                 {
@@ -303,12 +316,18 @@ namespace MagicProgram
                 }
                 _counters = value;
                 checkPT();
-                callCountersChanged(change);
+                CallCountersChanged(change);
             }
         }
         # endregion
 
         public int quantity = 1;
+        [XmlIgnore]
+        public bool AbilitySearch = false;
+        [XmlIgnore]
+        public bool AbilityEvolve = false;
+        [XmlIgnore]
+        public bool AbilityActivate = false;
 
         [XmlIgnore]
         public List<MagicCard> attachedCards = new List<MagicCard>();
@@ -318,8 +337,10 @@ namespace MagicProgram
 
         # region handlers
         # region delegates/events
-        public delegate void Ability(MagicCard mc);
+        public delegate void Ability(MagicCard mc, int ID);
         public delegate void ValueChanged(int count);
+        public delegate void ManaChanged(ColourCost cc);
+        public delegate void LocationChange(int CardID, CardLocation NewArea, CardLocation OldArea);
 
         public event Ability Evolving;
         public event Ability Activate;
@@ -333,57 +354,60 @@ namespace MagicProgram
         public event CardUse Destroyed;
         public event CardUse PrePlay;
         public event CardUse OnPlay;
+        public event SearchLocation SearchCard;
         public event Action StatsChanged;
+        public event ManaChanged ChangeMana;
+        public event LocationChange OnLocationChanged;
         # endregion
 
-        # region event trigger emthods
-        public void callActivate()
+        # region Call event trigger methods
+        public void CallActivate(int ID)
         {
             Ability handler = Activate;
             if (handler != null)
             {
-                handler(this);
+                handler(this, ID);
             }
         }
 
-        private void callActivating()
+        private void CallActivating(int ID)
         {
             Ability handler = Activating;
             if (handler != null)
             {
-                handler(this);
+                handler(this, ID);
             }
         }
 
-        public void callEvolve()
+        public void CallEvolve(int ID)
         {
             Ability handler = Evolving;
 
             if (handler != null)
             {
-                handler(this);
+                handler(this, ID);
             }
         }
 
-        public void callAbility()
+        public void CallAbility(int ID)
         {
             Ability handler = Activate;
             if (handler != null)
             {
-                handler(this);
+                handler(this, ID);
             }
         }
 
-        public void callOnAttack()
+        public void CallOnAttack(int ID)
         {
             Ability handler = OnAttack;
             if (handler != null)
             {
-                handler(this);
+                handler(this, ID);
             }
         }
 
-        public void callTapChanged()
+        public void CallTapChanged()
         {
             CardUse handler = TapChanged;
             if (handler != null)
@@ -392,8 +416,9 @@ namespace MagicProgram
             }
         }
 
-        public void callDiscard()
+        public void CallDiscard()
         {
+            this.LocationChanged(CardLocation.Graveyard);
             CardUse handler = Discard;
             if (handler != null)
             {
@@ -401,8 +426,9 @@ namespace MagicProgram
             }
         }
 
-        public void callDestroyed()
+        public void CallDestroyed()
         {
+            this.LocationChanged(CardLocation.Graveyard);
             CardUse handler = Destroyed;
             if (handler != null)
             {
@@ -410,7 +436,7 @@ namespace MagicProgram
             }
         }
 
-        public void callCountersChanged(int count)
+        public void CallCountersChanged(int count)
         {
             ValueChanged handler = CountersChanged;
             if (handler != null)
@@ -419,7 +445,7 @@ namespace MagicProgram
             }
         }
 
-        public void callPrePlay()
+        public void CallPrePlay()
         {
             CardUse handler = PrePlay;
             if (handler != null)
@@ -428,7 +454,7 @@ namespace MagicProgram
             }
         }
 
-        public void callOnPlay()
+        public void CallOnPlay()
         {
             CardUse handler = OnPlay;
             if (handler != null)
@@ -437,13 +463,32 @@ namespace MagicProgram
             }
         }
 
-        public void callStatsChanged()
+        public void CallStatsChanged()
         {
             Action handler = StatsChanged;
             if (handler != null)
             {
                 handler();
             }
+        }
+
+        public void CallManaChanged(ColourCost cc)
+        {
+            ManaChanged handler = ChangeMana;
+            if (handler != null) handler(cc);
+        }
+
+        public void CallSearchArea(string Location, string CardType, int depth, int count)
+        {
+            SearchLocation handler = SearchCard;
+            if (handler != null) handler(Location, CardType, depth, count);
+        }
+
+        public void CallLocationChanged(CardLocation NewArea)
+        {
+            LocationChange handler = OnLocationChanged;
+            Debug.WriteLine($"{Name} changed location to {NewArea}");
+            if (handler != null) handler(DeckID, NewArea, Location);
         }
         # endregion
         # endregion
@@ -464,15 +509,17 @@ namespace MagicProgram
             Text = mc.Text;
             Flavor = mc.Flavor;
 
-            Power = mc.Power;
-            Toughness = mc.Toughness;
+            _power = mc._power;
+            _toughness = mc._toughness;
 
             imgLoc = mc.imgLoc;
-
+            Location = mc.Location;
             quantity = mc.quantity;
             counters = mc.counters;
 
-            Xvalue = mc.Xvalue;
+            _XValue = mc._XValue;
+
+            DeckID = mc.DeckID;
         }
 
         public void Initialise()
@@ -484,14 +531,15 @@ namespace MagicProgram
 
         public void checkPT()
         {
+            if (PT == "") return;
             string[] parts = PT.Split('/');
-            int pOri = Power;
-            int tOri = Toughness;
+            int pOri = PBonus;
+            int tOri = TBonus;
 
             if (parts.Length > 1)
             {
-                int.TryParse(parts[0], out Power);
-                int.TryParse(parts[1], out Toughness);
+                int.TryParse(parts[0], out _power);
+                int.TryParse(parts[1], out _toughness);
             }
 
             # region cycle through attached cards
@@ -506,11 +554,11 @@ namespace MagicProgram
                     switch (sPart[0])
                     {
                         case "Power":
-                            Power += int.Parse(sPart[1]);
+                            _power += int.Parse(sPart[1]);
                             break;
 
                         case "Toughness":
-                            Toughness += int.Parse(sPart[1]);
+                            _toughness += int.Parse(sPart[1]);
                             break;
 
                         case "Ability":
@@ -521,15 +569,15 @@ namespace MagicProgram
             }
             # endregion
 
-            Power += counters;
-            Toughness += counters;
+            PBonus = counters;
+            TBonus = counters;
 
-            Power += PBonus;
-            Toughness += TBonus;
+            //_Power += PBonus;
+            //_Toughness += TBonus;
 
-            if (pOri != Power || tOri != Toughness)
+            if (pOri != PBonus || tOri != TBonus)
             {
-                callCountersChanged(0);
+                CallCountersChanged(0);
             }
         }
 
@@ -538,13 +586,10 @@ namespace MagicProgram
             manaCost.Clear();
             foreach (char c in Cost)
             {
-                # region colourless
                 if (char.IsNumber(c))
                 {
                     manaCost.grey += (int)char.GetNumericValue(c);
                 }
-                # endregion
-                # region basic mana types
                 else
                 {
                     switch (c)
@@ -570,11 +615,10 @@ namespace MagicProgram
                             break;
 
                         case 'X':
-                            manaCost.grey += Xvalue;
+                            manaCost.grey += _XValue;
                             break;
                     }
                 }
-                # endregion
             }
         }
 
@@ -582,20 +626,25 @@ namespace MagicProgram
         {
             Abilities.Clear();
 
-            List<string> groups = Text.Split(new string[] { "\r", "\n" }, StringSplitOptions.None).ToList();
+            List<string> groups = Text.Split(new string[] { "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
 
             foreach (string s in groups)
             {
+                CardAbility abi = new CardAbility();
+
                 int i = s.IndexOf(':');
 
                 if (s.Contains(':'))
                 {
                     List<string> cost = s.Split(':').ToList();
-                    CardAbility abi = new CardAbility();
                     abi.RawCost = cost[0];
                     abi.Text = cost[1];
-                    Abilities.Add(abi);
                 }
+                else
+                {
+                    abi.Text = s;
+                }
+                Abilities.Add(abi);
             }
         }
 
@@ -629,6 +678,11 @@ namespace MagicProgram
         # endregion
 
         # region card actions
+        public virtual bool Play()
+        {
+            return false;
+        }
+
         public void UpkeepCard()
         {
             Sick = false;
@@ -652,6 +706,15 @@ namespace MagicProgram
             Tapped = !Tapped;
         }
 
+        public void LocationChanged(CardLocation NewLocation)
+        {
+            if (NewLocation != CardLocation.Play) this.counters = 0;
+
+            this.Location = NewLocation;
+
+            CallLocationChanged(NewLocation);
+        }
+
         public void Tap(bool value, bool silent)
         {
             if (Tapped != value)
@@ -672,7 +735,7 @@ namespace MagicProgram
         /// </summary>
         /// <param name="i">The index of the ability to try (0 base)</param>
         /// <returns>Whether the ability can activate</returns>
-        public bool TryActivate(int i)
+        public virtual bool TryActivate(int i)
         {
             ParseText();
 
@@ -683,28 +746,40 @@ namespace MagicProgram
                 result = true;
             }
 
-            callActivating();
+            CallActivating(i);
 
             return result;
         }
 
-        public virtual void Evolve(int p, int t)
+        public virtual bool ActivateAbility(int i)
+        {
+            return false;
+        }
+
+        public virtual bool ProcEndTurn() { return false; }
+
+        public virtual bool CreatureEntered(MagicCard mc) { return false; }
+
+        public virtual bool Evolve(int p, int t)
         {
             checkPT();
 
             if (Text.Contains("Evolve"))
             {
-                if (p > Power || t > Toughness)
+                if (p > PowerCalc || t > ToughnessCalc)
                 {
                     counters++;
-                    callEvolve();
+                    CallEvolve(0);
+                    return true;
                 }
             }
+
+            return false;
         }
 
         public virtual void Attack()
         {
-            callOnAttack();
+            CallOnAttack(0);
         }
 
         /// <summary>
@@ -728,11 +803,11 @@ namespace MagicProgram
 
         public override string ToString()
         {
-            return Name + " " + quantity;
+            return $"{Name} {quantity} {Location}";
         }
 
         # region toListViewItem
-        public ListViewItem toListViewItem()
+        public ListViewItem ToListViewItem()
         {
             ListViewItem result = new ListViewItem(Name);
             if (Token)
@@ -750,11 +825,12 @@ namespace MagicProgram
             result.SubItems.Add(Type);
             result.SubItems.Add(Text);
             result.SubItems.Add(Flavor);
+            result.Tag = DeckID;
 
             return result;
         }
 
-        public ListViewItem toListViewItem(bool alt)
+        public ListViewItem ToListViewItem(bool alt)
         {
             if (Token)
             {
@@ -764,7 +840,7 @@ namespace MagicProgram
             if (alt)
             {
                 checkPT();
-                result = new ListViewItem(Name + " (" + Power.ToString() + "/" + Toughness.ToString() + ")" + " (" + counters.ToString() + ")");
+                result = new ListViewItem(Name + " (" + PowerCalc.ToString() + "/" + ToughnessCalc.ToString() + ")" + " (" + counters.ToString() + ")");
             }
             else
             {
@@ -782,6 +858,7 @@ namespace MagicProgram
             result.SubItems.Add(Type);
             result.SubItems.Add(Text);
             result.SubItems.Add(Flavor);
+            result.Tag = DeckID;
 
             return result;
         }
@@ -801,17 +878,9 @@ namespace MagicProgram
             checkPT();
 
             if (Name != card.Name) { result = false; }
-            //if (Edition != card.Edition) { result = false; }
-            //if (Rarity != card.Rarity) { result = false; }
-            //if (Color != card.Color) { result = false; }
-            //if (Cost != card.Cost) { result = false; }
-            //if (PT != card.PT) { result = false; }
-            //if (Type != card.Type) { result = false; }
-            //if (Text != card.Text) { result = false; }
-            //if (Flavor != card.Flavor) { result = false; }
 
-            if (Power != card.Power) { result = false; }
-            if (Toughness != card.Toughness) { result = false; }
+            if (PowerCalc != card.PowerCalc) { result = false; }
+            if (ToughnessCalc != card.ToughnessCalc) { result = false; }
             if (Tapped != card.Tapped) { result = false; }
             if (attachedCards.Count > 0 || card.attachedCards.Count > 0) { result = false; }
             if (counters != card.counters) { result = false; }
@@ -821,6 +890,330 @@ namespace MagicProgram
         # endregion
         # endregion
     }
+
+    #region Creatures
+    public class Crocanura : MagicCard
+    {
+        public Crocanura()
+        {
+            var abi1 = new CardAbility
+            {
+                RawCost = "",
+                Text = "Evolve#(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.);"
+            };
+
+            AbilityEvolve = true;
+            Abilities.Add(abi1);
+        }
+
+        public Crocanura(MagicCard mc) : base(mc)
+        {
+            var abi1 = new CardAbility
+            {
+                RawCost = "",
+                Text = "Evolve#(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.);"
+            };
+
+            AbilityEvolve = true;
+            Abilities.Add(abi1);
+        }
+
+        public override bool CreatureEntered(MagicCard mc)
+        {
+            Evolve(mc.PowerCalc, mc.ToughnessCalc);
+            return true;
+        }
+
+    }
+
+    public class GyreSage : MagicCard
+    {
+        public GyreSage()
+        {
+            var abi1 = new CardAbility
+            {
+                RawCost = "",
+                Text = "Evolve#(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.);"
+            };
+            var abi2 = new CardAbility
+            {
+                RawCost = "%T",
+                Text = "Add %G to your mana pool for each +1/+1 counter on Gyre Sage."
+            };
+
+            AbilityActivate = true;
+            AbilityEvolve = true;
+            Abilities.Add(abi1);
+            Abilities.Add(abi2);
+        }
+
+        public GyreSage(MagicCard mc) : base(mc)
+        {
+            var abi1 = new CardAbility
+            {
+                RawCost = "",
+                Text = "Evolve#(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.);"
+            };
+            var abi2 = new CardAbility
+            {
+                RawCost = "%T",
+                Text = "Add %G to your mana pool for each +1/+1 counter on Gyre Sage."
+            };
+
+            AbilityActivate = true;
+            AbilityEvolve = true;
+            Abilities.Add(abi1);
+            Abilities.Add(abi2);
+        }
+
+        public override bool TryActivate(int i)
+        {
+            return base.TryActivate(i);
+        }
+
+        public override bool CreatureEntered(MagicCard mc)
+        {
+            Evolve(mc.PowerCalc, mc.ToughnessCalc);
+            return true;
+        }
+
+        public override bool ActivateAbility(int i)
+        {
+            if (Abilities.Count < i) return false;
+
+            switch (i)
+            {
+                case 0: counters++; return true;
+                case 1:
+                    ColourCost addMana = new ColourCost { green = counters };
+                    CallManaChanged(addMana);
+                    return true;
+            }
+
+            return true;
+        }
+    }
+
+    public class CloudfinRaptor : MagicCard
+    {
+        public CloudfinRaptor()
+        {
+            var abi1 = new CardAbility
+            {
+                RawCost = "",
+                Text = "Evolve#(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.);"
+            };
+
+            AbilityEvolve = true;
+            Abilities.Add(abi1);
+        }
+
+        public CloudfinRaptor(MagicCard mc)
+        {
+            var abi1 = new CardAbility
+            {
+                RawCost = "",
+                Text = "Evolve#(Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.);"
+            };
+
+            AbilityEvolve = true;
+            Abilities.Add(abi1);
+        }
+
+        public override bool CreatureEntered(MagicCard mc)
+        {
+            Evolve(mc.PowerCalc, mc.ToughnessCalc);
+            return true;
+        }
+
+        public override bool ActivateAbility(int i)
+        {
+            if (Abilities.Count < i) return false;
+
+            switch (i)
+            {
+                case 0: counters++; return true;
+            }
+
+            return true;
+        }
+    }
+
+    public class Fertilid : MagicCard
+    {
+        public Fertilid()
+        {
+            var abi1 = new CardAbility
+            {
+                RawCost = "",
+                Text = "Fertilid enters the battlefield with two +1/+1 counters on it."
+            };
+            counters = 2;
+
+            var abi2 = new CardAbility
+            {
+                RawCost = "%1%G, Remove a +1/+1 counter from Fertilid",
+                Text = "Target player searches his or her library for a basic land card and puts it onto the battlefield tapped. Then that player shuffles his or her library."
+            };
+
+            AbilityActivate = true;
+            AbilitySearch = true;
+            Abilities.Add(abi1);
+            Abilities.Add(abi2);
+        }
+
+        public Fertilid(MagicCard mc) : base(mc)
+        {
+            var abi1 = new CardAbility
+            {
+                RawCost = "",
+                Text = "Fertilid enters the battlefield with two +1/+1 counters on it."
+            };
+            counters = 2;
+
+            var abi2 = new CardAbility
+            {
+                RawCost = "%1%G, Remove a +1/+1 counter from Fertilid",
+                Text = "Target player searches his or her library for a basic land card and puts it onto the battlefield tapped. Then that player shuffles his or her library."
+            };
+
+            AbilityActivate = true;
+            AbilitySearch = true;
+            Abilities.Add(abi1);
+            Abilities.Add(abi2);
+        }
+
+        public override bool TryActivate(int i)
+        {
+            // Probably not needed any more
+            ParseText();
+
+            bool result = false;
+
+            if (Abilities.Count > i
+                && counters > 0)
+            {
+                result = true;
+            }
+
+            return base.TryActivate(i);
+
+
+        }
+
+        public override bool ActivateAbility(int i)
+        {
+            if (i == 0) return false;
+            counters--;
+            CallSearchArea("Library", "Basic Land", -1, 1);
+            return true;
+        }
+    }
+
+    public class KalonianHydra : MagicCard
+    {
+        public KalonianHydra()
+        {
+            counters = 4;
+        }
+
+        public KalonianHydra(MagicCard mc) : base(mc)
+        {
+            counters = 4;
+        }
+    }
+
+    public class ZameckGuildmage : MagicCard
+    {
+        public bool AddCounters = false;
+
+        public ZameckGuildmage()
+        {
+            var abi1 = new CardAbility
+            {
+                RawCost = "%G%U",
+                Text = "This turn, each creature you control enters the battlefield with an additional +1/+1 counter on it."
+            };
+            var abi2 = new CardAbility
+            {
+                RawCost = "%G%U, Remove a +1/+1 counter from a creature you control",
+                Text = "Draw a card."
+            };
+
+            AbilityActivate = true;
+            Abilities.Add(abi1);
+            Abilities.Add(abi2);
+        }
+
+        public ZameckGuildmage(MagicCard mc) : base(mc)
+        {
+            var abi1 = new CardAbility
+            {
+                RawCost = "%G%U",
+                Text = "This turn, each creature you control enters the battlefield with an additional +1/+1 counter on it."
+            };
+            var abi2 = new CardAbility
+            {
+                RawCost = "%G%U, Remove a +1/+1 counter from a creature you control",
+                Text = "Draw a card."
+            };
+
+            AbilityActivate = true;
+            Abilities.Add(abi1);
+            Abilities.Add(abi2);
+        }
+
+        public override bool ActivateAbility(int i)
+        {
+            if (i == 0) return AddCounters = true;
+
+            return false;
+        }
+
+        public override bool ProcEndTurn()
+        {
+            AddCounters = false;
+            return true;
+        }
+
+        public override bool CreatureEntered(MagicCard mc)
+        {
+            mc.counters += AddCounters ? 1 : 0;
+
+            return base.CreatureEntered(mc);
+        }
+
+
+    }
+
+    public class Ooze : MagicCard
+    {
+        public Ooze() { }
+
+        public Ooze(MagicCard mc) : base(mc)
+        {
+            Token = true;
+            Name = "Ooze";
+            Type = "Creature - Ooze";
+            PT = $"0/0";
+        }
+    }
+    #endregion
+
+    #region Instants
+    public class Ponder : MagicCard
+    {
+        public Ponder() { OnPlay += Ponder_OnPlay; AbilitySearch = true; }
+
+        public Ponder(MagicCard mc) : base(mc) { OnPlay += Ponder_OnPlay; AbilitySearch = true; }
+
+        private void Ponder_OnPlay(MagicCard mc)
+        {
+            CallSearchArea("Library", "", 3, 1);
+        }
+    }
+    #endregion
+    #endregion
 
     public class MRUList
     {
@@ -1025,7 +1418,7 @@ namespace MagicProgram
         //    }
         //}
 
-        # region convert paths to/from relative
+        #region convert paths to/from relative
         public static string convertTo(string s)
         {
             string result = s;
@@ -1045,7 +1438,7 @@ namespace MagicProgram
 
             return s;
         }
-        # endregion
+        #endregion
     }
 
     public static class Output
@@ -1067,7 +1460,7 @@ namespace MagicProgram
 
     public class MagicImage
     {
-        # region set up colours
+        #region set up colours
         private static Image white = Properties.Resources.W;
         private static Image red = Properties.Resources.R;
         private static Image blue = Properties.Resources.U;
@@ -1083,7 +1476,7 @@ namespace MagicProgram
         private static Image six = Properties.Resources._6;
         private static Image seven = Properties.Resources._7;
         private static Image _X = Properties.Resources.X;
-        # endregion
+        #endregion
 
         public static Image FromString(string s)
         {
@@ -1106,10 +1499,10 @@ namespace MagicProgram
 
                     Char c = adjusted[i];
 
-                    # region switch (c)
+                    #region switch (c)
                     switch (c)
                     {
-                        # region base mana
+                        #region base mana
                         case 'U':
                             g.DrawImage(blue, rect);
                             break;
@@ -1129,9 +1522,9 @@ namespace MagicProgram
                         case 'G':
                             g.DrawImage(green, rect);
                             break;
-                        # endregion
+                        #endregion
 
-                        # region hybrid
+                        #region hybrid
                         case 'P':
                             g.DrawImage(Properties.Resources.P, rect);
                             break;
@@ -1171,9 +1564,9 @@ namespace MagicProgram
                         case 'I':
                             g.DrawImage(Properties.Resources.I, rect);
                             break;
-                        # endregion
+                        #endregion
 
-                        # region numbers
+                        #region numbers
                         case '0':
                             g.DrawImage(zero, rect);
                             break;
@@ -1217,13 +1610,13 @@ namespace MagicProgram
                         case 'X':
                             g.DrawImage(_X, rect);
                             break;
-                        # endregion
+                        #endregion
 
                         default:
                             Output.Write("Invalid Character {0}", c);
                             break;
                     }
-                    # endregion
+                    #endregion
                 }
             }
 
@@ -1247,17 +1640,17 @@ namespace MagicProgram
             }
         }
 
-        # region mana
-        # region internal values
+        #region mana
+        #region internal values
         private int _blue = 0;
         private int _green = 0;
         private int _black = 0;
         private int _white = 0;
         private int _red = 0;
         private int _grey = 0;
-        # endregion
+        #endregion
 
-        # region public values
+        #region public values
         public int blue
         {
             get
@@ -1335,9 +1728,10 @@ namespace MagicProgram
                 onManaChanged();
             }
         }
-        # endregion
 
-        public int colourless
+        #endregion
+
+        public int Colourless
         {
             get
             {
@@ -1346,14 +1740,26 @@ namespace MagicProgram
                 return i;
             }
         }
-        public int colours
+
+        public int Colours
         {
             get
             {
                 return blue + green + black + red + white;
             }
         }
-        # endregion
+
+        public bool MatchMana(string s)
+        {
+            if (blue > 0 && !s.Contains("U")) return false;
+            if (black > 0 && !s.Contains("B")) return false;
+            if (green > 0 && !s.Contains("G")) return false;
+            if (red > 0 && !s.Contains("R")) return false;
+            if (white > 0 && !s.Contains("W")) return false;
+
+            return true;
+        }
+        #endregion
 
         public void Clear()
         {
@@ -1370,7 +1776,21 @@ namespace MagicProgram
 
         }
 
-        # region Math
+        public override string ToString()
+        {
+            string s = "";
+
+            s += new string('u', blue);
+            s += new string('g', green);
+            s += new string('r', red);
+            s += new string('b', black);
+            s += new string('w', white);
+            s += new string('g', grey);
+
+            return s;
+        }
+
+        #region Math
         public void Add(ColourCost cc)
         {
             blue += cc.blue;
@@ -1379,6 +1799,13 @@ namespace MagicProgram
             red += cc.red;
             white += cc.white;
             grey += cc.grey;
+
+            blue = blue < 0 ? 0 : blue;
+            black = black < 0 ? 0 : black;
+            green = green < 0 ? 0 : green;
+            red = red < 0 ? 0 : red;
+            white = white < 0 ? 0 : white;
+            grey = grey < 0 ? 0 : grey;
         }
 
         public void Subtract(ColourCost cc)
@@ -1428,17 +1855,27 @@ namespace MagicProgram
             if (cc.green > green) { result = false; }
             if (cc.white > white) { result = false; }
 
-            int g = colourless - cc.colours;
+            int g = Colourless - cc.Colours;
 
             if (cc.grey > g) { result = false; }
 
             return result;
         }
-        # endregion
+        #endregion
     }
 
     public class CardMethods
     {
+        private static int _cardID = 100;
+        public static int CardID
+        {
+            get
+            {
+                _cardID++;
+                return _cardID;
+            }
+        }
+
         public static List<MagicCard> SplitCardList(List<MagicCard> List)
         {
             List<MagicCard> results = new List<MagicCard>();
@@ -1454,6 +1891,52 @@ namespace MagicProgram
             }
 
             return results;
+        }
+
+        public static MagicCard CreateCard(MagicCard mc)
+        {
+            switch (mc.Name)
+            {
+                case "Gyre Sage": return new GyreSage(mc) {DeckID =CardID };
+                case "Fertilid": return new Fertilid(mc) { DeckID = CardID };
+                case "Kalonian Hydra": return new KalonianHydra(mc) { DeckID = CardID };
+                case "Crocanura": return new Crocanura(mc) { DeckID = CardID };
+                case "Zameck Guildmage": return new ZameckGuildmage(mc) { DeckID = CardID };
+                case "Ponder": return new Ponder(mc) { DeckID = CardID };
+                case "Ooze": return new Ooze(mc) { DeckID = CardID };
+            }
+
+            return new MagicCard(mc) { DeckID = CardID };
+        }
+        public static MagicCard CreateCard(string name)
+        {
+            switch (name)
+            {
+                case "Gyre Sage": return new GyreSage() { DeckID = CardID };
+                case "Fertilid": return new Fertilid() { DeckID = CardID };
+                case "Kalonian Hydra": return new KalonianHydra() { DeckID = CardID };
+                case "Crocanura": return new Crocanura() { DeckID = CardID };
+                case "Zameck Guildmage": return new ZameckGuildmage() { DeckID = CardID };
+                case "Ponder": return new Ponder() { DeckID = CardID };
+                case "Ooze": return new Ooze() { DeckID = CardID };
+            }
+
+            return new MagicCard
+            {
+                Name = "Arbor Elf",
+                Edition = "M13",
+                Rarity = "C",
+                Color = "G",
+                Cost = "G",
+                PT = "1/1",
+                Type = "Creature",
+                Text = "%t: Untap target Forest.",
+                Flavor = "",
+                imgLoc = "~\\Downloads\\Magic Cards\\M13\\Arbor Elf.jpg",
+                Location = CardLocation.Exiled,
+                Tapped = false,
+                DeckID = CardID
+            };
         }
     }
 
@@ -1511,4 +1994,17 @@ namespace MagicProgram
         vLarge
     };
 
+
+    public enum CardLocation
+    {
+        Deck,
+        Library,
+        Graveyard,
+        Hand,
+        Exiled,
+        Play,
+        Lands,
+        Enchantments,
+        Artifacts
+    }
 }

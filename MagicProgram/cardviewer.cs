@@ -16,9 +16,8 @@ namespace MagicProgram
         Font FontText;
         Font FontFlavour;
 
-        MagicCard nMC = new MagicCard();
+        MagicCard nMC = CardMethods.CreateCard("Arbor Elf");
 
-        # region constructors
         public CardViewer()
         {
             InitializeComponent();
@@ -32,9 +31,8 @@ namespace MagicProgram
             textBoxType.Font = FontText;
             textBoxPT.Font = FontText;
         }
-        # endregion
 
-        # region methods
+        #region methods
         public void LoadCard(MagicCard mc)
         {
             nMC = mc;
@@ -67,10 +65,25 @@ namespace MagicProgram
             if (nMC.Tapped)
             {
                 button1.Text = "Untap";
+                button1.Show();
             }
             else
             {
                 button1.Text = "Tap";
+            }
+
+            comboBox1.Items.Clear();
+            comboBox1.BeginUpdate();
+            foreach (var v in nMC.Abilities)
+            {
+                comboBox1.Items.Add($"{v.RawCost}: {v.Text}");
+            }
+            comboBox1.EndUpdate();
+
+            if (nMC.Abilities.Count > 0) comboBox1.Show();
+            if (nMC.Abilities.Count > 0)
+            {
+                button2.Show();
             }
 
             if (File.Exists(SplitString.convertFrom(nMC.imgLoc)))
@@ -200,8 +213,10 @@ namespace MagicProgram
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int i = comboBox1.SelectedIndex > 0 ? comboBox1.SelectedIndex : 0;
+
             //nMC.onActivate();
-            nMC.TryActivate(0);
+            nMC.TryActivate(i);
         }
     }
 }

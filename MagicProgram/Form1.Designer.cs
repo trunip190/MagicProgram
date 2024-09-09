@@ -49,10 +49,8 @@
             this.buttonAddOne = new System.Windows.Forms.Button();
             this.buttonTakeOne = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.butAddSearched = new System.Windows.Forms.Button();
             this.SearchResults = new System.Windows.Forms.ListBox();
             this.deckStats1 = new MagicProgram.DeckStats();
             this.numericCount = new System.Windows.Forms.NumericUpDown();
@@ -61,6 +59,9 @@
             this.progressDialog1 = new MagicProgram.ProgressDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cardViewerLarge1 = new MagicProgram.CardViewerLarge();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,20 +93,33 @@
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setImageLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateCardImagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportTokensToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewerSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.largeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testDeckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.CbWhite = new System.Windows.Forms.CheckBox();
+            this.CbBlk = new System.Windows.Forms.CheckBox();
+            this.CbBlu = new System.Windows.Forms.CheckBox();
+            this.CbGrn = new System.Windows.Forms.CheckBox();
+            this.CbRed = new System.Windows.Forms.CheckBox();
+            this.textFilter = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCount)).BeginInit();
+            this.panel4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -118,10 +132,11 @@
             this.columnHeader11,
             this.columnHeader12});
             this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
             this.listView1.LargeImageList = this.imageListLarge;
             this.listView1.Location = new System.Drawing.Point(14, 7);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(136, 417);
+            this.listView1.Size = new System.Drawing.Size(136, 423);
             this.listView1.SmallImageList = this.imageListSmall;
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -184,16 +199,17 @@
             // 
             // listView2
             // 
-            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4});
             this.listView2.FullRowSelect = true;
+            this.listView2.HideSelection = false;
             this.listView2.LargeImageList = this.imageListLarge;
-            this.listView2.Location = new System.Drawing.Point(427, 7);
+            this.listView2.Location = new System.Drawing.Point(425, 7);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(136, 417);
+            this.listView2.Size = new System.Drawing.Size(136, 423);
             this.listView2.SmallImageList = this.imageListSmall;
             this.listView2.TabIndex = 2;
             this.listView2.UseCompatibleStateImageBehavior = false;
@@ -201,6 +217,7 @@
             this.listView2.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView2_ColumnClick);
             this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             this.listView2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.listView2_KeyPress);
+            this.listView2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.listView2_KeyUp);
             // 
             // columnHeader3
             // 
@@ -232,43 +249,20 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.listView2);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(-2, 27);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 53);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(576, 447);
+            this.panel1.Size = new System.Drawing.Size(574, 453);
             this.panel1.TabIndex = 5;
             this.panel1.Resize += new System.EventHandler(this.form1_Resize);
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(427, 427);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 427);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "label1";
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.butAddSearched);
             this.panel2.Controls.Add(this.SearchResults);
             this.panel2.Controls.Add(this.deckStats1);
             this.panel2.Controls.Add(this.numericCount);
@@ -285,18 +279,18 @@
             this.panel2.TabIndex = 7;
             this.panel2.TabStop = true;
             // 
-            // button1
+            // butAddSearched
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(172, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 20);
-            this.button1.TabIndex = 7;
-            this.button1.Text = ">";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.butAddSearched.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAddSearched.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAddSearched.Location = new System.Drawing.Point(172, 5);
+            this.butAddSearched.Margin = new System.Windows.Forms.Padding(0);
+            this.butAddSearched.Name = "butAddSearched";
+            this.butAddSearched.Size = new System.Drawing.Size(25, 20);
+            this.butAddSearched.TabIndex = 7;
+            this.butAddSearched.Text = ">";
+            this.butAddSearched.UseVisualStyleBackColor = true;
+            this.butAddSearched.Click += new System.EventHandler(this.button1_Click);
             // 
             // SearchResults
             // 
@@ -378,9 +372,41 @@
             this.cardViewerLarge1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cardViewerLarge1.BackgroundImage")));
             this.cardViewerLarge1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cardViewerLarge1.Location = new System.Drawing.Point(6, 48);
+            this.cardViewerLarge1.MaximumSize = new System.Drawing.Size(331, 462);
+            this.cardViewerLarge1.MinimumSize = new System.Drawing.Size(265, 370);
             this.cardViewerLarge1.Name = "cardViewerLarge1";
+            this.cardViewerLarge1.Padding = new System.Windows.Forms.Padding(15);
             this.cardViewerLarge1.Size = new System.Drawing.Size(265, 370);
             this.cardViewerLarge1.TabIndex = 13;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 429);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(574, 24);
+            this.panel4.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(527, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "label2";
             // 
             // menuStrip1
             // 
@@ -391,7 +417,7 @@
             this.deckToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(573, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(574, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -617,7 +643,9 @@
             // 
             this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setImageLocationToolStripMenuItem,
-            this.updateCardImagesToolStripMenuItem});
+            this.updateCardImagesToolStripMenuItem,
+            this.exportTokensToolStripMenuItem,
+            this.viewerSizeToolStripMenuItem});
             this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
             this.databaseToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.databaseToolStripMenuItem.Text = "Settings";
@@ -636,6 +664,36 @@
             this.updateCardImagesToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.updateCardImagesToolStripMenuItem.Text = "Update card images";
             this.updateCardImagesToolStripMenuItem.Click += new System.EventHandler(this.updateImagesToolStripMenuItem_Click);
+            // 
+            // exportTokensToolStripMenuItem
+            // 
+            this.exportTokensToolStripMenuItem.Name = "exportTokensToolStripMenuItem";
+            this.exportTokensToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.exportTokensToolStripMenuItem.Text = "Export Tokens";
+            this.exportTokensToolStripMenuItem.Click += new System.EventHandler(this.exportTokensToolStripMenuItem_Click);
+            // 
+            // viewerSizeToolStripMenuItem
+            // 
+            this.viewerSizeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.normalToolStripMenuItem,
+            this.largeToolStripMenuItem});
+            this.viewerSizeToolStripMenuItem.Name = "viewerSizeToolStripMenuItem";
+            this.viewerSizeToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.viewerSizeToolStripMenuItem.Text = "Viewer Size";
+            // 
+            // normalToolStripMenuItem
+            // 
+            this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
+            this.normalToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.normalToolStripMenuItem.Text = "Normal";
+            this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click);
+            // 
+            // largeToolStripMenuItem
+            // 
+            this.largeToolStripMenuItem.Name = "largeToolStripMenuItem";
+            this.largeToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.largeToolStripMenuItem.Text = "Large";
+            this.largeToolStripMenuItem.Click += new System.EventHandler(this.largeToolStripMenuItem_Click);
             // 
             // deckToolStripMenuItem
             // 
@@ -667,27 +725,103 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.CbWhite);
+            this.panel3.Controls.Add(this.CbBlk);
+            this.panel3.Controls.Add(this.CbBlu);
+            this.panel3.Controls.Add(this.CbGrn);
+            this.panel3.Controls.Add(this.CbRed);
+            this.panel3.Controls.Add(this.textFilter);
+            this.panel3.Controls.Add(this.menuStrip1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(574, 53);
+            this.panel3.TabIndex = 7;
+            // 
+            // CbWhite
+            // 
+            this.CbWhite.AutoSize = true;
+            this.CbWhite.Location = new System.Drawing.Point(316, 29);
+            this.CbWhite.Name = "CbWhite";
+            this.CbWhite.Size = new System.Drawing.Size(37, 17);
+            this.CbWhite.TabIndex = 12;
+            this.CbWhite.Text = "W";
+            this.CbWhite.UseVisualStyleBackColor = true;
+            // 
+            // CbBlk
+            // 
+            this.CbBlk.AutoSize = true;
+            this.CbBlk.Location = new System.Drawing.Point(276, 29);
+            this.CbBlk.Name = "CbBlk";
+            this.CbBlk.Size = new System.Drawing.Size(33, 17);
+            this.CbBlk.TabIndex = 11;
+            this.CbBlk.Text = "B";
+            this.CbBlk.UseVisualStyleBackColor = true;
+            // 
+            // CbBlu
+            // 
+            this.CbBlu.AutoSize = true;
+            this.CbBlu.Location = new System.Drawing.Point(236, 29);
+            this.CbBlu.Name = "CbBlu";
+            this.CbBlu.Size = new System.Drawing.Size(34, 17);
+            this.CbBlu.TabIndex = 10;
+            this.CbBlu.Text = "U";
+            this.CbBlu.UseVisualStyleBackColor = true;
+            // 
+            // CbGrn
+            // 
+            this.CbGrn.AutoSize = true;
+            this.CbGrn.Location = new System.Drawing.Point(196, 29);
+            this.CbGrn.Name = "CbGrn";
+            this.CbGrn.Size = new System.Drawing.Size(34, 17);
+            this.CbGrn.TabIndex = 9;
+            this.CbGrn.Text = "G";
+            this.CbGrn.UseVisualStyleBackColor = true;
+            // 
+            // CbRed
+            // 
+            this.CbRed.AutoSize = true;
+            this.CbRed.Location = new System.Drawing.Point(156, 29);
+            this.CbRed.Name = "CbRed";
+            this.CbRed.Size = new System.Drawing.Size(34, 17);
+            this.CbRed.TabIndex = 8;
+            this.CbRed.Text = "R";
+            this.CbRed.UseVisualStyleBackColor = true;
+            // 
+            // textFilter
+            // 
+            this.textFilter.Location = new System.Drawing.Point(15, 27);
+            this.textFilter.Name = "textFilter";
+            this.textFilter.Size = new System.Drawing.Size(135, 20);
+            this.textFilter.TabIndex = 7;
+            this.textFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textFilter_KeyDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 473);
+            this.ClientSize = new System.Drawing.Size(574, 506);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(590, 545);
             this.Name = "Form1";
             this.Text = "Magic Viewer";
             this.ResizeEnd += new System.EventHandler(this.form1_Resize);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCount)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -756,9 +890,21 @@
         private System.Windows.Forms.ToolStripMenuItem updateCardImagesToolStripMenuItem;
         private DeckStats deckStats1;
         private System.Windows.Forms.ToolStripMenuItem viewStatsToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butAddSearched;
         private System.Windows.Forms.ToolStripMenuItem exportDeckListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsDeckToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportTokensToolStripMenuItem;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textFilter;
+        private System.Windows.Forms.ToolStripMenuItem viewerSizeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem normalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem largeToolStripMenuItem;
+        private System.Windows.Forms.CheckBox CbWhite;
+        private System.Windows.Forms.CheckBox CbBlk;
+        private System.Windows.Forms.CheckBox CbBlu;
+        private System.Windows.Forms.CheckBox CbGrn;
+        private System.Windows.Forms.CheckBox CbRed;
     }
 }
 

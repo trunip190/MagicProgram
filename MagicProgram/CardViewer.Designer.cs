@@ -50,8 +50,8 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxName.Location = new System.Drawing.Point(11, 11);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
@@ -183,7 +183,6 @@
             this.Name = "CardViewer";
             this.Size = new System.Drawing.Size(200, 279);
             this.Click += new System.EventHandler(this.CardViewer_Resize);
-            this.Resize += new System.EventHandler(this.CardViewer_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCMC)).EndInit();

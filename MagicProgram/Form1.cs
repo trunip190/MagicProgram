@@ -19,15 +19,16 @@ namespace MagicProgram
     {
         # region declarations
         Dictionary<int, MagicCard> lvLink = new Dictionary<int, MagicCard>();
-        Dictionary<int, int> lv2Link = new Dictionary<int, int>();
         SortOrder ordering = SortOrder.Ascending;
 
         string filepath = "";
         int ColSort = -1;
 
         ImageLibrary Lib = new ImageLibrary();
+        public ImageLibrary LibFixed = new ImageLibrary();
         CardCollection LibCards = new CardCollection();
-        CardCollection Database = new CardCollection();
+        public CardCollection Database = new CardCollection();
+        CardCollection FilteredDatabase = new CardCollection();
         CardCollection Deck = new CardCollection();
         MRUList mrus = new MRUList();
         # endregion
@@ -42,7 +43,7 @@ namespace MagicProgram
             MRU_Update();
 
             Database_Load(Properties.Settings.Default.DatabaseLoc);
-            Database_loadImages();
+            //Database_loadImages();
 
             listView2.Columns.Clear();
             foreach (ColumnHeader ch in listView1.Columns)
@@ -193,6 +194,8 @@ namespace MagicProgram
             {
                 Database_Load(ofd.FileName);
             }
+
+            //Database_AddIn();
         }
         # endregion
 
@@ -275,6 +278,7 @@ namespace MagicProgram
                 Properties.Settings.Default.Save();
 
                 Lib.image.Clear();
+                LibFixed.image.Clear();
                 LoadImages();
             }
 
@@ -287,6 +291,7 @@ namespace MagicProgram
         {
             DeckTest tester = new DeckTest(Deck);
             tester.FormClosed += new FormClosedEventHandler(DeckTest_Closed);
+            tester.ParentForm1 = this;
 
             if (this.WindowState == FormWindowState.Maximized)
             {
@@ -312,6 +317,8 @@ namespace MagicProgram
         # region buttons
         private void buttonAddOne_Click(object sender, EventArgs e)
         {
+            if (listView1.SelectedItems.Count < 1) return;
+
             DeckAdd(listView1.SelectedItems, false);
             deckStats1.LoadCard(Deck.cards);
         }
@@ -340,9 +347,9 @@ namespace MagicProgram
         {
             if (listView1.SelectedIndices.Count > 0)
             {
-                int i = listView1.SelectedIndices[0];
+                ListViewItem lvi = listView1.SelectedItems[0];
 
-                loadCardviewer(i);
+                loadCardviewer(lvi);
             }
         }
 
@@ -388,13 +395,8 @@ namespace MagicProgram
 
             LibCards.Sort(e.Column, ordering);
 
-            # region add back in to listview/lvlink
-            listView1.Items.Clear();
-            lvLink.Clear();
-
             listView1.OwnerDraw = true;
             listView1_refresh();
-            # endregion
 
             //store which column was clicked
             ColSort = e.Column;
@@ -438,7 +440,7 @@ namespace MagicProgram
 
             foreach (ListViewItem item in listView2.SelectedItems)
             {
-                MagicCard mc = Deck.getCard(item.Text);
+                MagicCard mc = Deck.getCard(item.Text, item.SubItems[2].Text);
 
                 if (mc.quantity + inc <= 4 || mc.Type.Contains("Basic Land"))
                 {
@@ -498,30 +500,24 @@ namespace MagicProgram
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (textBox1.Text == "")
+                SearchResults.Items.Clear();
+                #region search database
+                List<string> results = SearchDatabase(textBox1.Text);
+                foreach (string s in results)
                 {
-                    SearchResults.Items.Clear();
+                    SearchResults.Items.Add(s);
                 }
-                else
-                {
-                    # region search database
-                    List<string> results = SearchDatabase(textBox1.Text);
-                    foreach (string s in results)
-                    {
-                        SearchResults.Items.Add(s);
-                    }
-                    # endregion
+                #endregion
 
-                    # region search Library
-                    //foreach (int i in SearchLibrary(textBox1.Text))
-                    //{
-                    //    SearchResults.Items.Add(listView1.Items[i].Text);
-                    //}
-                    # endregion
+                #region search Library
+                //foreach (int i in SearchLibrary(textBox1.Text))
+                //{
+                //    SearchResults.Items.Add(listView1.Items[i].Text);
+                //}
+                #endregion
 
-                    SearchResults.Show();
-                    SearchResults.Focus();
-                }
+                SearchResults.Show();
+                SearchResults.Focus();
             }
         }
 
@@ -622,6 +618,10 @@ namespace MagicProgram
 
         # region methods
         # region ListView
+        /// <summary>
+        /// Resize columns in specified listview.
+        /// </summary>
+        /// <param name="lv">the listview to resize columns in</param>
         private void listView_resize(ListView lv)
         {
             lv.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -640,16 +640,23 @@ namespace MagicProgram
             listView1.Items.Clear();
             lvLink.Clear();
 
-            listView1.OwnerDraw = true;
-            foreach (MagicCard mc in LibCards.cards)
-            {
-                lvLink.Add(listView1.Items.Count, mc);
-                listView1.Items.Add(mc.toListViewItem());
-            }
-            listView1.OwnerDraw = false;
+            ReloadLvLink();
 
             //resize columns
             listView_resize(listView1);
+        }
+
+        private void ReloadLvLink()
+        {
+            listView1.OwnerDraw = true;
+            listView1.BeginUpdate();
+            foreach (MagicCard mc in LibCards.cards)
+            {
+                lvLink.Add(listView1.Items.Count, mc);
+                listView1.Items.Add(mc.ToListViewItem());
+            }
+            listView1.EndUpdate();
+            listView1.OwnerDraw = false;
         }
 
         private void listView2_refresh()
@@ -659,7 +666,7 @@ namespace MagicProgram
             listView2.OwnerDraw = true;
             foreach (MagicCard mc in Deck.cards)
             {
-                listView2.Items.Add(mc.toListViewItem());
+                listView2.Items.Add(mc.ToListViewItem());
             }
             listView2.OwnerDraw = false;
 
@@ -743,9 +750,9 @@ namespace MagicProgram
                 if (j > -1)
                 {
                     # region increment existing item
-                    MagicCard mc = Deck.getCard(o.Text);
+                    MagicCard mc = Deck.getCard(o.Text, o.SubItems[2].Text);
 
-                    int x = LibCards.getCard(mc.Name).quantity;
+                    int x = LibCards.getCard(mc.Name, o.SubItems[2].Text).quantity;
 
                     if (mc.quantity < x)
                     {
@@ -776,7 +783,7 @@ namespace MagicProgram
                 else
                 {
                     # region new item
-                    MagicCard temp = LibCards.getCard(o.Text).Clone() as MagicCard;
+                    MagicCard temp = LibCards.getCard(o.Text, o.SubItems[2].Text).Clone() as MagicCard;
 
                     if (!all)
                     {
@@ -802,15 +809,19 @@ namespace MagicProgram
                 int i = lvi.Index;
                 if (all)
                 {
-                    Deck.cards.RemoveAt(i);
+                    if (Deck.cards.Count > i)
+                        Deck.cards.RemoveAt(i);
                 }
                 else
                 {
                     //remove 1
-                    Deck.cards[i].quantity--;
-                    if (Deck.cards[i].quantity < 1)
+                    if (Deck.cards.Count > i)
                     {
-                        Deck.cards.RemoveAt(i);
+                        Deck.cards[i].quantity--;
+                        if (Deck.cards[i].quantity < 1)
+                        {
+                            Deck.cards.RemoveAt(i);
+                        }
                     }
                 }
             }
@@ -826,6 +837,9 @@ namespace MagicProgram
             string path = @"C:\Users\Chris\Downloads\Magic Images\";
             path = Properties.Settings.Default.ImageLoc;
 
+            Dictionary<string, string> sortedFiles = new Dictionary<string, string>();
+            Dictionary<string, string> FixedFiles = new Dictionary<string, string>();
+
             if (Directory.Exists(path))
             {
                 string[] paths = Directory.GetDirectories(path);
@@ -839,41 +853,89 @@ namespace MagicProgram
                         filename = filename.Replace("’", "'");
                         filename = filename.Replace(".JPG", "");
                         filename = filename.Replace("\\", "");
+                        filename = filename.ToLower().Replace(".xlhq", "");
 
-                        if (!Lib.image.ContainsKey(filename))
+                        if (!sortedFiles.ContainsKey(filename))
                         {
-                            Lib.image.Add(filename, s);    //add filename to List<string> image
+                            sortedFiles.Add(filename, s);
                         }
+
+                        if (!FixedFiles.ContainsKey(s))
+                        {
+                            FixedFiles.Add(s, filename);
+                        }
+                        //if (!Lib.image.ContainsKey(filename))
+                        //{
+                        //    Lib.image.Add(filename, s);    //add filename to List<string> image
+                        //}
                     }
                 }
             }
 
+
+
+            foreach (KeyValuePair<string, string> kvp in sortedFiles.OrderBy(o => o.Key))
+            {
+                if (!Lib.image.ContainsKey(kvp.Key))
+                {
+                    Lib.image.Add(kvp.Key, kvp.Value);    //add filename to List<string> image - remove this please.
+                }
+            }
+
+            foreach (KeyValuePair<string, string> kvp in FixedFiles.OrderBy(o => o.Key))
+            {
+                //Debug.WriteLine($"{kvp.Key}\t{kvp.Value}");
+                if (!LibFixed.image.ContainsKey(kvp.Key))
+                {
+                    LibFixed.image.Add(kvp.Key, kvp.Value);    //add filename to List<string> image - remove this please.
+                }
+            }
+
+            Lib.image.OrderBy(o => o.Key);      // i think these can both be deleted
+            LibFixed.image.OrderBy(o => o.Key); // i think these can both be deleted
             label1_updateText();
         }
 
         private void LoadCard(MagicCard mc)
         {
+            mc.imgLoc = fetchImage(mc.Name, mc.Edition);
             cardViewerLarge1.LoadCard(mc);
         }
 
-        private void loadCardviewer(int index)
+        private void loadCardviewer(ListViewItem item)
         {
-            if (index > -1)
-            {
-                LoadCard(lvLink[index]);
-                cardViewerLarge1.BackgroundImage = lvLink[index].get();
-            }
+            MagicCard mc = Database.getCard(item.Text, item.SubItems[2].Text);
+            LoadCard(mc);
+            cardViewerLarge1.BackgroundImage = mc.get();
         }
 
-        private string fetchImage(string s)
+        private string fetchImage(string s, string edition)
         {
             string result = "";
 
-            string temp = s.ToUpper().Replace("/", " & ");  //adjust for 'fuse' cards.
+            string temp = s.ToLower().Replace("/", " & ");  //adjust for 'fuse' cards.
+
+            var ValidFiles = LibFixed.image.Where(o => o.Value == temp).ToList();
 
             if (Lib.image.ContainsKey(temp))
             {
                 result = Lib.image[temp];
+
+            }
+
+            foreach (KeyValuePair<string, string> kvp in ValidFiles)
+            {
+                if (LibFixed.image.ContainsKey(kvp.Key)
+                    && LibFixed.image[kvp.Key] == temp
+                    && kvp.Key.Contains(edition))
+                {
+                    result = kvp.Key;
+                    break;
+                }
+                else
+                {
+                    Output.Write($"{temp} from {edition} failed to load.");
+                }
             }
 
             return result;
@@ -898,13 +960,16 @@ namespace MagicProgram
 
         private void Database_loadImages()
         {
+            Debug.Write($"Database_loadImages...");
+            DateTime TimeLog = new DateTime();
             for (int i = 0; i < Database.cards.Count; i++)
             {
                 if (!File.Exists(Database.cards[i].imgLoc))
                 {
-                    Database.cards[i].imgLoc = fetchImage(Database.cards[i].Name);
+                    Database.cards[i].imgLoc = fetchImage(Database.cards[i].Name, Database.cards[i].Edition);
                 }
             }
+            Debug.WriteLine($"{DateTime.Now - TimeLog}");
         }
 
         private void updateCardImages()
@@ -913,18 +978,18 @@ namespace MagicProgram
             {
                 if (!File.Exists(mc.imgLoc))
                 {
-                    mc.set(fetchImage(mc.Name));
+                    mc.set(fetchImage(mc.Name, mc.Edition));
                 }
             }
             foreach (MagicCard mc in Deck.cards)
             {
                 if (!File.Exists(mc.imgLoc))
                 {
-                    mc.set(fetchImage(mc.Name));
+                    mc.set(fetchImage(mc.Name, mc.Edition));
                 }
             }
         }
-        # endregion
+        #endregion
 
         private List<int> SearchLibrary(string s)
         {
@@ -1005,7 +1070,7 @@ namespace MagicProgram
 
             foreach (MagicCard mc in Deck.cards)
             {
-                mc.set(fetchImage(mc.Name));
+                mc.set(fetchImage(mc.Name, mc.Edition));
             }
         }
 
@@ -1056,7 +1121,7 @@ namespace MagicProgram
                         # region set up image etc
                         if (temp.imgLoc.Length < 1)
                         {
-                            temp.set(fetchImage(card[0].ToUpper()));
+                            temp.set(fetchImage(card[0].ToUpper(), "no edition"));
                         }
                         # endregion
 
@@ -1139,18 +1204,19 @@ namespace MagicProgram
                     foreach (string[] sa in split)
                     {
                         //"Name";"Edition";"Rarity";"Color";"Cost";"P/T";"Type";"Text";"Flavor"
-                        MagicCard temp = new MagicCard
-                        {
-                            Name = sa[0].Trim(),
-                            Edition = sa[1].Trim(),
-                            Rarity = sa[2].Trim(),
-                            Color = sa[3].Trim(),
-                            Cost = sa[4].Trim(),
-                            PT = sa[5].Trim(),
-                            Type = sa[6].Trim(),
-                            Text = sa[7].Trim(),
-                            Flavor = sa[8].Trim()
-                        };
+                        //MagicCard temp = sa[0].Trim() == "Gyre Sage" ? new GyreSage() : new MagicCard();
+                        MagicCard temp = CardMethods.CreateCard(sa[0].Trim());
+
+                        temp.Name = sa[0].Trim();
+                        temp.Edition = sa[1].Trim();
+                        temp.Rarity = sa[2].Trim();
+                        temp.Color = sa[3].Trim();
+                        temp.Cost = sa[4].Trim();
+                        temp.PT = sa[5].Trim();
+                        temp.Type = sa[6].Trim();
+                        temp.Text = sa[7].Trim();
+                        temp.Flavor = sa[8].Trim();
+
                         Database.cards.Add(temp);
                     }
                     # endregion
@@ -1178,10 +1244,15 @@ namespace MagicProgram
 
             listView_resize(listView1);
 
-            Database.cards = Database.cards.OrderBy(o => o.Name).ToList();
+            //var v = Database.cards.OrderBy(Card => Card.NameLower).ToList();
+
+            //Database.cards.AddRange(v);
             Database.index();
             MRU_Update();
             label1_updateText();
+
+            Database_AddIn();
+            listView1_refresh();
         }
 
         private void Database_Save()
@@ -1204,12 +1275,17 @@ namespace MagicProgram
 
         private void Database_AddIn()
         {
-            MessageBox.Show("Called Database_AddIn()!?");
+            //MessageBox.Show("Called Database_AddIn()!?");
+            LibCards.cards.AddRange(Database.cards);
+            LibCards.index();
 
-            foreach (MagicCard mc in Database.cards)
-            {
-                listView1.Items.Add(mc.toListViewItem());
-            }
+            //listView1.BeginUpdate();
+            //foreach (MagicCard mc in Database.cards)
+            //{
+            //LibCards.Add(mc);
+            //listView1.Items.Add(mc.toListViewItem());
+            //}
+            //listView1.EndUpdate();
         }
 
         private void ExportDeckList()
@@ -1249,6 +1325,88 @@ namespace MagicProgram
         private void exportDeckListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExportDeckList();
+        }
+
+        private void exportTokensToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (var v in LibFixed.image)
+            {
+                if (v.Key.ToLower().Contains("token"))
+                {
+                    Debug.WriteLine($"{v.Key}: {v.Value}");
+                }
+            }
+        }
+
+        private void normalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel2.Size = new Size(277, 421);
+            cardViewerLarge1.ResizeControl(Large: false);
+            form1_Resize(sender, e);
+            //this.Refresh();
+        }
+
+        private void largeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel2.Size = new Size(343, 513);
+            cardViewerLarge1.ResizeControl(Large: true);
+            form1_Resize(sender, e);
+            //this.Refresh();
+        }
+
+        private void textFilter_KeyUp(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyCode == Keys.Enter){
+            //    e.Handled = true;
+            //    e.SuppressKeyPress = true;
+            //}
+        }
+
+        private void textFilter_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+
+
+            string filter = textFilter.Text.ToLower();
+
+            string ManaColours = "";
+            ManaColours += CbGrn.Checked ? "G" : "";
+            ManaColours += CbBlk.Checked ? "B" : "";
+            ManaColours += CbBlu.Checked ? "U" : "";
+            ManaColours += CbRed.Checked ? "R" : "";
+            ManaColours += CbWhite.Checked ? "W" : "";
+
+            listView1.Items.Clear();
+            listView1.BeginUpdate();
+
+            if (textFilter.Text == "")
+            {
+                foreach (var v in Database.cards)
+                    listView1.Items.Add(v.ToListViewItem());
+            }
+            else
+            {
+                var v = Database.cards.Where(o => (o.NameLower.Contains(filter) || o.TextLower.Contains(filter)) && o.manaCost.MatchMana(ManaColours));
+                foreach (MagicCard mc in v)
+                {
+                    mc.Initialise();
+                    if (mc.manaCost.MatchMana(ManaColours))
+                        listView1.Items.Add(mc.ToListViewItem());
+                }
+            }
+            listView1.EndUpdate();
+            listView1.Focus();
+
+            e.Handled = true;
+            e.SuppressKeyPress = true;
+        }
+
+        private void listView2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete && listView2.SelectedItems.Count > 0)
+            {
+                buttonTakeAll_Click(sender, e);
+            }
         }
     }
 }

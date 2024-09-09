@@ -50,8 +50,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshCardLocationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.turnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +61,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textTurn = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.numPlaHP = new System.Windows.Forms.NumericUpDown();
+            this.numOppHP = new System.Windows.Forms.NumericUpDown();
             this.cPanelControls = new MagicProgram.CollapsiblePanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -99,13 +106,15 @@
             this.listViewOppEnch = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label2 = new System.Windows.Forms.Label();
-            this.textTurn = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.numPlaHP = new System.Windows.Forms.NumericUpDown();
-            this.numOppHP = new System.Windows.Forms.NumericUpDown();
+            this.collapsiblePanel1 = new MagicProgram.CollapsiblePanel();
+            this.CardReportView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).BeginInit();
             this.cPanelControls.WorkingArea.SuspendLayout();
             this.cPanelControls.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -129,9 +138,8 @@
             this.cPanelOppPlay.SuspendLayout();
             this.cPanelOppLand.WorkingArea.SuspendLayout();
             this.cPanelOppLand.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).BeginInit();
+            this.collapsiblePanel1.WorkingArea.SuspendLayout();
+            this.collapsiblePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageListHand
@@ -211,7 +219,7 @@
             this.gameToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(956, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(740, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -264,14 +272,24 @@
             // 
             // toolsToolStripMenuItem
             // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCardToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.toolsToolStripMenuItem.Text = "&Tools";
+            // 
+            // addCardToolStripMenuItem
+            // 
+            this.addCardToolStripMenuItem.Name = "addCardToolStripMenuItem";
+            this.addCardToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.addCardToolStripMenuItem.Text = "Add Card";
+            this.addCardToolStripMenuItem.Click += new System.EventHandler(this.addCardToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewDebugToolStripMenuItem});
+            this.viewDebugToolStripMenuItem,
+            this.refreshCardLocationsToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
@@ -279,9 +297,16 @@
             // viewDebugToolStripMenuItem
             // 
             this.viewDebugToolStripMenuItem.Name = "viewDebugToolStripMenuItem";
-            this.viewDebugToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.viewDebugToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.viewDebugToolStripMenuItem.Text = "View Debug";
             this.viewDebugToolStripMenuItem.Click += new System.EventHandler(this.viewDebugToolStripMenuItem_Click);
+            // 
+            // refreshCardLocationsToolStripMenuItem
+            // 
+            this.refreshCardLocationsToolStripMenuItem.Name = "refreshCardLocationsToolStripMenuItem";
+            this.refreshCardLocationsToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.refreshCardLocationsToolStripMenuItem.Text = "Refresh Card Locations";
+            this.refreshCardLocationsToolStripMenuItem.Click += new System.EventHandler(this.refreshCardLocationsToolStripMenuItem_Click);
             // 
             // gameToolStripMenuItem
             // 
@@ -330,6 +355,64 @@
             this.progressBar1.Size = new System.Drawing.Size(100, 23);
             this.progressBar1.Step = 100;
             this.progressBar1.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(806, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "0_ / 0R / 0G / 0U / 0W / 0B";
+            // 
+            // textTurn
+            // 
+            this.textTurn.Location = new System.Drawing.Point(450, 2);
+            this.textTurn.Name = "textTurn";
+            this.textTurn.ReadOnly = true;
+            this.textTurn.Size = new System.Drawing.Size(51, 20);
+            this.textTurn.TabIndex = 10;
+            this.textTurn.Text = "Turn 1";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.numPlaHP);
+            this.panel4.Controls.Add(this.numOppHP);
+            this.panel4.Location = new System.Drawing.Point(357, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(86, 23);
+            this.panel4.TabIndex = 8;
+            // 
+            // numPlaHP
+            // 
+            this.numPlaHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.numPlaHP.Location = new System.Drawing.Point(2, 2);
+            this.numPlaHP.Margin = new System.Windows.Forms.Padding(2);
+            this.numPlaHP.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numPlaHP.Name = "numPlaHP";
+            this.numPlaHP.Size = new System.Drawing.Size(40, 20);
+            this.numPlaHP.TabIndex = 7;
+            this.numPlaHP.ValueChanged += new System.EventHandler(this.numPlaHP_ValueChanged);
+            // 
+            // numOppHP
+            // 
+            this.numOppHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.numOppHP.Location = new System.Drawing.Point(44, 2);
+            this.numOppHP.Margin = new System.Windows.Forms.Padding(2);
+            this.numOppHP.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numOppHP.Name = "numOppHP";
+            this.numOppHP.Size = new System.Drawing.Size(40, 20);
+            this.numOppHP.TabIndex = 4;
+            this.numOppHP.ValueChanged += new System.EventHandler(this.numFoeHP_ValueChanged);
             // 
             // cPanelControls
             // 
@@ -531,7 +614,7 @@
             this.cPanelAll.Location = new System.Drawing.Point(0, 24);
             this.cPanelAll.MinimumSize = new System.Drawing.Size(23, 23);
             this.cPanelAll.Name = "cPanelAll";
-            this.cPanelAll.Size = new System.Drawing.Size(956, 715);
+            this.cPanelAll.Size = new System.Drawing.Size(740, 715);
             this.cPanelAll.TabIndex = 0;
             // 
             // cPanelAll.Working Area
@@ -542,7 +625,7 @@
             this.cPanelAll.WorkingArea.Location = new System.Drawing.Point(0, 0);
             this.cPanelAll.WorkingArea.Margin = new System.Windows.Forms.Padding(0);
             this.cPanelAll.WorkingArea.Name = "Working Area";
-            this.cPanelAll.WorkingArea.Size = new System.Drawing.Size(954, 713);
+            this.cPanelAll.WorkingArea.Size = new System.Drawing.Size(738, 713);
             this.cPanelAll.WorkingArea.TabIndex = 4;
             // 
             // panelAll
@@ -552,8 +635,9 @@
             this.panelAll.Controls.Add(this.panelOppPlay);
             this.panelAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAll.Location = new System.Drawing.Point(0, 0);
+            this.panelAll.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.panelAll.Name = "panelAll";
-            this.panelAll.Size = new System.Drawing.Size(952, 711);
+            this.panelAll.Size = new System.Drawing.Size(736, 711);
             this.panelAll.TabIndex = 15;
             // 
             // panelPlayerSide
@@ -563,7 +647,7 @@
             this.panelPlayerSide.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPlayerSide.Location = new System.Drawing.Point(0, 277);
             this.panelPlayerSide.Name = "panelPlayerSide";
-            this.panelPlayerSide.Size = new System.Drawing.Size(952, 434);
+            this.panelPlayerSide.Size = new System.Drawing.Size(736, 434);
             this.panelPlayerSide.TabIndex = 18;
             // 
             // panelPlayViewLand
@@ -572,7 +656,7 @@
             this.panelPlayViewLand.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPlayViewLand.Location = new System.Drawing.Point(0, 0);
             this.panelPlayViewLand.Name = "panelPlayViewLand";
-            this.panelPlayViewLand.Size = new System.Drawing.Size(952, 286);
+            this.panelPlayViewLand.Size = new System.Drawing.Size(736, 207);
             this.panelPlayViewLand.TabIndex = 15;
             // 
             // panelPlCreaLand
@@ -583,7 +667,7 @@
             this.panelPlCreaLand.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPlCreaLand.Location = new System.Drawing.Point(0, 0);
             this.panelPlCreaLand.Name = "panelPlCreaLand";
-            this.panelPlCreaLand.Size = new System.Drawing.Size(952, 286);
+            this.panelPlCreaLand.Size = new System.Drawing.Size(736, 207);
             this.panelPlCreaLand.TabIndex = 4;
             // 
             // cardAreaPlay
@@ -601,7 +685,7 @@
             this.cardAreaPlay.Margin = new System.Windows.Forms.Padding(0);
             this.cardAreaPlay.Name = "cardAreaPlay";
             this.cardAreaPlay.SingleChoice = false;
-            this.cardAreaPlay.Size = new System.Drawing.Size(952, 173);
+            this.cardAreaPlay.Size = new System.Drawing.Size(736, 94);
             this.cardAreaPlay.TabIndex = 19;
             this.cardAreaPlay.Tappable = false;
             this.cardAreaPlay.TextSpoiler = true;
@@ -614,10 +698,10 @@
             this.panelLandArtEnch.Controls.Add(this.cardAreaLand);
             this.panelLandArtEnch.Controls.Add(this.cPanelArtEnch);
             this.panelLandArtEnch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelLandArtEnch.Location = new System.Drawing.Point(0, 173);
+            this.panelLandArtEnch.Location = new System.Drawing.Point(0, 94);
             this.panelLandArtEnch.Margin = new System.Windows.Forms.Padding(0);
             this.panelLandArtEnch.Name = "panelLandArtEnch";
-            this.panelLandArtEnch.Size = new System.Drawing.Size(952, 113);
+            this.panelLandArtEnch.Size = new System.Drawing.Size(736, 113);
             this.panelLandArtEnch.TabIndex = 18;
             // 
             // cardAreaLand
@@ -635,7 +719,7 @@
             this.cardAreaLand.Margin = new System.Windows.Forms.Padding(0);
             this.cardAreaLand.Name = "cardAreaLand";
             this.cardAreaLand.SingleChoice = false;
-            this.cardAreaLand.Size = new System.Drawing.Size(780, 113);
+            this.cardAreaLand.Size = new System.Drawing.Size(564, 113);
             this.cardAreaLand.TabIndex = 6;
             this.cardAreaLand.Tappable = true;
             this.cardAreaLand.TextSpoiler = false;
@@ -649,7 +733,7 @@
             this.cPanelArtEnch.Direction = MagicProgram.CollapsiblePanel.CollapseDirection.Left;
             this.cPanelArtEnch.Dock = System.Windows.Forms.DockStyle.Right;
             this.cPanelArtEnch.HoverEdges = true;
-            this.cPanelArtEnch.Location = new System.Drawing.Point(780, 0);
+            this.cPanelArtEnch.Location = new System.Drawing.Point(564, 0);
             this.cPanelArtEnch.Margin = new System.Windows.Forms.Padding(0);
             this.cPanelArtEnch.MinimumSize = new System.Drawing.Size(23, 23);
             this.cPanelArtEnch.Name = "cPanelArtEnch";
@@ -675,6 +759,7 @@
             this.columnHeader6});
             this.listViewArtEnch.ContextMenuStrip = this.contextMenuStrip1;
             this.listViewArtEnch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewArtEnch.HideSelection = false;
             this.listViewArtEnch.LargeImageList = this.imageListPlay;
             this.listViewArtEnch.Location = new System.Drawing.Point(0, 0);
             this.listViewArtEnch.Margin = new System.Windows.Forms.Padding(0);
@@ -701,6 +786,7 @@
             // 
             this.listViewPlay.BackColor = System.Drawing.SystemColors.Window;
             this.listViewPlay.ContextMenuStrip = this.contextMenuStrip1;
+            this.listViewPlay.HideSelection = false;
             this.listViewPlay.LargeImageList = this.imageListPlay;
             this.listViewPlay.Location = new System.Drawing.Point(670, 45);
             this.listViewPlay.Margin = new System.Windows.Forms.Padding(0);
@@ -715,9 +801,9 @@
             // 
             this.panel3.Controls.Add(this.cardAreaHand);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 286);
+            this.panel3.Location = new System.Drawing.Point(0, 207);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(952, 148);
+            this.panel3.Size = new System.Drawing.Size(736, 227);
             this.panel3.TabIndex = 16;
             // 
             // cardAreaHand
@@ -726,7 +812,7 @@
             this.cardAreaHand.AutoScroll = true;
             this.cardAreaHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cardAreaHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardAreaHand.CardSize = MagicProgram.CSize.Small;
+            this.cardAreaHand.CardSize = MagicProgram.CSize.Normal;
             this.cardAreaHand.ChooseCard = true;
             this.cardAreaHand.ChooseCardString = "Play";
             this.cardAreaHand.Discard = true;
@@ -735,7 +821,7 @@
             this.cardAreaHand.Location = new System.Drawing.Point(0, 0);
             this.cardAreaHand.Name = "cardAreaHand";
             this.cardAreaHand.SingleChoice = true;
-            this.cardAreaHand.Size = new System.Drawing.Size(952, 148);
+            this.cardAreaHand.Size = new System.Drawing.Size(736, 227);
             this.cardAreaHand.TabIndex = 5;
             this.cardAreaHand.Tappable = false;
             this.cardAreaHand.TextSpoiler = false;
@@ -751,7 +837,7 @@
             this.panelOppPlay.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOppPlay.Location = new System.Drawing.Point(0, 0);
             this.panelOppPlay.Name = "panelOppPlay";
-            this.panelOppPlay.Size = new System.Drawing.Size(952, 277);
+            this.panelOppPlay.Size = new System.Drawing.Size(736, 277);
             this.panelOppPlay.TabIndex = 0;
             // 
             // panelOppEnch
@@ -764,7 +850,7 @@
             this.panelOppEnch.Location = new System.Drawing.Point(0, 0);
             this.panelOppEnch.Margin = new System.Windows.Forms.Padding(0);
             this.panelOppEnch.Name = "panelOppEnch";
-            this.panelOppEnch.Size = new System.Drawing.Size(952, 277);
+            this.panelOppEnch.Size = new System.Drawing.Size(736, 277);
             this.panelOppEnch.TabIndex = 1;
             this.panelOppEnch.Click += new System.EventHandler(this.panelOppEnch_Click);
             // 
@@ -779,7 +865,7 @@
             this.cPanelOppPlay.Margin = new System.Windows.Forms.Padding(0);
             this.cPanelOppPlay.MinimumSize = new System.Drawing.Size(23, 23);
             this.cPanelOppPlay.Name = "cPanelOppPlay";
-            this.cPanelOppPlay.Size = new System.Drawing.Size(952, 144);
+            this.cPanelOppPlay.Size = new System.Drawing.Size(736, 144);
             this.cPanelOppPlay.TabIndex = 12;
             // 
             // cPanelOppPlay.Working Area
@@ -790,7 +876,7 @@
             this.cPanelOppPlay.WorkingArea.Location = new System.Drawing.Point(0, 0);
             this.cPanelOppPlay.WorkingArea.Margin = new System.Windows.Forms.Padding(0);
             this.cPanelOppPlay.WorkingArea.Name = "Working Area";
-            this.cPanelOppPlay.WorkingArea.Size = new System.Drawing.Size(952, 121);
+            this.cPanelOppPlay.WorkingArea.Size = new System.Drawing.Size(736, 121);
             this.cPanelOppPlay.WorkingArea.TabIndex = 4;
             this.cPanelOppPlay.CollapsedChanged += new System.Action(this.collapsiblePanel2_CollapsedChanged);
             // 
@@ -798,13 +884,14 @@
             // 
             this.listViewOppCrea.ContextMenuStrip = this.contextMenuStrip1;
             this.listViewOppCrea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewOppCrea.HideSelection = false;
             this.listViewOppCrea.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.listViewOppCrea.LargeImageList = this.imageListPlay;
             this.listViewOppCrea.Location = new System.Drawing.Point(0, 0);
             this.listViewOppCrea.Margin = new System.Windows.Forms.Padding(0);
             this.listViewOppCrea.Name = "listViewOppCrea";
-            this.listViewOppCrea.Size = new System.Drawing.Size(950, 119);
+            this.listViewOppCrea.Size = new System.Drawing.Size(734, 119);
             this.listViewOppCrea.TabIndex = 6;
             this.listViewOppCrea.UseCompatibleStateImageBehavior = false;
             this.listViewOppCrea.KeyUp += new System.Windows.Forms.KeyEventHandler(this.listViewOppCrea_KeyUp);
@@ -820,7 +907,7 @@
             this.cPanelOppLand.Margin = new System.Windows.Forms.Padding(0);
             this.cPanelOppLand.MinimumSize = new System.Drawing.Size(23, 23);
             this.cPanelOppLand.Name = "cPanelOppLand";
-            this.cPanelOppLand.Size = new System.Drawing.Size(952, 133);
+            this.cPanelOppLand.Size = new System.Drawing.Size(736, 133);
             this.cPanelOppLand.TabIndex = 11;
             // 
             // cPanelOppLand.Working Area
@@ -832,7 +919,7 @@
             this.cPanelOppLand.WorkingArea.Location = new System.Drawing.Point(0, 0);
             this.cPanelOppLand.WorkingArea.Margin = new System.Windows.Forms.Padding(0);
             this.cPanelOppLand.WorkingArea.Name = "Working Area";
-            this.cPanelOppLand.WorkingArea.Size = new System.Drawing.Size(952, 110);
+            this.cPanelOppLand.WorkingArea.Size = new System.Drawing.Size(736, 110);
             this.cPanelOppLand.WorkingArea.TabIndex = 4;
             this.cPanelOppLand.CollapsedChanged += new System.Action(this.collapsiblePanel3_CollapsedChanged);
             // 
@@ -843,11 +930,12 @@
             this.columnHeader10});
             this.listViewOppLand.ContextMenuStrip = this.contextMenuStrip1;
             this.listViewOppLand.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewOppLand.HideSelection = false;
             this.listViewOppLand.LargeImageList = this.imageListPlay;
             this.listViewOppLand.Location = new System.Drawing.Point(0, 0);
             this.listViewOppLand.Margin = new System.Windows.Forms.Padding(0);
             this.listViewOppLand.Name = "listViewOppLand";
-            this.listViewOppLand.Size = new System.Drawing.Size(756, 108);
+            this.listViewOppLand.Size = new System.Drawing.Size(540, 108);
             this.listViewOppLand.SmallImageList = this.imageListPlay;
             this.listViewOppLand.TabIndex = 7;
             this.listViewOppLand.UseCompatibleStateImageBehavior = false;
@@ -868,8 +956,9 @@
             this.columnHeader8});
             this.listViewOppEnch.ContextMenuStrip = this.contextMenuStrip1;
             this.listViewOppEnch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.listViewOppEnch.HideSelection = false;
             this.listViewOppEnch.LargeImageList = this.imageListPlay;
-            this.listViewOppEnch.Location = new System.Drawing.Point(756, 0);
+            this.listViewOppEnch.Location = new System.Drawing.Point(540, 0);
             this.listViewOppEnch.Margin = new System.Windows.Forms.Padding(0);
             this.listViewOppEnch.Name = "listViewOppEnch";
             this.listViewOppEnch.Size = new System.Drawing.Size(194, 108);
@@ -886,63 +975,51 @@
             // 
             this.columnHeader8.Text = "Quantity";
             // 
-            // label2
+            // collapsiblePanel1
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(806, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "0_ / 0R / 0G / 0U / 0W / 0B";
+            this.collapsiblePanel1.AllowDrop = true;
+            this.collapsiblePanel1.Collapsed = false;
+            this.collapsiblePanel1.Direction = MagicProgram.CollapsiblePanel.CollapseDirection.Left;
+            this.collapsiblePanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.collapsiblePanel1.HoverEdges = true;
+            this.collapsiblePanel1.Location = new System.Drawing.Point(740, 0);
+            this.collapsiblePanel1.MinimumSize = new System.Drawing.Size(23, 23);
+            this.collapsiblePanel1.Name = "collapsiblePanel1";
+            this.collapsiblePanel1.Size = new System.Drawing.Size(216, 739);
+            this.collapsiblePanel1.TabIndex = 18;
             // 
-            // textTurn
+            // collapsiblePanel1.Working Area
             // 
-            this.textTurn.Location = new System.Drawing.Point(450, 2);
-            this.textTurn.Name = "textTurn";
-            this.textTurn.ReadOnly = true;
-            this.textTurn.Size = new System.Drawing.Size(51, 20);
-            this.textTurn.TabIndex = 10;
-            this.textTurn.Text = "Turn 1";
+            this.collapsiblePanel1.WorkingArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.collapsiblePanel1.WorkingArea.Controls.Add(this.CardReportView);
+            this.collapsiblePanel1.WorkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.collapsiblePanel1.WorkingArea.Location = new System.Drawing.Point(23, 0);
+            this.collapsiblePanel1.WorkingArea.Margin = new System.Windows.Forms.Padding(0);
+            this.collapsiblePanel1.WorkingArea.Name = "Working Area";
+            this.collapsiblePanel1.WorkingArea.Size = new System.Drawing.Size(193, 739);
+            this.collapsiblePanel1.WorkingArea.TabIndex = 4;
             // 
-            // panel4
+            // CardReportView
             // 
-            this.panel4.Controls.Add(this.numPlaHP);
-            this.panel4.Controls.Add(this.numOppHP);
-            this.panel4.Location = new System.Drawing.Point(357, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(86, 23);
-            this.panel4.TabIndex = 8;
+            this.CardReportView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.CardReportView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CardReportView.HideSelection = false;
+            this.CardReportView.Location = new System.Drawing.Point(0, 0);
+            this.CardReportView.Name = "CardReportView";
+            this.CardReportView.Size = new System.Drawing.Size(191, 737);
+            this.CardReportView.TabIndex = 0;
+            this.CardReportView.UseCompatibleStateImageBehavior = false;
+            this.CardReportView.View = System.Windows.Forms.View.Details;
             // 
-            // numPlaHP
+            // columnHeader1
             // 
-            this.numPlaHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.numPlaHP.Location = new System.Drawing.Point(2, 2);
-            this.numPlaHP.Margin = new System.Windows.Forms.Padding(2);
-            this.numPlaHP.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numPlaHP.Name = "numPlaHP";
-            this.numPlaHP.Size = new System.Drawing.Size(40, 20);
-            this.numPlaHP.TabIndex = 7;
-            this.numPlaHP.ValueChanged += new System.EventHandler(this.numPlaHP_ValueChanged);
+            this.columnHeader1.Text = "Card Name";
             // 
-            // numOppHP
+            // columnHeader2
             // 
-            this.numOppHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.numOppHP.Location = new System.Drawing.Point(44, 2);
-            this.numOppHP.Margin = new System.Windows.Forms.Padding(2);
-            this.numOppHP.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numOppHP.Name = "numOppHP";
-            this.numOppHP.Size = new System.Drawing.Size(40, 20);
-            this.numOppHP.TabIndex = 4;
-            this.numOppHP.ValueChanged += new System.EventHandler(this.numFoeHP_ValueChanged);
+            this.columnHeader2.Text = "Location";
             // 
             // DeckTest
             // 
@@ -956,6 +1033,7 @@
             this.Controls.Add(this.cPanelAll);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.collapsiblePanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(685, 570);
@@ -965,6 +1043,9 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).EndInit();
             this.cPanelControls.WorkingArea.ResumeLayout(false);
             this.cPanelControls.WorkingArea.PerformLayout();
             this.cPanelControls.ResumeLayout(false);
@@ -993,9 +1074,8 @@
             this.cPanelOppPlay.ResumeLayout(false);
             this.cPanelOppLand.WorkingArea.ResumeLayout(false);
             this.cPanelOppLand.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numPlaHP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOppHP)).EndInit();
+            this.collapsiblePanel1.WorkingArea.ResumeLayout(false);
+            this.collapsiblePanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1074,5 +1154,11 @@
         private CardArea cardAreaHand;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ToolStripMenuItem addCardToolStripMenuItem;
+        private CollapsiblePanel collapsiblePanel1;
+        private System.Windows.Forms.ListView CardReportView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ToolStripMenuItem refreshCardLocationsToolStripMenuItem;
     }
 }
